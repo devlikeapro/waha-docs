@@ -83,7 +83,7 @@ Use local cache for **WEBJS** engine (versions file).
 Set heap memory limit to 16GB for **NOWEB** engine.
 
 - Issue: [#347](https://github.com/devlikeapro/whatsapp-http-api/issues/347)
-- Build: `2024.5.11`
+- Build: `2024.5.12`
 
 ----
 
