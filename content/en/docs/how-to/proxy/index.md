@@ -15,6 +15,8 @@ using a proxy located close to the phone number's location may help resolve the 
 
 It affects both **WEBJS** and **NOWEB** [engines]({{< relref "/docs/how-to/engines" >}}).
 
+👉 If proxy doesn't help but the project works on YOUR local laptop - check [Tunneling](#tunneling).
+
 ### Symptoms
 1. You start a new session in WhatsApp.
 2. Scan the QR code.
@@ -95,3 +97,19 @@ Apply the promocode get a **5% discount** on your purchase.
 
 ### Geonode
 Another option is <b><a href="https://geonode.com/invite/89107" target="_blank">Geonode</a></b>.
+
+
+## Tunneling
+If you can't use a proxy (or it doesn't help), you can try tunneling the connection to your local machine.
+
+You can run WAHA on local network then, you can buy something like RaspberryPi or a small server (lenovo m93 or similar) and host it there.
+
+So the setup would look like:
+1. You have an app (with your logic and database) running on **VPS**
+2. You have **WAHA** running on **your local network** on some dedicated PC (mongodb or file MUST be placed on this server as well)
+3. You have [ngrok](https://ngrok.com/) (or any similar reverse proxy) running on **local network** and sharing 3000 port on dedicated name (paid ngrok required for that)
+4. Your App communicated with WAHA API using the external ngrok name and WAHA send webhooks back to the server
+
+There's nothing we can do about network detection from Meta side :(
+
+
