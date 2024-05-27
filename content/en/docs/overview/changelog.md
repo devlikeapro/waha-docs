@@ -48,6 +48,11 @@ Before API allowed to start two sessions with the same name, which could lead to
 ----
 
 ### 🐛 Fixes - WEBJS
+----
+
+Handling rare errors in MongoDB process for saving and restoring session data.
+- Build: `2024.5.12`
+- Engine: **WEBJS**
 
 ----
 
