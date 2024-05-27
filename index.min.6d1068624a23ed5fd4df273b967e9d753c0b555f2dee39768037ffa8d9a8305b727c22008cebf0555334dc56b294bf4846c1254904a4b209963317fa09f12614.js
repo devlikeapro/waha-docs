@@ -64,11 +64,12 @@ Boosty -\u0026gt; Patreon -\u0026gt; Subscribe for FREE to get new updates there
 2024.5 #🎉 New #Swagger White Label - show your own brand in the Swagger documentation!
 Read more about Swagger White Label Issue: #305 Build: 2024.5.4 🐛 Fixes #Don\u0026rsquo;t allow to start two sessions with the same name.
 Before API allowed to start two sessions with the same name, which could lead to potential problems (no way to stop the first, abandoned session).
-Issue: #315 Read more about start a session Build: 2024.5.3 Engine: ALL 🐛 Fixes - WEBJS #Fix send video issue POST /api/sendVideo in WEBJS.
+Issue: #315 Read more about start a session Build: 2024.5.3 Engine: ALL 🐛 Fixes - WEBJS #Handling rare errors in MongoDB process for saving and restoring session data.
+Build: 2024.5.12 Engine: WEBJS Fix send video issue POST /api/sendVideo in WEBJS.
 Issue: #321 Issue: #328 Build: 2024.5.9 Engine: WEBJS 💡 If you\u0026rsquo;re experiencing \u0026ldquo;forever loading\u0026rdquo; issue - set up WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix environment variable:
 docker run -it -p 3000:3000/tcp -e WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix devlikeapro/whatsapp-http-api-plus:chrome Use local cache for WEBJS engine (versions file).
 Issue: #316 Build: 2024.5.4 Engine: WEBJS 🐛 Fixes - NOWEB #Set heap memory limit to 16GB for NOWEB engine.
-Issue: #347 Build: 2024.5.11 Add body to messages with caption in NOWEB engine.
+Issue: #347 Build: 2024.5.12 Add body to messages with caption in NOWEB engine.
 Build: 2024.5.10 Fix \u0026ldquo;document with caption\u0026rdquo; message media issue
 Issue: #345 Build: 2024.5.10 Important NOWEB Engine Update! WhatsApp has deprecated the version currently being used in the NOWEB engine
 Read on Patreon Read on Boosty Build: 2024.5.8 Engine: NOWEB 2024.4 #🎉 New #Add WAHA Dashboard - UI to manage your WhatsApp sessions!
@@ -286,6 +287,7 @@ Autostart #If you don\u0026rsquo;t want to call POST /api/sessions/start for ev
 WHATSAPP_RESTART_ALL_SESSIONS=True: Set this variable to True to start all STOPPED sessions after container restarts. By default, this variable is set to False. Please note that this will start all STOPPED sessions, not just the sessions that were working before the restart. You can maintain the session list by using POST /api/session/stop with the logout: True parameter or by calling POST /api/session/logout to remove STOPPED sessions. You can see all sessions, including STOPPED sessions, in the GET /api/sessions/all=True response. WHATSAPP_START_SESSION=session1,session2: This variable can be used to start sessions with the specified names right after launching the API. Separate session names with a comma. Multiple sessions #If you want to save server\u0026rsquo;s CPU and Memory - run multiple sessions inside one docker container! Plus version supports multiple sessions in one container.
 `}),e.add({id:14,href:"/docs/how-to/proxy/",title:"🌐 Proxy",description:"Proxy",content:`Overview #If you\u0026rsquo;re experiencing issues scanning QR codes in WhatsApp, especially with Indian 🇮🇳 phone numbers, using a proxy located close to the phone number\u0026rsquo;s location may help resolve the problem.
 It affects both WEBJS and NOWEB engines.
+👉 If proxy doesn\u0026rsquo;t help but the project works on YOUR local laptop - check Tunneling.
 Symptoms #You start a new session in WhatsApp. Scan the QR code. Experience a long loading time. Face login failures or instant logout. Encounter a new QR code or enter a FAILED state immediately. Configuration #There are two ways to set up proxies:
 Global Setting (for all sessions per container) Per Session Configuration (you can define a proxy for each session when you start it) Global Proxy Configuration #To use a proxy, you can set the following environment variables:
 WHATSAPP_PROXY_SERVER=localhost:3128: Set the proxy server in the format host:port, without HTTP or HTTPS. WHATSAPP_PROXY_SERVER_USERNAME=username and WHATSAPP_PROXY_SERVER_PASSWORD=password: Configure credentials for the proxy. WHATSAPP_PROXY_SERVER_LIST=host1.example.com:3138,host2.example.com:3138: Specify a comma-separated list of addresses to use, utilizing a round-robin algorithm for server selection. WHATSAPP_PROXY_SERVER_INDEX_PREFIX=proxy-: Define a session name prefix to choose the appropriate proxy from the list. Read more about it on Configuration page -\u0026gt;.
@@ -297,6 +299,10 @@ Read more about it on Sessions page -\u0026gt;.
 Recommended Proxies #Proxy6 #We recommend using Proxy6 where you can get a DEDICATED proxy (only you\u0026rsquo;ll use it) for \$1.77 per month.
 Apply the promocode get a 5% discount on your purchase.
 9W9oVxx3UX Geonode #Another option is Geonode.
+Tunneling #If you can\u0026rsquo;t use a proxy (or it doesn\u0026rsquo;t help), you can try tunneling the connection to your local machine.
+You can run WAHA on local network then, you can buy something like RaspberryPi or a small server (lenovo m93 or similar) and host it there.
+So the setup would look like:
+You have an app (with your logic and database) running on VPS You have WAHA running on your local network on some dedicated PC (mongodb or file MUST be placed on this server as well) You have ngrok (or any similar reverse proxy) running on local network and sharing 3000 port on dedicated name (paid ngrok required for that) Your App communicated with WAHA API using the external ngrok name and WAHA send webhooks back to the server There\u0026rsquo;s nothing we can do about network detection from Meta side :(
 `}),e.add({id:15,href:"/docs/how-to/polls/",title:"📶 Polls",description:"How to send polls and receive votes",content:`Waiting for WEBJS engine to support it, and we\u0026rsquo;ll add it ASAP!
 Endpoints #See the list of engines that support the feature -\u0026gt;.
 Send poll #Use the endpoint to send a poll!
