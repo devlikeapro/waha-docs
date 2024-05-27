@@ -26,7 +26,7 @@ jobs:
       - name: Upload folder
         uses: actions/upload-artifact@v2
         with:
-          path: docs/site/public
+          path: public
           name: public
           retention-days: 5
 

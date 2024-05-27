@@ -9,6 +9,7 @@ venv
 test.js
 .wwebjs_cache
 resources
+public
 
 # compiled output
 /dist
