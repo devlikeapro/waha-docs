@@ -79,9 +79,9 @@ alertText = "📢 <a class=\"alert-link stretched-link\" href=\"https://waha.dev
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/devlikeapro/whatsapp-http-api"
-docsRepoBranch = "core"
-docsRepoSubPath = "docs/site"
+docsRepo = "https://github.com/devlikeapro/waha-docs"
+docsRepoBranch = "main"
+#docsRepoSubPath = "docs/site"
 editPage = true
 lastMod = false
 
