@@ -103,6 +103,9 @@
                 </div>
             </div>
             <div class='mt-4 pt-2'>
+                <div class='mb-4'>
+                    <span class='display-4 fw-bold'>$0</span>
+                </div>
                 <a class='btn btn-outline-primary btn-lg px-4 mb-2'
                    href='/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}overview/introduction/'
                    role='button'>Get Started →</a>
@@ -192,6 +195,10 @@
                     <hr>
                 </div>
 
+                <div class='mb-4'>
+                    <span class='display-4 fw-bold'>$19</span>
+                </div>
+
                 <a class='btn btn-primary btn-lg px-4 mb-2'
                    href='#donations'
                    role='button'>Support project →</a>
@@ -269,6 +276,9 @@
                     <hr>
                 </div>
 
+                <div class='mb-4'>
+                    <span class='display-4 fw-bold'>$99</span>
+                </div>
                 <a class='btn btn-primary btn-lg px-4 mb-2'
                    href='#donations'
                    role='button'>Support project →</a>
@@ -295,9 +305,21 @@
                 <td>
                     <a href='{{ relref . "/docs/how-to/sessions"}}'>Sessions</a>
                 </td>
-                <td>1</td>
-                <td>∞</td>
-                <td>∞</td>
+                <td>
+                    <abbr title="Hard limited to 1 session">
+                        &nbsp;1&nbsp;
+                    </abbr>
+                </td>
+                <td>
+                    <abbr title="Not a hard limit, but consider PRO tier for 50+ sessions">
+                        1-50
+                    </abbr>
+                </td>
+                <td>
+                    <abbr title="Not a hard limit, but consider PRO tier for 50+ sessions">
+                        50+
+                    </abbr>
+                </td>
             </tr>
             <tr>
                 <td>
