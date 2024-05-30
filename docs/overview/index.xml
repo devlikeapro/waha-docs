@@ -19,6 +19,5 @@ Accounts (sessions) in the container CPU Memory 1 30% 400MB 10 270% 1.5GB The na
 Boosty -&amp;gt; Patreon -&amp;gt; Subscribe for FREE to get new updates there!
 2024.5 #
 🎉 New #
-Swagger White Label - show your own brand in the Swagger documentation!
-Read more about Swagger White Label Issue: #305 Build: 2024.5.4 🐛 Fixes #
-Don&amp;rsquo;t allow to start two sessions with the same name.</description></item></channel></rss>
+Added WAHA_PRINT_QR environment variable to control QR code printing (by default True). Set WAHA_PRINT_QR=False to disable QR code printing.
+Read more about it on Configuration Issue: #351 Build: 2024.5.13 Swagger White Label - show your own brand in the Swagger documentation!</description></item></channel></rss>
