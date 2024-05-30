@@ -37,6 +37,7 @@ The following environment variables can be used to configure the WAHA.
     using `POST /api/session/stop` with the `logout: True` parameter or by calling `POST /api/session/logout` to remove
     **STOPPED** sessions. You can see all sessions, including **STOPPED** sessions, in the `GET /api/sessions/all=True`
     response.
+- `WAHA_PRINT_QR=True` - set this variable to `False` to disable printing QR codes to the console. By default, `True`.
 - `WHATSAPP_START_SESSION=session1,session2`: This variable can be used to start sessions with the specified names right
   after launching the API. Separate session names with a comma.
 - Also read more about [Sessions ->]({{< relref "/docs/how-to/sessions" >}})

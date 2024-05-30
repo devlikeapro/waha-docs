@@ -26,6 +26,13 @@ If you wish to get and read Release Notes - read them on one of our platforms, *
 
 ----
 
+Added `WAHA_PRINT_QR` environment variable to control QR code printing (by default `True`). Set `WAHA_PRINT_QR=False` to disable QR code printing.
+- Read more about it on [Configuration]({{< relref "/docs/how-to/config" >}})
+- Issue: [#351](https://github.com/devlikeapro/whatsapp-http-api/issues/351)
+- Build: `2024.5.13`
+
+----
+
 [Swagger White Label]({{< relref "/docs/how-to/swagger#white-label" >}}) - show your own brand in the Swagger documentation!
 - Read more about [Swagger White Label]({{< relref "/docs/how-to/swagger#white-label" >}})
 - Issue: [#305](https://github.com/devlikeapro/whatsapp-http-api/issues/305)
