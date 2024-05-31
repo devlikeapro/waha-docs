@@ -66,10 +66,11 @@ Read more about it on Configuration Issue: #351 Build: 2024.5.13 Swagger White L
 Read more about Swagger White Label Issue: #305 Build: 2024.5.4 🐛 Fixes #Don\u0026rsquo;t allow to start two sessions with the same name.
 Before API allowed to start two sessions with the same name, which could lead to potential problems (no way to stop the first, abandoned session).
 Issue: #315 Read more about start a session Build: 2024.5.3 Engine: ALL 🐛 Fixes - WEBJS #Handling rare errors in MongoDB process for saving and restoring session data.
-Build: 2024.5.12 Engine: WEBJS Fix send video issue POST /api/sendVideo in WEBJS.
+Build: 2024.5.12 Engine: WEBJS Commit: 9c398f2 Fix send video issue POST /api/sendVideo in WEBJS.
 Issue: #321 Issue: #328 Build: 2024.5.9 Engine: WEBJS 💡 If you\u0026rsquo;re experiencing \u0026ldquo;forever loading\u0026rdquo; issue - set up WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix environment variable:
 docker run -it -p 3000:3000/tcp -e WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix devlikeapro/whatsapp-http-api-plus:chrome Use local cache for WEBJS engine (versions file).
-Issue: #316 Build: 2024.5.4 Engine: WEBJS 🐛 Fixes - NOWEB #Set heap memory limit to 16GB for NOWEB engine.
+Issue: #316 Build: 2024.5.4 Engine: WEBJS 🐛 Fixes - NOWEB #Auto restart NOWEB connection every 30 minutes.
+Issue: #336 Build: 2024.5.14 Set heap memory limit to 16GB for NOWEB engine.
 Issue: #347 Build: 2024.5.12 Add body to messages with caption in NOWEB engine.
 Build: 2024.5.10 Fix \u0026ldquo;document with caption\u0026rdquo; message media issue
 Issue: #345 Build: 2024.5.10 Important NOWEB Engine Update! WhatsApp has deprecated the version currently being used in the NOWEB engine
