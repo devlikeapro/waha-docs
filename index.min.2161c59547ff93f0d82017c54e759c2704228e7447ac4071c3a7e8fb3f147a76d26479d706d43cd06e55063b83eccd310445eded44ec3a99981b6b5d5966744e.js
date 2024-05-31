@@ -135,8 +135,8 @@ WAHA_DASHBOARD_ENABLED=true - enable or disable the dashboard, by default true. 
 Bug reports and feature requests #If you\u0026rsquo;re experiencing any issues or have a feature request, please create an issue in the WAHA GitHub
 `}),e.add({id:9,href:"/docs/how-to/swagger/",title:"📚 Swagger (OpenAPI)",description:"Swagger (OpenAPI)",content:`Overview #The project provides HTTP API (REST), which is documented with OpenAPI specification and Swagger UI.
 Download the Swagger Overview video . You can see all available endpoints, request/response examples, and even execute them directly from the Swagger UI.
-Later version:
-OpenAPI specification -\u0026gt; Swagger documentation -\u0026gt; You can find Swagger documentation on the following url after you install and started it:
+Find the latest versions:
+Swagger documentation -\u0026gt; Postman -\u0026gt; OpenAPI specification -\u0026gt; You can find Swagger documentation on the following url after you install and started it:
 Swagger: http://localhost:3000. OpenAPI: http://localhost:3000/-json. Configuration #WHATSAPP_SWAGGER_CONFIG_ADVANCED=true - enables advanced configuration options for Swagger documentation - you can customize host, port and base URL for the requests. Disabled by default. WHATSAPP_SWAGGER_ENABLED=false - disables Swagger documentation. Enabled by default. Available in WAHA Plus only. WHATSAPP_SWAGGER_USERNAME=admin and WHATSAPP_SWAGGER_PASSWORD=admin - these variables can be used to protect the Swagger panel with admin / admin credentials. This does not affect API access. Available in WAHA Plus only. Read more about security settings for Swagger and API on Security page -\u0026gt;.
 White label #You can show your own brand in the Swagger documentation.
 👉 Swagger White Label is available in WAHA Plus version only.
@@ -535,8 +535,9 @@ Here\u0026rsquo;s all the steps in one command:
 docker run -v /path/to/on/host/.media:/app/.media -e WHATSAPP_FILES_FOLDER=/app/.media -e WHATSAPP_FILES_LIFETIME=0 -p 3000:3000/tcp devlikeapro/whatsapp-http-api-plus Health Check #The WAHA Plus provides the health check endpoint that checks the local storage.
 Media - S3 #If you\u0026rsquo;re interested in using the S3 storage or any other cloud storage (like self-hosted S3 - Minio), please create an issue or vote for the S3 issue in the GitHub repository.
 `}),e.add({id:28,href:"/docs/examples/",title:"🧩 Examples",description:"Examples for different languages.",content:""}),e.add({id:29,href:"/docs/how-to/plus-version/",title:"➕ WAHA Plus",description:"WAHA Plus",content:`Overview #WAHA is distributed in two versions:
-Core the basic version that meet almost 80% people’s needs. 100% free and open source. Plus the version with advanced messages, security, and reliability features. Tiers #You support the project and get WAHA Plus by donating to the project on one of the platforms.
-See tiers and available platforms on Pricing page -\u0026gt;
+Core the basic version that meet almost 80% people’s needs. 100% free and open source. Plus the version with advanced messages, security, and reliability features. 👉👉 Compare versions on Pricing page -\u0026gt;
+Tiers #You support the project and get WAHA Plus by donating to the project on one of the platforms.
+👉👉 See tiers and available platforms on Pricing page -\u0026gt;
 Patron Portal #After subscribing on Patreon or Boosty, you will get access to the WAHA Patron Portal -\u0026gt; where you will get the password to download the Plus image and manage your perks!
 Read more about Patron Portal in Patreon -\u0026gt; or Boosty -\u0026gt; posts.
 Install Plus #After you get the password, get your login to Docker Hub in Patron Portal -\u0026gt; and run the commands:
