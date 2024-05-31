@@ -19,9 +19,10 @@ The project provides HTTP API (REST), which is documented with OpenAPI specifica
 
 You can see all available endpoints, request/response examples, and even execute them directly from the Swagger UI.
 
-Later version:
-- [OpenAPI specification ->](/swagger/openapi.json)
+Find the latest versions:
 - [Swagger documentation ->](/swagger)
+- [Postman ->](https://www.postman.com/devlikeapro/workspace/waha/collection/35390377-42210829-5a92-45c5-a001-6a453c5d764a?action=share&creator=35390377)
+- [OpenAPI specification ->](/swagger/openapi.json)
 
 You can find Swagger documentation on the following url after you
 [install and started]( {{< relref "/docs/how-to/install" >}}) it:
