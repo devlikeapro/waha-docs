@@ -60,6 +60,7 @@ Before API allowed to start two sessions with the same name, which could lead to
 Handling rare errors in MongoDB process for saving and restoring session data.
 - Build: `2024.5.12`
 - Engine: **WEBJS**
+- Commit: [9c398f2](https://github.com/devlikeapro/whatsapp-http-api-plus/commit/9c398f26f937bf0de2c43ebb1e032c7a766ca8f7)
 
 ----
 
@@ -84,6 +85,12 @@ Use local cache for **WEBJS** engine (versions file).
 ----
 
 ### 🐛 Fixes - NOWEB
+----
+
+Auto restart **NOWEB** connection every 30 minutes.
+
+- Issue: [#336](https://github.com/devlikeapro/whatsapp-http-api/issues/336)
+- Build: `2024.5.14`
 
 ----
 
