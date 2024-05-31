@@ -16,10 +16,12 @@ weight: 900
 1. Core ![](/images/versions/core.png) the basic version that meet almost 80% people’s needs. 100% free and open source.
 2. Plus ![](/images/versions/plus.png) the version with advanced messages, security, and reliability features.
 
+👉👉 Compare versions on [**Pricing page ->**](/pricing)
+
 ## Tiers
 You support the project and get WAHA Plus by donating to the project on one of the platforms.
 
-See tiers and available platforms on [**Pricing page ->**](/pricing)
+👉👉 See tiers and available platforms on [**Pricing page ->**](/pricing)
 
 ## Patron Portal
 <p align="center">

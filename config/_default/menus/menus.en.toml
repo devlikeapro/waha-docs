@@ -21,7 +21,7 @@
   name = "Documentation"
   identifier = "docs"
   url = "/docs/overview/introduction/"
-  weight = 20
+  weight = 10
 
 [[main]]
   name = "📖 Introduction"
@@ -67,8 +67,8 @@
   parent = "docs"
 
 [[main]]
-  name = "WAHA Plus"
-  weight = 10
+  name = "Plus"
+  weight = 20
   identifier = "waha-plus"
 
 [[main]]
