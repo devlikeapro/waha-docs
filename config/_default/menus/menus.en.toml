@@ -96,6 +96,11 @@
   parent = "waha-plus"
 
 [[main]]
+  name = "Blog"
+  weight = 70
+  url = "/blog"
+
+[[main]]
   name = "Pricing"
   weight = 80
   url = "/pricing"
