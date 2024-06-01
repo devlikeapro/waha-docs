@@ -69,7 +69,8 @@ Issue: #315 Read more about start a session Build: 2024.5.3 Engine: ALL 🐛 Fix
 Build: 2024.5.12 Engine: WEBJS Commit: 9c398f2 Fix send video issue POST /api/sendVideo in WEBJS.
 Issue: #321 Issue: #328 Build: 2024.5.9 Engine: WEBJS 💡 If you\u0026rsquo;re experiencing \u0026ldquo;forever loading\u0026rdquo; issue - set up WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix environment variable:
 docker run -it -p 3000:3000/tcp -e WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix devlikeapro/whatsapp-http-api-plus:chrome Use local cache for WEBJS engine (versions file).
-Issue: #316 Build: 2024.5.4 Engine: WEBJS 🐛 Fixes - NOWEB #Auto restart NOWEB connection every 30 minutes.
+Issue: #316 Build: 2024.5.4 Engine: WEBJS 🐛 Fixes - NOWEB #Fix message.ack event for viewing status (status@broadcast) messages.
+Issue: #329 Build: 2024.5.14 Auto restart NOWEB connection every 30 minutes.
 Issue: #336 Build: 2024.5.14 Set heap memory limit to 16GB for NOWEB engine.
 Issue: #347 Build: 2024.5.12 Add body to messages with caption in NOWEB engine.
 Build: 2024.5.10 Fix \u0026ldquo;document with caption\u0026rdquo; message media issue
