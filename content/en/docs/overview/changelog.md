@@ -86,6 +86,12 @@ Use local cache for **WEBJS** engine (versions file).
 
 ### 🐛 Fixes - NOWEB
 ----
+Fix `message.ack` event for viewing status (`status@broadcast`) messages.
+
+- Issue: [#329](https://github.com/devlikeapro/whatsapp-http-api/issues/329)
+- Build: `2024.5.14`
+
+----
 
 Auto restart **NOWEB** connection every 30 minutes.
 
