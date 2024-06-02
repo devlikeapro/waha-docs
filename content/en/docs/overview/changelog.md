@@ -20,6 +20,16 @@ If you wish to get and read Release Notes - read them on one of our platforms, *
 **Subscribe for FREE to get new updates** there!
 
 ----
+## 2024.6
+### 🐛 Fixes - NOWEB
+----
+
+Fix sending poll response in **NOWEB** engine.
+- Build: `2024.6.1`
+- Engine: **NOWEB**
+- Issue: [#356](https://github.com/devlikeapro/whatsapp-http-api/issues/356)
+
+----
 
 ## 2024.5
 ### 🎉 New
