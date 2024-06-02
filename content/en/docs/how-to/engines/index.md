@@ -81,15 +81,22 @@ WAHA provides few docker images with different setup.
 | `devlikeapro/whatsapp-http-api:arm`                     | ARM | Chromium                |
 | `devlikeapro/whatsapp-http-api:noweb-arm`               | ARM | None                    |
 
-Browsers:
+### Browsers
 - **Chromium** - is the default browser for **WAHA**. It's a good choice for most cases.
 - **Chrome** - is a good choice if you need to receive videos in Plus version.
 - **None** - is a good choice if you want to use **NOWEB** engine.
 
-CPU:
+### CPU
 - **x86** - is a good choice for most cases.
 - **ARM** - is a good choice if you're using ARM processors (like Apple Silicon, Apple M1, etc.)
 {{< alert icon="💡" text="Chrome version is not available in ARM" />}}
+
+
+### Versions
+
+💡 You can pin WAHA version by adding `-{version}` at the end of image tag.
+- `devlikeapro/whatsapp-http-api-plus:chrome-{version}` => `devlikeapro/whatsapp-http-api-plus:chrome-2024.6.1`
+- `devlikeapro/whatsapp-http-api-plus:latest-{version}` => `devlikeapro/whatsapp-http-api-plus:latest-2024.6.1`
 
 ## Features
 
