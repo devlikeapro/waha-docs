@@ -17,7 +17,9 @@ WEBJS #
 The benchmark has been made on Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz. It may differ from case to case, it depends on usage pattern - how many messages you get, how many send, etc.
 Accounts (sessions) in the container CPU Memory 1 30% 400MB 10 270% 1.5GB The nature of WhatsApp HTTP API and its underlying engines - is to run real WhatsApp Web version in Chrome and communicate with it to prevent blocking from WhatsApp.</description></item><item><title>🔄 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get and read Release Notes - read them on one of our platforms, these posts are FREE.
 Boosty -&amp;gt; Patreon -&amp;gt; Subscribe for FREE to get new updates there!
-2024.5 #
+2024.6 #
+🐛 Fixes - NOWEB #
+Fix sending poll response in NOWEB engine.
+Build: 2024.6.1 Engine: NOWEB Issue: #356 2024.5 #
 🎉 New #
-Added WAHA_PRINT_QR environment variable to control QR code printing (by default True). Set WAHA_PRINT_QR=False to disable QR code printing.
-Read more about it on Configuration Issue: #351 Build: 2024.5.13 Swagger White Label - show your own brand in the Swagger documentation!</description></item></channel></rss>
+Added WAHA_PRINT_QR environment variable to control QR code printing (by default True). Set WAHA_PRINT_QR=False to disable QR code printing.</description></item></channel></rss>
