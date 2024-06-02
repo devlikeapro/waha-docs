@@ -21,6 +21,19 @@ If you wish to get and read Release Notes - read them on one of our platforms, *
 
 ----
 ## 2024.6
+### 🎉 New
+
+----
+
+Starting `2026.6.1` we publish images with `{version}` tag, so you can pin the version you want to use.
+
+`devlikeapro/whatsapp-http-api-plus:chrome-{version}` => `devlikeapro/whatsapp-http-api-plus:chrome-2024.6.1`
+
+- Read more about [WAHA Docker images]({{< relref "/docs/how-to/engines#versions" >}})
+- Build: `2024.6.1`
+
+----
+
 ### 🐛 Fixes - NOWEB
 ----
 
