@@ -61,7 +61,9 @@ The server has 2 CPU and 8GB of memory. Today we have 85 sessions in this instan
 400 sessions with 4CPU and 32RAM. It\u0026rsquo;s working fine.
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🔄 Changelog",description:"WAHA's changelog",content:`If you wish to get and read Release Notes - read them on one of our platforms, these posts are FREE.
 Boosty -\u0026gt; Patreon -\u0026gt; Subscribe for FREE to get new updates there!
-2024.6 #🐛 Fixes - NOWEB #Fix sending poll response in NOWEB engine.
+2024.6 #🎉 New #Starting 2026.6.1 we publish images with {version} tag, so you can pin the version you want to use.
+devlikeapro/whatsapp-http-api-plus:chrome-{version} =\u0026gt; devlikeapro/whatsapp-http-api-plus:chrome-2024.6.1
+Read more about WAHA Docker images Build: 2024.6.1 🐛 Fixes - NOWEB #Fix sending poll response in NOWEB engine.
 Build: 2024.6.1 Engine: NOWEB Issue: #356 2024.5 #🎉 New #Added WAHA_PRINT_QR environment variable to control QR code printing (by default True). Set WAHA_PRINT_QR=False to disable QR code printing.
 Read more about it on Configuration Issue: #351 Build: 2024.5.13 Swagger White Label - show your own brand in the Swagger documentation!
 Read more about Swagger White Label Issue: #305 Build: 2024.5.4 🐛 Fixes #Don\u0026rsquo;t allow to start two sessions with the same name.
