@@ -6,7 +6,7 @@ Dashboard is a UI to manage your WhatsApp sessions!
 Download the Dashboard Overview video . 👉 Dashboard is available in WAHA Plus version only.
 You can access Dashboard by running the project and opening http://localhost:3000/dashboard (or similar, but with /dashboard at the end).
 ℹ️ Default username and password: waha/waha
-docker run -it -p 3000:3000/tcp devlikeapro/whatsapp-http-api-plus If you&amp;rsquo;re using API Key, remember to set up the key in the dashboard.</description></item><item><title>📚 Swagger (OpenAPI)</title><link>https://waha.devlike.pro/docs/how-to/swagger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/swagger/</guid><description>Overview #
+docker run -it -p 3000:3000/tcp devlikeapro/waha-plus If you&amp;rsquo;re using API Key, remember to set up the key in the dashboard.</description></item><item><title>📚 Swagger (OpenAPI)</title><link>https://waha.devlike.pro/docs/how-to/swagger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/swagger/</guid><description>Overview #
 The project provides HTTP API (REST), which is documented with OpenAPI specification and Swagger UI.
 Download the Swagger Overview video . You can see all available endpoints, request/response examples, and even execute them directly from the Swagger UI.
 Find the latest versions:
