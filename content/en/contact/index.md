@@ -7,8 +7,8 @@ draft: false
 images: []
 ---
 GitHub:
-- Any question you can leave on [GitHub Discussions](https://github.com/devlikeapro/whatsapp-http-api/discussions)
-- For bugs and feature requests use [GitHub Issues](https://github.com/devlikeapro/whatsapp-http-api/issues)
+- Any question you can leave on [GitHub Discussions](https://github.com/devlikeapro/waha/discussions)
+- For bugs and feature requests use [GitHub Issues](https://github.com/devlikeapro/waha/issues)
 
 Feel free to contact us if you have any questions or feedback!
 - [waha@devlike.pro](mailto:waha@devlike.pro)

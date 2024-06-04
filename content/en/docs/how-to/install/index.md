@@ -15,7 +15,7 @@ If you wish to read a quick start guide which show you how to send you first mes
 please go to [**Quick Start ->**]({{< relref "/docs/overview/quick-start" >}}).
 
 WAHA is distributed in two versions, that have a similar installation instructions.
-- WAHA Core ![](/images/versions/core.png) - the basic version that meet almost 80% people's needs. 100% free and [open source ->](https://github.com/devlikeapro/whatsapp-http-api).
+- WAHA Core ![](/images/versions/core.png) - the basic version that meet almost 80% people's needs. 100% free and [open source ->](https://github.com/devlikeapro/waha).
 - WAHA Plus ![](/images/versions/plus.png) - the version with advanced messages, security, and reliability features. Donations, no license expiration, quick updates, read more about [Plus Version →]({{< relref "plus-version" >}})
 
 ## Requirements
@@ -33,12 +33,12 @@ Also, Docker makes installation and update processes so simple, just one command
 ## WAHA Core
 Download the image:
 ```bash
-docker pull devlikeapro/whatsapp-http-api
+docker pull devlikeapro/waha
 ```
 
 Run the container:
 ```bash
-docker run -it -p 3000:3000/tcp devlikeapro/whatsapp-http-api
+docker run -it -p 3000:3000/tcp devlikeapro/waha
 ```
 
 Open API documentation [http://localhost:3000](http://localhost:3000).
@@ -57,30 +57,30 @@ Read more about [**Plus Version →**]({{< relref "plus-version" >}})
 Download the image:
 ```bash
 docker login -u devlikeapro -p {KEY}
-docker pull devlikeapro/whatsapp-http-api-plus
+docker pull devlikeapro/waha-plus
 docker logout
 ```
 
 Run the container:
 ```bash
-docker run -it -p 3000:3000/tcp devlikeapro/whatsapp-http-api-plus
+docker run -it -p 3000:3000/tcp devlikeapro/waha-plus
 ```
 
 Open API documentation [http://localhost:3000](http://localhost:3000).
 
 ## ARM
 If you’re using **ARM** processor (like Apple Silicon, Apple M1, etc.) - add `:arm` tag at the end of the image name in the above commands.
-- **WAHA Core** - `devlikeapro/whatsapp-http-api:arm`
-- **WAHA Plus** - `devlikeapro/whatsapp-http-api-plus:arm`
+- **WAHA Core** - `devlikeapro/waha:arm`
+- **WAHA Plus** - `devlikeapro/waha-plus:arm`
 
 You can also rename the image after you downloaded it with `docker tag` command,
 so you can use the same image names in commands:
 ```bash
 # Rename WAHA Core ARM
-docker tag devlikeapro/whatsapp-http-api:arm devlikeapro/whatsapp-http-api
+docker tag devlikeapro/waha:arm devlikeapro/waha
 
 # Rename WAHA Plus ARM
-docker tag devlikeapro/whatsapp-http-api-plus:arm devlikeapro/whatsapp-http-api-plus
+docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus
 ```
 
 
@@ -92,24 +92,24 @@ The commands are the same as for downloading, expected you need to restart **all
 **WAHA Core** - download new image
 ```bash
 # Download the image
-docker pull devlikeapro/whatsapp-http-api
+docker pull devlikeapro/waha
 
 # Restart all containers
-docker stop whatsapp-http-api
-docker rm whatsapp-http-api
-docker run -it --rm -p 3000:3000/tcp --name whatsapp-http-api devlikeapro/whatsapp-http-api
+docker stop waha
+docker rm waha
+docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 ```
 
 **WAHA Plus** - download new image (please use **the latest key** from Boosty or Patreon)
 ```bash
 # Download the image
 docker login -u devlikeapro -p {KEY}
-docker pull devlikeapro/whatsapp-http-api-plus
+docker pull devlikeapro/waha-plus
 docker logout
-docker stop whatsapp-http-api
+docker stop waha
 
 # Restart all containers
-docker stop whatsapp-http-api
-docker rm whatsapp-http-api
-docker run -it --rm -p 3000:3000/tcp --name whatsapp-http-api devlikeapro/whatsapp-http-api
+docker stop waha
+docker rm waha
+docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 ```

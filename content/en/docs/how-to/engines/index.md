@@ -15,7 +15,7 @@ Under the hood **WAHA** allows you to use different engines. You can control wha
 `WHATSAPP_DEFAULT_ENGINE` environment variables.
 
 ```bash
-docker run -it -e "WHATSAPP_DEFAULT_ENGINE=WEBJS" devlikeapro/whatsapp-http-api
+docker run -it -e "WHATSAPP_DEFAULT_ENGINE=WEBJS" devlikeapro/waha
 ```
 
 If you have any problems with one engine - try another!
@@ -69,17 +69,17 @@ WAHA provides few docker images with different setup.
 | Image                                                   | CPU | Browser                 |
 |---------------------------------------------------------|-----|-------------------------|
 | [WAHA Plus]({{< relref "/docs/how-to/plus-version" >}}) |     |                         |
-| `devlikeapro/whatsapp-http-api-plus:latest`             | x86 | Chromium                |
-| `devlikeapro/whatsapp-http-api-plus:chrome`             | x86 | Chrome (supports video) |
-| `devlikeapro/whatsapp-http-api-plus:noweb`              | x86 | None                    |
-| `devlikeapro/whatsapp-http-api-plus:arm`                | ARM | Chromium                |
-| `devlikeapro/whatsapp-http-api-plus:noweb-arm`          | ARM | None                    |
+| `devlikeapro/waha-plus:latest`             | x86 | Chromium                |
+| `devlikeapro/waha-plus:chrome`             | x86 | Chrome (supports video) |
+| `devlikeapro/waha-plus:noweb`              | x86 | None                    |
+| `devlikeapro/waha-plus:arm`                | ARM | Chromium                |
+| `devlikeapro/waha-plus:noweb-arm`          | ARM | None                    |
 | **WAHA Core**                                           |     |                         |
-| `devlikeapro/whatsapp-http-api:latest`                  | x86 | Chromium                |
-| `devlikeapro/whatsapp-http-api:chrome`                  | x86 | Chrome                  |
-| `devlikeapro/whatsapp-http-api:noweb`                   | x86 | None                    |
-| `devlikeapro/whatsapp-http-api:arm`                     | ARM | Chromium                |
-| `devlikeapro/whatsapp-http-api:noweb-arm`               | ARM | None                    |
+| `devlikeapro/waha:latest`                  | x86 | Chromium                |
+| `devlikeapro/waha:chrome`                  | x86 | Chrome                  |
+| `devlikeapro/waha:noweb`                   | x86 | None                    |
+| `devlikeapro/waha:arm`                     | ARM | Chromium                |
+| `devlikeapro/waha:noweb-arm`               | ARM | None                    |
 
 ### Browsers
 - **Chromium** - is the default browser for **WAHA**. It's a good choice for most cases.
@@ -95,8 +95,8 @@ WAHA provides few docker images with different setup.
 ### Versions
 
 💡 You can pin WAHA version by adding `-{version}` at the end of image tag.
-- `devlikeapro/whatsapp-http-api-plus:chrome-{version}` => `devlikeapro/whatsapp-http-api-plus:chrome-2024.6.1`
-- `devlikeapro/whatsapp-http-api-plus:latest-{version}` => `devlikeapro/whatsapp-http-api-plus:latest-2024.6.1`
+- `devlikeapro/waha-plus:chrome-{version}` => `devlikeapro/waha-plus:chrome-2024.6.1`
+- `devlikeapro/waha-plus:latest-{version}` => `devlikeapro/waha-plus:latest-2024.6.1`
 
 ## Features
 
@@ -106,7 +106,7 @@ Here, you will find a list of supported endpoints and webhooks per engine.
 |             Symbol             | Meaning                                                                                                                                                                                                                                                                                                                                                                                       |
 |:------------------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |               ✔️               | The engines supports the feature.                                                                                                                                                                                                                                                                                                                                                             |
-|               ➖                | The engine does **not** support this feature. <br/>Please search for the issue about the endpoint in [the project's issue](https://github.com/devlikeapro/whatsapp-http-api/issues) and upvote it by using the "👍" reaction on the issue's description. This will help us determine the level of interest in the feature. <br/>If you are unable to find the issue, please create a new one. |
+|               ➖                | The engine does **not** support this feature. <br/>Please search for the issue about the endpoint in [the project's issue](https://github.com/devlikeapro/waha/issues) and upvote it by using the "👍" reaction on the issue's description. This will help us determine the level of interest in the feature. <br/>If you are unable to find the issue, please create a new one. |
 | ![](/images/versions/plus.png) | The feature available in [WAHA Plus]({{< relref "/docs/how-to/plus-version" >}}).                                                                                                                                                                                                                                                                                                             |
 
 If you don't specify `WHATSAPP_DEFAULT_ENGINE` environment variable - look at **WEBJS** engine,
@@ -122,7 +122,7 @@ it's the engine WAHA runs by default.
 ### Endpoints
 
 If you find any inconsistency with actual endpoints -
-please [create an issue](https://github.com/devlikeapro/whatsapp-http-api/issues/new?title=Error+in+engine+features )
+please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Error+in+engine+features )
 
 |                                                                   | WEBJS |                                   NOWEB                                   | VENOM |
 |-------------------------------------------------------------------|:-----:|:-------------------------------------------------------------------------:|:-----:|
@@ -135,7 +135,7 @@ please [create an issue](https://github.com/devlikeapro/whatsapp-http-api/issues
 | **Authentication**                                                |       |                                                                           |       |
 | `POST /api/{session}/auth/qr`                                     |  ✔️   |                                    ✔️                                     |  ✔️   |
 | `POST /api/{session}/auth/request-code`                           |   ➖   |                                    ✔️                                     |   ➖   |
-| `POST /api/{session}/auth/authorize-code`                         |   ➖   | ➖️<br>[#113](https://github.com/devlikeapro/whatsapp-http-api/issues/113) |   ➖   |
+| `POST /api/{session}/auth/authorize-code`                         |   ➖   | ➖️<br>[#113](https://github.com/devlikeapro/waha/issues/113) |   ➖   |
 | **Screenshot**                                                    |       |                                                                           |       |
 | `POST /api/screenshot`                                            |  ✔️   |                                     ➖                                     |  ✔️   |
 

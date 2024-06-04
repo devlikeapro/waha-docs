@@ -211,10 +211,10 @@ decrypt votes later.
 
 There will be two fixes for this:
 
-1. In the short term, a [local file storage](https://github.com/devlikeapro/whatsapp-http-api/issues/188) will be used
+1. In the short term, a [local file storage](https://github.com/devlikeapro/waha/issues/188) will be used
    to save poll keys.
 2. In the long term, work is being done
-   on [remote storages](https://github.com/devlikeapro/whatsapp-http-api/issues/41).
+   on [remote storages](https://github.com/devlikeapro/waha/issues/41).
 
 Even after these fixes are implemented, it's better to handle `poll.vote.failed` events anyway, so your application is
 prepared for such cases!

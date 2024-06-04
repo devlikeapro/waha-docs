@@ -245,7 +245,7 @@ You can send images in two ways:
   "chatId": "11111111111@c.us",
   "file": {
     "mimetype": "image/jpeg",
-    "url": "https://github.com/devlikeapro/whatsapp-http-api/raw/core/examples/dev.likeapro.jpg",
+    "url": "https://github.com/devlikeapro/waha/raw/core/examples/dev.likeapro.jpg",
     "filename": "filename.jpeg"
   },
   "caption": "string"
@@ -282,7 +282,7 @@ Please make sure your file has **OPUS** encoding and packed in OGG container.
   "chatId": "11111111111@c.us",
   "file": {
     "mimetype": "audio/ogg; codecs=opus",
-    "url": "https://github.com/devlikeapro/whatsapp-http-api/raw/core/examples/dev.likeapro.opus"
+    "url": "https://github.com/devlikeapro/waha/raw/core/examples/dev.likeapro.opus"
   },
   "caption": "string"
 }
@@ -307,16 +307,16 @@ Use `POST /api/sendVideo` to send a message with a video attached.
 ---
 
 ⚠️ **WEBJS** (default) engine notes for sending videos ⚠️
-- 👉 Use `devlikeapro/whatsapp-http-api-plus:chrome` docker image.
+- 👉 Use `devlikeapro/waha-plus:chrome` docker image.
 Read more about [**Docker images and engines →**]({{< relref "/docs/how-to/engines" >}}).
 - 💡 If you're experiencing **"forever loading" issue**
 (
-[#321](https://github.com/devlikeapro/whatsapp-http-api/issues/321),
-[#328](https://github.com/devlikeapro/whatsapp-http-api/issues/328)
+[#321](https://github.com/devlikeapro/waha/issues/321),
+[#328](https://github.com/devlikeapro/waha/issues/328)
 ) - set up `WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix` environment variable:
 
 ```bash
-docker run -it -p 3000:3000/tcp -e WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix devlikeapro/whatsapp-http-api-plus:chrome
+docker run -it -p 3000:3000/tcp -e WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix devlikeapro/waha-plus:chrome
 ```
 
 ---
@@ -334,7 +334,7 @@ You can send voice messages in two ways:
   "file": {
     "mimetype": "video/mp4",
     "filename": "video.mp4",
-    "url": "https://github.com/devlikeapro/whatsapp-http-api/raw/core/examples/video.mp4"
+    "url": "https://github.com/devlikeapro/waha/raw/core/examples/video.mp4"
   }
 }
 ```
@@ -369,7 +369,7 @@ You can send files in two ways:
   "file": {
     "mimetype": "image/jpeg",
     "filename": "filename.jpeg",
-    "url": "https://raw.githubusercontent.com/devlikeapro/whatsapp-http-api/core/examples/video.mp4"
+    "url": "https://raw.githubusercontent.com/devlikeapro/waha/core/examples/video.mp4"
   }
 }
 ```

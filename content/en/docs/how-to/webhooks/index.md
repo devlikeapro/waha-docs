@@ -110,7 +110,7 @@ Below the list of all events that WhatsApp HTTP API sends to your.
 Run the bellow command and see look at the logs - it prints body request for all events that happen in your WhatsApp!
 
 ```bash
-docker run -it -e "WHATSAPP_HOOK_EVENTS=*" -e WHATSAPP_HOOK_URL=https://httpbin.org/post -p 3000:3000 devlikeapro/whatsapp-http-api
+docker run -it -e "WHATSAPP_HOOK_EVENTS=*" -e WHATSAPP_HOOK_URL=https://httpbin.org/post -p 3000:3000 devlikeapro/waha
 ```
 
 
@@ -548,4 +548,4 @@ Here's few examples of how to handle webhook in different languages:
 
 Please create a short guide how to handle webhook and send message after you finish your setup!
 You can create a pull request with your favorite language in the
-[GitHub, in examples folder ->](https://github.com/devlikeapro/whatsapp-http-api/tree/core/examples).
+[GitHub, in examples folder ->](https://github.com/devlikeapro/waha/tree/core/examples).

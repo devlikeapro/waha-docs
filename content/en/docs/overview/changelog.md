@@ -27,7 +27,7 @@ If you wish to get and read Release Notes - read them on one of our platforms, *
 
 Starting `2026.6.1` we publish images with `{version}` tag, so you can pin the version you want to use.
 
-`devlikeapro/whatsapp-http-api-plus:chrome-{version}` => `devlikeapro/whatsapp-http-api-plus:chrome-2024.6.1`
+`devlikeapro/waha-plus:chrome-{version}` => `devlikeapro/waha-plus:chrome-2024.6.1`
 
 - Read more about [WAHA Docker images]({{< relref "/docs/how-to/engines#versions" >}})
 - Build: `2024.6.1`
@@ -40,7 +40,7 @@ Starting `2026.6.1` we publish images with `{version}` tag, so you can pin the v
 Fix sending poll response in **NOWEB** engine.
 - Build: `2024.6.1`
 - Engine: **NOWEB**
-- Issue: [#356](https://github.com/devlikeapro/whatsapp-http-api/issues/356)
+- Issue: [#356](https://github.com/devlikeapro/waha/issues/356)
 
 ----
 
@@ -51,14 +51,14 @@ Fix sending poll response in **NOWEB** engine.
 
 Added `WAHA_PRINT_QR` environment variable to control QR code printing (by default `True`). Set `WAHA_PRINT_QR=False` to disable QR code printing.
 - Read more about it on [Configuration]({{< relref "/docs/how-to/config" >}})
-- Issue: [#351](https://github.com/devlikeapro/whatsapp-http-api/issues/351)
+- Issue: [#351](https://github.com/devlikeapro/waha/issues/351)
 - Build: `2024.5.13`
 
 ----
 
 [Swagger White Label]({{< relref "/docs/how-to/swagger#white-label" >}}) - show your own brand in the Swagger documentation!
 - Read more about [Swagger White Label]({{< relref "/docs/how-to/swagger#white-label" >}})
-- Issue: [#305](https://github.com/devlikeapro/whatsapp-http-api/issues/305)
+- Issue: [#305](https://github.com/devlikeapro/waha/issues/305)
 - Build: `2024.5.4`
 
 ----
@@ -70,7 +70,7 @@ Added `WAHA_PRINT_QR` environment variable to control QR code printing (by defau
 Don't allow to start two sessions with the same name.
 
 Before API allowed to start two sessions with the same name, which could lead to potential problems (no way to stop the first, abandoned session).
-- Issue: [#315](https://github.com/devlikeapro/whatsapp-http-api/issues/315)
+- Issue: [#315](https://github.com/devlikeapro/waha/issues/315)
 - Read more about [start a session](https://waha.devlike.pro/docs/how-to/sessions/#start)
 - Build: `2024.5.3`
 - Engine: **ALL**
@@ -83,25 +83,25 @@ Before API allowed to start two sessions with the same name, which could lead to
 Handling rare errors in MongoDB process for saving and restoring session data.
 - Build: `2024.5.12`
 - Engine: **WEBJS**
-- Commit: [9c398f2](https://github.com/devlikeapro/whatsapp-http-api-plus/commit/9c398f26f937bf0de2c43ebb1e032c7a766ca8f7)
+- Commit: [9c398f2](https://github.com/devlikeapro/waha-plus/commit/9c398f26f937bf0de2c43ebb1e032c7a766ca8f7)
 
 ----
 
 Fix send video issue `POST /api/sendVideo` in **WEBJS**.
-- Issue: [#321](https://github.com/devlikeapro/whatsapp-http-api/issues/321)
-- Issue: [#328](https://github.com/devlikeapro/whatsapp-http-api/issues/328)
+- Issue: [#321](https://github.com/devlikeapro/waha/issues/321)
+- Issue: [#328](https://github.com/devlikeapro/waha/issues/328)
 - Build: `2024.5.9`
 - Engine: **WEBJS**
 
 💡 If you're experiencing **"forever loading" issue** - set up `WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix` environment variable:
 ```bash
-docker run -it -p 3000:3000/tcp -e WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix devlikeapro/whatsapp-http-api-plus:chrome
+docker run -it -p 3000:3000/tcp -e WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix devlikeapro/waha-plus:chrome
 ```
 
 ----
 
 Use local cache for **WEBJS** engine (versions file).
-- Issue: [#316](https://github.com/devlikeapro/whatsapp-http-api/issues/316)
+- Issue: [#316](https://github.com/devlikeapro/waha/issues/316)
 - Build: `2024.5.4`
 - Engine: **WEBJS**
 
@@ -111,21 +111,21 @@ Use local cache for **WEBJS** engine (versions file).
 ----
 Fix `message.ack` event for viewing status (`status@broadcast`) messages.
 
-- Issue: [#329](https://github.com/devlikeapro/whatsapp-http-api/issues/329)
+- Issue: [#329](https://github.com/devlikeapro/waha/issues/329)
 - Build: `2024.5.14`
 
 ----
 
 Auto restart **NOWEB** connection every 30 minutes.
 
-- Issue: [#336](https://github.com/devlikeapro/whatsapp-http-api/issues/336)
+- Issue: [#336](https://github.com/devlikeapro/waha/issues/336)
 - Build: `2024.5.14`
 
 ----
 
 Set heap memory limit to 16GB for **NOWEB** engine.
 
-- Issue: [#347](https://github.com/devlikeapro/whatsapp-http-api/issues/347)
+- Issue: [#347](https://github.com/devlikeapro/waha/issues/347)
 - Build: `2024.5.12`
 
 ----
@@ -138,7 +138,7 @@ Add `body` to messages with caption in **NOWEB** engine.
 
 Fix "document with caption" message media issue
 
-- Issue: [#345](https://github.com/devlikeapro/whatsapp-http-api/issues/345)
+- Issue: [#345](https://github.com/devlikeapro/waha/issues/345)
 - Build: `2024.5.10`
 
 ----
@@ -165,13 +165,13 @@ Add **WAHA Dashboard** - UI to manage your WhatsApp sessions!
 
 Add `GET /api/sessions/{session}` endpoint to get information about a specific session.
 - Read more about [Get session information]({{< relref "/docs/how-to/sessions#get-session" >}})
-- Issue: [#300](https://github.com/devlikeapro/whatsapp-http-api/issues/300)
+- Issue: [#300](https://github.com/devlikeapro/waha/issues/300)
 
 ----
 
 Implement `GET /api/contacts/profile-picture` for **NOWEB** engine.
 - Read more about [Get contact profile picture](https://waha.devlike.pro/docs/how-to/contacts/#get-contact-profile-picture)
-- Issue: [#298](https://github.com/devlikeapro/whatsapp-http-api/issues/298)
+- Issue: [#298](https://github.com/devlikeapro/waha/issues/298)
 
 ----
 
@@ -182,7 +182,7 @@ Implement `GET /api/contacts/profile-picture` for **NOWEB** engine.
 
 Add `message.reaction` webhook in **WEBJS** and **NOWEB** engines
 - Read more about [message.reaction]({{< relref "/docs/how-to/webhooks#messagereaction" >}}) event
-- Issue: [#275](https://github.com/devlikeapro/whatsapp-http-api/issues/275)
+- Issue: [#275](https://github.com/devlikeapro/waha/issues/275)
 
 👉 **NOWEB** engine note - reactions were sent in `'message'` and `'message.any'` events, not it's available **only** in `'message.reaction'`!
 
@@ -190,37 +190,37 @@ Add `message.reaction` webhook in **WEBJS** and **NOWEB** engines
 
 Add star and unstar message endpoint `PUT /api/star`
 - Read [Star and unstar message]({{< relref "/docs/how-to/send-messages#star-and-unstar-message" >}}) documentation
-- Issue: [#273](https://github.com/devlikeapro/whatsapp-http-api/issues/240)
+- Issue: [#273](https://github.com/devlikeapro/waha/issues/240)
 
 ----
 
 Add `PUT /api/{session}/chats/{chatId}/messages/{messageId}` endpoint to **edit** the message.
 - Read more about [Edit message]({{< relref "/docs/how-to/send-messages#edit-message" >}})
-- Issue: [#241](https://github.com/devlikeapro/whatsapp-http-api/issues/241)
+- Issue: [#241](https://github.com/devlikeapro/waha/issues/241)
 
 ----
 
 Add `DELETE /api/{session}/chats/{chatId}/messages/{messageId}` endpoint to **delete** the message.
 - Read more about [Delete message]({{< relref "/docs/how-to/send-messages#delete-message" >}})
-- Issue: [#209](https://github.com/devlikeapro/whatsapp-http-api/issues/209)
+- Issue: [#209](https://github.com/devlikeapro/waha/issues/209)
 
 ----
 
 Add `POST /api/sendContactVcard` support for **NOWEB** engine.
 - Read more about [Send Contact vCard]({{< relref "/docs/how-to/send-messages#send-contact-vcard" >}})
-- Issue: [#276](https://github.com/devlikeapro/whatsapp-http-api/issues/256)
+- Issue: [#276](https://github.com/devlikeapro/waha/issues/256)
 
 ----
 
 Handles `caption` and `filename` right in `POST /api/sendFile`
-- Issue: [#94](https://github.com/devlikeapro/whatsapp-http-api/issues/94)
-- Issue: [#133](https://github.com/devlikeapro/whatsapp-http-api/issues/133)
+- Issue: [#94](https://github.com/devlikeapro/waha/issues/94)
+- Issue: [#133](https://github.com/devlikeapro/waha/issues/133)
 
 ----
 
 Add security settings for who can send messages `PUT /api/{session}/groups/{groupId}/settings/security/messages-admin-only`
 - Read [Security - who can send messages]({{< relref "/docs/how-to/groups##security---who-can-send-messages" >}})
-- Issue: [#274](https://github.com/devlikeapro/whatsapp-http-api/issues/274)
+- Issue: [#274](https://github.com/devlikeapro/waha/issues/274)
 
 ----
 
@@ -251,13 +251,13 @@ Add `config.debug` field to `POST /api/session/start` to enable debug and verbos
   - Read more on [Boosty ->](https://boosty.to/wa-http-api/posts/8319079f-dac1-4179-b954-fcc559097c76)
 
 ## 2024.2
-- Listen for browser disconnected and page close events in **WEBJS** engine [#262](https://github.com/devlikeapro/whatsapp-http-api/issues/262)
+- Listen for browser disconnected and page close events in **WEBJS** engine [#262](https://github.com/devlikeapro/waha/issues/262)
 
 ## 2023.12
 December 2023
 - Add `chatId` field to `GET /api/contacts/check-exists` to help get the right `chatId` for Brazilian numbers.
 Read more about
-  [error sending text to half of Brazilian numbers (every number registered before 2012) ->](https://github.com/devlikeapro/whatsapp-http-api/issues/238)
+  [error sending text to half of Brazilian numbers (every number registered before 2012) ->](https://github.com/devlikeapro/waha/issues/238)
 
 ## 2023.11
 November 2023
@@ -268,7 +268,7 @@ November 2023
 - Add different formats for the screenshot:
   1. **binary image** - `GET /api/{session}/screenshot`
   2. **base64 image** - `GET /api/{session}/screenshot` and set `Accept: application/json` header
-- Add `WHATSAPP_SWAGGER_ENABLED=false` so you can hide Swagger documentation (available only in Plus version). [#185](https://github.com/devlikeapro/whatsapp-http-api/issues/185)
+- Add `WHATSAPP_SWAGGER_ENABLED=false` so you can hide Swagger documentation (available only in Plus version). [#185](https://github.com/devlikeapro/waha/issues/185)
 - Add dedicated `media` field in webhook payload - now you can know which media is attached to the message.
 ```json
 {
@@ -319,8 +319,8 @@ August 2023
   - Clear messages in the chat `DELETE /api/{session/chats/{chatId}/messages`
 - Added `downloadMedia` flag to speed up `GET /api/messages` and `GET /api/{session/chats/{chatId}/messages` performance.
 - Added [set presence endpoint](https://waha.devlike.pro/docs/how-to/presence)!
-  - With `online` presence you can show your status as online [#121](https://github.com/devlikeapro/whatsapp-http-api/issues/121)
-  - With `offline` presence you can get notifications for your device [#28](https://github.com/devlikeapro/whatsapp-http-api/issues/28)
+  - With `online` presence you can show your status as online [#121](https://github.com/devlikeapro/waha/issues/121)
+  - With `offline` presence you can get notifications for your device [#28](https://github.com/devlikeapro/waha/issues/28)
 - Added security settings for edit group info `PUT /api/{session}/groups/{groupId}/settings/security/info-admin-only` - updates the group settings to only allow admins to edit group info (title, description, photo).
 
 ## 2023.7
@@ -360,7 +360,7 @@ Improvements on session management, restarting sessions and more:
 - Added `logout` boolean parameter to `POST /api/sessions/stop` request that allow you to stop the session AND logout at
   the same time.
 - Added [How to deploy page ->]({{< relref "/docs/how-to/deploy" >}}) with
-  [docker-compose.yaml](https://github.com/devlikeapro/whatsapp-http-api/blob/core/docker-compose.yaml) example
+  [docker-compose.yaml](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml) example
 - Added `engine` field in webhook payload
 
 ```json
@@ -403,7 +403,7 @@ January 2023
 ## 2022.12
 December 2023
 
-- Added `GET /messages/` endpoint to get chat messages [#31](https://github.com/devlikeapro/whatsapp-http-api/issues/31)
+- Added `GET /messages/` endpoint to get chat messages [#31](https://github.com/devlikeapro/waha/issues/31)
 - Added `WHATSAPP_SWAGGER_USERNAME` and `WHATSAPP_SWAGGER_PASSWORD` to hide and protect swagger panel.
 
 ## 2022.11

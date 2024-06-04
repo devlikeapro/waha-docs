@@ -27,7 +27,7 @@ You can access **Dashboard** by running the project and opening
 ℹ️ **Default username and password**: `waha/waha`
 
 ```bash
-docker run -it -p 3000:3000/tcp devlikeapro/whatsapp-http-api-plus
+docker run -it -p 3000:3000/tcp devlikeapro/waha-plus
 ```
 
 If you're using [API Key]({{< relref "security" >}}), remember to set up the key in the dashboard.
@@ -44,7 +44,7 @@ When running WAHA you can set the following environment variables to configure t
 - `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, by default `waha`.
 
 ```bash
-docker run -it -p 3000:3000/tcp -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PASSWORD=waha devlikeapro/whatsapp-http-api-plus
+docker run -it -p 3000:3000/tcp -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PASSWORD=waha devlikeapro/waha-plus
 ```
 
 ## Multiple servers
@@ -53,5 +53,5 @@ If you wish to connect, control and manage multiple servers in a single "dashboa
 
 ## Bug reports and feature requests
 If you're experiencing any issues or have a feature request, please create an issue in the
-[WAHA GitHub](https://github.com/devlikeapro/whatsapp-http-api/issues)
+[WAHA GitHub](https://github.com/devlikeapro/waha/issues)
 

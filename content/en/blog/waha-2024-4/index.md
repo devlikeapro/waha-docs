@@ -44,7 +44,7 @@ If you’re using API Key, remember to set up the key in the dashboard:
 - `WAHA_DASHBOARD_PASSWORD=waha`: Default password for login (default: waha). 
 
 ℹ️ If you encounter any issues or wish to request a new feature, please head over to our GitHub repository and create an issue at: 
-🔗 [WAHA GitHub Issues](https://github.com/devlikeapro/whatsapp-http-api/issues)
+🔗 [WAHA GitHub Issues](https://github.com/devlikeapro/waha/issues)
 
 
 Thank you for your continued support and enthusiasm for the project! We appreciate each and every one of our patrons! 🙏

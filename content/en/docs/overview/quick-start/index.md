@@ -58,14 +58,14 @@ Assuming you have installed [Docker](https://docs.docker.com/get-docker/), let's
 ![](/images/versions/core.png) For Core version the command is
 
 ```bash
-docker pull devlikeapro/whatsapp-http-api
+docker pull devlikeapro/waha
 ```
 
 ![](/images/versions/plus.png) For Plus version, we use login to get the image before:
 
 ```bash
 docker login -u devlikeapro -p {KEY}
-docker pull devlikeapro/whatsapp-http-api-plus
+docker pull devlikeapro/waha-plus
 docker logout
 ```
 
@@ -78,19 +78,19 @@ If you're using ARM (like Apple Silicon, Apple M1, etc.) - use following command
 ![](/images/versions/core.png) For Core version the command is
 ```bash
 # Download the image
-docker pull devlikeapro/whatsapp-http-api:arm
-# Rename it, so you can use devlikeapro/whatsapp-http-api image in other place
-docker tag devlikeapro/whatsapp-http-api:arm devlikeapro/whatsapp-http-api
+docker pull devlikeapro/waha:arm
+# Rename it, so you can use devlikeapro/waha image in other place
+docker tag devlikeapro/waha:arm devlikeapro/waha
 ```
 
 ![](/images/versions/plus.png) For Plus version the command is:
 ```bash
 docker login -u devlikeapro -p {KEY}
-docker pull devlikeapro/whatsapp-http-api-plus:arm
+docker pull devlikeapro/waha-plus:arm
 docker logout
 
-# Rename it, so you can use devlikeapro/whatsapp-http-api image in other place
-docker tag devlikeapro/whatsapp-http-api-plus:arm devlikeapro/whatsapp-http-api-plus
+# Rename it, so you can use devlikeapro/waha image in other place
+docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus
 ```
 
 ### 2. Run WhatsApp HTTP API
@@ -98,7 +98,7 @@ docker tag devlikeapro/whatsapp-http-api-plus:arm devlikeapro/whatsapp-http-api-
 Run WhatsApp HTTP API:
 
 ```bash
-docker run -it --rm -p 3000:3000/tcp --name whatsapp-http-api devlikeapro/whatsapp-http-api
+docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 
 # It prints logs and the last line must be
 # WhatsApp HTTP API is running on: http://[::1]:3000

@@ -80,7 +80,7 @@ You should use the `GET /api/contacts/check-exists` endpoint **before sending a 
 to get the correct chatId because of the additional 9-digit number added after 2012.
 
 Read more about
-[error sending text to half of Brazilian numbers (every number registered before 2012) ->](https://github.com/devlikeapro/whatsapp-http-api/issues/238)
+[error sending text to half of Brazilian numbers (every number registered before 2012) ->](https://github.com/devlikeapro/waha/issues/238)
 
 It's fine to send the response to `chatId` for incoming messages, though - the payload already has the correct `chatId`.
 

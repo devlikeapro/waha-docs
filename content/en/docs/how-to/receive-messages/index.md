@@ -265,5 +265,5 @@ Here's few examples of how to receive messages in different languages:
 
 Please create a short guide how to handle webhook and send message after you finish your setup!
 You can create a pull request with your favorite language in the
-[GitHub, in examples folder ->](https://github.com/devlikeapro/whatsapp-http-api/tree/core/examples).
+[GitHub, in examples folder ->](https://github.com/devlikeapro/waha/tree/core/examples).
 

@@ -44,8 +44,8 @@ After you get the password, get your login to Docker Hub in [Patron Portal ->](h
 and run the commands:
 ```bash
 docker login -u devlikeapro -p {KEY}
-docker pull devlikeapro/whatsapp-http-api-plus
+docker pull devlikeapro/waha-plus
 docker logout
 ```
-Then in all commands use **Plus** image `devlikeapro/whatsapp-http-api-plus` instead of Core `devlikeapro/whatsapp-http-api`.
+Then in all commands use **Plus** image `devlikeapro/waha-plus` instead of Core `devlikeapro/waha`.
 

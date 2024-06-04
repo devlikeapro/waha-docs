@@ -27,19 +27,19 @@ instructions [here](https://docs.docker.com/compose/install/).
 
 ### Getting Started
 
-To get started, you need to clone the [docker-compose.yaml](https://github.com/devlikeapro/whatsapp-http-api/blob/core/docker-compose.yaml) file to your local machine.
+To get started, you need to clone the [docker-compose.yaml](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml) file to your local machine.
 Open your terminal and run the following command:
 
 ```
-wget https://raw.githubusercontent.com/devlikeapro/whatsapp-http-api/core/docker-compose.yaml
+wget https://raw.githubusercontent.com/devlikeapro/waha/core/docker-compose.yaml
 ```
 
 ### Running the WhatsApp HTTP API Service
 
-To start the `whatsapp-http-api` service, run the following command:
+To start the `waha` service, run the following command:
 
 ```
-docker-compose up -d whatsapp-http-api
+docker-compose up -d waha
 ```
 
 This will start the container in detached mode and map port 3000 to 3000 on the host machine.
@@ -62,14 +62,14 @@ This will restart the container.
 
 ### Viewing the Logs
 
-To view the logs for the `whatsapp-http-api` service, run the command:
+To view the logs for the `waha` service, run the command:
 
 ```
-docker-compose logs -f whatsapp-http-api
+docker-compose logs -f waha
 ```
 
-This will show the logs in real-time. To view the logs for the `whatsapp-http-api-plus` service,
-replace `whatsapp-http-api` with `whatsapp-http-api-plus`.
+This will show the logs in real-time. To view the logs for the `waha-plus` service,
+replace `waha` with `waha-plus`.
 
 To view the logs for a specific period, run the command:
 
@@ -82,9 +82,9 @@ show the logs for the past hour.
 
 ### Using the WhatsApp HTTP API Services
 
-There are two services provided in the `docker-compose.yml` file - `whatsapp-http-api` and `whatsapp-http-api-plus`.
+There are two services provided in the `docker-compose.yml` file - `waha` and `waha-plus`.
 It is important to note that these services must not be run at the same time.
-By default, the `whatsapp-http-api` service will be used.
+By default, the `waha` service will be used.
 
-To use the `whatsapp-http-api-plus` service, you need to specify it in the command.
+To use the `waha-plus` service, you need to specify it in the command.
 

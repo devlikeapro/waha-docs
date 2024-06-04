@@ -47,7 +47,7 @@ you need to mount the volume to the `/app/.sessions` directory using the `-v` op
 The full command to run the WAHA with the local storage and save the session data
 in the current directory and `.sessions` directory:
 ```bash
-docker run -v `pwd`/.sessions:/app/.sessions -p 3000:3000/tcp devlikeapro/whatsapp-http-api-plus
+docker run -v `pwd`/.sessions:/app/.sessions -p 3000:3000/tcp devlikeapro/waha-plus
 ```
 This is the only action you need to do to use the local storage - all session data will be available between the container restarts.
 
@@ -82,7 +82,7 @@ docker run -d -p 27017:27017 --name mongodb mongo
 
 Then, you need to run the WAHA with the `WHATSAPP_SESSIONS_MONGO_URL` environment variable (please note using `--network host` option as well)
 ```bash
-docker run -e WHATSAPP_SESSIONS_MONGO_URL=mongodb://localhost:27017/ --network host devlikeapro/whatsapp-http-api-plus
+docker run -e WHATSAPP_SESSIONS_MONGO_URL=mongodb://localhost:27017/ --network host devlikeapro/waha-plus
 ```
 
 This is the only action you need to do to use the MongoDB storage -
@@ -138,7 +138,7 @@ Read more about [available configuration options ->]({{<relref "/docs/how-to/con
 
 Here's all the steps in one command:
 ```bash
-docker run -v /path/to/on/host/.media:/app/.media -e WHATSAPP_FILES_FOLDER=/app/.media -e WHATSAPP_FILES_LIFETIME=0 -p 3000:3000/tcp devlikeapro/whatsapp-http-api-plus
+docker run -v /path/to/on/host/.media:/app/.media -e WHATSAPP_FILES_FOLDER=/app/.media -e WHATSAPP_FILES_LIFETIME=0 -p 3000:3000/tcp devlikeapro/waha-plus
 ```
 
 ### Health Check
@@ -146,4 +146,4 @@ The [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-ver
 
 ## Media - S3
 If you're interested in using the S3 storage or any other cloud storage (like [self-hosted S3 - Minio](https://min.io/)),
-please create an issue or vote for the S3 issue in [the GitHub repository](https://github.com/devlikeapro/whatsapp-http-api/issues?q=is%3Aissue+is%3Aopen+S3).
+please create an issue or vote for the S3 issue in [the GitHub repository](https://github.com/devlikeapro/waha/issues?q=is%3Aissue+is%3Aopen+S3).

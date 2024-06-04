@@ -23,7 +23,7 @@ If you want to hide the project Swagger panel under the password - run the follo
 login and password.
 
 ```bash
-docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin -eWHATSAPP_SWAGGER_PASSWORD=admin devlikeapro/whatsapp-http-api-plus
+docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin -eWHATSAPP_SWAGGER_PASSWORD=admin devlikeapro/waha-plus
 ```
 
 Open http://localhost:3000/ and enter `admin / admin` in the inputs:
@@ -56,7 +56,7 @@ You can protect the API by requiring Api Key in a request's headers.
 Set `WHATSAPP_API_KEY=yoursecretkey` environment variable for that:
 
 ```bash
-docker run -it -e WHATSAPP_API_KEY=yoursecretkey devlikeapro/whatsapp-http-api-plus
+docker run -it -e WHATSAPP_API_KEY=yoursecretkey devlikeapro/waha-plus
 ```
 
 ### Use Api-Key in Swagger

@@ -39,9 +39,9 @@ Download and start WhatsApp HTTP API docker container
 
 ```bash
 # Download the image
-docker pull devlikeapro/whatsapp-http-api
+docker pull devlikeapro/waha
 # Run the docker container
-docker run -it --rm --network=host -e WHATSAPP_HOOK_URL=http://localhost:5000/bot -e "WHATSAPP_HOOK_EVENTS=*" --name whatsapp-http-api devlikeapro/whatsapp-http-api
+docker run -it --rm --network=host -e WHATSAPP_HOOK_URL=http://localhost:5000/bot -e "WHATSAPP_HOOK_EVENTS=*" --name waha devlikeapro/waha
 
 # It prints logs and the last line must be
 # WhatsApp HTTP API is running on: http://[::1]:3000
@@ -56,11 +56,11 @@ commands to download the image
 
 ```bash
 # Download the image
-docker pull devlikeapro/whatsapp-http-api:arm
-# Rename it, so you can use devlikeapro/whatsapp-http-api image in other place
-docker tag devlikeapro/whatsapp-http-api:arm devlikeapro/whatsapp-http-api
+docker pull devlikeapro/waha:arm
+# Rename it, so you can use devlikeapro/waha image in other place
+docker tag devlikeapro/waha:arm devlikeapro/waha
 # Run the docker container
-docker run -it --rm --network=host -e WHATSAPP_HOOK_URL=http://localhost:5000/bot -e "WHATSAPP_HOOK_EVENTS=*" --name whatsapp-http-api devlikeapro/whatsapp-http-api
+docker run -it --rm --network=host -e WHATSAPP_HOOK_URL=http://localhost:5000/bot -e "WHATSAPP_HOOK_EVENTS=*" --name waha devlikeapro/waha
 
 # It prints logs and the last line must be
 # WhatsApp HTTP API is running on: http://[::1]:3000
