@@ -69,17 +69,17 @@ WAHA provides few docker images with different setup.
 | Image                                                   | CPU | Browser                 |
 |---------------------------------------------------------|-----|-------------------------|
 | [WAHA Plus]({{< relref "/docs/how-to/plus-version" >}}) |     |                         |
-| `devlikeapro/waha-plus:latest`             | x86 | Chromium                |
-| `devlikeapro/waha-plus:chrome`             | x86 | Chrome (supports video) |
-| `devlikeapro/waha-plus:noweb`              | x86 | None                    |
-| `devlikeapro/waha-plus:arm`                | ARM | Chromium                |
-| `devlikeapro/waha-plus:noweb-arm`          | ARM | None                    |
+| `devlikeapro/waha-plus:latest`                          | x86 | Chromium                |
+| `devlikeapro/waha-plus:chrome`                          | x86 | Chrome (supports video) |
+| `devlikeapro/waha-plus:noweb`                           | x86 | None                    |
+| `devlikeapro/waha-plus:arm`                             | ARM | Chromium                |
+| `devlikeapro/waha-plus:noweb-arm`                       | ARM | None                    |
 | **WAHA Core**                                           |     |                         |
-| `devlikeapro/waha:latest`                  | x86 | Chromium                |
-| `devlikeapro/waha:chrome`                  | x86 | Chrome                  |
-| `devlikeapro/waha:noweb`                   | x86 | None                    |
-| `devlikeapro/waha:arm`                     | ARM | Chromium                |
-| `devlikeapro/waha:noweb-arm`               | ARM | None                    |
+| `devlikeapro/waha:latest`                               | x86 | Chromium                |
+| `devlikeapro/waha:chrome`                               | x86 | Chrome                  |
+| `devlikeapro/waha:noweb`                                | x86 | None                    |
+| `devlikeapro/waha:arm`                                  | ARM | Chromium                |
+| `devlikeapro/waha:noweb-arm`                            | ARM | None                    |
 
 ### Browsers
 - **Chromium** - is the default browser for **WAHA**. It's a good choice for most cases.

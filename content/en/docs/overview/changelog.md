@@ -21,6 +21,16 @@ If you wish to get and read Release Notes - read them on one of our platforms, *
 
 ----
 ## 2024.6
+### 👉 Breaking changes
+
+----
+
+Docker image has been renamed to `devlikeapro/waha` and `devlikeapro/waha-plus`!
+- Read more about [WAHA Docker images]({{< relref "/docs/how-to/engines#doccker-images" >}})
+- Build: `2024.6.2`
+
+----
+
 ### 🎉 New
 
 ----
