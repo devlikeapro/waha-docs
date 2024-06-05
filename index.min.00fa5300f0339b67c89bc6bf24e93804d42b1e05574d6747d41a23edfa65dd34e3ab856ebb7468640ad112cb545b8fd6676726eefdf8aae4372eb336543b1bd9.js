@@ -61,7 +61,8 @@ The server has 2 CPU and 8GB of memory. Today we have 85 sessions in this instan
 400 sessions with 4CPU and 32RAM. It\u0026rsquo;s working fine.
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🔄 Changelog",description:"WAHA's changelog",content:`If you wish to get and read Release Notes - read them on one of our platforms, these posts are FREE.
 Boosty -\u0026gt; Patreon -\u0026gt; Subscribe for FREE to get new updates there!
-2024.6 #🎉 New #Starting 2026.6.1 we publish images with {version} tag, so you can pin the version you want to use.
+2024.6 #👉 Breaking changes #Docker image has been renamed to devlikeapro/waha and devlikeapro/waha-plus!
+Read more about WAHA Docker images Build: 2024.6.2 🎉 New #Starting 2026.6.1 we publish images with {version} tag, so you can pin the version you want to use.
 devlikeapro/waha-plus:chrome-{version} =\u0026gt; devlikeapro/waha-plus:chrome-2024.6.1
 Read more about WAHA Docker images Build: 2024.6.1 🐛 Fixes - NOWEB #Fix sending poll response in NOWEB engine.
 Build: 2024.6.1 Engine: NOWEB Issue: #356 2024.5 #🎉 New #Added WAHA_PRINT_QR environment variable to control QR code printing (by default True). Set WAHA_PRINT_QR=False to disable QR code printing.
