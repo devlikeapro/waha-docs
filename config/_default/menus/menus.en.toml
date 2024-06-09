@@ -97,19 +97,95 @@
 
 [[main]]
   name = "Blog"
-  weight = 70
+  weight = 60
   url = "/blog"
 
 [[main]]
   name = "Pricing"
-  weight = 80
+  weight = 70
   url = "/pricing"
 
 [[main]]
   name = "Contact"
-  weight = 90
+  weight = 80
   url = "/contact"
 
+[[main]]
+  name = "Language 🌍"
+  identifier = "language"
+  weight = 90
+
+[[main]]
+  name = "🇦🇪 العربية (Arabic)"
+  weight = 91
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=ar&hl=ar&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+  name = "🇧🇩 বাংলা (Bengali)"
+  weight = 92
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=bn&hl=bn&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+  name = "🇬🇧 English (English)"
+  weight = 93
+  parent="language"
+  url="https://waha.devlike.pro/"
+
+[[main]]
+  name = "🇮🇷 فارسی (Persian)"
+  weight = 94
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=fa&hl=fa&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+  name = "🇮🇳 हिंदी (Hindi)"
+  weight = 95
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=hi&hl=hi&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+  name = "🇮🇩 Bahasa Indonesia (Indonesian)"
+  weight = 96
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=id&hl=id&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+  name = "🇧🇷🇵🇹 Português (Portuguese)"
+  weight = 97
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=pt&hl=pt&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+  name = "🇷🇺 Русский (Russian)"
+  weight = 98
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=ru&hl=ru&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+  name = "🇪🇸 Español (Spanish)"
+  weight = 99
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=es&hl=es&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+  name = "🇹🇷 Türkçe (Turkish)"
+  weight = 101
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=tr&hl=tr&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+  name = "🇺🇦 Українська (Ukrainian)"
+  weight = 102
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=uk&hl=uk&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+  name = "ਪੰਜਾਬੀ (Punjabi)"
+  weight = 103
+  parent="language"
+  url="https://translate.google.com/translate?sl=en&tl=pa&hl=pa&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
   name = "Examples"
