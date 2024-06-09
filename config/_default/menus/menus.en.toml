@@ -32,7 +32,7 @@
 [[main]]
   name = "⚡ Quick Start"
   weight = 12
-  url = "/docs/overview/introduction"
+  url = "/docs/overview/quick-start"
   parent = "docs"
 
 [[main]]
