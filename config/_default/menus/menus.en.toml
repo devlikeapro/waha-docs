@@ -111,7 +111,7 @@
   url = "/contact"
 
 [[main]]
-  name = "Language 🌍"
+  name = "🌍 Language"
   identifier = "language"
   weight = 90
 
@@ -182,7 +182,7 @@
   url="https://translate.google.com/translate?sl=en&tl=uk&hl=uk&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "ਪੰਜਾਬੀ (Punjabi)"
+  name = "🇵🇰 ਪੰਜਾਬੀ (Punjabi)"
   weight = 103
   parent="language"
   url="https://translate.google.com/translate?sl=en&tl=pa&hl=pa&u=https://waha.devlike.pro/&client=webapp"
