@@ -77,7 +77,7 @@ If you want to use the MongoDB to store the session data, you need to:
 ### Example
 First, you need to start MongoDB server:
 ```bash
-docker run -d -p 27017:27017 --name mongodb mongo
+docker run -d -p 27017:27017 --name mongodb -v mongo-data:/data/db mongo
 ```
 
 Then, you need to run the WAHA with the `WHATSAPP_SESSIONS_MONGO_URL` environment variable (please note using `--network host` option as well)
