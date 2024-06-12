@@ -24,21 +24,15 @@
   weight = 10
 
 [[main]]
-  name = "📖 Introduction"
-  weight = 11
-  url = "/docs/overview/introduction"
-  parent = "docs"
-
-[[main]]
   name = "⚡ Quick Start"
-  weight = 12
+  weight = 11
   url = "/docs/overview/quick-start"
   parent = "docs"
 
 [[main]]
-  name = "📄 Docs"
+  name = "📄 Overview"
   weight = 13
-  url = "/docs/"
+  url = "/docs/overview"
   parent = "docs"
 
 [[main]]
@@ -48,13 +42,26 @@
   parent = "docs"
 
 [[main]]
-  name = "📊 Dashboard ->"
+  name = "🏭 Engines"
+  weight = 15
+  url = "/docs/engines"
+  parent = "docs"
+
+[[main]]
+  name = "🧩 Examples"
+  weight = 16
+  identifier = "examples"
+  url = "/docs/examples"
+  parent = "docs"
+
+[[main]]
+  name = "Dashboard ->"
   weight = 97
   url = "/dashboard"
   parent = "docs"
 
 [[main]]
-  name = "📚 Swagger ->"
+  name = "Swagger ->"
   weight = 97
   url = "/swagger"
   parent = "docs"
@@ -185,24 +192,6 @@
   name = "🇫🇷 Français (French)"
   parent="language"
   url="https://translate.google.com/translate?sl=en&tl=fr&hl=fr&u=https://waha.devlike.pro/&client=webapp"
-
-[[main]]
-  name = "Examples"
-  weight = 30
-  identifier = "examples"
-  url = "/docs/examples"
-
-#[[main]]
-#  name = "Python ->"
-#  weight = 31
-#  url = "/docs/examples/python"
-#  parent = "examples"
-
-#[[main]]
-#  name = "Kotlin ->"
-#  weight = 32
-#url = "/docs/examples/kotlin"
-#  parent = "examples"
 
 [[social]]
   name = "GitHub"
