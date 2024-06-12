@@ -86,17 +86,20 @@ Read more about it on [**Sessions page** ->]({{< relref "/docs/how-to/sessions#c
 
 ## Recommended Proxies
 
+### Geonode
+We recommend using <b><a href="https://geonode.com/invite/90920" target="_blank">Geonode</a></b>.
+
 ### Proxy6
-We recommend using <b><a href="https://proxy6.net/en/?r=628046" target="_blank">Proxy6</a></b>
-where you can get a DEDICATED proxy (only you'll use it) for **$1.77 per month**.
+Another option is <b><a href="https://proxy6.net/en/?r=628046" target="_blank">Proxy6</a></b>
+where you can get a dedicated proxy (only you'll use it) for **$1.77 per month**.
+
+{{< alert icon="👉" text="Unfortunately, it uses VPS IP ranges, so doesn't work 100%" />}}
 
 Apply the promocode get a **5% discount** on your purchase.
 ```
 9W9oVxx3UX
 ```
 
-### Geonode
-Another option is <b><a href="https://geonode.com/invite/90920" target="_blank">Geonode</a></b>.
 
 
 ## Tunneling
