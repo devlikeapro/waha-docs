@@ -24,6 +24,11 @@ It affects both **WEBJS** and **NOWEB** [engines]({{< relref "/docs/how-to/engin
 4. Face login failures or instant logout.
 5. Encounter a new QR code or enter a FAILED state immediately.
 
+### Solutions
+**There are two ways to solve this issue**:
+1. Use a proxy (read this page and [**article about WAHA + Geonode**]({{< relref "/blog/waha-geonode" >}})).
+2. Running WAHA on local network and [**expose WAHA with Ngrok**]({{< relref "/blog/waha-ngrok" >}}).
+
 <div class="text-center">
 
   ![WhatsApp - could not login](could-not-login.png)
