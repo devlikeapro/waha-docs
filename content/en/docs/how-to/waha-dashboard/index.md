@@ -45,10 +45,6 @@ When running WAHA you can set the following environment variables to configure t
 docker run -it -p 3000:3000/tcp -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PASSWORD=waha devlikeapro/waha-plus
 ```
 
-## Multiple servers
-If you wish to connect, control and manage multiple servers in a single "dashboard", consider using
-[WAHA Hub]({{< relref "/docs/waha-hub/introduction" >}}) - central management server to help you build reliable infrastructure!
-
 ## Bug reports and feature requests
 If you're experiencing any issues or have a feature request, please create an issue in the
 [WAHA GitHub](https://github.com/devlikeapro/waha/issues)
