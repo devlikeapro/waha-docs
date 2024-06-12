@@ -3,10 +3,11 @@ If you wish to read a quick start guide which show you how to send you first mes
 WAHA is distributed in two versions, that have a similar installation instructions.
 WAHA Core - the basic version that meet almost 80% people&amp;rsquo;s needs. 100% free and open source -&amp;gt;. WAHA Plus - the version with advanced messages, security, and reliability features.</description></item><item><title>📊 Dashboard</title><link>https://waha.devlike.pro/docs/how-to/waha-dashboard/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/waha-dashboard/</guid><description>Overview #
 Dashboard is a UI to manage your WhatsApp sessions!
-Download the Dashboard Overview video . 👉 Dashboard is available in WAHA Plus version only.
-You can access Dashboard by running the project and opening http://localhost:3000/dashboard (or similar, but with /dashboard at the end).
+Download the Dashboard Overview video . You can access Dashboard by running the project and opening http://localhost:3000/dashboard (or similar, but with /dashboard at the end).
 ℹ️ Default username and password: waha/waha
-docker run -it -p 3000:3000/tcp devlikeapro/waha-plus If you&amp;rsquo;re using API Key, remember to set up the key in the dashboard.</description></item><item><title>📚 Swagger (OpenAPI)</title><link>https://waha.devlike.pro/docs/how-to/swagger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/swagger/</guid><description>Overview #
+docker run -it -p 3000:3000/tcp devlikeapro/waha-plus If you&amp;rsquo;re using API Key, remember to set up the key in the dashboard.
+Configuration #
+When running WAHA you can set the following environment variables to configure the dashboard:</description></item><item><title>📚 Swagger (OpenAPI)</title><link>https://waha.devlike.pro/docs/how-to/swagger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/swagger/</guid><description>Overview #
 The project provides HTTP API (REST), which is documented with OpenAPI specification and Swagger UI.
 Download the Swagger Overview video . You can see all available endpoints, request/response examples, and even execute them directly from the Swagger UI.
 Find the latest versions:
