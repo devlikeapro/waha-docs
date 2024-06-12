@@ -24,10 +24,9 @@
   weight = 10
 
 [[main]]
-  name = "⚡ Quick Start"
-  weight = 11
+  name = "⚡ Quick Start ⚡"
+  weight = 1
   url = "/docs/overview/quick-start"
-  parent = "docs"
 
 [[main]]
   name = "📄 Overview"
