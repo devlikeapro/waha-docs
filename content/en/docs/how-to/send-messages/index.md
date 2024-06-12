@@ -1,6 +1,6 @@
 ---
 title : "📤 Send messages"
-description: "Send messages"
+description: "Describe how to send messages."
 lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00

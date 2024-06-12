@@ -1,6 +1,6 @@
 ---
 title: "🏭 Engines"
-description: "Engines"
+description: "Under the hood WAHA allows you to use different engines."
 lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00

@@ -1,6 +1,6 @@
 ---
 title: "📚 Swagger (OpenAPI)"
-description: "Swagger (OpenAPI)"
+description: "Swagger (OpenAPI) documentation"
 lead: ""
 date: 2020-10-06t08:48:45+00:00
 lastmod: 2020-10-06t08:48:45+00:00

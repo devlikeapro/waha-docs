@@ -1,6 +1,6 @@
 ---
 title: "📊 Dashboard"
-description: "Dashboard"
+description: "Dashboard - UI to manage your WhatsApp sessions!"
 lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00

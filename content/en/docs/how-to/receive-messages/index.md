@@ -1,6 +1,6 @@
 ---
 title : "📥 Receive messages"
-description: "Receive messages"
+description: "Describe how to receive messages from WhatsApp."
 lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
