@@ -31,7 +31,14 @@ Start a new session with configured `message` event in webhooks - call `POST /ap
 }
 ```
 
-After that WAHA'll send events (see below) about new messages to an endpoint you provided.
+After that WAHA sends events (see below) about new messages to an endpoint you provided.
+
+## Some IDS
+You can see some in `from`, `to`, and `participant` fields here's what they mean:
+- `123123123@c.us`  **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at the end.
+  For phone number `12132132131` the `chatId` is  `12132132131@c.us` (`@s.whatsapp.net` can also appear in internal data, simply convert it to `@g.us`).
+- `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
+- `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that type of ID along with communities functionality.
 
 
 ## Webhooks

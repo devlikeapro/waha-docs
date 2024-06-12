@@ -32,13 +32,16 @@ Read more about [multiple sessions →]({{< relref "/docs/how-to/sessions" >}})
 
 ### chatId
 `chatId` - it's a phone number or Group identifier where you're sending the message.
-- **Phone numbers** accounts use international phone number without + at the start and add `@c.us` at the end.
-  For phone number `12132132131` the `chatId` is  `12132132131@c.us`.
-- **Groups** use random number with `@g.us` at the end.
+- `123123123@c.us`  **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at the end.
+  For phone number `12132132131` the `chatId` is  `12132132131@c.us` (`@s.whatsapp.net` can also appear in internal data, simply convert it to `@g.us`).
+- `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
+- `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that type of ID along with communities functionality.
 
-> To get the actual `chatId` for **Brazilian phone number** - use `chatId` field from
-> [Check phone number exists ->]({{< relref "/docs/how-to/contacts#check-phone-number-exists" >}})
-> response.
+👉 To get the actual `chatId` for 🇧🇷 **Brazilian phone number** - use `chatId` field from
+[Check phone number exists]({{< relref "/docs/how-to/contacts#check-phone-number-exists" >}})
+response. 
+
+Read more about [error sending text to half of Brazilian numbers (every number registered before 2012) ->](https://github.com/devlikeapro/waha/issues/238)
 
 ### file
 When sending media (images, voice, files) you can either use:

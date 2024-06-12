@@ -74,7 +74,7 @@ It returns `numberExists` field with `true` or `false` value and `chatId` field 
   "chatId": "123123123@c.us"
 }
 ```
-**Note for Brazilian Phone Numbers**
+**Note for 🇧🇷 Brazilian Phone Numbers**
 
 You should use the `GET /api/contacts/check-exists` endpoint **before sending a message to a new phone number**
 to get the correct chatId because of the additional 9-digit number added after 2012.
