@@ -48,9 +48,15 @@
   parent = "docs"
 
 [[main]]
-  name = "Swagger ->"
+  name = "📊 Dashboard ->"
   weight = 97
-  url = "https://waha.devlike.pro/swagger"
+  url = "/dashboard"
+  parent = "docs"
+
+[[main]]
+  name = "📚 Swagger ->"
+  weight = 97
+  url = "/swagger"
   parent = "docs"
   target = "_blank"
 

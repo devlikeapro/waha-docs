@@ -18,8 +18,6 @@ weight: 202
   Download the <a href="/videos/waha-dashboard-overview.webm">Dashboard Overview video</a> .
 </video>
 
-👉 **Dashboard** is available in [**WAHA Plus**]({{< relref "plus-version#plus" >}}) ![](/images/versions/plus.png) version only.
-
 You can access **Dashboard** by running the project and opening
 <a href="http://localhost:3000/dashboard" target="_blank">http://localhost:3000/dashboard</a>
 (or similar, but with <a href="/dashboard" target="_blank">/dashboard</a> at the end).
