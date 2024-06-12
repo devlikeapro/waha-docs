@@ -24,7 +24,7 @@
   weight = 10
 
 [[main]]
-  name = "⚡ Quick Start ⚡"
+  name = "⚡ Quick Start"
   weight = 1
   url = "/docs/overview/quick-start"
 
