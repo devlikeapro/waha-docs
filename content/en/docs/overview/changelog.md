@@ -48,7 +48,7 @@ Starting `2026.6.1` we publish images with `{version}` tag, so you can pin the v
 
 ----
 
-You asked, we did - **contacts, chats, and messages** endpoints are now available in **NOWEB** engine!
+You asked it, we did it - **contacts, chats, and messages** endpoints are now available in **NOWEB** engine!
 Please make sure to [Enable NOWEB Store]({{< relref "/docs/engines/noweb#store" >}}) before using these endpoints.
 
 - Build: `2024.6.3`
