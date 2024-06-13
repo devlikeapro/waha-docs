@@ -44,7 +44,28 @@ Starting `2026.6.1` we publish images with `{version}` tag, so you can pin the v
 
 ----
 
-### 🐛 Fixes - NOWEB
+### 🎉 New - NOWEB
+
+----
+
+You asked, we did - **contacts, chats, and messages** endpoints are now available in **NOWEB** engine!
+Please make sure to [Enable NOWEB Store]({{< relref "/docs/engines/noweb#store" >}}) before using these endpoints.
+
+- Build: `2024.6.3`
+- Engine: **NOWEB**
+- [Read more about NOWEB Store]({{< relref "/docs/engines/noweb#store" >}})
+- Issue [#169](https://github.com/devlikeapro/waha/issues/169)
+- Issue [#206](https://github.com/devlikeapro/waha/issues/206)
+- Issue [#217](https://github.com/devlikeapro/waha/issues/217)
+- Issue [#322](https://github.com/devlikeapro/waha/issues/322)
+- Issue [#339](https://github.com/devlikeapro/waha/issues/339)
+
+----
+
+Generate thumbnail preview for video and image messages in **NOWEB** engine.
+- Build: `2024.6.3`
+- Engine: **NOWEB**
+
 ----
 
 Fix sending poll response in **NOWEB** engine.
