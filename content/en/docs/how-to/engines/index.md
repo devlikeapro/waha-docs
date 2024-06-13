@@ -28,14 +28,17 @@ Core ![](/images/versions/core.png) and
 
 ### WEBJS
 
+👉 [Read more about **WEBJS**]({{< relref "/docs/engines/webjs" >}})
+
 `WHATSAPP_DEFAULT_ENGINE=WEBJS`
 
 A WhatsApp API client that connects through the WhatsApp Web browser app.
 It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
 
-👉 [Read more about **WEBJS**]({{< relref "/docs/engines/webjs" >}})
 
 ### NOWEB
+👉 [Read more about **NOWEB**]({{< relref "/docs/engines/noweb" >}})
+
 `WHATSAPP_DEFAULT_ENGINE=NOWEB`
 
 **NOWEB** engine **does not require a browser** to work with WhatsApp Web, it does so directly using a WebSocket.
@@ -46,16 +49,15 @@ Quotes from the users:
 >
 > **400** sessions with **4CPU and 32RAM**. It's working fine.
 
-👉 [Read more about **NOWEB**]({{< relref "/docs/engines/noweb" >}})
 
 ### VENOM
+👉 [Read more about **VENOM**]({{< relref "/docs/engines/venom" >}})
 
 `WHATSAPP_DEFAULT_ENGINE=VENOM`
 
 It's a high-performance system developed with JavaScript to create a bot for WhatsApp.
 It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
 
-👉 [Read more about **VENOM**]({{< relref "/docs/engines/venom" >}})
 
 ## Docker images
 WAHA provides few docker images with different setup.
@@ -118,66 +120,71 @@ it's the engine WAHA runs by default.
 If you find any inconsistency with actual endpoints -
 please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Error+in+engine+features )
 
-|                                                                   | WEBJS |                                   NOWEB                                   | VENOM |
-|-------------------------------------------------------------------|:-----:|:-------------------------------------------------------------------------:|:-----:|
-| **Session**                                                       |       |                                                                           |       |
-| `POST /api/sessions/start`                                        |  ✔️   |                                    ✔️                                     |  ✔️   |
-| `POST /api/sessions/stop`                                         |  ✔️   |                                    ✔️                                     |  ✔️   |
-| `POST /api/sessions/logout`                                       |  ✔️   |                                    ✔️                                     |  ✔️   |
-| `GET /api/sessions/`                                              |  ✔️   |                                    ✔️                                     |  ✔️   |
-| `GET /api/sessions/{session}/me`                                  |  ✔️   |                                    ✔️                                     |   ➖   |
-| **Authentication**                                                |       |                                                                           |       |
-| `POST /api/{session}/auth/qr`                                     |  ✔️   |                                    ✔️                                     |  ✔️   |
-| `POST /api/{session}/auth/request-code`                           |   ➖   |                                    ✔️                                     |   ➖   |
-| `POST /api/{session}/auth/authorize-code`                         |   ➖   | ➖️<br>[#113](https://github.com/devlikeapro/waha/issues/113) |   ➖   |
-| **Screenshot**                                                    |       |                                                                           |       |
-| `POST /api/screenshot`                                            |  ✔️   |                                     ➖                                     |  ✔️   |
+|                                           | WEBJS |                            NOWEB                             | VENOM |
+|-------------------------------------------|:-----:|:------------------------------------------------------------:|:-----:|
+| **Session**                               |       |                                                              |       |
+| `POST /api/sessions/start`                |  ✔️   |                              ✔️                              |  ✔️   |
+| `POST /api/sessions/stop`                 |  ✔️   |                              ✔️                              |  ✔️   |
+| `POST /api/sessions/logout`               |  ✔️   |                              ✔️                              |  ✔️   |
+| `GET /api/sessions/`                      |  ✔️   |                              ✔️                              |  ✔️   |
+| `GET /api/sessions/{session}/me`          |  ✔️   |                              ✔️                              |   ➖   |
+| **Authentication**                        |       |                                                              |       |
+| `POST /api/{session}/auth/qr`             |  ✔️   |                              ✔️                              |  ✔️   |
+| `POST /api/{session}/auth/request-code`   |   ➖   |                              ✔️                              |   ➖   |
+| `POST /api/{session}/auth/authorize-code` |   ➖   | ➖️<br>[#113](https://github.com/devlikeapro/waha/issues/113) |   ➖   |
+| **Screenshot**                            |       |                                                              |       |
+| `POST /api/screenshot`                    |  ✔️   |                              ➖                               |  ✔️   |
 
-| **Chatting**                                                | WEBJS | NOWEB | VENOM |
-|-------------------------------------------------------------|:-----:|:-----:|:-----:|
-| `GET /api/checkNumberStatus`                                |  ✔️   |  ✔️   |  ✔️   |
-| `GET /api/sendContactVcard`                                 |   ➖   |  ✔️   |   ➖   |
-| `GET /api/sendText`                                         |  ✔️   |  ✔️   |  ✔️   |
-| `POST /api/sendText`                                        |  ✔️   |  ✔️   |  ✔️   |
-| `POST /api/reply`                                           |  ✔️   |  ✔️   |  ✔️   |
-| `PUT /api/{session}/chats/{chatId}/messages/{messageId}`    |  ✔️   |  ✔️   |   ➖   |
-| `DELETE /api/{session}/chats/{chatId}/messages/{messageId}` |  ✔️   |  ✔️   |   ➖   |
-| `POST /api/sendPoll`                                        |   ➖   |  ✔️   |   ➖   |
-| `POST /api/sendLocation`                                    |  ✔️   |  ✔️   |  ✔️   |
-| `POST /api/sendLinkPreview`                                 |   ➖   |  ✔️   |  ✔️   |
-| `POST /api/sendImage` ![](/images/versions/plus.png)        |  ✔️   |  ✔️   |  ✔️   |
-| `POST /api/sendFile` ![](/images/versions/plus.png)         |  ✔️   |  ✔️   |  ✔️   |
-| `POST /api/sendVoice` ![](/images/versions/plus.png)        |  ✔️   |  ✔️   |  ✔️   |
-| `POST /api/sendVideo` ![](/images/versions/plus.png)        |  ✔️   |  ✔️   |   ➖   |
-| `POST /api/sendSeen`                                        |  ✔️   |  ✔️   |  ✔️   |
-| `POST /api/startTyping`                                     |  ✔️   |  ✔️   |  ✔️   |
-| `POST /api/stopTyping`                                      |  ✔️   |  ✔️   |   ➖   |
-| `POST /api/reaction`                                        |  ✔️   |  ✔️   |   ➖   |
-| `POST /api/star`                                            |  ✔️   |  ✔️   |   ➖   |
-| `GET /api/messages`                                         |  ✔️   |   ➖   |  ✔️   |
+| **Chatting**                                                | WEBJS |      NOWEB       | VENOM |
+|-------------------------------------------------------------|:-----:|:----------------:|:-----:|
+| `GET /api/checkNumberStatus`                                |  ✔️   |        ✔️        |  ✔️   |
+| `GET /api/sendContactVcard`                                 |   ➖   |        ✔️        |   ➖   |
+| `GET /api/sendText`                                         |  ✔️   |        ✔️        |  ✔️   |
+| `POST /api/sendText`                                        |  ✔️   |        ✔️        |  ✔️   |
+| `POST /api/reply`                                           |  ✔️   |        ✔️        |  ✔️   |
+| `PUT /api/{session}/chats/{chatId}/messages/{messageId}`    |  ✔️   |        ✔️        |   ➖   |
+| `DELETE /api/{session}/chats/{chatId}/messages/{messageId}` |  ✔️   |        ✔️        |   ➖   |
+| `POST /api/sendPoll`                                        |   ➖   |        ✔️        |   ➖   |
+| `POST /api/sendLocation`                                    |  ✔️   |        ✔️        |  ✔️   |
+| `POST /api/sendLinkPreview`                                 |   ➖   |        ✔️        |  ✔️   |
+| `POST /api/sendImage` ![](/images/versions/plus.png)        |  ✔️   |        ✔️        |  ✔️   |
+| `POST /api/sendFile` ![](/images/versions/plus.png)         |  ✔️   |        ✔️        |  ✔️   |
+| `POST /api/sendVoice` ![](/images/versions/plus.png)        |  ✔️   |        ✔️        |  ✔️   |
+| `POST /api/sendVideo` ![](/images/versions/plus.png)        |  ✔️   |        ✔️        |   ➖   |
+| `POST /api/sendSeen`                                        |  ✔️   |        ✔️        |  ✔️   |
+| `POST /api/startTyping`                                     |  ✔️   |        ✔️        |  ✔️   |
+| `POST /api/stopTyping`                                      |  ✔️   |        ✔️        |   ➖   |
+| `POST /api/reaction`                                        |  ✔️   |        ✔️        |   ➖   |
+| `POST /api/star`                                            |  ✔️   |        ✔️        |   ➖   |
+| `GET /api/messages`                                         |  ✔️   | ✔️[*1](#heading) |  ✔️   |
 
-|                                                                   | WEBJS | NOWEB | VENOM |
-|-------------------------------------------------------------------|:-----:|:-----:|:-----:|
-| **Status**                                                        |       |       |       |
-| `POST /api/{session}/status/text`                                 |   ➖   |  ✔️   |   ➖   |
-| `POST /api/{session}/status/image` ![](/images/versions/plus.png) |   ➖   |  ✔️   |   ➖   |
-| `POST /api/{session}/status/voice` ![](/images/versions/plus.png) |   ➖   |  ✔️   |   ➖   |
-| `POST /api/{session}/status/video` ![](/images/versions/plus.png) |   ➖   |  ✔️   |   ➖   |
-| **Chats**                                                         |       |       |       |
-| `GET /api/{session}/chats`                                        |  ✔️   |   ➖   |   ➖   |
-| `DELETE /api/{session}/chats/{chatId}`                            |  ✔️   |   ➖   |   ➖   |
-| `GET /api/{session}/chats/{chatId}/messages`                      |  ✔️   |   ➖   |  ✔️   |
-| `DELETE /api/{session}/chats/{chatId}/messages`                   |  ✔️   |   ➖   |   ➖   |
-| `PUT /api/{session}/chats/{chatId}/messages/{messageId}`          |  ✔️   |  ✔️   |   ➖   |
-| `DELETE /api/{session}/chats/{chatId}/messages/{messageId}`       |  ✔️   |  ✔️   |   ➖   |
-| **Contacts**                                                      |       |       |       |
-| `GET /api/contacts`                                               |  ✔️   |   ➖   |   ➖   |
-| `GET /api/contacts/all`                                           |  ✔️   |   ➖   |   ➖   |
-| `GET /api/contacts/check-exists`                                  |  ✔️   |  ✔️   |  ✔️   |
-| `GET /api/contacts/about`                                         |  ✔️   |   ➖   |   ➖   |
-| `GET /api/contacts/profile-picture`                               |  ✔️   |  ✔️   |   ➖   |
-| `POST /api/contacts/block`                                        |  ✔️   |   ➖   |   ➖   |
-| `POST /api/contacts/unblock`                                      |  ✔️   |   ➖   |   ➖   |
+|                                                                   | WEBJS |      NOWEB       | VENOM |
+|-------------------------------------------------------------------|:-----:|:----------------:|:-----:|
+| **Status**                                                        |       |                  |       |
+| `POST /api/{session}/status/text`                                 |   ➖   |        ✔️        |   ➖   |
+| `POST /api/{session}/status/image` ![](/images/versions/plus.png) |   ➖   |        ✔️        |   ➖   |
+| `POST /api/{session}/status/voice` ![](/images/versions/plus.png) |   ➖   |        ✔️        |   ➖   |
+| `POST /api/{session}/status/video` ![](/images/versions/plus.png) |   ➖   |        ✔️        |   ➖   |
+| **Chats**                                                         |       |                  |       |
+| `GET /api/{session}/chats`                                        |  ✔️   | ✔️[*1](#heading) |   ➖   |
+| `DELETE /api/{session}/chats/{chatId}`                            |  ✔️   | ➖ [*2](#heading) |   ➖   |
+| `GET /api/{session}/chats/{chatId}/messages`                      |  ✔️   | ✔️[*1](#heading) |  ✔️   |
+| `DELETE /api/{session}/chats/{chatId}/messages`                   |  ✔️   | ➖ [*2](#heading) |   ➖   |
+| `PUT /api/{session}/chats/{chatId}/messages/{messageId}`          |  ✔️   |        ✔️        |   ➖   |
+| `DELETE /api/{session}/chats/{chatId}/messages/{messageId}`       |  ✔️   |        ✔️        |   ➖   |
+| **Contacts**                                                      |       |                  |       |
+| `GET /api/contacts`                                               |  ✔️   | ✔️[*1](#heading) |   ➖   |
+| `GET /api/contacts/all`                                           |  ✔️   | ✔️[*1](#heading) |   ➖   |
+| `GET /api/contacts/check-exists`                                  |  ✔️   |        ✔️        |  ✔️   |
+| `GET /api/contacts/about`                                         |  ✔️   |        ➖         |   ➖   |
+| `GET /api/contacts/profile-picture`                               |  ✔️   |        ✔️        |   ➖   |
+| `POST /api/contacts/block`                                        |  ✔️   | ➖[*2](#heading)  |   ➖   |
+| `POST /api/contacts/unblock`                                      |  ✔️   | ➖[*2](#heading)  |   ➖   |
+
+
+#### *
+1. **NOWEB** - you need to [**Enable Store**]({{< relref "/docs/engines/noweb#store" >}}) to get **chats, contacts and messages**
+2. **NOWEB** - Create an issue with the [feature request if you need it](https://github.com/devlikeapro/waha/issues/)
 
 | **Groups**                                                             | WEBJS | NOWEB | VENOM |
 |------------------------------------------------------------------------|:-----:|:-----:|:-----:|
@@ -208,7 +215,7 @@ please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Er
 | `GET /api/{session}/presence/{chatId}`            |   ➖   |  ✔️   |   ➖   |
 | `POST /api/{session}/presence/{chatId}/subscribe` |   ➖   |  ✔️   |   ➖   |
 | **Other**                                         |       |       |       |
-| `GET /api/version`                                |   ➖   |  ✔️   |   ➖   |
+| `GET /api/version`                                |  ✔️   |  ✔️   |   ➖   |
 | `GET /health` ![](/images/versions/plus.png)      |  ✔️   |  ✔️   |  ✔️   |
 
 ### Webhooks

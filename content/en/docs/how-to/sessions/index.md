@@ -21,6 +21,9 @@ In order to start a new session - call `POST /api/sessions/start`
   "name": "default"
 }
 ```
+
+- 👉 [Read more about **NOWEB** Store Configuration]({{< relref "/docs/engines/noweb#store" >}})
+
 #### Configure webhooks
 You can configure webhooks for a session:
 ```json
