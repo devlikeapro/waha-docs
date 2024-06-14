@@ -73,6 +73,22 @@ Fix sending poll response in **NOWEB** engine.
 - Engine: **NOWEB**
 - Issue: [#356](https://github.com/devlikeapro/waha/issues/356)
 
+### 🎉 New - DASHBOARD
+
+----
+
+Starting `2024.6.3` [Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}) is available in **WAHA Core** version!
+
+- Read more about [WAHA Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}})
+- Build: `2024.6.3`
+
+----
+
+Starting `2024.6.3` [Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}) allows connecting to **multiple WAHA instances**!
+
+- Read more about [WAHA Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}})
+- Build: `2024.6.3`
+
 ----
 
 ## 2024.5
