@@ -30,10 +30,9 @@ You can define webhooks configuration per session when you start it with POST /a
 See the list of engines that support the features -&amp;gt;.
 Start #
 In order to start a new session - call POST /api/sessions/start
-{ &amp;quot;name&amp;quot;: &amp;quot;default&amp;quot; } Configure webhooks #
+{ &amp;quot;name&amp;quot;: &amp;quot;default&amp;quot; } 👉 Read more about NOWEB Store Configuration Configure webhooks #
 You can configure webhooks for a session:
-{ &amp;quot;name&amp;quot;: &amp;quot;default&amp;quot;, &amp;quot;config&amp;quot;: { &amp;quot;webhooks&amp;quot;: [ { &amp;quot;url&amp;quot;: &amp;quot;https://httpbin.org/post&amp;quot;, &amp;quot;events&amp;quot;: [ &amp;quot;message&amp;quot; ] } ] } } Read more about available options on Webhooks page -&amp;gt;
-The configuration is saved and will be applied if the docker container restarts, and you set WHATSAPP_RESTART_ALL_SESSIONS environment variables.</description></item><item><title>🌐 Proxy</title><link>https://waha.devlike.pro/docs/how-to/proxy/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/proxy/</guid><description>Overview #
+{ &amp;quot;name&amp;quot;: &amp;quot;default&amp;quot;, &amp;quot;config&amp;quot;: { &amp;quot;webhooks&amp;quot;: [ { &amp;quot;url&amp;quot;: &amp;quot;https://httpbin.org/post&amp;quot;, &amp;quot;events&amp;quot;: [ &amp;quot;message&amp;quot; ] } ] } } Read more about available options on Webhooks page -&amp;gt;</description></item><item><title>🌐 Proxy</title><link>https://waha.devlike.pro/docs/how-to/proxy/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/proxy/</guid><description>Overview #
 If you&amp;rsquo;re experiencing issues scanning QR codes in WhatsApp, especially with Indian 🇮🇳 phone numbers, using a proxy located close to the phone number&amp;rsquo;s location may help resolve the problem.
 It affects both WEBJS and NOWEB engines.
 👉 If proxy doesn&amp;rsquo;t help but the project works on YOUR local laptop - check Tunneling.
