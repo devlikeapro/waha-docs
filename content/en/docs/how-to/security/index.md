@@ -37,6 +37,11 @@ You also can hide swagger completely by setting `WHATSAPP_SWAGGER_ENABLED=false`
 
 {{< alert icon="👉" text="Disabling Swagger does not protect the API, please use API security as well" />}}
 
+### Swagger White Label
+You can also set [Swagger White Label]({{< relref "/docs/how-to/swagger#white-label" >}})
+options instead of hiding the Swagger panel.
+
+
 ## Dashboard Security
 When running WAHA you can set the following environment variables to configure the dashboard:
 - `WAHA_DASHBOARD_ENABLED=true` - enable or disable the dashboard, by default `true`. Set to `false` to disable the dashboard.
