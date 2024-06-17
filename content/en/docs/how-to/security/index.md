@@ -90,3 +90,22 @@ requests.get("http://localhost:3000/api/sessions", headers=headers)
 To make sure that you get a webhook from your WAHA instance - you can use **HMAC authentication**.
 Read more about it on [Webhooks page ->]({{< relref "/docs/how-to/webhooks#hmac-authentication" >}})
 
+## HTTPS
+After you set up the security options - you should set up HTTPS to protect the data in transit and prevent [Man-in-the-middle attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack).
+
+That's fine to run it on the local network without HTTPS, but for the production environment, it's a must-have.
+
+### Environment variables
+WAHA supports HTTPS out of the box. 
+
+You can set up the following environment variables to enable HTTPS:
+- `WAHA_HTTPS_ENABLED=true`: Set this variable to `true` to enable HTTPS. By default, it's `false`.
+- `WAHA_HTTPS_PATH_KEY=/path/to/key.pem`: The path to the key file for HTTPS. By default `./.secrets/privkey.pem`
+- `WAHA_HTTPS_PATH_CERT=/path/to/cert.pem`: The path to the certificate file for HTTPS. By default `./.secrets/cert.pem`
+- `WAHA_HTTPS_PATH_CA=/path/to/ca.pem`: The path to the CA file for HTTPS. By default `./.secrets/chain.pem`
+
+### How to set up HTTPS
+Here's available options how you can set up HTTPS:
+1. **Self-signed certificate** - generate a self-signed certificate and use it for HTTPS.
+2. **Let's Encrypt** - use [Certbot](https://certbot.eff.org/) to get a free certificate from Let's Encrypt.
+3. **Using reverse proxy** - use Nginx or Apache as a reverse proxy and set up HTTPS there.
