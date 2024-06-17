@@ -66,7 +66,8 @@ Boosty -\u0026gt; Patreon -\u0026gt; Subscribe for FREE to get new updates there
 2024.6 #👉 Breaking changes #Docker image has been renamed to devlikeapro/waha and devlikeapro/waha-plus!
 Read more about WAHA Docker images Build: 2024.6.2 🎉 New #Starting 2026.6.1 we publish images with {version} tag, so you can pin the version you want to use.
 devlikeapro/waha-plus:chrome-{version} =\u0026gt; devlikeapro/waha-plus:chrome-2024.6.1
-Read more about WAHA Docker images Build: 2024.6.1 🎉 New - NOWEB #You asked it, we did it - contacts, chats, and messages endpoints are now available in NOWEB engine! Please make sure to Enable NOWEB Store before using these endpoints.
+Read more about WAHA Docker images Build: 2024.6.1 Added limit and offset parameters to GET /api/{session}/chats endpoint.
+Read more about Get all chats Build: 2024.6.4 Engine: WEBJS Engine: NOWEB 🎉 New - NOWEB #You asked it, we did it - contacts, chats, and messages endpoints are now available in NOWEB engine! Please make sure to Enable NOWEB Store before using these endpoints.
 Build: 2024.6.3 Engine: NOWEB Read more about NOWEB Store Issue #169 Issue #206 Issue #217 Issue #322 Issue #339 Generate thumbnail preview for video and image messages in NOWEB engine.
 Build: 2024.6.3 Engine: NOWEB Fix sending poll response in NOWEB engine.
 Build: 2024.6.1 Engine: NOWEB Issue: #356 🎉 New - DASHBOARD #Starting 2024.6.3 Dashboard is available in WAHA Core version!
@@ -346,8 +347,9 @@ In the short term, a local file storage will be used to save poll keys. In the l
 `}),e.add({id:16,href:"/docs/how-to/chats/",title:"💬 Chats",description:"Chats",content:`Chats methods.
 Parameters in path that you can find in below endpoints:
 {session} - use the session name for Whatsapp instance that you created with POST /api/session/start endpoint {chatId} - chat id in format 123123123123@[c.us|g.us], c.us for direct chats and g.us for groups. Endpoints #See the list of engines that support the feature -\u0026gt;.
-Get all chats #Get all chats GET /api/{session}/chats
-Get messages from chat #Get 100 messages from the chat
+Get all chats #Get all chats
+GET /api/{session}/chats limit - limit the number of chats to return offset - skip the number of chats from the start If you see timeout or the request takes too long - consider using limit parameter to get chats in smaller chunks
+GET /api/{session}/chats?limit=100\u0026amp;offset=0 Get messages from chat #Get 100 messages from the chat
 GET /api/{session}/chats/{chatId}/messages?limit=100
 Get 100 messages from the chat, skip downloading media (images, files)
 GET /api/{session}/chats/{chatId}/messages?limit=100\u0026amp;downloadMedia=false
