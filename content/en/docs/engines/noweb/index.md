@@ -50,8 +50,8 @@ at [POST /api/sessions/start]({{< relref "/docs/how-to/sessions#start" >}}) body
   "name": "default",
   "config": {
     "noweb": {
-      "enabled": {
-        "store": true,
+      "store": {
+        "enabled": true,
         "fullSync": false
       }
     }
