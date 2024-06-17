@@ -44,6 +44,15 @@ Starting `2026.6.1` we publish images with `{version}` tag, so you can pin the v
 
 ----
 
+Added `limit` and `offset` parameters to `GET /api/{session}/chats` endpoint.
+
+- Read more about [Get all chats]({{< relref "/docs/how-to/chats#get-all-chats" >}})
+- Build: `2024.6.4`
+- Engine: **WEBJS**
+- Engine: **NOWEB**
+
+----
+
 ### 🎉 New - NOWEB
 
 ----
