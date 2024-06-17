@@ -19,8 +19,18 @@ Parameters in path that you can find in below endpoints:
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Get all chats
-Get all chats
-`GET /api/{session}/chats`
+Get all chats 
+```
+GET /api/{session}/chats
+```
+- `limit` - limit the number of chats to return
+- `offset` - skip the number of chats from the start
+
+If you see timeout or the request takes too long - consider using `limit` parameter to get chats in smaller chunks
+
+```
+GET /api/{session}/chats?limit=100&offset=0
+```
 
 ### Get messages from chat
 Get 100 messages from the chat
