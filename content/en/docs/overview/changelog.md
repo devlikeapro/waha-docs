@@ -53,6 +53,17 @@ Added `limit` and `offset` parameters to `GET /api/{session}/chats` endpoint.
 
 ----
 
+Added Out of the box **HTTPS Support**!
+
+👉 [**Step by step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
+
+- Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
+- Build: `2024.6.5`
+- Issue: [#42](https://github.com/devlikeapro/waha/issues/42)
+- Issue: [#369](https://github.com/devlikeapro/waha/issues/369)
+
+----
+
 ### 🎉 New - NOWEB
 
 ----
