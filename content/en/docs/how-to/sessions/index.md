@@ -6,10 +6,17 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 images: [ ]
-weight: 225
+weight: 221
 ---
 
+**Session** represents a **WhatsApp account** connected to **WAHA**
+that you can use to send and receive messages.
+
+Before you can send or receive messages, you need to [**start a session**](#start) and **authorize** it [**by scanning
+QR code**](#get-qr).
+
 ## Endpoints
+
 See the list of engines [**that support the features ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Start
@@ -22,10 +29,12 @@ In order to start a new session - call `POST /api/sessions/start`
 }
 ```
 
-- 👉 [Read more about **NOWEB** Store Configuration]({{< relref "/docs/engines/noweb#store" >}})
+- 👉 **NOWEB** engine has [Engine-specific Store Configuration]({{< relref "/docs/engines/noweb#store" >}})
 
 #### Configure webhooks
+
 You can configure webhooks for a session:
+
 ```json
 {
   "name": "default",
@@ -49,12 +58,14 @@ and you set `WHATSAPP_RESTART_ALL_SESSIONS` environment variables.
 Read more about it in [Autostart section](#autostart).
 
 #### Configure proxy
+
 You can configure proxy for a session by setting `config.proxy` fields when you `POST /api/sessions/start`:
+
 - `server` - proxy server address, without `http://` or `https://` prefixes
 - `username` and `password` - set this if the proxy requires authentication
 
-
 **No authentication**
+
 ```json
 {
   "name": "default",
@@ -67,6 +78,7 @@ You can configure proxy for a session by setting `config.proxy` fields when you 
 ```
 
 **Proxy with authentication**
+
 ```json
 {
   "name": "default",
@@ -85,9 +97,11 @@ and you set `WHATSAPP_RESTART_ALL_SESSIONS` environment variables.
 Read more about it in [Autostart section](#autostart).
 
 You can configure proxy when for all sessions by set up environment variables.
-Read more about it on [**Proxy page** ->]({{< relref "/docs/how-to/proxy" >}}) or [**Configuration page** ->]({{< relref "/docs/how-to/config#proxy" >}}).
+Read more about it on [**Proxy page** ->]({{< relref "/docs/how-to/proxy" >}}) or [**Configuration page** ->]({{<
+relref "/docs/how-to/config#proxy" >}}).
 
 #### Enable debug
+
 You can enable debug mode for a session by setting `config.debug` field to `true`.
 It'll show you more logs in the console.
 Can be useful for debugging purposes when you're experiencing some issues.
@@ -144,7 +158,9 @@ including **STOPPED**,
 so you can know which one will be restarted if you set `WHATSAPP_RESTART_ALL_SESSIONS=True` environment variable.
 
 ### Get session
+
 To get information about a specific session - call `GET /api/sessions/{session}`.
+
 ```json
 {
   "name": "default",
@@ -200,7 +216,9 @@ In order to log out the session - call `POST /api/sessions/logout`
   "logout": true
 }
 ```
+
 ### Get screenshot
+
 Get screenshot of the session's screen.
 
 ```bash
@@ -208,6 +226,7 @@ GET /api/screenshot?session=default
 ```
 
 #### Get screenshot in Base64
+
 You can get screenshot in base64 format by adding `Accept: application/json` header to the request.
 
 ```bash
@@ -226,15 +245,16 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 
 ![](/images/swagger-media-type.png)
 
-
 ### Get me
 
 Get information about the associated account for that session (if any).
+
 ```bash
 GET /api/sessions/{session}/me
 ```
 
 **Authenticated and working** session's response:
+
 ```json
 {
   "id": "11111111111@c.us",
@@ -243,23 +263,27 @@ GET /api/sessions/{session}/me
 ```
 
 **Stopped** or **not authenticated** session returns null:
+
 ```json
 null
 ```
 
-
-
 ### Get QR
+
 See the list of engines [**that support the features ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 The simplest way to authenticate a new session - get QR code and scan it on your device.
+
 ```bash
 GET /api/{session}/auth/qr
 ```
+
 You'll get QR image that you can scan and get authenticated
 
 #### QR formats
+
 You can get QR in different formats:
+
 1. **binary image** - `GET /api/{session}/auth/qr`
 2. **base64 image** - `GET /api/{session}/auth/qr` and set `Accept: application/json` header
 3. **raw** - `GET /api/{session}/auth/qr?format=raw`
@@ -267,6 +291,7 @@ You can get QR in different formats:
 Here's detailed information about each format:
 
 1. **binary image**, binary image - **default** format, you'll get image in response
+
 ```bash
 # Get image - binary
 GET /api/{session}/auth/qr
@@ -280,6 +305,7 @@ Accept: image/png
 ```
 
 2. **base64 image** - you'll get image in base64 format in response if you set `Accept: application/json` header.
+
 ```bash
 GET /api/{session}/auth/qr?format=image
 Accept: application/json
@@ -297,6 +323,7 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 ![](/images/swagger-media-type.png)
 
 3. **raw** - you'll get raw data in response, you can use it to generate QR code on your side
+
 ```bash
 GET /api/{session}/auth/qr?format=raw
 ```
@@ -308,14 +335,17 @@ GET /api/{session}/auth/qr?format=raw
 ```
 
 ### Get pairing code
+
 See the list of engines [**that support the features ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 You can [link a session with phone number](https://faq.whatsapp.com/1324084875126592) - make a request to the endpoint.
+
 ```bash
 POST /api/{session}/auth/request-code
 ```
 
 Body example:
+
 ```json
 {
   "phoneNumber": "12132132130"
@@ -323,47 +353,51 @@ Body example:
 ```
 
 You'll get code in the response that you can use on your WhatsApp app to connect the session:
+
 ```json
 {
   "code": "ABCD-ABCD"
 }
 ```
 
-
 ## Webhooks
+
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### session.status
+
 The `session.status` event is triggered when the session status changes.
+
 - `STOPPED` - session is stopped
 - `STARTING` - session is starting
 - `SCAN_QR_CODE` - session is required to scan QR code or login via phone number.
-  - When you receive the `session.status` event with `SCAN_QR_CODE` status, you can [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}})
-  - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
+    - When you receive the `session.status` event with `SCAN_QR_CODE` status, you can [**fetch updated QR ->**]({{<
+      relref "/docs/how-to/sessions#get-qr" >}})
+    - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
 - `WORKING` - session is working and ready to use
-- `FAILED` - session is failed due to some error. It's likely that authorization is required again or device has been disconnected from that account.
+- `FAILED` - session is failed due to some error. It's likely that authorization is required again or device has been
+  disconnected from that account.
   Try to restart the session and if it doesn't help - logout and start the session again.
 
 ```json
 {
-    "event": "session.status",
-    "session": "default",
-    "me": {
-        "id": "7911111@c.us",
-        "pushName": "~"
-    },
-    "payload": {
-        "status": "WORKING"
-    },
+  "event": "session.status",
+  "session": "default",
+  "me": {
+    "id": "7911111@c.us",
+    "pushName": "~"
+  },
+  "payload": {
+    "status": "WORKING"
+  },
+  "engine": "WEBJS",
+  "environment": {
+    "version": "2023.10.12",
     "engine": "WEBJS",
-    "environment": {
-        "version": "2023.10.12",
-        "engine": "WEBJS",
-        "tier": "PLUS"
-    }
+    "tier": "PLUS"
+  }
 }
 ```
-
 
 ## Advanced sessions ![](/images/versions/plus.png)
 
@@ -376,18 +410,21 @@ If you want to save your session and do not scan QR code everytime when you laun
 [connect the session storage to the container ->]({{< relref "/docs/how-to/storages#sessions" >}})
 
 ### Autostart
+
 If you don't want to call `POST /api/sessions/start` for every session each time when the container restart -
 you can use set of these environment variables to start sessions for you:
 
 - `WHATSAPP_RESTART_ALL_SESSIONS=True`: Set this variable to `True` to start all **STOPPED** sessions after container
   restarts. By default, this variable is set to `False`.
-  - Please note that this will start all **STOPPED** sessions, not just the sessions that were working before the restart. You can maintain the session list by
-    using `POST /api/session/stop` with the `logout: True` parameter or by calling `POST /api/session/logout` to remove
-    **STOPPED** sessions. You can see all sessions, including **STOPPED** sessions, in the `GET /api/sessions/all=True`
-    response.
+    - Please note that this will start all **STOPPED** sessions, not just the sessions that were working before the
+      restart. You can maintain the session list by
+      using `POST /api/session/stop` with the `logout: True` parameter or by calling `POST /api/session/logout` to
+      remove
+      **STOPPED** sessions. You can see all sessions, including **STOPPED** sessions, in
+      the `GET /api/sessions/all=True`
+      response.
 - `WHATSAPP_START_SESSION=session1,session2`: This variable can be used to start sessions with the specified names right
   after launching the API. Separate session names with a comma.
-
 
 ### Multiple sessions
 
