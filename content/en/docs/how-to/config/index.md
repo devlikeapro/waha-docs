@@ -13,12 +13,15 @@ You can configure WhatsApp HTTP API behaviour via environment variables, by addi
 begging of the command line or by using [other options](https://docs.docker.com/engine/reference/commandline/run/)
 
 ```bash
-docker run -it -e "WHATSAPP_HOOK_EVENTS=*" -e WHATSAPP_HOOK_URL=https://httpbin.org/post devlikeapro/waha
+docker run -it -e "WHATSAPP_HOOK_EVENTS=*" -e WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111 devlikeapro/waha
 ```
 
 It's not necessary to always run such a long command - you can save all data in
 [docker-compose.yaml](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml)
 file as described on [How to deploy page ->]({{< relref "/docs/how-to/deploy" >}}).
+
+💡 You can open [https://webhook.site](https://webhook.site) and paste UUID from it to `url` field,
+and you'll see all requests immediately in your browser to intercept the webhook's payload.
 
 ## Environment variables
 

@@ -27,7 +27,7 @@ Here's a simple example:
   "config": {
     "webhooks": [
       {
-        "url": "https://httpbin.org/post",
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
         "events": [
           "message"
         ]
@@ -45,7 +45,7 @@ Here's available configuration options for webhooks
   "config": {
     "webhooks": [
       {
-        "url": "https://httpbin.org/post",
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
         "events": [
           "message"
         ],
@@ -71,7 +71,7 @@ Here's available configuration options for webhooks
 ### Global webhooks
 There's a way how you can configure webhooks for ALL sessions - by settings these environment variables:
 
-- `WHATSAPP_HOOK_URL=https://httpbin.org/post`  - to set up a URL for the webhook
+- `WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111`  - to set up a URL for the webhook
 - `WHATSAPP_HOOK_EVENTS=message,message.any,state.change` - specify events. Do not specify all of
   them, it's too heavy payload, choose the right for you.
 - `WHATSAPP_HOOK_EVENTS=*` - subscribe to all events. It's not recommended for production, but it's fine for
@@ -105,12 +105,13 @@ Where `event` value helps you identify the incoming event with `payload` for tha
 
 Below the list of all events that WhatsApp HTTP API sends to your.
 
-{{< alert icon="👉" text="If you want to look at a webhook body - use the url https://httpbin.org/post" />}}
+💡 You can open [https://webhook.site](https://webhook.site) and paste UUID from it to `url` field,
+and you'll see all requests immediately in your browser to intercept the webhook's payload.
 
 Run the bellow command and see look at the logs - it prints body request for all events that happen in your WhatsApp!
 
 ```bash
-docker run -it -e "WHATSAPP_HOOK_EVENTS=*" -e WHATSAPP_HOOK_URL=https://httpbin.org/post -p 3000:3000 devlikeapro/waha
+docker run -it -e "WHATSAPP_HOOK_EVENTS=*" -e WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111 -p 3000:3000 devlikeapro/waha
 ```
 
 
@@ -456,7 +457,7 @@ You can authenticate webhook sender by using [HMAC Authentication](https://www.o
   "config": {
     "webhooks": [
       {
-        "url": "https://httpbin.org/post",
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
         "events": [
           "message"
         ],
@@ -501,7 +502,7 @@ You can configure those parameters by settings `config.retries` structure when `
   "config": {
     "webhooks": [
       {
-        "url": "https://httpbin.org/post",
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
         "events": [
           "message"
         ],
@@ -524,7 +525,7 @@ You can send any customer headers by defining `config.webhooks.customHeaders` fi
   "config": {
     "webhooks": [
       {
-        "url": "https://httpbin.org/post",
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
         "events": [
           "message"
         ],

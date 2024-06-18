@@ -506,9 +506,9 @@ Instead of setting each webhook via environment variables - we use two environme
 - `WHATSAPP_HOOK_URL` - to set a URL
 - `WHATSAPP_HOOK_EVENTS` - to set events that are sent to the URL
 
-| Previous                                                                                                             | Current                                                                                            |
-|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| <pre>WHATSAPP_HOOK_ONMESSAGE=https://httpbin.org/post <br>WHATSAPP_HOOK_ONANYMESSAGE=https://httpbin.org/post </pre> | <pre>WHATSAPP_HOOK_URL=https://httpbin.org/post <br>WHATSAPP_HOOK_EVENTS=message,message.any</pre> |
+| Previous                                                                                                                                                                       | Current                                                                                                                         |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| <pre>WHATSAPP_HOOK_ONMESSAGE=https://webhook.site/11111111-1111-1111-1111-11111111 <br>WHATSAPP_HOOK_ONANYMESSAGE=https://webhook.site/11111111-1111-1111-1111-11111111 </pre> | <pre>WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111 <br>WHATSAPP_HOOK_EVENTS=message,message.any</pre> |
 
 ** Webhook payload**
 

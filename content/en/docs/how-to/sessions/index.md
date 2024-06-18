@@ -41,7 +41,7 @@ You can configure webhooks for a session:
   "config": {
     "webhooks": [
       {
-        "url": "https://httpbin.org/post",
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
         "events": [
           "message"
         ]
@@ -130,7 +130,7 @@ The response:
       "proxy": null,
       "webhooks": [
         {
-          "url": "https://httpbin.org/post",
+          "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
           "events": [
             "message",
             "session.status"
@@ -169,7 +169,7 @@ To get information about a specific session - call `GET /api/sessions/{session}`
     "proxy": null,
     "webhooks": [
       {
-        "url": "https://httpbin.org/post",
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
         "events": [
           "message",
           "session.status"

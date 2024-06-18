@@ -21,7 +21,7 @@ Start a new session with configured `message` event in webhooks - call `POST /ap
   "config": {
     "webhooks": [
       {
-        "url": "https://httpbin.org/post",
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
         "events": [
           "message"
         ]
@@ -32,6 +32,9 @@ Start a new session with configured `message` event in webhooks - call `POST /ap
 ```
 
 After that WAHA sends events (see below) about new messages to an endpoint you provided.
+
+💡 You can open [https://webhook.site](https://webhook.site) and paste UUID from it to `url` field,
+and you'll see all requests immediately in your browser to intercept the webhook's payload.
 
 ## Some IDS
 You can see some in `from`, `to`, and `participant` fields here's what they mean:
