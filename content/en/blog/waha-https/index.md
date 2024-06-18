@@ -2,7 +2,7 @@
 title: "Setting up HTTPS for WAHA"
 description: "Step by step guide on how to set up HTTPS for WAHA"
 excerpt: "Step by step guide on how to set up HTTPS for WAHA"
-date: 2024-06-18T08:48:45+00:00
+date: 2024-06-17T08:48:45+00:00
 draft: false
 weight: 50
 images: [ "https_icon.png" ]
