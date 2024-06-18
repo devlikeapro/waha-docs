@@ -11,7 +11,10 @@ tags: [ ]
 contributors: [ "devlikeapro" ]
 pinned: false
 homepage: false
+toc: true
 ---
+
+## WAHA + Geonode Proxy
 
 If you see the below error, you can use
 the <b><a href="https://geonode.com/invite/90920" target="_blank">Geonode proxies</a></b> to solve this issue.
@@ -32,19 +35,11 @@ you can bypass the block and continue using WAHA in Cloud or VPS.
 
 💡 **Alternative** is to run [**WAHA locally and expose it with Ngrok**]({{< relref "waha-ngrok" >}}) to bypass the block.
 
-# Tables of Contents
-
-- [Step 1: Register on Geonode](#step-1-register-on-geonode)
-- [Step 2: Get Premium Residential Proxy](#step-2-get-premium-residential-proxy)
-- [Step 3: Setup sticky session](#step-3-setup-stiky-session)
-- [Step 4: Start WAHA session with Geonode proxy](#step-4-start-waha-session-with-geonode-proxy)
-- [Step 5 (optional): Disable proxy for a session](#step-5-optional-disable-proxy-for-a-session)
-
-# Step 1: Register on Geonode
+## Step 1: Register on Geonode
 
 Go ahead and [Sign Up on Geonode](https://geonode.com/invite/90920)!
 
-# Step 2: Get Premium Residential Proxy
+## Step 2: Get Premium Residential Proxy
 
 Now you need to get a Premium Residential Proxy from Geonode.
 
@@ -57,7 +52,7 @@ Now you need to get a Premium Residential Proxy from Geonode.
 
 ![](geonode-purchase.png)
 
-# Step 3: Setup sticky session
+## Step 3: Setup sticky session
 
 After you've purchased the proxy, you need to set up a sticky session.
 
@@ -95,20 +90,20 @@ curl -x premium-residential.geonode.com:10000 -U geonode_1111111111:11111111-111
 
 > If it doesn't work, check the proxy targeting configuration and try again with different ports.
 
-# Step 4: Start WAHA session with Geonode proxy
+## Step 4: Start WAHA session with Geonode proxy
 
 Copy those values from the Geonode dashboard:
 
 - Username
 - Password
 
-## Option 1 - Start a session using WAHA Dashboard
+### Option 1 - Start a session using WAHA Dashboard
 
 Start a session using [WAHA Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}).
 
 ![](waha-proxy.png)
 
-## Option 2 - Start a session using Swagger
+### Option 2 - Start a session using Swagger
 
 Or you can use swagger or `curl` to send `POST /api/sessions/start` request with payload
 
@@ -129,7 +124,7 @@ After that - scan a QR code and it should work!
 
 👉 If you see "Could not connect device, try aging later" - **stop** and **start** session again and scan a new QR.
 
-# Step 5 (optional): Disable proxy for a session
+## Step 5 (optional): Disable proxy for a session
 
 After you got the session working and **waited for 2 minutes** - you can **stop** a session and **start** it again 
 **without a proxy**.
@@ -147,7 +142,7 @@ After you got the session working and **waited for 2 minutes** - you can **stop*
 2. Proxy is not super stable, so you can disable it and enable it again if you see issues.
 3. Proxy is not free, so you can disable it when you don't need it.
 
-# Alternative
+## Alternative
 
 If that doesn't work for you - you can run [WAHA on your local network and use Ngrok to expose it to the internet]({{<
 relref "waha-ngrok" >}}). 
