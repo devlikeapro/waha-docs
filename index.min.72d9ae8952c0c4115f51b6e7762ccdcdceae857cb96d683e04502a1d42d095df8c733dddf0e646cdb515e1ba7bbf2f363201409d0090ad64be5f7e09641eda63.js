@@ -74,7 +74,8 @@ Build: 2024.6.3 Engine: NOWEB Read more about NOWEB Store Issue #169 Issue #206 
 Build: 2024.6.3 Engine: NOWEB Fix sending poll response in NOWEB engine.
 Build: 2024.6.1 Engine: NOWEB Issue: #356 🎉 New - DASHBOARD #Starting 2024.6.3 Dashboard is available in WAHA Core version!
 Read more about WAHA Dashboard Build: 2024.6.3 Starting 2024.6.3 Dashboard allows connecting to multiple WAHA instances!
-Read more about WAHA Dashboard Build: 2024.6.3 2024.5 #🎉 New #Added WAHA_PRINT_QR environment variable to control QR code printing (by default True). Set WAHA_PRINT_QR=False to disable QR code printing.
+Read more about WAHA Dashboard Build: 2024.6.3 🐛 Fixes - NOWEB #Sender presence keeps on typing after sending message.
+Issue: #379 Build: 2024.6.6 2024.5 #🎉 New #Added WAHA_PRINT_QR environment variable to control QR code printing (by default True). Set WAHA_PRINT_QR=False to disable QR code printing.
 Read more about it on Configuration Issue: #351 Build: 2024.5.13 Swagger White Label - show your own brand in the Swagger documentation!
 Read more about Swagger White Label Issue: #305 Build: 2024.5.4 🐛 Fixes #Don\u0026rsquo;t allow to start two sessions with the same name.
 Before API allowed to start two sessions with the same name, which could lead to potential problems (no way to stop the first, abandoned session).
