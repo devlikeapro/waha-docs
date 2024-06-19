@@ -111,6 +111,16 @@ Starting `2024.6.3` [Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}) al
 
 ----
 
+### 🐛 Fixes - NOWEB
+
+----
+
+Sender presence keeps on typing after sending message. 
+- Issue: [#379](https://github.com/devlikeapro/waha/issues/379)
+- Build: `2024.6.6`
+
+----
+
 ## 2024.5
 ### 🎉 New
 
