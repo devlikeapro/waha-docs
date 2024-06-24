@@ -51,6 +51,9 @@ Use the following environment variables to customize the Swagger documentation:
 - `WHATSAPP_SWAGGER_TITLE` - the title of the Swagger documentation and some other places.
 - `WHATSAPP_SWAGGER_DESCRIPTION` - Markdown formatted description of your API.
 - `WHATSAPP_SWAGGER_EXTERNAL_DOC_URL` - URL to the external documentation.
+- `WHATSAPP_SWAGGER_VIDEO_EXAMPLE_URL` - link to the video example `https://github.com/devlikeapro/waha/raw/core/examples/video.mp4`
+- `WHATSAPP_SWAGGER_OPUS_EXAMPLE_URL` - link to the opus example `https://github.com/devlikeapro/waha/raw/core/examples/dev.likeapro.opus`
+- `WHATSAPP_SWAGGER_JPG_EXAMPLE_URL` - link to the jpg example `https://github.com/devlikeapro/waha/raw/core/examples/dev.likeapro.jpg`
 
 **Example** (consider using [docker-compose](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml#L15-L38) or other methods to store these settings):
 ```bash
