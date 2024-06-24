@@ -64,6 +64,13 @@ Added Out of the box **HTTPS Support**!
 
 ----
 
+Add [Websockets](({{< relref "/docs/how-to/webhooks#websockets" >}})) support!
+
+- Read more about [Websockets]({{< relref "/docs/how-to/webhooks#websockets" >}})
+- Build: `2024.6.7`
+
+----
+
 ### 🎉 New - NOWEB
 
 ----

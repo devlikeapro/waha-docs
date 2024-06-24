@@ -9,14 +9,17 @@ images: []
 weight: 225
 ---
 
-The project uses [Webhooks](https://en.wikipedia.org/wiki/Webhook) to send the messages and events from WhatsApp to your
-application.
+The project uses 
+[Webhooks](https://en.wikipedia.org/wiki/Webhook) and [Websockets](https://en.wikipedia.org/wiki/WebSocket) 
+to notify your application about the messages and events from WhatsApp.
+
+![](webhooks.png)
 
 Webhooks are a way for two different applications to communicate with each other in real-time.
 When a certain event happens in one application, it sends a message to another application through a webhook URL.
 The receiving application can then take action based on the information received.
 
-## Setup webhooks
+## Setup
 ### Session webhooks
 You can define webhooks configuration per session when you start it with `POST /api/sessions/start` request data.
 
@@ -78,6 +81,14 @@ There's a way how you can configure webhooks for ALL sessions - by settings thes
 development.
 
 That webhook configuration **does not appear** in `session.config` field in `GET /api/sessions/` request.
+
+### Connect Websockets
+Alternatively, you can use Websockets to receive messages in real-time. 
+```bash
+websocat ws://localhost:3000/ws
+```
+
+👉 Read more about it in the [**Websockets section**](#websockets) below.
 
 ## Webhook payload
 
@@ -540,6 +551,37 @@ You can send any customer headers by defining `config.webhooks.customHeaders` fi
   }
 }
 ```
+
+## Websockets
+You can use Websockets to receive messages in real-time.
+
+```bash
+# Listen all sessions and events
+websocat ws://localhost:3000/ws
+# Listen all sessions and events (explicitly)
+websocat ws://localhost:3000/ws?session=*&events=*
+
+# Listen certain events
+# (!) Only 'session.status' event is supported now
+websocat ws://localhost:3000/ws?session=*&events=session.status
+
+# If you're using HTTPS connection
+websocat wss://localhost:3000/ws?session=*&events=session.status
+
+# If you're using Api Key - make sure to add it to the URL
+websocat wss://localhost:3000/ws?x-api-key=123
+
+# Listen certain session
+# NOT SUPPORTED YET
+# websocat ws://localhost:3000/ws?session=default&events=session.status
+```
+
+⚠️ Right now websockets has limited support for events, but we're working on it to add more events in the future. 
+- No session filtering, you can listen to all sessions only.
+- Only [session.status](#session.status) event is supported now.
+
+Fill free to [**Create Feature Request**](https://github.com/devlikeapro/waha/issues/new/choose)
+if you need more events or per session filters.
 
 ## Examples
 Here's few examples of how to handle webhook in different languages:
