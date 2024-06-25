@@ -165,6 +165,7 @@ please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Er
 | `POST /api/{session}/status/image` ![](/images/versions/plus.png) |   ➖   |        ✔️        |   ➖   |
 | `POST /api/{session}/status/voice` ![](/images/versions/plus.png) |   ➖   |        ✔️        |   ➖   |
 | `POST /api/{session}/status/video` ![](/images/versions/plus.png) |   ➖   |        ✔️        |   ➖   |
+| `POST /api/{session}/status/delete`                               |   ➖   |        ✔️        |   ➖   |
 | **Chats**                                                         |       |                  |       |
 | `GET /api/{session}/chats`                                        |  ✔️   | ✔️[*1](#heading) |   ➖   |
 | `DELETE /api/{session}/chats/{chatId}`                            |  ✔️   | ➖ [*2](#heading) |   ➖   |
