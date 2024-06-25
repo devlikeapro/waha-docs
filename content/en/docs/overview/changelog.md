@@ -100,6 +100,16 @@ Fix sending poll response in **NOWEB** engine.
 - Engine: **NOWEB**
 - Issue: [#356](https://github.com/devlikeapro/waha/issues/356)
 
+----
+
+Delete status endpoint - [`POST /api/{session}/status/delete`]({{<relref "/docs/how-to/send-messages#delete-status" >}})
+
+- Build: `2024.6.7`
+- Engine: **NOWEB**
+- Issue: [#386](https://github.com/devlikeapro/waha/issues/386)
+
+----
+
 ### 🎉 New - DASHBOARD
 
 ----

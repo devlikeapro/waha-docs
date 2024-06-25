@@ -485,7 +485,7 @@ When you send status - you'll get the response like below, save `key.id` (it's m
 
 Then call
 ```
-`POST /api/{session}/status/delete`
+POST /api/{session}/status/delete
 ```
 
 with payload
