@@ -85,7 +85,7 @@ That webhook configuration **does not appear** in `session.config` field in `GET
 ### Connect Websockets
 Alternatively, you can use Websockets to receive messages in real-time. 
 ```bash
-websocat ws://localhost:3000/ws
+websocat -E ws://localhost:3000/ws
 ```
 
 👉 Read more about it in the [**Websockets section**](#websockets) below.
@@ -555,25 +555,31 @@ You can send any customer headers by defining `config.webhooks.customHeaders` fi
 ## Websockets
 You can use Websockets to receive messages in real-time.
 
+Install [websocat](https://github.com/vi/websocat?tab=readme-ov-file#installation) first.
+
 ```bash
 # Listen all sessions and events
-websocat ws://localhost:3000/ws
+# -E to end the connection when the server closes it
+websocat -E ws://localhost:3000/ws
 # Listen all sessions and events (explicitly)
-websocat ws://localhost:3000/ws?session=*&events=*
+websocat -E ws://localhost:3000/ws?session=*&events=*
 
 # Listen certain events
 # (!) Only 'session.status' event is supported now
-websocat ws://localhost:3000/ws?session=*&events=session.status
+websocat -E ws://localhost:3000/ws?session=*&events=session.status
 
-# If you're using HTTPS connection
-websocat wss://localhost:3000/ws?session=*&events=session.status
+# If you're using HTTPS (SSL) connection
+websocat -E wss://localhost:3000/ws?session=*&events=session.status
 
 # If you're using Api Key - make sure to add it to the URL
-websocat wss://localhost:3000/ws?x-api-key=123
+websocat -E ws://localhost:3000/ws?x-api-key=123
+
+# If you want to see the logs and ping the server every 10 seconds
+websocat -v --ping-interval=10 -E ws://localhost:3000/ws
 
 # Listen certain session
 # NOT SUPPORTED YET
-# websocat ws://localhost:3000/ws?session=default&events=session.status
+# websocat -E ws://localhost:3000/ws?session=default&events=session.status
 ```
 
 ⚠️ Right now websockets has limited support for events, but we're working on it to add more events in the future. 
