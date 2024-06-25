@@ -54,7 +54,7 @@ The receiving application can then take action based on the information received
 }
 </code></pre><h3 id=global-webhooks>Global webhooks <a href=#global-webhooks class=anchor aria-hidden=true>#</a></h3><p>There&rsquo;s a way how you can configure webhooks for ALL sessions - by settings these environment variables:</p><ul><li><code>WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111</code> - to set up a URL for the webhook</li><li><code>WHATSAPP_HOOK_EVENTS=message,message.any,state.change</code> - specify events. Do not specify all of
 them, it&rsquo;s too heavy payload, choose the right for you.</li><li><code>WHATSAPP_HOOK_EVENTS=*</code> - subscribe to all events. It&rsquo;s not recommended for production, but it&rsquo;s fine for
-development.</li></ul><p>That webhook configuration <strong>does not appear</strong> in <code>session.config</code> field in <code>GET /api/sessions/</code> request.</p><h3 id=connect-websockets>Connect Websockets <a href=#connect-websockets class=anchor aria-hidden=true>#</a></h3><p>Alternatively, you can use Websockets to receive messages in real-time.</p><pre><code class=language-bash>websocat ws://localhost:3000/ws
+development.</li></ul><p>That webhook configuration <strong>does not appear</strong> in <code>session.config</code> field in <code>GET /api/sessions/</code> request.</p><h3 id=connect-websockets>Connect Websockets <a href=#connect-websockets class=anchor aria-hidden=true>#</a></h3><p>Alternatively, you can use Websockets to receive messages in real-time.</p><pre><code class=language-bash>websocat -E ws://localhost:3000/ws
 </code></pre><p>👉 Read more about it in the <a href=#websockets><strong>Websockets section</strong></a> below.</p><h2 id=webhook-payload>Webhook payload <a href=#webhook-payload class=anchor aria-hidden=true>#</a></h2><p>On the URL that you set you&rsquo;ll receive <strong>HTTP POST</strong> request with a JSON string with following format:</p><pre><code class=language-json>{
   &quot;event&quot;: &quot;message&quot;,
   &quot;session&quot;: &quot;default&quot;,
@@ -357,28 +357,32 @@ sha512
     ]
   }
 }
-</code></pre><h2 id=websockets>Websockets <a href=#websockets class=anchor aria-hidden=true>#</a></h2><p>You can use Websockets to receive messages in real-time.</p><pre><code class=language-bash># Listen all sessions and events
-websocat ws://localhost:3000/ws
+</code></pre><h2 id=websockets>Websockets <a href=#websockets class=anchor aria-hidden=true>#</a></h2><p>You can use Websockets to receive messages in real-time.</p><p>Install <a href="https://github.com/vi/websocat?tab=readme-ov-file#installation">websocat</a> first.</p><pre><code class=language-bash># Listen all sessions and events
+# -E to end the connection when the server closes it
+websocat -E ws://localhost:3000/ws
 # Listen all sessions and events (explicitly)
-websocat ws://localhost:3000/ws?session=*&amp;events=*
+websocat -E ws://localhost:3000/ws?session=*&amp;events=*
 
 # Listen certain events
 # (!) Only 'session.status' event is supported now
-websocat ws://localhost:3000/ws?session=*&amp;events=session.status
+websocat -E ws://localhost:3000/ws?session=*&amp;events=session.status
 
-# If you're using HTTPS connection
-websocat wss://localhost:3000/ws?session=*&amp;events=session.status
+# If you're using HTTPS (SSL) connection
+websocat -E wss://localhost:3000/ws?session=*&amp;events=session.status
 
 # If you're using Api Key - make sure to add it to the URL
-websocat wss://localhost:3000/ws?x-api-key=123
+websocat -E ws://localhost:3000/ws?x-api-key=123
+
+# If you want to see the logs and ping the server every 10 seconds
+websocat -v --ping-interval=10 -E ws://localhost:3000/ws
 
 # Listen certain session
 # NOT SUPPORTED YET
-# websocat ws://localhost:3000/ws?session=default&amp;events=session.status
+# websocat -E ws://localhost:3000/ws?session=default&amp;events=session.status
 </code></pre><p>⚠️ Right now websockets has limited support for events, but we&rsquo;re working on it to add more events in the future.</p><ul><li>No session filtering, you can listen to all sessions only.</li><li>Only <a href=#session.status>session.status</a> event is supported now.</li></ul><p>Fill free to <a href=https://github.com/devlikeapro/waha/issues/new/choose><strong>Create Feature Request</strong></a>
 if you need more events or per session filters.</p><h2 id=examples>Examples <a href=#examples class=anchor aria-hidden=true>#</a></h2><p>Here&rsquo;s few examples of how to handle webhook in different languages:</p><ol><li><a href=/docs/examples/python/>Python guide</a></li></ol><p><strong>Do you use another language?</strong></p><p>Please create a short guide how to handle webhook and send message after you finish your setup!
 You can create a pull request with your favorite language in the
 <a href=https://github.com/devlikeapro/waha/tree/core/examples>GitHub, in examples folder -></a>.</p><div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between"><div class=edit-page><a href=https://github.com/devlikeapro/waha-docs/blob/main/content/en/docs/how-to/webhooks/index.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></div></div><div class="docs-navigation d-flex justify-content-between"><a href=/docs/how-to/sessions/><div class="card my-1"><div class="card-body py-2">&larr; 🖥️ Sessions</div></div></a><a class=ms-auto href=/docs/how-to/proxy/><div class="card my-1"><div class="card-body py-2">🌐 Proxy &rarr;</div></div></a></div></main></div></div></div><footer class="footer text-muted"><div class=container-xxl><div class=row><div class="col-lg-12 order-last order-lg-first"><ul class=list-inline><li class=list-inline-item>This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or its affiliates. The official WhatsApp website can be found at <a class=text-muted href=https://whatsapp.com/>https://whatsapp.com/</a>. "WhatsApp" as well as related names, marks, emblems and images are registered trademarks of their respective owners.</li></ul></div><div class="col-lg-12 order-first order-lg-last text-lg-end"><ul class=list-inline></ul></div></div></div></footer><script src=/js/bootstrap.min.87685cf4e6585276ff9e7b5d0b97e792615af6921e77821315d1ca7c5511ac2f30667e16c0d031e680ca8b57f63f6c0f6c4a232da777cce474b501ed81e090a9.js integrity="sha512-h2hc9OZYUnb/nntdC5fnkmFa9pIed4ITFdHKfFURrC8wZn4WwNAx5oDKi1f2P2wPbEojLad3zOR0tQHtgeCQqQ==" crossorigin=anonymous defer></script>
 <script src=/js/highlight.min.56a414730f1135fe77b5ea30bf74a2cc4101a6f386e85e5b789c800570cc33d33054000f45932c053a59b41018f72687867254a80e1b9710671852492533162f.js integrity="sha512-VqQUcw8RNf53teowv3SizEEBpvOG6F5beJyABXDMM9MwVAAPRZMsBTpZtBAY9yaHhnJUqA4blxBnGFJJJTMWLw==" crossorigin=anonymous defer></script>
 <script src=/main.min.2648485633d1f986dba588c052c000e5fa46b7574a634bbfdb336dbd1dc809efa166daf72f9e6d95681873904e25f57c93e9e1cebaa97a6363045a38f2373bdf.js integrity="sha512-JkhIVjPR+YbbpYjAUsAA5fpGt1dKY0u/2zNtvR3ICe+hZtr3L55tlWgYc5BOJfV8k+nhzrqpemNjBFo48jc73w==" crossorigin=anonymous defer></script>
-<script src=https://waha.devlike.pro/index.min.f508613e38c76ea5cabc3ec3fe75b4f40e3222cc22d938e7d1c93fee8af8541e5a59ade00ccb14c0d42c6f0d7cb780d6f3698868f93f7af5fe8cfc1537abbb26.js integrity="sha512-9QhhPjjHbqXKvD7D/nW09A4yIswi2Tjn0ck/7or4VB5aWa3gDMsUwNQsbw18t4DW82mIaPk/evX+jPwVN6u7Jg==" crossorigin=anonymous defer></script></body></html>
+<script src=https://waha.devlike.pro/index.min.4559f94c0e9ce216af6292d84c056e7c4f6bdca77544cdd76236f17d351997f6524cf05b93c26181820ec9ac186862a96030b165b4fbe606fac88fdf241f36af.js integrity="sha512-RVn5TA6c4havYpLYTAVufE9r3Kd1RM3XYjbxfTUZl/ZSTPBbk8JhgYIOyawYaGKpYDCxZbT75gb6yI/fJB82rw==" crossorigin=anonymous defer></script></body></html>
