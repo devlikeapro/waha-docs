@@ -396,6 +396,7 @@ You can send files in two ways:
 You can send statuses (aka stories)!
 
 It is always necessary to inform the list of `contacts` that will have access to the posted status!
+![](status.jpg)
 
 👉 You must include your own id in the `contacts` list, so it'll be shown on the phone as well.
 You can get your id by using `GET /api/sessions/{session}/me`
@@ -464,3 +465,43 @@ You can get your id by using `GET /api/sessions/{session}/me`
   "backgroundColor": "#38b42f"
 }
 ```
+
+#### Delete status
+Here's how you can delete status message you previously sent.
+
+When you send status - you'll get the response like below, save `key.id` (it's message id).
+```json
+{
+  "key": {
+    "remoteJid": "status@broadcast",
+    "fromMe": true,
+    "id": "AAAAAAAAAAAAAAAAAAAAAA" // <===== key.id
+  },
+  "message": {
+    ...
+  }
+}
+```
+
+Then call
+```
+`POST /api/{session}/status/delete`
+```
+
+with payload
+
+```json
+{
+  // remember to include YOUR OWN id here to remove it from your account as well
+  "contacts": [ 
+        "11111111111@c.us",
+        "22222222222@c.us", 
+        "33333333333@c.us" 
+  ],
+  "id": "AAAAAAAAAAAAAAAAAAAAAA" // <===== key.id from above reponse
+}
+```
+It removes status from all contacts in the list.
+
+👉 You need to include your own id in the `contacts` list, so it'll be deleted from your account as well.
+
