@@ -9,7 +9,7 @@ images: [ ]
 weight: 292
 ---
 
-You can configure WhatsApp HTTP API behaviour via environment variables, by adding `-e WHATSAPP_VARNAME=value` at the
+You can configure WhatsApp API behaviour via environment variables, by adding `-e WHATSAPP_VARNAME=value` at the
 begging of the command line or by using [other options](https://docs.docker.com/engine/reference/commandline/run/)
 
 ```bash

@@ -114,7 +114,7 @@ On the URL that you set you'll receive **HTTP POST** request with a JSON string 
 
 Where `event` value helps you identify the incoming event with `payload` for that events.
 
-Below the list of all events that WhatsApp HTTP API sends to your.
+Below the list of all events that WhatsApp API sends to your.
 
 💡 You can open [https://webhook.site](https://webhook.site) and paste UUID from it to `url` field,
 and you'll see all requests immediately in your browser to intercept the webhook's payload.

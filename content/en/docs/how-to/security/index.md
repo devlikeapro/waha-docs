@@ -8,7 +8,7 @@ draft: false
 images: []
 weight: 700
 ---
-{{< alert icon="💡" text="Do not expose WhatsApp HTTP API on public networks!" />}}
+{{< alert icon="💡" text="Do not expose WhatsApp API on public networks!" />}}
 
 We do not recommend exposing the API on any public networks!
 

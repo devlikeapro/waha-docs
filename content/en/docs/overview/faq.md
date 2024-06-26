@@ -13,7 +13,7 @@ weight: 190
 toc: true
 ---
 
-## How much CPU and Memory does WhatsApp HTTP API consume?
+## How much CPU and Memory does WhatsApp API consume?
 ### WEBJS
 
 The benchmark has been made on **Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz**.
@@ -24,7 +24,7 @@ It may differ from case to case, it depends on usage pattern - how many messages
 | 1                                    | 30%  | 400MB  |
 | 10                                   | 270% | 1.5GB  |
 
-The nature of WhatsApp HTTP API and its underlying engines - is to run **real** WhatsApp Web version in Chrome and
+The nature of WhatsApp API and its underlying engines - is to run **real** WhatsApp Web version in Chrome and
 communicate with it to prevent blocking from WhatsApp. It's the reason why it's so demanding on resources.
 
 ### NOWEB

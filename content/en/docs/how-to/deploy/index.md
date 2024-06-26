@@ -16,7 +16,7 @@ It includes tips on how to avoid running long command lines, how to view logs, a
 
 Docker Compose is a tool that allows you to define and run multi-container Docker applications. It simplifies the
 process of managing multiple containers and their dependencies. In this topic, we will walk you through how to use
-Docker Compose with the WhatsApp HTTP API.
+Docker Compose with the WhatsApp API.
 
 ### Prerequisites
 
@@ -34,7 +34,7 @@ Open your terminal and run the following command:
 wget https://raw.githubusercontent.com/devlikeapro/waha/core/docker-compose.yaml
 ```
 
-### Running the WhatsApp HTTP API Service
+### Running the WhatsApp API Service
 
 To start the `waha` service, run the following command:
 
@@ -80,7 +80,7 @@ docker-compose logs --since <time>
 Replace `<time>` with the time period you want to view the logs for. For example, `docker-compose logs --since 1h` will
 show the logs for the past hour.
 
-### Using the WhatsApp HTTP API Services
+### Using the WhatsApp API Services
 
 There are two services provided in the `docker-compose.yml` file - `waha` and `waha-plus`.
 It is important to note that these services must not be run at the same time.

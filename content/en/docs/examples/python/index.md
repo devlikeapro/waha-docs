@@ -1,7 +1,7 @@
 ---
 title: "Python"
-description: "WhatsApp HTTP API + Python examples."
-lead: "WhatsApp HTTP API + Python examples."
+description: "WhatsApp API + Python examples."
+lead: "WhatsApp API + Python examples."
 date: 2020-10-06T08:49:31+00:00
 lastmod: 2020-10-06T08:49:31+00:00
 draft: false
@@ -15,7 +15,7 @@ toc: true
 
 ![](/images/python-whatsapp.png)
 
-We've created a few examples on how to interact with WAHA WhatsApp HTTP API with Python.
+We've created a few examples on how to interact with WAHA WhatsApp API with Python.
 
 You can find the examples in [examples folder on GitHub with detailed instructions in README.md ->](https://github.com/devlikeapro/waha/tree/core/examples/python)
 
@@ -28,13 +28,13 @@ We assume that you have installed software:
 
 ### Download and start image
 
-First of all, you must run WhatsApp HTTP API locally (which under the hood it
+First of all, you must run WhatsApp API locally (which under the hood it
 runs real WhatsApp Web instance and expose HTTP API for interaction).
 
 Here are the steps from
 [Quick Start](https://waha.devlike.pro/docs/overview/quick-start/):
 
-Download and start WhatsApp HTTP API docker container
+Download and start WhatsApp API docker container
 
 ```bash
 # Download the image
@@ -43,7 +43,7 @@ docker pull devlikeapro/waha
 docker run -it --rm --network=host -e WHATSAPP_HOOK_URL=http://localhost:5000/bot -e "WHATSAPP_HOOK_EVENTS=*" --name waha devlikeapro/waha
 
 # It prints logs and the last line must be
-# WhatsApp HTTP API is running on: http://[::1]:3000
+# WhatsApp API is running on: http://[::1]:3000
 ```
 
 #### Download image - ARM
@@ -62,7 +62,7 @@ docker tag devlikeapro/waha:arm devlikeapro/waha
 docker run -it --rm --network=host -e WHATSAPP_HOOK_URL=http://localhost:5000/bot -e "WHATSAPP_HOOK_EVENTS=*" --name waha devlikeapro/waha
 
 # It prints logs and the last line must be
-# WhatsApp HTTP API is running on: http://[::1]:3000
+# WhatsApp API is running on: http://[::1]:3000
 ```
 
 ### Start session and scan QR

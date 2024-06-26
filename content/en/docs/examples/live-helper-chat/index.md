@@ -1,7 +1,7 @@
 ---
 title: "Live Helper Chat"
-description: "WhatsApp HTTP API + Live Helper Chat integration."
-lead: "WhatsApp HTTP API + Live Helper Chat integration."
+description: "WhatsApp API + Live Helper Chat integration."
+lead: "WhatsApp API + Live Helper Chat integration."
 date: 2020-10-06T08:49:31+00:00
 lastmod: 2020-10-06T08:49:31+00:00
 draft: false

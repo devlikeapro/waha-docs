@@ -1,7 +1,7 @@
 ---
 title: "⚡ Quick Start"
-description: "One page summary of how to start WhatsApp HTTP API."
-lead: "One page summary of how to start WhatsApp HTTP API."
+description: "One page summary of how to start WhatsApp API."
+lead: "One page summary of how to start WhatsApp API."
 date: 2020-11-16T13:59:39+01:00
 lastmod: 2020-11-16T13:59:39+01:00
 draft: false
@@ -32,7 +32,7 @@ Also, Docker makes installation and update processes so simple, just one command
 
 ## Send your first message
 
-We will guide you through the necessary steps to successfully send your first text message using WhatsApp HTTP API.
+We will guide you through the necessary steps to successfully send your first text message using WhatsApp API.
 
 <div class='article-card'>
   <b class='h4'>Are you a visual learner?</b>
@@ -93,15 +93,15 @@ docker logout
 docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus
 ```
 
-### 2. Run WhatsApp HTTP API
+### 2. Run WhatsApp API
 
-Run WhatsApp HTTP API:
+Run WhatsApp API:
 
 ```bash
 docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 
 # It prints logs and the last line must be
-# WhatsApp HTTP API is running on: http://[::1]:3000
+# WhatsApp API is running on: http://[::1]:3000
 ```
 
 Open the link in your browser [http://localhost:3000/](http://localhost:3000/) and you'll see API documentation
@@ -183,7 +183,7 @@ Also, you can use `curl` and send POST request like this:
 ```bash
 # Phone without +
 export PHONE=12132132130
-curl -d "{\"chatId\": \"${PHONE}@c.us\", \"text\": \"Hello from WhatsApp HTTP API\" }" -H "Content-Type: application/json" -X POST http://localhost:3000/api/sendText
+curl -d "{\"chatId\": \"${PHONE}@c.us\", \"text\": \"Hello from WhatsApp API\" }" -H "Content-Type: application/json" -X POST http://localhost:3000/api/sendText
 ```
 
 ## What is next?

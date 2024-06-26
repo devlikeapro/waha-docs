@@ -1,6 +1,6 @@
 ---
 title: "📖 Introduction"
-description: "WAHA - WhatsApp HTTP API that you can install on your own server and run in less than 5 minutes!"
+description: "WAHA - WhatsApp API that you can install on your own server and run in less than 5 minutes!"
 lead: ""
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
@@ -20,9 +20,9 @@ toc: true
 
 ## Get started
 
-{{< alert icon="👉" text="Run WhatsApp HTTP API in less than 5 minutes!" />}}
+{{< alert icon="👉" text="Run WhatsApp API in less than 5 minutes!" />}}
 
-We will guide you through the necessary steps to successfully send your first text message using WhatsApp HTTP API in
+We will guide you through the necessary steps to successfully send your first text message using WhatsApp API in
 [**Quick Start →**]({{< relref "quick-start" >}}).
 
 ## Disclaimer
