@@ -5,7 +5,7 @@ excerpt: "WAHA 2024.5 has been released with Swagger White Label and stability i
 date: 2024-05-30T08:48:45+00:00
 draft: false
 weight: 50
-images: ["swagger-white-label.png"]
+images: ["WAHA 2024.5.png"]
 categories: ["Releases"]
 tags: []
 contributors: ["devlikeapro"]

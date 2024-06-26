@@ -1,11 +1,11 @@
 ---
 title: "WAHA 2024.4 - Dashboard to manage your sessions!"
-description: "WAHA 2024.4 - Dashboard to manage your sessions!"
-excerpt: "WAHA 2024.4 - Dashboard to manage your sessions!"
+description: "WAHA 2024.4 - Dashboard to manage your sessions in easy way without additional tools!"
+excerpt: "WAHA 2024.4 - Dashboard to manage your sessions in easy way without additional tools!"
 date: 2024-04-01T08:48:45+00:00
 draft: false
 weight: 50
-images: ["dashboard.png"]
+images: ["WAHA 2024.4.png"]
 categories: ["Releases"]
 tags: []
 contributors: ["devlikeapro"]
