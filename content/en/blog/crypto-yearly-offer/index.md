@@ -48,9 +48,10 @@ homepage: false
             Various cryptocurrencies available - <b>BTC, ETH, LTC, USD, and others</b>.
         </p>
         <small>
-            If you don't have crypto or don't know how to deal with it, contact us at
-            <a href="mailto:waha@devlike.pro?subject=Give+me+Crypto+Step+by+Step+Instructions">crypto@devlike.pro</a>,
-            we'll send step-by-step instructions.
+            If you don't have crypto or don't know how to deal with it, checkout our
+            <a href="/blog/how-to-support-waha-using-crypto">
+            <b>Step-by-Step Crypto Guide</b>
+            </a>!
         </small>
         <hr>
     </div>

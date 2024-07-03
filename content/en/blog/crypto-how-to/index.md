@@ -18,6 +18,10 @@ We have special [**⚡50% OFF Yearly Crypto Offer!⚡**]({{< relref "/blog/crypt
 In this article, we're going to cover different techniques for those who not familiar with crypto payments how you can still support the project 
 and get [WAHA Plus and WAHA PRO](/pricing). 
 
+If you have any questions during this journey, kindly contact us at 
+<a href="mailto:waha@devlike.pro?subject=Crypto+Payments">crypto@devlike.pro</a>, 
+we'll find a way to help you!
+
 ## Get Crypto Address and Amount
 ### Step 1 - Login to WAHA Portal
 
