@@ -3,7 +3,13 @@ In this article, we&amp;rsquo;re going to cover different techniques for those w
 If you have any questions during this journey, kindly contact us at crypto@devlike.pro, we&amp;rsquo;ll find a way to help you!
 Get Crypto Address and Amount #
 Step 1 - Login to WAHA Portal #
-First, go to WAHA Patron Portal -&amp;gt; and Login with Email or any other available options.</description></item><item><title>Setting up HTTPS for WAHA</title><link>https://waha.devlike.pro/blog/setting-up-https-for-waha/</link><pubDate>Mon, 17 Jun 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/setting-up-https-for-waha/</guid><description>Why bother with HTTPS? #
+First, go to WAHA Patron Portal -&amp;gt; and Login with Email or any other available options.</description></item><item><title>WAHA 2024.6 - NOWEB Store, Dashboard for Core, HTTPS</title><link>https://waha.devlike.pro/blog/waha-2024.6-noweb-store-dashboard-for-core-https/</link><pubDate>Sun, 30 Jun 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024.6-noweb-store-dashboard-for-core-https/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.6 🎉
+Here&amp;rsquo;s the list of main changes we&amp;rsquo;ve made:
+NOWEB Store #
+You asked it, we did it - contacts, chats, and messages endpoints are now available in NOWEB engine!
+GET /api/contacts/all GET /api/{session}/chats GET /api/{session}/chats/{chatId}/messages 👉 Please make sure to 🏭 Enable NOWEB Store before using these endpoints!
+Dashboard now available in WAHA Core #
+📊 WAHA Dashboard a web interface to easily manage your WhatsApp sessions now is available in Free WAHA Core version!</description></item><item><title>Setting up HTTPS for WAHA</title><link>https://waha.devlike.pro/blog/setting-up-https-for-waha/</link><pubDate>Mon, 17 Jun 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/setting-up-https-for-waha/</guid><description>Why bother with HTTPS? #
 Even if you have set up WAHA and protected it with an API key and username/password (as we recommend on 🔒 Security) - it&amp;rsquo;s still not enough, because of Man-in-the-middle attacks. If you&amp;rsquo;re exposing WAHA to the internet, you should always use HTTPS to protect your data from being intercepted.
 👉 WAHA supports HTTPS out of the box in WAHA Plus version.
 You can set up the following environment variables to enable HTTPS:</description></item><item><title>WAHA + Geonode Proxy - bypassing errors on Cloud or VPS</title><link>https://waha.devlike.pro/blog/waha--geonode-proxy-bypassing-errors-on-cloud-or-vps/</link><pubDate>Tue, 11 Jun 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha--geonode-proxy-bypassing-errors-on-cloud-or-vps/</guid><description>WAHA + Geonode Proxy #
