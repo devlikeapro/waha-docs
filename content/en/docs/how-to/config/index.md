@@ -28,10 +28,19 @@ and you'll see all requests immediately in your browser to intercept the webhook
 The following environment variables can be used to configure the WAHA.
 
 ### Common
-- `DEBUG=1`: Set this variable to any value to enable debug and verbose logs.
-  - You can also do it for a **specific session** by setting `config.debug` field to `true` when starting a session.
 - `WHATSAPP_API_PORT=3000`: The port number that the HTTP server will listen on. The default value is `3000`.
 - `WHATSAPP_API_HOSTNAME=localhost`: The hostname for the HTTP server. The default value is `localhost`.
+
+### Logging
+Options you can use to control the way how WAHA output the logs:
+- `WAHA_LOG_FORMAT` - supports formats:
+  - `WAHA_LOG_FORMAT=PRETTY` - good for local development, **default** format
+  - `WAHA_LOG_FORMAT=JSON` - can be useful if you're using central logging management system
+- `WAHA_LOG_LEVEL` - how much information to log `error | warn | info | debug | trace`.
+- `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides the `WAHA_LOG_LEVEL` to `debug` if both defined. 
+
+👉 Learn more about logging configuration on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page.
+
 
 ### Sessions
 - `WHATSAPP_RESTART_ALL_SESSIONS=True`: Set this variable to `True` to start all **STOPPED** sessions after container
@@ -43,8 +52,8 @@ The following environment variables can be used to configure the WAHA.
 - `WAHA_PRINT_QR=True` - set this variable to `False` to disable printing QR codes to the console. By default, `True`.
 - `WHATSAPP_START_SESSION=session1,session2`: This variable can be used to start sessions with the specified names right
   after launching the API. Separate session names with a comma.
-- Also read more about [Sessions ->]({{< relref "/docs/how-to/sessions" >}})
-- Also read more about [Session Storages on the dedicated page ->]({{< relref "/docs/how-to/storages#sessions" >}})
+- Also read more about [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
+- Also read more about [**🗄️ Storages**]({{< relref "/docs/how-to/storages#sessions" >}})
 
 ### Swagger
 - `WHATSAPP_SWAGGER_CONFIG_ADVANCED=true` - enables advanced configuration options for Swagger documentation - you can customize host, port and base URL for the requests.
@@ -129,10 +138,12 @@ you'll get a webhook event with `hasMedia: True` field, but with no `media.url`.
 ### Health Check
 <b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
 
-The following environment variables can be used to configure the [Health Check ->]({{< relref "/docs/how-to/other" >}}):
+The following environment variables can be used to configure the [Health Check ->]({{< relref "/docs/how-to/observability" >}}):
 - `WHATSAPP_HEALTH_MEDIA_FILES_THRESHOLD_MB` - the threshold in MB for the media files storage. The default value is `100`.
 - `WHATSAPP_HEALTH_SESSIONS_FILES_THRESHOLD_MB` - the threshold in MB for the sessions files storage. The default value is `100`.
 - `WHATSAPP_HEALTH_MONGODB_TIMEOUT` - the timeout in milliseconds for the MongoDB health check. The default value is `5000`.
+
+👉 Learn more on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page.
 
 ## Examples
 

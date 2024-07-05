@@ -1,6 +1,6 @@
 ---
-title: "🛸 Other"
-description: "Other features and API"
+title: "🔍 Observability"
+description: "Logging, monitoring, hatchecks, etc"
 lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
@@ -9,7 +9,29 @@ images: [ ]
 weight: 293
 ---
 
-This page provides useful information about other features and API that are not covered in the other sections.
+## Logging
+Options you can use to control the way how WAHA output the logs:
+- `WAHA_LOG_FORMAT` - supports formats:
+  - `WAHA_LOG_FORMAT=PRETTY` - good for local development, **default** format
+  - `WAHA_LOG_FORMAT=JSON` - can be useful if you're using central logging management system 
+- `WAHA_LOG_LEVEL` - how much information to log `error | warn | info | debug | trace`. 
+  - 👉 Do not set `debug` and `trace` in production, it gives too many logs.
+- `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides the `WAHA_LOG_LEVEL` to `debug` if both defined. 
+
+### Session logging
+You can enable debug mode for a session by setting `config.debug` field to `true` when [Starting a session]({{< relref "/docs/how-to/sessions#enable-debug" >}})
+
+Can be useful for debugging purposes when you're experiencing some issues.
+
+```json
+{
+  "name": "default",
+  "config": {
+    "debug": true
+  }
+}
+```
+
 
 ## Health Check
 <b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>

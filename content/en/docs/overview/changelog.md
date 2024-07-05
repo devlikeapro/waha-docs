@@ -20,6 +20,16 @@ If you wish to get and read Release Notes - read them on one of our platforms, *
 **Subscribe for FREE to get new updates** there!
 
 ----
+
+## 2024.7
+
+- `2024.7.3` - added JSON logging format.
+  - Learn more on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page. 
+- `2024.7.2` - **WEBJS** create group fix [#416](https://github.com/devlikeapro/waha/issues/416)
+- `2024.7.1` - **WEBJS** urgent update [#399](https://github.com/devlikeapro/waha/issues/399)
+
+----
+
 ## 2024.6
 ### 👉 Breaking changes
 
@@ -337,7 +347,7 @@ Add `config.debug` field to `POST /api/session/start` to enable debug and verbos
 - Add support for [MongoDB as storage for Session data]({{< relref "/docs/how-to/storages" >}})
 - Support persistent file storage for media files - [now you can save media files between container restarts]({{< relref "/docs/how-to/storages#media" >}})
 - If you set `WHATSAPP_FILES_LIFETIME=0` environment variable - media files will be never deleted.
-- Add `GET /api/health` endpoint to [check the health of the service](https://waha.devlike.pro/docs/how-to/other/)
+- Add `GET /api/health` endpoint to [check the health of the service](https://waha.devlike.pro/docs/how-to/observability/)
 
 ## 2024.1
 - Implement [Patron Portal](https://portal.devlike.pro/) where you can get your personal API key and manage your perks.
