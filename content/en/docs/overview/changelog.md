@@ -23,6 +23,7 @@ If you wish to get and read Release Notes - read them on one of our platforms, *
 
 ## 2024.7
 
+- `2024.7.4` - **NOWEB** fix profile picture [#422](https://github.com/devlikeapro/waha/issues/422)
 - `2024.7.3` - added JSON logging format.
   - Learn more on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page. 
 - `2024.7.2` - **WEBJS** create group fix [#416](https://github.com/devlikeapro/waha/issues/416)
