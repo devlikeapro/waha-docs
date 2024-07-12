@@ -1,0 +1,4 @@
+{{ with .Get "file" | readFile | markdownify }}
+{{ . }}
+{{ end }}
+

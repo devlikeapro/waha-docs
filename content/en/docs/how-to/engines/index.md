@@ -212,6 +212,9 @@ please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Er
 1. **NOWEB** - you need to [**Enable Store**]({{< relref "/docs/engines/noweb#store" >}}) to get **chats, contacts and messages**
 2. **NOWEB** - Create an issue with the [feature request if you need it](https://github.com/devlikeapro/waha/issues/)
 
+### Channels
+{{< include file="content/en/docs/how-to/channels/features.md" >}}
+
 ### Groups
 |                                                                        | WEBJS | NOWEB | VENOM |
 |------------------------------------------------------------------------|:-----:|:-----:|:-----:|

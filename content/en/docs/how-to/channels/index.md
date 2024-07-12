@@ -16,8 +16,7 @@ Here's complete information about **WhatsApp Channels** (aka Newsletter) and how
 💡 Channels have a special `@newsletter` prefix, so you can distinguish them from regular chats and groups.
 - `123123123@c.us`
 
-## Supported features
-tbd
+{{< include file="content/en/docs/how-to/channels/features.md" >}}
 
 ## Endpoints
 ### Get all channels
@@ -135,7 +134,7 @@ You can use regular [`POST /api/sendImage`]({{< relref "/docs/how-to/send-messag
 }
 ```
 
-### Fetch messages from the channel
+### Get messages from the channel
 You can use regular 
 [`GET /api/{session}/chats/{chatId}/messages`]({{< relref "/docs/how-to/chats#get-messages-from-chat" >}}) 
 to fetch messages from the channel
