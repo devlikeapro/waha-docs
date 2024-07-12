@@ -186,6 +186,7 @@ Here's some ids you can meet there:
   For phone number `12132132131` the `chatId` is  `12132132131@c.us` (`@s.whatsapp.net` can also appear in internal data, simply convert it to `@g.us`).
 - `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
 - `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that type of ID along with communities functionality.
+- `123123123@newsletter` - for [**📰 WhatsApp Channels**]({{< relref "/docs/how-to/channels" >}}).
 
 ### Store under the hood
 Under the hood, the **NOWEB** stores the session data in database based on [**🗄️ Storage**]({{< relref "/docs/how-to/storages" >}}) you choose - either in files or in MongoDB.

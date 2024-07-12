@@ -36,6 +36,7 @@ Read more about [multiple sessions →]({{< relref "/docs/how-to/sessions" >}})
   For phone number `12132132131` the `chatId` is  `12132132131@c.us` (`@s.whatsapp.net` can also appear in internal data, simply convert it to `@g.us`).
 - `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
 - `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that type of ID along with communities functionality.
+- `123123123@newsletter` - for [**📰 WhatsApp Channels**]({{< relref "/docs/how-to/channels" >}}).
 
 👉 To get the actual `chatId` for 🇧🇷 **Brazilian phone number** - use `chatId` field from
 [Check phone number exists]({{< relref "/docs/how-to/contacts#check-phone-number-exists" >}})
