@@ -396,7 +396,12 @@ You can send files in two ways:
 ```
 
 
-### Send status (aka stories)
+### Send Status (aka stories)
 You can send statuses (aka stories)!
 
 Check out [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) page.
+
+### Send messages to Channels
+You can send messages to channels!
+
+Check out [**📰 Channels**]({{< relref "/docs/how-to/channels" >}}) page.
