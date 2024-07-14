@@ -73,7 +73,7 @@ It doesn\u0026rsquo;t require monthly subscriptions, once installed on your serv
 Meaning that the installed WAHA will continue to work even after you subscription got expired. Unfortunately, WhatsApp makes backward incompatible changes and when it happens we need to keep up and update the docker image, which means that you need to update your WAHA as well, otherwise it won\u0026rsquo;t work 😔 It happens like every 3-4-6 months or so and depends on your country as well.
 In order to update WAHA you need to have active docker key (which you get on WAHA Patron Portal), meaning at this time you need to be active subscriber.
 In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026ldquo;every 3-4-6 months\u0026rdquo; purchase to get the latest update.
-💡 We recommend stying subscribing, so we can keep developing awesome product for you! Your support the only reason why we\u0026rsquo;re able to publish and maintain the project 🫶
+💡 We recommend staying subscribing, so we can keep developing awesome product for you! Your support the only reason why we\u0026rsquo;re able to publish and maintain the project 🫶
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🔄 Changelog",description:"WAHA's changelog",content:`If you wish to get and read Release Notes - read them on one of our platforms, these posts are FREE.
 Boosty -\u0026gt; Patreon -\u0026gt; Subscribe for FREE to get new updates there!
 2024.7 #2024.7.4 - NOWEB fix profile picture #422 2024.7.3 - added JSON logging format. Learn more on 🔍 Observability page. 2024.7.2 - WEBJS create group fix #416 2024.7.1 - WEBJS urgent update #399 2024.6 #👉 Breaking changes #Docker image has been renamed to devlikeapro/waha and devlikeapro/waha-plus!
