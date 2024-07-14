@@ -9,7 +9,7 @@ images: [ ]
 weight: 221
 ---
 
-**Session** represents a **WhatsApp account** connected to **WAHA**
+**Session** represents a **WhatsApp Account (Phone Number)** connected to **WAHA**
 that you can use to send and receive messages.
 
 Before you can send or receive messages, you need to [**start a session**](#start) and **authorize** it [**by scanning
