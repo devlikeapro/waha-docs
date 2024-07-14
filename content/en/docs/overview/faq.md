@@ -102,6 +102,6 @@ In order to update WAHA you need to have **active docker key**
 
 In summary, it's not one time purchase, it's rather **"every 3-4-6 months" purchase** to get the latest update.
 
-💡 We recommend stying subscribing, so we can keep developing awesome product for you! 
+💡 We recommend staying subscribing, so we can keep developing awesome product for you! 
 Your support the only reason why we're able to publish and maintain the project 🫶
 
