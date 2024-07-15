@@ -45,6 +45,15 @@ jobs:
           name: public
           path: public
 
+      - name: Download Dashboard
+        env:
+          WAHA_DASHBOARD_SHA: gh-pages
+        run: |
+          wget https://github.com/devlikeapro/dashboard/archive/refs/heads/{WAHA_DASHBOARD_SHA}.zip
+          unzip ${WAHA_DASHBOARD_SHA}.zip -d /tmp/dashboard
+          mkdir -p ./public/dashboard
+          mv /tmp/dashboard/dashboard-${WAHA_DASHBOARD_SHA}/* ./public/dashboard/
+
       - name: File list
         run: |
           ls -la && ls -la public
