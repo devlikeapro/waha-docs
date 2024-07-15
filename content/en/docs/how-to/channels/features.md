@@ -23,5 +23,5 @@
 | **Admins - Demote Admin**                                                              |                                                        |                                                                |
 ****
 
-_If you don't see the feature request link you need in the above list - please create [an feature request](https://github.com/devlikeapro/waha/issues/new/choose) or vote and leave a comment on the existing one._
+_If you see the feature is not available in the above list, please [create a feature request](https://github.com/devlikeapro/waha/issues/new/choose) or **leave "+1" comment** on the existing one._
 ****
