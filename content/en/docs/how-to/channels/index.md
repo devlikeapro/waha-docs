@@ -121,7 +121,8 @@ You can use regular [`POST /api/sendText`]({{< relref "/docs/how-to/send-message
 ```
 
 ### Send Image to the channel
-You can use regular [`POST /api/sendImage`]({{< relref "/docs/how-to/send-messages#send-image" >}}) endpoint to send an image into the channel
+You can use regular [`POST /api/sendImage`]({{< relref "/docs/how-to/send-messages#send-image" >}}) endpoint 
+to send an image into the channel
 
 ```json
 {
@@ -133,6 +134,23 @@ You can use regular [`POST /api/sendImage`]({{< relref "/docs/how-to/send-messag
     "filename": "filename.jpeg"
   },
   "caption": "string"
+}
+```
+
+### Send Video to the channel
+You can use regular [`POST /api/sendVideo`]({{< relref "/docs/how-to/send-messages#send-video" >}}) endpoint 
+to send a video message into the channel
+
+```json
+{
+  "chatId": "111111111111111111@newsletter",
+  "file": {
+    "mimetype": "video/mp4",
+    "filename": "video.mp4",
+    "url": "https://github.com/devlikeapro/waha/raw/core/examples/video.mp4"
+  },
+  "caption": "Just watch at this!",
+  "session": "default"
 }
 ```
 
