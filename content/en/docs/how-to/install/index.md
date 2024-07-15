@@ -29,8 +29,9 @@ language-specific libraries or chrome installation.
 
 Also, Docker makes installation and update processes so simple, just one command!
 {{< /details >}}
+## Install
 
-## WAHA Core
+### WAHA Core
 Download the image:
 ```bash
 docker pull devlikeapro/waha
@@ -43,7 +44,7 @@ docker run -it -p 3000:3000/tcp devlikeapro/waha
 
 Open API documentation [http://localhost:3000](http://localhost:3000).
 
-## WAHA Plus
+### WAHA Plus
 Before installing WAHA Plus version you need to get a key, `{KEY}` in below commands, in format `dckr_pat_1111`
 
 We distribute the key via two platforms (Boosty and Patreon) and you'll find the active key **in the latest post**.
@@ -68,7 +69,7 @@ docker run -it -p 3000:3000/tcp devlikeapro/waha-plus
 
 Open API documentation [http://localhost:3000](http://localhost:3000).
 
-## ARM
+### ARM
 If you’re using **ARM** processor (like Apple Silicon, Apple M1, etc.) - add `:arm` tag at the end of the image name in the above commands.
 - **WAHA Core** - `devlikeapro/waha:arm`
 - **WAHA Plus** - `devlikeapro/waha-plus:arm`
@@ -84,7 +85,7 @@ docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus
 ```
 
 
-## Update WAHA
+## Update
 {{< alert icon="💡" text="Please test all new versions in the development environment before updating production!" />}}
 
 The commands are the same as for downloading, expected you need to restart **all working containers** after you download new image.
