@@ -20,6 +20,4 @@ WEBJS #
 The nature of WEBJS engine - it runs real WhatsApp Web version in Chromium (or Chrome) and communicate with it to prevent blocking from WhatsApp.</description></item><item><title>🔄 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get and read Release Notes - read them on one of our platforms, these posts are FREE.
 Boosty -&amp;gt; Patreon -&amp;gt; Subscribe for FREE to get new updates there!
 2024.7 #
-2024.7.4 - NOWEB fix profile picture #422 2024.7.3 - added JSON logging format. Learn more on 🔍 Observability page. 2024.7.2 - WEBJS create group fix #416 2024.7.1 - WEBJS urgent update #399 2024.6 #
-👉 Breaking changes #
-Docker image has been renamed to devlikeapro/waha and devlikeapro/waha-plus!</description></item></channel></rss>
+2024.7.5 - 📰 WhatsApp Channels 2024.7.4 - NOWEB fix profile picture #422 2024.7.3 - added JSON logging format. Learn more on 🔍 Observability page. 2024.7.2 - WEBJS create group fix #416 2024.7.1 - WEBJS urgent update #399 2024.</description></item></channel></rss>
