@@ -11,7 +11,7 @@ weight: 231
 
 Here's complete information about **WhatsApp Channels** (aka Newsletter) and how to use them.
 
-![](channels.png)
+![](channels.jpg)
 
 💡 Channels have a special `@newsletter` prefix, so you can distinguish them from regular chats and groups.
 - `123123123@c.us`

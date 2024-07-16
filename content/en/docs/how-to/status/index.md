@@ -11,7 +11,7 @@ weight: 232
 
 You can send statuses (aka stories) using HTTP API!
 
-![](status.jpg)
+![](status.png)
 
 
 
