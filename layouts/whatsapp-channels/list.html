@@ -10,14 +10,29 @@
             </div>
         </div>
         <div class='row'>
-            <div class='col-lg-10' data-aos="fade-up">
-                <p class="lead">
-                    <a href="/">WAHA</a> provider an <b>intuitive, private-hosted, free</b> HTTP API designed to effortlessly automate
-                    <b>WhatsApp Channels</b>
-                    management.
-                    <br>
-                    Simplify integration processes, automate posting, and parse posts from Channels with ease using HTTP API!
-                </p>
+            <div class='col-lg-10 d-flex flex-column gap-2 mb-4' data-aos="fade-up">
+                <div>
+                    <p class="lead">
+                        <a href="/">WAHA</a> provider an <b>intuitive, private-hosted, free</b> HTTP API designed to
+                        effortlessly automate
+                        <b>WhatsApp Channels</b>
+                        management.
+                        <br>
+                        Simplify integration processes, automate posting, and parse posts from Channels with ease using
+                        HTTP API!
+                    </p>
+                </div>
+                <div class='text-center flex-grow-1 d-flex flex-column justify-content-center'>
+                    <div class='mb-4'>
+                        <img src='/images/logo.svg' title='WhatsApp API' alt='logo'
+                             style='border-radius: 50%; width: 7rem'/>
+                    </div>
+                    <div>
+                        <a class='btn btn-primary btn-lg px-4 mb-2'
+                           href='/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}overview/introduction/'
+                           role='button'>Get Started</a>
+                    </div>
+                </div>
             </div>
             <div class='col-lg-6 order-first order-lg-last d-flex justify-content-start mb-4' data-aos="fade-up">
                 <img
