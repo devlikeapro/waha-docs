@@ -1,0 +1,54 @@
+{{ define "main" }}
+<script>
+    AOS.init();
+</script>
+<section class='section section-md pb-0'>
+    <div class='container'>
+        <div class='row text-center mb-4'>
+            <div class='col' data-aos="fade-up">
+                <h1 class='display-5 fw-normal mt-1'>{{ .Summary }}</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-lg-10' data-aos="fade-up">
+                <p>
+                    WAHA provider an <b>intuitive, private-hosted, free</b> HTTP API designed to effortlessly automate
+                    <b>WhatsApp Channels</b>
+                    management.
+                    Simplify integration processes, automate posting, and parse posts from Channels with ease.
+                </p>
+            </div>
+            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-start mb-4' data-aos="fade-up">
+                <img
+                        src='/images/whatsapp/whatsapp-channels.jpg' title='WhatsApp Channels API'
+                        alt='WhatsApp Channels Logo'
+                        style='border-radius: 5%; width: 30rem'
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class='section section-md' id='what-next'>
+    <div class='text-center' data-aos="zoom-out">
+        <h2 class='display-5 fw-normal mt-1'>
+            What's next?
+        </h2>
+    </div>
+
+    <div class='row justify-content-center text-center' data-aos="zoom-out">
+        <div class='col-11 col-lg-9' style='min-width: 25rem'>
+            Check
+            <a href='{{ relref . "/docs/overview/quick-start" }}'>
+                <b>⚡ Quick Start</b>
+            </a>
+            and
+            <a href='{{ relref . "/docs/how-to/channels" }}'>
+                <b>📰 Channels</b>
+            </a>
+            documentation to get started!
+        </div>
+    </div>
+</section>
+{{ end }}
