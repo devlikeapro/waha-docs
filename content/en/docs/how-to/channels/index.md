@@ -18,7 +18,7 @@ Here's complete information about **WhatsApp Channels** (aka Newsletter) and how
 
 Here's the list of features that are available for the Channels:
 
-{{< includemd file="content/en/docs/how-to/channels/features.md" >}}
+{{< include file="content/en/docs/how-to/channels/features.md" >}}
 
 ## Endpoints
 ### Get all channels

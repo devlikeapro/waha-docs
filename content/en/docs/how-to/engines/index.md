@@ -213,7 +213,7 @@ please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Er
 2. **NOWEB** - Create an issue with the [feature request if you need it](https://github.com/devlikeapro/waha/issues/)
 
 ### Channels
-{{< includemd file="content/en/docs/how-to/channels/features.md" >}}
+{{< include file="content/en/docs/how-to/channels/features.md" >}}
 
 ### Groups
 |                                                                        | WEBJS | NOWEB | VENOM |
