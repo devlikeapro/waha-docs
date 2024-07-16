@@ -95,12 +95,12 @@ According to [**Pricing**]({{< relref "/pricing#donations" >}}) page:
 Meaning that the installed WAHA will continue to work even after you subscription got expired. 
 Unfortunately, WhatsApp makes backward incompatible changes and when it happens we need to keep up and update the docker image, 
 which means that you need to update your WAHA as well, otherwise it won't work 😔
-It happens like every **3-4-6 months** or so and depends on your country as well.
+It happens like every **3-6 months** or so and depends on your country as well.
 
 In order to update WAHA you need to have **active docker key** 
 (which you get on WAHA [Patron Portal](https://portal.devlike.pro)), meaning at this time you need to be active subscriber.
 
-In summary, it's not one time purchase, it's rather **"every 3-4-6 months" purchase** to get the latest update.
+In summary, it's not one time purchase, it's rather **"every 3-6 months" purchase** to get the latest update.
 
 💡 We recommend staying subscribing, so we can keep developing awesome product for you! 
 Your support the only reason why we're able to publish and maintain the project 🫶
