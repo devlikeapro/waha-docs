@@ -2,6 +2,10 @@
 <script>
     AOS.init();
 </script>
+
+{{ $content := readFile "/layouts/include/bubbles.html" | safeHTML }}
+{{ $content }}
+
 <section class='section container-fluid mt-n3 pb-3'>
     <div class='row justify-content-center'>
         <div class='col-lg-12 text-center' data-aos="fade-up">
