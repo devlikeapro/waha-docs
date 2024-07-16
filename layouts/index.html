@@ -114,6 +114,7 @@
                 </h2>
                 <p>
                     Automate your
+                    <br>
                     WhatsApp
                     <a href='{{ relref . "/docs/how-to/channels" }}'>
                         <b>Channels</b>
@@ -122,18 +123,19 @@
                     <a href='{{ relref . "/docs/how-to/status" }}'>
                         <b>Status</b>
                     </a>
+                    <br>
                     with simple to use HTTP API!
                 </p>
 
                 <div class='code-block highlight' style='text-align: left'>
           <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>GET /api/{session}/channels?role=ADMIN
+            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>GET /api/{session}/channels
 [{
   "id": "123@newsletter",
   "name": "Local News",
-  "description": "Subscribe to get latest info!",
-  "invite": "https://whatsapp.com/channel/...",
-  "picture": "https://mmg.whatsapp.net/...",
+  "description": "...",
+  "invite": "...",
+  "picture": "...",
   "role": "ADMIN"
    ...
 }]
@@ -152,6 +154,7 @@
                     <a href='/docs/overview/introduction/#features'>
                         the documentation
                     </a>
+                    <br>
                     to see all the features.
                 </p>
 
