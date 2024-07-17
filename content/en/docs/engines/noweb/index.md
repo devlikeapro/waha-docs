@@ -199,5 +199,5 @@ Under the hood, the **NOWEB** stores the session data in database based on [**ðŸ
 
 ## Links
 
-- [https://github.com/WhiskeySockets/Baileys](https://github.com/WhiskeySockets/Baileys)
+- [https://github.com/devlikeapro/Baileys](https://github.com/devlikeapro/Baileys)
 
