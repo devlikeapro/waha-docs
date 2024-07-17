@@ -61,6 +61,7 @@ Quotes from the users:
 ### What is the difference between WAHA Core and WAHA Plus?
 
 It's two versions of product we build:
+
 **WAHA Core** 
 - The free and open source project available for everyone. 
 - Supports automating a single **WhatsApp Account** (aka [🖥️ Sessions]({{< relref "/docs/how-to/sessions" >}}) 
