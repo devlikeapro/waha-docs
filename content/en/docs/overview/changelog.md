@@ -23,6 +23,7 @@ If you wish to get and read Release Notes - read them on one of our platforms, *
 
 ## 2024.7
 
+- `2024.7.6` - **WEBJS** restart fix [#444](https://github.com/devlikeapro/waha/issues/444)
 - `2024.7.5` - [**📰 WhatsApp Channels**]({{< relref "/docs/how-to/channels" >}})
 - `2024.7.4` - **NOWEB** fix profile picture [#422](https://github.com/devlikeapro/waha/issues/422)
 - `2024.7.3` - added JSON logging format.
