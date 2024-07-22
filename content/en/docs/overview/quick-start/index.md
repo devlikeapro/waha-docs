@@ -1,7 +1,7 @@
 ---
 title: "⚡ Quick Start"
 description: "One page summary of how to start WhatsApp API."
-lead: "One page summary of how to start WhatsApp API."
+lead: "Step-by-Step guide to send your first message via WhatsApp API."
 date: 2020-11-16T13:59:39+01:00
 lastmod: 2020-11-16T13:59:39+01:00
 draft: false
@@ -10,38 +10,24 @@ parent: "overview"
 weight: 102
 toc: true
 ---
+![](waha-first-message.jpg)
 
-On this page you're going to install WAHA, run it, authenticate the client using QR code and send the first text message
-to WhatsApp!
-
-![](swagger.png)
-
-## Requirements
-
-Only thing that you must have - installed docker. Please follow the original
-instruction <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener">how to install docker -></a>.
-
-When you are ready - come back and follows the below steps to send the first text message to WhatsApp via HTTP API!
-
-{{< details "Why Docker?" >}}
-Docker makes it easy to ship all-in-one solution with the runtime and dependencies. You don't have to worry about
-language-specific libraries or chrome installation.
-
-Also, Docker makes installation and update processes so simple, just one command!
-{{< /details >}}
-
-## Send your first message
+## Step-by-Step guide
+On this page you're going to install and run WAHA,
+authenticate the client using QR code,
+and send **your first message** to WhatsApp using API!
 
 We will guide you through the necessary steps to successfully send your first text message using WhatsApp API.
 
 <div class='article-card'>
   <b class='h4'>Are you a visual learner?</b>
 
-  We've got you covered! Watch the video below to see how to send your first message using <b>WAHA</b>.
+We've got you covered! Watch the video tutorial below to see how to send your first message using <b>WAHA</b>
 
   <div class="d-flex justify-content-center my-4">
     <iframe
-      width="560" height="315"
+      width="100%" 
+      height="315"
       src="https://www.youtube.com/embed/RFerMyAUPRg"
       title="YouTube video player"
       frameborder="0"
@@ -51,17 +37,39 @@ We will guide you through the necessary steps to successfully send your first te
   </div>
 </div>
 
-### 1. Download image
+
+## Step 0. Requirements
+
+WAHA works on top of **Docker**, that's the only think you'll need!
+<div class="text-center">
+   <img src='/logos/docker.svg' title='WhatsApp API' alt='logo' style='border-radius: 50%; width: 8rem'/>
+</div>
+
+👉 Please follow the
+<a href="https://docs.docker.com/engine/install/" target="_blank">
+    <b>Docker official guides to install it on Linux, Windows, and macOS</b>
+</a>
+
+{{< details "Why Docker?" >}}
+Docker makes it easy to ship **all-in-one solution** with the runtime and dependencies. 
+You don't have to worry about language-specific libraries or chrome installation.
+
+Also, Docker makes installation and update processes so simple, just one command!
+{{< /details >}}
+
+## Step 1. Download image
 
 Assuming you have installed [Docker](https://docs.docker.com/get-docker/), let's download the image.
 
-![](/images/versions/core.png) For Core version the command is
+Run the command below:
 
 ```bash
 docker pull devlikeapro/waha
 ```
 
-![](/images/versions/plus.png) For Plus version, we use login to get the image before:
+If you got the
+[➕ WAHA Plus]({{< relref "/docs/how-to/plus-version" >}})
+, use the following commands:
 
 ```bash
 docker login -u devlikeapro -p {KEY}
@@ -69,13 +77,9 @@ docker pull devlikeapro/waha-plus
 docker logout
 ```
 
-Read more about how to get `PASSWORD` for [Plus Version →]({{< relref "plus-version" >}})
+#### ARM processors
 
-#### 1.1 Download image on ARM
-
-If you're using ARM (like Apple Silicon, Apple M1, etc.) - use following commands to download the image
-
-![](/images/versions/core.png) For Core version the command is
+If you're using ARM (like Apple M1/M2, etc.) - use following commands to download the image:
 ```bash
 # Download the image
 docker pull devlikeapro/waha:arm
@@ -83,7 +87,10 @@ docker pull devlikeapro/waha:arm
 docker tag devlikeapro/waha:arm devlikeapro/waha
 ```
 
-![](/images/versions/plus.png) For Plus version the command is:
+If you got the
+[➕ WAHA Plus]({{< relref "/docs/how-to/plus-version" >}})
+, use the following commands:
+
 ```bash
 docker login -u devlikeapro -p {KEY}
 docker pull devlikeapro/waha-plus:arm
@@ -93,9 +100,9 @@ docker logout
 docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus
 ```
 
-### 2. Run WhatsApp API
+## Step 2. Run WAHA
 
-Run WhatsApp API:
+Run WhatsApp HTTP API:
 
 ```bash
 docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
@@ -104,92 +111,80 @@ docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 # WhatsApp API is running on: http://[::1]:3000
 ```
 
-Open the link in your browser [http://localhost:3000/](http://localhost:3000/) and you'll see API documentation
-(Swagger).
-
-{{< alert icon="👉" text="We don't recommend expose the API in the internet without authentication!" />}}
-[Read more about Security ->]({{< relref "/docs/how-to/security" >}})
-
-<br/>
-
-![](swagger.png)
-
-### 3. Start a new session
-
-To start a new session you should have your mobile phone with installed WhatsApp application close to you.
-
-Please go and read how what we'll need to a bit
-later:
-<a href="https://faq.whatsapp.com/381777293328336/?helpref=hc_fnav" target="_blank">
-How to log in - the instruction on WhatsApp site
+👉 Now, open [📊 Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}) at
+<a href="http://localhost:3000/dashboard" target="_blank">
+<b>http://localhost:3000/dashboard</b>
 </a>
 
-When your ready - find `POST /api/session/start`, click on **Try it out**, then **Execute** a bit below.
+You'll see WAHA Dashboard:
+![](dashboard.png)
 
-The example payload:
+## Step 3. Start a new session
 
-```json
-{
-  "name": "default"
-}
-```
+To start a new session you should have your mobile phone with installed **WhatsApp application** close to you.
 
-![](session-start.png)
+Here is the 
+<a href="https://faq.whatsapp.com/381777293328336/?helpref=hc_fnav" target="_blank">
+official instruction on WhatsApp site
+</a>
+on how to log in.
 
-By using the request with `name` values you can start multiple session (WhatsApp accounts) inside the single docker
-container in Plus
-![](/images/versions/plus.png) version and only one account in Core ![](/images/versions/core.png) version.
+Now you start **default** session (current status should be `STOPPED`).
 
-Read more about [multiple sessions →]({{< relref "/docs/how-to/sessions" >}})
+You can leave all configuration parameters by default:
+![](dashboard-start-session.png)
 
-### 4. Get and scan QR
+## Step 4. Get and scan QR
 
-Find `GET /api/screenshot` and execute it, it shows you QR code.
+Wait until the session status is `SCAN_QR` and click on "camera" icon:
+<br>
+![](dashboard-qr.png)
+👉 If instead of QR you see **Click to reload QR** - **stop** the session and **start** it again.
 
-![](qr.png)
+<br>
 
-**Scan the QR with your cell phone's WhatsApp app.**
+You'll see QR code from WhatsApp Web app, now get **your phone** with installed WhatsApp application and **scan the QR**:
+![](whatsapp-link-devices.jpeg)
 
-![](scan-qr-phone.png)
+The session status will move to `WORKING` status:
+![](dashboard-working.png)
 
-### 5. Get the screenshot
+## Step 5. Send a text message
 
-Execute `GET /api/screenshot` after a few seconds after scanning the QR - it'll show you the screenshot of you Whatsapp
-instance. If you can get the actual screenshot - then you're ready to start sending messages!
+Now we're ready to send first messages to WhatsApp via API!
 
-![](screenshot.png)
-
-### 6. Send a text message
-
-Let's send a text message - find `POST /api/sendText`  in [swagger](http://localhost:3000/) and change `chatId` this
-way: use a phone international phone number without `+` symbol and add `@c.us` at the end.
-
-For phone number `12132132131` the `chatId` is  `12132132131@c.us`.
-
-The example payload:
-
-```json
-{
-  "chatId": "12132132130@c.us",
+Replace `123123` with **your phone number without +**, but keep `@c.us` part:
+```bash
+curl -X 'POST' \
+  'http://localhost:3000/api/sendText' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "chatId": "123123@c.us",
   "text": "Hi there!",
   "session": "default"
-}
+}'
 ```
 
-![](send-text.png)
+As alternative to `curl`, you can use [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}) for that.
 
-Also, you can use `curl` and send POST request like this:
+Open Swagger at
+<a href="http://localhost:3000/#/chatting" target="_blank">
+<b>http://localhost:3000/#/chatting</b>
+</a>, scroll down to **chatting** section.
 
-```bash
-# Phone without +
-export PHONE=12132132130
-curl -d "{\"chatId\": \"${PHONE}@c.us\", \"text\": \"Hello from WhatsApp API\" }" -H "Content-Type: application/json" -X POST http://localhost:3000/api/sendText
-```
+- Find `POST /api/sendText` endpoint and expand it
+- Click **Try it out**
+- Replace `123123@c.us` with **your phone number without +**, but keep `@c.us` part
+- Click **Execute**
+
+![](swagger-send-text.png)
 
 ## What is next?
-- Learn about the easiest way to manage your WhatsApp sessions - [Dashboard ->]({{< relref "/docs/how-to/waha-dashboard" >}})
-- Right now you've sent simple text message, but you can send more! [Send messages ->]({{< relref "/docs/how-to/send-messages" >}})
-- Read how to receive and response to messages [Receive messages ->]({{< relref "/docs/how-to/receive-messages" >}})
-- [Save session information, so you don't have to scan QR after container restart ->]({{< relref "/docs/how-to/sessions" >}})
-- Make sure your [API is properly protected ->]({{< relref "/docs/how-to/security" >}})
+- Learn how to make **production-ready** installation for WAHA [**🔧 Install**]({{< relref "/docs/how-to/install" >}})
+- Learn about the easiest way to manage your WhatsApp sessions - [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
+- Learn how to send images and other messages [**📤 Send messages**]({{< relref "/docs/how-to/send-messages" >}})
+- Read how to receive and response to messages [**📥 Receive messages**]({{< relref "/docs/how-to/receive-messages" >}})
+- Make sure your API is protected with [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
+- Enable one of [**🗄️ Storages**]({{< relref "/docs/how-to/sessions" >}}) to save sessions info between container restarts
 
