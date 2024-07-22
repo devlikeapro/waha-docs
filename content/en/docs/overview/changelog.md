@@ -27,6 +27,13 @@ If you wish to get and read Release Notes - read them on one of our platforms, *
 
 ----
 
+## 2024.8
+- `2024.8.1` - Add [**chat.archive**]({{< relref "docs/how-to/webhooks#chat.archive" >}}) event [#434](https://github.com/devlikeapro/waha/issues/434)
+- `2024.8.1` - Add [**Archive and Unarchive chat endpoints**]({{< relref "docs/how-to/chats" >}})  [#434](https://github.com/devlikeapro/waha/issues/434)
+- `2024.8.1` - Add [**call.***]({{< relref "docs/how-to/webhooks#chat.archive" >}}) events [#307](https://github.com/devlikeapro/waha/issues/307)
+
+----
+
 ## 2024.7
 
 - `2024.7.7` - **WEBJS** + **MongoDB** fix - `unexpected end of file` [#457](https://github.com/devlikeapro/waha/issues/457)
