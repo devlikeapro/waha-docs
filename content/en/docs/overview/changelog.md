@@ -14,12 +14,18 @@ toc: true
 ---
 
 
-If you wish to get and read Release Notes - read them on one of our platforms, **these posts are FREE**.
-- [**Boosty ->**](https://boosty.to/wa-http-api)
+If you wish to get **real-time updates** about WAHA, please subscribe to our channels:
 - [**Patreon ->**](https://patreon.com/wa_http_api)
+- [**Boosty ->**](https://boosty.to/wa-http-api)
 - [**dev.to ->**](https://dev.to/waha)
 
-**Subscribe for FREE to get new updates** there!
+👉 **You can subscribe on free tier!**
+
+Release policy:
+- `202X.Y.1` - new features. We release **new features** every month as first release (not always on the first day)
+  - if you see a new `2024.8.1` version - there are **new features**!
+- `202X.Y.*` - bug fixes. We release **bug fixes** during the month
+  - if you see a new `2024.8.2` and  version - there are **bug fixes**!
 
 ----
 
