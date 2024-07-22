@@ -1,7 +1,7 @@
 ---
-title: "How to send a post to WhatsApp Channel via API for Free"
-description: "How to send a post to WhatsApp Channel via API for free - Step By Step Guide"
-excerpt: "How to send a post to WhatsApp Channel via API for free - Step By Step Guide"
+title: "How to send a post to WhatsApp Channel via API"
+description: "How to send a post to WhatsApp Channel via API - Step By Step Guide"
+excerpt: "How to send a post to WhatsApp Channel via API - Step By Step Guide"
 date: 2024-07-16T08:48:45+00:00
 draft: false
 weight: 50
