@@ -13,3 +13,6 @@
 | `poll.vote`                                         |       |  ✔️   |       |
 | `poll.vote.failed`                                  |       |  ✔️   |       |
 | `chat.archive`                                      |  ✔️   |  ✔️   |       |
+| `call.received`                                     |  ✔️   |  ✔️   |       |
+| `call.accepted`                                     |       |  ✔️   |       |
+| `call.rejected`                                     |       |  ✔️   |       |
