@@ -128,7 +128,9 @@ docker run -it -e "WHATSAPP_HOOK_EVENTS=*" -e WHATSAPP_HOOK_URL=https://webhook.
 
 
 ## Webhooks
-See the list of engines [**that support the features ->**]({{< relref "/docs/how-to/engines#features" >}}).
+Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
+
+{{< include file="content/en/docs/how-to/webhooks/features.md" >}}
 
 ### session.status
 The `session.status` event is triggered when the session status changes.
@@ -337,18 +339,18 @@ revokes a previously sent message.
    the same timestamp and chat id as the one in the `after` object.
 3. `before` field can be null in some cases.
 
-### state.change
-
-It's an internal engine's state, not **session** `status`.
-
+### chat.archive
+The `chat.archive` event is triggered when a chat is archived or unarchived.
 ```json
 {
-  "event": "state.change",
+  "event": "chat.archive",
   "session": "default",
-  "engine": "WEBJS",
   "payload": {
-    ...
-  }
+    "id": "123123123@c.us",
+    "timestamp": 1667561485,
+    "archived": true <== or false
+  },
+  ...
 }
 ```
 
@@ -454,6 +456,24 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
   "engine": "NOWEB"
 }
 ```
+
+
+### state.change
+⚠️ **DEPRECATED**, use `session.status` event instead.
+
+It's an internal engine's state, not **session** `status`.
+
+```json
+{
+  "event": "state.change",
+  "session": "default",
+  "engine": "WEBJS",
+  "payload": {
+    ...
+  }
+}
+```
+
 
 ## Webhooks Advanced ![](/images/versions/plus.png)
 ### HMAC authentication
