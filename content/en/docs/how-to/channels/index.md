@@ -13,8 +13,6 @@ Here's complete information about **WhatsApp Channels** (aka Newsletter) and how
 
 ![](channels.png)
 
-💡 Channels have a special `@newsletter` prefix, so you can distinguish them from regular chats and groups.
-- `123123123@c.us`
 
 ## Features
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
@@ -22,6 +20,9 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 {{< include file="content/en/docs/how-to/channels/features.md" >}}
 
 ## Endpoints
+💡 Channels have a special `@newsletter` prefix, so you can distinguish them from regular chats and groups. 
+- `123123123@newsletter` - channel ID
+
 ### Get all channels
 You can get list of **known** channels 
 - Get all (your and subscribed) channels `GET /api/{session}/channels`

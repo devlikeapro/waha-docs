@@ -188,14 +188,8 @@ please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Er
 | `POST /api/{session}/status/delete`                               |       |        ✔️        |       |
 
 ### Chats
-|                                                                   | WEBJS |      NOWEB       | VENOM |
-|-------------------------------------------------------------------|:-----:|:----------------:|:-----:|
-| `GET /api/{session}/chats`                                        |  ✔️   | ✔️[*1](#heading) |       |
-| `DELETE /api/{session}/chats/{chatId}`                            |  ✔️   |  [*2](#heading)  |       |
-| `GET /api/{session}/chats/{chatId}/messages`                      |  ✔️   | ✔️[*1](#heading) |  ✔️   |
-| `DELETE /api/{session}/chats/{chatId}/messages`                   |  ✔️   |  [*2](#heading)  |       |
-| `PUT /api/{session}/chats/{chatId}/messages/{messageId}`          |  ✔️   |        ✔️        |       |
-| `DELETE /api/{session}/chats/{chatId}/messages/{messageId}`       |  ✔️   |        ✔️        |       |
+{{< include file="content/en/docs/how-to/chats/features.md" >}}
+
 
 ### Contacts
 |                                                                   | WEBJS |      NOWEB       | VENOM |
@@ -208,9 +202,6 @@ please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Er
 | `POST /api/contacts/block`                                        |  ✔️   |  [*2](#heading)  |       |
 | `POST /api/contacts/unblock`                                      |  ✔️   |  [*2](#heading)  |       |
 
-#### *
-1. **NOWEB** - you need to [**Enable Store**]({{< relref "/docs/engines/noweb#store" >}}) to get **chats, contacts and messages**
-2. **NOWEB** - Create an issue with the [feature request if you need it](https://github.com/devlikeapro/waha/issues/)
 
 ### Channels
 {{< include file="content/en/docs/how-to/channels/features.md" >}}
