@@ -13,15 +13,13 @@ You can configure WhatsApp API behaviour via environment variables, by adding `-
 begging of the command line or by using [other options](https://docs.docker.com/engine/reference/commandline/run/)
 
 ```bash
-docker run -it -e "WHATSAPP_HOOK_EVENTS=*" -e WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111 devlikeapro/waha
+docker run -it -e "WHATSAPP_RESTART_ALL_SESSIONS=True" -e WAHA_PRINT_QR=False devlikeapro/waha
 ```
 
 It's not necessary to always run such a long command - you can save all data in
 [docker-compose.yaml](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml)
-file as described on [How to deploy page ->]({{< relref "/docs/how-to/deploy" >}}).
+file as described on [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}).
 
-💡 You can open [https://webhook.site](https://webhook.site) and paste UUID from it to `url` field,
-and you'll see all requests immediately in your browser to intercept the webhook's payload.
 
 The following environment variables can be used to configure the WAHA.
 
@@ -53,6 +51,27 @@ Options you can use to control the way how WAHA output the logs:
 - Also read more about [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
 - Also read more about [**🗄️ Storages**]({{< relref "/docs/how-to/storages#sessions" >}})
 
+## Webhooks
+
+💡 You can open [https://webhook.site](https://webhook.site) and paste UUID from it to `url` field,
+and you'll see all requests immediately in your browser to intercept the webhook's payload.
+
+### Global webhooks
+There's a way how you can configure
+[🔄 Webhooks]({{< relref "/docs/how-to/webhooks" >}})
+for ALL sessions - by settings these environment variables:
+
+- `WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111`  - to set up a URL for the webhook
+- `WHATSAPP_HOOK_EVENTS=message,message.any,state.change` - specify events. Do not specify all of
+  them, it's too heavy payload, choose the right for you.
+- `WHATSAPP_HOOK_EVENTS=*` - subscribe to all events. It's not recommended for production, but it's fine for
+  development.
+
+### Session webhooks
+You can configure webhook when you start session by setting `config.webhook` fields.
+
+Read more about it on [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions#configure-webhook" >}}).
+
 ## Swagger
 - `WHATSAPP_SWAGGER_CONFIG_ADVANCED=true` - enables advanced configuration options for Swagger documentation - you can customize host, port and base URL for the requests.
   Disabled by default.
@@ -60,10 +79,10 @@ Options you can use to control the way how WAHA output the logs:
 - `WHATSAPP_SWAGGER_USERNAME=admin` and `WHATSAPP_SWAGGER_PASSWORD=admin` - these variables can be used to protect the Swagger panel
   with `admin / admin` credentials. This does not affect API access. Available in **WAHA Plus** only.
 
-Read more about Swagger configuration on [**Swagger page** ->]({{< relref "/docs/how-to/swagger" >}}).
+Read more about Swagger configuration on [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}).
 
 ## Proxy
-### Global proxy configuration
+### Global proxy
 If you need to use a proxy, you can set the following environment variables:
 
 - `WHATSAPP_PROXY_SERVER=localhost:3128`: Use this variable to set the proxy server in the format `host:port`, without http or https.
@@ -73,7 +92,7 @@ If you need to use a proxy, you can set the following environment variables:
   For example, if you have set `WHATSAPP_PROXY_SERVER_LIST=host-first:80,host-second:80,host-third:80` and `WHATSAPP_PROXY_SERVER_INDEX_PREFIX=proxy-` and you run `proxy-3` session, the `host-third:80` proxy will be chosen for that session.
   This is a way to select a proxy from while you start session.
 
-### Session proxy configuration
+### Session proxy
 You can configure proxy when you start session by setting `config.proxy` fields.
 Read more about it on [**Session page** ->]({{< relref "/docs/how-to/sessions#configure-proxy" >}}).
 
