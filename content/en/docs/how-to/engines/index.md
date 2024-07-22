@@ -117,21 +117,8 @@ it's the engine WAHA runs by default.
 | Communicate with WhatsApp via websocket (no browser)         |   ➖    |  ✔️   |    ➖   |
 
 ### Webhooks
+{{< include file="content/en/docs/how-to/webhooks/features.md" >}}
 
-| **Webhooks**                                        | WEBJS | NOWEB | VENOM |
-|-----------------------------------------------------|:-----:|:-----:|:-----:|
-| `message`                                           |  ✔️   |  ✔️   |  ✔️   |
-| `message` with files ![](/images/versions/plus.png) |  ✔️   |  ✔️   |  ✔️   |
-| `message.reaction`                                  |  ✔️   |  ✔️   |       |
-| `message.any`                                       |  ✔️   |  ✔️   |  ✔️   |
-| `message.ack`                                       |  ✔️   |  ✔️   |  ✔️   |
-| `message.revoked`                                   |  ✔️   |       |       |
-| `state.change`                                      |  ✔️   |  ✔️   |  ✔️   |
-| `group.join`                                        |  ✔️   |  ✔️   |  ✔️   |
-| `group.leave`                                       |  ✔️   |       |       |
-| `presence.update`                                   |       |  ✔️   |       |
-| `poll.vote`                                         |       |  ✔️   |       |
-| `poll.vote.failed`                                  |       |  ✔️   |       |
 
 ### Sessions
 
