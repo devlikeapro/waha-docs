@@ -2,12 +2,10 @@
 Get started #
 👉 Run WhatsApp API in less than 5 minutes! We will guide you through the necessary steps to successfully send your first text message using WhatsApp API in Quick Start →.
 Disclaimer #
-This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or its affiliates.</description></item><item><title>⚡ Quick Start</title><link>https://waha.devlike.pro/docs/overview/quick-start/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://waha.devlike.pro/docs/overview/quick-start/</guid><description>On this page you&amp;rsquo;re going to install WAHA, run it, authenticate the client using QR code and send the first text message to WhatsApp!
-Requirements #
-Only thing that you must have - installed docker. Please follow the original instruction how to install docker -&amp;gt;.
-When you are ready - come back and follows the below steps to send the first text message to WhatsApp via HTTP API!
-Why Docker?
-Docker makes it easy to ship all-in-one solution with the runtime and dependencies.</description></item><item><title>⚠️ How to Avoid Blocking</title><link>https://waha.devlike.pro/docs/overview/how-to-avoid-blocking/</link><pubDate>Thu, 12 Nov 2020 13:26:54 +0100</pubDate><guid>https://waha.devlike.pro/docs/overview/how-to-avoid-blocking/</guid><description>How to Avoid Blocking in WhatsApp when developing bots.
+This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or its affiliates.</description></item><item><title>⚡ Quick Start</title><link>https://waha.devlike.pro/docs/overview/quick-start/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://waha.devlike.pro/docs/overview/quick-start/</guid><description>Step-by-Step guide #
+On this page you&amp;rsquo;re going to install and run WAHA, authenticate the client using QR code, and send your first message to WhatsApp using API!
+We will guide you through the necessary steps to successfully send your first text message using WhatsApp API.
+Are you a visual learner? We&amp;rsquo;ve got you covered! Watch the video tutorial below to see how to send your first message using WAHA</description></item><item><title>⚠️ How to Avoid Blocking</title><link>https://waha.devlike.pro/docs/overview/how-to-avoid-blocking/</link><pubDate>Thu, 12 Nov 2020 13:26:54 +0100</pubDate><guid>https://waha.devlike.pro/docs/overview/how-to-avoid-blocking/</guid><description>How to Avoid Blocking in WhatsApp when developing bots.
 It&amp;rsquo;s important to keep in mind that WhatsApp has strict policies in place to prevent spamming and abuse of their platform.
 If you&amp;rsquo;re developing a bot for WhatsApp, it&amp;rsquo;s crucial to follow these guidelines to avoid getting blocked.
 Guidelines to Follow #
