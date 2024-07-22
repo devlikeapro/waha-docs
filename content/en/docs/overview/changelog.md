@@ -55,7 +55,7 @@ Release policy:
 ----
 
 ## 2024.6
-### 👉 Breaking changes
+### 📢 Breaking changes
 
 ----
 
@@ -65,7 +65,7 @@ Docker image has been renamed to `devlikeapro/waha` and `devlikeapro/waha-plus`!
 
 ----
 
-### 🎉 New
+***🎉 New***
 
 ----
 
@@ -105,7 +105,7 @@ Add [Websockets](({{< relref "/docs/how-to/webhooks#websockets" >}})) support!
 
 ----
 
-### 🎉 New - NOWEB
+**🎉 New - NOWEB**
 
 ----
 
@@ -144,7 +144,7 @@ Delete status endpoint - [`POST /api/{session}/status/delete`]({{<relref "/docs/
 
 ----
 
-### 🎉 New - DASHBOARD
+**🎉 New - DASHBOARD**
 
 ----
 
@@ -162,9 +162,8 @@ Starting `2024.6.3` [Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}) al
 
 ----
 
-### 🐛 Fixes - NOWEB
+**🐛 Fixes - NOWEB**
 
-----
 
 Sender presence keeps on typing after sending message. 
 - Issue: [#379](https://github.com/devlikeapro/waha/issues/379)
@@ -173,7 +172,7 @@ Sender presence keeps on typing after sending message.
 ----
 
 ## 2024.5
-### 🎉 New
+**🎉 New**
 
 ----
 
@@ -191,7 +190,7 @@ Added `WAHA_PRINT_QR` environment variable to control QR code printing (by defau
 
 ----
 
-### 🐛 Fixes
+**🐛 Fixes**
 
 ----
 
@@ -205,8 +204,7 @@ Before API allowed to start two sessions with the same name, which could lead to
 
 ----
 
-### 🐛 Fixes - WEBJS
-----
+**🐛 Fixes - WEBJS**
 
 Handling rare errors in MongoDB process for saving and restoring session data.
 - Build: `2024.5.12`
@@ -235,8 +233,8 @@ Use local cache for **WEBJS** engine (versions file).
 
 ----
 
-### 🐛 Fixes - NOWEB
-----
+**🐛 Fixes - NOWEB**
+
 Fix `message.ack` event for viewing status (`status@broadcast`) messages.
 
 - Issue: [#329](https://github.com/devlikeapro/waha/issues/329)
@@ -282,8 +280,7 @@ WhatsApp has deprecated the version currently being used in the NOWEB engine
 ----
 
 ## 2024.4
-### 🎉 New
-----
+**🎉 New**
 
 Add **WAHA Dashboard** - UI to manage your WhatsApp sessions!
 - Read more about [Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}})
@@ -304,7 +301,7 @@ Implement `GET /api/contacts/profile-picture` for **NOWEB** engine.
 ----
 
 ## 2024.3
-### 🎉 New
+**🎉 New**
 
 ----
 
@@ -356,7 +353,7 @@ Add `config.debug` field to `POST /api/session/start` to enable debug and verbos
 
 ----
 
-### 👉 Breaking changes
+### 📢 Breaking changes
 - **NOWEB** - reactions were sent in `'message'` and `'message.any'` events, not it's available **only** in `'message.reaction'`!
 - Add **required body** in `PUT /api/{session}/groups/{groupId}/settings/security/info-admin-only` endpoint.
 ```json
