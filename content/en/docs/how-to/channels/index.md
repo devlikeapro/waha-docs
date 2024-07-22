@@ -16,7 +16,8 @@ Here's complete information about **WhatsApp Channels** (aka Newsletter) and how
 💡 Channels have a special `@newsletter` prefix, so you can distinguish them from regular chats and groups.
 - `123123123@c.us`
 
-Here's the list of features that are available for the Channels:
+## Features
+Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
 {{< include file="content/en/docs/how-to/channels/features.md" >}}
 
