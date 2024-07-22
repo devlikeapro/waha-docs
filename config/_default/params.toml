@@ -3,8 +3,8 @@
 ## Homepage
 title = "WAHA"
 titleSeparator = "-"
-titleAddition = "WhatsApp API"
-description = "WAHA - WhatsApp API that you can run in a click!"
+titleAddition = "WhatsApp HTTP API"
+description = "WAHA - WhatsApp HTTP API that you can run in a click!"
 
 ## Documentation
 # docsVersion = "0.3"
