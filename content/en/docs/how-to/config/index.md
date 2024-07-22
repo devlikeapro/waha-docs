@@ -23,15 +23,13 @@ file as described on [How to deploy page ->]({{< relref "/docs/how-to/deploy" >}
 💡 You can open [https://webhook.site](https://webhook.site) and paste UUID from it to `url` field,
 and you'll see all requests immediately in your browser to intercept the webhook's payload.
 
-## Environment variables
-
 The following environment variables can be used to configure the WAHA.
 
-### Common
+## Common
 - `WHATSAPP_API_PORT=3000`: The port number that the HTTP server will listen on. The default value is `3000`.
 - `WHATSAPP_API_HOSTNAME=localhost`: The hostname for the HTTP server. The default value is `localhost`.
 
-### Logging
+## Logging
 Options you can use to control the way how WAHA output the logs:
 - `WAHA_LOG_FORMAT` - supports formats:
   - `WAHA_LOG_FORMAT=PRETTY` - good for local development, **default** format
@@ -42,7 +40,7 @@ Options you can use to control the way how WAHA output the logs:
 👉 Learn more about logging configuration on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page.
 
 
-### Sessions
+## Sessions
 - `WHATSAPP_RESTART_ALL_SESSIONS=True`: Set this variable to `True` to start all **STOPPED** sessions after container
   restarts. By default, this variable is set to `False`.
   - Please note that this will start all **STOPPED** sessions, not just the sessions that were working before the restart. You can maintain the session list by
@@ -55,7 +53,7 @@ Options you can use to control the way how WAHA output the logs:
 - Also read more about [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
 - Also read more about [**🗄️ Storages**]({{< relref "/docs/how-to/storages#sessions" >}})
 
-### Swagger
+## Swagger
 - `WHATSAPP_SWAGGER_CONFIG_ADVANCED=true` - enables advanced configuration options for Swagger documentation - you can customize host, port and base URL for the requests.
   Disabled by default.
 - `WHATSAPP_SWAGGER_ENABLED=false` - disables Swagger documentation. Enabled by default. Available in **WAHA Plus** only.
@@ -64,8 +62,8 @@ Options you can use to control the way how WAHA output the logs:
 
 Read more about Swagger configuration on [**Swagger page** ->]({{< relref "/docs/how-to/swagger" >}}).
 
-### Proxy
-#### Global proxy configuration
+## Proxy
+### Global proxy configuration
 If you need to use a proxy, you can set the following environment variables:
 
 - `WHATSAPP_PROXY_SERVER=localhost:3128`: Use this variable to set the proxy server in the format `host:port`, without http or https.
@@ -75,13 +73,13 @@ If you need to use a proxy, you can set the following environment variables:
   For example, if you have set `WHATSAPP_PROXY_SERVER_LIST=host-first:80,host-second:80,host-third:80` and `WHATSAPP_PROXY_SERVER_INDEX_PREFIX=proxy-` and you run `proxy-3` session, the `host-third:80` proxy will be chosen for that session.
   This is a way to select a proxy from while you start session.
 
-#### Session proxy configuration
+### Session proxy configuration
 You can configure proxy when you start session by setting `config.proxy` fields.
 Read more about it on [**Session page** ->]({{< relref "/docs/how-to/sessions#configure-proxy" >}}).
 
 Keep in mind that session's proxy configuration takes precedence over proxy configuration set by environment variables!
 
-### HTTPS 
+## HTTPS 
 - `WAHA_HTTPS_ENABLED=true`: Set this variable to `true` to enable HTTPS. By default, it's `false`.
 - `WAHA_HTTPS_PATH_KEY=/path/to/key.pem`: The path to the key file for HTTPS. By default `./.secrets/privkey.pem`
 - `WAHA_HTTPS_PATH_CERT=/path/to/cert.pem`: The path to the certificate file for HTTPS. By default `./.secrets/cert.pem`
@@ -89,7 +87,7 @@ Keep in mind that session's proxy configuration takes precedence over proxy conf
 
 Read more about HTTPS options and how to configure it on [**🔒 Security**]({{< relref "/docs/how-to/security" >}}) page.
 
-### Security
+## Security
 <b>Security is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
 
 - `WHATSAPP_API_KEY=mysecret`: If you set this variable, you must include the `X-Api-Key: mysecret` header in all
@@ -99,7 +97,7 @@ Read more about HTTPS options and how to configure it on [**🔒 Security**]({{<
 
 Read more about security settings for Swagger and API on [**Security page** ->]({{< relref "/docs/how-to/security" >}}).
 
-### Files
+## Files
 <b>Files configuration is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
 
 The following environment variables can be used to configure the file storage options for the WAHA:
@@ -135,7 +133,7 @@ you'll get a webhook event with `hasMedia: True` field, but with no `media.url`.
 }
 ```
 
-### Health Check
+## Health Check
 <b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
 
 The following environment variables can be used to configure the [Health Check ->]({{< relref "/docs/how-to/observability" >}}):
@@ -145,85 +143,3 @@ The following environment variables can be used to configure the [Health Check -
 
 👉 Learn more on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page.
 
-## Examples
-
-#### Debug Mode
-
-To enable debug mode, set the `DEBUG` environment variable to any value:
-
-```
-DEBUG=1
-```
-
-#### Protecting the API with a Secret Code
-
-To protect the API with a secret code, set the `WHATSAPP_API_KEY` environment variable to your secret code:
-
-```
-WHATSAPP_API_KEY=mysecret
-```
-
-You must include the `X-Api-Key: mysecret` header in all requests to the API.
-
-#### Starting Sessions Automatically
-
-To start sessions automatically when the API is launched, set the `WHATSAPP_START_SESSION` environment variable to a
-comma-separated list of session names:
-
-```
-WHATSAPP_START_SESSION=session1,session2
-```
-
-#### Restarting All Sessions
-
-To start all **STOPPED** sessions after container restarts, set the `WHATSAPP_RESTART_ALL_SESSIONS` environment variable
-to `True`:
-
-```
-WHATSAPP_RESTART_ALL_SESSIONS=True
-```
-
-#### Protecting the Swagger Panel
-
-To protect the Swagger panel with `admin / admin` credentials, set the `WHATSAPP_SWAGGER_USERNAME`
-and `WHATSAPP_SWAGGER_PASSWORD` environment variables:
-
-```
-WHATSAPP_SWAGGER_USERNAME=admin
-WHATSAPP_SWAGGER_PASSWORD=admin
-```
-
-
-#### Downloading Specific Mimetypes
-
-To download only specific mimetypes from messages, set the `WHATSAPP_FILES_MIMETYPES` environment variable to a
-comma-separated list of mimetypes:
-
-```
-WHATSAPP_FILES_MIMETYPES=audio,image/png,image/gif
-```
-
-#### Disable Downloading Media Files
-To disable downloading media files, set the `WHATSAPP_DOWNLOAD_MEDIA` environment variable to `false`:
-
-```
-WHATSAPP_DOWNLOAD_MEDIA=false
-```
-
-#### Setting the File Lifetime
-
-To set the time (in seconds) after which files will be removed to free up space, set the `WHATSAPP_FILES_LIFETIME`
-environment variable:
-
-```
-WHATSAPP_FILES_LIFETIME=300
-```
-
-#### Setting the File Storage Folder
-
-To set the folder where files from chats (images, voice messages) will be stored, set the `WHATSAPP_FILES_FOLDER`
-environment variable:
-
-```
-WHATSAPP_FILES_FOLDER=/home/user/whatsapp-files
-```
