@@ -110,5 +110,5 @@ Here's available options how you can set up HTTPS:
 2. **Let's Encrypt** - use [Certbot](https://certbot.eff.org/) to get a free certificate from Let's Encrypt.
 3. **Using reverse proxy** - use Nginx or Apache as a reverse proxy and set up HTTPS there.
 
-👉 Here's [**Step by step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
+👉 Here's [**Step-by-step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
 

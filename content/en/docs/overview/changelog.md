@@ -13,11 +13,16 @@ weight: 199
 toc: true
 ---
 
+
 If you wish to get and read Release Notes - read them on one of our platforms, **these posts are FREE**.
 - [**Boosty ->**](https://boosty.to/wa-http-api)
 - [**Patreon ->**](https://patreon.com/wa_http_api)
 
 **Subscribe for FREE to get new updates** there!
+
+----
+
+💡 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
 ----
 
@@ -466,8 +471,6 @@ Improvements on session management, restarting sessions and more:
 - Added `POST /api/sessions/logout` that allow you to logout from session - remove saved credentials.
 - Added `logout` boolean parameter to `POST /api/sessions/stop` request that allow you to stop the session AND logout at
   the same time.
-- Added [How to deploy page ->]({{< relref "/docs/how-to/deploy" >}}) with
-  [docker-compose.yaml](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml) example
 - Added `engine` field in webhook payload
 
 ```json
