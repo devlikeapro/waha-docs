@@ -68,7 +68,7 @@ In order to update WAHA you need to have active docker key (which you get on WAH
 In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026ldquo;every 3-6 months\u0026rdquo; purchase to get the latest update.
 💡 We recommend staying subscribing, so we can keep developing awesome product for you! Your support the only reason why we\u0026rsquo;re able to publish and maintain the project 🫶
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🔄 Changelog",description:"WAHA's changelog",content:`If you wish to get and read Release Notes - read them on one of our platforms, these posts are FREE.
-Boosty -\u0026gt; Patreon -\u0026gt; Subscribe for FREE to get new updates there!
+Boosty -\u0026gt; Patreon -\u0026gt; dev.to Subscribe for FREE to get new updates there!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
 2024.7 #2024.7.6 - WEBJS restart fix #444 2024.7.5 - 📰 WhatsApp Channels 2024.7.4 - NOWEB fix profile picture #422 2024.7.3 - added JSON logging format. Learn more on 🔍 Observability page. 2024.7.2 - WEBJS create group fix #416 2024.7.1 - WEBJS urgent update #399 2024.6 #👉 Breaking changes #Docker image has been renamed to devlikeapro/waha and devlikeapro/waha-plus!
 Read more about WAHA Docker images Build: 2024.6.2 🎉 New #Starting 2026.6.1 we publish images with {version} tag, so you can pin the version you want to use.
