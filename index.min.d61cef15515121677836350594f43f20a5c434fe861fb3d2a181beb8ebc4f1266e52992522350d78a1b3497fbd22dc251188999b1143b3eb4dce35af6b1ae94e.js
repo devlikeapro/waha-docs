@@ -70,7 +70,7 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🔄 Changelog",description:"WAHA's changelog",content:`If you wish to get and read Release Notes - read them on one of our platforms, these posts are FREE.
 Boosty -\u0026gt; Patreon -\u0026gt; dev.to -\u0026gt; Subscribe for FREE to get new updates there!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-2024.7 #2024.7.7 - WEBJS + MongoDB fix - unexpected end of file #457 2024.7.6 - WEBJS restart fix #444 2024.7.5 - 📰 WhatsApp Channels 2024.7.4 - NOWEB fix profile picture #422 2024.7.3 - added JSON logging format. Learn more on 🔍 Observability page. 2024.7.2 - WEBJS create group fix #416 2024.7.1 - WEBJS urgent update #399 2024.6 #👉 Breaking changes #Docker image has been renamed to devlikeapro/waha and devlikeapro/waha-plus!
+2024.7 #2024.7.7 - WEBJS + MongoDB fix #457 2024.7.6 - WEBJS restart fix #444 2024.7.5 - 📰 WhatsApp Channels 2024.7.4 - NOWEB fix profile picture #422 2024.7.3 - added JSON logging format. Learn more on 🔍 Observability page. 2024.7.2 - WEBJS create group fix #416 2024.7.1 - WEBJS urgent update #399 2024.6 #👉 Breaking changes #Docker image has been renamed to devlikeapro/waha and devlikeapro/waha-plus!
 Read more about WAHA Docker images Build: 2024.6.2 🎉 New #Starting 2026.6.1 we publish images with {version} tag, so you can pin the version you want to use.
 devlikeapro/waha-plus:chrome-{version} =\u0026gt; devlikeapro/waha-plus:chrome-2024.6.1
 Read more about WAHA Docker images Build: 2024.6.1 Added limit and offset parameters to GET /api/{session}/chats endpoint.
