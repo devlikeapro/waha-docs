@@ -17,6 +17,7 @@ toc: true
 If you wish to get and read Release Notes - read them on one of our platforms, **these posts are FREE**.
 - [**Boosty ->**](https://boosty.to/wa-http-api)
 - [**Patreon ->**](https://patreon.com/wa_http_api)
+- [dev.to](https://dev.to/waha)
 
 **Subscribe for FREE to get new updates** there!
 
