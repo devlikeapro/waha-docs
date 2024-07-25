@@ -22,9 +22,9 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 👉 **You can subscribe on free tier!**
 
 Release policy:
-- `202X.Y.1` - new features. We release **new features** every month as first release (not always on the first day)
+- `YYYY.M.1` - new features. We release **new features** every month as first release (not always on the first day)
   - if you see a new `2024.8.1` version - there are **new features**!
-- `202X.Y.*` - bug fixes. We release **bug fixes** during the month
+- `YYYY.M.BUILD` - bug fixes. We release **bug fixes** during the month
   - if you see a new `2024.8.2` and  version - there are **bug fixes**!
 
 ----
