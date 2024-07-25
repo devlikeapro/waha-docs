@@ -32,6 +32,32 @@ Can be useful for debugging purposes when you're experiencing some issues.
 }
 ```
 
+## Get version
+Returns the version of the installed docker image.
+```
+GET /api/version
+```
+
+```json
+{
+  "version": "2024.2.3",
+  "engine": "NOWEB",
+  "tier": "PLUS",
+  "browser": "/usr/bin/google-chrome-stable"
+}
+```
+
+## Ping
+Returns a simple response to check if the service is running.
+```
+GET /ping
+```
+
+```json
+{
+  "message": "pong"
+}
+```
 
 ## Health Check
 <b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
@@ -192,23 +218,6 @@ The following environment variables can be used to configure the health check:
       "error": "Timeout"
     }
   }
-}
-```
-
-
-
-## Get version
-Returns the version of the installed docker image.
-```
-GET /api/version
-```
-
-```json
-{
-  "version": "2024.2.3",
-  "engine": "NOWEB",
-  "tier": "PLUS",
-  "browser": "/usr/bin/google-chrome-stable"
 }
 ```
 

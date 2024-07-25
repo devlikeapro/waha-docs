@@ -86,6 +86,18 @@ headers = {
 requests.get("http://localhost:3000/api/sessions", headers=headers)
 ```
 
+### Exclude endpoints
+If you need to exclude some endpoints (like `GET /health` or `GET /ping`) from the API Key requirement - you can 
+set `WHATSAPP_API_KEY_EXCLUDE_PATH` environment variable with a comma-separated list of endpoints (no `/` at the beginning).
+
+```bash
+docker run -it \
+ -e WHATSAPP_API_KEY_EXCLUDE_PATH="health,ping" \
+ -e WHATSAPP_API_KEY=yoursecretkey \
+ devlikeapro/waha-plus
+```
+
+
 ## Webhook security
 To make sure that you get a webhook from your WAHA instance - you can use **HMAC authentication**.
 Read more about it on [Webhooks page ->]({{< relref "/docs/how-to/webhooks#hmac-authentication" >}})

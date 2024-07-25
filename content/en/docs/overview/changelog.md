@@ -38,6 +38,8 @@ Release policy:
 - `2024.8.1` - Add [**Archive and Unarchive chat endpoints**]({{< relref "docs/how-to/chats" >}})  [#434](https://github.com/devlikeapro/waha/issues/434)
 - `2024.8.1` - Add [**call.***]({{< relref "docs/how-to/webhooks#callreceived" >}}) events [#307](https://github.com/devlikeapro/waha/issues/307)
 - `2024.8.1` - Add "sessions.name" index for MongoDB storage [#447](https://github.com/devlikeapro/waha/issues/447)
+- `2024.8.1` - Add `WHATSAPP_API_KEY_EXCLUDE_PATH` to exclude URI from key auth [#451](https://github.com/devlikeapro/waha/issues/451) - [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
+- `2024.8.1` - Add `GET /ping` endpoint to just touch the service (no checks like in `GET /health` is done during that) - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 
 ----
 
@@ -47,8 +49,7 @@ Release policy:
 - `2024.7.6` - **WEBJS** restart fix [#444](https://github.com/devlikeapro/waha/issues/444)
 - `2024.7.5` - [**📰 WhatsApp Channels**]({{< relref "/docs/how-to/channels" >}})
 - `2024.7.4` - **NOWEB** fix profile picture [#422](https://github.com/devlikeapro/waha/issues/422)
-- `2024.7.3` - added JSON logging format.
-  - Learn more on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page. 
+- `2024.7.3` - added JSON logging format - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}). 
 - `2024.7.2` - **WEBJS** create group fix [#416](https://github.com/devlikeapro/waha/issues/416)
 - `2024.7.1` - **WEBJS** urgent update [#399](https://github.com/devlikeapro/waha/issues/399)
 
