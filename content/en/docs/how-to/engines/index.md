@@ -191,9 +191,15 @@ please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Er
 
 
 ### Channels
+Read more about
+[**📢 Channels**]({{< relref "/docs/how-to/channels" >}})
+
 {{< include file="content/en/docs/how-to/channels/features.md" >}}
 
 ### Groups
+Read more about 
+[**👥 Groups**]({{< relref "/docs/how-to/groups" >}})
+
 |                                                                        | WEBJS | NOWEB | VENOM |
 |------------------------------------------------------------------------|:-----:|:-----:|:-----:|
 | `POST /api/{session}/groups`                                           |  ✔️   |  ✔️   |       |
@@ -216,6 +222,8 @@ please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Er
 | `POST /api/{session}/groups/{id}/admin/demote`                         |  ✔️   |  ✔️   |       |
 
 ### Presence
+Read more about 
+[**✅ Presence**]({{< relref "/docs/how-to/presence" >}})
 
 |                                                   | WEBJS | NOWEB | VENOM |
 |---------------------------------------------------|:-----:|:-----:|:-----:|
@@ -224,7 +232,17 @@ please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Er
 | `GET /api/{session}/presence/{chatId}`            |       |  ✔️   |       |
 | `POST /api/{session}/presence/{chatId}/subscribe` |       |  ✔️   |       |
 
+### Calls
+Read more about 
+[**📞 Calls**]({{< relref "/docs/how-to/calls" >}})
+
+{{< include file="content/en/docs/how-to/calls/features.md" >}}
+
 ### Observability
+
+Read more about 
+[**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
+
 |                                                   | WEBJS | NOWEB | VENOM |
 |---------------------------------------------------|:-----:|:-----:|:-----:|
 | **Other**                                         |       |       |       |

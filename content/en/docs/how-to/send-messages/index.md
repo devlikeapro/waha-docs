@@ -404,4 +404,4 @@ Check out [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) page.
 ### Send messages to Channels
 You can send messages to channels!
 
-Check out [**📰 Channels**]({{< relref "/docs/how-to/channels" >}}) page.
+Check out [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) page.

@@ -22,7 +22,7 @@ homepage: false
 WAHA now supports [**WhatsApp Channels**]({{< relref "/whatsapp-channels" >}}) - a brand-new feature introduced by WhatsApp. 
 You can manage, read and send messages to **WhatsApp Channels** (aka Newsletters) via API.
 
-👉 Read more about available features on [**📰 Channels**]({{< relref "/docs/how-to/channels" >}}) documentation page.
+👉 Read more about available features on [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) documentation page.
 
 💡 If you're completely new with the project, we wrote a 
 [**Step-By-Step Guide on How to send a post to WhatsApp Channel via API**]({{< relref "/blog/how-to-send-messages-to-channels" >}})
