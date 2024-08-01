@@ -8,6 +8,8 @@ draft: false
 images: [ ]
 weight: 293
 ---
+You can receive events about calls in WhatsApp using API!
+![](whatsapp-phone-call.png)
 
 ## Features
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
@@ -16,7 +18,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 ## Webhooks
 You can receive information about calls in WhatsApp using events:
-[call.received]({{< relref "/docs/how-to/webhooks#callreceived" >}})
+- [call.received]({{< relref "/docs/how-to/webhooks#callreceived" >}})
 - [call.accepted]({{< relref "/docs/how-to/webhooks#callaccepted" >}})
 - [call.rejected]({{< relref "/docs/how-to/webhooks#callrejected" >}})
 
