@@ -232,6 +232,12 @@ Read more about
 | `GET /api/{session}/presence/{chatId}`            |       |  ✔️   |       |
 | `POST /api/{session}/presence/{chatId}/subscribe` |       |  ✔️   |       |
 
+### Labels
+Read more about 
+[**🏷️ Labels**]({{< relref "/docs/how-to/labels" >}})
+
+{{< include file="content/en/docs/how-to/labels/features.md" >}}
+
 ### Calls
 Read more about 
 [**📞 Calls**]({{< relref "/docs/how-to/calls" >}})

@@ -457,6 +457,74 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 }
 ```
 
+### labels.upsert
+
+```json
+{
+  "event": "label.upsert",
+  "session": "default",
+  "payload": {
+    "id": "10",
+    "name": "Label Name",
+    "color": 14,
+    "colorHex": "#00a0f2"
+  },
+  "engine": "NOWEB",
+  ...
+}
+
+```
+
+### labels.removed
+
+```json
+{
+  "event": "label.removed",
+  "session": "default",
+  "payload": {
+    "id": "10",
+    "name": "",
+    "color": 14,
+    "colorHex": "#00a0f2"
+  },
+  "engine": "NOWEB",
+  ...
+}
+
+```
+
+### labels.chat.added
+
+```json
+{
+  "event": "label.chat.added",
+  "session": "default",
+  "payload": {
+    "labelId": "6",
+    "chatId": "11111111111@c.us",
+    "label": null <=== right after scanning QR it can be null. 
+  },
+  "engine": "NOWEB",
+  ...
+}
+```
+
+### labels.chat.removed
+
+```json
+{
+  "event": "label.chat.removed",
+  "session": "default",
+  "payload": {
+    "labelId": "6",
+    "chatId": "11111111111@c.us",
+    "label": null
+  },
+  "engine": "NOWEB",
+  ...
+}
+```
+
 ### call.received
 
 ```json

@@ -34,9 +34,10 @@ Release policy:
 ----
 
 ## 2024.8
+- `2024.8.1` - Add [**🏷️ Labels**]({{< relref "docs/how-to/labels" >}}) support [#318](https://github.com/devlikeapro/waha/issues/318)
+- `2024.8.1` - Add [**📞 Calls**]({{< relref "docs/how-to/calls" >}}) events [#307](https://github.com/devlikeapro/waha/issues/307)
 - `2024.8.1` - Add [**chat.archive**]({{< relref "docs/how-to/webhooks#chatarchive" >}}) event [#434](https://github.com/devlikeapro/waha/issues/434)
 - `2024.8.1` - Add [**Archive and Unarchive chat endpoints**]({{< relref "docs/how-to/chats" >}})  [#434](https://github.com/devlikeapro/waha/issues/434)
-- `2024.8.1` - Add [**call.***]({{< relref "docs/how-to/webhooks#callreceived" >}}) events [#307](https://github.com/devlikeapro/waha/issues/307)
 - `2024.8.1` - Add "sessions.name" index for MongoDB storage [#447](https://github.com/devlikeapro/waha/issues/447)
 - `2024.8.1` - Add `WHATSAPP_API_KEY_EXCLUDE_PATH` to exclude URI from key auth [#451](https://github.com/devlikeapro/waha/issues/451) - [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
 - `2024.8.1` - Add `GET /ping` endpoint to just touch the service (no checks like in `GET /health` is done during that) - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
