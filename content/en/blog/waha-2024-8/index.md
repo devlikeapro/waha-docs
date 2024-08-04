@@ -1,7 +1,7 @@
 ---
 title: "WAHA 2024.8 - WhatsApp Business Labels API, Chat Archive and more!"
-description: "Introducing WAHA 2024.8 - tbd"
-excerpt: "Introducing WAHA 2024.8 - tbd"
+description: "Introducing WAHA 2024.8 - WhatsApp Business Labels API, Chat Archive and more!"
+excerpt: "Introducing WAHA 2024.8 - WhatsApp Business Labels API, Chat Archive and more!"
 date: 2024-08-01T08:48:45+00:00
 draft: false
 weight: 50
