@@ -104,3 +104,7 @@ DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 Use the method to clear all messages from the chat
 
 `DELETE /api/{session}/chats/{chatId}/messages`
+
+## Webhooks
+### chat.archive
+{{< include file="content/en/docs/how-to/chats/webhooks-chat-archive.md" >}}
