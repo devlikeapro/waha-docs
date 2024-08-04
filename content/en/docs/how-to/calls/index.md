@@ -17,9 +17,19 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 {{< include file="content/en/docs/how-to/calls/features.md" >}}
 
 ## Webhooks
-You can receive information about calls in WhatsApp using events:
-- [call.received]({{< relref "/docs/how-to/webhooks#callreceived" >}})
-- [call.accepted]({{< relref "/docs/how-to/webhooks#callaccepted" >}})
-- [call.rejected]({{< relref "/docs/how-to/webhooks#callrejected" >}})
+You can receive information about calls in WhatsApp using events
+
+### call.received
+
+{{< include file="content/en/docs/how-to/calls/webhooks-call-received.md" >}}
+
+### call.accepted
+
+{{< include file="content/en/docs/how-to/calls/webhooks-call-accepted.md" >}}
+
+### call.rejected
+
+{{< include file="content/en/docs/how-to/calls/webhooks-call-rejected.md" >}}
+
 
 

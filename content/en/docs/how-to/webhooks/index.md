@@ -515,54 +515,15 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 
 ### call.received
 
-```json
-{
-  "event": "call.received",
-  "session": "default",
-  "payload": {
-    "id": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "from": "22222222222@c.us",
-    "timestamp": 1721374000,
-    "isVideo": false,
-    "isGroup": false
-  },
-  ...
-}
-```
+{{< include file="content/en/docs/how-to/calls/webhooks-call-received.md" >}}
 
 ### call.accepted
 
-```json
-{
-  "event": "call.accepted",
-  "session": "default",
-  "payload": {
-    "id": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "from": "22222222222@c.us",
-    "timestamp": 1721374000,
-    "isVideo": false,
-    "isGroup": false
-  },
-  ...
-}
-```
+{{< include file="content/en/docs/how-to/calls/webhooks-call-accepted.md" >}}
 
 ### call.rejected
 
-```json
-{
-  "event": "call.rejected",
-  "session": "default",
-  "payload": {
-    "id": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "from": "22222222222@c.us",
-    "timestamp": 1721374000,
-    "isVideo": false,
-    "isGroup": false
-  },
-  ...
-}
-```
+{{< include file="content/en/docs/how-to/calls/webhooks-call-rejected.md" >}}
 
 ### state.change
 ⚠️ **DEPRECATED**, use `session.status` event instead.
