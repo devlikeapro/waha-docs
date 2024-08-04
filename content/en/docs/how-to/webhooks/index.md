@@ -475,11 +475,11 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 
 ```
 
-### labels.removed
+### labels.deleted
 
 ```json
 {
-  "event": "label.removed",
+  "event": "label.deleted",
   "session": "default",
   "payload": {
     "id": "10",
@@ -509,11 +509,11 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 }
 ```
 
-### labels.chat.removed
+### labels.chat.deleted
 
 ```json
 {
-  "event": "label.chat.removed",
+  "event": "label.chat.deleted",
   "session": "default",
   "payload": {
     "labelId": "6",

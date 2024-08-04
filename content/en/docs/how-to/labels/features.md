@@ -5,9 +5,9 @@
 | **Get labels by chat id**<br>`GET /api/{session}/labels/chats/{chatId}/` | ✔️    | ✔️    |
 | **PUT labels to chat**<br>`PUT /api/{session}/labels/chats/{chatId}/`    | ✔️    | ✔️    |
 | `labels.upsert`                                                          |       | ✔️    |
-| `labels.removed`                                                         |       | ✔️    |
+| `labels.deleted`                                                         |       | ✔️    |
 | `labels.chat.added`                                                      |       | ✔️    |
-| `labels.chat.removed`                                                    |       | ✔️    |
+| `labels.chat.deleted`                                                    |       | ✔️    |
 
 ****
 

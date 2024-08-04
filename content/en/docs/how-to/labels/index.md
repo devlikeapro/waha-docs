@@ -129,11 +129,11 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 ```
 
-### labels.removed
+### labels.deleted
 
 ```json
 {
-  "event": "label.removed",
+  "event": "label.deleted",
   "session": "default",
   "payload": {
     "id": "10",
@@ -163,11 +163,11 @@ PUT /api/{session}/labels/chats/{chatId}/
 }
 ```
 
-### labels.chat.removed
+### labels.chat.deleted
 
 ```json
 {
-  "event": "label.chat.removed",
+  "event": "label.chat.deleted",
   "session": "default",
   "payload": {
     "labelId": "6",
