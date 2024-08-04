@@ -47,9 +47,6 @@ Use the endpoint to send a poll!
 POST /api/sendPoll The request body is pretty simple:
 { &amp;quot;session&amp;quot;: &amp;quot;default&amp;quot;, &amp;quot;chatId&amp;quot;: &amp;quot;123123123@c.us&amp;quot;, &amp;quot;poll&amp;quot;: { &amp;quot;name&amp;quot;: &amp;quot;How are you?&amp;quot;, &amp;quot;options&amp;quot;: [ &amp;quot;Awesome!&amp;quot;, &amp;quot;Good!&amp;quot;, &amp;quot;Not bad!&amp;quot; ], &amp;quot;multipleAnswers&amp;quot;: false } } The response you get back:
 { &amp;quot;id&amp;quot;: &amp;quot;true_321321321@c.</description></item><item><title>💬 Chats</title><link>https://waha.devlike.pro/docs/how-to/chats/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/chats/</guid><description>Chats methods.
-Parameters in path that you can find in below endpoints:
-{session} - use the session name for Whatsapp instance that you created with POST /api/session/start endpoint {chatId} - chat id in format 123123123123@[c.us|g.us], c.us for direct chats and g.us for groups. Endpoints #
-See the list of engines that support the feature -&amp;gt;.
-Get all chats #
-Get all chats
-GET /api/{session}/chats limit - limit the number of chats to return offset - skip the number of chats from the start If you see timeout or the request takes too long - consider using limit parameter to get chats in smaller chunks</description></item></channel></rss>
+Features #
+Here&amp;rsquo;s the list of features that are available by 🏭 Engines:
+WEBJS NOWEB VENOM Get all chats GET /api/{session}/chats ✔️ ✔️*1 Archive chat POST /api/{session}/chats/{chatId}/archive ✔️ #445 Unarchive chat POST /api/{session}/chats/{chatId}/unarchive ✔️ #445 Delete chat DELETE /api/{session}/chats/{chatId} ✔️ Get messages GET /api/{session}/chats/{chatId}/messages ✔️ ✔️*1 ✔️ Edit message PUT /api/{session}/chats/{chatId}/messages/{messageId} ✔️ ✔️ Delete message DELETE /api/{session}/chats/{chatId}/messages/{messageId} ✔️ ✔️ Delete all messages DELETE /api/{session}/chats/{chatId}/messages ✔️ NOWEB - you need to Enable Store to get chats, contacts and messages If you see the feature is not available in the above list, please create a feature request or leave &amp;ldquo;+1&amp;rdquo; comment on the existing one.</description></item></channel></rss>

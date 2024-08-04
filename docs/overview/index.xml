@@ -15,8 +15,7 @@ We strongly recommend using VPS or servers with minimum 2CPU and 2GB RAM configu
 How much CPU and Memory does WAHA consume? #
 WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CPU and Memory requirements change
 WEBJS #
-The nature of WEBJS engine - it runs real WhatsApp Web version in Chromium (or Chrome) and communicate with it to prevent blocking from WhatsApp.</description></item><item><title>🔄 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get and read Release Notes - read them on one of our platforms, these posts are FREE.
-Boosty -&amp;gt; Patreon -&amp;gt; dev.to -&amp;gt; Subscribe for FREE to get new updates there!
-💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
-2024.7 #
-2024.7.7 - WEBJS + MongoDB fix #457 2024.7.6 - WEBJS restart fix #444 2024.7.5 - 📰 WhatsApp Channels 2024.7.4 - NOWEB fix profile picture #422 2024.</description></item></channel></rss>
+The nature of WEBJS engine - it runs real WhatsApp Web version in Chromium (or Chrome) and communicate with it to prevent blocking from WhatsApp.</description></item><item><title>🔄 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get real-time updates about WAHA, please subscribe to our channels:
+Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
+Release policy:
+YYYY.M.1 - new features. We release new features every month as first release (not always on the first day) if you see a new 2024.8.1 version - there are new features! YYYY.M.BUILD - bug fixes. We release bug fixes during the month if you see a new 2024.</description></item></channel></rss>
