@@ -10,7 +10,7 @@ weight: 292
 ---
 
 You can work with [WhatsApp Labels](https://faq.whatsapp.com/3398508707096369/?cms_platform=android)
-available in WhatsApp Business using the API!
+available in **WhatsApp Business** using the API!
 ![](whatsapp-labels.png)
 
 ## Features

@@ -34,6 +34,8 @@ Release policy:
 ----
 
 ## 2024.8
+
+[2024.8.1]({{< relref "/blog/waha-2024-8" >}})
 - `2024.8.1` - Add [**🏷️ Labels**]({{< relref "docs/how-to/labels" >}}) support [#318](https://github.com/devlikeapro/waha/issues/318)
 - `2024.8.1` - Add [**📞 Calls**]({{< relref "docs/how-to/calls" >}}) events [#307](https://github.com/devlikeapro/waha/issues/307)
 - `2024.8.1` - Add [**chat.archive**]({{< relref "docs/how-to/webhooks#chatarchive" >}}) event [#434](https://github.com/devlikeapro/waha/issues/434)
