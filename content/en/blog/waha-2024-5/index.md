@@ -17,7 +17,7 @@ We are excited to announce the release of **WAHA 2024.5**!
 This version introduces the [Swagger White Label]({{< relref "/docs/how-to/swagger#white-label" >}})
 feature and includes several stability improvements.
 
-Check the [Changelog]({{< relref "/docs/overview/changelog#20245" >}}) for a full list of changes.
+Check the [🆕 Changelog]({{< relref "/docs/overview/changelog#20245" >}}) for a full list of changes.
 
 # 🌟 NEW - Swagger White Label
 
@@ -40,7 +40,7 @@ docker run -it -p 3000:3000 -e WHATSAPP_SWAGGER_TITLE="AwesomeCRM" -e 'WHATSAPP_
 
 # 🛠️ Stability Improvements
 We've made several stability improvements to WEBJS and NOWEB engines, check the 
-[Changelog]({{< relref "/docs/overview/changelog#20245" >}}) for more details.
+[🆕 Changelog]({{< relref "/docs/overview/changelog#20245" >}}) for more details.
 
 # Thank you for your support!
 We appreciate your [continued support](/pricing) and enthusiasm for the project!

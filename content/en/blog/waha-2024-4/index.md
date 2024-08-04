@@ -54,4 +54,4 @@ If you don't have access to
 the platforms  and get the key to get WAHA Plus on
 our portal! [https://portal.devlike.pro/](https://portal.devlike.pro/)
 
-You can find all changes for the WAHA 2024.4 in [Changelog]({{< relref "/docs/overview/changelog" >}})
+You can find all changes for the WAHA 2024.4 in [🆕 Changelog]({{< relref "/docs/overview/changelog" >}})

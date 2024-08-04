@@ -135,4 +135,4 @@ and receive information about calls in WhatsApp using events:
 
 ## And more!
 
-👉 Read the full [**📢 Changelog**]({{< relref "/docs/overview/changelog#20248" >}}) for WAHA 2024.8 release!
+👉 Read the full [**🆕 Changelog**]({{< relref "/docs/overview/changelog#20248" >}}) for WAHA 2024.8 release!
