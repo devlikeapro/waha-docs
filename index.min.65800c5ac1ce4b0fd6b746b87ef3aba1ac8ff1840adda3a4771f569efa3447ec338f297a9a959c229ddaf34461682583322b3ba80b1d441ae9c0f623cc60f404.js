@@ -67,7 +67,7 @@ Meaning that the installed WAHA will continue to work even after you subscriptio
 In order to update WAHA you need to have active docker key (which you get on WAHA Patron Portal), meaning at this time you need to be active subscriber.
 In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026ldquo;every 3-6 months\u0026rdquo; purchase to get the latest update.
 💡 We recommend staying subscribing, so we can keep developing awesome product for you! Your support the only reason why we\u0026rsquo;re able to publish and maintain the project 🫶
-`}),e.add({id:5,href:"/docs/overview/changelog/",title:"🔄 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
+`}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 Release policy:
 YYYY.M.1 - new features. We release new features every month as first release (not always on the first day) if you see a new 2024.8.1 version - there are new features! YYYY.M.BUILD - bug fixes. We release bug fixes during the month if you see a new 2024.8.2 and version - there are bug fixes! 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
