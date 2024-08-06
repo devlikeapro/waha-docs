@@ -230,7 +230,7 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 
 ```json
 {
-  "event": "group.left",
+  "event": "group.leave",
   "session": "default",
   "engine": "WEBJS",
   "payload": {

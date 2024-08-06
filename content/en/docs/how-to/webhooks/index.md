@@ -359,7 +359,7 @@ revokes a previously sent message.
 
 ```json
 {
-  "event": "group.left",
+  "event": "group.leave",
   "session": "default",
   "engine": "WEBJS",
   "payload": {
