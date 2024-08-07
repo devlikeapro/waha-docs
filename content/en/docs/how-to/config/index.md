@@ -50,7 +50,7 @@ Options you can use to control the way how WAHA output the logs:
 - `WAHA_PRINT_QR=True` - set this variable to `False` to disable printing QR codes to the console. By default, `True`.
 - `WHATSAPP_START_SESSION=session1,session2`: This variable can be used to start sessions with the specified names right
   after launching the API. Separate session names with a comma.
-- `WAHA_ZIPUNZIP=ZIPUNZIP` - use `zip` and `unzip` system binaries to pack **WEBJS** authentication data. Disabled by default.
+- `WAHA_ZIPPER=ZIPUNZIP` - use `zip` and `unzip` system binaries to pack **WEBJS** authentication data. Disabled by default.
   - It's relevant if you're using **WEBJS + MongoDB**. Install `zip` and `unzip` if you don't use our official docker image and set the variable
 - Also read more about [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
 - Also read more about [**🗄️ Storages**]({{< relref "/docs/how-to/storages#sessions" >}})
