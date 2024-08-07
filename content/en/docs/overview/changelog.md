@@ -34,6 +34,10 @@ Release policy:
 ----
 
 ## 2024.8
+- `2024.8.2` - fix flaky **WEBJS** engine issues (`Failed to add page binding with name ...`)
+- `2024.8.2` - **WEBJS** + **MongoDB** - switch to native `zip` and `unzip` binaries [#465](https://github.com/devlikeapro/waha/issues/465)
+  - If you're not using official docker image install `zip` and `unzip` AND set `WAHA_ZIPPER=ZIPUNZIP` env variable.
+- `2024.8.2` - Add `WAHA_HTTP_LOG_LEVEL=info` variable to control `request completed` log level - [#466](https://github.com/devlikeapro/waha/issues/466) - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 
 [2024.8.1]({{< relref "/blog/waha-2024-8" >}})
 - `2024.8.1` - Add [**🏷️ Labels**]({{< relref "docs/how-to/labels" >}}) support [#318](https://github.com/devlikeapro/waha/issues/318)
