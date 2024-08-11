@@ -33,21 +33,6 @@ Can be useful for debugging purposes when you're experiencing some issues.
 }
 ```
 
-## Get version
-Returns the version of the installed docker image.
-```
-GET /api/version
-```
-
-```json
-{
-  "version": "2024.2.3",
-  "engine": "NOWEB",
-  "tier": "PLUS",
-  "browser": "/usr/bin/google-chrome-stable"
-}
-```
-
 ## Ping
 Returns a simple response to check if the service is running.
 ```
@@ -59,6 +44,56 @@ GET /ping
   "message": "pong"
 }
 ```
+
+## Get version
+Returns the version of the installed docker image.
+```
+GET /api/server/version
+```
+
+```json
+{
+  "version": "2024.2.3",
+  "engine": "NOWEB",
+  "tier": "PLUS",
+  "browser": "/usr/bin/google-chrome-stable"
+}
+```
+
+## Get server environment variables
+Returns the environment variables of the server
+
+Return only WAHA related variables.
+```
+GET /api/server/environment?all=false
+```
+
+```json
+{
+  "DEBUG": "1",
+  "WAHA_HTTP_LOG_LEVEL": "debug",
+  "WAHA_LOG_FORMAT": "PRETTY",
+  ...
+}
+
+```
+
+Return all environment variables
+```
+GET /api/server/environment?all=true
+```
+
+```json
+{
+  "DEBUG": "1",
+  "WAHA_HTTP_LOG_LEVEL": "debug",
+  "WAHA_LOG_FORMAT": "PRETTY",
+  "PATH": "/home/...",
+  ...
+}
+
+```
+
 
 ## Health Check
 <b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
