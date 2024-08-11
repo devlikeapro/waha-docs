@@ -32,6 +32,11 @@ Release policy:
 💡 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
 ----
+## 2024.9
+`2024.9.1`
+- Add environment variables on [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}) - [#319](https://github.com/devlikeapro/waha/issues/319)
+- Add `GET /api/server/version` and `/api/server/environment` endpoints
+  - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 
 ## 2024.8
 `2024.8.5`
