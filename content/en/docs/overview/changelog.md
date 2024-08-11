@@ -37,6 +37,8 @@ Release policy:
 - Add environment variables on [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}) - [#319](https://github.com/devlikeapro/waha/issues/319)
 - Add `GET /api/server/version` and `/api/server/environment` endpoints
   - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
+- Validate API request on `/api/session/*` endpoints - [#470](https://github.com/devlikeapro/waha/issues/470)
+  - 📢 **Requires attention** - make sure you're sending the right requests
 
 ## 2024.8
 `2024.8.5`
