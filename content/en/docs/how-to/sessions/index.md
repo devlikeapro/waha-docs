@@ -22,7 +22,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 {{< include file="content/en/docs/how-to/sessions/features.md" >}}
 
 
-## Start session
+## Start
 
 In order to start a new session - call `POST /api/sessions/start`
 
@@ -138,6 +138,32 @@ You need to add `config.noweb` field to activate the store:
 👉 Read more about [**NOWEB Store Configuration**]({{< relref "/docs/engines/noweb#store" >}}).
 
 
+## Stop
+
+In order to stop a new session - call `POST /api/sessions/stop`
+
+{{< alert icon="👉" text="The stop request does not log out the account by default. Set 'logout' field to 'true'." />}}
+
+```json
+{
+  "name": "default",
+  "logout": true
+}
+```
+
+## Logout
+
+In order to log out the session - call `POST /api/sessions/logout`
+
+{{< alert icon="👉" text="You must stop session first." />}}
+
+```json
+{
+  "name": "default",
+  "logout": true
+}
+```
+
 ## List sessions
 
 To get session list - call `GET /api/sessions`.
@@ -214,31 +240,6 @@ To get information about a specific session - call `GET /api/sessions/{session}`
 }
 ```
 
-## Stop
-
-In order to stop a new session - call `POST /api/sessions/stop`
-
-{{< alert icon="👉" text="The stop request does not log out the account by default. Set 'logout' field to 'true'." />}}
-
-```json
-{
-  "name": "default",
-  "logout": true
-}
-```
-
-## Logout
-
-In order to log out the session - call `POST /api/sessions/logout`
-
-{{< alert icon="👉" text="You must stop session first." />}}
-
-```json
-{
-  "name": "default",
-  "logout": true
-}
-```
 
 ## Get screenshot
 
@@ -271,6 +272,7 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 ![](/images/swagger-media-type.png)
 
 ## Get me
+ℹ️ You'll get the same info if you request `GET /api/sessions/{session}` in `me` field.
 
 Get information about the associated account for that session (if any).
 
@@ -287,7 +289,7 @@ GET /api/sessions/{session}/me
 }
 ```
 
-**Stopped** or **not authenticated** session returns null:
+**Stopped** or **not authenticated** session returns `null`:
 
 ```json
 null
