@@ -545,7 +545,7 @@ If you want to save your session and do not scan QR code everytime when you laun
 
 ### Autostart
 
-If you don't want to call `POST /api/sessions/start` for every session each time when the container restart -
+If you don't want to call `POST /api/sessions/{session}/start` for every session each time when the container restart -
 you can use set of these environment variables to start sessions for you:
 
 - `WHATSAPP_RESTART_ALL_SESSIONS=True`: Set this variable to `True` to start all **STOPPED** sessions after container
