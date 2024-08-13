@@ -21,9 +21,8 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 {{< include file="content/en/docs/how-to/sessions/features.md" >}}
 
-## Endpoints
 
-### Start
+## Start session
 
 In order to start a new session - call `POST /api/sessions/start`
 
@@ -35,7 +34,7 @@ In order to start a new session - call `POST /api/sessions/start`
 
 - 👉 **NOWEB** engine has [Engine-specific Store Configuration]({{< relref "/docs/engines/noweb#store" >}})
 
-#### Configure webhooks
+### Configure webhooks
 
 You can configure webhooks for a session:
 
@@ -61,7 +60,7 @@ The configuration is saved and will be applied if the docker container restarts,
 and you set `WHATSAPP_RESTART_ALL_SESSIONS` environment variables.
 Read more about it in [Autostart section](#autostart).
 
-#### Configure proxy
+### Configure proxy
 
 You can configure proxy for a session by setting `config.proxy` fields when you `POST /api/sessions/start`:
 
@@ -104,7 +103,7 @@ You can configure proxy when for all sessions by set up environment variables.
 Read more about it on [**Proxy page** ->]({{< relref "/docs/how-to/proxy" >}}) or [**Configuration page** ->]({{<
 relref "/docs/how-to/config#proxy" >}}).
 
-#### Enable debug
+### Enable debug
 
 You can enable debug mode for a session by setting `config.debug` field to `true`.
 It'll show you more logs in the console.
@@ -119,7 +118,7 @@ Can be useful for debugging purposes when you're experiencing some issues.
 }
 ```
 
-### List
+## List sessions
 
 To get session list - call `GET /api/sessions`.
 
@@ -161,7 +160,7 @@ You can add `?all=true` parameter to the request `GET /api/session?all=True` it'
 including **STOPPED**,
 so you can know which one will be restarted if you set `WHATSAPP_RESTART_ALL_SESSIONS=True` environment variable.
 
-### Get session
+## Get session
 
 To get information about a specific session - call `GET /api/sessions/{session}`.
 
@@ -195,7 +194,7 @@ To get information about a specific session - call `GET /api/sessions/{session}`
 }
 ```
 
-### Stop
+## Stop
 
 In order to stop a new session - call `POST /api/sessions/stop`
 
@@ -208,7 +207,7 @@ In order to stop a new session - call `POST /api/sessions/stop`
 }
 ```
 
-### Logout
+## Logout
 
 In order to log out the session - call `POST /api/sessions/logout`
 
@@ -221,15 +220,17 @@ In order to log out the session - call `POST /api/sessions/logout`
 }
 ```
 
-### Get screenshot
+## Get screenshot
 
 Get screenshot of the session's screen.
+
+### Binary
 
 ```bash
 GET /api/screenshot?session=default
 ```
 
-#### Get screenshot in Base64
+### Base64
 
 You can get screenshot in base64 format by adding `Accept: application/json` header to the request.
 
@@ -249,7 +250,7 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 
 ![](/images/swagger-media-type.png)
 
-### Get me
+## Get me
 
 Get information about the associated account for that session (if any).
 
@@ -272,9 +273,7 @@ GET /api/sessions/{session}/me
 null
 ```
 
-### Get QR
-
-See the list of engines [**that support the features ->**]({{< relref "/docs/how-to/engines#features" >}}).
+## Get QR
 
 The simplest way to authenticate a new session - get QR code and scan it on your device.
 
@@ -284,17 +283,15 @@ GET /api/{session}/auth/qr
 
 You'll get QR image that you can scan and get authenticated
 
-#### QR formats
-
 You can get QR in different formats:
 
 1. **binary image** - `GET /api/{session}/auth/qr`
 2. **base64 image** - `GET /api/{session}/auth/qr` and set `Accept: application/json` header
 3. **raw** - `GET /api/{session}/auth/qr?format=raw`
 
-Here's detailed information about each format:
+### Binary
 
-1. **binary image**, binary image - **default** format, you'll get image in response
+**Binary image** - **default** format, you'll get image in response
 
 ```bash
 # Get image - binary
@@ -308,7 +305,8 @@ GET /api/{session}/auth/qr?format=image
 Accept: image/png
 ```
 
-2. **base64 image** - you'll get image in base64 format in response if you set `Accept: application/json` header.
+### Base64
+**Base64 image** - you'll get image in base64 format in response if you set `Accept: application/json` header.
 
 ```bash
 GET /api/{session}/auth/qr?format=image
@@ -326,7 +324,8 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 
 ![](/images/swagger-media-type.png)
 
-3. **raw** - you'll get raw data in response, you can use it to generate QR code on your side
+### Raw
+**Raw** - you'll get raw data in response, you can use it **to generate QR code on your side** with the `value`.
 
 ```bash
 GET /api/{session}/auth/qr?format=raw
@@ -338,7 +337,7 @@ GET /api/{session}/auth/qr?format=raw
 }
 ```
 
-### Get pairing code
+## Get pairing code
 
 See the list of engines [**that support the features ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
