@@ -22,6 +22,19 @@ messages
 , you need to [**create a session**](#create-session) (optionally, [start](#start-session)) and authenticate it using 
 [**QR code**](#get-qr) or [**pairing code**](#get-pairing-code).
 
+### Session Status
+Here's the list of possible session `status` values:
+- `STOPPED` - session is stopped
+- `STARTING` - session is starting
+- `SCAN_QR_CODE` - session is required to scan QR code or login via phone number.
+    - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
+    - Every time you receive the `session.status` event with `SCAN_QR_CODE` status, 
+you need to [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}}), because it's changed.
+- `WORKING` - session is working and ready to use
+- `FAILED` - session is failed due to some error. It's likely either authorization is required again or device has been
+  disconnected from that account.
+  Try to [**Restart**](#restart-session) the session and if it doesn't help - [**Logout**](#logout-session) and [**Start**](#start-session) the session again.
+
 ## Features
 
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
@@ -524,17 +537,6 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 ### session.status
 
 The `session.status` event is triggered when the session status changes.
-
-- `STOPPED` - session is stopped
-- `STARTING` - session is starting
-- `SCAN_QR_CODE` - session is required to scan QR code or login via phone number.
-    - When you receive the `session.status` event with `SCAN_QR_CODE` status, you can [**fetch updated QR ->**]({{<
-      relref "/docs/how-to/sessions#get-qr" >}})
-    - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
-- `WORKING` - session is working and ready to use
-- `FAILED` - session is failed due to some error. It's likely that authorization is required again or device has been
-  disconnected from that account.
-  Try to restart the session and if it doesn't help - logout and start the session again.
 
 ```json
 {
