@@ -23,8 +23,6 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 ## Endpoints
 
-See the list of engines [**that support the features ->**]({{< relref "/docs/how-to/engines#features" >}}).
-
 ### Start
 
 In order to start a new session - call `POST /api/sessions/start`
