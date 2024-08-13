@@ -121,24 +121,9 @@ it's the engine WAHA runs by default.
 
 
 ### Sessions
-
-If you find any inconsistency with actual endpoints -
-please [create an issue](https://github.com/devlikeapro/waha/issues/new?title=Error+in+engine+features )
-
-|                                           | WEBJS |                          NOWEB                          | VENOM |
-|-------------------------------------------|:-----:|:-------------------------------------------------------:|:-----:|
-| **Session**                               |       |                                                         |       |
-| `POST /api/sessions/start`                |  ✔️   |                           ✔️                            |  ✔️   |
-| `POST /api/sessions/stop`                 |  ✔️   |                           ✔️                            |  ✔️   |
-| `POST /api/sessions/logout`               |  ✔️   |                           ✔️                            |  ✔️   |
-| `GET /api/sessions/`                      |  ✔️   |                           ✔️                            |  ✔️   |
-| `GET /api/sessions/{session}/me`          |  ✔️   |                           ✔️                            |       |
-| **Authentication**                        |       |                                                         |       |
-| `POST /api/{session}/auth/qr`             |  ✔️   |                           ✔️                            |  ✔️   |
-| `POST /api/{session}/auth/request-code`   |       |                           ✔️                            |       |
-| `POST /api/{session}/auth/authorize-code` |       | ️[#113](https://github.com/devlikeapro/waha/issues/113) |       |
-| **Screenshot**                            |       |                                                         |       |
-| `POST /api/screenshot`                    |  ✔️   |                            ➖                            |  ✔️   |
+Read more about
+[**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
+{{< include file="content/en/docs/how-to/sessions/features.md" >}}
 
 ### Chatting
 | **Chatting**                                                | WEBJS |      NOWEB       | VENOM |

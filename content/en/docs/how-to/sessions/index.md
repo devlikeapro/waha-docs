@@ -15,6 +15,12 @@ that you can use to send and receive messages.
 Before you can send or receive messages, you need to [**start a session**](#start) and **authorize** it [**by scanning
 QR code**](#get-qr).
 
+## Features
+
+Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
+
+{{< include file="content/en/docs/how-to/sessions/features.md" >}}
+
 ## Endpoints
 
 See the list of engines [**that support the features ->**]({{< relref "/docs/how-to/engines#features" >}}).
