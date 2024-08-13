@@ -34,6 +34,9 @@ Release policy:
 ----
 ## 2024.9
 `2024.9.1`
+- Add more granular API for [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}}) - [#435](https://github.com/devlikeapro/waha/issues/435)
+  - Dedicated `create, update, delete, start, stop, logout, restart` actions!
+  - The old API is working the same way as before for backward compatibility.
 - Add environment variables on [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}) - [#319](https://github.com/devlikeapro/waha/issues/319)
 - Add `GET /api/server/version` and `/api/server/environment` endpoints
   - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
