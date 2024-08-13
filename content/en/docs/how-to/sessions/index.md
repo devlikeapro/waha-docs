@@ -32,7 +32,6 @@ In order to start a new session - call `POST /api/sessions/start`
 }
 ```
 
-- 👉 **NOWEB** engine has [Engine-specific Store Configuration]({{< relref "/docs/engines/noweb#store" >}})
 
 ### Configure webhooks
 
@@ -117,6 +116,27 @@ Can be useful for debugging purposes when you're experiencing some issues.
   }
 }
 ```
+
+### NOWEB
+[NOWEB **🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) has a specific store that allows you to save session data.
+
+You need to add `config.noweb` field to activate the store:
+```json
+{
+  "name": "default",
+  "config": {
+    "noweb": {
+      "store": {
+        "enabled": true,
+        "fullSync": false
+      }
+    }
+  }
+}
+```
+
+👉 Read more about [**NOWEB Store Configuration**]({{< relref "/docs/engines/noweb#store" >}}).
+
 
 ## List sessions
 
@@ -364,7 +384,7 @@ You'll get code in the response that you can use on your WhatsApp app to connect
 ```
 
 ## Webhooks
-
+gg
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### session.status
