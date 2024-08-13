@@ -10,30 +10,41 @@ weight: 221
 ---
 
 ## Overview
+
 **Session** represents a **WhatsApp Account (Phone Number)** connected to **WAHA**
 that you can use to send and receive messages.
 
 ### Session Lifecycle
-Before you can 
+
+Before you can
 [**📤 Send**]({{< relref "/docs/how-to/send-messages" >}})
-or 
+or
 [**📥 Receive**]({{< relref "/docs/how-to/receive-messages" >}})
 messages
-, you need to [**create a session**](#create-session) (optionally, [start](#start-session)) and authenticate it using 
+, you need to [**Create**](#create-session) a session (optionally, [Start](#start-session)) and authenticate it using
 [**QR code**](#get-qr) or [**pairing code**](#get-pairing-code).
 
+Here's Session Lifecycle State Diagram (click to open full size):
+<a href="/images/waha/waha-session-lifecycle.png" target="_blank" style="cursor: pointer;">
+    <img src="/images/waha/waha-session-lifecycle.png" alt="WAHA Session Lifecycle">
+</a>
+
+
 ### Session Status
+
 Here's the list of possible session `status` values:
+
 - `STOPPED` - session is stopped
 - `STARTING` - session is starting
 - `SCAN_QR_CODE` - session is required to scan QR code or login via phone number.
     - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
-    - Every time you receive the `session.status` event with `SCAN_QR_CODE` status, 
-you need to [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}}), because it's changed.
+    - Every time you receive the `session.status` event with `SCAN_QR_CODE` status,
+      you need to [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}}), because it's changed.
 - `WORKING` - session is working and ready to use
 - `FAILED` - session is failed due to some error. It's likely either authorization is required again or device has been
   disconnected from that account.
-  Try to [**Restart**](#restart-session) the session and if it doesn't help - [**Logout**](#logout-session) and [**Start**](#start-session) the session again.
+  Try to [**Restart**](#restart-session) the session and if it doesn't help - [**Logout**](#logout-session) and [**Start
+  **](#start-session) the session again.
 
 ## Features
 
@@ -80,7 +91,7 @@ In order to start a new session - call `POST /api/sessions`.
   // "start" - only for POST /api/sessions/
   // do we need to start the session at the same time
   // if you set it to false - you can start the session later by calling POST /api/sessions/{session}/start
-  "start": true, 
+  "start": true,
   "config": {
     "debug": true,
     // Only for NOWEB engine
@@ -233,8 +244,9 @@ Can be useful for debugging purposes when you're experiencing some issues.
 ```
 
 ### Postpone start
+
 By default, the session starts right after creation.
-You can create a session and postpone its start by setting `start` field to `false`. 
+You can create a session and postpone its start by setting `start` field to `false`.
 It'll create a session in `STOPPED` status, and you can start it later by calling `POST /api/sessions/{session}/start`.
 
 ```json
@@ -247,7 +259,7 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
 
 ## Update Session
 
-In order to update a session - call `PUT /api/sessions/{session}` with a new configuration 
+In order to update a session - call `PUT /api/sessions/{session}` with a new configuration
 (see the possible settings in [Create Session](#create-session) section)
 
 ```json
@@ -294,12 +306,12 @@ In order to log out the session - call `POST /api/sessions/{session}/logout`
 
 ⚠️ If the session is running (not in `STOPPED` status), it'll be **logged out** and **started** from scratch.
 
-ℹ️ **Log out** removes *session information (authentication info and data)*, 
+ℹ️ **Log out** removes *session information (authentication info and data)*,
 but keeps the *session's configuration*, so you can start a new session with the same configuration.
 
 ## Delete Session
 
-In order to delete a session - call `DELETE /api/sessions/{session}`. 
+In order to delete a session - call `DELETE /api/sessions/{session}`.
 
 ⚠️ **Delete** also **logs out** the session (removes both session configuration and data).
 
