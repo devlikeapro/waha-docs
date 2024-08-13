@@ -9,11 +9,12 @@ images: [ ]
 weight: 221
 ---
 
+## Overview
 **Session** represents a **WhatsApp Account (Phone Number)** connected to **WAHA**
 that you can use to send and receive messages.
 
-Before you can send or receive messages, you need to [**start a session**](#start) and **authorize** it [**by scanning
-QR code**](#get-qr).
+### Session Lifecycle
+Before you can send or receive messages, you need to [create a session](#create-session) (optionally [start it](#start)) and authenticate it.
 
 ## Features
 
@@ -248,11 +249,25 @@ In order to update a session - call `PUT /api/sessions/{session}` with a new con
 
 ⚠️ If the session not in `STOPPED` status, it'll be **stopped** and **started** with a new configuration.
 
+## Start Session
+
+In order to start a session - call `POST /api/sessions/{session}/start`.
+
+🎯 **Idempotent operation** - you can call it multiple times, and it'll start the session only if it's not running.
+
 ## Stop Session
 
-In order to stop a new session - call `POST /api/sessions/{session}/stop`
+In order to stop a session - call `POST /api/sessions/{session}/stop`
 
 ℹ️ **Stop** doesn't **Log out** or **Delete** anything
+
+🎯 **Idempotent operation** - you can call it multiple times, and it'll stop the session only if it's running.
+
+## Restart Session
+
+In order to start a session - call `POST /api/sessions/{session}/restart`
+
+⚠️ If the session is already running (status is not `STOPPED`), it'll be **stopped** and **started**.
 
 ## Logout Session
 
@@ -270,6 +285,8 @@ In order to delete a session - call `DELETE /api/sessions/{session}`.
 ⚠️ **Delete** also **logs out** the session (removes both session configuration and data).
 
 ⚠️ **Delete** also **stops** the session if it's running (session status is not `STOPPED`)
+
+🎯 **Idempotent operation**  - you can call it multiple times, and it'll stop the session only if it exists.
 
 ## List Sessions
 
