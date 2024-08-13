@@ -21,19 +21,91 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 {{< include file="content/en/docs/how-to/sessions/features.md" >}}
 
+## Create Session
 
-## Start
+In order to start a new session - call `POST /api/sessions`.
 
-In order to start a new session - call `POST /api/sessions/start`
+📖 WAHA uses session `name` more like `id`, but we call it `name` for historical reasons.
+
+**Minimal body**:
 
 ```json
 {
+  // "name" is Optional as well, if not provided - it'll be generated automatically
+  // "name": null
   "name": "default"
 }
 ```
 
+**Response**:
 
-### Configure webhooks
+```json
+{
+  "name": "session_123123123",
+  // if name is not provided - it'll be generated automatically
+  "status": "STARTING",
+  "engine": {
+    "engine": "NOWEB"
+  },
+  "config": null,
+  "me": null
+}
+```
+
+**Full possible request**. Read more about configuration below
+
+```json
+{
+  "name": "default",
+  // "start" - only for POST /api/sessions/
+  // do we need to start the session at the same time
+  // if you set it to false - you can start the session later by calling POST /api/sessions/{session}/start
+  "start": true, 
+  "config": {
+    "debug": true,
+    // Only for NOWEB engine
+    "noweb": {
+      "store": {
+        "enabled": true,
+        "fullSync": false
+      }
+    },
+    "webhooks": [
+      {
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
+        "events": [
+          "message"
+        ],
+        // Optional
+        "hmac": {
+          "key": "your-secret-key"
+        },
+        // Optional
+        "customHeaders": [
+          {
+            "name": "X-My-Custom-Header",
+            "value": "Value"
+          }
+        ],
+        // Optional
+        "retries": {
+          "delaySeconds": 2,
+          "attempts": 15
+        }
+      }
+    ],
+    // Optional
+    "proxy": {
+      "server": "localhost:3128",
+      // Optional - username, password
+      "username": "username",
+      "password": "P@ssw0rd"
+    }
+  }
+}
+```
+
+### Webhooks
 
 You can configure webhooks for a session:
 
@@ -53,15 +125,36 @@ You can configure webhooks for a session:
 }
 ```
 
-Read more about available options on [**Webhooks page ->**]({{< relref "/docs/how-to/webhooks#hmac-authentication" >}})
+👉 Read more about available options on
+[**🔄 Webhooks**]({{< relref "/docs/how-to/webhooks#webhooks-advanced-imagesversionspluspng" >}}) page.
 
 The configuration is saved and will be applied if the docker container restarts,
 and you set `WHATSAPP_RESTART_ALL_SESSIONS` environment variables.
 Read more about it in [Autostart section](#autostart).
 
-### Configure proxy
+### NOWEB
 
-You can configure proxy for a session by setting `config.proxy` fields when you `POST /api/sessions/start`:
+[NOWEB **🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) has a specific store that allows you to save session data.
+
+You need to add `config.noweb` field to activate the store:
+
+```json
+{
+  "name": "default",
+  "config": {
+    "noweb": {
+      "store": {
+        "enabled": true,
+        "fullSync": false
+      }
+    }
+  }
+}
+```
+
+### Proxy
+
+You can configure proxy for a session by setting `config.proxy` fields when you create or update a session.
 
 - `server` - proxy server address, without `http://` or `https://` prefixes
 - `username` and `password` - set this if the proxy requires authentication
@@ -102,7 +195,9 @@ You can configure proxy when for all sessions by set up environment variables.
 Read more about it on [**Proxy page** ->]({{< relref "/docs/how-to/proxy" >}}) or [**Configuration page** ->]({{<
 relref "/docs/how-to/config#proxy" >}}).
 
-### Enable debug
+👉 Read more about [**NOWEB Store Configuration**]({{< relref "/docs/engines/noweb#store" >}}).
+
+### Debug
 
 You can enable debug mode for a session by setting `config.debug` field to `true`.
 It'll show you more logs in the console.
@@ -117,54 +212,66 @@ Can be useful for debugging purposes when you're experiencing some issues.
 }
 ```
 
-### NOWEB
-[NOWEB **🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) has a specific store that allows you to save session data.
+### Postpone start
+By default, the session starts right after creation.
+You can create a session and postpone its start by setting `start` field to `false`. 
+It'll create a session in `STOPPED` status, and you can start it later by calling `POST /api/sessions/{session}/start`.
 
-You need to add `config.noweb` field to activate the store:
+```json
+{
+  "name": "default",
+  "start": false
+}
+
+```
+
+## Update Session
+
+In order to update a session - call `PUT /api/sessions/{session}` with a new configuration 
+(see the possible settings in [Create Session](#create-session) section)
+
 ```json
 {
   "name": "default",
   "config": {
-    "noweb": {
-      "store": {
-        "enabled": true,
-        "fullSync": false
+    "webhooks": [
+      {
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
+        "events": [
+          "message"
+        ]
       }
-    }
+    ]
   }
 }
 ```
 
-👉 Read more about [**NOWEB Store Configuration**]({{< relref "/docs/engines/noweb#store" >}}).
+⚠️ If the session not in `STOPPED` status, it'll be **stopped** and **started** with a new configuration.
 
+## Stop Session
 
-## Stop
+In order to stop a new session - call `POST /api/sessions/{session}/stop`
 
-In order to stop a new session - call `POST /api/sessions/stop`
+ℹ️ **Stop** doesn't **Log out** or **Delete** anything
 
-{{< alert icon="👉" text="The stop request does not log out the account by default. Set 'logout' field to 'true'." />}}
+## Logout Session
 
-```json
-{
-  "name": "default",
-  "logout": true
-}
-```
+In order to log out the session - call `POST /api/sessions/{session}/logout`
 
-## Logout
+⚠️ If the session is running (not in `STOPPED` status), it'll be **logged out** and **started** from scratch.
 
-In order to log out the session - call `POST /api/sessions/logout`
+ℹ️ **Log out** removes *session information (authentication info and data)*, 
+but keeps the *session's configuration*, so you can start a new session with the same configuration.
 
-{{< alert icon="👉" text="You must stop session first." />}}
+## Delete Session
 
-```json
-{
-  "name": "default",
-  "logout": true
-}
-```
+In order to delete a session - call `DELETE /api/sessions/{session}`. 
 
-## List sessions
+⚠️ **Delete** also **logs out** the session (removes both session configuration and data).
+
+⚠️ **Delete** also **stops** the session if it's running (session status is not `STOPPED`)
+
+## List Sessions
 
 To get session list - call `GET /api/sessions`.
 
@@ -206,7 +313,7 @@ You can add `?all=true` parameter to the request `GET /api/session?all=True` it'
 including **STOPPED**,
 so you can know which one will be restarted if you set `WHATSAPP_RESTART_ALL_SESSIONS=True` environment variable.
 
-## Get session
+## Get Session
 
 To get information about a specific session - call `GET /api/sessions/{session}`.
 
@@ -240,7 +347,6 @@ To get information about a specific session - call `GET /api/sessions/{session}`
 }
 ```
 
-
 ## Get screenshot
 
 Get screenshot of the session's screen.
@@ -272,6 +378,7 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 ![](/images/swagger-media-type.png)
 
 ## Get me
+
 ℹ️ You'll get the same info if you request `GET /api/sessions/{session}` in `me` field.
 
 Get information about the associated account for that session (if any).
@@ -328,6 +435,7 @@ Accept: image/png
 ```
 
 ### Base64
+
 **Base64 image** - you'll get image in base64 format in response if you set `Accept: application/json` header.
 
 ```bash
@@ -347,6 +455,7 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 ![](/images/swagger-media-type.png)
 
 ### Raw
+
 **Raw** - you'll get raw data in response, you can use it **to generate QR code on your side** with the `value`.
 
 ```bash
@@ -385,8 +494,8 @@ You'll get code in the response that you can use on your WhatsApp app to connect
 }
 ```
 
-
 ## Webhooks
+
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### session.status
@@ -457,17 +566,18 @@ If you want to save server's CPU and Memory - run multiple sessions inside one d
 [Plus version]({{< relref "plus-version" >}}) supports multiple sessions in one container.
 
 ## DEPRECATED API
+
 Before new granular API we have a simple API to control the session.
 
 **Kindly switch to new API** that allows you to control the session **in a more flexible way**.
 
-
 ### Start
-`POST /api/sessions/start` - the endpoint **Create** (if not exists),
-**Update** (if existed before) and **Start** a new session. 
 
-Accepts the same configuration as 
-[Create](#create) and [Update](#update) API.
+`POST /api/sessions/start` - the endpoint **Create** (if not exists),
+**Update** (if existed before) and **Start** a new session.
+
+Accepts the same configuration as
+[Create](#create-session) and [Update](#update-session) API.
 
 ```json
 {
@@ -485,9 +595,10 @@ Accepts the same configuration as
 }
 ```
 
-
 ### Stop
-`POST /api/sessions/stop` 
+
+`POST /api/sessions/stop`
+
 - **Stop** if `logout: false`
 - **Stop**, **Logout** and **Delete** session if `logout: true`
 
@@ -499,6 +610,7 @@ Accepts the same configuration as
 ```
 
 ### Logout
+
 `POST /api/sessions/logout` - **Logout** and **Delete** session.
 
 ```json
