@@ -14,7 +14,13 @@ weight: 221
 that you can use to send and receive messages.
 
 ### Session Lifecycle
-Before you can send or receive messages, you need to [create a session](#create-session) (optionally [start it](#start)) and authenticate it.
+Before you can 
+[**📤 Send**]({{< relref "/docs/how-to/send-messages" >}})
+or 
+[**📥 Receive**]({{< relref "/docs/how-to/receive-messages" >}})
+messages
+, you need to [**create a session**](#create-session) (optionally, [**start it*](#start)) and authenticate it using 
+[**QR code**](#get-qr) or [**pairing code**](#get-pairing-code).
 
 ## Features
 
