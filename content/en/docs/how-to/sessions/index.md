@@ -385,8 +385,8 @@ You'll get code in the response that you can use on your WhatsApp app to connect
 }
 ```
 
+
 ## Webhooks
-gg
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### session.status
@@ -456,3 +456,53 @@ you can use set of these environment variables to start sessions for you:
 If you want to save server's CPU and Memory - run multiple sessions inside one docker container!
 [Plus version]({{< relref "plus-version" >}}) supports multiple sessions in one container.
 
+## DEPRECATED API
+Before new granular API we have a simple API to control the session.
+
+**Kindly switch to new API** that allows you to control the session **in a more flexible way**.
+
+
+### Start
+`POST /api/sessions/start` - the endpoint **Create** (if not exists),
+**Update** (if existed before) and **Start** a new session. 
+
+Accepts the same configuration as 
+[Create](#create) and [Update](#update) API.
+
+```json
+{
+  "name": "default",
+  "config": {
+    "webhooks": [
+      {
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
+        "events": [
+          "message"
+        ]
+      }
+    ]
+  }
+}
+```
+
+
+### Stop
+`POST /api/sessions/stop` 
+- **Stop** if `logout: false`
+- **Stop**, **Logout** and **Delete** session if `logout: true`
+
+```json
+{
+  "name": "default",
+  "logout": true
+}
+```
+
+### Logout
+`POST /api/sessions/logout` - **Logout** and **Delete** session.
+
+```json
+{
+  "name": "default"
+}
+```
