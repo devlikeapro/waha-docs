@@ -34,6 +34,10 @@ Release policy:
 ----
 
 ## 2024.8
+`2024.8.3`
+- fix restart container with **NOWEB** engine [#483](https://github.com/devlikeapro/waha/issues/483)
+- fix " this.logger.info is not a function" in swagger plus [#496](https://github.com/devlikeapro/waha/issues/496)
+
 `2024.8.2`
 - fix flaky **WEBJS** engine issues (`Failed to add page binding with name ...`)
 - **WEBJS** + **MongoDB** - switch to native `zip` and `unzip` binaries [#465](https://github.com/devlikeapro/waha/issues/465)
