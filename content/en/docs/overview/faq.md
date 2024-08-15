@@ -35,24 +35,26 @@ communicate with it to prevent blocking from WhatsApp.
 It's the reason why it's so demanding on resources.
 
 
-| Accounts (sessions) in the container | CPU   | Memory |
-|--------------------------------------|-------|--------|
-| 1                                    | 30%   | 400MB  |
-| 10                                   | 270%  | 2.5GB  |
-| 50                                   | 1500% | 20GB   |
+| Accounts (sessions) in the container                                                       | CPU   | Memory |
+|--------------------------------------------------------------------------------------------|-------|--------|
+| 1                                                                                          | 30%   | 400MB  |
+| 10                                                                                         | 270%  | 2.5GB  |
+| 50                                                                                         | 1500% | 20GB   |
+| 💡 [**WAHA Scaling - how to handle 50+ sessions ->**]({{< relref "/blog/waha-scaling" >}}) |       |        |
 
 👉 The benchmark may differ from case to case, it depends on usage pattern - how many messages you get, how many send, etc.
 
 #### NOWEB
 If you're looking for less resource demanded engine - [have a look at **NOWEB** engine ->]({{< relref "/docs/engines/NOWEB" >}})
 
-| Accounts (sessions) in the container | CPU  | Memory |
-|--------------------------------------|------|--------|
-| 1                                    | 10%  | 200MB  |
-| 10                                   | 100% | 2GB    |
-| 50                                   | 150% | 4GB    |
-| 100                                  | 200% | 6GB    |
-| 500                                  | 300% | 30GB   |
+| Accounts (sessions) in the container                                                        | CPU  | Memory |
+|---------------------------------------------------------------------------------------------|------|--------|
+| 1                                                                                           | 10%  | 200MB  |
+| 10                                                                                          | 100% | 2GB    |
+| 50                                                                                          | 150% | 4GB    |
+| 100                                                                                         | 200% | 6GB    |
+| 500                                                                                         | 300% | 30GB   |
+| 💡 [**WAHA Scaling - how to handle 500+ sessions ->**]({{< relref "/blog/waha-scaling" >}}) |      |        |
 
 Quotes from the users:
 > The server has **2 CPU and 8GB** of memory. Today we have **85 sessions** in this instance.
@@ -60,6 +62,11 @@ Quotes from the users:
 > **400** sessions with **4CPU and 32RAM**. It's working fine.
 
 
+### How to horizontally scale WAHA?
+You can scale WAHA horizontally by running multiple instances of WAHA on different servers and distribute 
+the load between them.
+
+Read more [**WAHA Scaling - how to handle 500+ sessions ->**]({{< relref "/blog/waha-scaling" >}})
 
 ## WAHA Plus
 ### What is the difference between WAHA Core and WAHA Plus?

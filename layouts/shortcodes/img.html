@@ -1,0 +1,8 @@
+    <div class="mb-2">
+        <a href="{{ .Get "src" }}" target="_blank" style="cursor: pointer;">
+            <img src="{{ .Get "src" }}" alt="{{ with .Get "alt" }}{{ . }}{{ end }}">
+        </a>
+        <div class="text-center small" style="color: #6c757d">
+            Click to view full size.
+        </div>
+    </div>
