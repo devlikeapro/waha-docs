@@ -232,11 +232,6 @@ Fix send video issue `POST /api/sendVideo` in **WEBJS**.
 - Build: `2024.5.9`
 - Engine: **WEBJS**
 
-💡 If you're experiencing **"forever loading" issue** - set up `WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix` environment variable:
-```bash
-docker run -it -p 3000:3000/tcp -e WAHA_WEBJS_WEB_VERSION=2.2412.54-videofix devlikeapro/waha-plus:chrome
-```
-
 ----
 
 Use local cache for **WEBJS** engine (versions file).
