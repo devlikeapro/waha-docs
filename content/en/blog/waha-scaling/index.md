@@ -169,6 +169,16 @@ and few more reasons:
 - **Frees our hands** - we can focus on building the best WhatsApp API and adding new features,
   and you can focus on building the best application.
 
+### Single Dashboard - Multiple Servers
+If you're running multiple servers
+you can run a dedicated WAHA [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}) just to have a single place where from you can manage all servers:
+
+{{< img src="/images/waha/dashboard/waha-dashboard-servers.drawio.png" >}}
+
+After that you can connect all server to the single dashboard:
+
+{{< img src="/images/waha/dashboard/waha-single-dashboard-multiple-servers.png" >}}
+
 ## Horizontal Scaling - Auto-Scaling
 
 🚧🔨⏳ Auto-Scaling **IS NOT AVAILABLE** our of the box in WAHA yet! ⏳🔨🚧
@@ -185,6 +195,6 @@ It'll also control (using underlying k8s or docker infrastructure) the number of
 Kindly [**support the project**]({{< relref "/pricing" >}}) on **PRO** tier if you wish to
 use the feature in the future! 🙏
 
-For now, [**Vertical Scaling**](#vertical-scaling) and [**Horizontal Scaling - Sharding
-**](#horizontal-scaling---sharding)
+For now, [**Vertical Scaling**](#vertical-scaling) and 
+[**Horizontal Scaling - Sharding **](#horizontal-scaling---sharding)
 are the ways to go.

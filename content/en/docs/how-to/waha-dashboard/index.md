@@ -45,6 +45,17 @@ When running WAHA you can set the following environment variables to configure t
 docker run -it -p 3000:3000/tcp -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PASSWORD=waha devlikeapro/waha-plus
 ```
 
+## Single Dashboard - Multiple Servers
+If you're running multiple servers 
+(like [**using sharding to handle 50+ sessions ->**]({{< relref "/blog/waha-scaling" >}}))
+you can run a dedicated WAHA just to have a single place where from you can manage all servers:
+
+{{< img src="/images/waha/dashboard/waha-dashboard-servers.drawio.png" >}}
+
+After that you can connect all server to the single dashboard:
+
+{{< img src="/images/waha/dashboard/waha-single-dashboard-multiple-servers.png" >}}
+
 ## Bug reports and feature requests
 If you're experiencing any issues or have a feature request, please create an issue in the
 [WAHA GitHub](https://github.com/devlikeapro/waha/issues)
