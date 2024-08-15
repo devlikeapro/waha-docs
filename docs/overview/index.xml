@@ -14,8 +14,7 @@ When developing a bot for WhatsApp, you should never initiate a conversation. In
 We strongly recommend using VPS or servers with minimum 2CPU and 2GB RAM configuration for the project even for a single session. If you want to host more sessions - please check the numbers below
 How much CPU and Memory does WAHA consume? #
 WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CPU and Memory requirements change
-WEBJS #
-The nature of WEBJS engine - it runs real WhatsApp Web version in Chromium (or Chrome) and communicate with it to prevent blocking from WhatsApp.</description></item><item><title>🆕 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get real-time updates about WAHA, please subscribe to our channels:
+👉 We kindly recommend getting at least 2CPU and 2GB RAM for a VPS, it&amp;rsquo;s not comfortable to work with less resources.</description></item><item><title>🆕 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 Release policy:
 YYYY.M.1 - new features. We release new features every month as first release (not always on the first day) if you see a new 2024.8.1 version - there are new features! YYYY.M.BUILD - bug fixes. We release bug fixes during the month if you see a new 2024.</description></item></channel></rss>

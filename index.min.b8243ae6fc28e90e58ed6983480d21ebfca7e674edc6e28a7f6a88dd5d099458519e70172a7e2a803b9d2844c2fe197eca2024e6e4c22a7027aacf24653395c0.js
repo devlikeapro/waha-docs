@@ -49,13 +49,16 @@ For every one you send a message that doesn\u0026rsquo;t have your number on the
 You could make it by sending an SMS to the person with a link to start a chat on WhatsApp with you by link https://wa.me/12132132131?text=Hi.
 `}),e.add({id:4,href:"/docs/overview/faq/",title:"❓ FAQ",description:"Answers to frequently asked questions.",content:`System Requirements #We strongly recommend using VPS or servers with minimum 2CPU and 2GB RAM configuration for the project even for a single session. If you want to host more sessions - please check the numbers below
 How much CPU and Memory does WAHA consume? #WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CPU and Memory requirements change
+👉 We kindly recommend getting at least 2CPU and 2GB RAM for a VPS, it\u0026rsquo;s not comfortable to work with less resources.
 WEBJS #The nature of WEBJS engine - it runs real WhatsApp Web version in Chromium (or Chrome) and communicate with it to prevent blocking from WhatsApp.
 It\u0026rsquo;s the reason why it\u0026rsquo;s so demanding on resources.
-Accounts (sessions) in the container CPU Memory 1 30% 400MB 10 270% 1.5GB 👉 The benchmark has been made on Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz. It may differ from case to case, it depends on usage pattern - how many messages you get, how many send, etc.
+Accounts (sessions) in the container CPU Memory 1 30% 400MB 10 270% 2.5GB 50 1500% 20GB 💡 WAHA Scaling - how to handle 50+ sessions -\u0026gt; 👉 The benchmark may differ from case to case, it depends on usage pattern - how many messages you get, how many send, etc.
 NOWEB #If you\u0026rsquo;re looking for less resource demanded engine - have a look at NOWEB engine -\u0026gt;
-Accounts (sessions) in the container CPU Memory 1 10% 200MB 10 100% 2GB 100 200% 6GB 400 250% 28GB Quotes from the users:
+Accounts (sessions) in the container CPU Memory 1 10% 200MB 10 100% 2GB 50 150% 4GB 100 200% 6GB 500 300% 30GB 💡 WAHA Scaling - how to handle 500+ sessions -\u0026gt; Quotes from the users:
 The server has 2 CPU and 8GB of memory. Today we have 85 sessions in this instance.
 400 sessions with 4CPU and 32RAM. It\u0026rsquo;s working fine.
+How to horizontally scale WAHA? #You can scale WAHA horizontally by running multiple instances of WAHA on different servers and distribute the load between them.
+Read more WAHA Scaling - how to handle 500+ sessions -\u0026gt;
 WAHA Plus #What is the difference between WAHA Core and WAHA Plus? #It\u0026rsquo;s two versions of product we build:
 WAHA Core
 The free and open source project available for everyone. Supports automating a single WhatsApp Account (aka 🖥️ Sessions Sends and receives unlimited text messages. Doesn\u0026rsquo;t have any built-in 🔒 Security features, which means you need to make sure your infrastructure is secure. WAHA Plus
