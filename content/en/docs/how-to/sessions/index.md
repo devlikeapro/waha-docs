@@ -54,19 +54,23 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 ## Create Session
 
-In order to start a new session - call `POST /api/sessions`.
+In order to create (and start) a new session - call `POST /api/sessions` with [**Session Config**](#session-config).
 
-📖 WAHA uses session `name` more like `id`, but we call it `name` for historical reasons.
 
-**Minimal body**:
+**Body**:
 
 ```json
 {
-  // "name" is Optional as well, if not provided - it'll be generated automatically
-  // "name": null
-  "name": "default"
+  // "name" is Optional - it'll be generated automatically
+  "name": "default",
+  "config": {
+    // Read about Session Config below
+      ...
+  }
 }
 ```
+
+📖 WAHA uses session `name` more like `id`, but we call it `name` for historical reasons.
 
 **Response**:
 
@@ -76,22 +80,35 @@ In order to start a new session - call `POST /api/sessions`.
   // if name is not provided - it'll be generated automatically
   "status": "STARTING",
   "engine": {
-    "engine": "NOWEB"
+    "engine": "WEBJS"
   },
-  "config": null,
+  "config": {
+    ...
+  },
   "me": null
 }
 ```
 
-**Full possible request**. Read more about configuration below
+### Postpone start
+
+By default, the session starts right after creation.
+You can create a session and postpone its start by setting `start` field to `false`.
+It'll create a session in `STOPPED` status, and you can start it later by calling `POST /api/sessions/{session}/start`.
 
 ```json
 {
   "name": "default",
-  // "start" - only for POST /api/sessions/
-  // do we need to start the session at the same time
-  // if you set it to false - you can start the session later by calling POST /api/sessions/{session}/start
-  "start": true,
+  "start": false
+}
+
+```
+
+## Session Config
+**Full possible config** for a session:
+
+```json
+{
+  "name": "default",
   "config": {
     "debug": true,
     // Only for NOWEB engine
@@ -140,6 +157,8 @@ In order to start a new session - call `POST /api/sessions`.
   }
 }
 ```
+
+📖 WAHA uses session `name` more like `id`, but we call it `name` for historical reasons.
 
 ### NOWEB
 
@@ -281,24 +300,11 @@ Can be useful for debugging purposes when you're experiencing some issues.
 }
 ```
 
-### Postpone start
-
-By default, the session starts right after creation.
-You can create a session and postpone its start by setting `start` field to `false`.
-It'll create a session in `STOPPED` status, and you can start it later by calling `POST /api/sessions/{session}/start`.
-
-```json
-{
-  "name": "default",
-  "start": false
-}
-
-```
 
 ## Update Session
 
 In order to update a session - call `PUT /api/sessions/{session}` with a **full** new configuration
-(see the possible `config` in [**Create Session**](#create-session) section)
+(see the possible `config` in [**Session Config**](#session-config) section)
 
 ```json
 {
