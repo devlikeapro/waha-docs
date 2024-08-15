@@ -70,8 +70,6 @@ In order to create (and start) a new session - call `POST /api/sessions` with [*
 }
 ```
 
-📖 WAHA uses session `name` more like `id`, but we call it `name` for historical reasons.
-
 **Response**:
 
 ```json
@@ -88,6 +86,12 @@ In order to create (and start) a new session - call `POST /api/sessions` with [*
   "me": null
 }
 ```
+
+👉 The configuration is saved and will be applied if the docker container restarts,
+if you set `WHATSAPP_RESTART_ALL_SESSIONS` environment variables AND attached [🗄️ Storages]({{< relref "/docs/how-to/storages" >}}) to the container.
+Read more about it in [Advanced Sessions](#advanced-sessions-imagesversionspluspng).
+
+📖 WAHA uses session `name` more like `id`, but we call it `name` for historical reasons.
 
 ### Postpone start
 
@@ -232,12 +236,43 @@ You can configure webhooks for a session:
 }
 ```
 
+**Full possible webhook config**:
+```json
+{
+  "name": "default",
+  "config": {
+    "webhooks": [
+      {
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
+        "events": [
+          "message"
+        ],
+        // Optional
+        "hmac": {
+          "key": "your-secret-key"
+        },
+        // Optional
+        "customHeaders": [
+          {
+            "name": "X-My-Custom-Header",
+            "value": "Value"
+          }
+        ],
+        // Optional
+        "retries": {
+          "delaySeconds": 2,
+          "attempts": 15
+        }
+      }
+    ],
+  }
+}
+
+```
+
 👉 Read more about available options on
 [**🔄 Webhooks**]({{< relref "/docs/how-to/webhooks#webhooks-advanced-imagesversionspluspng" >}}) page.
 
-The configuration is saved and will be applied if the docker container restarts,
-and you set `WHATSAPP_RESTART_ALL_SESSIONS` environment variables.
-Read more about it in [Autostart section](#autostart).
 
 
 ### Proxy
