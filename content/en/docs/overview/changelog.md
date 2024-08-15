@@ -38,7 +38,13 @@ Release policy:
   - Dedicated `create, update, delete, start, stop, logout, restart` actions!
   - The old API is working the same way as before for backward compatibility.
   - Related issues: [#435](https://github.com/devlikeapro/waha/issues/435), [#480](https://github.com/devlikeapro/waha/issues/480)
+- Add ability to add your [**Metadata**]({{< relref "/docs/how-to/sessions#metadata" >}}) to a session [#443](https://github.com/devlikeapro/waha/issues/443). 
+  - `metadata` field available in:
+    - [List Sessions]({{< relref "/docs/how-to/sessions#list-sessions" >}}) and [Get Session]({{< relref "/docs/how-to/sessions#get-session" >}})  responses
+    - [**🔄 Webhooks**]({{< relref "webhooks#metadata" >}}) events
+    - [**📊 Dashboard**]({{< relref "waha-dashboard" >}}) for view, and search sessions by metadata
 - Add environment variables on [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}) - [#319](https://github.com/devlikeapro/waha/issues/319)
+- Add [**🔄 Webhooks - Custom Headers**]({{< relref "/docs/how-to/webhooks#custom-headers" >}}) on [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
 - Add `GET /api/server/version` and `/api/server/environment` endpoints
   - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 - Validate API request on `/api/session/*` endpoints - [#470](https://github.com/devlikeapro/waha/issues/470)
@@ -477,7 +483,7 @@ August 2023
 
 ## 2023.7
 July 2023
-- Now session can have their own [Webhooks](https://waha.devlike.pro/docs/how-to/webhooks) -
+- Now session can have their own [🔄 Webhooks]({{< relref "/docs/how-to/webhooks" >}}) -
    you can define webhook configuration when you start a session with `POST /api/session/start`!
   - Add HMAC authentication for webhooks
   - Configure retries
