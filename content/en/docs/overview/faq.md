@@ -23,6 +23,9 @@ If you want to host more sessions - please check the numbers below
 WAHA uses multiple [🏭 Engines]({{< relref "/docs/how-to/engines" >}}) under the hood and depends on the used engine 
 CPU and Memory requirements change
 
+👉 We kindly recommend getting **at least** **2CPU and 2GB RAM** for a VPS, 
+it's not comfortable to work with less resources.
+
 
 #### WEBJS
 
@@ -32,13 +35,13 @@ communicate with it to prevent blocking from WhatsApp.
 It's the reason why it's so demanding on resources.
 
 
-| Accounts (sessions) in the container | CPU  | Memory |
-|--------------------------------------|------|--------|
-| 1                                    | 30%  | 400MB  |
-| 10                                   | 270% | 1.5GB  |
+| Accounts (sessions) in the container | CPU   | Memory |
+|--------------------------------------|-------|--------|
+| 1                                    | 30%   | 400MB  |
+| 10                                   | 270%  | 2.5GB  |
+| 50                                   | 1500% | 20GB   |
 
-👉 The benchmark has been made on **Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz**.
-It may differ from case to case, it depends on usage pattern - how many messages you get, how many send, etc.
+👉 The benchmark may differ from case to case, it depends on usage pattern - how many messages you get, how many send, etc.
 
 #### NOWEB
 If you're looking for less resource demanded engine - [have a look at **NOWEB** engine ->]({{< relref "/docs/engines/NOWEB" >}})
@@ -47,8 +50,9 @@ If you're looking for less resource demanded engine - [have a look at **NOWEB** 
 |--------------------------------------|------|--------|
 | 1                                    | 10%  | 200MB  |
 | 10                                   | 100% | 2GB    |
+| 50                                   | 150% | 4GB    |
 | 100                                  | 200% | 6GB    |
-| 400                                  | 250% | 28GB   |
+| 500                                  | 300% | 30GB   |
 
 Quotes from the users:
 > The server has **2 CPU and 8GB** of memory. Today we have **85 sessions** in this instance.
