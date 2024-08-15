@@ -20,9 +20,9 @@ who needs to handle a lot (**>100**) of [**🖥️ Sessions**]({{< relref "/docs
 
 If you're using WAHA for **1-10** sessions - just make sure to follow
 [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) guide.
-It handles all the necessary steps to make it work.
+It handles all the necessary steps to make it work. 🚀
 
-There're two ways to scale WAHA:
+There are two ways to scale WAHA:
 
 1. [**Vertical Scaling**](#vertical-scaling) - adding more resources (CPU, RAM) to **the single server** to
    handle more sessions. That's a good way to go if you need to handle up to **50** sessions (**WEBJS**) or **500**
