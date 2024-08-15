@@ -1,5 +1,5 @@
 ---
-title: "WAHA Scaling - how to handle 500+ sessions"
+title: "WAHA Scaling - How To Handle 500+ Sessions"
 description: "WAHA Scaling - how to scale WAHA for >500 sessions with Vertical and Horizontal scaling"
 excerpt: "WAHA Scaling - how to scale WAHA for >500 sessions with Vertical and Horizontal scaling"
 date: 2024-08-14T08:48:45+00:00

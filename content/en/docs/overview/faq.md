@@ -54,7 +54,7 @@ If you're looking for less resource demanded engine - [have a look at **NOWEB** 
 | 50                                                                                          | 150% | 4GB    |
 | 100                                                                                         | 200% | 6GB    |
 | 500                                                                                         | 300% | 30GB   |
-| 💡 [**WAHA Scaling - how to handle 500+ sessions ->**]({{< relref "/blog/waha-scaling" >}}) |      |        |
+| 💡 [**WAHA Scaling - How To Handle 500+ Sessions ->**]({{< relref "/blog/waha-scaling" >}}) |      |        |
 
 Quotes from the users:
 > The server has **2 CPU and 8GB** of memory. Today we have **85 sessions** in this instance.
@@ -66,7 +66,7 @@ Quotes from the users:
 You can scale WAHA horizontally by running multiple instances of WAHA on different servers and distribute 
 the load between them.
 
-Read more [**WAHA Scaling - how to handle 500+ sessions ->**]({{< relref "/blog/waha-scaling" >}})
+Read more [**WAHA Scaling - How To Handle 500+ Sessions ->**]({{< relref "/blog/waha-scaling" >}})
 
 ## WAHA Plus
 ### What is the difference between WAHA Core and WAHA Plus?
