@@ -98,17 +98,24 @@ On the URL that you set you'll receive **HTTP POST** request with a JSON string 
 {
   "event": "message",
   "session": "default",
-  "engine": "WEBJS",
-  "environment": {
-    "tier": "PLUS",
-    "version": "2023.10.12"
+  // 'metadata' provided when you created the session
+  "metadata": {
+    "user.id": "123",
+    "user.email": "email@example.com"
   },
+  // me - your own contact, if authenticated and WORKING
   "me": {
     "id": "71111111111@c.us",
     "pushName": "~"
   },
   "payload": {
-  }
+    ... // event specific data
+  },
+  "environment": {
+    "tier": "PLUS",
+    "version": "2023.10.12"
+  },
+  "engine": "WEBJS"
 }
 ```
 
@@ -125,6 +132,23 @@ Run the bellow command and see look at the logs - it prints body request for all
 docker run -it -e "WHATSAPP_HOOK_EVENTS=*" -e WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111 -p 3000:3000 devlikeapro/waha
 ```
 
+### Metadata
+You can provide additional `metadata` when you start the session with 
+[**Start Session**]({{< relref "/docs/how-to/sessions#start-session" >}}) 
+request data.
+
+```json
+{
+  "event": "message",
+  "session": "default",
+  // 'metadata' provided when you created the session
+  "metadata": {
+    "user.id": "123",
+    "user.email": "email@example.com"
+  },
+  ...
+}
+```
 
 
 ## Webhooks

@@ -21,7 +21,7 @@ Before you can
 or
 [**📥 Receive**]({{< relref "/docs/how-to/receive-messages" >}})
 messages
-, you need to [**Create**](#create-session) a session (optionally, [Start](#start-session)) and authenticate it using
+, you need to [**Create**](#create-session) a session (optionally, [**Start**](#start-session)) and authenticate it using
 [**QR code**](#get-qr) or [**pairing code**](#get-pairing-code).
 
 Here's Session Lifecycle State Diagram (click to open full size):
@@ -32,7 +32,7 @@ Here's Session Lifecycle State Diagram (click to open full size):
 
 ### Session Status
 
-Here's the list of possible session `status` values:
+Here's the list of possible `session.status` values:
 
 - `STOPPED` - session is stopped
 - `STARTING` - session is starting
@@ -101,6 +101,11 @@ In order to start a new session - call `POST /api/sessions`.
         "fullSync": false
       }
     },
+    // Use "metadata" to save additional information.
+    "metadata": {
+      "user.id": "123",
+      "user.email": "email@example.com"
+    },
     "webhooks": [
       {
         "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
@@ -136,6 +141,58 @@ In order to start a new session - call `POST /api/sessions`.
 }
 ```
 
+### NOWEB
+
+[NOWEB **🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) has a specific store that allows you to save session data.
+
+You need to add `config.noweb` field to activate the store:
+
+```json
+{
+  "name": "default",
+  "config": {
+    "noweb": {
+      "store": {
+        "enabled": true,
+        "fullSync": false
+      }
+    }
+  }
+}
+```
+
+### Metadata
+`metadata` is an attribute on Session objects that lets you store more information,
+structured as key-value pairs,
+to sessions for your own use and reference. 
+For example, you can store your user’s unique identifier from your system.
+
+Associated `metadata` field is available in:
+1. [List Sessions](#list-sessions) and [Get Session](#get-session)  responses
+2. [**🔄 Webhooks**]({{< relref "webhooks#metadata" >}}) events
+3. [**📊 Dashboard**]({{< relref "waha-dashboard" >}}) for view, and search sessions by metadata
+
+
+```json
+{
+  "name": "default",
+  "config": {
+    "metadata": {
+      "user.id": "123",
+      "user.email": "email@example.com"
+    }
+  }
+}
+```
+
+Sample `metadata` use cases:
+- **Link IDs**: Attach your system’s unique IDs to a Session object to simplify lookups. For example, add your user or tenant id.
+- **Customer details**: Annotate a customer by storing an internal information (email, customer name) for your future 
+use, so you don't have to look into two systems.
+
+WAHA does not use metadata for any internal purposes, it's up to you how to use it.
+
+
 ### Webhooks
 
 You can configure webhooks for a session:
@@ -163,25 +220,6 @@ The configuration is saved and will be applied if the docker container restarts,
 and you set `WHATSAPP_RESTART_ALL_SESSIONS` environment variables.
 Read more about it in [Autostart section](#autostart).
 
-### NOWEB
-
-[NOWEB **🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) has a specific store that allows you to save session data.
-
-You need to add `config.noweb` field to activate the store:
-
-```json
-{
-  "name": "default",
-  "config": {
-    "noweb": {
-      "store": {
-        "enabled": true,
-        "fullSync": false
-      }
-    }
-  }
-}
-```
 
 ### Proxy
 
@@ -259,8 +297,8 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
 
 ## Update Session
 
-In order to update a session - call `PUT /api/sessions/{session}` with a new configuration
-(see the possible settings in [Create Session](#create-session) section)
+In order to update a session - call `PUT /api/sessions/{session}` with a **full** new configuration
+(see the possible `config` in [**Create Session**](#create-session) section)
 
 ```json
 {
