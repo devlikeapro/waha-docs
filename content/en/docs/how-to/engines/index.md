@@ -125,29 +125,8 @@ Read more about
 [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
 {{< include file="content/en/docs/how-to/sessions/features.md" >}}
 
-### Chatting
-| **Chatting**                                                | WEBJS |      NOWEB       | VENOM |
-|-------------------------------------------------------------|:-----:|:----------------:|:-----:|
-| `GET /api/checkNumberStatus`                                |  ✔️   |        ✔️        |  ✔️   |
-| `GET /api/sendContactVcard`                                 |       |        ✔️        |       |
-| `GET /api/sendText`                                         |  ✔️   |        ✔️        |  ✔️   |
-| `POST /api/sendText`                                        |  ✔️   |        ✔️        |  ✔️   |
-| `POST /api/reply`                                           |  ✔️   |        ✔️        |  ✔️   |
-| `PUT /api/{session}/chats/{chatId}/messages/{messageId}`    |  ✔️   |        ✔️        |       |
-| `DELETE /api/{session}/chats/{chatId}/messages/{messageId}` |  ✔️   |        ✔️        |       |
-| `POST /api/sendPoll`                                        |       |        ✔️        |       |
-| `POST /api/sendLocation`                                    |  ✔️   |        ✔️        |  ✔️   |
-| `POST /api/sendLinkPreview`                                 |       |        ✔️        |  ✔️   |
-| `POST /api/sendImage` ![](/images/versions/plus.png)        |  ✔️   |        ✔️        |  ✔️   |
-| `POST /api/sendFile` ![](/images/versions/plus.png)         |  ✔️   |        ✔️        |  ✔️   |
-| `POST /api/sendVoice` ![](/images/versions/plus.png)        |  ✔️   |        ✔️        |  ✔️   |
-| `POST /api/sendVideo` ![](/images/versions/plus.png)        |  ✔️   |        ✔️        |       |
-| `POST /api/sendSeen`                                        |  ✔️   |        ✔️        |  ✔️   |
-| `POST /api/startTyping`                                     |  ✔️   |        ✔️        |  ✔️   |
-| `POST /api/stopTyping`                                      |  ✔️   |        ✔️        |       |
-| `POST /api/reaction`                                        |  ✔️   |        ✔️        |       |
-| `POST /api/star`                                            |  ✔️   |        ✔️        |       |
-| `GET /api/messages`                                         |  ✔️   | ✔️[*1](#heading) |  ✔️   |
+### Messages
+{{< include file="content/en/docs/how-to/send-messages/features.md" >}}
 
 ### Status
 |                                                                   | WEBJS |      NOWEB       | VENOM |

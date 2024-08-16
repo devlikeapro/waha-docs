@@ -13,6 +13,9 @@ We consider that you've run docker container and authenticated the session with 
 
 If you haven't yet - please follow the steps from [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 
+## Features
+{{< include file="content/en/docs/how-to/send-messages/features.md" >}}
+
 ## Fields
 There are common fields that you can find in almost all requests:
 ```json
