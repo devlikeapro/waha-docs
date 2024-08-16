@@ -79,6 +79,35 @@ also mention it in `mentions` in format `2132132130@c.us`
 }
 ```
 
+## Send seen
+
+If you get a new message via [**🔄 Webhooks**]({{< relref "docs/how-to/webhooks#message" >}}) 
+and want to reply to that message, you need to first send that you've seen the message 
+(double green tick) - [⚠️ How to Avoid Blocking]({{< relref "docs/overview/how-to-avoid-blocking" >}})
+
+```
+POST /api/sendSeen
+```
+
+**Send seen for direct message**:
+```json
+{
+  "session": "default",
+  "chatId": "11111111111@c.us",
+  "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+}
+```
+
+**Send seen for Group Message** you need to provide `participant` field:
+```json
+{
+  "session": "default",
+  "chatId": "11111111111@g.us",
+  "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+  "participant": "33333333333@c.us"
+}
+```
+
 ## Reply on message
 To reply on a message - use `POST /api/reply` with example payload.
 ```json
