@@ -11,7 +11,7 @@ weight: 210
 
 We consider that you've run docker container and authenticated the session with QR code.
 
-If you haven't yet - please follow the steps from [**Quick Start →**]({{< relref "/docs/overview/quick-start" >}}).
+If you haven't yet - please follow the steps from [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 
 ## Fields
 There are common fields that you can find in almost all requests:
@@ -49,10 +49,9 @@ When sending media (images, voice, files) you can either use:
 - `file.data` field [with base64 encoded file](https://base64.guru/converter/encode/file)
 - `file.url` field with public available URL for that file
 
-## Endpoints
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
-### Send text
+## Send text
 To send text message - use `POST /api/sendText` with example payload.
 ```json
 {
@@ -62,7 +61,7 @@ To send text message - use `POST /api/sendText` with example payload.
 }
 ```
 
-#### Mention contact
+### Mention contact
 If you send a message in a group and want to mention a participant in the message -
 use `mentions` field for that in `POST /api/sendText` request.
 
@@ -80,7 +79,7 @@ also mention it in `mentions` in format `2132132130@c.us`
 }
 ```
 
-### Reply on message
+## Reply on message
 To reply on a message - use `POST /api/reply` with example payload.
 ```json
 {
@@ -91,11 +90,12 @@ To reply on a message - use `POST /api/reply` with example payload.
 }
 ```
 
-#### Reply files ![](/images/versions/plus.png)
-WAHA does not support reply with files (images, voice, etc.). If you're interested in it - please create an issue in GitHub.
+### Reply files ![](/images/versions/plus.png)
+WAHA does not support reply with files (images, voice, etc.). If you're interested in it - please comment "+1" on 
+[#503](https://github.com/devlikeapro/waha/issues/503)
 
 
-### Edit message
+## Edit message
 You can edit **text** messages or **"caption"** in media messages.
 
 ```
@@ -115,7 +115,7 @@ PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 }
 ```
 
-### Delete message
+## Delete message
 You can delete messages from the chat.
 
 ```
@@ -129,12 +129,12 @@ So if you want to delete `true_123@c.us_AAA` message in `123@c.us` chat you need
 DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
-### Send poll
+## Send poll
 We have a dedicated page [how to send polls and receive votes]({{< relref "/docs/how-to/polls" >}})!
 
 ![](poll-example.jpg)
 
-### Add a reaction
+## Add a reaction
 Use `PUT /api/reaction` method to set reaction to a message.
 
 {{< alert icon="👉" text="Reaction API uses PUT, not POST request! Please make sure you send right request." />}}
@@ -156,7 +156,7 @@ To remove reaction from a message - send empty string in the reaction request.
 }
 ```
 
-### Star and unstar message
+## Star and unstar message
 Use `PUT /api/star` method to star or unstar a message.
 
 {{< alert icon="👉" text="Star API uses PUT, not POST request! Please make sure you send right request." />}}
@@ -181,7 +181,7 @@ Use `PUT /api/star` method to star or unstar a message.
 }
 ```
 
-### Send contact (vcard)
+## Send contact (vcard)
 Use `POST /api/sendContactVcard` to send contact (vcard).
 
 You can use fields this way:
@@ -235,14 +235,14 @@ Or even combine it:
 
 
 
-### Send image ![](/images/versions/plus.png)
+## Send image ![](/images/versions/plus.png)
 Use `POST /api/sendImage` to send images.
 
 You can send images in two ways:
 1. Provide a URL for the image.
 2. Encode the whole file content into base64 and send it in the request body.
 
-#### URL
+### URL
 ```json
 {
   "session": "default",
@@ -256,7 +256,7 @@ You can send images in two ways:
 }
 ```
 
-#### Base64
+### Base64
 ```json
 {
   "session": "default",
@@ -270,7 +270,7 @@ You can send images in two ways:
 }
 ```
 
-### Send voice ![](/images/versions/plus.png)
+## Send voice ![](/images/versions/plus.png)
 Use `POST /api/sendVoice` to send voice messages.
 
 You can send voice messages in two ways:
@@ -283,7 +283,7 @@ You can send voice messages in two ways:
 ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 ```
 
-#### URL
+### URL
 ```json
 {
   "session": "default",
@@ -296,7 +296,7 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 }
 ```
 
-#### Base64
+### Base64
 ```json
 {
   "chatId": "11111111111@c.us",
@@ -309,7 +309,7 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 }
 ```
 
-### Send video ![](/images/versions/plus.png)
+## Send video ![](/images/versions/plus.png)
 Use `POST /api/sendVideo` to send a message with a video attached.
 
 ---
@@ -332,7 +332,7 @@ You can send voice messages in two ways:
 1. Provide a URL for the file and the API will download it and send it in the request body.
 2. Provide the file as a base64 string in the request body.
 
-#### URL
+### URL
 ```json
 {
   "session": "default",
@@ -346,7 +346,7 @@ You can send voice messages in two ways:
 }
 ```
 
-#### Base64
+### Base64
 ```json
 {
   "chatId": "11111111111@c.us",
@@ -360,14 +360,14 @@ You can send voice messages in two ways:
 }
 ```
 
-### Send file ![](/images/versions/plus.png)
+## Send file ![](/images/versions/plus.png)
 Use `POST /api/sendFile` to send a file as a document.
 
 You can send files in two ways:
 1. Provide a URL for the file.
 2. Encode the whole file content into base64 and send it in the request body.
 
-#### URL
+### URL
 ```json
 {
   "session": "default",
@@ -381,7 +381,7 @@ You can send files in two ways:
 }
 ```
 
-#### Base64
+### Base64
 ```json
 {
   "session": "default",
@@ -396,12 +396,12 @@ You can send files in two ways:
 ```
 
 
-### Send Status (aka stories)
+## Send Status (aka stories)
 You can send statuses (aka stories)!
 
 Check out [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) page.
 
-### Send messages to Channels
+## Send messages to Channels
 You can send messages to channels!
 
 Check out [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) page.
