@@ -14,7 +14,7 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 
 Endpoints for groups. Please look at swagger for details.
 
-- `{session}` - use the session name for Whatsapp instance that you created with `POST /api/session/start` endpoint
+- `{session}` - use the session name for Whatsapp instance that you created with `POST /api/session` endpoint
 - `{groupId}` - group id in format `123123123123@g.us`. You can get the id in a few ways:
   - By [handling incoming message webhook]({{< relref "/docs/how-to/receive-messages" >}}).
   - By getting all groups (see below).

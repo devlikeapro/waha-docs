@@ -18,7 +18,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 ## Endpoints
 Parameters in path that you can find in below endpoints:
-- `{session}` - use the session name for Whatsapp instance that you created with `POST /api/session/start` endpoint
+- `{session}` - use the session name for Whatsapp instance that you created with `POST /api/sessions` endpoint
 - `{chatId}` - chat id in format `123123123123@[c.us|g.us]`, `c.us` for direct chats and `g.us` for groups.
 
 ### Get all chats

@@ -44,9 +44,8 @@ Options you can use to control the way how WAHA output the logs:
 - `WHATSAPP_RESTART_ALL_SESSIONS=True`: Set this variable to `True` to start all **STOPPED** sessions after container
   restarts. By default, this variable is set to `False`.
   - Please note that this will start all **STOPPED** sessions, not just the sessions that were working before the restart. You can maintain the session list by
-    using `POST /api/session/stop` with the `logout: True` parameter or by calling `POST /api/session/logout` to remove
-    **STOPPED** sessions. You can see all sessions, including **STOPPED** sessions, in the `GET /api/sessions/all=True`
-    response.
+    using `DELETE /api/sessions/{name}/`. You can see all sessions, including **STOPPED** sessions, 
+    in the `GET /api/sessions/all=True` response.
 - `WAHA_PRINT_QR=True` - set this variable to `False` to disable printing QR codes to the console. By default, `True`.
 - `WHATSAPP_START_SESSION=session1,session2`: This variable can be used to start sessions with the specified names right
   after launching the API. Separate session names with a comma.
