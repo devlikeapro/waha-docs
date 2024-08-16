@@ -21,7 +21,7 @@ The receiving application can then take action based on the information received
 
 ## Setup
 ### Session webhooks
-You can define webhooks configuration per session when you start it with `POST /api/sessions/start` request data.
+You can define webhooks configuration per session when you start it with `POST /api/sessions/` request data.
 
 Here's a simple example:
 ```json
@@ -571,7 +571,7 @@ It's an internal engine's state, not **session** `status`.
 
 You can authenticate webhook sender by using [HMAC Authentication](https://www.okta.com/identity-101/hmac/).
 
-1. Define you secret key in `config.hmac.key` field when you start session with `POST /api/sessions/start`:
+1. Define you secret key in `config.hmac.key` field when you start session with `POST /api/sessions/`:
 
 ```json
 {
@@ -616,7 +616,7 @@ sha512
 **WAHA** retries to reach your webhook URL **15 times** with **2 seconds delay** between attempts by default in
 [Plus Version →]({{< relref "plus-version" >}})
 
-You can configure those parameters by settings `config.retries` structure when `POST /api/sessions/start`:
+You can configure those parameters by settings `config.retries` structure when `POST /api/sessions/`:
 
 ```json
 {

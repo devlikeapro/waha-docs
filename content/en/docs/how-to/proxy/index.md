@@ -51,7 +51,7 @@ To use a proxy, you can set the following environment variables:
 Read more about it on [**Configuration page** ->]({{< relref "/docs/how-to/config#proxy" >}}).
 
 ### Session Proxy Configuration
-You can configure proxy for a session by setting `config.proxy` fields when you `POST /api/sessions/start`:
+You can configure proxy for a session by setting `config.proxy` fields when you `POST /api/sessions/`:
 - `server` - proxy server address, without `http://` or `https://` prefixes
 - `username` and `password` - set this if the proxy requires authentication
 

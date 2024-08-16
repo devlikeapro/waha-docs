@@ -105,18 +105,19 @@ Start a session using [WAHA Dashboard]({{< relref "/docs/how-to/waha-dashboard" 
 
 ### Option 2 - Start a session using Swagger
 
-Or you can use swagger or `curl` to send `POST /api/sessions/start` request with payload
+Or you can use swagger or `curl` to send `POST /api/sessions/` request with payload
 
 ```json
 {
-  "name": "default",
-  "config": {
-    "proxy": {
-      "server": "premium-residential.geonode.com:10000",
-      "username": "geonode_1111111111",
-      "password": "11111111-1111-1111-1111-111111111111"
-    }
-  }
+   "name": "default",
+   "start": true,
+   "config": {
+      "proxy": {
+         "server": "premium-residential.geonode.com:10000",
+         "username": "geonode_1111111111",
+         "password": "11111111-1111-1111-1111-111111111111"
+      }
+   }
 }
 ```
 

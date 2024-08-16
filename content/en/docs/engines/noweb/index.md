@@ -40,8 +40,8 @@ These endpoints doesn't work by default in **NOWEB** engine.
 Here's how you can enable the store feature:
 
 ### Enable  store
-If you want to get the **contacts, chats or messages** you need to enable it explicitly by settings additional fields in `config` 
-at [POST /api/sessions/start]({{< relref "/docs/how-to/sessions#start" >}}) body.
+If you want to get the **contacts, chats or messages** you need to enable it explicitly by settings additional fields 
+in `config` at [POST /api/sessions/]({{< relref "/docs/how-to/sessions#create-session" >}}) body.
 
 👉 Do not change the values after you scanned QR, it can lead to the loss of the chat history.
 

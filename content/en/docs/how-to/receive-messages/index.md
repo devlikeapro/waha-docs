@@ -14,7 +14,7 @@ If you haven't yet - please follow the steps from [**Quick Start →**]({{< relr
 
 You must use [Webhooks]({{< relref "/docs/how-to/webhooks" >}}) to receive messages from WhatsApp to your application.
 
-Start a new session with configured `message` event in webhooks - call `POST /api/sessions/start` with the payload:
+Start a new session with configured `message` event in webhooks - call `POST /api/sessions/` with the payload:
 ```json
 {
   "name": "default",
