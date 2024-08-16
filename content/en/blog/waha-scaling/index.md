@@ -83,7 +83,7 @@ Here's key points how to set up **Horizontal Scaling** using **Sharding** techni
 2. You save the list of `url`, `api-key`, `capacity` to **Your Application Database** - 
 [**Entities Schema**](#entities-schema)
 3. When a new user asks to run a new session - you follow [**Where to run a new session?**](#where-to-run-a-new-session)
-   logic to find a suitable WAHA instance and save `user-session-server` association to **Your Application Database**.
+   logic to find a suitable WAHA instance and save `user <-> session <-> server` association to **Your Application Database**.
 4. When you need to send a request to WhatsApp API - you follow
    [**Where to find the session?**](#where-to-find-the-session) logic to find the WAHA instance to send the request.
 5. All webhooks come to **Your Application** directly from the WAHA instance, so you don't need to worry about it.
@@ -154,7 +154,7 @@ the `url` and `api_key`.
 
 **WAHA** is not stateless application, it has **a runtime state** (not technically a state as in database, but still a
 state) - **the connection to WhatsApp** (either browser or websocket connection) which can not be moved automatically, 
-so all HTTP request must be **"sticky"**, meaning it **MUST** go only to the certain "worker" - **one with "running" session**.
+so all HTTP requests MUST be **"sticky"**, meaning it **MUST** go only to the certain "worker" - **one with "running" session**.
 
 This is why we can simply run more containers using Kubernetes Deployment/AWS ECS 
 (tho you can use [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) for k8s)
@@ -167,7 +167,7 @@ and few more reasons:
 - **No single point of failure** - if one WAHA instance goes down - the others are still working.
 - **Flexible** - you can configure HOW you distribute sessions across different servers based on your business logic.
 - **Frees our hands** - we can focus on building the best WhatsApp API and adding new features,
-  and you can focus on building the best application.
+  and you can focus on building the best application. 😊
 
 ### Single Dashboard - Multiple Servers
 If you're running multiple servers
@@ -181,7 +181,7 @@ After that you can connect all server to the single dashboard:
 
 ## Horizontal Scaling - Auto-Scaling
 
-🚧🔨⏳ Auto-Scaling **IS NOT AVAILABLE** our of the box in WAHA yet! ⏳🔨🚧
+🚧🔨⏳ Auto-Scaling **IS NOT AVAILABLE** out-of-the-box in WAHA yet! ⏳🔨🚧
 
 We're working on it, but it's not ready yet, so we're just giving you a future vision how it will work.
 
@@ -196,5 +196,5 @@ Kindly [**support the project**]({{< relref "/pricing" >}}) on **PRO** tier if y
 use the feature in the future! 🙏
 
 For now, [**Vertical Scaling**](#vertical-scaling) and 
-[**Horizontal Scaling - Sharding **](#horizontal-scaling---sharding)
+[**Horizontal Scaling - Sharding**](#horizontal-scaling---sharding)
 are the ways to go.
