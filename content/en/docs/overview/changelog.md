@@ -47,7 +47,7 @@ Release policy:
 - Add [**🔄 Webhooks - Custom Headers**]({{< relref "/docs/how-to/webhooks#custom-headers" >}}) on [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
 - Add `GET /api/server/version` and `/api/server/environment` endpoints
   - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
-- Validate API request on `/api/session/*` endpoints - [#470](https://github.com/devlikeapro/waha/issues/470)
+- Validate API request on `/api/sessions/*` endpoints - [#470](https://github.com/devlikeapro/waha/issues/470)
   - 📢 **Requires attention** - make sure you're sending the right requests
 - Add `POST /api/sendSeen` documentation and correct swagger spec [#485](https://github.com/devlikeapro/waha/issues/485)
 
@@ -383,7 +383,7 @@ Add security settings for who can send messages `PUT /api/{session}/groups/{grou
 
 ----
 
-Add `config.debug` field to `POST /api/session/start` to enable debug and verbose logs for the session.
+Add `config.debug` field to `POST /api/sessions/start` to enable debug and verbose logs for the session.
 
 ----
 
@@ -485,13 +485,13 @@ August 2023
 ## 2023.7
 July 2023
 - Now session can have their own [🔄 Webhooks]({{< relref "/docs/how-to/webhooks" >}}) -
-   you can define webhook configuration when you start a session with `POST /api/session/start`!
+   you can define webhook configuration when you start a session with `POST /api/sessions/start`!
   - Add HMAC authentication for webhooks
   - Configure retries
   - Add you custom headers
 - Added [proxy configuration](https://waha.devlike.pro/docs/how-to/config/#proxy) with supporting proxy authentication.
   Thanks **puntolino** for the contribution!
-  You can control proxy's settings per session with `POST /api/session/start` or globally with environment variables.
+  You can control proxy's settings per session with `POST /api/sessions/start` or globally with environment variables.
 - Added [presence information](https://waha.devlike.pro/docs/how-to/presence) - now you can get online status for
   a contact by calling endpoints or receiving a webhook event!
 - Now you can mention contact in groups by settings `mentions` field in `POST /api/sendText`
@@ -506,7 +506,7 @@ Improvements on session management, restarting sessions and more:
   container restarts. By default, this variable is set to `False`.
   - Please note that this will start all **STOPPED** sessions, not just the sessions that were working before the
     restart. You can maintain the session list by
-    using `POST /api/session/stop` with the `logout: True` parameter or by calling `POST /api/session/logout` to remove
+    using `POST /api/sessions/stop` with the `logout: True` parameter or by calling `POST /api/sessions/logout` to remove
     **STOPPED** sessions. You can see all sessions, including **STOPPED** sessions, in the `GET /api/sessions/all=True`
     response.
 - `WHATSAPP_START_SESSION` now support more than one session! Separate session names by command, and it'll start them
@@ -575,7 +575,7 @@ December 2023
 
 **Requests** ![](/images/versions/core.png)
 
-- For all `/api/session/` requests use `name` field instead of `sessionName`.
+- For all `/api/sessions/` requests use `name` field instead of `sessionName`.
 - For all "chatting" requests use `session` field instead of `sessionName`.
 
 **Sessions** ![](/images/versions/plus.png)
