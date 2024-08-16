@@ -49,6 +49,7 @@ Release policy:
   - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 - Validate API request on `/api/session/*` endpoints - [#470](https://github.com/devlikeapro/waha/issues/470)
   - 📢 **Requires attention** - make sure you're sending the right requests
+- Add `POST /api/sendSeen` documentation and correct swagger spec [#485](https://github.com/devlikeapro/waha/issues/485)
 
 ## 2024.8
 `2024.8.5`
