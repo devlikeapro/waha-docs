@@ -77,9 +77,9 @@ Right now the only way to do it is to run multiple WAHA instances and distribute
 
 Here's key points how to set up **Horizontal Scaling** using **Sharding** technique:
 
-1. You run **multiple WAHA** instances listening different **hostnames
-   ** (`http://waha1.example.com`, `http://waha2.example.com`, etc) or **ports
-   ** (`http://waha.example.com:3001`, `http://waha.example.com:3002`, etc).
+1. You run **multiple WAHA** instances listening different **hostnames** 
+(`http://waha1.example.com`, `http://waha2.example.com`, etc) or **ports**
+(`http://waha.example.com:3001`, `http://waha.example.com:3002`, etc).
 2. You save the list of `url`, `api-key`, `capacity` to **Your Application Database** - 
 [**Entities Schema**](#entities-schema)
 3. When a new user asks to run a new session - you follow [**Where to run a new session?**](#where-to-run-a-new-session)
