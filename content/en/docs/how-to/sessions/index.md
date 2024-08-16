@@ -25,9 +25,8 @@ messages
 [**QR code**](#get-qr) or [**pairing code**](#get-pairing-code).
 
 Here's Session Lifecycle State Diagram (click to open full size):
-<a href="/images/waha/waha-session-lifecycle.png" target="_blank" style="cursor: pointer;">
-    <img src="/images/waha/waha-session-lifecycle.png" alt="WAHA Session Lifecycle">
-</a>
+
+{{< img src="/images/waha/waha-session-lifecycle.png" >}}
 
 
 ### Session Status
