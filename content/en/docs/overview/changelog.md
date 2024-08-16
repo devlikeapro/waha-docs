@@ -43,6 +43,7 @@ Release policy:
     - [List Sessions]({{< relref "/docs/how-to/sessions#list-sessions" >}}) and [Get Session]({{< relref "/docs/how-to/sessions#get-session" >}})  responses
     - [**🔄 Webhooks**]({{< relref "webhooks#metadata" >}}) events
     - [**📊 Dashboard**]({{< relref "waha-dashboard" >}}) for view, and search sessions by metadata
+- Add **Bulk Operations** (start, restart, etc.) for [**📊 Dashboard**]({{< relref "waha-dashboard" >}}) - [#438](https://github.com/devlikeapro/waha/issues/438)
 - Add environment variables on [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}) - [#319](https://github.com/devlikeapro/waha/issues/319)
 - Add [**🔄 Webhooks - Custom Headers**]({{< relref "/docs/how-to/webhooks#custom-headers" >}}) on [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
 - Add `GET /api/server/version` and `/api/server/environment` endpoints
