@@ -35,8 +35,9 @@ Release policy:
 
 ## 2024.8
 `2024.8.4`
-- fix get `GET /api/{session}/chats?limit=1` "Cannot read properties of undefined (reading 'getChats')" - 
+- **WEBJS** - fix get `GET /api/{session}/chats?limit=1` "Cannot read properties of undefined (reading 'getChats')" - 
 [#486](https://github.com/devlikeapro/waha/issues/486)
+- **NOWEB** - fix sticker download - [#504](https://github.com/devlikeapro/waha/issues/504)
 
 `2024.8.3`
 - fix restart container with **NOWEB** engine [#483](https://github.com/devlikeapro/waha/issues/483)
