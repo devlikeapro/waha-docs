@@ -34,6 +34,10 @@ Release policy:
 ----
 
 ## 2024.8
+`2024.8.4`
+- fix get `GET /api/{session}/chats?limit=1` "Cannot read properties of undefined (reading 'getChats')" - 
+[#486](https://github.com/devlikeapro/waha/issues/486)
+
 `2024.8.3`
 - fix restart container with **NOWEB** engine [#483](https://github.com/devlikeapro/waha/issues/483)
 - fix " this.logger.info is not a function" in swagger plus [#496](https://github.com/devlikeapro/waha/issues/496)
