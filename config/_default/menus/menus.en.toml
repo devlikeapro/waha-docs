@@ -131,12 +131,12 @@
 [[main]]
   name = "🌍 Language"
   identifier = "language"
-  weight = 90
+  weight = 99
 
 [[main]]
   name = "More"
   identifier = "more"
-  weight = 99
+  weight = 90
 
 [[main]]
   name = "WhatsApp Channels API"
