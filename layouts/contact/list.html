@@ -1,0 +1,172 @@
+{{ define "main" }}
+<script>
+    AOS.init();
+</script>
+
+{{ $content := readFile "/layouts/include/bubbles.html" | safeHTML }}
+{{ $content }}
+
+<section class='section section-md pb-0'>
+    <div class='container'>
+        <div class='row justify-content-center'>
+            <div class='col-11 col-lg-9 text-center' data-aos="fade-up">
+                <h1 class='display-5 fw-normal mt-1'>{{ .Summary }}</h1>
+            </div>
+            <div class='d-flex justify-content-center mb-4' data-aos="fade-up">
+                <img src='/images/logo.svg' title='WhatsApp API' alt='logo'
+                     style='border-radius: 50%; width: 10rem'/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class='section section-md pb-0'>
+    <div class='row justify-content-center text-center'>
+        <!-- GitHub -->
+        <div
+                class='col-12 col-lg-4 pros-card-wide h-full d-flex flex-column justify-content-between'
+                data-aos="fade-up" data-aos-delay="50"
+        >
+            <div>
+                <div>
+                    <h2
+                            class='color-accent mt-0 display-6'
+                            style="line-height: 1.5"
+                    >
+                        🐙<br/>GitHub
+                    </h2>
+                </div>
+                <div class='text-start'>
+                    <p>
+                        Feel free to contact us on
+                        <a href="https://github.com/devlikeapro/waha" target="_blank">
+                            <b>GitHub</b>
+                        </a>, we're always open to new ideas and suggestions!
+                    </p>
+                    <ul>
+                        <li>
+                            <a
+                                    href="https://github.com/devlikeapro/waha/discussions"
+                                    target="_blank"
+                            >
+                                <b>GitHub Discussions</b>
+                            </a> - if you have any questions, ideas, or suggestions.
+                        </li>
+                        <li>
+                            <a
+                                    href="https://github.com/devlikeapro/waha/issues"
+                                    target="_blank"
+                            >
+                                <b>GitHub Issues</b>
+                            </a> - if you have found a bug or want to request a feature.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class='mt-4 pt-2'>
+                <a class='btn btn-outline-primary btn-lg px-4 mb-2'
+                   href='https://github.com/devlikeapro/waha'
+                   target="_blank"
+                   role='button'>GitHub →</a>
+                <div class='row justify-content-center'>
+                    <div class='col-11 col-lg-9 text-center text-muted small' style='min-width: 25rem'>
+                        <p>Monday - Friday, 9:00 AM - 6:00 PM (UTC+6)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div
+                class='col-12 col-lg-4 pros-card-wide h-full d-flex flex-column justify-content-between'
+                data-aos="fade-up" data-aos-delay="150"
+        >
+            <div>
+                <div>
+                    <h2
+                            class='color-accent mt-0 display-6'
+                            style="line-height: 1.5"
+                    >
+                        📧<br/>Email
+                    </h2>
+                </div>
+                <div class='text-start'>
+                    <p>
+                        If you have any questions, <b>development requests for Your project</b> or WAHA, business
+                        inquiries,
+                        please feel free to contact us via email:
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="mailto:waha@devlike.pro" target="_blank">
+                                <b>waha@devlike.pro</b>
+                            </a> - WAHA and business inquiries.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class='mt-4 pt-2'>
+                <a class='btn btn-outline-primary btn-lg px-4 mb-2'
+                   href='mailto:waha@devlike.pr'
+                   target="_blank"
+                   role='button'>Email Us →</a>
+                <div class='row justify-content-center'>
+                    <div class='col-11 col-lg-9 text-center text-muted small' style='min-width: 25rem'>
+                        <p>Monday - Friday, 9:00 AM - 6:00 PM (UTC+6)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discord -->
+        <div
+                class='col-12 col-lg-4 pros-card-wide pros-card--highlighted h-full d-flex flex-column justify-content-between'
+                data-aos="fade-up" data-aos-delay="250"
+        >
+            <div>
+                <div>
+                    <h2 class='color-accent mt-0 display-6'
+                        style="line-height: 1.5"
+                    >
+                        💬<br>Discord PRO
+                    </h2>
+                </div>
+                <div class='text-start'>
+                    <p>
+                        For
+                        <a href="/pricing/#tiers" target="_blank">
+                            <b>WAHA PRO</b>
+                        </a>
+                        we offer a dedicated Discord server for support and feature requests.
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="/pricing/#tiers" target="_blank">
+                                <b>WAHA PRO</b>
+                            </a> - about the PRO features and pricing.
+                        </li>
+                        <li>
+                            <a href="https://portal.devlike.pro" target="_blank">
+                                <b>WAHA Portal</b>
+                            </a> - login to your account and access the Discord server.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class='mt-4 pt-2'>
+                <a
+                        class='btn btn-outline-dark btn-lg mb-2'
+                        href='/pricing/#donations'
+                        target="_blank"
+                        role='button'>Become PRO →</a>
+                <div class='row justify-content-center'>
+                    <div class='col-11 col-lg-9 text-center text-muted small' style='min-width: 25rem'>
+                        <p>ASAP (UTC+6)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}
