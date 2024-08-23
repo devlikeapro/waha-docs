@@ -208,6 +208,12 @@ Read more about
 
 {{< include file="content/en/docs/how-to/calls/features.md" >}}
 
+### Storages
+Read more about
+[**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}})
+
+{{< include file="content/en/docs/how-to/storages/features.md" >}}
+
 ### Observability
 
 Read more about 

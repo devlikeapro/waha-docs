@@ -122,6 +122,7 @@ Read more about security settings for Swagger and API on [**Security page** ->](
 ## Files
 <b>Files configuration is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
 
+### Files - Local
 The following environment variables can be used to configure the file storage options for the WAHA:
 
 - `WHATSAPP_FILES_MIMETYPES`: This variable can be used to download only specific mimetypes from messages.
@@ -154,6 +155,22 @@ you'll get a webhook event with `hasMedia: True` field, but with no `media.url`.
   }
 }
 ```
+
+👉 Learn more on [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}) page.
+
+### Files - S3
+- `WAHA_MEDIA_STORAGE=S3` - enable the S3 storage
+- `WAHA_S3_REGION=eu-west-1` - the region of the S3 bucket
+- `WAHA_S3_BUCKET=waha` - the name of the S3 bucket
+- `WAHA_S3_ACCESS_KEY_ID=minioadmin` - the access key of the S3 bucket
+- `WAHA_S3_SECRET_ACCESS_KEY=minioadmin` - the secret access key of the S3 bucket
+- `WAHA_S3_ENDPOINT=http://127.0.0.1:9000` - the endpoint of the S3 bucket (not required for AWS S3)
+- `WAHA_S3_FORCE_PATH_STYLE=True` - force path style for the S3 bucket (not required for AWS S3)
+- `WAHA_S3_PROXY_FILES` - proxy media files through WAHA (`False` by default)
+  - `WAHA_S3_PROXY_FILES=False` - generate pre-signed URLs for media files and send them to the client in `media.url`
+  - `WAHA_S3_PROXY_FILES=True` - WAHA will proxy media files through itself in `media.url`
+  
+👉 Learn more on [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}) page.
 
 ## Health Check
 <b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
