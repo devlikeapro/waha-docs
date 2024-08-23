@@ -74,7 +74,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 Release policy:
 YYYY.M.1 - new features. We release new features every month as first release (not always on the first day) if you see a new 2024.8.1 version - there are new features! YYYY.M.BUILD - bug fixes. We release bug fixes during the month if you see a new 2024.8.2 and version - there are bug fixes! 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-2024.8 #2024.8.4
+2024.8 #2024.8.5
+NOWEB - ⚠️ urgent fix #511 2024.8.4
 WEBJS - fix get GET /api/{session}/chats?limit=1 \u0026ldquo;Cannot read properties of undefined (reading \u0026lsquo;getChats\u0026rsquo;)\u0026rdquo; - #486 NOWEB - fix sticker download - #504 2024.8.3
 fix restart container with NOWEB engine #483 fix \u0026quot; this.logger.info is not a function\u0026quot; in swagger plus #496 2024.8.2
 fix flaky WEBJS engine issues (Failed to add page binding with name ...) WEBJS + MongoDB - switch to native zip and unzip binaries #465 If you\u0026rsquo;re not using official docker image install zip and unzip AND set WAHA_ZIPPER=ZIPUNZIP env variable. Add WAHA_HTTP_LOG_LEVEL=info variable to control request completed log level - #466 - 🔍 Observability 2024.8.1 - Release Notes
