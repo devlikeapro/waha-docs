@@ -34,9 +34,11 @@ Release policy:
 ----
 ## 2024.9
 `2024.9.1`
+- Add support for **S3** to store media file - [#353](https://github.com/devlikeapro/waha/issues/353)
+  - Read more [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}})
 - Add more granular API for [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}}) 
   - Dedicated `create, update, delete, start, stop, logout, restart` actions!
-  - The old API is working the same way as before for backward compatibility.
+  - The old API is working the same way as before for backward compatibility, but marked as **Deprecated**
   - Related issues: [#435](https://github.com/devlikeapro/waha/issues/435), [#480](https://github.com/devlikeapro/waha/issues/480)
 - Add ability to add your [**Metadata**]({{< relref "/docs/how-to/sessions#metadata" >}}) to a session [#443](https://github.com/devlikeapro/waha/issues/443). 
   - `metadata` field available in:
