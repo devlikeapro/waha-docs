@@ -676,7 +676,7 @@ you can use set of these environment variables to start sessions for you:
 If you want to save server's CPU and Memory - run multiple sessions inside one docker container!
 [Plus version]({{< relref "plus-version" >}}) supports multiple sessions in one container.
 
-## DEPRECATED API
+## DEPRECATED
 
 Before new granular API we have a simple API to control the session.
 
