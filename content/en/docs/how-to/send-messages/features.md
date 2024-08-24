@@ -2,7 +2,6 @@
 |-------------------------------------------------------------|:------------------------------------------------------:|:-----:|
 | `POST /api/sendText`                                        |                           ✔️                           |  ✔️   |
 | `POST /api/sendSeen`                                        |                           ✔️                           |  ✔️   |
-| `POST /api/reply`                                           |                           ✔️                           |  ✔️   |
 | `PUT /api/{session}/chats/{chatId}/messages/{messageId}`    |                           ✔️                           |  ✔️   |
 | `DELETE /api/{session}/chats/{chatId}/messages/{messageId}` |                           ✔️                           |  ✔️   |
 | `POST /api/sendImage` ![](/images/versions/plus.png)        |                           ✔️                           |  ✔️   |

@@ -54,6 +54,26 @@ When sending media (images, voice, files) you can either use:
 
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
+### reply_to
+You can add `reply_to` field in order to reply on certain message. 
+
+```json
+{
+  "chatId": "11111111111@c.us",
+  ...
+  "reply_to": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+}
+```
+
+`reply_to` is available in all messages:
+- [Send text](#send-text)
+- [Send image](#send-image-)
+- [Send file](#send-file-)
+- [Send voice](#send-voice-)
+- [Send video](#send-video-)
+- [Send poll](#send-poll)
+- [Send location](#send-location)
+
 ## Send text
 To send text message - use `POST /api/sendText` with example payload.
 ```json
@@ -61,6 +81,17 @@ To send text message - use `POST /api/sendText` with example payload.
   "session": "default",
   "chatId": "12132132130@c.us",
   "text": "Hi there!"
+}
+```
+
+### Reply on message
+To reply on a message - add `reply_to` field:
+```json
+{
+  "session": "default",
+  "chatId": "11111111111@c.us",
+  "reply_to": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+  "text": "Reply text"
 }
 ```
 
@@ -111,20 +142,6 @@ POST /api/sendSeen
 }
 ```
 
-## Reply on message
-To reply on a message - use `POST /api/reply` with example payload.
-```json
-{
-  "session": "default",
-  "chatId": "11111111111@c.us",
-  "reply_to": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
-  "text": "Reply text"
-}
-```
-
-### Reply files ![](/images/versions/plus.png)
-WAHA does not support reply with files (images, voice, etc.). If you're interested in it - please comment "+1" on 
-[#503](https://github.com/devlikeapro/waha/issues/503)
 
 
 ## Edit message
@@ -162,9 +179,30 @@ DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
 ## Send poll
-We have a dedicated page [how to send polls and receive votes]({{< relref "/docs/how-to/polls" >}})!
+We have a dedicated page [📶 Polls]({{< relref "/docs/how-to/polls" >}})!
 
 ![](poll-example.jpg)
+
+```bash
+POST /api/sendPoll
+```
+
+The request body is pretty simple:
+```json
+{
+  "session": "default",
+  "chatId": "123123123@c.us",
+  "poll": {
+    "name": "How are you?",
+    "options": [
+      "Awesome!",
+      "Good!",
+      "Not bad!"
+    ],
+    "multipleAnswers": false
+  }
+}
+```
 
 ## Add a reaction
 Use `PUT /api/reaction` method to set reaction to a message.
@@ -427,6 +465,20 @@ You can send files in two ways:
 }
 ```
 
+## Send location
+```
+POST /api/sendLocation
+```
+
+```json
+{
+  "chatId": "11111111111@c.us",
+  "latitude": 38.8937255,
+  "longitude": -77.0969763,
+  "title": "Our office",
+  "session": "default"
+}
+```
 
 ## Send Status (aka stories)
 You can send statuses (aka stories)!
