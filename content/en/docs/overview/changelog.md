@@ -57,6 +57,8 @@ Release policy:
 - Add `POST /api/server/stop` endpoint to **restart** server - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 - Add `WHATSAPP_API_SCHEMA=http` environment variable so you can get the right `media.url` link
 - Add `media.error` to messages with media and error - [#510](https://github.com/devlikeapro/waha/issues/510)
+- Add `reply_to` field for text and media (image, files, etc) messages - [#503](https://github.com/devlikeapro/waha/issues/503)
+  - [**📤 Send messages** - reply_to]({{<relref "/docs/how-to/send-messages#reply_to" >}})
 - Update **NOWEB** engine to the latest upstream changes
 
 ## 2024.8
