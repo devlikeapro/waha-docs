@@ -7,6 +7,6 @@ draft: false
 images: []
 ---
 
-Get In Touch With Team!
+Get In Touch With The Team!
 
 
