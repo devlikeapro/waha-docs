@@ -177,7 +177,8 @@ GET /api/default/chats/123%40newsletter/messages?downloadMedia=true&limit=100
     "media": {
       "mimetype": "image/jpeg",
       "filename": null,
-      "url": "http://localhost:3000/api/files/1111111111111111111111.jpeg"
+      "url": "http://localhost:3000/api/files/1111111111111111111111.jpeg",
+      "error": null // if there was an error during file download
     },
     "mediaUrl": "http://localhost:3000/api/files/1111111111111111111111.jpeg",
     "ack": 0,

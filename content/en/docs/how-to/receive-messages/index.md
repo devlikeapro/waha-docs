@@ -220,7 +220,8 @@ For example, you can get the webhook like this with `media` value (we've skipped
     "media": {
       "url": "http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg",
       "mimetype": "image/jpeg",
-      "filename": null
+      "filename": null,
+      "error": null // if there was an error during file download
     }
   }
 }
@@ -239,7 +240,8 @@ For documents (file attachments) there's also `filename` field with the original
     "media": {
       "url": "http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.pdf",
       "filename": "some-file.pdf",
-      "mimetype": "application/pdf"
+      "mimetype": "application/pdf",
+      "error": null // if there was an error during file download
     }
   }
 }

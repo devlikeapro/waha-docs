@@ -56,6 +56,7 @@ Release policy:
 - Add `GET /api/server/status` endpoint to **get server uptime** - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 - Add `POST /api/server/stop` endpoint to **restart** server - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 - Add `WHATSAPP_API_SCHEMA=http` environment variable so you can get the right `media.url` link
+- Add `media.error` to messages with media and error - [#510](https://github.com/devlikeapro/waha/issues/510)
 - Update **NOWEB** engine to the latest upstream changes
 
 ## 2024.8

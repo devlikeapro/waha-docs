@@ -198,7 +198,8 @@ After you enabled S3 here's example for [**message**]({{< relref "/docs/how-to/w
         "s3": {
             "Bucket": "bucket-name",
             "Key": "/default/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg"
-        }
+        },
+        "error": null // if there was an error during file download
     }
     ...
   }

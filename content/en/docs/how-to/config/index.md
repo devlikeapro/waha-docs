@@ -152,7 +152,8 @@ you'll get a webhook event with `hasMedia: True` field, but with no `media.url`.
     "media": {
       "url": null,
       "mimetype": "video/mp4",
-      "filename": null
+      "filename": null,
+      "error": null // if there was an error during file download
     }
   }
 }
