@@ -245,7 +245,10 @@ For documents (file attachments) there's also `filename` field with the original
 }
 ```
 
-To configure the url you can use environment variables `WHATSAPP_API_HOSTNAME` and `WHATSAPP_API_PORT`.
+To configure the `media.url` you can use environment variables: 
+- `WHATSAPP_API_SCHEMA=https`, 
+- `WHATSAPP_API_HOSTNAME=waha.example.com` 
+- `WHATSAPP_API_PORT=3000`
 
 By default, WAHA download all files that the account receive.
 If you want to limit files lifetime, specify file types for download or change directory for files -

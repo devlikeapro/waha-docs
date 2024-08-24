@@ -1,7 +1,7 @@
 ---
 title: "How to support WAHA using Crypto"
 description: "⚡50% OFF Yearly Crypto Offer!⚡"
-excerpt: "Step by step guide how to support WAHA using Crypto and get WAHA Plus or PRO versions."
+excerpt: "Step-by-step guide how to support WAHA using Crypto and get WAHA Plus or PRO versions."
 date: 2024-07-01T08:48:45+00:00
 draft: false
 weight: 50

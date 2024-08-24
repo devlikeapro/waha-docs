@@ -26,6 +26,9 @@ The following environment variables can be used to configure the WAHA.
 ## Common
 - `WHATSAPP_API_PORT=3000`: The port number that the HTTP server will listen on. The default value is `3000`.
 - `WHATSAPP_API_HOSTNAME=localhost`: The hostname for the HTTP server. The default value is `localhost`.
+- `WHATSAPP_API_SCHEMA=https` - it just changes `media.url` schema when you receive media (with files) messages.
+  - In order to properly configure SSL follow [**Step-by-step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
+
 
 ## Logging
 Options you can use to control the way how WAHA output the logs:
@@ -116,8 +119,7 @@ Read more about HTTPS options and how to configure it on [**🔒 Security**]({{<
   requests to the API. This will protect the API with a secret code.
 - `WHATSAPP_SWAGGER_USERNAME=admin` and `WHATSAPP_SWAGGER_PASSWORD=admin`: These variables can be used to protect the
   Swagger panel with `admin / admin` credentials. This does not affect API access.
-
-Read more about security settings for Swagger and API on [**Security page** ->]({{< relref "/docs/how-to/security" >}}).
+Read more about security settings for Swagger and API on [*🔒 Security**]({{< relref "/docs/how-to/security" >}}).
 
 ## Files
 <b>Files configuration is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>

@@ -1,7 +1,7 @@
 ---
 title: "Setting up HTTPS for WAHA"
-description: "Step by step guide on how to set up HTTPS for WAHA"
-excerpt: "Step by step guide on how to set up HTTPS for WAHA"
+description: "Step-by-step guide on how to set up HTTPS for WAHA"
+excerpt: "Step-by-step guide on how to set up HTTPS for WAHA"
 date: 2024-06-17T08:48:45+00:00
 draft: false
 weight: 50
@@ -110,11 +110,13 @@ docker run -it \
   -p 3000:3000/tcp \
   -v $(pwd)/.sessions:/app/.sessions \
   -v /etc/letsencrypt:/etc/letsencrypt \
-  --env WHATSAPP_API_HOSTNAME=$DOMAIN \
   --env WAHA_HTTPS_ENABLED=true \
   --env WAHA_HTTPS_PATH_KEY=/etc/letsencrypt/live/$DOMAIN/privkey.pem \
   --env WAHA_HTTPS_PATH_CERT=/etc/letsencrypt/live/$DOMAIN/cert.pem \
   --env WAHA_HTTPS_PATH_CA=/etc/letsencrypt/live/$DOMAIN/chain.pem \
+  --env WHATSAPP_API_SCHEMA=https, 
+  --env WHATSAPP_API_PORT=3000, 
+  --env WHATSAPP_API_HOSTNAME=$DOMAIN \
   --restart always \
   devlikeapro/waha-plus
 ```
