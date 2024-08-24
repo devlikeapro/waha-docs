@@ -55,6 +55,7 @@ Release policy:
 - Add `POST /api/sendSeen` documentation and correct swagger spec [#485](https://github.com/devlikeapro/waha/issues/485)
 - Add `GET /api/server/status` endpoint to **get server uptime** - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 - Add `POST /api/server/stop` endpoint to **restart** server - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
+- Add `WHATSAPP_API_SCHEMA=http` environment variable so you can get the right `media.url` link
 - Update **NOWEB** engine to the latest upstream changes
 
 ## 2024.8
