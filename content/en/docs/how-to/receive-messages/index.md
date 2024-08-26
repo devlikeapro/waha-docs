@@ -36,13 +36,36 @@ After that WAHA sends events (see below) about new messages to an endpoint you p
 💡 You can open [https://webhook.site](https://webhook.site) and paste UUID from it to `url` field,
 and you'll see all requests immediately in your browser to intercept the webhook's payload.
 
-## Some IDS
+## Fields
+### chatId, from, to, participant
 You can see some in `from`, `to`, and `participant` fields here's what they mean:
 - `123123123@c.us`  **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at the end.
   For phone number `12132132131` the `chatId` is  `12132132131@c.us` (`@s.whatsapp.net` can also appear in internal data, simply convert it to `@g.us`).
 - `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
 - `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that type of ID along with communities functionality.
 - `123123123@newsletter` - for [**📰 WhatsApp Channels**]({{< relref "/docs/how-to/channels" >}}).
+
+### replyTo
+If you get a message as a reply to another message, you'll see `replyTo` field with the message ID that was replied to.
+```json
+{
+  "event": "message",
+  "session": "default",
+  "payload": {
+    "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "timestamp": 1667561485,
+    "from": "11111111111@c.us",
+    "body": "Yes!",
+    "replyTo": {
+      "id": "BBBBBBBBBBBBBBB",
+      "participant": "2222222222@c.us",
+      "body": "Are you going?"
+    }
+  }
+}
+
+```
+
 
 
 ## Webhooks

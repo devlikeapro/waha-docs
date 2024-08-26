@@ -59,6 +59,8 @@ Release policy:
 - Add `media.error` to messages with media and error - [#510](https://github.com/devlikeapro/waha/issues/510)
 - Add `reply_to` field for text and media (image, files, etc) messages - [#503](https://github.com/devlikeapro/waha/issues/503)
   - [**📤 Send messages** - reply_to]({{<relref "/docs/how-to/send-messages#reply_to" >}})
+- Add `replyTo` field for receiving message - [#506](https://github.com/devlikeapro/waha/issues/506)
+  - [**📥 Receive messages** - replyTo]({{<relref "/docs/how-to/receive-messages#replyto" >}})
 - Update **NOWEB** engine to the latest upstream changes
 
 ## 2024.8
