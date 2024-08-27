@@ -144,6 +144,11 @@
   url = "/whatsapp-channels/"
 
 [[main]]
+  name = "WhatsApp Status API"
+  parent = "more"
+  url = "/whatsapp-status/"
+
+[[main]]
   name = "🇦🇪 العربية (Arabic)"
   parent="language"
   url="https://translate.google.com/translate?sl=en&tl=ar&hl=ar&u=https://waha.devlike.pro/&client=webapp"
