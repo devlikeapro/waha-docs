@@ -23,7 +23,7 @@ toc: true
 {{< alert icon="👉" text="Run WhatsApp API in less than 5 minutes!" />}}
 
 We will guide you through the necessary steps to successfully send your first text message using WhatsApp API in
-[**Quick Start →**]({{< relref "quick-start" >}}).
+[**⚡ Quick Start**]({{< relref "quick-start" >}}).
 
 ## Disclaimer
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or its affiliates. The official WhatsApp website can be found at [whatsapp.com](https://whatsapp.com).
