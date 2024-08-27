@@ -139,12 +139,12 @@
   weight = 90
 
 [[main]]
-  name = "WhatsApp Channels API"
+  name = "WhatsApp Channels Automation"
   parent = "more"
   url = "/whatsapp-channels/"
 
 [[main]]
-  name = "WhatsApp Status API"
+  name = "WhatsApp Status Automation"
   parent = "more"
   url = "/whatsapp-status/"
 
