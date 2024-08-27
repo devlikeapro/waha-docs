@@ -1,5 +1,5 @@
 ---
-title: "WAHA 2024.9 - Session API, Metadata, Dashboard and more!"
+title: "WAHA 2024.9 - S3, Session API, Metadata, Dashboard and more!"
 description: "
 excerpt: "
 date: 2024-08-27T08:48:45+00:00
