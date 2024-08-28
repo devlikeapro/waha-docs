@@ -71,7 +71,7 @@ footer = 'This project is not affiliated, associated, authorized, endorsed by, o
 copyRight = "Copyright (c) 2021-2024 Dev Like A Pro"
 
 # Alert
-alert = true
+alert = false
 alertDismissable = true
 alertText = "📢 <a class=\"alert-link stretched-link\" href=\"https://waha.devlike.pro/docs/how-to/waha-dashboard/\">WAHA Dashboard - UI to manage your WhatsApp sessions!</a> 📢"
 
