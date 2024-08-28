@@ -62,7 +62,9 @@ rel  = "sitemap"
   tag = "tags"
 
 [permalinks]
-  blog = "/blog/:title/"
+  # blog = "/blog/:title/"
+# by default, it'll be :title if slug is not defined
+  blog = "/blog/:slug/"
 # docs = "/docs/1.0/:sections[1:]/:title/"
 
 [minify.tdewolff.html]

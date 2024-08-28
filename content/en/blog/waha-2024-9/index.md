@@ -11,9 +11,10 @@ tags: []
 contributors: ["devlikeapro"]
 pinned: false
 homepage: false
-aliases: 
-  - /blog/waha-2024-9
+slug: waha-2024-9
+aliases:
   - /blog/waha-2024.9-session-api-metadata-dashboard-and-more
+  - /blog/waha-2024.9-s3-session-api-metadata-dashboard-and-more/
 ---
 
 🎉 We are thrilled to announce the release of [**WAHA 2024.9**]({{< relref "/docs/overview/changelog#20249" >}}) 🎉 
