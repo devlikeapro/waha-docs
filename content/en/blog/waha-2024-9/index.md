@@ -12,7 +12,7 @@ contributors: ["devlikeapro"]
 pinned: false
 homepage: false
 aliases: 
-  - /blog/waha-2024-9/
+  - /blog/waha-2024-9
   - /blog/waha-2024.9-session-api-metadata-dashboard-and-more
 ---
 
