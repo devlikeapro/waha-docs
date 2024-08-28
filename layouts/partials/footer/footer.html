@@ -1,24 +1,23 @@
 <footer class="footer text-muted mt-4" style="background-color: #E9F7E3">
     <div class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}">
         <!-- Menu -->
-        <div class="row" style="padding-top: 1.125rem; padding-bottom: 1.125rem; ">
-                      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
-            <div class="flex justify-content-between navbar-nav flex-grow-1 flag">
+        <div class="row" style="padding-top: 1.125rem; padding-bottom: 2rem; ">
+            <div class="flex flex-lg-row flex-column justify-content-between px-4 navbar-nav flex-grow-1 flag gap-4">
               {{- $current := . -}}
               {{- $section := $current.Section -}}
               {{ range .Site.Menus.main -}}
-              <div class="flex flex-column gap-2">
-                  <div class="mb-2">
-                    <a href="#" class="docs-link" role="button" >
-                        <b> {{ .Name -}} </b>
-                    </a>
+                  <div class="flex flex-column gap-2">
+                      <div class="mb-2">
+                        <a href="#" class="docs-link" role="button" >
+                            <b> {{ .Name -}} </b>
+                        </a>
+                      </div>
+                      {{ range .Children -}}
+                      <div>
+                        <a class="docs-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+                      </div>
+                      {{ end -}}
                   </div>
-                  {{ range .Children -}}
-                  <div>
-                    <a class="docs-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
-                  </div>
-                  {{ end -}}
-              </div>
               {{ end -}}
             </div>
         </div>
