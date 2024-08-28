@@ -1,18 +1,42 @@
 <footer class="footer text-muted">
-  <div class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}">
-    <div class="row">
-      <div class="col-lg-12 order-last order-lg-first">
-        <ul class="list-inline">
-          <li class="list-inline-item">{{ .Site.Params.footer | safeHTML }}</li>
-        </ul>
-      </div>
-      <div class="col-lg-12 order-first order-lg-last text-lg-end">
-        <ul class="list-inline">
-          {{ range .Site.Menus.footer -}}
-            <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-          {{ end -}}
-        </ul>
-      </div>
+    <div class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}">
+        <!-- Menu -->
+        <div class="row">
+                      <div class="d-flex flex-column flex-lg-row justify-content-between">
+            <div class="flex justify-content-between navbar-nav flex-grow-1 flag">
+              {{- $current := . -}}
+              {{- $section := $current.Section -}}
+              {{ range .Site.Menus.main -}}
+              <div class="flex flex-column gap-2">
+                  <div class="mb-2">
+                    <a href="#" class="docs-link" role="button" >
+                        <b> {{ .Name -}} </b>
+                    </a>
+                  </div>
+                  {{ range .Children -}}
+                  <div>
+                    <a class="docs-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+                  </div>
+                  {{ end -}}
+              </div>
+              {{ end -}}
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row">
+            <div class="col-lg-12 order-last order-lg-first">
+                <ul class="list-inline">
+                    <li class="list-inline-item">{{ .Site.Params.footer | safeHTML }}</li>
+                </ul>
+            </div>
+            <div class="col-lg-12 order-first order-lg-last text-lg-end">
+                <ul class="list-inline">
+                    {{ range .Site.Menus.footer -}}
+                    <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                    {{ end -}}
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 </footer>
