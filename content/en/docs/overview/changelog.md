@@ -33,7 +33,7 @@ Release policy:
 
 ----
 ## 2024.9
-`2024.8.1` - [**Release Notes**]({{< relref "/blog/waha-2024-9" >}})
+`2024.9.1` - [**Release Notes**]({{< relref "/blog/waha-2024-9" >}})
 - Add support for **S3** to store media file - [#353](https://github.com/devlikeapro/waha/issues/353)
   - Read more [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}})
 - Add more granular API for [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}}) 
