@@ -40,7 +40,9 @@ and you'll see all requests immediately in your browser to intercept the webhook
 ### chatId, from, to, participant
 You can see some in `from`, `to`, and `participant` fields here's what they mean:
 - `123123123@c.us`  **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at the end.
-  For phone number `12132132131` the `chatId` is  `12132132131@c.us` (`@s.whatsapp.net` can also appear in internal data, simply convert it to `@g.us`).
+  For phone number `12132132131` the `chatId` is  `12132132131@c.us`
+- `123123123@s.whatsapp.net` can also appear in **internal data for NOWEB**, just convert it to `@c.us` to work
+with that properly. Kindly don't use it in `chatId` when sending messages
 - `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
 - `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that type of ID along with communities functionality.
 - `123123123@newsletter` - for [**📰 WhatsApp Channels**]({{< relref "/docs/how-to/channels" >}}).
