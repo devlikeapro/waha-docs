@@ -614,10 +614,6 @@ Instead of setting each webhook via environment variables - we use two environme
 - `WHATSAPP_HOOK_URL` - to set a URL
 - `WHATSAPP_HOOK_EVENTS` - to set events that are sent to the URL
 
-| Previous                                                                                                             | Current                                                                                            |
-|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| <pre>WHATSAPP_HOOK_ONMESSAGE=https://httpbin.org/post <br>WHATSAPP_HOOK_ONANYMESSAGE=https://httpbin.org/post </pre> | <pre>WHATSAPP_HOOK_URL=https://httpbin.org/post <br>WHATSAPP_HOOK_EVENTS=message,message.any</pre> |
-
 **Webhook payload**
 
 The data for webhooks are wrapped inside a new `WAWebhook` object with `event` and `payload` fields to help you identify
