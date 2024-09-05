@@ -145,7 +145,7 @@ Engine WAHA has changed its underlying engine from Venom to Whatsapp Web.JS. It 
 Authentication Now you can authenticate all requests for WAHA - use WHATSAPP_API_KEY=secret environment variable to set \u0026ldquo;secret key\u0026rdquo;.
 If WHATSAPP_API_KEY is set - requests must have X-Api-Key header with secret value, where secret - any random secret key.
 Webhooks Instead of setting each webhook via environment variables - we use two environments variables:
-WHATSAPP_HOOK_URL - to set a URL WHATSAPP_HOOK_EVENTS - to set events that are sent to the URL Previous Current WHATSAPP_HOOK_ONMESSAGE=https://httpbin.org/post WHATSAPP_HOOK_ONANYMESSAGE=https://httpbin.org/post WHATSAPP_HOOK_URL=https://httpbin.org/post WHATSAPP_HOOK_EVENTS=message,message.any Webhook payload
+WHATSAPP_HOOK_URL - to set a URL WHATSAPP_HOOK_EVENTS - to set events that are sent to the URL Webhook payload
 The data for webhooks are wrapped inside a new WAWebhook object with event and payload fields to help you identify which handler you should call based on event.
 { \u0026quot;event\u0026quot;: \u0026quot;message.any\u0026quot;, \u0026quot;payload\u0026quot;: { } } `}),e.add({id:6,href:"/docs/how-to/",title:"How-to guides",description:"How-to guides",content:`How-to guides for WAHA - WhatsApp API.
 Discover how to use the WAHA, what you can do with it, and how to configure it right for your needs.
