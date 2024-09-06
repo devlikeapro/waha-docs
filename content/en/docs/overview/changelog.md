@@ -33,6 +33,9 @@ Release policy:
 
 ----
 ## 2024.9
+`2024.9.4`
+- Fix empty config sessions operations (`Session not found`)
+
 `2024.9.3`
 - **NOWEB** - fix restarting issue when websocket is not connected yet (WebSocket was closed before the connection was established)
 
