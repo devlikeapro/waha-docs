@@ -142,16 +142,20 @@
   name = "WhatsApp Low-Code Automation"
   parent = "more"
   url = "/whatsapp-low-code/"
+  weight = 91
 
 [[main]]
   name = "WhatsApp Channels Automation"
   parent = "more"
   url = "/whatsapp-channels/"
+  weight = 92
+
 
 [[main]]
   name = "WhatsApp Status Automation"
   parent = "more"
   url = "/whatsapp-status/"
+  weight = 93
 
 [[main]]
   name = "🇦🇪 العربية (Arabic)"
