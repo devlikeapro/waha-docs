@@ -702,7 +702,7 @@ if you need more events or per session filters.
 
 ## Examples
 Here's few examples of how to handle webhook in different languages:
-1. [Python guide]({{< relref "/docs/examples/python" >}})
+1. [Python guide]({{< relref "/docs/integrations/python" >}})
 
 **Do you use another language?**
 

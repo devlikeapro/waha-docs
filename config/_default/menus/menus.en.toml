@@ -48,10 +48,10 @@
   parent = "docs"
 
 [[main]]
-  name = "🧩 Examples"
+  name = "🧩 Integrations"
   weight = 16
-  identifier = "examples"
-  url = "/docs/examples"
+  identifier = "integrations"
+  url = "/docs/integrations"
   parent = "docs"
 
 [[main]]
