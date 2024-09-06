@@ -139,9 +139,9 @@
   weight = 90
 
 [[main]]
-  name = "WhatsApp Automation with n8n"
+  name = "WhatsApp Low-Code Automation"
   parent = "more"
-  url = "/whatsapp-n8n/"
+  url = "/whatsapp-low-code/"
 
 [[main]]
   name = "WhatsApp Channels Automation"
