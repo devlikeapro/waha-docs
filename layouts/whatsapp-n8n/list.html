@@ -61,7 +61,7 @@
                 </h2>
             </div>
             <div class='col-12 mt-4' data-aos="fade-up">
-                Easily automate your WhatsApp messages with n8n.io Low-Code platform!
+                Easily automate your WhatsApp messages by dragging and dropping nodes in n8n.io!
                 <br>
                 👉 Check out the
                 <a
@@ -73,10 +73,14 @@
             </div>
 
             <div class='col-12 col-lg-12 pros-card-wide' data-aos="fade-up" data-aos-delay="100">
-                <img
-                    alt="WAHA n8n Workflow"
-                    src="/images/n8n/waha-n8n.png"
-                >
+                <div class="mb-2 text-center">
+                    <a href="/images/n8n/waha-n8n.png" target="_blank" style="cursor: pointer;">
+                        <img src="/images/n8n/waha-n8n.png" alt="waha+n8n examples" style="max-width: 100%;">
+                    </a>
+                    <div class="text-center small" style="color: #6c757d">
+                        Click to open full size.
+                    </div>
+                </div>
             </div>
 
 
@@ -84,7 +88,7 @@
     </div>
 </section>
 
-{{ $content := readFile "/layouts/include/how-to-use-section.html" | safeHTML }}
+{{ $content := readFile "/layouts/whatsapp-n8n/how-to-use-section.html" | safeHTML }}
 {{ $content }}
 
 <section class='section section-md'>
