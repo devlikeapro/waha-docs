@@ -20,8 +20,6 @@ aliases:
   <img src="/images/n8n/WAHA+n8n.png" width='200'/>
 </p>
 
-You can start developing your WhatsApp automation with using n8n and WAHA in pair!
-
 {{< img src="/images/n8n/waha-n8n.png" >}}
 
 ## Installation
