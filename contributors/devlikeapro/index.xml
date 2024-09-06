@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on</title><link>https://waha.devlike.pro/contributors/devlikeapro/</link><description>Recent content in devlikeapro on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 27 Aug 2024 08:48:45 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA + n8n - No Code Low Code WhatsApp Automation</title><link>https://waha.devlike.pro/blog/waha-n8n/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-n8n/</guid><description>You can start developing your WhatsApp automation with using n8n and WAHA in pair!
-Click to open full size. Installation #
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on</title><link>https://waha.devlike.pro/contributors/devlikeapro/</link><description>Recent content in devlikeapro on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 27 Aug 2024 08:48:45 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA + n8n - No Code Low Code WhatsApp Automation</title><link>https://waha.devlike.pro/blog/waha-n8n/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-n8n/</guid><description>Click to open full size. Installation #
 Install WAHA #
 Make sure you have WAHA up and running.
 If not - follow ⚡ Quick Start so you have WAHA available on http://localhost:3000/
 Install n8n #
 Kindly follow n8n Installation guide for that part.
 Install WAHA node #
-Go to your n8n installation =&amp;gt; Settings =&amp;gt; Community nodes and install:</description></item><item><title>WAHA 2024.9 - S3, Session API, Metadata, Dashboard and more!</title><link>https://waha.devlike.pro/blog/waha-2024-9/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-9/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.9 🎉
+Go to your n8n installation =&amp;gt; Settings =&amp;gt; Community nodes and install:
+@devlikeapro/n8n-nodes-waha Follow the installation guide in the n8n community nodes documentation.</description></item><item><title>WAHA 2024.9 - S3, Session API, Metadata, Dashboard and more!</title><link>https://waha.devlike.pro/blog/waha-2024-9/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-9/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.9 🎉
 The release has a lot of changes, but we&amp;rsquo;ll cover only few of them in this blog post, kindly check the 🆕 Changelog for the full list of changes.
 Session API #
 Click to open full size. We&amp;rsquo;ve added a new 🖥️ Sessions API to manage the session lifecycle.
