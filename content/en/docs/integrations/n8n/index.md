@@ -18,10 +18,10 @@ toc: true
 
 {{< img src="/images/n8n/waha-n8n.png" >}}
 
-## Installation
+## Overview
 👉 You can follow 
-[**WAHA + n8n - No Code Low Code WhatsApp Automation**]({{< relref "/blog/waha-n8n" >}})
-blog to start **WAHA** and **n8n** from the scratch and start your first "echo" workflow!
+[**WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide**]({{< relref "/blog/waha-n8n" >}}) 
+to start **WAHA** and **n8n** from the scratch and start your first "echo" workflow!
 
 Alternatively, check the installation guides for **n8n** and **WAHA**:
 
