@@ -19,49 +19,57 @@ toc: true
 {{< img src="/images/n8n/waha-n8n.png" >}}
 
 ## Installation
+👉 You can follow 
+[**WAHA + n8n - No Code Low Code WhatsApp Automation**]({{< relref "/blog/waha-n8n" >}})
+blog to start **WAHA** and **n8n** from the scratch and start your first "echo" workflow!
 
-### Install WAHA
-Make sure you have WAHA up and running. 
+Alternatively, check the installation guides for **n8n** and **WAHA**:
 
-If not - follow
-[**⚡ Quick Start**](https://waha.devlike.pro/docs/overview/quick-start/)
-so you have WAHA available on 
-[http://localhost:3000/](http://localhost:3000/)
+**WAHA**:
+   - [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}})
+   - [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}})
 
-### Install n8n
-Kindly follow [n8n Installation guide](https://docs.n8n.io/hosting/installation/docker/#starting-n8n) for that part.
+**n8n**:
+   - [**Installation guide**](https://docs.n8n.io/hosting/installation/docker/#starting-n8n)
 
-
-### Install WAHA node
-Go to your n8n installation => **Settings** => **Community nodes** and install:
+## Install WAHA n8n node
+Go to your **n8n** => **Settings** => **Community nodes** and install:
 
 ```
 @devlikeapro/n8n-nodes-waha
 ```
 
-Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
+If you need help with that, check the
+[**Install community nodes**](https://docs.n8n.io/integrations/community-nodes/installation/gui-install/)
 
-## Credentials
+## WAHA API Credentials
 
 Before using the node you need to add **WAHA API** credentials.
-Go to your n8n installation and create a new 
-[WAHA API credential](https://docs.n8n.io/credentials/add-edit-credentials/)
 
-If it doesn't allow you to **Save** it (no save button) - just put any string in `Api Key` field, know issue :(
+Go to your n8n installation and create a new **WAHA API** credential:
+{{< img src="/images/n8n/waha-n8n-credentials.png" >}}
 
-## Usage
-You can check the workflows and how to use WAHA n8n Nodes
-1. Go to your n8n installation with installed **WAHA** node.
-2. **Add workflow** there (just empty one)
-3. Import one of the [**examples**](http://waha-n8n-templates.devlike.pro/) by clicking on three dots **...** at the right top corner
-   of the n8n window and selecting **Import from URL**.
-4. Paste the url to import workflow
-5. Select credentials for all WAHA nodes
-6. Configure you session to send event to **WAHA Trigger** Webhook URL
-7. Activate the workflow
-8. Enjoy low-code automation!
+If it doesn't allow you to **Save** it (no save button) - just put **any string** in `Api Key` field, know issue :(
 
+## WAHA Actions
+**@devlikeapro/n8n-nodes-waha** provides **WAHA Actions** with all available API calls that you can find 
+in the [WAHA API documentation](https://waha.devlike.pro/docs/how-to/) or [Swagger](https://waha.devlike.pro/swagger/).
+
+{{< img src="/images/n8n/waha-n8n-actions.png" >}}
+
+## WAHA Trigger
+**@devlikeapro/n8n-nodes-waha** provides **WAHA Trigger** node,
+which make it possible to trigger the workflow when the specific event happens in WAHA.
+
+{{< img src="/images/n8n/waha-n8n-WAHATrigger.png" >}}
+
+💡 **Remember to configure your WAHA Session** with proper **Webhook** with **WAHA trigger** -> **Webhook URL** and 
+the events you want to listen!
+
+{{< img src="/images/n8n/waha-n8n-WAHATrigger-url.png" >}}
+
+{{< img src="/images/n8n/waha-n8n-dashboard-session.png" >}}
 
 ## Workflow Examples
-👉 Check out [**n8n-workflows**](http://waha-n8n-templates.devlike.pro/) folder for examples.
+👉 Check out [**n8n-workflows**](http://waha-n8n-templates.devlike.pro/) for workflow templates!
 {{< img src="/images/n8n/waha-n8n.png" >}}
