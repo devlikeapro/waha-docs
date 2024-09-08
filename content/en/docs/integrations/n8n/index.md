@@ -73,3 +73,19 @@ the events you want to listen!
 ## Workflow Examples
 👉 Check out [**n8n-workflows**](http://waha-n8n-templates.devlike.pro/) for workflow templates!
 {{< img src="/images/n8n/waha-n8n.png" >}}
+
+## Troubleshooting
+If you're experiencing any issues or have a feature request, please check the below resources:
+**WAHA**:
+- [**🧩 WAHA + n8n Integration**](https://waha.devlike.pro/docs/integrations/n8n/)
+- [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}})
+- [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}})
+
+**n8n**:
+- [**Installation guide**](https://docs.n8n.io/hosting/installation/docker/#starting-n8n)
+- [**Install community nodes**](https://docs.n8n.io/integrations/community-nodes/installation/gui-install/)
+- [**Create credentials**](https://docs.n8n.io/credentials/add-edit-credentials/)
+
+If that doesn't help - kindly open an issue in the
+[**devlikeapro/n8n-nodes-waha**](https://github.com/devlikeapro/n8n-nodes-waha/)
+GitHub repository, we're happy to help you out!
