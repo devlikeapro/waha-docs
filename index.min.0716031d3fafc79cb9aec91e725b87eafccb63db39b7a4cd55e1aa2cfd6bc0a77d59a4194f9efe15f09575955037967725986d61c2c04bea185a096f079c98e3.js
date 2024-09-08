@@ -746,7 +746,7 @@ Patron Portal #After subscribing on Patreon or Boosty, you will get access to t
 Read more about Patron Portal in Patreon -\u0026gt; or Boosty -\u0026gt; posts.
 Install Plus #After you get the password, get your login to Docker Hub in Patron Portal -\u0026gt; and run the commands:
 docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus docker logout Then in all commands use Plus image devlikeapro/waha-plus instead of Core devlikeapro/waha.
-`}),e.add({id:35,href:"/docs/integrations/n8n/",title:"WAHA + n8n",description:"Start developing your WhatsApp automation with using n8n and WAHA in pair!",content:` Click to open full size. Installation #👉 You can follow WAHA + n8n - No Code Low Code WhatsApp Automation blog to start WAHA and n8n from the scratch and start your first \u0026ldquo;echo\u0026rdquo; workflow!
+`}),e.add({id:35,href:"/docs/integrations/n8n/",title:"WAHA + n8n",description:"Start developing your WhatsApp automation with using n8n and WAHA in pair!",content:` Click to open full size. Overview #👉 You can follow WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide to start WAHA and n8n from the scratch and start your first \u0026ldquo;echo\u0026rdquo; workflow!
 Alternatively, check the installation guides for n8n and WAHA:
 WAHA:
 ⚡ Quick Start 🔧 Install \u0026amp; Update n8n:
