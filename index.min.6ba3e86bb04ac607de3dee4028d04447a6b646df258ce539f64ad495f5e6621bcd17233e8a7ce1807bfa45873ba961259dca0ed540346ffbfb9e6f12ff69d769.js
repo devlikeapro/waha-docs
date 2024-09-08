@@ -746,15 +746,18 @@ Patron Portal #After subscribing on Patreon or Boosty, you will get access to t
 Read more about Patron Portal in Patreon -\u0026gt; or Boosty -\u0026gt; posts.
 Install Plus #After you get the password, get your login to Docker Hub in Patron Portal -\u0026gt; and run the commands:
 docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus docker logout Then in all commands use Plus image devlikeapro/waha-plus instead of Core devlikeapro/waha.
-`}),e.add({id:35,href:"/docs/integrations/n8n/",title:"WAHA + n8n",description:"Start developing your WhatsApp automation with using n8n and WAHA in pair!",content:` Click to open full size. Installation #Install WAHA #Make sure you have WAHA up and running.
-If not - follow ⚡ Quick Start so you have WAHA available on http://localhost:3000/
-Install n8n #Kindly follow n8n Installation guide for that part.
-Install WAHA node #Go to your n8n installation =\u0026gt; Settings =\u0026gt; Community nodes and install:
-@devlikeapro/n8n-nodes-waha Follow the installation guide in the n8n community nodes documentation.
-Credentials #Before using the node you need to add WAHA API credentials. Go to your n8n installation and create a new WAHA API credential
-If it doesn\u0026rsquo;t allow you to Save it (no save button) - just put any string in Api Key field, know issue :(
-Usage #You can check the workflows and how to use WAHA n8n Nodes
-Go to your n8n installation with installed WAHA node. Add workflow there (just empty one) Import one of the examples by clicking on three dots \u0026hellip; at the right top corner of the n8n window and selecting Import from URL. Paste the url to import workflow Select credentials for all WAHA nodes Configure you session to send event to WAHA Trigger Webhook URL Activate the workflow Enjoy low-code automation! Workflow Examples #👉 Check out n8n-workflows folder for examples. Click to open full size. `}),e.add({id:36,href:"/docs/integrations/python/",title:"Python",description:"WhatsApp API + Python examples.",content:`
+`}),e.add({id:35,href:"/docs/integrations/n8n/",title:"WAHA + n8n",description:"Start developing your WhatsApp automation with using n8n and WAHA in pair!",content:` Click to open full size. Installation #👉 You can follow WAHA + n8n - No Code Low Code WhatsApp Automation blog to start WAHA and n8n from the scratch and start your first \u0026ldquo;echo\u0026rdquo; workflow!
+Alternatively, check the installation guides for n8n and WAHA:
+WAHA:
+⚡ Quick Start 🔧 Install \u0026amp; Update n8n:
+Installation guide Install WAHA n8n node #Go to your n8n =\u0026gt; Settings =\u0026gt; Community nodes and install:
+@devlikeapro/n8n-nodes-waha If you need help with that, check the Install community nodes
+WAHA API Credentials #Before using the node you need to add WAHA API credentials.
+Go to your n8n installation and create a new WAHA API credential: Click to open full size. If it doesn\u0026rsquo;t allow you to Save it (no save button) - just put any string in Api Key field, know issue :(
+WAHA Actions #@devlikeapro/n8n-nodes-waha provides WAHA Actions with all available API calls that you can find in the WAHA API documentation or Swagger.
+Click to open full size. WAHA Trigger #@devlikeapro/n8n-nodes-waha provides WAHA Trigger node, which make it possible to trigger the workflow when the specific event happens in WAHA.
+Click to open full size. 💡 Remember to configure your WAHA Session with proper Webhook with WAHA trigger -\u0026gt; Webhook URL and the events you want to listen!
+Click to open full size. Click to open full size. Workflow Examples #👉 Check out n8n-workflows for workflow templates! Click to open full size. `}),e.add({id:36,href:"/docs/integrations/python/",title:"Python",description:"WhatsApp API + Python examples.",content:`
 We\u0026rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Python.
 You can find the examples in examples folder on GitHub with detailed instructions in README.md -\u0026gt;
 Installation #We assume that you have installed software:
