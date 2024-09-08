@@ -71,7 +71,10 @@ the events you want to listen!
 {{< img src="/images/n8n/waha-n8n-dashboard-session.png" >}}
 
 ## Workflow Examples
-👉 Check out [**n8n-workflows**](http://waha-n8n-templates.devlike.pro/) for workflow templates!
+👉 Check out
+[**https://waha-n8n-workflows.devlike.pro**](http://waha-n8n-templates.devlike.pro/)
+for workflow templates!
+
 {{< img src="/images/n8n/waha-n8n.png" >}}
 
 ## Troubleshooting
