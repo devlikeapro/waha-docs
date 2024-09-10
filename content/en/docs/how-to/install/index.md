@@ -58,7 +58,6 @@ docker logout
 
 If you're using the **ARM** processor (like Apple Silicon, Apple M1, etc.) - add `:arm` tag at the end of the image name in the above commands.
 ```bash
-```bash
 docker login -u devlikeapro -p {KEY}
 docker pull devlikeapro/waha-plus:arm
 docker logout
