@@ -132,10 +132,10 @@ Read more about [available configuration options ->]({{<relref "/docs/how-to/con
 
 The following table shows the compatibility of the storage with the engines:
 
-|       | WEBJS | NOWEB | VENOM |
-|-------|:-----:|:-----:|:-----:|
-| Local |  ✔️   |  ✔️   |  ✔️   |
-| S3    |  🕒   |  🕒   |   ➖   |
+|       | WEBJS | NOWEB |
+|-------|:-----:|:-----:|
+| Local |  ✔️   |  ✔️   |
+| S3    |  🕒   |  🕒   |
 
 ## Media - Local
 By default, the WAHA uses the **local file storage** to store the media files and those files has a short lifetime (180 seconds).

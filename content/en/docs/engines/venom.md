@@ -20,9 +20,6 @@ instead.
 It's a high-performance system developed with JavaScript to create a bot for WhatsApp.
 It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
 
-⚠ Read the article before using **VENOM** engine
-[How to avoid blocking ->]({{< relref " /docs/overview/how-to-avoid-blocking" >}}).
-
 ## Run VENOM
 
 ```bash

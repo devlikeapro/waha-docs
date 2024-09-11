@@ -50,15 +50,6 @@ Quotes from the users:
 > **400** sessions with **4CPU and 32RAM**. It's working fine.
 
 
-### VENOM
-👉 [Read more about **VENOM**]({{< relref "/docs/engines/venom" >}})
-
-`WHATSAPP_DEFAULT_ENGINE=VENOM`
-
-It's a high-performance system developed with JavaScript to create a bot for WhatsApp.
-It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
-
-
 ## Docker images
 WAHA provides few docker images with different setup.
 
@@ -111,10 +102,10 @@ it's the engine WAHA runs by default.
 
 ### Protocols
 
-|                                                              | WEBJS | NOWEB | VENOM |
-|--------------------------------------------------------------|:-----:|:-----:|:-----:|
-| Run a browser (chromium\chrome) to communicate with WhatsApp |  ✔️   |   ➖    |  ✔️   |
-| Communicate with WhatsApp via websocket (no browser)         |   ➖    |  ✔️   |    ➖   |
+|                                                              | WEBJS | NOWEB |
+|--------------------------------------------------------------|:-----:|:-----:|
+| Run a browser (chromium\chrome) to communicate with WhatsApp |  ✔️   |   ➖    |
+| Communicate with WhatsApp via websocket (no browser)         |   ➖    |  ✔️   |
 
 ### Webhooks
 {{< include file="content/en/docs/how-to/webhooks/features.md" >}}
@@ -129,30 +120,29 @@ Read more about
 {{< include file="content/en/docs/how-to/send-messages/features.md" >}}
 
 ### Status
-|                                                                   | WEBJS |      NOWEB       | VENOM |
-|-------------------------------------------------------------------|:-----:|:----------------:|:-----:|
-| **Status**                                                        |       |                  |       |
-| `POST /api/{session}/status/text`                                 |       |        ✔️        |       |
-| `POST /api/{session}/status/image` ![](/images/versions/plus.png) |       |        ✔️        |       |
-| `POST /api/{session}/status/voice` ![](/images/versions/plus.png) |       |        ✔️        |       |
-| `POST /api/{session}/status/video` ![](/images/versions/plus.png) |       |        ✔️        |       |
-| `POST /api/{session}/status/delete`                               |       |        ✔️        |       |
+|                                                                   | WEBJS |      NOWEB       |
+|-------------------------------------------------------------------|:-----:|:----------------:|
+| **Status**                                                        |       |                  |
+| `POST /api/{session}/status/text`                                 |       |        ✔️        |
+| `POST /api/{session}/status/image` ![](/images/versions/plus.png) |       |        ✔️        |
+| `POST /api/{session}/status/voice` ![](/images/versions/plus.png) |       |        ✔️        |
+| `POST /api/{session}/status/video` ![](/images/versions/plus.png) |       |        ✔️        |
+| `POST /api/{session}/status/delete`                               |       |        ✔️        |
 
 ### Chats
 {{< include file="content/en/docs/how-to/chats/features.md" >}}
 
 
 ### Contacts
-|                                                                   | WEBJS |      NOWEB       | VENOM |
-|-------------------------------------------------------------------|:-----:|:----------------:|:-----:|
-| `GET /api/contacts`                                               |  ✔️   | ✔️[*1](#heading) |       |
-| `GET /api/contacts/all`                                           |  ✔️   | ✔️[*1](#heading) |       |
-| `GET /api/contacts/check-exists`                                  |  ✔️   |        ✔️        |  ✔️   |
-| `GET /api/contacts/about`                                         |  ✔️   |                  |       |
-| `GET /api/contacts/profile-picture`                               |  ✔️   |        ✔️        |       |
-| `POST /api/contacts/block`                                        |  ✔️   |  [*2](#heading)  |       |
-| `POST /api/contacts/unblock`                                      |  ✔️   |  [*2](#heading)  |       |
-
+|                                                                   | WEBJS |      NOWEB       |
+|-------------------------------------------------------------------|:-----:|:----------------:|
+| `GET /api/contacts`                                               |  ✔️   | ✔️[*1](#heading) |
+| `GET /api/contacts/all`                                           |  ✔️   | ✔️[*1](#heading) |
+| `GET /api/contacts/check-exists`                                  |  ✔️   |        ✔️        |
+| `GET /api/contacts/about`                                         |  ✔️   |                  |
+| `GET /api/contacts/profile-picture`                               |  ✔️   |        ✔️        |
+| `POST /api/contacts/block`                                        |  ✔️   |  [*2](#heading)  |
+| `POST /api/contacts/unblock`                                      |  ✔️   |  [*2](#heading)  |
 
 ### Channels
 Read more about
@@ -164,37 +154,37 @@ Read more about
 Read more about 
 [**👥 Groups**]({{< relref "/docs/how-to/groups" >}})
 
-|                                                                        | WEBJS | NOWEB | VENOM |
-|------------------------------------------------------------------------|:-----:|:-----:|:-----:|
-| `POST /api/{session}/groups`                                           |  ✔️   |  ✔️   |       |
-| `GET /api/{session}/groups`                                            |  ✔️   |  ✔️   |       |
-| `GET /api/{session}/groups/{id}`                                       |  ✔️   |  ✔️   |       |
-| `DELETE /api/{session}/groups/{id}`                                    |  ✔️   |       |       |
-| `GET /api/{session}/groups/{id}/settings/security/info-admin-only`     |  ✔️   |       |       |
-| `PUT /api/{session}/groups/{id}/settings/security/info-admin-only`     |  ✔️   |       |       |
-| `GET /api/{session}/groups/{id}/settings/security/messages-admin-only` |  ✔️   |       |       |
-| `PUT /api/{session}/groups/{id}/settings/security/messages-admin-only` |  ✔️   |       |       |
-| `POST /api/{session}/groups/{id}/leave`                                |  ✔️   |  ✔️   |       |
-| `PUT /api/{session}/groups/{id}/description`                           |  ✔️   |  ✔️   |       |
-| `PUT /api/{session}/groups/{id}/subject`                               |  ✔️   |  ✔️   |       |
-| `GET /api/{session}/groups/{id}/invite-code`                           |  ✔️   |  ✔️   |       |
-| `POST /api/{session}/groups/{id}/invite-code/revoke`                   |  ✔️   |  ✔️   |       |
-| `GET /api/{session}/groups/{id}/participants`                          |  ✔️   |  ✔️   |       |
-| `POST /api/{session}/groups/{id}/participants/add`                     |  ✔️   |  ✔️   |       |
-| `POST /api/{session}/groups/{id}/participants/remove`                  |  ✔️   |  ✔️   |       |
-| `POST /api/{session}/groups/{id}/admin/promote`                        |  ✔️   |  ✔️   |       |
-| `POST /api/{session}/groups/{id}/admin/demote`                         |  ✔️   |  ✔️   |       |
+|                                                                        | WEBJS | NOWEB |
+|------------------------------------------------------------------------|:-----:|:-----:|
+| `POST /api/{session}/groups`                                           |  ✔️   |  ✔️   |
+| `GET /api/{session}/groups`                                            |  ✔️   |  ✔️   |
+| `GET /api/{session}/groups/{id}`                                       |  ✔️   |  ✔️   |
+| `DELETE /api/{session}/groups/{id}`                                    |  ✔️   |       |
+| `GET /api/{session}/groups/{id}/settings/security/info-admin-only`     |  ✔️   |       |
+| `PUT /api/{session}/groups/{id}/settings/security/info-admin-only`     |  ✔️   |       |
+| `GET /api/{session}/groups/{id}/settings/security/messages-admin-only` |  ✔️   |       |
+| `PUT /api/{session}/groups/{id}/settings/security/messages-admin-only` |  ✔️   |       |
+| `POST /api/{session}/groups/{id}/leave`                                |  ✔️   |  ✔️   |
+| `PUT /api/{session}/groups/{id}/description`                           |  ✔️   |  ✔️   |
+| `PUT /api/{session}/groups/{id}/subject`                               |  ✔️   |  ✔️   |
+| `GET /api/{session}/groups/{id}/invite-code`                           |  ✔️   |  ✔️   |
+| `POST /api/{session}/groups/{id}/invite-code/revoke`                   |  ✔️   |  ✔️   |
+| `GET /api/{session}/groups/{id}/participants`                          |  ✔️   |  ✔️   |
+| `POST /api/{session}/groups/{id}/participants/add`                     |  ✔️   |  ✔️   |
+| `POST /api/{session}/groups/{id}/participants/remove`                  |  ✔️   |  ✔️   |
+| `POST /api/{session}/groups/{id}/admin/promote`                        |  ✔️   |  ✔️   |
+| `POST /api/{session}/groups/{id}/admin/demote`                         |  ✔️   |  ✔️   |
 
 ### Presence
 Read more about 
 [**✅ Presence**]({{< relref "/docs/how-to/presence" >}})
 
-|                                                   | WEBJS | NOWEB | VENOM |
-|---------------------------------------------------|:-----:|:-----:|:-----:|
-| `POST /api/{session}/presence`                    |  ✔️   |  ✔️   |       |
-| `GET /api/{session}/presence`                     |       |  ✔️   |       |
-| `GET /api/{session}/presence/{chatId}`            |       |  ✔️   |       |
-| `POST /api/{session}/presence/{chatId}/subscribe` |       |  ✔️   |       |
+|                                                   | WEBJS | NOWEB |
+|---------------------------------------------------|:-----:|:-----:|
+| `POST /api/{session}/presence`                    |  ✔️   |  ✔️   |
+| `GET /api/{session}/presence`                     |       |  ✔️   |
+| `GET /api/{session}/presence/{chatId}`            |       |  ✔️   |
+| `POST /api/{session}/presence/{chatId}/subscribe` |       |  ✔️   |
 
 ### Labels
 Read more about 
@@ -219,10 +209,10 @@ Read more about
 Read more about 
 [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 
-|                                                   | WEBJS | NOWEB | VENOM |
-|---------------------------------------------------|:-----:|:-----:|:-----:|
-| **Other**                                         |       |       |       |
-| `GET /api/version`                                |  ✔️   |  ✔️   |       |
-| `GET /health` ![](/images/versions/plus.png)      |  ✔️   |  ✔️   |  ✔️   |
+|                                                   | WEBJS | NOWEB |
+|---------------------------------------------------|:-----:|:-----:|
+| **Other**                                         |       |       |
+| `GET /api/version`                                |  ✔️   |  ✔️   |
+| `GET /health` ![](/images/versions/plus.png)      |  ✔️   |  ✔️   |
 
 

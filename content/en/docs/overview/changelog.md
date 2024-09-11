@@ -38,6 +38,7 @@ Release policy:
 - **NOWEB** - fix memory leak and performance problems [#533](https://github.com/devlikeapro/waha/issues/533)
 - **WEBJS** - reduce memory usage for chrome/chromium for ~40MB per session
 - Adjust error message for WAHA Core when session `STOPPED` [#538](https://github.com/devlikeapro/waha/issues/538)
+- Removed `VENOM` engine completely 
 
 `2024.9.4`
 - Fix empty config sessions operations (`Session not found`)
