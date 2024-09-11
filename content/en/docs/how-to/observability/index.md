@@ -140,6 +140,7 @@ POST /api/server/stop
 👉 If you're using Docker and followed [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) guide,
 Docker will **automatically restart** the server, so you can use this endpoint to **restart** the server.
 
+
 ## Health Check
 
 <b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}})
@@ -320,4 +321,17 @@ authentication:
   }
 }
 ```
+
+## Get heapsnapshot
+```
+GET /api/server/debug/heapsnapshot
+```
+
+⚠️ For troubleshooting usage only
+
+Creates and download heap dump for Node.js. 
+
+You need to enabled it by setting `WAHA_DEBUG_MODE=True` before you can use it.
+
+
 
