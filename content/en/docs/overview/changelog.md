@@ -32,6 +32,10 @@ Release policy:
 💡 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
 ----
+
+Latest Version: 
+[![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
+
 ## 2024.9
 
 `2024.9.5`
