@@ -322,7 +322,7 @@ authentication:
 }
 ```
 
-## Get heapsnapshot
+## Get Node.js heapsnapshot
 ```
 GET /api/server/debug/heapsnapshot
 ```
