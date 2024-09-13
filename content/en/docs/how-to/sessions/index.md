@@ -24,7 +24,7 @@ messages
 , you need to [**Create**](#create-session) a session (optionally, [**Start**](#start-session)) and authenticate it using
 [**QR code**](#get-qr) or [**pairing code**](#get-pairing-code).
 
-Here's Session Lifecycle State Diagram (click to open full size):
+Here's Session Lifecycle State Diagram:
 
 {{< img src="/images/waha/waha-session-lifecycle.png" >}}
 
