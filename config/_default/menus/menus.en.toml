@@ -145,17 +145,22 @@
   weight = 91
 
 [[main]]
+  name = "WhatsApp + Typebot"
+  parent = "more"
+  url = "/whatsapp-typebot/"
+  weight = 92
+
+[[main]]
   name = "WhatsApp Channels Automation"
   parent = "more"
   url = "/whatsapp-channels/"
-  weight = 92
-
+  weight = 93
 
 [[main]]
   name = "WhatsApp Status Automation"
   parent = "more"
   url = "/whatsapp-status/"
-  weight = 93
+  weight = 94
 
 [[main]]
   name = "🇦🇪 العربية (Arabic)"
