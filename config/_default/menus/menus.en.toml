@@ -145,7 +145,7 @@
   weight = 91
 
 [[main]]
-  name = "WhatsApp + Typebot"
+  name = "WhatsApp Typebot Automation"
   parent = "more"
   url = "/whatsapp-typebot/"
   weight = 92
