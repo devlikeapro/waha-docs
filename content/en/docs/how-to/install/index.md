@@ -13,6 +13,30 @@ weight: 201
 please go to [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 
 ## Requirements
+### Operating System
+You can use any operating system for host system (Linux, Windows or macOS)
+as long as you have Docker installed, and it can run **Linux** containers.
+
+**Linux** is the most recommended operating system for running Docker containers.
+
+{{< details "<b>Linux</b>" >}}
+👉 We suggest using **Debian** or **Ubuntu** based distributions.
+{{< /details >}}
+
+{{< details "<b>Windows</b>" >}}
+👉 For **Windows** we kindly suggest using **Hyper-V** backend for 
+[Docker Desktop](https://docs.docker.com/desktop/install/windows-install/)!
+
+It might not work with **WSL2** backend properly.
+{{< /details >}}
+
+{{< details "<b>macOS (Apple Silicon)</b>" >}}
+👉 If you're using **Apple Silicon** (like Apple M1) - you need to use the `:arm` tag for the image.
+
+Go to
+[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
+to generate the command with the right image.
+{{< /details >}}
 
 ### Docker 🐳
 👉 WAHA works on top of **Docker**, that's the only thing you'll need!
@@ -31,21 +55,6 @@ Also, Docker makes installation and update processes so simple, just one command
 With Compose, you use a YAML file to configure your application's services.
 Then, with a single command, you create and start all the services from your configuration.
 {{< /details >}}
-
-### Choose the installation method
-You probably already have run the docker run command during 
-[**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}) guide:
-```bash
-docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
-```
-
-☝️ The above command is good **for testing and development purposes**, but **not for production**.
-
-To make it **production-ready**, you need to configure few more parameters to make it secure, reliable, and easy to manage.
-
-Please choose the installation method you prefer:
-- [**Docker Compose**]({{< relref "#docker-compose" >}}) - recommended
-- [**Docker**]({{< relref "#docker" >}}) - for advanced users
 
 ### Choose docker image
 We'll use
@@ -72,6 +81,22 @@ docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus
 ```
 
 For WAHA Core - use `devlikeapro/waha` image instead of `devlikeapro/waha-plus`.
+
+### Choose the installation method
+You probably already have run the docker run command during
+[**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}) guide:
+```bash
+docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
+```
+
+☝️ The above command is good **for testing and development purposes**, but **not for production**.
+
+To make it **production-ready**, you need to configure few more parameters to make it secure, reliable, and easy to manage.
+
+Please choose the installation method you prefer:
+- [**Docker Compose**]({{< relref "#docker-compose" >}}) - recommended
+- [**Docker**]({{< relref "#docker" >}}) - for advanced users
+
 
 ## Docker Compose
 ### Install
