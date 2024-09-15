@@ -19,6 +19,27 @@ toc: true
 {{< img src="/images/n8n/waha-n8n.png" >}}
 
 ## Overview
+
+```kroki {type=plantuml}
+@startmindmap
+skinparam monochrome true
++ OS
+++ Ubuntu
++++ Linux Mint
++++ Kubuntu
++++ Lubuntu
++++ KDE Neon
+++ LMDE
+++ SolydXK
+++ SteamOS
+++ Raspbian
+-- Windows 95
+-- Windows 98
+-- Windows NT
+--- Windows 8
+--- Windows 10
+@endmindmap
+```
 👉 You can follow 
 [**WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide**]({{< relref "/blog/waha-n8n" >}}) 
 to start **WAHA** and **n8n** from the scratch and start your first "echo" workflow!

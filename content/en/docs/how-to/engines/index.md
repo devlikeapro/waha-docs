@@ -53,6 +53,37 @@ Quotes from the users:
 ## Docker images
 WAHA provides few docker images with different setup.
 
+👉 Go to 
+[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
+to generate the command with the latest version and your key.
+
+```bash
+devlikeapro/{image}:{browser}[-cpu][-version]
+```
+
+### Image
+- `waha-plus` - [**➕ WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) image
+- `waha` - **WAHA Core** image
+
+### Browsers
+- **Chromium** (`latest`) - is the default browser for **WAHA**. It's a good choice for most cases.
+- **Chrome** (`chrome`) - is a good choice if you need to receive videos in Plus version.
+- **None** (`noweb`) - is a good choice if you want to use **NOWEB** engine.
+
+### CPU
+- **x86** - is a good choice for most cases.
+- **ARM** (`-arm`) - is a good choice if you're using ARM processors (like Apple Silicon, Apple M1, etc.)
+
+### Versions
+- **latest** - is the latest version of WAHA.
+- **pinned** - you can pin WAHA version by adding `-{version}` at the end of image tag.
+
+### Examples
+
+👉 Go to
+[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
+to generate the command with the latest version and your key.
+
 | Image                                                   | CPU | Browser                 |
 |---------------------------------------------------------|-----|-------------------------|
 | [WAHA Plus]({{< relref "/docs/how-to/plus-version" >}}) |     |                         |
@@ -67,24 +98,6 @@ WAHA provides few docker images with different setup.
 | `devlikeapro/waha:noweb`                                | x86 | None                    |
 | `devlikeapro/waha:arm`                                  | ARM | Chromium                |
 | `devlikeapro/waha:noweb-arm`                            | ARM | None                    |
-
-### Browsers
-- **Chromium** - is the default browser for **WAHA**. It's a good choice for most cases.
-- **Chrome** - is a good choice if you need to receive videos in Plus version.
-- **None** - is a good choice if you want to use **NOWEB** engine.
-
-### CPU
-- **x86** - is a good choice for most cases.
-- **ARM** - is a good choice if you're using ARM processors (like Apple Silicon, Apple M1, etc.)
-{{< alert icon="💡" text="Chrome version is not available in ARM" />}}
-
-
-### Versions
-
-💡 You can pin WAHA version by adding `-{version}` at the end of image tag.
-- `devlikeapro/waha-plus:chrome-{version}` => `devlikeapro/waha-plus:chrome-2024.6.1`
-- `devlikeapro/waha-plus:latest-{version}` => `devlikeapro/waha-plus:latest-2024.6.1`
-
 ## Features
 
 Some engines may not support certain features.

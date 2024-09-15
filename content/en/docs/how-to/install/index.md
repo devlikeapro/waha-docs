@@ -56,6 +56,10 @@ docker pull devlikeapro/waha-plus
 docker logout
 ```
 
+👉 Go to
+[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
+to generate the command with the latest version and your key.
+
 If you're using the **ARM** processor (like Apple Silicon, Apple M1, etc.) - add `:arm` tag at the end of the image name in the above commands.
 ```bash
 ```bash
