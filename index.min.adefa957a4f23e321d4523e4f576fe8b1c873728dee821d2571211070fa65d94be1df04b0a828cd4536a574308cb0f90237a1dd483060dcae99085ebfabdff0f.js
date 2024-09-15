@@ -153,18 +153,24 @@ The data for webhooks are wrapped inside a new WAWebhook object with event and p
 { \u0026quot;event\u0026quot;: \u0026quot;message.any\u0026quot;, \u0026quot;payload\u0026quot;: { } } `}),e.add({id:6,href:"/docs/how-to/",title:"How-to guides",description:"How-to guides",content:`How-to guides for WAHA - WhatsApp API.
 Discover how to use the WAHA, what you can do with it, and how to configure it right for your needs.
 `}),e.add({id:7,href:"/docs/how-to/install/",title:"🔧 Install \u0026 Update",description:"How to install and update WAHA",content:`👉 If you wish to follow a Step-By-Step guide which show you how to send you first message via HTTP API please go to ⚡ Quick Start.
-Requirements #Docker 🐳 #👉 WAHA works on top of Docker, that\u0026rsquo;s the only thing you\u0026rsquo;ll need!
+Requirements #Operating System #You can use any operating system for host system (Linux, Windows or macOS) as long as you have Docker installed, and it can run Linux containers.
+Linux is the most recommended operating system for running Docker containers.
+Linux👉 We suggest using Debian or Ubuntu based distributions. Windows👉 For Windows we kindly suggest using Hyper-V backend for Docker Desktop!
+It might not work with WSL2 backend properly.
+macOS (Apple Silicon)👉 If you\u0026rsquo;re using Apple Silicon (like Apple M1) - you need to use the :arm tag for the image.
+Go to Docker Image Configurator to generate the command with the right image.
+Docker 🐳 #👉 WAHA works on top of Docker, that\u0026rsquo;s the only thing you\u0026rsquo;ll need!
 Docker - please follow the official guides to install it on Linux, Windows, and macOS. Docker Compose - optional, but recommended for easier configuration. Why Docker?Docker makes it easy to ship all-in-one solution with the runtime and dependencies. You don\u0026rsquo;t have to worry about language-specific libraries or chrome installation.
 Also, Docker makes installation and update processes so simple, just one command!
-Why Docker Compose?Docker Compose is a tool for defining and running Docker applications. With Compose, you use a YAML file to configure your application\u0026rsquo;s services. Then, with a single command, you create and start all the services from your configuration. Choose the installation method #You probably already have run the docker run command during ⚡ Quick Start guide:
-docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha ☝️ The above command is good for testing and development purposes, but not for production.
-To make it production-ready, you need to configure few more parameters to make it secure, reliable, and easy to manage.
-Please choose the installation method you prefer:
-Docker Compose - recommended Docker - for advanced users Choose docker image #We\u0026rsquo;ll use ➕ WAHA Plus docker image in the examples:
+Why Docker Compose?Docker Compose is a tool for defining and running Docker applications. With Compose, you use a YAML file to configure your application\u0026rsquo;s services. Then, with a single command, you create and start all the services from your configuration. Choose docker image #We\u0026rsquo;ll use ➕ WAHA Plus docker image in the examples:
 docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus docker logout 👉 Go to Docker Image Configurator to generate the command with the latest version and your key.
 If you\u0026rsquo;re using the ARM processor (like Apple Silicon, Apple M1, etc.) - add :arm tag at the end of the image name in the above commands.
 \`\`\`bash docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus:arm docker logout # Rename it, so you can use devlikeapro/waha image in other place docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus For WAHA Core - use devlikeapro/waha image instead of devlikeapro/waha-plus.
-Docker Compose #Install #Here\u0026rsquo;s ready to go docker-compose.yml.
+Choose the installation method #You probably already have run the docker run command during ⚡ Quick Start guide:
+docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha ☝️ The above command is good for testing and development purposes, but not for production.
+To make it production-ready, you need to configure few more parameters to make it secure, reliable, and easy to manage.
+Please choose the installation method you prefer:
+Docker Compose - recommended Docker - for advanced users Docker Compose #Install #Here\u0026rsquo;s ready to go docker-compose.yml.
 Some important values you MUST change before running it:
 WHATSAPP_API_KEY - your key for secure API access. Read more 🔒 Security WAHA_DASHBOARD_USERNAME - your username for 📊 Dashboard WAHA_DASHBOARD_PASSWORD - your password for 📊 Dashboard WHATSAPP_SWAGGER_USERNAME - your username for 📚 Swagger WHATSAPP_SWAGGER_PASSWORD - your password for 📚 Swagger mkdir ~/waha cd ~/waha wget https://raw.githubusercontent.com/devlikeapro/waha/core/docker-compose.yaml # Change the values in the file # nano docker-compose.yaml # vim docker-compose.yaml docker compose up -d Now, open http://localhost:3000/dashboard and login with the credentials you\u0026rsquo;ve set.
 What is next? #The docker compose doesn\u0026rsquo;t have few thing you might need:

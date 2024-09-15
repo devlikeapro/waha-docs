@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>How-to guides on</title><link>https://waha.devlike.pro/docs/how-to/</link><description>Recent content in How-to guides on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 06 Oct 2020 08:49:15 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/docs/how-to/index.xml" rel="self" type="application/rss+xml"/><item><title>🔧 Install &amp; Update</title><link>https://waha.devlike.pro/docs/how-to/install/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/install/</guid><description>👉 If you wish to follow a Step-By-Step guide which show you how to send you first message via HTTP API please go to ⚡ Quick Start.
 Requirements #
-Docker 🐳 #
-👉 WAHA works on top of Docker, that&amp;rsquo;s the only thing you&amp;rsquo;ll need!
-Docker - please follow the official guides to install it on Linux, Windows, and macOS. Docker Compose - optional, but recommended for easier configuration. Why Docker?</description></item><item><title>📊 Dashboard</title><link>https://waha.devlike.pro/docs/how-to/waha-dashboard/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/waha-dashboard/</guid><description>Overview #
+Operating System #
+You can use any operating system for host system (Linux, Windows or macOS) as long as you have Docker installed, and it can run Linux containers.
+Linux is the most recommended operating system for running Docker containers.
+Linux
+👉 We suggest using Debian or Ubuntu based distributions.</description></item><item><title>📊 Dashboard</title><link>https://waha.devlike.pro/docs/how-to/waha-dashboard/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/waha-dashboard/</guid><description>Overview #
 Dashboard is a UI to manage your WhatsApp sessions!
 Download the Dashboard Overview video . You can access Dashboard by running the project and opening http://localhost:3000/dashboard (or similar, but with /dashboard at the end).
 ℹ️ Default username and password: waha/waha
