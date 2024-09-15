@@ -768,9 +768,9 @@ Click to open full size. WAHA Trigger #@devlikeapro/n8n-nodes-waha provides WAH
 Click to open full size. 💡 Remember to configure your WAHA Session with proper Webhook with WAHA trigger -\u0026gt; Webhook URL and the events you want to listen!
 Click to open full size. Click to open full size. Workflow Examples #👉 Check out https://waha-n8n-workflows.devlike.pro for workflow templates!
 Click to open full size. Troubleshooting #If you\u0026rsquo;re experiencing any issues or have a feature request, please check the below resources: WAHA:
-🧩 WAHA + n8n Integration ⚡ Quick Start 🔧 Install \u0026amp; Update n8n:
+🧩 n8n Integration ⚡ Quick Start 🔧 Install \u0026amp; Update n8n:
 Installation guide Install community nodes Create credentials If that doesn\u0026rsquo;t help - kindly open an issue in the devlikeapro/n8n-nodes-waha GitHub repository, we\u0026rsquo;re happy to help you out!
-`}),e.add({id:36,href:"/docs/integrations/typebot/",title:"Typebot",description:"WAHA + Typebot Integration",content:` 👉 Check out WAHA + Typebot templates
+`}),e.add({id:36,href:"/docs/integrations/typebot/",title:"Typebot",description:"WAHA Typebot Integration",content:` 👉 Check out WAHA + Typebot templates
 `}),e.add({id:37,href:"/docs/integrations/python/",title:"Python",description:"WhatsApp API + Python examples.",content:`
 We\u0026rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Python.
 You can find the examples in examples folder on GitHub with detailed instructions in README.md -\u0026gt;
