@@ -165,7 +165,7 @@ Also, Docker makes installation and update processes so simple, just one command
 Why Docker Compose?Docker Compose is a tool for defining and running Docker applications. With Compose, you use a YAML file to configure your application\u0026rsquo;s services. Then, with a single command, you create and start all the services from your configuration. Choose docker image #We\u0026rsquo;ll use ➕ WAHA Plus docker image in the examples:
 docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus docker logout 👉 Go to Docker Image Configurator to generate the command with the latest version and your key.
 If you\u0026rsquo;re using the ARM processor (like Apple Silicon, Apple M1, etc.) - add :arm tag at the end of the image name in the above commands.
-\`\`\`bash docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus:arm docker logout # Rename it, so you can use devlikeapro/waha image in other place docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus For WAHA Core - use devlikeapro/waha image instead of devlikeapro/waha-plus.
+docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus:arm docker logout # Rename it, so you can use devlikeapro/waha image in other place docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus For WAHA Core - use devlikeapro/waha image instead of devlikeapro/waha-plus.
 Choose the installation method #You probably already have run the docker run command during ⚡ Quick Start guide:
 docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha ☝️ The above command is good for testing and development purposes, but not for production.
 To make it production-ready, you need to configure few more parameters to make it secure, reliable, and easy to manage.
