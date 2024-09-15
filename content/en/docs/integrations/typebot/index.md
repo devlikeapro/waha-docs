@@ -1,5 +1,5 @@
 ---
-title: "WAHA + Typebot"
+title: "Typebot"
 description: "WAHA + Typebot Integration"
 lead: "WAHA + Typebot Integration"
 date: 2024-09-05T08:49:31+00:00

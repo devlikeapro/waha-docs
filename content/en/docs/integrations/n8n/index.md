@@ -1,5 +1,5 @@
 ---
-title: "WAHA + n8n"
+title: "n8n"
 description: "Start developing your WhatsApp automation with using n8n and WAHA in pair!"
 lead: "Start developing your WhatsApp automation with using n8n and WAHA in pair!"
 date: 2024-09-05T08:49:31+00:00
