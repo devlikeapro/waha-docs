@@ -1,7 +1,7 @@
 ---
 title: "Typebot"
-description: "WAHA + Typebot Integration"
-lead: "WAHA + Typebot Integration"
+description: "WAHA Typebot Integration"
+lead: "WAHA Typebot Integration"
 date: 2024-09-05T08:49:31+00:00
 lastmod: 2024-09-06T08:49:31+00:00
 draft: false

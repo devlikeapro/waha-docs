@@ -131,7 +131,7 @@ for workflow templates!
 ## Troubleshooting
 If you're experiencing any issues or have a feature request, please check the below resources:
 **WAHA**:
-- [**🧩 WAHA + n8n Integration**]({{< relref "/docs/integrations/n8n" >}})
+- [**🧩 n8n Integration**]({{< relref "/docs/integrations/n8n" >}})
 - [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}})
 - [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}})
   
