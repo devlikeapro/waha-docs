@@ -59,6 +59,7 @@ Then, with a single command, you create and start all the services from your con
 ### Choose docker image
 We'll use
 [➕ WAHA Plus]({{< relref "/docs/how-to/plus-version" >}}) docker image in the examples:
+
 ```bash
 docker login -u devlikeapro -p {KEY}
 docker pull devlikeapro/waha-plus
@@ -70,7 +71,6 @@ docker logout
 to generate the command with the latest version and your key.
 
 If you're using the **ARM** processor (like Apple Silicon, Apple M1, etc.) - add `:arm` tag at the end of the image name in the above commands.
-```bash
 ```bash
 docker login -u devlikeapro -p {KEY}
 docker pull devlikeapro/waha-plus:arm
