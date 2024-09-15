@@ -22,7 +22,8 @@ We will guide you through the necessary steps to successfully send your first te
 <div class='article-card'>
   <b class='h4'>Are you a visual learner?</b>
 
-We've got you covered! Watch the video tutorial below to see how to send your first message using <b>WAHA</b>
+We've got you covered! <br/>
+Watch the video tutorial below to see how to send your first message using <b>WAHA</b>
 
   <div class="d-flex justify-content-center my-4">
     <iframe
