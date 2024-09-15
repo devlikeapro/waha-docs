@@ -84,20 +84,22 @@ devlikeapro/{image}:{browser}[-cpu][-version]
 [**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
 to generate the command with the latest version and your key.
 
-| Image                                                   | CPU | Browser                 |
-|---------------------------------------------------------|-----|-------------------------|
-| [WAHA Plus]({{< relref "/docs/how-to/plus-version" >}}) |     |                         |
-| `devlikeapro/waha-plus:latest`                          | x86 | Chromium                |
-| `devlikeapro/waha-plus:chrome`                          | x86 | Chrome (supports video) |
-| `devlikeapro/waha-plus:noweb`                           | x86 | None                    |
-| `devlikeapro/waha-plus:arm`                             | ARM | Chromium                |
-| `devlikeapro/waha-plus:noweb-arm`                       | ARM | None                    |
-| **WAHA Core**                                           |     |                         |
-| `devlikeapro/waha:latest`                               | x86 | Chromium                |
-| `devlikeapro/waha:chrome`                               | x86 | Chrome                  |
-| `devlikeapro/waha:noweb`                                | x86 | None                    |
-| `devlikeapro/waha:arm`                                  | ARM | Chromium                |
-| `devlikeapro/waha:noweb-arm`                            | ARM | None                    |
+| Image                                                       | CPU | Browser                 |
+|-------------------------------------------------------------|-----|-------------------------|
+| [**WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) |     |                         |
+| `devlikeapro/waha-plus:latest`                              | x86 | Chromium                |
+| `devlikeapro/waha-plus:chrome`                              | x86 | Chrome (supports video) |
+| `devlikeapro/waha-plus:noweb`                               | x86 | None                    |
+| `devlikeapro/waha-plus:arm`                                 | ARM | Chromium                |
+| `-`                                                         | ARM | Chrome                  |
+| `devlikeapro/waha-plus:noweb-arm`                           | ARM | None                    |
+| **WAHA Core**                                               |     |                         |
+| `devlikeapro/waha:latest`                                   | x86 | Chromium                |
+| `devlikeapro/waha:chrome`                                   | x86 | Chrome                  |
+| `devlikeapro/waha:noweb`                                    | x86 | None                    |
+| `-`                                                         | ARM | Chrome                  |
+| `devlikeapro/waha:arm`                                      | ARM | Chromium                |
+| `devlikeapro/waha:noweb-arm`                                | ARM | None                    |
 ## Features
 
 Some engines may not support certain features.
