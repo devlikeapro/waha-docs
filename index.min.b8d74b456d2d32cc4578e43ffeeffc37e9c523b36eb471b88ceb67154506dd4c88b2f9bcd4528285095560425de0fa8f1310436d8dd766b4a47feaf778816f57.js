@@ -755,7 +755,7 @@ Patron Portal #After subscribing on Patreon or Boosty, you will get access to t
 Read more about Patron Portal in Patreon -\u0026gt; or Boosty -\u0026gt; posts.
 Install Plus #After you get the password, get your login to Docker Hub in Patron Portal -\u0026gt; and run the commands:
 docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus docker logout Then in all commands use Plus image devlikeapro/waha-plus instead of Core devlikeapro/waha.
-`}),e.add({id:35,href:"/docs/integrations/n8n/",title:"WAHA + n8n",description:"Start developing your WhatsApp automation with using n8n and WAHA in pair!",content:` Click to open full size. Overview #@startmindmap skinparam monochrome true + OS ++ Ubuntu +++ Linux Mint +++ Kubuntu +++ Lubuntu +++ KDE Neon ++ LMDE ++ SolydXK ++ SteamOS ++ Raspbian -- Windows 95 -- Windows 98 -- Windows NT --- Windows 8 --- Windows 10 @endmindmap 👉 You can follow WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide to start WAHA and n8n from the scratch and start your first \u0026ldquo;echo\u0026rdquo; workflow!
+`}),e.add({id:35,href:"/docs/integrations/n8n/",title:"n8n",description:"Start developing your WhatsApp automation with using n8n and WAHA in pair!",content:` Click to open full size. Overview #@startmindmap skinparam monochrome true + OS ++ Ubuntu +++ Linux Mint +++ Kubuntu +++ Lubuntu +++ KDE Neon ++ LMDE ++ SolydXK ++ SteamOS ++ Raspbian -- Windows 95 -- Windows 98 -- Windows NT --- Windows 8 --- Windows 10 @endmindmap 👉 You can follow WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide to start WAHA and n8n from the scratch and start your first \u0026ldquo;echo\u0026rdquo; workflow!
 Alternatively, check the installation guides for n8n and WAHA:
 WAHA:
 ⚡ Quick Start 🔧 Install \u0026amp; Update n8n:
@@ -770,7 +770,7 @@ Click to open full size. Click to open full size. Workflow Examples #👉 Check
 Click to open full size. Troubleshooting #If you\u0026rsquo;re experiencing any issues or have a feature request, please check the below resources: WAHA:
 🧩 WAHA + n8n Integration ⚡ Quick Start 🔧 Install \u0026amp; Update n8n:
 Installation guide Install community nodes Create credentials If that doesn\u0026rsquo;t help - kindly open an issue in the devlikeapro/n8n-nodes-waha GitHub repository, we\u0026rsquo;re happy to help you out!
-`}),e.add({id:36,href:"/docs/integrations/typebot/",title:"WAHA + Typebot",description:"WAHA + Typebot Integration",content:` 👉 Check out WAHA + Typebot templates
+`}),e.add({id:36,href:"/docs/integrations/typebot/",title:"Typebot",description:"WAHA + Typebot Integration",content:` 👉 Check out WAHA + Typebot templates
 `}),e.add({id:37,href:"/docs/integrations/python/",title:"Python",description:"WhatsApp API + Python examples.",content:`
 We\u0026rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Python.
 You can find the examples in examples folder on GitHub with detailed instructions in README.md -\u0026gt;
