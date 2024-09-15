@@ -77,6 +77,10 @@ docker pull devlikeapro/waha-plus
 docker logout
 ```
 
+👉 Go to
+[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
+to generate the command with the right version.
+
 #### ARM processors
 
 If you're using ARM (like Apple M1/M2, etc.) - use following commands to download the image:
