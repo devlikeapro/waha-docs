@@ -20,7 +20,7 @@ toc: true
 To set up **WhatsApp Typebot** integration you'll need three things:
 1. **WAHA** - installed self-hosted WhatsApp API - [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}})
 2. [**🧩 n8n Integration**]({{< relref "/docs/integrations/n8n" >}}) - to create workflows
-3. **Typebot** - either self-hosted or cloud version
+3. **Typebot** - either [self-hosted](https://docs.typebot.io/self-hosting/get-started) or [cloud](https://app.typebot.io/) version
    1. To use **Typebot Cloud** you need to make sure your **n8n** webhook is accessible from the internet
 
 👉 Check out [**WAHA + Typebot Template**](https://waha-n8n-templates.devlike.pro/whatsapp-typebot/) 
