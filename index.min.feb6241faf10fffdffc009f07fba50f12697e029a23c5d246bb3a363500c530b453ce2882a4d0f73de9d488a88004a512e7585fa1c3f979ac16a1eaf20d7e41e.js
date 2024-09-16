@@ -771,8 +771,8 @@ Click to open full size. Click to open full size. Workflow Examples #👉 Check
 Click to open full size. Troubleshooting #If you\u0026rsquo;re experiencing any issues or have a feature request, please check the below resources: WAHA:
 🧩 n8n Integration ⚡ Quick Start 🔧 Install \u0026amp; Update n8n:
 Installation guide Install community nodes Create credentials If that doesn\u0026rsquo;t help - kindly open an issue in the devlikeapro/n8n-nodes-waha GitHub repository, we\u0026rsquo;re happy to help you out!
-`}),e.add({id:36,href:"/docs/integrations/typebot/",title:"Typebot",description:"WAHA Typebot Integration",content:` To set up WhatsApp Typebot integration you\u0026rsquo;ll need three things:
-WAHA - installed self-hosted WhatsApp API - ⚡ Quick Start 🧩 n8n Integration - to create workflows Typebot - either self-hosted or cloud version To use Typebot Cloud you need to make sure your n8n webhook is accessible from the internet 👉 Check out WAHA + Typebot Template to start from the scratch and create your first Typebot integration!
+`}),e.add({id:36,href:"/docs/integrations/typebot/",title:"Typebot",description:"WAHA Typebot Integration",content:` To set up WhatsApp Typebot integration you\u0026rsquo;ll need few things:
+WAHA - installed self-hosted WhatsApp API - ⚡ Quick Start 🧩 n8n Integration - to create workflows Typebot - either self-hosted or cloud version To use Typebot Cloud you need to make sure your n8n webhook is accessible from the internet PostgreSQL - to store Typebot data (and WAHA-Typebot relations) 👉 Check out WAHA + Typebot Template to start from the scratch and create your first Typebot integration!
 `}),e.add({id:37,href:"/docs/integrations/python/",title:"Python",description:"WhatsApp API + Python examples.",content:`
 We\u0026rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Python.
 You can find the examples in examples folder on GitHub with detailed instructions in README.md -\u0026gt;
