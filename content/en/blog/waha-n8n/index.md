@@ -29,8 +29,7 @@ your own no-code or low-code **WhatsApp automation**:
 Here's a quick docker-compose we have prepared for you to start using **n8n** with **WAHA**:
 
 ```bash
-wget https://raw.githubusercontent.com/devlikeapro/waha/core/docker-compose.n8n.yaml
-mv docker-compose.n8n.yaml docker-compose.yaml
+wget https://raw.githubusercontent.com/devlikeapro/waha/core/docker-compose/n8n/docker-compose.yaml
 ```
 
 
