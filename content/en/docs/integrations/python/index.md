@@ -5,7 +5,7 @@ lead: "WhatsApp API + Python examples."
 date: 2020-10-06T08:49:31+00:00
 lastmod: 2020-10-06T08:49:31+00:00
 draft: false
-images: ["/images/python-whatsapp.png"]
+images: ["python-whatsapp.png"]
 menu:
 docs:
 parent: "help"

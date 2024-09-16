@@ -10,6 +10,7 @@ docs:
 parent: "help"
 weight: 909
 toc: true
+images: ['logo.png']
 ---
 
 

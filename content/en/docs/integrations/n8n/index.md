@@ -10,6 +10,7 @@ docs:
 parent: "help"
 weight: 901
 toc: true
+images: ['WAHA+n8n.png']
 ---
 
 <p align="center">

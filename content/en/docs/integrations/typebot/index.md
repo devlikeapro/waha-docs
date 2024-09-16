@@ -9,6 +9,7 @@ menu:
 docs:
 parent: "help"
 weight: 902
+images: ["waha+typebot.png"]
 toc: true
 ---
 
