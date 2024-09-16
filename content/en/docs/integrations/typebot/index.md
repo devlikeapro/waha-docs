@@ -17,5 +17,5 @@ toc: true
 </p>
 
 
-👉 Check out [**WAHA + Typebot templates**](https://waha-n8n-templates.devlike.pro/whatsapp-typebot/)
+👉 Check out [**WAHA + Typebot Template**](https://waha-n8n-templates.devlike.pro/whatsapp-typebot/)
 
