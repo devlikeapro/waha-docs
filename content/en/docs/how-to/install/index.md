@@ -127,6 +127,7 @@ Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and
 #### What is next?
 The docker compose doesn't have few thing you might need:
 - [HTTPS]({{< relref "/docs/how-to/security#https" >}}) - 👉 follow [**Step-by-step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
+- *Optional* - configure **S3** for media (files) and **MongoDB** for sessions - [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}) 
 
 ### Update
 When there's a new version of WAHA, you can update it with a single commands:
@@ -211,6 +212,11 @@ cd +x waha-update.sh
 ```
 
 Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and login with the credentials you've set.
+
+#### What is next?
+The docker run command doesn't have few thing you might need:
+- [HTTPS]({{< relref "/docs/how-to/security#https" >}}) - 👉 follow [**Step-by-step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
+- *Optional* - configure **S3** for media (files) and **MongoDB** for sessions - [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}) 
 
 ### Update
 ```bash
