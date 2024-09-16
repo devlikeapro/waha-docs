@@ -38,6 +38,10 @@ Latest Version:
 
 ## 2024.9
 
+`2024.9.{next}`
+- Retrieve engine info only on detailed `GET /api/sessions/{name}`
+- Check session's status before performing the request in most endpoints
+
 `2024.9.5`
 - **NOWEB** - fix memory leak and performance problems [#533](https://github.com/devlikeapro/waha/issues/533)
 - **WEBJS** - reduce memory usage for chrome/chromium for ~40MB per session
