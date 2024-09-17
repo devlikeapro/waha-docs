@@ -73,7 +73,7 @@ Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on
 Release policy:
 YYYY.M.1 - new features. We release new features every month as first release (not always on the first day) if you see a new 2024.8.1 version - there are new features! YYYY.M.BUILD - bug fixes. We release bug fixes during the month if you see a new 2024.8.2 and version - there are bug fixes! 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
 Latest Version: 2024.9 #2024.9.{next}
-Retrieve engine info only on detailed GET /api/sessions/{name} Check session\u0026rsquo;s status before performing the request in most endpoints Dashboard, API - Add me for STOPPED sessions (account phone number, push name) Dashboard - Hide duplicated sessions flag (match by session.name+me.id) 2024.9.5
+Retrieve engine info only on detailed GET /api/sessions/{name} Check session\u0026rsquo;s status before performing the request in most endpoints Dashboard, API - Add me for STOPPED sessions (account phone number, push name) Dashboard - Hide duplicated sessions flag for multiple servers setup (match by session.name+me.id) 2024.9.5
 NOWEB - fix memory leak and performance problems #533 WEBJS - reduce memory usage for chrome/chromium for ~40MB per session Adjust error message for WAHA Core when session STOPPED #538 Removed VENOM engine completely Add special /api/server/debug/heapsnapshot to get heap dump for Node.js by WAHA_DEBUG_MODE=True 2024.9.4
 Fix empty config sessions operations (Session not found) 2024.9.3
 NOWEB - fix restarting issue when websocket is not connected yet (WebSocket was closed before the connection was established) 2024.9.2
