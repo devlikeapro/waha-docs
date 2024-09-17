@@ -38,7 +38,8 @@ Latest Version:
 
 ## 2024.9
 
-`2024.9.{next}`
+`2024.9.6`
+- **WEBJS**, **NOWEB** - fix auto restart logic bug
 - **WEBJS** - support pairing via code `POST /api/{session}/auth/request-code` 
   - Read more [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions#get-pairing-code" >}}) 
 - Retrieve engine info only on detailed `GET /api/sessions/{name}`
