@@ -12,7 +12,7 @@
 | **Get screenshot** <br> `GET /api/screenshot`                     |  ✔️   |                            ➖                            |
 | **Get me** <br> `GET /api/sessions/{session}/me`                  |  ✔️   |                           ✔️                            |
 | **Get QR** <br> `POST /api/{session}/auth/qr`                     |  ✔️   |                           ✔️                            |
-| **Request code** <br> `POST /api/{session}/auth/request-code`     |       |                           ✔️                            |
+| **Request code** <br> `POST /api/{session}/auth/request-code`     |  ✔️   |                           ✔️                            |
 | **Authorize code** <br> `POST /api/{session}/auth/authorize-code` |       | ️[#113](https://github.com/devlikeapro/waha/issues/113) |
 
 ****

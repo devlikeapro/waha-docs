@@ -612,13 +612,16 @@ Body example:
 }
 ```
 
-You'll get code in the response that you can use on your WhatsApp app to connect the session:
+You'll get code in the need to enter in **WhatsApp app** to authenticate the session:
 
 ```json
 {
   "code": "ABCD-ABCD"
 }
 ```
+
+👉 **Always** add to [**QR code auth flow**](#get-qr) in your application as a fallback, 
+because the pairing code is not always available and works as expected.
 
 ## Webhooks
 

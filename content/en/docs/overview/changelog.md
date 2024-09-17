@@ -39,8 +39,11 @@ Latest Version:
 ## 2024.9
 
 `2024.9.{next}`
+- **WEBJS** - support pairing via code `POST /api/{session}/auth/request-code` 
+  - Read more [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions#get-pairing-code" >}}) 
 - Retrieve engine info only on detailed `GET /api/sessions/{name}`
 - Check session's status before performing the request in most endpoints
+- **Dashboard** - add login via **QR** and **Code** auth flows
 - **Dashboard, API** - Add `me` for `STOPPED` sessions (account phone number, push name)
 - **Dashboard** - Hide duplicated sessions flag for multiple servers setup (match by `session.name+me.id`)
 
