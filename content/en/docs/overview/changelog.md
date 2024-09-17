@@ -42,7 +42,7 @@ Latest Version:
 - Retrieve engine info only on detailed `GET /api/sessions/{name}`
 - Check session's status before performing the request in most endpoints
 - **Dashboard, API** - Add `me` for `STOPPED` sessions (account phone number, push name)
-- **Dashboard** - Hide duplicated sessions flag (match by `session.name+me.id`)
+- **Dashboard** - Hide duplicated sessions flag for multiple servers setup (match by `session.name+me.id`)
 
 `2024.9.5`
 - **NOWEB** - fix memory leak and performance problems [#533](https://github.com/devlikeapro/waha/issues/533)
