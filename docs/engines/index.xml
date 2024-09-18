@@ -7,8 +7,8 @@ Run WEBJS #
 NOWEB engine does not require a browser to work with WhatsApp Web, it does so directly using a WebSocket. Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!
 ⚠ Read the article before using NOWEB engine How to avoid blocking -&amp;gt;.
 Run NOWEB #
-# Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=NOWEB&amp;quot; devlikeapro/waha # Plus docker run -v `pwd`/.sessions:/app/.sessions -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=NOWEB&amp;quot; devlikeapro/waha-plus Store #
-By default, NOWEB doesn&amp;rsquo;t store any contacts, chats, or messages, so it&amp;rsquo;s your application&amp;rsquo;s responsibility to store them.</description></item><item><title>VENOM</title><link>https://waha.devlike.pro/docs/engines/venom/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/engines/venom/</guid><description>Overview #
+# Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=NOWEB&amp;quot; devlikeapro/waha # Plus docker run -v `pwd`/.sessions:/app/.sessions -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=NOWEB&amp;quot; devlikeapro/waha-plus Configuration #
+markOnline: true - send online presence when session starts (default true).</description></item><item><title>VENOM</title><link>https://waha.devlike.pro/docs/engines/venom/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/engines/venom/</guid><description>Overview #
 ⚠️ ⚠️ ⚠️ DEPRECATED - use WEBJS or NOWEB instead. ⚠️ ⚠️ ⚠️
 It&amp;rsquo;s a high-performance system developed with JavaScript to create a bot for WhatsApp. It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
 Run VENOM #
