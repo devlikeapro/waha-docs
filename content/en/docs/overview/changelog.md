@@ -39,6 +39,8 @@ Latest Version:
 ## 2024.9
 
 `2024.9.6`
+- **NOWEB** - set session presence (`online|offline`) at the start - [#412](https://github.com/devlikeapro/waha/issues/412)
+  - Affects notifications on your phone (if it's `online` - you won't get in-app notifications on your device)
 - **WEBJS**, **NOWEB** - fix auto restart logic bug
 - **WEBJS** - support pairing via code `POST /api/{session}/auth/request-code` 
   - Read more [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions#get-pairing-code" >}}) 

@@ -27,6 +27,25 @@ docker run -it -e "WHATSAPP_DEFAULT_ENGINE=NOWEB" devlikeapro/waha
 docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=NOWEB" devlikeapro/waha-plus
 ```
 
+## Configuration
+- `markOnline: true` - send `online` **presence** when session starts (default `true`).
+  - Required if you want to get notifications in your phone
+  - Read more about [**✅ Presence**]({{< relref "/docs/how-to/presence" >}})
+
+
+```json
+{
+  "name": "default",
+  "config": {
+    "noweb": {
+      "markOnline": false,
+      "store": {
+        ...
+      }
+    }
+  }
+}
+```
 
 ## Store
 By default, **NOWEB** doesn't store any contacts, chats, or messages, so it's your application's responsibility to store them.

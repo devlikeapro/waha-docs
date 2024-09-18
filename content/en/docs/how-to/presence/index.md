@@ -19,6 +19,11 @@ Possible presence statuses that you can set or get for chats:
 - `recording`
 - `paused` resets the chat presence after you were `typing`
 
+## FAQ
+👉 **I don't get notifications on my phone when WAHA session is connected**
+- You need to send `offline` after all presence you send (WhatsApp doesn't send notifications to the device if a web client is active).
+- For [**🏭 NOWEB Engine**]({{< relref "/docs/engines/NOWEB" >}}) also mark sure to send `markOnline: false` 
+when you create a new session.
 
 ## Endpoints
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
