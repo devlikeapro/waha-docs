@@ -44,12 +44,14 @@
 <script type="text/javascript">
     // Call it only if > 990 width, avoid on mobile screens
     if (window.innerWidth > 990) {
-        docsearch({
-            appId: "OV9LGQBN5C",
-            apiKey: "7005679dc522e856719f3270aac826a1",
-            indexName: "wahalike",
-            container: ".doks-search",
-            debug: false
-        });
+        setTimeout(() => {
+            docsearch({
+                appId: "OV9LGQBN5C",
+                apiKey: "7005679dc522e856719f3270aac826a1",
+                indexName: "wahalike",
+                container: ".doks-search",
+                debug: false
+            });
+        }, 1000)
     }
 </script>
