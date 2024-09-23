@@ -44,6 +44,7 @@ Latest Version:
 - **WEBJS** - Add `message.waiting` event for encrypted but not yet decrypted messages [#554](https://github.com/devlikeapro/waha/issues/554)
   - [**🔄 Webhooks** - message.waiting]({{< relref "webhooks#messagewaiting" >}})
   - [https://faq.whatsapp.com/3398056720476987](https://faq.whatsapp.com/3398056720476987)
+- **WEBJS** - handle connectivity issues better, restart client if required [#552](https://github.com/devlikeapro/waha/issues/552)
 - Use `axios` as default library for sending webhooks - solve bad webhooks performance issues for many sessions installation.
 - Handle webhooks retries properly in **WAHA Plus** version (using `axios`)
 
