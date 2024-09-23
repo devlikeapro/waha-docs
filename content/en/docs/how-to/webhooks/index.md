@@ -354,9 +354,10 @@ on your phone.
     "to": "11111111111@c.us",
     ...
     "_data": {
-        ...
+      ...
     }
   }
+}
 ```
 
 ### message.revoked
