@@ -225,7 +225,7 @@ Receive events when server or recipient gets the message, read or played it.
 ```
 
 
-## Files ![](/images/versions/plus.png)
+## Files
 
 When people send you media - images, voice messages, and documents - WAHA saves it in the file storage.
 In your application you must download it and use it as you want to. You can find the URL in `media.url` field.

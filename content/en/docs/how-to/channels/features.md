@@ -11,7 +11,7 @@
 | **Send messages - Image** ![](/images/versions/plus.png) <br> `POST /api/sendImage`    | ✔️                                                     | ✔️                                                             |
 | **Send messages - Poll** <br> `POST /api/sendPoll`                                     |                                                        |                                                                |
 | **Receive messages - Text** <br> `message` event                                       | ✔️                                                     | ✔️                                                             |
-| **Receive messages - Image** ![](/images/versions/plus.png) <br> `message` event       | ✔️                                                     | ✔️                                                             |
+| **Receive messages - Image** <br> `message` event                                      | ✔️                                                     | ✔️                                                             |
 | **Receive messages - Polls**                                                           |                                                        | ✔️                                                             |
 | **Receive messages - Polls Votes (in my channel)**                                     |                                                        |                                                                |
 | **Receive messages - Reactions (in my channel)**                                       |                                                        |                                                                |
