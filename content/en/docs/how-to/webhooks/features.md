@@ -1,7 +1,6 @@
 |                                                     | WEBJS | NOWEB |
 |-----------------------------------------------------|:-----:|:-----:|
 | `message`                                           |  ✔️   |  ✔️   |
-| `message` with files ![](/images/versions/plus.png) |  ✔️   |  ✔️   |
 | `message.reaction`                                  |  ✔️   |  ✔️   |
 | `message.any`                                       |  ✔️   |  ✔️   |
 | `message.ack`                                       |  ✔️   |  ✔️   |
