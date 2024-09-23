@@ -39,6 +39,8 @@ Latest Version:
 `2024.10.1`
 - Receive **media** now available in **WAHA Core** version!
   - [**📥 Receive messages** - Files]({{<relref "/docs/how-to/receive-messages#files" >}})
+- Add `PORT` environment variable for HeroKu deployment - [#555](https://github.com/devlikeapro/waha/issues/555)
+- Add `WAHA_BASE_URL` environment variable to set the base URL for the server for `media.url` links
 - Use `axios` as default library for sending webhooks - solve bad webhooks performance issues for many sessions installation.
 - Handle webhooks retries properly in **WAHA Plus** version (using `axios`)
 

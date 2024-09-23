@@ -25,9 +25,12 @@ The following environment variables can be used to configure the WAHA.
 
 ## Common
 - `WHATSAPP_API_PORT=3000`: The port number that the HTTP server will listen on. The default value is `3000`.
+  - `PORT=3000` is also supported (for Heroku compatibility)
 - `WHATSAPP_API_HOSTNAME=localhost`: The hostname for the HTTP server. The default value is `localhost`.
 - `WHATSAPP_API_SCHEMA=https` - it just changes `media.url` schema when you receive media (with files) messages.
   - In order to properly configure SSL follow [**Step-by-step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
+- `WAHA_BASE_URL` - will be used to construct the `media.url` field in the webhook events. 
+  - By default, it's `{WHATSAPP_API_SCHEMA}://{WHATSAPP_API_HOSTNAME}:{WHATSAPP_API_PORT}`.
 - `WAHA_DEBUG_MODE=false` - enables some API only for development or troubleshooting purposes. Disabled by default.
 - `TZ=Europe/Warsaw` - set the timezone for the container. The default value is `UTC`. Find [your timezone in the list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 

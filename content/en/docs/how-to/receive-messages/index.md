@@ -277,6 +277,9 @@ To configure the `media.url` you can use environment variables:
 - `WHATSAPP_API_HOSTNAME=waha.example.com` 
 - `WHATSAPP_API_PORT=3000`
 
+Or define the single
+- `WAHA_BASE_URL=https://waha.example.com` (only affects `media.url`)
+
 By default, WAHA download all files that the account receive.
 If you want to limit files lifetime, specify file types for download or change directory for files -
 [read more about file storage configuration and variables ->]({{< relref "config" >}}).
