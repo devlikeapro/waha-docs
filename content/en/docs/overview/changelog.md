@@ -37,6 +37,8 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.10
 `2024.10.1`
+- Receive **media** now available in **WAHA Core** version!
+  - [**📥 Receive messages** - Files]({{<relref "/docs/how-to/receive-messages#files" >}})
 - Use `axios` as default library for sending webhooks - solve bad webhooks performance issues for many sessions installation.
 - Handle webhooks retries properly in **WAHA Plus** version (using `axios`)
 
