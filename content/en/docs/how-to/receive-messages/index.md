@@ -201,6 +201,31 @@ Receive events when server or recipient gets the message, read or played it.
 }
 ```
 
+### message.waiting
+Happens when you see
+[Waiting for this message. This may take a while.](https://faq.whatsapp.com/3398056720476987)
+on your phone.
+
+![waiting for this message](waiting-for-this-message.jpg)
+
+```json
+{
+  "event": "message.waiting",
+  "session": "default",
+  "engine": "WEBJS",
+  "payload": {
+    "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "timestamp": 1667561485,
+    "from": "11111111111@c.us",
+    "fromMe": true,
+    "to": "11111111111@c.us",
+    ...
+    "_data": {
+        ...
+    }
+  }
+```
+
 ### message.revoked
 
 [See details on Webhooks page ->]({{< relref "webhooks#messageack" >}}).
