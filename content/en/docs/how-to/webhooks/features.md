@@ -5,6 +5,7 @@
 | `message.reaction`                                  |  ✔️   |  ✔️   |
 | `message.any`                                       |  ✔️   |  ✔️   |
 | `message.ack`                                       |  ✔️   |  ✔️   |
+| `message.waiting`                                   |  ✔️   |       |
 | `message.revoked`                                   |  ✔️   |       |
 | `state.change`                                      |  ✔️   |  ✔️   |
 | `group.join`                                        |  ✔️   |  ✔️   |
