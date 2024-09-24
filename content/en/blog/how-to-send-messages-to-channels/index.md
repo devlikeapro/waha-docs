@@ -61,7 +61,7 @@ docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 ```
 It may take time to download the image, depending on your internet speed.
 
-If you're using **ARM** processor (like **Apple M1/M2**) run the following commands instead:
+If you're using **ARM** processor (like **Apple M1/M2**, **Raspberry Pi**) run the following commands instead:
 ```bash
 # Download the image
 docker pull devlikeapro/waha:arm

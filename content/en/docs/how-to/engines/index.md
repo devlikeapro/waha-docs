@@ -72,7 +72,7 @@ devlikeapro/{image}:{browser}[-cpu][-version]
 
 ### CPU
 - **x86** - is a good choice for most cases.
-- **ARM** (`-arm`) - is a good choice if you're using ARM processors (like Apple Silicon, Apple M1, etc.)
+- **ARM** (`-arm`) - is a good choice if you're using ARM processors (like **Apple Silicon M1\M2**, **Raspberry Pi**, etc.)
 
 ### Versions
 - **latest** - is the latest version of WAHA.
