@@ -1,0 +1,121 @@
+{{ define "main" }}
+<script>
+    AOS.init();
+</script>
+
+{{ $content := readFile "/layouts/include/bubbles.html" | safeHTML }}
+{{ $content }}
+
+<section class='section section-md pb-0'>
+    <div class='container'>
+        <div class='row text-center mb-4'>
+            <div class='col' data-aos="fade-up">
+                <h1 class='display-5 fw-normal mt-1'>{{ .Summary }}</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-lg-10 d-flex flex-column gap-2 mb-4' data-aos="fade-up">
+                <div>
+                    <p class="lead">
+                        Bring
+                        <b>
+                            Your WhatsApp number
+                        </b>
+                        in
+                        <b>
+                            <a href="https://chatwoot.com">ChatWoot</a>
+                        </b>
+                        CRM and talk to your customers on WhatsApp!
+                        <br>
+                    </p>
+                </div>
+                <div class='text-center flex-grow-1 d-flex flex-column justify-content-center'>
+                    <div class='mb-4'>
+                        <img src='/images/logo.svg' title='WhatsApp API' alt='logo'
+                             style='border-radius: 50%; width: 7rem'/>
+                    </div>
+                    <div>
+                        <a class='btn btn-primary btn-lg px-4 mb-2'
+                           href='#how-to-start'
+                           role='button'>Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-lg-6 order-first order-lg-last mb-4 h-full' data-aos="fade-up">
+                <img
+                        src='/images/chatwoot/chatwoot.png'
+                        title='WhatsApp ChatWoot Integration'
+                        alt='ChatWoot logo'
+                        class="my-auto"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+
+<section class='section section-sm'>
+    <div class='container hr'>
+        <div class='row justify-content-center text-center'>
+            <div class='col-12 mt-4' data-aos="fade-up">
+                <h2>
+                    WhatsApp ChatWoot Integration
+                </h2>
+            </div>
+            <div class='col-12 mt-4' data-aos="fade-up">
+                Integrating <b>WhatsApp + ChatWoot</b> is easy with self-hosted <b>WAHA</b>!
+                <br>
+                👉 Check out the
+                <a
+                        target="_blank"
+                        href="https://waha-n8n-templates.devlike.pro/#whatsapp-chatwoot-integration"
+                >
+                    <b>WAHA ChatWoot Templates</b>
+                </a>
+            </div>
+
+            <div class='col-12 col-lg-12 pros-card-wide' data-aos="fade-up" data-aos-delay="100">
+                <img
+                        style="max-width: 100%"
+                        src="/images/chatwoot/chatwoot-screenshot.png" alt="chatwoot screenshot">
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ $content := readFile "/layouts/whatsapp-chatwoot/how-to-use-section.html" | safeHTML }}
+{{ $content }}
+
+<section class='section section-md' id="how-to-start">
+    <div class='container hr'>
+        <div class='text-center mt-4' data-aos="zoom-out">
+            <h2 class='display-5 fw-normal mt-1'>
+                How To Start?
+            </h2>
+        </div>
+
+        <div class='row justify-content-center text-center' data-aos="zoom-out">
+            <div class='col-11 col-lg-9 fs-3' style='min-width: 25rem'>
+                <p>
+                    Follow
+                    <a href='{{ relref . "/docs/overview/quick-start" }}'>
+                        <b>⚡ Quick Start</b>
+                    </a>
+                    to install and run <b>WAHA</b> and
+                    <br>
+                    <a href='{{ relref . "/docs/integrations/chatwoot" }}'>
+                        <b>🧩 ChatWoot Integration </b>
+                    </a>
+                    to get started with <b>WhatsApp + ChatWoot</b>!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ $content := readFile "/layouts/include/why-waha-section.html" | safeHTML }}
+{{ $content }}
+
+{{ end }}
