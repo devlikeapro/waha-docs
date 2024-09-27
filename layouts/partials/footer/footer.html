@@ -1,57 +1,12 @@
 <footer class="footer text-muted mt-4" style="background-color: #E9F7E3">
     <div class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}">
-        <!-- Menu -->
-        <div class="row" style="padding-top: 1.125rem; padding-bottom: 2rem; ">
-            <div class="flex flex-lg-row flex-column justify-content-between px-4 navbar-nav flex-grow-1 flag gap-4">
-                {{- $current := . -}}
-                {{- $section := $current.Section -}}
-                {{ range .Site.Menus.main -}}
-                <div class="flex flex-column gap-2">
-                    <div class="mb-2">
-                        <a href="#" class="docs-link" role="button">
-                            <b> {{ .Name -}} </b>
-                        </a>
-                    </div>
-                    {{ range .Children -}}
-                    <div>
-                        <a class="docs-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
-                    </div>
-                    {{ end -}}
-                </div>
-                {{ end -}}
-            </div>
-        </div>
+        <!-- Footer Menu -->
+        {{ partial "footer/menu.html" . }}
 
-        <!-- Footer -->
-        <div class="row">
-            <div class="col-lg-12 order-last order-lg-first">
-                <ul class="list-inline">
-                    <li class="list-inline-item">{{ .Site.Params.footer | safeHTML }}</li>
-                </ul>
-            </div>
-            <div class="col-lg-12 order-first order-lg-last text-lg-end">
-                <ul class="list-inline">
-                    {{ range .Site.Menus.footer -}}
-                    <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-                    {{ end -}}
-                </ul>
-            </div>
-        </div>
+        <!-- Disclaimer -->
+        {{ partial "footer/disclaimer.html" . }}
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
-<script type="text/javascript">
-    // Call it only if > 990 width, avoid on mobile screens
-    if (window.innerWidth > 990) {
-        setTimeout(() => {
-            docsearch({
-                appId: "OV9LGQBN5C",
-                apiKey: "7005679dc522e856719f3270aac826a1",
-                indexName: "wahalike",
-                container: ".doks-search",
-                debug: false
-            });
-        }, 1000)
-    }
-</script>
+<!-- Algolia Search -->
+{{ partial "footer/init-search-algolia.html" . }}

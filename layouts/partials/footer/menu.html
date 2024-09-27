@@ -1,0 +1,20 @@
+<div class="row" style="padding-top: 1.125rem; padding-bottom: 2rem; ">
+    <div class="flex flex-lg-row flex-column justify-content-between px-4 navbar-nav flex-grow-1 flag gap-4">
+        {{- $current := . -}}
+        {{- $section := $current.Section -}}
+        {{ range .Site.Menus.main -}}
+        <div class="flex flex-column gap-2">
+            <div class="mb-2">
+                <a href="#" class="docs-link" role="button">
+                    <b> {{ .Name -}} </b>
+                </a>
+            </div>
+            {{ range .Children -}}
+            <div>
+                <a class="docs-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+            </div>
+            {{ end -}}
+        </div>
+        {{ end -}}
+    </div>
+</div>
