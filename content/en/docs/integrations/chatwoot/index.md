@@ -24,6 +24,6 @@ To set up **WhatsApp ChatWoot** integration you'll need few things:
    1. To use **ChatWoot Cloud** you need to make sure your **n8n** webhook is accessible from the internet
 4. **PostgreSQL** - to store ChatWoot data (and WAHA-ChatWoot relations)
 
-👉 Check out [**WAHA + ChatWoot Templates**](https://waha-n8n-templates.devlike.pro/whatsapp-chatwoot/) 
+👉 Check out [**WAHA + ChatWoot Templates**](https://waha-n8n-templates.devlike.pro/chatwoot/) 
 to start from the scratch and create your first **ChatWoot** integration!
 
