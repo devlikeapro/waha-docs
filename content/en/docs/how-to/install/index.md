@@ -246,7 +246,7 @@ systemctl reload nginx
 
 4. Run Let's Encrypt to configure SSL certificate.
 ```bash
-apt  install certbot
+apt install certbot
 apt-get install python3-certbot-nginx
 mkdir -p /var/www/ssl-proof/waha/.well-known
 certbot --webroot -w /var/www/ssl-proof/waha/ -d yourdomain.com -i nginx
