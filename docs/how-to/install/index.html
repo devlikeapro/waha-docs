@@ -104,7 +104,7 @@ nano yourdomain.com.conf
 }
 </code></pre><ol start=3><li>Verify and reload your Nginx config by running the following command.</li></ol><pre><code class=language-bash>nginx -t
 systemctl reload nginx
-</code></pre><ol start=4><li>Run Let&rsquo;s Encrypt to configure SSL certificate.</li></ol><pre><code class=language-bash>apt  install certbot
+</code></pre><ol start=4><li>Run Let&rsquo;s Encrypt to configure SSL certificate.</li></ol><pre><code class=language-bash>apt install certbot
 apt-get install python3-certbot-nginx
 mkdir -p /var/www/ssl-proof/waha/.well-known
 certbot --webroot -w /var/www/ssl-proof/waha/ -d yourdomain.com -i nginx
