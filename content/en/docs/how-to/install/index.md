@@ -38,6 +38,14 @@ Go to
 to generate the command with the right image.
 {{< /details >}}
 
+{{< details "<b>Raspberry Pi</b>" >}}
+👉 If you're using **Raspberry Pi** - you need to use the `:arm` tag for the image (depends on your CPU arch tho)
+
+Go to
+[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
+to generate the command with the right image.
+{{< /details >}}
+
 ### Docker 🐳
 👉 WAHA works on top of **Docker**, that's the only thing you'll need!
 - [**Docker**](https://docs.docker.com/engine/install/) - please follow the official guides to install it on Linux, Windows, and macOS.
