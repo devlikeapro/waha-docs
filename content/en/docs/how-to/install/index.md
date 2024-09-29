@@ -1,7 +1,7 @@
 ---
 title : "🔧 Install & Update"
 description: "How to install and update WAHA"
-lead: "On the page you'll find answers on how to install and update WAHA."
+lead: "How to install and update WAHA"
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
@@ -9,8 +9,24 @@ images: []
 weight: 201
 ---
 
+---
+
 👉 If you wish to follow a Step-By-Step guide which show you how to send you first message via HTTP API
 please go to [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
+
+---
+
+You probably already have run the docker run command during
+[**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}) guide:
+```bash
+docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
+```
+
+☝️ The above command is good **for testing and development purposes**, but **not for production**.
+
+To make it **production-ready**, you need to configure few more parameters to make it secure, reliable, and easy to manage.
+
+
 
 ## Requirements
 ### Operating System
@@ -88,7 +104,19 @@ docker logout
 [**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
 to generate the command with the latest version and your key!
 
-If you're using the **ARM** processor (like **Apple Silicon M1/M2**, **Raspberry Pi**, etc.) - add `:arm` tag at the end of the image name in the above commands.
+
+Alternatively, you can use the **WAHA Core** image:
+
+```bash
+docker pull devlikeapro/waha
+```
+{{< details "I got <i>docker: no matching manifest for linux/arm64/v8 in the manifest list entries</i> error">}}
+Looks like you're using **ARM** architecture, you need to use the `:arm` tag for the image.
+
+👉 Go to
+[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
+to generate the command with the latest version and your key!
+
 ```bash
 docker login -u devlikeapro -p {KEY}
 docker pull devlikeapro/waha-plus:arm
@@ -98,23 +126,12 @@ docker logout
 docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus
 ```
 
-For WAHA Core - use `devlikeapro/waha` image instead of `devlikeapro/waha-plus`.
+Go to
+[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
+to generate the command with the right image.
 
-### Choose the installation method
-You probably already have run the docker run command during
-[**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}) guide:
-```bash
-docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
-```
 
-☝️ The above command is good **for testing and development purposes**, but **not for production**.
-
-To make it **production-ready**, you need to configure few more parameters to make it secure, reliable, and easy to manage.
-
-Please choose the installation method you prefer:
-- [**Docker Compose**]({{< relref "#docker-compose" >}}) - recommended
-- [**Docker**]({{< relref "#docker" >}}) - for advanced users
-
+{{< /details >}}
 
 ## Docker Compose
 ### Install
