@@ -185,6 +185,69 @@ Setup something like Nginx or any other proxy server to proxy the requests to th
 Also, you could temporarily drop the `127.0.0.1:3000:3000` for **waha** to `3000:3000` in the compose file to access your instance at `http://<your-external-ip>:3000`. 
 It's recommended to revert this change back and use Nginx or some proxy server in the front.
 
+### Additional Steps
+#### Configure Nginx and Let's Encrypt 
+👉 Replace **yourdomain.com** with your domain name in the following steps.
+
+1. Configure Nginx to serve as a frontend proxy.
+```bash
+sudo apt-get install nginx
+cd /etc/nginx/sites-enabled
+nano yourdomain.com.conf
+```
+
+2. Use the following Nginx config after replacing the `yourdomain.com` in `server_name`.
+```
+server {
+  server_name <yourdomain.com>;
+
+  # Point upstream to WAHA Server
+  set $upstream 127.0.0.1:3000;
+
+  location /.well-known {
+    alias /var/www/ssl-proof/waha/.well-known;
+  }
+
+  location / {
+    proxy_pass_header Authorization;
+    proxy_pass http://$upstream;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Ssl on; # Optional
+
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    proxy_http_version 1.1;
+    proxy_set_header Connection “”;
+    proxy_buffering off;
+
+    client_max_body_size 0;
+    proxy_read_timeout 36000s;
+    proxy_redirect off;
+  }
+  listen 80;
+}
+```
+
+3. Verify and reload your Nginx config by running the following command.
+```bash
+nginx -t
+systemctl reload nginx
+```
+
+4. Run Let's Encrypt to configure SSL certificate.
+```bash
+apt  install certbot
+apt-get install python3-certbot-nginx
+mkdir -p /var/www/ssl-proof/chatwoot/.well-known
+certbot --webroot -w /var/www/ssl-proof/chatwoot/ -d yourdomain.com -i nginx
+```
+
+5. Your WAHA installation should be accessible from the https://yourdomain.com now.
+
 ## Update
 When there's a new version of WAHA, you can update it with a single commands:
 
