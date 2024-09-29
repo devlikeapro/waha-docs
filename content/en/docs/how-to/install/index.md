@@ -258,9 +258,11 @@ certbot --webroot -w /var/www/ssl-proof/waha/ -d <yourdomain.com> -i nginx
 ```
 
 5. Your WAHA installation should be accessible from the https://<yourdomain.com> now.
-6. Put `WAHA_BASE_URL=https://<yourdomain.com>` in the `.env` file and restart the WAHA service
+6. Change `WAHA_BASE_URL=https://<yourdomain.com>` in the `.env` file and restart the WAHA service
 ```bash
-echo "WAHA_BASE_URL=https://<yourdomain.com>" >> .env
+# Change the WAHA_BASE_URL in .env
+nano .env
+# Restart the WAHA service
 docker compose restart
 ```
 
