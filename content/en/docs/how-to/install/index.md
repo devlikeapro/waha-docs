@@ -74,9 +74,9 @@ With Compose, you use a YAML file to configure your application's services.
 Then, with a single command, you create and start all the services from your configuration.
 {{< /details >}}
 
-### Choose docker image
+### Get docker image
 We'll use
-[➕ WAHA Plus]({{< relref "/docs/how-to/plus-version" >}}) docker image in the examples:
+[**➕ WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) docker image in the guide:
 
 ```bash
 docker login -u devlikeapro -p {KEY}
@@ -86,7 +86,7 @@ docker logout
 
 👉 Go to
 [**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
-to generate the command with the latest version and your key.
+to generate the command with the latest version and your key!
 
 If you're using the **ARM** processor (like **Apple Silicon M1/M2**, **Raspberry Pi**, etc.) - add `:arm` tag at the end of the image name in the above commands.
 ```bash
