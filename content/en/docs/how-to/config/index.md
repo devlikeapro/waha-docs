@@ -110,6 +110,11 @@ Read more about it on [**Session page** ->]({{< relref "/docs/how-to/sessions#co
 Keep in mind that session's proxy configuration takes precedence over proxy configuration set by environment variables!
 
 ## HTTPS 
+💡 We recommend handling HTTPS termination with a reverse proxy like Nginx - kindly follow 
+[**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) **Additional Steps** to set up Nginx with Let's Encrypt.
+
+However, you can enable HTTPS directly in WAHA by setting the following environment variables:
+
 - `WAHA_HTTPS_ENABLED=true`: Set this variable to `true` to enable HTTPS. By default, it's `false`.
 - `WAHA_HTTPS_PATH_KEY=/path/to/key.pem`: The path to the key file for HTTPS. By default `./.secrets/privkey.pem`
 - `WAHA_HTTPS_PATH_CERT=/path/to/cert.pem`: The path to the certificate file for HTTPS. By default `./.secrets/cert.pem`
