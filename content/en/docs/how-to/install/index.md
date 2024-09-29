@@ -202,7 +202,7 @@ cd /etc/nginx/sites-enabled
 nano <yourdomain.com>.conf
 ```
 
-2. Use the following Nginx config after replacing the `<yourdomain.com>` in `server_name`.
+2. Use the following Nginx config and **replace** the `<yourdomain.com>` in `server_name`.
 ```
 server {
   server_name <yourdomain.com>;
