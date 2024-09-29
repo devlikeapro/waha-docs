@@ -164,9 +164,11 @@ Some important values you **MUST** change before running it:
 - `WHATSAPP_SWAGGER_PASSWORD` - your password for [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}})
 
 ```bash
-# update redis and postgres passwords
+# update .env file with your values
 nano .env
-# update docker-compose.yaml same postgres pass
+# update docker-compose.yaml - like image
+# Remove "mongodb" and "minio" services if you don't need them
+# Leave "waha" service as it is
 nano docker-compose.yaml
 ```
 
