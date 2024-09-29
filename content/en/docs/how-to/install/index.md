@@ -19,6 +19,8 @@ as long as you have Docker installed, and it can run **Linux** containers.
 
 **Linux** is the most recommended operating system for running Docker containers.
 
+💡 We recommend using **Linux** with **Debian** or **Ubuntu** based distributions.
+
 {{< details "<b>Linux</b>" >}}
 👉 We suggest using **Debian** or **Ubuntu** based distributions.
 {{< /details >}}
@@ -45,6 +47,7 @@ Go to
 [**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
 to generate the command with the right image.
 {{< /details >}}
+
 
 ### Pre-requisites
 Before proceeding, make sure you have the latest version of `docker` and `docker compose` installed.
