@@ -157,11 +157,15 @@ wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/r
 Refer to the available environment variables in [**⚙️ Configuration**]({{< relref "/docs/how-to/config" >}}).
 
 Some important values you **MUST** change before running it:
-- `WHATSAPP_API_KEY` - your key for secure API access. Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
-- `WAHA_DASHBOARD_USERNAME` - your username for [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
-- `WAHA_DASHBOARD_PASSWORD` - your password for [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
-- `WHATSAPP_SWAGGER_USERNAME` - your username for [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}})
-- `WHATSAPP_SWAGGER_PASSWORD` - your password for [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}})
+
+- API Key for secure API access. Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
+   - `WHATSAPP_API_KEY=123`
+- Username, password for [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}):
+   - `WAHA_DASHBOARD_USERNAME=waha`
+   - `WAHA_DASHBOARD_PASSWORD=waha`
+- Username, password for [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}):
+   - `WHATSAPP_SWAGGER_USERNAME=admin`
+   - `WHATSAPP_SWAGGER_PASSWORD=admin`
 
 ```bash
 # update .env file with your values
@@ -251,6 +255,12 @@ certbot --webroot -w /var/www/ssl-proof/chatwoot/ -d yourdomain.com -i nginx
 5. Your WAHA installation should be accessible from the https://yourdomain.com now.
 
 ## Update
+👉 If you specified exact version in `docker-compose.yml`, like
+```yaml
+image: devlikeapro/waha-plus:latest-2024.7.8
+```
+remember to change it to `latest-{YEAR}.{MONTH}.{BUILD}` to get the latest version.
+
 When there's a new version of WAHA, you can update it with a single commands:
 
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) image:
@@ -268,12 +278,6 @@ docker compose up -d
 docker compose pull
 docker compose up -d
 ```
-
-👉 If you specified exact version in `docker-compose.yml`, like 
-```yaml
-image: devlikeapro/waha-plus:latest-2024.7.8
-```
-remember to change it to `latest-{YEAR}.{MONTH}.{BUILD}` to get the latest version.
 
 ## Get logs, restart, stop
 ```bash
