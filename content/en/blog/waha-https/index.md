@@ -23,6 +23,13 @@ Even if you have set up WAHA and protected it with an API key and username/passw
 
 If you're exposing WAHA to the internet, you should **always use HTTPS** to protect your data from being intercepted.
 
+----
+
+💡 We recommend handling HTTPS termination with a reverse proxy like Nginx - kindly follow
+[**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) **Additional Steps** to set up Nginx with Let's Encrypt.
+
+----
+
 👉 WAHA **supports HTTPS out of the box** in [**WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) version.
 
 You can set up the following environment variables to enable HTTPS:
