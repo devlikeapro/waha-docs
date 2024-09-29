@@ -106,11 +106,15 @@ Read more about it on [Webhooks page ->]({{< relref "/docs/how-to/webhooks#hmac-
 After you set up the security options - you should set up HTTPS to protect the data in transit and prevent [Man-in-the-middle attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack).
 That's fine to run it on the **local network** without HTTPS, but for **the production** environment, HTTPS is a must-have.
 
+----
+
 💡 We recommend handling HTTPS termination with a reverse proxy like Nginx - kindly follow
-[**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) **Additional Steps** to set up Nginx with Let's Encrypt.
+[**🔧 Install & Update - Additional Steps**]({{< relref "/docs/how-to/install" >}}) to set up Nginx with Let's Encrypt.
+
+----
 
 ### Environment variables
-WAHA supports HTTPS out of the box.
+WAHA supports HTTPS out of the box, if you don't want to use a reverse proxy like Nginx.
 
 You can set up the following environment variables to enable HTTPS:
 - `WAHA_HTTPS_ENABLED=true`: Set this variable to `true` to enable HTTPS. By default, it's `false`.

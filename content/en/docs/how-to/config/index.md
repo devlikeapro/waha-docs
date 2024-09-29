@@ -111,7 +111,7 @@ Keep in mind that session's proxy configuration takes precedence over proxy conf
 
 ## HTTPS 
 💡 We recommend handling HTTPS termination with a reverse proxy like Nginx - kindly follow 
-[**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) **Additional Steps** to set up Nginx with Let's Encrypt.
+[**🔧 Install & Update - Additional Steps**]({{< relref "/docs/how-to/install" >}}) to set up Nginx with Let's Encrypt.
 
 However, you can enable HTTPS directly in WAHA by setting the following environment variables:
 
