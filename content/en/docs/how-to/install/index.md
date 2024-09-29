@@ -133,10 +133,17 @@ to generate the command with the right image.
 
 {{< /details >}}
 
-## Docker Compose
-### Install
-Here's ready to go 
-[`docker-compose.yml`](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml).
+## Install
+
+1. Install Docker on your VM
+```bash
+# example in ubuntu
+apt-get update
+apt-get upgrade
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+apt install docker-compose-plugin
+```
 
 Some important values you **MUST** change before running it:
 - `WHATSAPP_API_KEY` - your key for secure API access. Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
@@ -164,17 +171,22 @@ The docker compose doesn't have few thing you might need:
 - [HTTPS]({{< relref "/docs/how-to/security#https" >}}) - 👉 follow [**Step-by-step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
 - *Optional* - configure **S3** for media (files) and **MongoDB** for sessions - [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}) 
 
-### Update
+## Update
 When there's a new version of WAHA, you can update it with a single commands:
+
+[**➕ WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) image:
 ```bash
 # Login if you're using WAHA Plus
 docker login -u devlikeapro -p {KEY}
 docker compose pull
 docker logout
 
-# Just pull if you're using WAHA Core
-# docker compose pull
+docker compose up -d
+```
 
+**WAHA Core** image:
+```bash
+docker compose pull
 docker compose up -d
 ```
 
@@ -184,7 +196,7 @@ image: devlikeapro/waha-plus:latest-2024.7.8
 ```
 remember to change it to `latest-{YEAR}.{MONTH}.{BUILD}` to get the latest version.
 
-### Maintenance
+## Get logs, restart, stop
 ```bash
 # Stop all containers
 docker compose down
@@ -196,102 +208,4 @@ docker compose restart
 docker compose logs -f
 # Show logs - since interval
 docker compose logs --since 1h  
-```
-
-## Docker
-### Install
-The simple way to run WAHA is to use the `docker run` command.
-
-Some important values you **MUST** change before running it:
-- `WHATSAPP_API_KEY` - your key for secure API access. Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
-- `WAHA_DASHBOARD_USERNAME` - your username for [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
-- `WAHA_DASHBOARD_PASSWORD` - your password for [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
-- `WHATSAPP_SWAGGER_USERNAME` - your username for [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}})
-- `WHATSAPP_SWAGGER_PASSWORD` - your password for [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}})
-
-```bash
-docker run -d \
-    --restart=always \
-    --name waha \
-    -p 3000:3000/tcp \
-    -v ./.sessions:/app/.sessions \
-    -v ./.media:/app/.media \
-    --env WHATSAPP_API_KEY=321 \
-    --env WAHA_DASHBOARD_USERNAME=waha \
-    --env WAHA_DASHBOARD_PASSWORD=waha \
-    --env WAHA_LOG_FORMAT=JSON \
-    --env WAHA_LOG_LEVEL=info \
-    --env WHATSAPP_DEFAULT_ENGINE=WEBJS \
-    --env WHATSAPP_RESTART_ALL_SESSIONS=True \
-    --env WAHA_PRINT_QR=False \
-    --env WHATSAPP_FILES_LIFETIME=0 \
-    --env WHATSAPP_FILES_FOLDER=/app/.media \
-    devlikeapro/waha-plus:latest
-````
-👉 To make it easy to manage, here's the scripts:
-```bash
-mkdir ~/waha
-cd ~/waha
-wget https://raw.githubusercontent.com/devlikeapro/waha/core/scripts/waha-run.sh
-chmod +x waha-run.sh
-wget https://raw.githubusercontent.com/devlikeapro/waha/core/scripts/waha-update.sh
-cd +x waha-update.sh
-
-# Change the values in run script
-# nano waha-run.sh
-# vim waha-run.sh
-
-# Run the script - it'll download the latest version and start it
-./waha-update.sh
-# Insert your password from Patron Portal - https://portal.devlike.pro/
-```
-
-Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and login with the credentials you've set.
-
-#### What is next?
-The docker run command doesn't have few thing you might need:
-- [HTTPS]({{< relref "/docs/how-to/security#https" >}}) - 👉 follow [**Step-by-step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
-- *Optional* - configure **S3** for media (files) and **MongoDB** for sessions - [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}) 
-
-### Update
-```bash
-# Login if you're using WAHA Plus
-docker login -u devlikeapro -p {KEY}
-docker pull devlikeapro/waha-plus
-docker logout
-
-# Just pull if you're using WAHA Core
-# docker pull devlikeapro/waha
-
-docker stop waha
-docker rm waha
-docker run -d \
-    ... \ <==== Use the same lines as in the installation command
-    devlikeapro/waha-plus:latest
-```
-
-**OR** using the scripts:
-```bash
-mkdir ~/waha
-cd ~/waha
-wget https://raw.githubusercontent.com/devlikeapro/waha/core/scripts/waha-run.sh
-chmod +x waha-run.sh
-wget https://raw.githubusercontent.com/devlikeapro/waha/core/scripts/waha-update.sh
-cd +x waha-update.sh
-
-./waha-update.sh
-```
-
-### Maintenance
-```bash
-# Stop the container
-docker stop waha
-# Start the container
-docker start waha
-# Restart the container
-docker restart waha
-# Show logs in real time
-docker logs -f waha
-# Show logs - since interval
-docker logs --since 1h waha
 ```
