@@ -145,6 +145,17 @@ sudo sh get-docker.sh
 apt install docker-compose-plugin
 ```
 
+2. Download the required files
+```bash
+# Download the env file template
+wget -O .env https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/.env
+# Download the Docker compose template
+wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/docker-compose.yaml
+```
+
+3. Tweak the `.env` and `docker-compose.yaml` according to your preferences. 
+Refer to the available environment variables in [**⚙️ Configuration**]({{< relref "/docs/how-to/config" >}}).
+
 Some important values you **MUST** change before running it:
 - `WHATSAPP_API_KEY` - your key for secure API access. Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
 - `WAHA_DASHBOARD_USERNAME` - your username for [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
@@ -153,23 +164,26 @@ Some important values you **MUST** change before running it:
 - `WHATSAPP_SWAGGER_PASSWORD` - your password for [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}})
 
 ```bash
-mkdir ~/waha
-cd ~/waha
-wget https://raw.githubusercontent.com/devlikeapro/waha/core/docker-compose.yaml
+# update redis and postgres passwords
+nano .env
+# update docker-compose.yaml same postgres pass
+nano docker-compose.yaml
+```
 
-# Change the values in the file
-# nano docker-compose.yaml
-# vim docker-compose.yaml
-
+4. Get the service up and running.
+```bash
 docker compose up -d
 ```
 
-Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and login with the credentials you've set.
+5. Your WAHA installation is complete. 
+Please note that the **containers are not exposed to the internet**, and they only bind to the localhost. 
+Setup something like Nginx or any other proxy server to proxy the requests to the container.
 
-#### What is next?
-The docker compose doesn't have few thing you might need:
-- [HTTPS]({{< relref "/docs/how-to/security#https" >}}) - 👉 follow [**Step-by-step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
-- *Optional* - configure **S3** for media (files) and **MongoDB** for sessions - [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}) 
+6. Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and login with the credentials you've set
+   (`waha/waha` by default).
+
+Also, you could temporarily drop the `127.0.0.1:3000:3000` for **waha** to `3000:3000` in the compose file to access your instance at `http://<your-external-ip>:3000`. 
+It's recommended to revert this change back and use Nginx or some proxy server in the front.
 
 ## Update
 When there's a new version of WAHA, you can update it with a single commands:
