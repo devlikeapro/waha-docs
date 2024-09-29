@@ -29,7 +29,7 @@ To make it **production-ready**, you need to configure few more parameters to ma
 
 
 ## Requirements
-### Operating System
+### System Requirements
 You can use any operating system for host system (Linux, Windows or macOS)
 as long as you have Docker installed, and it can run **Linux** containers.
 
@@ -63,6 +63,11 @@ Go to
 [**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
 to generate the command with the right image.
 {{< /details >}}
+
+We strongly recommend using VPS or servers with minimum **2CPU and 2GB RAM** configuration for the project 
+even for a single session.
+If you want to host more sessions - please check the numbers in 
+[**FAQ**]({{< relref "/docs/overview/faq#system-requirements" >}}).
 
 
 ### Pre-requisites
