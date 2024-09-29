@@ -46,10 +46,17 @@ Go to
 to generate the command with the right image.
 {{< /details >}}
 
-### Docker 🐳
-👉 WAHA works on top of **Docker**, that's the only thing you'll need!
-- [**Docker**](https://docs.docker.com/engine/install/) - please follow the official guides to install it on Linux, Windows, and macOS.
-- [**Docker Compose**](https://docs.docker.com/compose/install) - optional, but recommended for easier configuration.
+### Pre-requisites
+Before proceeding, make sure you have the latest version of `docker` and `docker compose` installed.
+
+As of now *at the time of writing this doc*, we recommend a version equal to or higher than the following.
+
+```bash
+$ docker --version
+Docker version 26.1.3, build b72abbb
+$ docker compose version
+Docker Compose version v2.27.0
+```
 
 {{< details "Why Docker?" >}}
 **Docker** makes it easy to ship **all-in-one solution** with the runtime and dependencies.
