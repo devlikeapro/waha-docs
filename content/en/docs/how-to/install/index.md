@@ -248,8 +248,8 @@ systemctl reload nginx
 ```bash
 apt  install certbot
 apt-get install python3-certbot-nginx
-mkdir -p /var/www/ssl-proof/chatwoot/.well-known
-certbot --webroot -w /var/www/ssl-proof/chatwoot/ -d yourdomain.com -i nginx
+mkdir -p /var/www/ssl-proof/waha/.well-known
+certbot --webroot -w /var/www/ssl-proof/waha/ -d yourdomain.com -i nginx
 ```
 
 5. Your WAHA installation should be accessible from the https://yourdomain.com now.
