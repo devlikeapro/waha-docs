@@ -158,7 +158,7 @@ Discover how to use the WAHA, what you can do with it, and how to configure it r
 You probably already have run the docker run command during ⚡ Quick Start guide:
 docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha ☝️ The above command is good for testing and development purposes, but not for production.
 To make it production-ready, you need to configure few more parameters to make it secure, reliable, and easy to manage.
-Requirements #Operating System #You can use any operating system for host system (Linux, Windows or macOS) as long as you have Docker installed, and it can run Linux containers.
+Requirements #System Requirements #You can use any operating system for host system (Linux, Windows or macOS) as long as you have Docker installed, and it can run Linux containers.
 Linux is the most recommended operating system for running Docker containers.
 💡 We recommend using Linux with Debian or Ubuntu based distributions.
 Linux👉 We suggest using Debian or Ubuntu based distributions. Windows👉 For Windows we kindly suggest using Hyper-V backend for Docker Desktop!
@@ -167,6 +167,7 @@ macOS (Apple Silicon)👉 If you\u0026rsquo;re using Apple Silicon (like Apple 
 Go to Docker Image Configurator to generate the command with the right image.
 Raspberry Pi👉 If you\u0026rsquo;re using Raspberry Pi - you need to use the :arm tag for the image (depends on your CPU arch tho)
 Go to Docker Image Configurator to generate the command with the right image.
+We strongly recommend using VPS or servers with minimum 2CPU and 2GB RAM configuration for the project even for a single session. If you want to host more sessions - please check the numbers in FAQ.
 Pre-requisites #Before proceeding, make sure you have the latest version of docker and docker compose installed.
 As of now at the time of writing this doc, we recommend a version equal to or higher than the following.
 \$ docker --version Docker version 26.1.3, build b72abbb \$ docker compose version Docker Compose version v2.27.0 Why Docker?Docker makes it easy to ship all-in-one solution with the runtime and dependencies. You don\u0026rsquo;t have to worry about language-specific libraries or chrome installation.
