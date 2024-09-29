@@ -193,16 +193,16 @@ It's recommended to revert this change back and use Nginx or some proxy server i
 
 ### Additional Steps
 #### Configure Nginx and Let's Encrypt 
-👉 Replace **yourdomain.com** with your domain name in the following steps.
+👉 Replace **<yourdomain.com>** with your domain name in the following steps.
 
 1. Configure Nginx to serve as a frontend proxy.
 ```bash
 sudo apt-get install nginx
 cd /etc/nginx/sites-enabled
-nano yourdomain.com.conf
+nano <yourdomain.com>.conf
 ```
 
-2. Use the following Nginx config after replacing the `yourdomain.com` in `server_name`.
+2. Use the following Nginx config after replacing the `<yourdomain.com>` in `server_name`.
 ```
 server {
   server_name <yourdomain.com>;
@@ -249,10 +249,10 @@ systemctl reload nginx
 apt install certbot
 apt-get install python3-certbot-nginx
 mkdir -p /var/www/ssl-proof/waha/.well-known
-certbot --webroot -w /var/www/ssl-proof/waha/ -d yourdomain.com -i nginx
+certbot --webroot -w /var/www/ssl-proof/waha/ -d <yourdomain.com> -i nginx
 ```
 
-5. Your WAHA installation should be accessible from the https://yourdomain.com now.
+5. Your WAHA installation should be accessible from the https://<yourdomain.com> now.
 
 ## Update
 👉 If you specified exact version in `docker-compose.yml`, like
