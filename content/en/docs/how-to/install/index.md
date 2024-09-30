@@ -118,10 +118,6 @@ docker pull devlikeapro/waha
 {{< details "I got <i>docker: no matching manifest for linux/arm64/v8 in the manifest list entries</i> error">}}
 Looks like you're using **ARM** architecture, you need to use the `:arm` tag for the image.
 
-👉 Go to
-[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
-to generate the command with the latest version and your key!
-
 ```bash
 docker login -u devlikeapro -p {KEY}
 docker pull devlikeapro/waha-plus:arm
@@ -131,10 +127,9 @@ docker logout
 docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus
 ```
 
-Go to
+👉 Go to
 [**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
-to generate the command with the right image.
-
+to generate the command with the latest version and your key!
 
 {{< /details >}}
 
