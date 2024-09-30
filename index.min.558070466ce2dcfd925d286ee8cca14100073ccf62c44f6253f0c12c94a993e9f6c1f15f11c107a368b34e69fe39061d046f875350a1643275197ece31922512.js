@@ -159,15 +159,10 @@ You probably already have run the docker run command during ⚡ Quick Start guid
 docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha ☝️ The above command is good for testing and development purposes, but not for production.
 To make it production-ready, you need to configure few more parameters to make it secure, reliable, and easy to manage.
 Requirements #System Requirements #You can use any operating system for host system (Linux, Windows or macOS) as long as you have Docker installed, and it can run Linux containers.
-Linux is the most recommended operating system for running Docker containers.
 💡 We recommend using Linux with Debian or Ubuntu based distributions.
+We strongly recommend using VPS or servers with minimum 2CPU and 2GB RAM configuration for the project even for a single session. If you want to host more sessions - please check the numbers in FAQ.
 Linux👉 We suggest using Debian or Ubuntu based distributions. Windows👉 For Windows we kindly suggest using Hyper-V backend for Docker Desktop!
 It might not work with WSL2 backend properly.
-macOS (Apple Silicon)👉 If you\u0026rsquo;re using Apple Silicon (like Apple M1) - you need to use the :arm tag for the image.
-Go to Docker Image Configurator to generate the command with the right image.
-Raspberry Pi👉 If you\u0026rsquo;re using Raspberry Pi - you need to use the :arm tag for the image (depends on your CPU arch tho)
-Go to Docker Image Configurator to generate the command with the right image.
-We strongly recommend using VPS or servers with minimum 2CPU and 2GB RAM configuration for the project even for a single session. If you want to host more sessions - please check the numbers in FAQ.
 Pre-requisites #Before proceeding, make sure you have the latest version of docker and docker compose installed.
 As of now at the time of writing this doc, we recommend a version equal to or higher than the following.
 \$ docker --version Docker version 26.1.3, build b72abbb \$ docker compose version Docker Compose version v2.27.0 Why Docker?Docker makes it easy to ship all-in-one solution with the runtime and dependencies. You don\u0026rsquo;t have to worry about language-specific libraries or chrome installation.
@@ -175,9 +170,12 @@ Also, Docker makes installation and update processes so simple, just one command
 Why Docker Compose?Docker Compose is a tool for defining and running Docker applications. With Compose, you use a YAML file to configure your application\u0026rsquo;s services. Then, with a single command, you create and start all the services from your configuration. Get docker image #We\u0026rsquo;ll use ➕ WAHA Plus docker image in the guide:
 docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus docker logout 👉 Go to Docker Image Configurator to generate the command with the latest version and your key!
 Alternatively, you can use the WAHA Core image:
-docker pull devlikeapro/waha I got docker: no matching manifest for linux/arm64/v8 in the manifest list entries errorLooks like you\u0026rsquo;re using ARM architecture, you need to use the :arm tag for the image.
-👉 Go to Docker Image Configurator to generate the command with the latest version and your key!
-docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus:arm docker logout # Rename it, so you can use devlikeapro/waha image in other place docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus Go to Docker Image Configurator to generate the command with the right image.
+docker pull devlikeapro/waha If you seedocker: no matching manifest for linux/arm64/v8 in the manifest list entriesLooks like you\u0026rsquo;re using ARM architecture, you need to use the :arm tag for the image.
+docker login -u devlikeapro -p {KEY} docker pull devlikeapro/waha-plus:arm docker logout # Rename it, so you can use devlikeapro/waha image in other place docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus 👉 Go to Docker Image Configurator to generate the command with the latest version and your key!
+macOS (Apple Silicon)👉 If you\u0026rsquo;re using Apple Silicon (like Apple M1) - you need to use the :arm tag for the image.
+Go to Docker Image Configurator to generate the command with the right image.
+Raspberry Pi👉 If you\u0026rsquo;re using Raspberry Pi - you need to use the :arm tag for the image (depends on your CPU arch tho)
+Go to Docker Image Configurator to generate the command with the right image.
 Install #Install Docker on your VM # example in ubuntu apt-get update apt-get upgrade curl -fsSL https://get.docker.com -o get-docker.sh sudo sh get-docker.sh apt install docker-compose-plugin Download the required files # Download the env file template wget -O .env https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/.env # Download the Docker compose template wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/docker-compose.yaml Tweak the .env and docker-compose.yaml according to your preferences. Refer to the available environment variables in ⚙️ Configuration. Some important values you MUST change before running it:
 API Key for secure API access. Read more 🔒 Security WHATSAPP_API_KEY=123 Username, password for 📊 Dashboard: WAHA_DASHBOARD_USERNAME=waha WAHA_DASHBOARD_PASSWORD=waha Username, password for 📚 Swagger: WHATSAPP_SWAGGER_USERNAME=admin WHATSAPP_SWAGGER_PASSWORD=admin # update .env file with your values nano .env # update docker-compose.yaml - like image # Remove \u0026quot;mongodb\u0026quot; and \u0026quot;minio\u0026quot; services if you don't need them # Leave \u0026quot;waha\u0026quot; service as it is nano docker-compose.yaml Get the service up and running. docker compose up -d Your WAHA installation is complete. Please note that the containers are not exposed to the internet, and they only bind to the localhost. Setup something like Nginx or any other proxy server to proxy the requests to the container.
 Now, open http://localhost:3000/dashboard and login with the credentials you\u0026rsquo;ve set (waha/waha by default).
