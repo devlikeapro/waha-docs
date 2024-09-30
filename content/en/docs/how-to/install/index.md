@@ -30,42 +30,26 @@ To make it **production-ready**, you need to configure few more parameters to ma
 
 ## Requirements
 ### System Requirements
-You can use any operating system for host system (Linux, Windows or macOS)
+You can use any operating system for host system (**Linux**, **Windows** or **macOS**)
 as long as you have Docker installed, and it can run **Linux** containers.
 
 💡 We recommend using **Linux** with **Debian** or **Ubuntu** based distributions.
+
+We strongly recommend using VPS or servers with minimum **2CPU and 2GB RAM** configuration for the project 
+even for a single session.
+If you want to host more sessions - please check the numbers in 
+[**FAQ**]({{< relref "/docs/overview/faq#system-requirements" >}}).
 
 {{< details "<b>Linux</b>" >}}
 👉 We suggest using **Debian** or **Ubuntu** based distributions.
 {{< /details >}}
 
 {{< details "<b>Windows</b>" >}}
-👉 For **Windows** we kindly suggest using **Hyper-V** backend for 
+👉 For **Windows** we kindly suggest using **Hyper-V** backend for
 [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/)!
 
 It might not work with **WSL2** backend properly.
 {{< /details >}}
-
-{{< details "<b>macOS (Apple Silicon)</b>" >}}
-👉 If you're using **Apple Silicon** (like Apple M1) - you need to use the `:arm` tag for the image.
-
-Go to
-[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
-to generate the command with the right image.
-{{< /details >}}
-
-{{< details "<b>Raspberry Pi</b>" >}}
-👉 If you're using **Raspberry Pi** - you need to use the `:arm` tag for the image (depends on your CPU arch tho)
-
-Go to
-[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
-to generate the command with the right image.
-{{< /details >}}
-
-We strongly recommend using VPS or servers with minimum **2CPU and 2GB RAM** configuration for the project 
-even for a single session.
-If you want to host more sessions - please check the numbers in 
-[**FAQ**]({{< relref "/docs/overview/faq#system-requirements" >}}).
 
 
 ### Pre-requisites
@@ -113,7 +97,8 @@ Alternatively, you can use the **WAHA Core** image:
 ```bash
 docker pull devlikeapro/waha
 ```
-{{< details "I got <i>docker: no matching manifest for linux/arm64/v8 in the manifest list entries</i> error">}}
+
+{{< details "If you see <i>docker: no matching manifest for linux/arm64/v8 in the manifest list entries</i> error">}}
 Looks like you're using **ARM** architecture, you need to use the `:arm` tag for the image.
 
 ```bash
@@ -131,6 +116,21 @@ to generate the command with the latest version and your key!
 
 {{< /details >}}
 
+{{< details "macOS (Apple Silicon)" >}}
+👉 If you're using **Apple Silicon** (like Apple M1) - you need to use the `:arm` tag for the image.
+
+Go to
+[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
+to generate the command with the right image.
+{{< /details >}}
+
+{{< details "Raspberry Pi" >}}
+👉 If you're using **Raspberry Pi** - you need to use the `:arm` tag for the image (depends on your CPU arch tho)
+
+Go to
+[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
+to generate the command with the right image.
+{{< /details >}}
 ## Install
 
 1. Install Docker on your VM
