@@ -33,8 +33,6 @@ To make it **production-ready**, you need to configure few more parameters to ma
 You can use any operating system for host system (Linux, Windows or macOS)
 as long as you have Docker installed, and it can run **Linux** containers.
 
-**Linux** is the most recommended operating system for running Docker containers.
-
 💡 We recommend using **Linux** with **Debian** or **Ubuntu** based distributions.
 
 {{< details "<b>Linux</b>" >}}
