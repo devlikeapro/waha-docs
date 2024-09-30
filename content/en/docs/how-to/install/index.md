@@ -98,7 +98,7 @@ Alternatively, you can use the **WAHA Core** image:
 docker pull devlikeapro/waha
 ```
 
-{{< details "If you see <i>docker: no matching manifest for linux/arm64/v8 in the manifest list entries</i> error">}}
+{{< details "If you see<br/><code>docker: no matching manifest for linux/arm64/v8 in the manifest list entries</code>">}}
 Looks like you're using **ARM** architecture, you need to use the `:arm` tag for the image.
 
 ```bash
