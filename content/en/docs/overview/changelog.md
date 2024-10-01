@@ -39,7 +39,7 @@ Latest Version:
 `2024.10.2`
 - 📢 **WEBJS** + **MongoDB** setup - handle disconnection properly (it stop saving auth data if connection to mongodb lost)
 
-`2024.10.1`
+`2024.10.1` - [**Release Notes**]({{< relref "/blog/waha-2024-10" >}})
 - Receive **media** now available in **WAHA Core** version!
   - [**📥 Receive messages** - Files]({{<relref "/docs/how-to/receive-messages#files" >}})
 - Add `PORT` environment variable for Heroku deployment - [#555](https://github.com/devlikeapro/waha/issues/555)
