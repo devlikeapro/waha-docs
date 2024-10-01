@@ -1,7 +1,7 @@
 ---
 title: "WAHA 2024.10"
-description: ""
-excerpt: "🎉"
+description: "WAHA 2024.10 - WAHA Core - Receive Media, n8n Low Code Integration, TypeBot Integration, ChatWoot Integration, Workflow Templates, Stability fixes"
+excerpt: "WAHA 2024.10 - WAHA Core - Receive Media, n8n Low Code Integration, TypeBot Integration, ChatWoot Integration, Workflow Templates, Stability fixes"
 date: 2024-09-30T08:48:45+00:00
 draft: false
 weight: 50
