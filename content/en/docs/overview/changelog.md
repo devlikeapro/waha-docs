@@ -36,6 +36,9 @@ Release policy:
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.10
+`2024.10.2`
+- 📢 **WEBJS** + **MongoDB** setup - handle disconnection properly (it stop saving auth data if connection to mongodb lost)
+
 `2024.10.1`
 - Receive **media** now available in **WAHA Core** version!
   - [**📥 Receive messages** - Files]({{<relref "/docs/how-to/receive-messages#files" >}})
