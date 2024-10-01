@@ -146,7 +146,7 @@ apt install docker-compose-plugin
 2. Download the required files
 ```bash
 # Download the env file template
-wget -O .env https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/.env
+wget -O .env https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/.env.example
 # Download the Docker compose template
 wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/docker-compose.yaml
 ```
