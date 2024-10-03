@@ -36,6 +36,10 @@ Release policy:
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.10
+`2024.10.3`
+- **WEBJS** + **MongoDB** - handle removing temp folder with retries
+- **WEBJS** - add more logs for state changes to help debugging
+
 `2024.10.2`
 - 📢 **WEBJS** + **MongoDB** setup - handle disconnection properly (it stop saving auth data if connection to mongodb lost)
 
