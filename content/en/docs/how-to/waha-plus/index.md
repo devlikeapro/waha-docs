@@ -51,3 +51,18 @@ docker logout
 ```
 Then in all commands use **Plus** image `devlikeapro/waha-plus` instead of Core `devlikeapro/waha`.
 
+### Invite Team
+If you support the project with [**WAHA PRO**](/pricing#tier-pro) tier - invite **up to 5 members** to your team 
+to help you with developing the project!
+
+The members inherit **PRO** tier and will have their own docker key and GitHub access to the project.
+
+
+![Portal - Your Team](portal-your-team.png)
+
+1. **Login** to [**Patron Portal**](https://portal.devlike.pro) and **Create Team** at the bottom the page:
+2. **Invite a new member** by sending invitation to their email
+3. **The Member gets email** with invitation
+4. **The Member Login** to [**Patron Portal**](https://portal.devlike.pro)
+5. **The Member Accepts** invitation
+6. If **The Member** doesn't see **PRO** tier - kindly refresh the page after waiting 10-30 seconds (sync tiers takes a bit of time)
