@@ -33,7 +33,7 @@ wget https://raw.githubusercontent.com/devlikeapro/waha/core/docker-compose/n8n/
 ```
 
 
-- If you're using [**WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) (donation version) - kindly go to 
+- If you're using [**WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) (donation version) - kindly go to 
 [https://portal.devlike.pro](https://portal.devlike.pro)
 and docker pull the image with your credentials:
 ```bash

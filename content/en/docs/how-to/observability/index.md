@@ -143,7 +143,7 @@ Docker will **automatically restart** the server, so you can use this endpoint t
 
 ## Health Check
 
-<b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}})
+<b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/waha-plus" >}})
 only.</b>
 
 The health check endpoint is used to determine the health of the service.

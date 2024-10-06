@@ -15,7 +15,7 @@ We do not recommend exposing the API on any public networks!
 Either protect the API with [Api Key](https://www.fortinet.com/resources/cyberglossary/api-key) or deny access by using
 firewalls.
 
-👉 Security options are available in [**WAHA Plus**]({{< relref "plus-version#plus" >}}) ![](/images/versions/plus.png) version only.
+👉 Security options are available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}}) ![](/images/versions/plus.png) version only.
 
 ## Swagger Security
 ### Username and password

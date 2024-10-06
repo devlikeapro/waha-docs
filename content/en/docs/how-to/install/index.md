@@ -79,7 +79,7 @@ Then, with a single command, you create and start all the services from your con
 
 ### Get docker image
 We'll use
-[**➕ WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) docker image in the guide:
+[**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) docker image in the guide:
 
 ```bash
 docker login -u devlikeapro -p {KEY}
@@ -268,7 +268,7 @@ remember to change it to `latest-{YEAR}.{MONTH}.{BUILD}` to get the latest versi
 
 When there's a new version of WAHA, you can update it with a single commands:
 
-[**➕ WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) image:
+[**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) image:
 ```bash
 # Login if you're using WAHA Plus
 docker login -u devlikeapro -p {KEY}

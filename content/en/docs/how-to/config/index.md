@@ -123,7 +123,7 @@ However, you can enable HTTPS directly in WAHA by setting the following environm
 Read more about HTTPS options and how to configure it on [**🔒 Security**]({{< relref "/docs/how-to/security" >}}) page.
 
 ## Security
-<b>Security is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
+<b>Security is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/waha-plus" >}}) only.</b>
 
 - `WHATSAPP_API_KEY=mysecret`: If you set this variable, you must include the `X-Api-Key: mysecret` header in all
   requests to the API. This will protect the API with a secret code.
@@ -132,7 +132,7 @@ Read more about HTTPS options and how to configure it on [**🔒 Security**]({{<
 Read more about security settings for Swagger and API on [*🔒 Security**]({{< relref "/docs/how-to/security" >}}).
 
 ## Files
-<b>Files configuration is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
+<b>Files configuration is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/waha-plus" >}}) only.</b>
 
 ### Files - Local
 The following environment variables can be used to configure the file storage options for the WAHA:
@@ -186,7 +186,7 @@ you'll get a webhook event with `hasMedia: True` field, but with no `media.url`.
 👉 Learn more on [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}) page.
 
 ## Health Check
-<b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) only.</b>
+<b>Health check is available in [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/waha-plus" >}}) only.</b>
 
 The following environment variables can be used to configure the [Health Check ->]({{< relref "/docs/how-to/observability" >}}):
 - `WHATSAPP_HEALTH_MEDIA_FILES_THRESHOLD_MB` - the threshold in MB for the media files storage. The default value is `100`.

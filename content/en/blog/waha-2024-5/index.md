@@ -21,7 +21,7 @@ Check the [🆕 Changelog]({{< relref "/docs/overview/changelog#20245" >}}) for 
 
 # 🌟 NEW - Swagger White Label
 
-👉 Swagger White Label is available in [**WAHA Plus**]({{< relref "plus-version#plus" >}}) version only.
+👉 Swagger White Label is available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}}) version only.
 
 If you're running SaaS or want to show your brand in the Swagger documentation,
 you can now customize the Swagger documentation with your own brand!

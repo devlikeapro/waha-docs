@@ -69,7 +69,7 @@ docker pull devlikeapro/waha
 ```
 
 If you got the
-[➕ WAHA Plus]({{< relref "/docs/how-to/plus-version" >}})
+[➕ WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}})
 , use the following commands:
 
 ```bash
@@ -93,7 +93,7 @@ docker tag devlikeapro/waha:arm devlikeapro/waha
 ```
 
 If you got the
-[➕ WAHA Plus]({{< relref "/docs/how-to/plus-version" >}})
+[➕ WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}})
 , use the following commands:
 
 ```bash

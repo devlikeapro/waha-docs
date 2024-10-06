@@ -24,7 +24,7 @@ If you have any problems with one engine - try another!
 
 All engines are available in both
 Core ![](/images/versions/core.png) and
-[Plus ![](/images/versions/plus.png) versions]({{< relref "/docs/how-to/plus-version" >}}).
+[Plus ![](/images/versions/plus.png) versions]({{< relref "/docs/how-to/waha-plus" >}}).
 
 ### WEBJS
 
@@ -62,7 +62,7 @@ devlikeapro/{image}:{browser}[-cpu][-version]
 ```
 
 ### Image
-- `waha-plus` - [**➕ WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) image
+- `waha-plus` - [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) image
 - `waha` - **WAHA Core** image
 
 ### Browsers
@@ -86,7 +86,7 @@ to generate the command with the latest version and your key.
 
 | Image                                                       | CPU | Browser                 |
 |-------------------------------------------------------------|-----|-------------------------|
-| [**WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) |     |                         |
+| [**WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) |     |                         |
 | `devlikeapro/waha-plus:latest`                              | x86 | Chromium                |
 | `devlikeapro/waha-plus:chrome`                              | x86 | Chrome (supports video) |
 | `devlikeapro/waha-plus:noweb`                               | x86 | None                    |
@@ -109,7 +109,7 @@ Here, you will find a list of supported endpoints and webhooks per engine.
 |:--------------------------------------------------:|-----------------------------------------------------------------------------------|
 |                         ✔️                         | The engines supports the feature.                                                 |
 | [#123](https://github.com/devlikeapro/waha/issues) | Feature request or bug for the endpoint                                           |
-|           ![](/images/versions/plus.png)           | The feature available in [WAHA Plus]({{< relref "/docs/how-to/plus-version" >}}). |
+|           ![](/images/versions/plus.png)           | The feature available in [WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}}). |
 |                         ➖                          | The engine **does not** and will newer support this feature                       |
 
 If you don't specify `WHATSAPP_DEFAULT_ENGINE` environment variable - look at **WEBJS** engine,

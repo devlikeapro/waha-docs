@@ -45,7 +45,7 @@ You can show your own brand in the Swagger documentation.
 <br/>
 <br/>
 
-👉 Swagger White Label is available in [**WAHA Plus**]({{< relref "plus-version#plus" >}}) ![](/images/versions/plus.png) version only.
+👉 Swagger White Label is available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}}) ![](/images/versions/plus.png) version only.
 
 Use the following environment variables to customize the Swagger documentation:
 - `WHATSAPP_SWAGGER_TITLE` - the title of the Swagger documentation and some other places.

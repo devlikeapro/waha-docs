@@ -119,7 +119,7 @@ The WhatsApp Download Image Bot downloads all files people send to your WhatsApp
 and log the path for the file.
 
 **The bot works only with WAHA Plus version** available with donations. Visit
-[read more about difference between Core and Plus versions](https://waha.devlike.pro/docs/how-to/plus-version/).
+[read more about difference between Core and Plus versions](https://waha.devlike.pro/docs/how-to/waha-plus/).
 
 Download **WAHA Plus** version:
 

@@ -640,7 +640,7 @@ sha512
 
 ### Retries
 **WAHA** retries to reach your webhook URL **15 times** with **2 seconds delay** between attempts by default in
-[Plus Version →]({{< relref "plus-version" >}})
+[Plus Version →]({{< relref "waha-plus" >}})
 
 You can configure those parameters by settings `config.retries` structure when `POST /api/sessions/`:
 

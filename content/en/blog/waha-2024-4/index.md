@@ -21,7 +21,7 @@ homepage: false
 We are thrilled to introduce the latest addition to WAHA - 
 [the brand new **Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}),
 exclusively available in 
-[**WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) version!
+[**WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) version!
 
 🌟 Dashboard allows you to do:
 
@@ -50,7 +50,7 @@ If you’re using API Key, remember to set up the key in the dashboard:
 Thank you for your continued support and enthusiasm for the project! We appreciate each and every one of our patrons! 🙏
 
 If you don't have access to 
-[WAHA Plus]({{< relref "/docs/how-to/plus-version" >}}) - subscribe to one of our tiers on
+[WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}}) - subscribe to one of our tiers on
 the platforms  and get the key to get WAHA Plus on
 our portal! [https://portal.devlike.pro/](https://portal.devlike.pro/)
 

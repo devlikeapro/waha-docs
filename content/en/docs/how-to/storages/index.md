@@ -70,7 +70,7 @@ or
 it removes the directory with the session data.
 
 ### Health Check
-The [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) provides [the health check endpoint]({{< relref "/docs/how-to/observability" >}}) that checks the local storage.
+The [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/waha-plus" >}}) provides [the health check endpoint]({{< relref "/docs/how-to/observability" >}}) that checks the local storage.
 
 ## Sessions - MongoDB
 If you want to use the MongoDB to store the session data, you need to:
@@ -119,7 +119,7 @@ If you use the [MongoDB Atlas](https://www.mongodb.com/atlas/database) you must 
 For production please consider running the MongoDB server close to the WAHA server for the best performance and security reasons.
 
 ### Health Check
-The [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) provides [the health check endpoint]({{< relref "/docs/how-to/observability" >}}) that checks the MongoDB connection.
+The [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/waha-plus" >}}) provides [the health check endpoint]({{< relref "/docs/how-to/observability" >}}) that checks the MongoDB connection.
 
 ## Media
 When your WhatsApp instance receives media files, it stores them in the media storage.
@@ -160,7 +160,7 @@ docker run -v /path/to/on/host/.media:/app/.media -e WHATSAPP_FILES_FOLDER=/app/
 ```
 
 ### Health Check
-The [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/plus-version" >}}) provides [the health check endpoint]({{< relref "/docs/how-to/observability" >}}) that checks the local storage.
+The [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/waha-plus" >}}) provides [the health check endpoint]({{< relref "/docs/how-to/observability" >}}) that checks the local storage.
 
 ## Media - S3
 You can use the S3 storage to store the media files.

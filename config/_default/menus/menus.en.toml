@@ -87,7 +87,7 @@
 [[main]]
   name = "➕ WAHA Plus"
   weight = 10
-  url = "/docs/how-to/plus-version"
+  url = "/docs/how-to/waha-plus"
   parent = "waha-plus"
 
 [[main]]

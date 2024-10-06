@@ -653,7 +653,7 @@ The `session.status` event is triggered when the session status changes.
 
 ## Advanced sessions ![](/images/versions/plus.png)
 
-With [WAHA Plus version]({{< relref "plus-version" >}}) you can save session state to avoid scanning QR code everytime,
+With [WAHA Plus version]({{< relref "waha-plus" >}}) you can save session state to avoid scanning QR code everytime,
 configure autostart options so when the docker container restarts - it restores all previously run sessions!
 
 ### Session persistent
@@ -677,7 +677,7 @@ you can use set of these environment variables to start sessions for you:
 ### Multiple sessions
 
 If you want to save server's CPU and Memory - run multiple sessions inside one docker container!
-[Plus version]({{< relref "plus-version" >}}) supports multiple sessions in one container.
+[Plus version]({{< relref "waha-plus" >}}) supports multiple sessions in one container.
 
 ## DEPRECATED
 

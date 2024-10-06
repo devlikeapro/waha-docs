@@ -30,7 +30,7 @@ If you're exposing WAHA to the internet, you should **always use HTTPS** to prot
 
 ----
 
-👉 WAHA **supports HTTPS out of the box** in [**WAHA Plus**]({{< relref "/docs/how-to/plus-version" >}}) version.
+👉 WAHA **supports HTTPS out of the box** in [**WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) version.
 
 You can set up the following environment variables to enable HTTPS:
 
