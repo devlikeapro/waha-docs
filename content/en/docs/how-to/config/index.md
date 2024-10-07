@@ -13,7 +13,7 @@ You can configure WhatsApp API behaviour via environment variables, by adding `-
 begging of the command line or by using [other options](https://docs.docker.com/engine/reference/commandline/run/)
 
 ```bash
-docker run -it -e "WHATSAPP_RESTART_ALL_SESSIONS=True" -e WAHA_PRINT_QR=False devlikeapro/waha
+docker run -it -e "WAHA_WORKER_ID=waha" -e WAHA_PRINT_QR=False devlikeapro/waha
 ```
 
 It's not necessary to always run such a long command - you can save all data in
@@ -52,9 +52,9 @@ Options you can use to control the way how WAHA output the logs:
 - `WAHA_PRINT_QR=True` - set this variable to `False` to disable printing QR codes to the console. By default, `True`.
 - `WAHA_WORKER_ID=waha1` - set the worker ID for the session. 
   - Workers restore sessions if worker got restarted. If you have multiple workers, each worker will restore its own sessions.
-- `WAHA_WORKER_RESTART_SESSIONS=True` - restart all sessions when the worker is restarted. By default, `True`.
 
 Rarely used:
+- `WAHA_WORKER_RESTART_SESSIONS=True` - restart all sessions when the worker is restarted. By default, `True`.
 - `WHATSAPP_START_SESSION=session1,session2`: This variable can be used to start sessions with the specified names right
   after launching the API. Separate session names with a comma.
 - `WHATSAPP_RESTART_ALL_SESSIONS=True`: Set this variable to `True` to start all **STOPPED** sessions after container

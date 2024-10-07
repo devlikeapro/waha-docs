@@ -36,8 +36,10 @@ Release policy:
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.11
+
 `2024.11.1`
-- tbd 
+- Track session status [#491](https://github.com/devlikeapro/waha/issues/491)
+- Add workers environment variables: `WAHA_WORKER_ID`, `WAHA_WORKER_RESTART_SESSIONS`
 
 ## 2024.10
 `2024.10.4`
@@ -585,8 +587,8 @@ Improvements on session management, restarting sessions and more:
   ALWAYS after container restart `WHATSAPP_START_SESSION=session1,session2`
 - `WHATSAPP_SWAGGER_CONFIG_ADVANCED=true` enables advanced configuration options for Swagger documentation - you can customize host, port and base URL for the requests.
   Disabled by default.
-- Added `?all=true` parameter to `GET /api/session?all=True` endpoint - it'll show you ALL session, included **STOPPED
-  **, so you can know which one will be restarted if you set `WHATSAPP_RESTART_ALL_SESSIONS=True` environment variable.
+- Added `?all=true` parameter to `GET /api/session?all=True` endpoint - it'll show you ALL session, included
+  **STOPPED**, so you can know which one will be restarted if you set `WHATSAPP_RESTART_ALL_SESSIONS=True` environment variable.
 - Added `POST /api/sessions/logout` that allow you to logout from session - remove saved credentials.
 - Added `logout` boolean parameter to `POST /api/sessions/stop` request that allow you to stop the session AND logout at
   the same time.

@@ -81,11 +81,6 @@ You can configure proxy for a session by setting `config.proxy` fields when you 
   }
 }
 ```
-
-The configuration is saved and will be applied if the docker container restarts,
-and you set `WHATSAPP_RESTART_ALL_SESSIONS` environment variables.
-Read more about it in [Autostart section](#autostart).
-
 Read more about it on [**Sessions page** ->]({{< relref "/docs/how-to/sessions#configure-proxy" >}}).
 
 

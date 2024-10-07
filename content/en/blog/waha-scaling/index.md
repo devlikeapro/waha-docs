@@ -91,10 +91,8 @@ Here's key points how to set up **Horizontal Scaling** using **Sharding** techni
 We'll guide you through the process of setting up **Horizontal Scaling**
 using **Sharding** technique in the next sections.
 
-👉 Please note that each **WAHA Worker** must have its own database -
-either **File Storage** or **MongoDB** URL (not a database). Otherwise, the `WHATSAPP_RESTART_ALL_SESSIONS=True`
-option will restart ALL sessions in ALL workers on worker restart (you'll need disable it and run the session
-restart logic in your application).
+👉 Please note that each **WAHA Worker** must have its own database or `WAHA_WORKER_ID=waha{N}` environment variable set
+either **File Storage** or **MongoDB** URL (not a database). 
 
 ### Entities Schema
 

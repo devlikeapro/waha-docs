@@ -86,10 +86,6 @@ In order to create (and start) a new session - call `POST /api/sessions` with [*
 }
 ```
 
-👉 The configuration is saved and will be applied if the docker container restarts,
-if you set `WHATSAPP_RESTART_ALL_SESSIONS` environment variables AND attached [🗄️ Storages]({{< relref "/docs/how-to/storages" >}}) to the container.
-Read more about it in [Advanced Sessions](#advanced-sessions-imagesversionspluspng).
-
 📖 WAHA uses session `name` more like `id`, but we call it `name` for historical reasons.
 
 ### Postpone start
@@ -309,10 +305,6 @@ You can configure proxy for a session by setting `config.proxy` fields when you 
 }
 ```
 
-The configuration is saved and will be applied if the docker container restarts,
-and you set `WHATSAPP_RESTART_ALL_SESSIONS` environment variables.
-Read more about it in [Autostart section](#autostart).
-
 You can configure proxy when for all sessions by set up environment variables.
 Read more about it on [**Proxy page** ->]({{< relref "/docs/how-to/proxy" >}}) or [**Configuration page** ->]({{<
 relref "/docs/how-to/config#proxy" >}}).
@@ -436,8 +428,7 @@ The response:
 ```
 
 You can add `?all=true` parameter to the request `GET /api/session?all=True` it'll show you ALL session,
-including **STOPPED**,
-so you can know which one will be restarted if you set `WHATSAPP_RESTART_ALL_SESSIONS=True` environment variable.
+including **STOPPED**.
 
 ## Get Session
 
@@ -663,16 +654,9 @@ If you want to save your session and do not scan QR code everytime when you laun
 
 ### Autostart
 
-If you don't want to call `POST /api/sessions/{session}/start` for every session each time when the container restart -
-you can use set of these environment variables to start sessions for you:
-
-- `WHATSAPP_RESTART_ALL_SESSIONS=True`: Set this variable to `True` to start all **STOPPED** sessions after container
-  restarts. By default, this variable is set to `False`.
-    - Please note that this will start all **STOPPED** sessions, not just the sessions that were working before the restart. You can maintain the session list by
-      using `DELETE /api/sessions/{name}/`. You can see all sessions, including **STOPPED** sessions,
-      in the `GET /api/sessions/all=True` response.
-- `WHATSAPP_START_SESSION=session1,session2`: This variable can be used to start sessions with the specified names right
-  after launching the API. Separate session names with a comma.
+By default, WAHA track which session have been run on which worker and restart it when 
+worker got restarted. If you want to disable it - set `WAHA_WORKER_RESTART_SESSIONS=False` in 
+environment variable.
 
 ### Multiple sessions
 
