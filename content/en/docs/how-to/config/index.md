@@ -49,18 +49,22 @@ Options you can use to control the way how WAHA output the logs:
 
 
 ## Sessions
-- `WHATSAPP_RESTART_ALL_SESSIONS=True`: Set this variable to `True` to start all **STOPPED** sessions after container
-  restarts. By default, this variable is set to `False`.
-  - Please note that this will start all **STOPPED** sessions, not just the sessions that were working before the restart. You can maintain the session list by
-    using `DELETE /api/sessions/{name}/`. You can see all sessions, including **STOPPED** sessions, 
-    in the `GET /api/sessions/all=True` response.
 - `WAHA_PRINT_QR=True` - set this variable to `False` to disable printing QR codes to the console. By default, `True`.
+- `WAHA_WORKER_ID=waha1` - set the worker ID for the session. 
+  - Workers restore sessions if worker got restarted. If you have multiple workers, each worker will restore its own sessions.
+- `WAHA_WORKER_RESTART_SESSIONS=True` - restart all sessions when the worker is restarted. By default, `True`.
+
+Rarely used:
 - `WHATSAPP_START_SESSION=session1,session2`: This variable can be used to start sessions with the specified names right
   after launching the API. Separate session names with a comma.
+- `WHATSAPP_RESTART_ALL_SESSIONS=True`: Set this variable to `True` to start all **STOPPED** sessions after container
+  restarts. By default, this variable is set to `False`.
 - `WAHA_ZIPPER=ZIPUNZIP` - use `zip` and `unzip` system binaries to pack **WEBJS** authentication data. Disabled by default.
   - It's relevant if you're using **WEBJS + MongoDB**. Install `zip` and `unzip` if you don't use our official docker image and set the variable
-- Also read more about [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
-- Also read more about [**🗄️ Storages**]({{< relref "/docs/how-to/storages#sessions" >}})
+
+Read more:
+- [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
+- [**🗄️ Storages**]({{< relref "/docs/how-to/storages#sessions" >}})
 
 ## Webhooks
 

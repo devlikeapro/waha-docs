@@ -35,6 +35,10 @@ Release policy:
 
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
+## 2024.11
+`2024.11.1`
+- tbd 
+
 ## 2024.10
 `2024.10.4`
 - **NOWEB** - handle "sent by advertisement" message properly [#567](https://github.com/devlikeapro/waha/issues/567)
