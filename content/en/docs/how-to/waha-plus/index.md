@@ -60,9 +60,16 @@ The members inherit **PRO** tier and will have their own docker key and GitHub a
 
 ![Portal - Your Team](portal-your-team.png)
 
-1. **Login** to [**Patron Portal**](https://portal.devlike.pro) and **Create Team** at the bottom the page:
-2. **Invite a new member** by sending invitation to their email
-3. **The Member gets email** with invitation
-4. **The Member Login** to [**Patron Portal**](https://portal.devlike.pro)
-5. **The Member Accepts** invitation
-6. If **The Member** doesn't see **PRO** tier - kindly refresh the page after waiting 10-30 seconds (sync tiers takes a bit of time)
+#### Invite Member
+1. **Login** to [**Patron Portal**](https://portal.devlike.pro) 
+2. **Create Team** at the bottom the page
+3. **Invite a new member** by sending invitation to their email
+
+#### Join Team
+1. Get **email with invitation**
+2. **Login** to [**Patron Portal**](https://portal.devlike.pro) 
+3. **Join** the team 
+
+![](portal-join-team.png)
+
+_If **The Member** doesn't see **PRO** tier - kindly refresh the page after waiting 10-30 seconds (sync tiers takes a bit of time)_
