@@ -72,7 +72,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 Release policy:
 YYYY.M.1 - new features. We release new features every month as first release (not always on the first day) if you see a new 2024.8.1 version - there are new features! YYYY.M.BUILD - bug fixes. We release bug fixes during the month if you see a new 2024.8.2 and version - there are bug fixes! 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.10 #2024.10.3
+Latest Version: 2024.10 #2024.10.4
+NOWEB - handle \u0026ldquo;sent by advertisement\u0026rdquo; message properly #567 NOWEB + MongoDB - save auth data when stopping session (and container) 2024.10.3
 WEBJS + MongoDB - handle removing temp folder with retries WEBJS - add more logs for state changes to help debugging 2024.10.2
 📢 WEBJS + MongoDB setup - handle disconnection properly (it stop saving auth data if connection to mongodb lost) 2024.10.1 - Release Notes
 Receive media now available in WAHA Core version! 📥 Receive messages - Files Add PORT environment variable for Heroku deployment - #555 Add WAHA_BASE_URL environment variable to set the base URL for the server for media.url links WEBJS - Add message.waiting event for encrypted but not yet decrypted messages #554 🔄 Webhooks - message.waiting https://faq.whatsapp.com/3398056720476987 WEBJS - handle connectivity issues better, restart client if required #552 Use axios as default library for sending webhooks - solve bad webhooks performance issues for many sessions installation. Handle webhooks retries properly in WAHA Plus version (using axios) 2024.9 #2024.9.6
