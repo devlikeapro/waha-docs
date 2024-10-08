@@ -36,6 +36,10 @@ Release policy:
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.10
+`2024.10.4`
+- **NOWEB** - handle "sent by advertisement" message properly [#567](https://github.com/devlikeapro/waha/issues/567)
+- **NOWEB** + **MongoDB** - save auth data when stopping session (and container)
+
 `2024.10.3`
 - **WEBJS** + **MongoDB** - handle removing temp folder with retries
 - **WEBJS** - add more logs for state changes to help debugging
