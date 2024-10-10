@@ -410,6 +410,7 @@ You can send voice messages in two ways:
   "session": "default",
   "chatId": "11111111111@c.us",
   "caption": "Watch this video!",
+  "asNote": false, // aka video note, rounded video
   "file": {
     "mimetype": "video/mp4",
     "filename": "video.mp4",
@@ -423,6 +424,7 @@ You can send voice messages in two ways:
 {
   "chatId": "11111111111@c.us",
   "caption": "Watch this video!",
+  "asNote": false, // aka video note, rounded video
   "file": {
     "mimetype": "video/mp4",
     "filename": "video.mp4",

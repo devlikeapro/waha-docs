@@ -43,6 +43,7 @@ Latest Version:
 
 ## 2024.10
 `2024.10.4`
+- **NOWEB** - send video note via `POST /api/sendVideo` via `asNote: true`
 - **NOWEB** - handle "sent by advertisement" message properly [#567](https://github.com/devlikeapro/waha/issues/567)
 - **NOWEB** + **MongoDB** - save auth data when stopping session (and container)
 
