@@ -40,6 +40,7 @@ Latest Version:
 `2024.11.1`
 - Track session status [#491](https://github.com/devlikeapro/waha/issues/491)
 - Add workers environment variables: `WAHA_WORKER_ID`, `WAHA_WORKER_RESTART_SESSIONS`
+- Add request id in webhooks headers and logs [#580](https://github.com/devlikeapro/waha/issues/580)
 
 ## 2024.10
 `2024.10.4`
