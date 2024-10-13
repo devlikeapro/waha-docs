@@ -593,6 +593,66 @@ It's an internal engine's state, not **session** `status`.
 
 
 ## Webhooks Advanced ![](/images/versions/plus.png)
+### Retries
+**WAHA** retries to reach your webhook URL **15 times** with **2 seconds delay** between attempts by default in
+[Plus Version →]({{< relref "waha-plus" >}})
+
+You can configure those parameters by settings `config.retries` structure when `POST /api/sessions/`:
+
+```json
+{
+  "name": "default",
+  "config": {
+    "webhooks": [
+      {
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
+        "events": [
+          "message"
+        ],
+        "retries": {
+          "delaySeconds": 2,
+          "attempts": 15
+        }
+      }
+    ]
+  }
+}
+
+```
+
+### Headers
+When you receive a webhook request to your API endpoint, you'll get **those headers**:
+- `X-Webhook-Request-Id` - unique request id for each webhook request.
+- `X-Webhook-Timestamp` - Unix timestamp in milliseconds when the webhook was sent.
+
+If you're using [**HMAC authentication**](#hmac-authentication) you'll get two additional headers:
+- `X-Webhook-Hmac` - message authentication code for the raw **body** in HTTP POST request that send to your endpoint.
+- `X-Webhook-Hmac-Algorithm` - `sha512` - algorithm that have been used to create `X-Webhook-Hmac` value.
+
+You can send any **customer headers** by defining `config.webhooks.customHeaders` fields this way:
+```json
+{
+  "name": "default",
+  "config": {
+    "webhooks": [
+      {
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
+        "events": [
+          "message"
+        ],
+        "customHeaders": [
+          {
+            "name": "X-My-Custom-Header",
+            "value": "Value"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+
 ### HMAC authentication
 
 You can authenticate webhook sender by using [HMAC Authentication](https://www.okta.com/identity-101/hmac/).
@@ -635,58 +695,6 @@ my-secret-key
 sha512
 # X-Webhook-Hmac
 208f8a55dde9e05519e898b10b89bf0d0b3b0fdf11fdbf09b6b90476301b98d8097c462b2b17a6ce93b6b47a136cf2e78a33a63f6752c2c1631777076153fa89
-```
-
-
-### Retries
-**WAHA** retries to reach your webhook URL **15 times** with **2 seconds delay** between attempts by default in
-[Plus Version →]({{< relref "waha-plus" >}})
-
-You can configure those parameters by settings `config.retries` structure when `POST /api/sessions/`:
-
-```json
-{
-  "name": "default",
-  "config": {
-    "webhooks": [
-      {
-        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message"
-        ],
-        "retries": {
-          "delaySeconds": 2,
-          "attempts": 15
-        }
-      }
-    ]
-  }
-}
-
-```
-
-### Custom Headers
-You can send any customer headers by defining `config.webhooks.customHeaders` fields this way:
-```json
-{
-  "name": "default",
-  "config": {
-    "webhooks": [
-      {
-        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message"
-        ],
-        "customHeaders": [
-          {
-            "name": "X-My-Custom-Header",
-            "value": "Value"
-          }
-        ]
-      }
-    ]
-  }
-}
 ```
 
 ## Websockets
