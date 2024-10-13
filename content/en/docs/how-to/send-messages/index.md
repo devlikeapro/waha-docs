@@ -115,6 +115,21 @@ also mention it in `mentions` in format `2132132130@c.us`
 }
 ```
 
+## Forward Message
+You can forward a message to another chat (that you chatted before, otherwise it may fail):
+
+```
+POST /api/forwardMessage
+```
+
+```json
+{
+  "chatId": "11111111111@c.us",
+  "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+  "session": "default"
+}
+```
+
 ## Send seen
 
 If you get a new message via [**🔄 Webhooks**]({{< relref "docs/how-to/webhooks#message" >}}) 

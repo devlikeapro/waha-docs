@@ -38,6 +38,8 @@ Latest Version:
 ## 2024.11
 
 `2024.11.1`
+- Add **forward message** API `POST /api/forwardMessage` - [#158](https://github.com/devlikeapro/waha/issues/158)
+  - [**📤 Send messages** - Forward Message]({{<relref "/docs/how-to/send-messages#forward-message" >}})
 - Track session status [#491](https://github.com/devlikeapro/waha/issues/491)
 - Add workers environment variables: `WAHA_WORKER_ID`, `WAHA_WORKER_RESTART_SESSIONS`
 - Add request id in webhooks headers and logs [#580](https://github.com/devlikeapro/waha/issues/580)
