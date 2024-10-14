@@ -1,11 +1,11 @@
 ---
-title : "📤 Send messages"
+title: "📤 Send messages"
 description: "Describe how to send messages."
 lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
-images: []
+images: [ ]
 weight: 210
 ---
 
@@ -14,10 +14,13 @@ We consider that you've run docker container and authenticated the session with 
 If you haven't yet - please follow the steps from [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 
 ## Features
+
 {{< include file="content/en/docs/how-to/send-messages/features.md" >}}
 
 ## Fields
+
 There are common fields that you can find in almost all requests:
+
 ```json
 {
   "session": "default",
@@ -27,37 +30,48 @@ There are common fields that you can find in almost all requests:
 ```
 
 ### session
+
 `session` - a session name from which account you're sending the message. We use `default` in the examples.
+
 - Core ![](/images/versions/core.png) version supports only `default` session.
-- Plus ![](/images/versions/plus.png) allows you to run multiple sessions inside one container to save your memory and CPU resources!
+- Plus ![](/images/versions/plus.png) allows you to run multiple sessions inside one container to save your memory and
+  CPU resources!
 
 Read more about [multiple sessions →]({{< relref "/docs/how-to/sessions" >}})
 
 ### chatId
+
 `chatId` - it's a phone number or Group identifier where you're sending the message.
-- `123123123@c.us`  **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at the end.
-  For phone number `12132132131` the `chatId` is  `12132132131@c.us` 
+
+- `123123123@c.us`  **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at
+  the end.
+  For phone number `12132132131` the `chatId` is  `12132132131@c.us`
 - `123123123@s.whatsapp.net` can also appear in **internal data for NOWEB**, just convert it to `@c.us` to work
-with that properly. Kindly don't use it in `chatId` when sending messages
+  with that properly. Kindly don't use it in `chatId` when sending messages
 - `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
-- `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that type of ID along with communities functionality.
+- `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that
+  type of ID along with communities functionality.
 - `123123123@newsletter` - for [**📰 WhatsApp Channels**]({{< relref "/docs/how-to/channels" >}}).
 
 👉 To get the actual `chatId` for 🇧🇷 **Brazilian phone number** - use `chatId` field from
 [Check phone number exists]({{< relref "/docs/how-to/contacts#check-phone-number-exists" >}})
-response. 
+response.
 
-Read more about [error sending text to half of Brazilian numbers (every number registered before 2012) ->](https://github.com/devlikeapro/waha/issues/238)
+Read more
+about [error sending text to half of Brazilian numbers (every number registered before 2012) ->](https://github.com/devlikeapro/waha/issues/238)
 
 ### file
+
 When sending media (images, voice, files) you can either use:
+
 - `file.data` field [with base64 encoded file](https://base64.guru/converter/encode/file)
 - `file.url` field with public available URL for that file
 
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### reply_to
-You can add `reply_to` field in order to reply on certain message. 
+
+You can add `reply_to` field in order to reply on certain message.
 
 ```json
 {
@@ -68,6 +82,7 @@ You can add `reply_to` field in order to reply on certain message.
 ```
 
 `reply_to` is available in all messages:
+
 - [Send text](#send-text)
 - [Send image](#send-image-)
 - [Send file](#send-file-)
@@ -77,7 +92,9 @@ You can add `reply_to` field in order to reply on certain message.
 - [Send location](#send-location)
 
 ## Send text
+
 To send text message - use `POST /api/sendText` with example payload.
+
 ```json
 {
   "session": "default",
@@ -87,7 +104,9 @@ To send text message - use `POST /api/sendText` with example payload.
 ```
 
 ### Reply on message
+
 To reply on a message - add `reply_to` field:
+
 ```json
 {
   "session": "default",
@@ -98,6 +117,7 @@ To reply on a message - add `reply_to` field:
 ```
 
 ### Mention contact
+
 If you send a message in a group and want to mention a participant in the message -
 use `mentions` field for that in `POST /api/sendText` request.
 
@@ -115,7 +135,103 @@ also mention it in `mentions` in format `2132132130@c.us`
 }
 ```
 
+## Send Buttons
+
+![](send-buttons.jpg)
+
+You can send **interactive message** (aka **buttons**) using
+
+```
+POST /api/sendButtons
+```
+
+```json
+{
+  "chatId": "11111111111@c.us",
+  "header": "How are you?",
+  "headerImage": {
+    "mimetype": "image/jpeg",
+    "filename": "filename.jpg",
+    "url": "https://github.com/devlikeapro/waha/raw/core/examples/waha.jpg"
+  },
+  "body": "Tell us how are you please 🙏",
+  "footer": "If you have any questions, please send it in the chat",
+  "buttons": [
+    {
+      "type": "reply",
+      "text": "I am good!"
+    },
+    {
+      "type": "call",
+      "text": "Call us",
+      "phoneNumber": "+1234567890"
+    },
+    {
+      "type": "copy",
+      "text": "Copy code",
+      "copyCode": "4321"
+    },
+    {
+      "type": "url",
+      "text": "How did you do that?",
+      "url": "https://waha.devlike.pro"
+    }
+  ],
+  "session": "default"
+}
+```
+
+⚠️ **Buttons** is not super stable feature, consider
+adding fallback logic in case the buttons are not working right now.
+
+👉 `headerImage` is available only in
+[**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
+
+### Buttons
+Here's available buttons you can use in `buttons`:
+
+**Quick Reply**
+
+```json
+{
+  "type": "reply",
+  "text": "I am good!"
+}
+```
+
+**URL**
+
+```json
+{
+  "type": "url",
+  "text": "How did you do that?",
+  "url": "https://waha.devlike.pro"
+}
+```
+
+**Call**
+
+```json
+{
+  "type": "call",
+  "text": "Call us",
+  "phoneNumber": "+1234567890"
+}
+```
+
+**Copy**
+
+```json
+{
+  "type": "copy",
+  "text": "Copy code",
+  "copyCode": "4321"
+}
+```
+
+
 ## Forward Message
+
 You can forward a message to another chat (that you chatted before, otherwise it may fail):
 
 ```
@@ -132,8 +248,8 @@ POST /api/forwardMessage
 
 ## Send seen
 
-If you get a new message via [**🔄 Webhooks**]({{< relref "docs/how-to/webhooks#message" >}}) 
-and want to reply to that message, you need to first send that you've seen the message 
+If you get a new message via [**🔄 Webhooks**]({{< relref "docs/how-to/webhooks#message" >}})
+and want to reply to that message, you need to first send that you've seen the message
 (double green tick) - [⚠️ How to Avoid Blocking]({{< relref "docs/overview/how-to-avoid-blocking" >}})
 
 ```
@@ -141,6 +257,7 @@ POST /api/sendSeen
 ```
 
 **Send seen for direct message**:
+
 ```json
 {
   "session": "default",
@@ -150,6 +267,7 @@ POST /api/sendSeen
 ```
 
 **Send seen for Group Message** you need to provide `participant` field:
+
 ```json
 {
   "session": "default",
@@ -159,22 +277,24 @@ POST /api/sendSeen
 }
 ```
 
-
-
 ## Edit message
+
 You can edit **text** messages or **"caption"** in media messages.
 
 ```
 PUT /api/{session}/chats/{chatId}/messages/{messageId}
 ```
+
 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
 
 So if you want to edit `true_123@c.us_AAA` message in `123@c.us` chat you need to send request to:
+
 ```
 PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
 **Payload:**
+
 ```json
 {
   "text": "Hello, world!"
@@ -182,6 +302,7 @@ PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
 ## Delete message
+
 You can delete messages from the chat.
 
 ```
@@ -191,11 +312,13 @@ DELETE /api/{session}/chats/{chatId}/messages/{messageId}
 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
 
 So if you want to delete `true_123@c.us_AAA` message in `123@c.us` chat you need to send request to:
+
 ```
 DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
 ## Send poll
+
 We have a dedicated page [📶 Polls]({{< relref "/docs/how-to/polls" >}})!
 
 ![](poll-example.jpg)
@@ -205,6 +328,7 @@ POST /api/sendPoll
 ```
 
 The request body is pretty simple:
+
 ```json
 {
   "session": "default",
@@ -222,6 +346,7 @@ The request body is pretty simple:
 ```
 
 ## Add a reaction
+
 Use `PUT /api/reaction` method to set reaction to a message.
 
 {{< alert icon="👉" text="Reaction API uses PUT, not POST request! Please make sure you send right request." />}}
@@ -235,6 +360,7 @@ Use `PUT /api/reaction` method to set reaction to a message.
 ```
 
 To remove reaction from a message - send empty string in the reaction request.
+
 ```json
 {
   "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
@@ -244,11 +370,13 @@ To remove reaction from a message - send empty string in the reaction request.
 ```
 
 ## Star and unstar message
+
 Use `PUT /api/star` method to star or unstar a message.
 
 {{< alert icon="👉" text="Star API uses PUT, not POST request! Please make sure you send right request." />}}
 
 **Star:**
+
 ```json
 {
   "messageId": "false_71111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -259,6 +387,7 @@ Use `PUT /api/star` method to star or unstar a message.
 ```
 
 **Unstar:**
+
 ```json
 {
   "messageId": "false_71111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -269,9 +398,11 @@ Use `PUT /api/star` method to star or unstar a message.
 ```
 
 ## Send contact (vcard)
+
 Use `POST /api/sendContactVcard` to send contact (vcard).
 
 You can use fields this way:
+
 ```json
 {
   "session": "default",
@@ -288,6 +419,7 @@ You can use fields this way:
 ```
 
 Or provide a vCard file content:
+
 ```json
 {
   "session": "default",
@@ -301,6 +433,7 @@ Or provide a vCard file content:
 ```
 
 Or even combine it:
+
 ```json
   {
   "chatId": "79111111@c.us",
@@ -319,17 +452,17 @@ Or even combine it:
 }
 ```
 
-
-
-
 ## Send image ![](/images/versions/plus.png)
+
 Use `POST /api/sendImage` to send images.
 
 You can send images in two ways:
+
 1. Provide a URL for the image.
 2. Encode the whole file content into base64 and send it in the request body.
 
 ### URL
+
 ```json
 {
   "session": "default",
@@ -344,6 +477,7 @@ You can send images in two ways:
 ```
 
 ### Base64
+
 ```json
 {
   "session": "default",
@@ -358,19 +492,23 @@ You can send images in two ways:
 ```
 
 ## Send voice ![](/images/versions/plus.png)
+
 Use `POST /api/sendVoice` to send voice messages.
 
 You can send voice messages in two ways:
+
 1. Provide a URL for the voice.
 2. Encode the whole file content into base64 and send it in the request body.
 
-👉 Please make sure your file has **OPUS** encoding and packed in OGG container. You can convert to this using ffmpeg (there's many libs for that in popular languages).
+👉 Please make sure your file has **OPUS** encoding and packed in OGG container. You can convert to this using ffmpeg (
+there's many libs for that in popular languages).
 
 ```bash
 ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 ```
 
 ### URL
+
 ```json
 {
   "session": "default",
@@ -384,6 +522,7 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 ```
 
 ### Base64
+
 ```json
 {
   "chatId": "11111111111@c.us",
@@ -397,6 +536,7 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 ```
 
 ## Send video ![](/images/versions/plus.png)
+
 Use `POST /api/sendVideo` to send a message with a video attached.
 
 ---
@@ -410,22 +550,26 @@ ffmpeg -i input_video.mp4 -c:v libx264 output_video.mp4
 ---
 
 👉  **WEBJS** (default) engine notes for sending videos
+
 - Use `devlikeapro/waha-plus:chrome` docker image.
   Read more about [**Docker images and engines →**]({{< relref "/docs/how-to/engines" >}}).
 
 ---
 
 You can send voice messages in two ways:
+
 1. Provide a URL for the file and the API will download it and send it in the request body.
 2. Provide the file as a base64 string in the request body.
 
 ### URL
+
 ```json
 {
   "session": "default",
   "chatId": "11111111111@c.us",
   "caption": "Watch this video!",
-  "asNote": false, // aka video note, rounded video
+  "asNote": false,
+  // aka video note, rounded video
   "file": {
     "mimetype": "video/mp4",
     "filename": "video.mp4",
@@ -435,11 +579,13 @@ You can send voice messages in two ways:
 ```
 
 ### Base64
+
 ```json
 {
   "chatId": "11111111111@c.us",
   "caption": "Watch this video!",
-  "asNote": false, // aka video note, rounded video
+  "asNote": false,
+  // aka video note, rounded video
   "file": {
     "mimetype": "video/mp4",
     "filename": "video.mp4",
@@ -450,13 +596,16 @@ You can send voice messages in two ways:
 ```
 
 ## Send file ![](/images/versions/plus.png)
+
 Use `POST /api/sendFile` to send a file as a document.
 
 You can send files in two ways:
+
 1. Provide a URL for the file.
 2. Encode the whole file content into base64 and send it in the request body.
 
 ### URL
+
 ```json
 {
   "session": "default",
@@ -471,6 +620,7 @@ You can send files in two ways:
 ```
 
 ### Base64
+
 ```json
 {
   "session": "default",
@@ -485,6 +635,7 @@ You can send files in two ways:
 ```
 
 ## Send location
+
 ```
 POST /api/sendLocation
 ```
@@ -500,11 +651,13 @@ POST /api/sendLocation
 ```
 
 ## Send Status (aka stories)
+
 You can send statuses (aka stories)!
 
 Check out [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) page.
 
 ## Send messages to Channels
+
 You can send messages to channels!
 
 Check out [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) page.

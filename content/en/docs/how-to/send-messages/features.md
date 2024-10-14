@@ -8,6 +8,7 @@
 | `POST /api/sendFile` ![](/images/versions/plus.png)         |                              ✔️                              |  ✔️   |
 | `POST /api/sendVoice` ![](/images/versions/plus.png)        |                              ✔️                              |  ✔️   |
 | `POST /api/sendVideo` ![](/images/versions/plus.png)        |                              ✔️                              |  ✔️   |
+| `POST /api/sendButtons`                                     |                                                              |  ✔️   |
 | `POST /api/sendPoll`                                        |    [#189](https://github.com/devlikeapro/waha/issues/189)    |  ✔️   |
 | `POST /api/forwardMessage`                                  | ✔️<br>[#588](https://github.com/devlikeapro/waha/issues/588) |  ✔️   |
 | `POST /api/sendLocation`                                    |                              ✔️                              |  ✔️   |
