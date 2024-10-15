@@ -44,7 +44,6 @@ Options you can use to control the way how WAHA output the logs:
   - 👉 Do not set `debug` and `trace` in production, it gives too many logs.
 - `WAHA_HTTP_LOG_LEVEL=info` - controls the level of `request completed` log (HTTP access), you can set it to `error | warn | info | debug | trace`.
 - `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides the `WAHA_LOG_LEVEL` to `debug` if both defined. 
-
 👉 Learn more about logging configuration on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page.
 
 

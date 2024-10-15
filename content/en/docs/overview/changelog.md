@@ -40,6 +40,9 @@ Latest Version:
   - [**📤 Send messages** - Forward Message]({{<relref "/docs/how-to/send-messages#forward-message" >}})
   - **WEBJS** 
   - **NOWEB**
+- Fix sessions stuck in `STARTING` on container restart - [#586](https://github.com/devlikeapro/waha/issues/586)
+- Add `WAHA_AUTO_START_DELAY_SECONDS=0` environment variable so you can control the delay between sessions
+  - [**⚙️ Configuration** - Sessions]({{<relref "/docs/how-to/config#sessions" >}})
 - Track session status and do not restart it - [#491](https://github.com/devlikeapro/waha/issues/491) 
 - Add workers environment variables: `WAHA_WORKER_ID`, `WAHA_WORKER_RESTART_SESSIONS`
 - Add request id in webhooks headers and logs [#580](https://github.com/devlikeapro/waha/issues/580)
