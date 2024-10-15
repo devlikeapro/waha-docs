@@ -49,6 +49,10 @@ Options you can use to control the way how WAHA output the logs:
 
 
 ## Sessions
+- `WAHA_AUTO_START_DELAY_SECONDS=0` - when docker container restarts, WAHA starts all `STOPPED` session (or all session if you set `WAHA_RESTART_ALL_SESSIONS=True`). You can set the delay between session restarts in seconds. 
+  - By default, it's `0`.
+  - **WEBJS** - consider setting it to `5` if you have many sessions
+  - **NOWEB** - it's fine to leave to `0` or you can increase to `1` if you experience issues with starting sessions.
 - `WAHA_PRINT_QR=True` - set this variable to `False` to disable printing QR codes to the console. By default, `True`.
 - `WAHA_WORKER_ID=waha1` - set the worker ID for the session. 
   - Workers restore sessions if worker got restarted. If you have multiple workers, each worker will restore its own sessions.
