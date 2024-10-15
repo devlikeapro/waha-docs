@@ -594,10 +594,7 @@ It's an internal engine's state, not **session** `status`.
 
 ## Webhooks Advanced ![](/images/versions/plus.png)
 ### Retries
-**WAHA** retries to reach your webhook URL **15 times** with **2 seconds delay** between attempts by default in
-[Plus Version →]({{< relref "waha-plus" >}})
-
-You can configure those parameters by settings `config.retries` structure when `POST /api/sessions/`:
+You can configure retry policy for webhooks by settings `config.retries` structure when `POST /api/sessions/`:
 
 ```json
 {
@@ -611,7 +608,8 @@ You can configure those parameters by settings `config.retries` structure when `
         ],
         "retries": {
           "delaySeconds": 2,
-          "attempts": 15
+          "attempts": 15,
+          "policy": "constant"
         }
       }
     ]
@@ -619,6 +617,11 @@ You can configure those parameters by settings `config.retries` structure when `
 }
 
 ```
+
+Possible `policy`:
+- `constant` - retry with the same delay between attempts (2, 2, 2, 2)
+- `linear` - retry with linear backoff (2, 4, 6, 8)
+- `exponential` - retry with exponential backoff with 20% jitter (2, 4.1, 8.4, 16.3).
 
 ### Headers
 When you receive a webhook request to your API endpoint, you'll get **those headers**:

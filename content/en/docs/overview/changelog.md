@@ -21,12 +21,6 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 
 👉 **You can subscribe on free tier!**
 
-Release policy:
-- `YYYY.M.1` - new features. We release **new features** every month as first release (not always on the first day)
-  - if you see a new `2024.8.1` version - there are **new features**!
-- `YYYY.M.BUILD` - bug fixes. We release **bug fixes** during the month
-  - if you see a new `2024.8.2` and  version - there are **bug fixes**!
-
 ----
 
 💡 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
@@ -35,9 +29,10 @@ Release policy:
 
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
-## 2024.11
 
-`2024.11.1`
+## 2024.10
+
+`2024.10.5`
 - Add **Send Buttons** API `POST /api/sendButtons` - [$544](https://github.com/devlikeapro/waha/issues/544)
   - [**📤 Send messages** - Send Buttons]({{<relref "/docs/how-to/send-messages#send-buttons" >}})
   - **NOWEB**
@@ -49,8 +44,9 @@ Latest Version:
 - Add workers environment variables: `WAHA_WORKER_ID`, `WAHA_WORKER_RESTART_SESSIONS`
 - Add request id in webhooks headers and logs [#580](https://github.com/devlikeapro/waha/issues/580)
   - [**🔄 Webhooks** - Headers]({{< relref "webhooks#headers" >}})
+- Add `policy` for webhook retries [#587](https://github.com/devlikeapro/waha/issues/587)
+  - [**🔄 Webhooks** - Headers]({{< relref "webhooks#retries" >}})
 
-## 2024.10
 `2024.10.4`
 - **NOWEB** - send video note via `POST /api/sendVideo` via `asNote: true`
 - **NOWEB** - handle "sent by advertisement" message properly [#567](https://github.com/devlikeapro/waha/issues/567)
