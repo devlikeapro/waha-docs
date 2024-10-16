@@ -194,6 +194,8 @@ Here's available buttons you can use in `buttons`:
 
 ```json
 {
+  // Optional id
+  // "id": "123",
   "type": "reply",
   "text": "I am good!"
 }
