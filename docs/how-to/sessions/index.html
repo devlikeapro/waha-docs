@@ -41,9 +41,7 @@ but keeps the device on &ldquo;Connected Device&rdquo; in the app - <a href=http
   },
   &quot;me&quot;: null
 }
-</code></pre><p>👉 The configuration is saved and will be applied if the docker container restarts,
-if you set <code>WHATSAPP_RESTART_ALL_SESSIONS</code> environment variables AND attached <a href=/docs/how-to/storages/>🗄️ Storages</a> to the container.
-Read more about it in <a href=#advanced-sessions-imagesversionspluspng>Advanced Sessions</a>.</p><p>📖 WAHA uses session <code>name</code> more like <code>id</code>, but we call it <code>name</code> for historical reasons.</p><h3 id=postpone-start>Postpone start <a href=#postpone-start class=anchor aria-hidden=true>#</a></h3><p>By default, the session starts right after creation.
+</code></pre><p>📖 WAHA uses session <code>name</code> more like <code>id</code>, but we call it <code>name</code> for historical reasons.</p><h3 id=postpone-start>Postpone start <a href=#postpone-start class=anchor aria-hidden=true>#</a></h3><p>By default, the session starts right after creation.
 You can create a session and postpone its start by setting <code>start</code> field to <code>false</code>.
 It&rsquo;ll create a session in <code>STOPPED</code> status, and you can start it later by calling <code>POST /api/sessions/{session}/start</code>.</p><pre><code class=language-json>{
   &quot;name&quot;: &quot;default&quot;,
@@ -185,9 +183,7 @@ use, so you don&rsquo;t have to look into two systems.</li></ul><p>WAHA does not
     }
   }
 }
-</code></pre><p>The configuration is saved and will be applied if the docker container restarts,
-and you set <code>WHATSAPP_RESTART_ALL_SESSIONS</code> environment variables.
-Read more about it in <a href=#autostart>Autostart section</a>.</p><p>You can configure proxy when for all sessions by set up environment variables.
+</code></pre><p>You can configure proxy when for all sessions by set up environment variables.
 Read more about it on <a href=/docs/how-to/proxy/><strong>Proxy page</strong> -></a> or <a href=/docs/how-to/config/#proxy><strong>Configuration page</strong> -></a>.</p><p>👉 Read more about <a href=/docs/engines/noweb/#store><strong>NOWEB Store Configuration</strong></a>.</p><h3 id=debug>Debug <a href=#debug class=anchor aria-hidden=true>#</a></h3><p>You can enable debug mode for a session by setting <code>config.debug</code> field to <code>true</code>.
 It&rsquo;ll show you more logs in the console.
 Can be useful for debugging purposes when you&rsquo;re experiencing some issues.</p><pre><code class=language-json>{
@@ -241,8 +237,7 @@ but keeps the <em>session&rsquo;s configuration</em>, so you can start a new ses
   }
 ]
 </code></pre><p>You can add <code>?all=true</code> parameter to the request <code>GET /api/session?all=True</code> it&rsquo;ll show you ALL session,
-including <strong>STOPPED</strong>,
-so you can know which one will be restarted if you set <code>WHATSAPP_RESTART_ALL_SESSIONS=True</code> environment variable.</p><h2 id=get-session>Get Session <a href=#get-session class=anchor aria-hidden=true>#</a></h2><p>To get information about a specific session - call <code>GET /api/sessions/{session}</code>.</p><pre><code class=language-json>{
+including <strong>STOPPED</strong>.</p><h2 id=get-session>Get Session <a href=#get-session class=anchor aria-hidden=true>#</a></h2><p>To get information about a specific session - call <code>GET /api/sessions/{session}</code>.</p><pre><code class=language-json>{
   &quot;name&quot;: &quot;default&quot;,
   &quot;status&quot;: &quot;WORKING&quot;,
   &quot;config&quot;: {
@@ -329,12 +324,9 @@ because the pairing code is not always available and works as expected.</p><h2 i
 }
 </code></pre><h2 id=advanced-sessions-imagesversionspluspng>Advanced sessions <img class="img-fluid lazyload blur-up" src=/images/versions/plus.png> <a href=#advanced-sessions-imagesversionspluspng class=anchor aria-hidden=true>#</a></h2><p>With <a href=/docs/how-to/waha-plus/>WAHA Plus version</a> you can save session state to avoid scanning QR code everytime,
 configure autostart options so when the docker container restarts - it restores all previously run sessions!</p><h3 id=session-persistent>Session persistent <a href=#session-persistent class=anchor aria-hidden=true>#</a></h3><p>If you want to save your session and do not scan QR code everytime when you launch WAHA -
-<a href=/docs/how-to/storages/#sessions>connect the session storage to the container -></a></p><h3 id=autostart>Autostart <a href=#autostart class=anchor aria-hidden=true>#</a></h3><p>If you don&rsquo;t want to call <code>POST /api/sessions/{session}/start</code> for every session each time when the container restart -
-you can use set of these environment variables to start sessions for you:</p><ul><li><code>WHATSAPP_RESTART_ALL_SESSIONS=True</code>: Set this variable to <code>True</code> to start all <strong>STOPPED</strong> sessions after container
-restarts. By default, this variable is set to <code>False</code>.<ul><li>Please note that this will start all <strong>STOPPED</strong> sessions, not just the sessions that were working before the restart. You can maintain the session list by
-using <code>DELETE /api/sessions/{name}/</code>. You can see all sessions, including <strong>STOPPED</strong> sessions,
-in the <code>GET /api/sessions/all=True</code> response.</li></ul></li><li><code>WHATSAPP_START_SESSION=session1,session2</code>: This variable can be used to start sessions with the specified names right
-after launching the API. Separate session names with a comma.</li></ul><h3 id=multiple-sessions>Multiple sessions <a href=#multiple-sessions class=anchor aria-hidden=true>#</a></h3><p>If you want to save server&rsquo;s CPU and Memory - run multiple sessions inside one docker container!
+<a href=/docs/how-to/storages/#sessions>connect the session storage to the container -></a></p><h3 id=autostart>Autostart <a href=#autostart class=anchor aria-hidden=true>#</a></h3><p>By default, WAHA track which session have been run on which worker and restart it when
+worker got restarted. If you want to disable it - set <code>WAHA_WORKER_RESTART_SESSIONS=False</code> in
+environment variable.</p><h3 id=multiple-sessions>Multiple sessions <a href=#multiple-sessions class=anchor aria-hidden=true>#</a></h3><p>If you want to save server&rsquo;s CPU and Memory - run multiple sessions inside one docker container!
 <a href=/docs/how-to/waha-plus/>Plus version</a> supports multiple sessions in one container.</p><h2 id=deprecated>DEPRECATED <a href=#deprecated class=anchor aria-hidden=true>#</a></h2><p>Before new granular API we have a simple API to control the session.</p><p><strong>Kindly switch to new API</strong> that allows you to control the session <strong>in a more flexible way</strong>.</p><h3 id=start>Start <a href=#start class=anchor aria-hidden=true>#</a></h3><p><code>POST /api/sessions/start</code> - the endpoint <strong>Create</strong> (if not exists),
 <strong>Update</strong> (if existed before) and <strong>Start</strong> a new session.</p><p>Accepts the same configuration as
 <a href=#create-session>Create</a> and <a href=#update-session>Update</a> API.</p><pre><code class=language-json>{
@@ -361,4 +353,4 @@ after launching the API. Separate session names with a comma.</li></ul><h3 id=mu
 <script type=text/javascript>window.innerWidth>990&&setTimeout(()=>{docsearch({appId:"OV9LGQBN5C",apiKey:"7005679dc522e856719f3270aac826a1",indexName:"wahalike",container:".doks-search",debug:!1})},1e3)</script><script src=/js/bootstrap.min.87685cf4e6585276ff9e7b5d0b97e792615af6921e77821315d1ca7c5511ac2f30667e16c0d031e680ca8b57f63f6c0f6c4a232da777cce474b501ed81e090a9.js integrity="sha512-h2hc9OZYUnb/nntdC5fnkmFa9pIed4ITFdHKfFURrC8wZn4WwNAx5oDKi1f2P2wPbEojLad3zOR0tQHtgeCQqQ==" crossorigin=anonymous defer></script>
 <script src=/js/highlight.min.56a414730f1135fe77b5ea30bf74a2cc4101a6f386e85e5b789c800570cc33d33054000f45932c053a59b41018f72687867254a80e1b9710671852492533162f.js integrity="sha512-VqQUcw8RNf53teowv3SizEEBpvOG6F5beJyABXDMM9MwVAAPRZMsBTpZtBAY9yaHhnJUqA4blxBnGFJJJTMWLw==" crossorigin=anonymous defer></script>
 <script src=/main.min.d000e348035b40987b09e03b600e7bc570106d0999cc76fa8f8193c2a9bd8d934862d6d27cbc481b699f28adc1530b467259848edb6de908d577aabec8c3573b.js integrity="sha512-0ADjSANbQJh7CeA7YA57xXAQbQmZzHb6j4GTwqm9jZNIYtbSfLxIG2mfKK3BUwtGclmEjttt6QjVd6q+yMNXOw==" crossorigin=anonymous defer></script>
-<script src=https://waha.devlike.pro/index.min.25038d24c89bf90a04cf7e707531a45f9ed14022d6516c5730ca0852c7dc5e21d31cd4074399f3263203c38480a8a3ee0f00f17703222b6a44d9982fbcf2aa4a.js integrity="sha512-JQONJMib+QoEz35wdTGkX57RQCLWUWxXMMoIUsfcXiHTHNQHQ5nzJjIDw4SAqKPuDwDxdwMiK2pE2ZgvvPKqSg==" crossorigin=anonymous defer></script></body></html>
+<script src=https://waha.devlike.pro/index.min.98dc837481b94e6381499625e9e05b02acd0136e49cab8a3838342cd664b5a6b7cc16c8b87088837514759452d0dcc93dcc8144bf6140e37f64c7498e936b730.js integrity="sha512-mNyDdIG5TmOBSZYl6eBbAqzQE25Jyrijg4NCzWZLWmt8wWyLhwiIN1FHWUUtDcyT3MgUS/YUDjf2THSY6Ta3MA==" crossorigin=anonymous defer></script></body></html>
