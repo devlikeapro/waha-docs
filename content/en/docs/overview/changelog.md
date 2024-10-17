@@ -31,6 +31,8 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.10
+`2024.10.6`
+- **WEBJS** + **MongoDB** - reduce CPU usage
 
 `2024.10.5`
 - Add **Send Buttons** API `POST /api/sendButtons` - [$544](https://github.com/devlikeapro/waha/issues/544)
