@@ -31,6 +31,13 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.10
+`2024.10.7`
+- Add **unread chat** API - [#498](https://github.com/devlikeapro/waha/issues/498)
+  - **WEBJS**, **NOWEB**
+  - [**💬 Chats** - Unread Chat]({{< relref "/docs/how-to/chats#unread-chat" >}})
+- **NOWEB** - Fix `/archive` and `/unarchive` chats - [#445](https://github.com/devlikeapro/waha/issues/445)
+  - [**💬 Chats** - Archive Chat]({{< relref "/docs/how-to/chats#archive-chat" >}})
+
 `2024.10.6`
 - **WEBJS** + **MongoDB** - reduce CPU usage
 
@@ -40,8 +47,7 @@ Latest Version:
   - **NOWEB**
 - Add **forward message** API `POST /api/forwardMessage` - [#158](https://github.com/devlikeapro/waha/issues/158)
   - [**📤 Send messages** - Forward Message]({{<relref "/docs/how-to/send-messages#forward-message" >}})
-  - **WEBJS** 
-  - **NOWEB**
+  - **WEBJS**, **NOWEB**
 - Fix sessions stuck in `STARTING` on container restart - [#586](https://github.com/devlikeapro/waha/issues/586)
 - Add `WAHA_AUTO_START_DELAY_SECONDS=0` environment variable so you can control the delay between sessions
   - [**⚙️ Configuration** - Sessions]({{<relref "/docs/how-to/config#sessions" >}})

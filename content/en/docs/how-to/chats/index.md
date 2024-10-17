@@ -50,6 +50,13 @@ Use the method to unarchive chat
 POST /api/{session}/chats/{chatId}/unarchive
 ```
 
+### Unread chat
+Mark chat as unread
+
+```bash
+POST /api/{session}/chats/{chatId}/unread
+```
+
 ### Delete chat
 Use the method to delete chat
 
