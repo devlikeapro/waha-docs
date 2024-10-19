@@ -71,7 +71,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.10 #2024.10.6
+Latest Version: 2024.10 #2024.10.7
+WAHA Core - fix webhooks issue #595 2024.10.6
 WEBJS + MongoDB - reduce CPU usage 2024.10.5
 Add Send Buttons API POST /api/sendButtons - \$544 📤 Send messages - Send Buttons NOWEB Add forward message API POST /api/forwardMessage - #158 📤 Send messages - Forward Message WEBJS NOWEB Fix sessions stuck in STARTING on container restart - #586 Add WAHA_AUTO_START_DELAY_SECONDS=0 environment variable so you can control the delay between sessions ⚙️ Configuration - Sessions Track session status and do not restart it - #491 Add workers environment variables: WAHA_WORKER_ID, WAHA_WORKER_RESTART_SESSIONS Add request id in webhooks headers and logs #580 🔄 Webhooks - Headers Add policy for webhook retries #587 🔄 Webhooks - Headers 2024.10.4
 NOWEB - send video note via POST /api/sendVideo via asNote: true NOWEB - handle \u0026ldquo;sent by advertisement\u0026rdquo; message properly #567 NOWEB + MongoDB - save auth data when stopping session (and container) 2024.10.3
