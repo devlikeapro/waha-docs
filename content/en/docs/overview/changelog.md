@@ -31,6 +31,9 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.10
+`2024.10.7`
+- **WAHA Core** - fix webhooks issue [#595](https://github.com/devlikeapro/waha/issues/595)
+
 `2024.10.6`
 - **WEBJS** + **MongoDB** - reduce CPU usage
 
