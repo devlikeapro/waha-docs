@@ -71,7 +71,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.10 #2024.10.7
+Latest Version: 2024.10 #2024.10.8
+Add WAHA_LOCAL_STORE_BASE_DIR to allow overriding the base directory for local storage #597 2024.10.7
 WAHA Core - fix webhooks issue #595 2024.10.6
 WEBJS + MongoDB - reduce CPU usage 2024.10.5
 Add Send Buttons API POST /api/sendButtons - \$544 📤 Send messages - Send Buttons NOWEB Add forward message API POST /api/forwardMessage - #158 📤 Send messages - Forward Message WEBJS NOWEB Fix sessions stuck in STARTING on container restart - #586 Add WAHA_AUTO_START_DELAY_SECONDS=0 environment variable so you can control the delay between sessions ⚙️ Configuration - Sessions Track session status and do not restart it - #491 Add workers environment variables: WAHA_WORKER_ID, WAHA_WORKER_RESTART_SESSIONS Add request id in webhooks headers and logs #580 🔄 Webhooks - Headers Add policy for webhook retries #587 🔄 Webhooks - Headers 2024.10.4
@@ -743,7 +744,7 @@ Local - the default option, stores the session data in the local storage using f
 💡 It's well tested solution for production 🔍 You can find complete docker-compose.yaml with all storages and other configurations and use it as the starting point for your project. In order to use the local storage and save the session data between the container restarts, you need to mount the volume to the /app/.sessions directory using the -v option in docker run command:
 -v /path/to/on/host/.sessions:/app/.sessions The full command to run the WAHA with the local storage and save the session data in the current directory and .sessions directory:
 docker run -v \`pwd\`/.sessions:/app/.sessions -p 3000:3000/tcp devlikeapro/waha-plus This is the only action you need to do to use the local storage - all session data will be available between the container restarts.
-How it works #In the host machine, the session data will be stored in the current directory in the .sessions directory.
+Config #WAHA_LOCAL_STORE_BASE_DIR=/app/.sessions you can override the base directory for the local storage For instance, to handle Azure \u0026ldquo;dot\u0026rdquo; restrictions [#597](https://github.com/devlikeapro/waha/issues/597] How it works #In the host machine, the session data will be stored in the current directory in the .sessions directory.
 Under the hood, the WAHA stores the session data in the following directory structure:
 .sessions/{engine}/{sessionName}/... when you log out the session using POST /api/sessions/{session}/logout or delete the session using DELETE /api/sessions/{session} it removes the directory with the session data.
 Health Check #The WAHA Plus provides the health check endpoint that checks the local storage.
