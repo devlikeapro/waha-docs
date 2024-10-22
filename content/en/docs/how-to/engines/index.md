@@ -147,17 +147,8 @@ Read more about
 ### Chats
 {{< include file="content/en/docs/how-to/chats/features.md" >}}
 
-
 ### Contacts
-|                                                                   | WEBJS |      NOWEB       |
-|-------------------------------------------------------------------|:-----:|:----------------:|
-| `GET /api/contacts`                                               |  ✔️   | ✔️[*1](#heading) |
-| `GET /api/contacts/all`                                           |  ✔️   | ✔️[*1](#heading) |
-| `GET /api/contacts/check-exists`                                  |  ✔️   |        ✔️        |
-| `GET /api/contacts/about`                                         |  ✔️   |                  |
-| `GET /api/contacts/profile-picture`                               |  ✔️   |        ✔️        |
-| `POST /api/contacts/block`                                        |  ✔️   |  [*2](#heading)  |
-| `POST /api/contacts/unblock`                                      |  ✔️   |  [*2](#heading)  |
+{{< include file="content/en/docs/how-to/contacts/features.md" >}}
 
 ### Channels
 Read more about

@@ -11,6 +11,11 @@ weight: 230
 
 Methods for contacts.
 
+## Features
+Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
+
+{{< include file="content/en/docs/how-to/contacts/features.md" >}}
+
 {{< alert icon="👉" text="WhatsApp Web does not support adding contacts, so the API doesn't support it too." />}}
 
 ## Endpoints
