@@ -33,6 +33,10 @@ Latest Version:
 ## 2024.10
 
 `2024.10.NEXT`
+- Add **Chats Pagination** - [#371](https://github.com/devlikeapro/waha/issues/371)
+  - [**💬 Chats** - Pagination]({{< relref "/docs/how-to/chats#pagination" >}})
+- Add **Contacts Pagination** - [#371](https://github.com/devlikeapro/waha/issues/371)
+  - [**👤 Contacts** - Pagination]({{< relref "/docs/how-to/contacts#pagination" >}})
 - Add **unread chat** API - [#498](https://github.com/devlikeapro/waha/issues/498)
     - **WEBJS**, **NOWEB**
     - [**💬 Chats** - Unread Chat]({{< relref "/docs/how-to/chats#unread-chat" >}})
