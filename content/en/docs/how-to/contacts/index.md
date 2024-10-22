@@ -42,6 +42,21 @@ Get your contacts - `GET /api/contacts/all`
 ]
 ```
 
+#### Pagination
+If you see timeout or the request takes too long - consider using `limit` parameter to get contacts in smaller chunks
+
+```
+GET /api/{session}/contacts/all?limit=100&offset=0&sortBy=id&sortOrder=asc
+```
+
+- `limit=100` - limit the number of chats to return
+- `offset=0` - skip the number of chats from the start
+- `sortBy={field}` - sort by field
+    - `sortBy=id` - sort by contact id
+- `sortOrder=desc|asc` - sort order
+    - `desc` - descending order (A-Z)
+    - `asc` - ascending order (Z-A)
+
 ### Get contact
 
 Get contact

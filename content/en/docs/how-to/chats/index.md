@@ -26,14 +26,23 @@ Get all chats
 ```
 GET /api/{session}/chats
 ```
-- `limit` - limit the number of chats to return
-- `offset` - skip the number of chats from the start
 
+#### Pagination
 If you see timeout or the request takes too long - consider using `limit` parameter to get chats in smaller chunks
 
 ```
-GET /api/{session}/chats?limit=100&offset=0
+GET /api/{session}/chats?limit=100&offset=0&sortBy=messageTimestamp&sortOrder=desc
 ```
+
+- `limit=100` - limit the number of chats to return
+- `offset=0` - skip the number of chats from the start
+- `sortBy={field}` - sort by field
+  - `sortBy=messageTimestamp` - sort by last message timestamp
+  - `sortBy=id` - sort by chat id
+- `sortOrder=desc|asc` - sort order
+  - `desc` - descending order (New first, A-Z)
+  - `asc` - ascending order (Old first, Z-A)
+
 
 ### Archive chat
 
