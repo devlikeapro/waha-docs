@@ -53,6 +53,7 @@ GET /api/{session}/contacts/all?limit=100&offset=0&sortBy=id&sortOrder=asc
 - `offset=0` - skip the number of chats from the start
 - `sortBy={field}` - sort by field
     - `sortBy=id` - sort by contact id
+    - `sortBy=name` - sort by contact name
 - `sortOrder=desc|asc` - sort order
     - `desc` - descending order (A-Z)
     - `asc` - ascending order (Z-A)

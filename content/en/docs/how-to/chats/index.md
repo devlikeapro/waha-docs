@@ -39,6 +39,7 @@ GET /api/{session}/chats?limit=100&offset=0&sortBy=messageTimestamp&sortOrder=de
 - `sortBy={field}` - sort by field
   - `sortBy=messageTimestamp` - sort by last message timestamp
   - `sortBy=id` - sort by chat id
+  - `sortBy=name` - sort by chat name
 - `sortOrder=desc|asc` - sort order
   - `desc` - descending order (New first, A-Z)
   - `asc` - ascending order (Old first, Z-A)
