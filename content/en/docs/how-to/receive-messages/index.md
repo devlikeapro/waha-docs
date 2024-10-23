@@ -317,15 +317,25 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 Read messages from the history - use `GET /api/messages` endpoint.
 
 You also can get messages for chats by using
-[**Get messages from chat ->**]({{< relref "/docs/how-to/chats" >}}) endpoint.
+[**💬 Chats** - **Get messages from chat**]({{< relref "/docs/how-to/chats#get-messages" >}}) endpoint.
 
-{{< alert icon="👉" text="We do not recommend using this method in production, consider using webhooks instead!" />}}
+{{< alert icon="👉" text="We recommend using webhooks instead to avoid performance issues." />}}
 
 ```bash
 curl -X 'GET' \
   'http://localhost:3000/api/messages?chatId=11111111111%40c.us&limit=1000&session=default' \
   -H 'accept: application/json'
 ```
+
+### Get message by id
+You also can get message by id using
+[**💬 Chats** - **Get message by id from chat**]({{< relref "/docs/how-to/chats#get-message-by-id" >}}) endpoint.
+
+```
+GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
+```
+
+{{< alert icon="👉" text="We recommend using webhooks instead to avoid performance issues." />}}
 
 ## Examples
 Here's few examples of how to receive messages in different languages:

@@ -74,14 +74,64 @@ Use the method to delete chat
 
 
 ### Get messages
-Get 100 messages from the chat
+Get **100 messages** from the chat
 
-`GET /api/{session}/chats/{chatId}/messages?limit=100`
+```
+GET /api/{session}/chats/{chatId}/messages?limit=100
+```
 
 
-Get 100 messages from the chat, skip downloading media (images, files)
+Get **100 messages** from the chat, skip **downloading media** (images, files)
 
-`GET /api/{session}/chats/{chatId}/messages?limit=100&downloadMedia=false`
+```
+GET /api/{session}/chats/{chatId}/messages?limit=100&downloadMedia=false
+```
+
+```json
+[
+  {
+    "id": "false_123123@c.us_AAAAAA",
+    "timestamp": 1727745026,
+    "from": "123123@c.us",
+    "fromMe": false,
+    "body": "I'm good!",
+    "hasMedia": false,
+    "ack": 3,
+    "ackName": "READ",
+    "replyTo": null,
+    "_data": {
+      ... // Raw Engine Data
+    }
+  }
+]
+```
+
+### Get message by id
+Get message by id 
+```
+GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
+```
+
+```json
+{
+    "id": "false_123123@c.us_AAAAAA",
+    "timestamp": 1727745026,
+    "from": "123123@c.us",
+    "fromMe": false,
+    "body": "I'm good!",
+    "hasMedia": false,
+    "ack": 3,
+    "ackName": "READ",
+    "replyTo": null,
+    "_data": {
+        ... // Raw Engine Data
+    }
+}
+```
+
+- `chatId` - in format `123123123@c.us`
+- `messageId` - must be in format `{true|false}_213213@c.us_AAAAAAA`)
+- `downloadMedia` - download media files (images, files) or not
 
 ### Edit message
 You can edit **text** messages or **"caption"** in media messages.

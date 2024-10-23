@@ -6,6 +6,7 @@
 | **Unarchive chat** <br> `POST /api/{session}/chats/{chatId}/unarchive`              |  ✔️   |  ✔️¹  |
 | **Delete chat** <br> `DELETE /api/{session}/chats/{chatId}`                         |  ✔️   |       |
 | **Get messages** <br> `GET /api/{session}/chats/{chatId}/messages`                  |  ✔️   |  ✔️¹  |
+| **Get message by id** <br> `GET /api/{session}/chats/{chatId}/messages/{messageId}` |  ✔️   |  ✔️¹  |
 | **Edit message** <br> `PUT /api/{session}/chats/{chatId}/messages/{messageId}`      |  ✔️   |  ✔️   |
 | **Delete message** <br> `DELETE /api/{session}/chats/{chatId}/messages/{messageId}` |  ✔️   |  ✔️   |
 | **Delete all messages** <br> `DELETE /api/{session}/chats/{chatId}/messages`        |  ✔️   |       |
