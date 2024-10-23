@@ -33,15 +33,19 @@ Latest Version:
 ## 2024.10
 
 `2024.10.NEXT`
-- Add **Chats Pagination** - [#371](https://github.com/devlikeapro/waha/issues/371)
-  - [**💬 Chats** - Pagination]({{< relref "/docs/how-to/chats#pagination" >}})
-- Add **Contacts Pagination** - [#371](https://github.com/devlikeapro/waha/issues/371)
-  - [**👤 Contacts** - Pagination]({{< relref "/docs/how-to/contacts#pagination" >}})
-- Add **unread chat** API - [#498](https://github.com/devlikeapro/waha/issues/498)
-    - **WEBJS**, **NOWEB**
-    - [**💬 Chats** - Unread Chat]({{< relref "/docs/how-to/chats#unread-chat" >}})
-- **NOWEB** - Fix `/archive` and `/unarchive` chats - [#445](https://github.com/devlikeapro/waha/issues/445)
-    - [**💬 Chats** - Archive Chat]({{< relref "/docs/how-to/chats#archive-chat" >}})
+- Add [**💬 Chats** - **Get messages from chat**]({{< relref "/docs/how-to/chats#get-messages" >}}) 
+  - `GET /api/{session}/chats/{chatId}/messages/{messageId}`
+  - {{< issue 159 >}}, {{< issue 485 >}} 
+- Add [**💬 Chats** - Pagination]({{< relref "/docs/how-to/chats#pagination" >}})
+  - {{< issue 371 >}}
+- Add [**👤 Contacts** - Pagination]({{< relref "/docs/how-to/contacts#pagination" >}})
+  - {{< issue 371 >}}
+- Add [**💬 Chats** - Unread Chat]({{< relref "/docs/how-to/chats#unread-chat" >}})
+  - `POST /api/{session}/chats/{chatId}/unread`
+  - **WEBJS**, **NOWEB**
+  - {{< issue 498 >}}
+- **NOWEB** - Fix `/archive` and `/unarchive` chats - [**💬 Chats** - Archive Chat]({{< relref "/docs/how-to/chats#archive-chat" >}})
+  - {{< issue 445 >}}
 
 `2024.10.8`
 - Add `WAHA_LOCAL_STORE_BASE_DIR` to allow overriding the base directory for local storage [#597](https://github.com/devlikeapro/waha/issues/597)
