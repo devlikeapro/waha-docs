@@ -50,6 +50,9 @@ Latest Version:
   - {{< issue 498 >}}
 - **NOWEB** - Fix `/archive` and `/unarchive` chats - [**💬 Chats** - Archive Chat]({{< relref "/docs/how-to/chats#archive-chat" >}})
   - {{< issue 445 >}}
+- Remove the device from **Connected Devices** on [**🖥️ Session Logout**]({{< relref "/docs/how-to/sessions#logout-session" >}})
+  - **WEBJS**, **NOWEB**
+  - {{< issue 148 >}}, {{< issue 327 >}}, {{< issue 194 >}}, {{< issue 211 >}}
 
 `2024.10.8`
 - Add `WAHA_LOCAL_STORE_BASE_DIR` to allow overriding the base directory for local storage [#597](https://github.com/devlikeapro/waha/issues/597)

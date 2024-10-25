@@ -372,12 +372,18 @@ In order to start a session - call `POST /api/sessions/{session}/restart`
 
 ## Logout Session
 
-In order to log out the session - call `POST /api/sessions/{session}/logout`
+In order to log out the session - call 
+
+```
+POST /api/sessions/{session}/logout
+```
 
 ⚠️ If the session is running (not in `STOPPED` status), it'll be **logged out** and **started** from scratch.
 
-ℹ️ **Log out** removes *session information (authentication info and data)*,
-but keeps the *session's configuration*, so you can start a new session with the same configuration.
+👉 If the session in `WORKING` status it'll also remove associated device from **Connected Devices** list in the app.
+
+ℹ️ **Log out** removes **session information** (authentication info and data),
+but keeps the **session's configuration**, so you can start a new session with the same configuration.
 
 ## Delete Session
 
