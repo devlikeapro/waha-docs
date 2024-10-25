@@ -32,7 +32,7 @@ Latest Version:
 
 ## 2024.10
 
-`2024.10.NEXT`
+`2024.10.9`
 - Add pagination and filters to [**💬 Chats** - **Get messages from chat**]({{< relref "/docs/how-to/chats#get-messages" >}}) 
   - **WEBJS** can return messages by a single chat
   - **NOWEB** can return messages by a chat or `chatId=all`
