@@ -316,10 +316,10 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 ### Get messages
 Read messages from the history - use `GET /api/messages` endpoint.
 
-You also can get messages for chats by using
+Accept the same parameters as
 [**💬 Chats** - **Get messages from chat**]({{< relref "/docs/how-to/chats#get-messages" >}}) endpoint.
 
-{{< alert icon="👉" text="We recommend using webhooks instead to avoid performance issues." />}}
+{{< alert icon="👉" text="We recommend using webhooks instead of constantly calling it to avoid performance issues." />}}
 
 ```bash
 curl -X 'GET' \

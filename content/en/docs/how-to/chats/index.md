@@ -74,17 +74,26 @@ Use the method to delete chat
 
 
 ### Get messages
-Get **100 messages** from the chat
+Get **10 messages** from the chat
 
 ```
-GET /api/{session}/chats/{chatId}/messages?limit=100
+GET /api/{session}/chats/{chatId}/messages?limit=10
 ```
 
+Available parameters:
+- `downloadMedia=true` - download media files (images, files) or not
+- `chatId=123@c.us` - chatId, phone number 
+  - `chatId=all` - get messages from all chats (works on [**NOWEB**]({{< relref "/docs/how-to/engines#noweb" >}}) engine only)
+- `limit=100` - limit the number of chats to return
+- `offset=0` - skip the number of chats from the start
+- `filter.timestamp.lte=1727745026` - filter messages by timestamp less than or equal to `1727745026`
+- `filter.timestamp.gte=1727745026` - filter messages by timestamp greater than or equal to `1727745026`
+- `filter.fromMe=false` - filter messages from me (by default shows all messages)
 
-Get **100 messages** from the chat, skip **downloading media** (images, files)
+Get **10 messages** from the chat, skip **downloading media** (images, files)
 
 ```
-GET /api/{session}/chats/{chatId}/messages?limit=100&downloadMedia=false
+GET /api/{session}/chats/{chatId}/messages?limit=10&downloadMedia=false
 ```
 
 ```json
@@ -105,6 +114,19 @@ GET /api/{session}/chats/{chatId}/messages?limit=100&downloadMedia=false
   }
 ]
 ```
+
+Get **10 messages** from 1727745026 timestamp, not from me
+
+```
+GET /api/{session}/chats/{chatId}/messages?limit=10&filter.timestamp.gte=1727745026&filter.fromMe=false
+```
+
+👉 If you have more messages - you can set `offset` flag 
+(increase it always for `limit` amount, even if you get less messages)
+```
+GET /api/{session}/chats/{chatId}/messages?limit=10&offset=10&filter.timestamp.gte=1727745026&filter.fromMe=false
+```
+
 
 ### Get message by id
 Get message by id 
