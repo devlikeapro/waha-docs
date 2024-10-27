@@ -39,7 +39,7 @@ Latest Version:
   - {{< issue 140 >}}, {{< issue 449 >}}, {{< issue 458 >}}
 - Add [**💬 Chats** - **Get message by id**]({{< relref "/docs/how-to/chats#get-message-by-id" >}}) 
   - `GET /api/{session}/chats/{chatId}/messages/{messageId}`
-  - {{< issue 159 >}}, {{< issue 485 >}} 
+  - {{< issue 159 >}}, {{< issue 484 >}} 
 - Add [**💬 Chats** - Pagination]({{< relref "/docs/how-to/chats#pagination" >}})
   - {{< issue 371 >}}
 - Add [**👤 Contacts** - Pagination]({{< relref "/docs/how-to/contacts#pagination" >}})
