@@ -192,4 +192,5 @@ Open Swagger at
 - Read how to receive and response to messages [**📥 Receive messages**]({{< relref "/docs/how-to/receive-messages" >}})
 - Make sure your API is protected with [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
 - Enable one of [**🗄️ Storages**]({{< relref "/docs/how-to/sessions" >}}) to save sessions info between container restarts
+- 👉 Ask [**🤖 WAHA GPT**]({{< relref "/gpt" >}}) to help you build **{python|js|php}** client!
 

@@ -1,19 +1,21 @@
 ---
 title: "WAHA GPT"
-description: "WAHA GPT"
-summary: "WAHA Plus"
+description: "WAHA GPT to help you with development"
+summary: "WAHA GPT  to help you with development"
 date: 2024-10-26T15:50:07+02:00
 lastmod: 2024-10-26T15:50:07+02:00
 draft: false
+images: ['wahagpt.png']
 ---
 
 Ask anything, 
-[**WAHA GPT**](https://chatgpt.com/g/g-pgnsaOg6W-waha-gpt) will answer you!
+**WAHA GPT**
+will help you with development!
 
 <img src="/logos/wahagpt.png" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
 
 <p style = "text-align: center; font-size: 2em;">
-  <a href="https://chatgpt.com/g/g-pgnsaOg6W-waha-gpt">
+  <a href="https://chatgpt.com/g/g-pgnsaOg6W-waha-gpt" target="_blank">
     🤖 WAHA GPT
   </a>
 </p>
