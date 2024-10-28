@@ -31,7 +31,7 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.10
-`2024.10.NEXT`
+`2024.10.10`
 - **WEBJS** - Update puppeter and Chrome version
 - **WEBJS** - Set window size to 1280x720
 - **WEBJS** - Fix `SingletonLock: File exists` error on launch
