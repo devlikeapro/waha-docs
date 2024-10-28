@@ -31,6 +31,8 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.10
+`2024.10.NEXT`
+- **WEBJS** - Update puppeter and Chrome version
 
 `2024.10.9`
 - Add pagination and filters to [**💬 Chats** - **Get messages from chat**]({{< relref "/docs/how-to/chats#get-messages" >}}) 
