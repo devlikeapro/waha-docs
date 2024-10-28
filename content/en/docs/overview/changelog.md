@@ -33,6 +33,7 @@ Latest Version:
 ## 2024.10
 `2024.10.NEXT`
 - **WEBJS** - Update puppeter and Chrome version
+- **WEBJS** - Set window size to 1280x720
 - **WEBJS** - Fix `SingletonLock: File exists` error on launch
 
 `2024.10.9`
