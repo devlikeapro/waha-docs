@@ -71,7 +71,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.10 #2024.10.9
+Latest Version: 2024.10 #2024.10.NEXT
+WEBJS - Update puppeter and Chrome version WEBJS - Set window size to 1280x720 WEBJS - Fix SingletonLock: File exists error on launch 2024.10.9
 Add pagination and filters to 💬 Chats - Get messages from chat WEBJS can return messages by a single chat NOWEB can return messages by a chat or chatId=all #140 , #449 , #458 Add 💬 Chats - Get message by id GET /api/{session}/chats/{chatId}/messages/{messageId} #159 , #484 Add 💬 Chats - Pagination #371 Add 👤 Contacts - Pagination #371 Add 💬 Chats - Unread Chat POST /api/{session}/chats/{chatId}/unread WEBJS, NOWEB #498 NOWEB - Fix /archive and /unarchive chats - 💬 Chats - Archive Chat #445 Remove the device from Connected Devices on 🖥️ Session Logout WEBJS, NOWEB #148 , #327 , #194 , #211 2024.10.8
 Add WAHA_LOCAL_STORE_BASE_DIR to allow overriding the base directory for local storage #597 2024.10.7
 WAHA Core - fix webhooks issue #595 2024.10.6

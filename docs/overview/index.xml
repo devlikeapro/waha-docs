@@ -18,5 +18,5 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
 Latest Version: 2024.10 #
-2024.10.9
-Add pagination and filters to 💬 Chats - Get messages from chat WEBJS can return messages by a single chat NOWEB can return messages by a chat or chatId=all #140 , #449 , #458 Add 💬 Chats - Get message by id GET /api/{session}/chats/{chatId}/messages/{messageId} #159 , #484 Add 💬 Chats - Pagination #371 Add 👤 Contacts - Pagination #371 Add 💬 Chats - Unread Chat POST /api/{session}/chats/{chatId}/unread WEBJS, NOWEB #498 NOWEB - Fix /archive and /unarchive chats - 💬 Chats - Archive Chat #445 Remove the device from Connected Devices on 🖥️ Session Logout WEBJS, NOWEB #148 , #327 , #194 , #211 2024.</description></item></channel></rss>
+2024.10.NEXT
+WEBJS - Update puppeter and Chrome version WEBJS - Set window size to 1280x720 WEBJS - Fix SingletonLock: File exists error on launch 2024.10.9</description></item></channel></rss>
