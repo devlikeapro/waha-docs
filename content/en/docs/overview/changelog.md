@@ -33,6 +33,7 @@ Latest Version:
 ## 2024.10
 `2024.10.NEXT`
 - **WEBJS** - Update puppeter and Chrome version
+- **WEBJS** - Fix `SingletonLock: File exists` error on launch
 
 `2024.10.9`
 - Add pagination and filters to [**💬 Chats** - **Get messages from chat**]({{< relref "/docs/how-to/chats#get-messages" >}}) 
