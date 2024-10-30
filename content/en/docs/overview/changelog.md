@@ -31,6 +31,9 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.10
+`2024.10.12`
+- **WEBJS** - fix `FAILED` session (remove `--single-process`)
+
 `2024.10.11`
 - **WEBJS** + **MongoDB** - Fix `SingletonLock: File exists` error on launch
 
