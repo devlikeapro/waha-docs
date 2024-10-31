@@ -71,7 +71,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.10 #2024.10.12
+Latest Version: 2024.10 #2024.10.13
+NOWEB - fix waves issue on voice message #621 Fix GET /api/messages limit #620 2024.10.12
 WEBJS - fix FAILED session (remove --single-process) 2024.10.11
 WEBJS + MongoDB - Fix SingletonLock: File exists error on launch 2024.10.10
 WEBJS - Update puppeter and Chrome version WEBJS - Set window size to 1280x720 WEBJS - Fix SingletonLock: File exists error on launch 2024.10.9

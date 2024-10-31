@@ -18,7 +18,7 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
 Latest Version: 2024.10 #
-2024.10.12
+2024.10.13
+NOWEB - fix waves issue on voice message #621 Fix GET /api/messages limit #620 2024.10.12
 WEBJS - fix FAILED session (remove --single-process) 2024.10.11
-WEBJS + MongoDB - Fix SingletonLock: File exists error on launch 2024.10.10
-WEBJS - Update puppeter and Chrome version WEBJS - Set window size to 1280x720 WEBJS - Fix SingletonLock: File exists error on launch 2024.</description></item></channel></rss>
+WEBJS + MongoDB - Fix SingletonLock: File exists error on launch 2024.</description></item></channel></rss>
