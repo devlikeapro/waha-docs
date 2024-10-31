@@ -31,6 +31,10 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.10
+`2024.10.13`
+- **NOWEB** - fix waves issue on voice message {{< issue 621 >}}
+- Fix `GET /api/messages` limit {{< issue 620 >}}
+
 `2024.10.12`
 - **WEBJS** - fix `FAILED` session (remove `--single-process`)
 
