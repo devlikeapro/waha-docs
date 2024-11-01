@@ -23,7 +23,7 @@ You can now work with **WhatsApp Labels** available in WhatsApp Business using t
 
 ### Labels API
 
-Here's **Get list of labels** API example:
+Here's **Get labels** API example:
 
 ```bash
 GET /api/{session}/labels
