@@ -135,14 +135,7 @@ Read more about
 {{< include file="content/en/docs/how-to/send-messages/features.md" >}}
 
 ### Status
-|                                                                   | WEBJS |      NOWEB       |
-|-------------------------------------------------------------------|:-----:|:----------------:|
-| **Status**                                                        |       |                  |
-| `POST /api/{session}/status/text`                                 |       |        ✔️        |
-| `POST /api/{session}/status/image` ![](/images/versions/plus.png) |       |        ✔️        |
-| `POST /api/{session}/status/voice` ![](/images/versions/plus.png) |       |        ✔️        |
-| `POST /api/{session}/status/video` ![](/images/versions/plus.png) |       |        ✔️        |
-| `POST /api/{session}/status/delete`                               |       |        ✔️        |
+{{< include file="content/en/docs/how-to/status/features.md" >}}
 
 ### Chats
 {{< include file="content/en/docs/how-to/chats/features.md" >}}

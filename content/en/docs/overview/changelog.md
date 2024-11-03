@@ -33,6 +33,8 @@ Latest Version:
 `2024.11.1`
 - Create, Update and Delete [**🏷️ Labels**]({{< relref "docs/how-to/labels" >}}) - {{< issue 607 >}}
   - **WEBJS**, **NOWEB**
+- **WEBJS** - Add [**🟢 Status (aka Stories) API**]({{< relref "docs/how-to/status" >}})
+  - **NOWEB** related issues: {{< issue 390 >}}, {{< issue 413 >}}. You can **WEBJS** for now to handle such cases for now.
 
 
 ## 2024.10
