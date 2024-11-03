@@ -35,6 +35,7 @@ Latest Version:
   - **WEBJS**, **NOWEB**
 - **WEBJS** - Add [**🟢 Status (aka Stories) API**]({{< relref "docs/how-to/status" >}})
   - **NOWEB** related issues: {{< issue 390 >}}, {{< issue 413 >}}. You can **WEBJS** for now to handle such cases for now.
+- **NOWEB** + **MongoDB** - fix double message issue - {{< issue 623 >}}
 
 
 ## 2024.10
