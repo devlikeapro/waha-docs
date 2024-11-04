@@ -17,8 +17,6 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 👉 We kindly recommend getting at least 2CPU and 2GB RAM for a VPS, it&amp;rsquo;s not comfortable to work with less resources.</description></item><item><title>🆕 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
-Latest Version: 2024.10 #
-2024.10.13
-NOWEB - fix waves issue on voice message #621 Fix GET /api/messages limit #620 2024.10.12
-WEBJS - fix FAILED session (remove --single-process) 2024.10.11
-WEBJS + MongoDB - Fix SingletonLock: File exists error on launch 2024.</description></item></channel></rss>
+Latest Version: 2024.11 #
+2024.11.1
+Create, Update and Delete 🏷️ Labels - #607 WEBJS, NOWEB WEBJS - Add 🟢 Status (aka Stories) API NOWEB related issues: #390 , #413 .</description></item></channel></rss>
