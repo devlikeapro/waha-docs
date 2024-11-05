@@ -71,7 +71,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.11 #2024.11.1
+Latest Version: 2024.11 #2024.11.2
+WEBJS - fix cases when it stops receiving events (message, message.ack, etc) 2024.11.1
 Create, Update and Delete 🏷️ Labels - #607 WEBJS, NOWEB WEBJS - Add 🟢 Status (aka Stories) API NOWEB related issues: #390 , #413 . You can WEBJS for now to handle such cases for now. NOWEB + MongoDB - fix double message issue - #623 2024.10 #2024.10.13
 NOWEB - fix waves issue on voice message #621 Fix GET /api/messages limit #620 2024.10.12
 WEBJS - fix FAILED session (remove --single-process) 2024.10.11
