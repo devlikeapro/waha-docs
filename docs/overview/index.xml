@@ -18,6 +18,5 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
 Latest Version: 2024.11 #
-2024.11.2
-WEBJS - fix cases when it stops receiving events (message, message.ack, etc) 2024.11.1
-Create, Update and Delete 🏷️ Labels - #607 WEBJS, NOWEB WEBJS - Add 🟢 Status (aka Stories) API NOWEB related issues: #390 , #413 .</description></item></channel></rss>
+2024.11.3
+add linkPreview flag in POST /api/sendText to disable generating preview for links #596 , #598 Fix &amp;ldquo;Sqlite: attempt to write to read only database&amp;rdquo; error #628 2024.</description></item></channel></rss>

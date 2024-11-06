@@ -71,7 +71,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.11 #2024.11.2
+Latest Version: 2024.11 #2024.11.3
+add linkPreview flag in POST /api/sendText to disable generating preview for links #596 , #598 Fix \u0026ldquo;Sqlite: attempt to write to read only database\u0026rdquo; error #628 2024.11.2
 WEBJS - fix cases when it stops receiving events (message, message.ack, etc) 2024.11.1
 Create, Update and Delete 🏷️ Labels - #607 WEBJS, NOWEB WEBJS - Add 🟢 Status (aka Stories) API NOWEB related issues: #390 , #413 . You can WEBJS for now to handle such cases for now. NOWEB + MongoDB - fix double message issue - #623 2024.10 #2024.10.13
 NOWEB - fix waves issue on voice message #621 Fix GET /api/messages limit #620 2024.10.12
@@ -231,7 +232,8 @@ file.data field with base64 encoded file file.url field with public available UR
 reply_to #You can add reply_to field in order to reply on certain message.
 { \u0026quot;chatId\u0026quot;: \u0026quot;11111111111@c.us\u0026quot;, ... \u0026quot;reply_to\u0026quot;: \u0026quot;false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA\u0026quot; } reply_to is available in all messages:
 Send text Send image Send file Send voice Send video Send poll Send location Send text #To send text message - use POST /api/sendText with example payload.
-{ \u0026quot;session\u0026quot;: \u0026quot;default\u0026quot;, \u0026quot;chatId\u0026quot;: \u0026quot;12132132130@c.us\u0026quot;, \u0026quot;text\u0026quot;: \u0026quot;Hi there!\u0026quot; } Reply on message #To reply on a message - add reply_to field:
+{ \u0026quot;session\u0026quot;: \u0026quot;default\u0026quot;, \u0026quot;chatId\u0026quot;: \u0026quot;12132132130@c.us\u0026quot;, \u0026quot;text\u0026quot;: \u0026quot;Hi there!\u0026quot; } Here\u0026rsquo;s some additional options:
+reply_to: false_1111@c.us_AAA - to reply on a message mentions - to mention a contact in a group linkPreview: false - to disable preview generation for links in the message Reply on message #To reply on a message - add reply_to field:
 { \u0026quot;session\u0026quot;: \u0026quot;default\u0026quot;, \u0026quot;chatId\u0026quot;: \u0026quot;11111111111@c.us\u0026quot;, \u0026quot;reply_to\u0026quot;: \u0026quot;false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA\u0026quot;, \u0026quot;text\u0026quot;: \u0026quot;Reply text\u0026quot; } Mention contact #If you send a message in a group and want to mention a participant in the message - use mentions field for that in POST /api/sendText request.
 Please note that you MUST mention a number in the text as well in the format @2132132130 and also mention it in mentions in format 2132132130@c.us
 { \u0026quot;session\u0026quot;: \u0026quot;default\u0026quot;, \u0026quot;chatId\u0026quot;: \u0026quot;12132132130@c.us\u0026quot;, \u0026quot;text\u0026quot;: \u0026quot;Hi there! @2132132130\u0026quot;, \u0026quot;mentions\u0026quot;: [ \u0026quot;2132132130@c.us\u0026quot; ] } Send Buttons #You can send interactive message (aka buttons) using
