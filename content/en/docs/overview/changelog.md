@@ -31,6 +31,7 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.11
 `2024.11.3`
+- add `linkPreview` flag in `POST /api/sendText` to disable generating preview for links {{< issue 596 >}}, {{< issue 598 >}}
 - Fix "Sqlite: attempt to write to read only database when after sometime" error {{< issue 628 >}}
 
 `2024.11.2`

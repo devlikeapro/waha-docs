@@ -103,6 +103,11 @@ To send text message - use `POST /api/sendText` with example payload.
 }
 ```
 
+Here's some additional options:
+- `reply_to: false_1111@c.us_AAA` - to reply on a message
+- `mentions` - to mention a contact in a group
+- `linkPreview: false` - to disable preview generation for links in the message
+
 ### Reply on message
 
 To reply on a message - add `reply_to` field:
