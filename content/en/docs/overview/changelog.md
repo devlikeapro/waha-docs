@@ -30,6 +30,9 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.11
+`2024.11.3`
+- Fix "Sqlite: attempt to write to read only database when after sometime" error {{< issue 628 >}}
+
 `2024.11.2`
 - **WEBJS** - fix cases when it stops receiving events (message, message.ack, etc)
 
