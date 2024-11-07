@@ -33,6 +33,7 @@ Latest Version:
 `2024.11.3`
 - add `linkPreview` flag in `POST /api/sendText` to disable generating preview for links {{< issue 596 >}}, {{< issue 598 >}}
 - Fix "Sqlite: attempt to write to read only database" error {{< issue 628 >}}
+- Fix `POST /api/sendVideo` - "TargetCloseError: Protocol error" {{< issue 629 >}}
 
 `2024.11.2`
 - **WEBJS** - fix cases when it stops receiving events (message, message.ack, etc)
