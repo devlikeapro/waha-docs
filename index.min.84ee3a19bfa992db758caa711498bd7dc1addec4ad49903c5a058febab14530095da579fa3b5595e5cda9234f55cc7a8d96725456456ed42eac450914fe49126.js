@@ -72,7 +72,7 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
 Latest Version: 2024.11 #2024.11.3
-add linkPreview flag in POST /api/sendText to disable generating preview for links #596 , #598 Fix \u0026ldquo;Sqlite: attempt to write to read only database\u0026rdquo; error #628 2024.11.2
+add linkPreview flag in POST /api/sendText to disable generating preview for links #596 , #598 Fix \u0026ldquo;Sqlite: attempt to write to read only database\u0026rdquo; error #628 Fix POST /api/sendVideo - \u0026ldquo;TargetCloseError: Protocol error\u0026rdquo; #629 2024.11.2
 WEBJS - fix cases when it stops receiving events (message, message.ack, etc) 2024.11.1
 Create, Update and Delete 🏷️ Labels - #607 WEBJS, NOWEB WEBJS - Add 🟢 Status (aka Stories) API NOWEB related issues: #390 , #413 . You can WEBJS for now to handle such cases for now. NOWEB + MongoDB - fix double message issue - #623 2024.10 #2024.10.13
 NOWEB - fix waves issue on voice message #621 Fix GET /api/messages limit #620 2024.10.12
