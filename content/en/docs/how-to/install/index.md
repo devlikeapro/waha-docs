@@ -191,19 +191,20 @@ It's recommended to revert this change back and use Nginx or some proxy server i
 
 ### Additional Steps
 #### Configure Nginx and Let's Encrypt 
-👉 Replace **<yourdomain.com>** with your domain name in the following steps.
+👉 Replace **<YOURDOMAIN.COM>** with your domain name in the following steps (use lowercase).
 
 1. Configure Nginx to serve as a frontend proxy.
 ```bash
 sudo apt-get install nginx
 cd /etc/nginx/sites-enabled
-nano <yourdomain.com>.conf
+
+nano <YOURDOMAIN.COM>.conf
 ```
 
-2. Use the following Nginx config and **replace** the `<yourdomain.com>` in `server_name`.
+2. Use the following Nginx config and **replace** the `<YOURDOMAIN.COM>` in `server_name`.
 ```
 server {
-  server_name <yourdomain.com>;
+  server_name <YOURDOMAIN.COM>;
 
   # Point upstream to WAHA Server
   set $upstream 127.0.0.1:3000;
@@ -242,30 +243,26 @@ nginx -t
 systemctl reload nginx
 ```
 
-4. Run Let's Encrypt to configure SSL certificate.
+4. Run Let's Encrypt to configure SSL certificate. (replace **<YOURDOMAIN.COM>**!)
 ```bash
 apt install certbot
 apt-get install python3-certbot-nginx
 mkdir -p /var/www/ssl-proof/waha/.well-known
-certbot --webroot -w /var/www/ssl-proof/waha/ -d <yourdomain.com> -i nginx
+
+certbot --webroot -w /var/www/ssl-proof/waha/ -d <YOURDOMAIN.COM> -i nginx
 ```
 
 5. Your WAHA installation should be accessible from the https://yourdomain.com now.
-6. Change `WAHA_BASE_URL=https://<yourdomain.com>` in the `.env` file and restart the WAHA service
+6. Change `WAHA_BASE_URL=https://<YOURDOMAIN.COM>` in the `.env` file and restart the WAHA service
 ```bash
 # Change the WAHA_BASE_URL in .env
 nano .env
 # Restart the WAHA service
+docker compose up -d
 docker compose restart
 ```
 
 ## Update
-👉 If you specified exact version in `docker-compose.yml`, like
-```yaml
-image: devlikeapro/waha-plus:latest-2024.7.8
-```
-remember to change it to `latest-{YEAR}.{MONTH}.{BUILD}` to get the latest version.
-
 When there's a new version of WAHA, you can update it with a single commands:
 
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) image:
@@ -278,6 +275,13 @@ docker logout
 docker compose up -d
 ```
 
+👉 If you specified exact version in `docker-compose.yml`, like
+```yaml
+image: devlikeapro/waha-plus:latest-2024.7.8
+```
+remember to change it to `latest-{YEAR}.{MONTH}.{BUILD}` to get the latest version.
+
+
 **WAHA Core** image:
 ```bash
 docker compose pull
@@ -288,7 +292,7 @@ docker compose up -d
 ```bash
 # Stop all containers
 docker compose down
-# Start all containers
+# Start all containers, apply new configuration
 docker compose up -d
 # Restart all containers
 docker compose restart
