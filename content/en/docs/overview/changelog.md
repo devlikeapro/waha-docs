@@ -30,6 +30,10 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.11
+`2024.11.4`
+- **NOWEB** - fix many contacts send status issues {{< issue 390 >}}, {{< issue 413 >}}
+- **NOWEB** - `contacts` list for [**🟢 Status (aka Stories) API**]({{< relref "docs/how-to/status" >}}) is not required anymore
+
 `2024.11.3`
 - add `linkPreview` flag in `POST /api/sendText` to disable generating preview for links {{< issue 596 >}}, {{< issue 598 >}}
 - Fix "Sqlite: attempt to write to read only database" error {{< issue 628 >}}
