@@ -18,5 +18,5 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
 Latest Version: 2024.11 #
-2024.11.3
-add linkPreview flag in POST /api/sendText to disable generating preview for links #596 , #598 Fix &amp;ldquo;Sqlite: attempt to write to read only database&amp;rdquo; error #628 Fix POST /api/sendVideo - &amp;ldquo;TargetCloseError: Protocol error&amp;rdquo; #629 2024.</description></item></channel></rss>
+2024.11.4
+NOWEB - fix many contacts send status issues #390 , #413 NOWEB - contacts list for 🟢 Status (aka Stories) API is not required anymore WEBJS - fix HTTP ERROR 429 #633 2024.</description></item></channel></rss>
