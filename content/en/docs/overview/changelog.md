@@ -33,6 +33,7 @@ Latest Version:
 `2024.11.4`
 - **NOWEB** - fix many contacts send status issues {{< issue 390 >}}, {{< issue 413 >}}
 - **NOWEB** - `contacts` list for [**🟢 Status (aka Stories) API**]({{< relref "docs/how-to/status" >}}) is not required anymore
+- **WEBJS** - fix **HTTP ERROR 429** {{<issue 633 >}}
 
 `2024.11.3`
 - add `linkPreview` flag in `POST /api/sendText` to disable generating preview for links {{< issue 596 >}}, {{< issue 598 >}}
