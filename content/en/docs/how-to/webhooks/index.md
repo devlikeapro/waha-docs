@@ -756,6 +756,21 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 
 {{< include file="content/en/docs/how-to/calls/webhooks-call-rejected.md" >}}
 
+### engine.event
+Low-level engine event, for **debug** and **troubleshooting** purposes.
+
+```json
+{
+  "event": "engine.event",
+  "session": "default",
+  "engine": "NOWEB",
+  "payload": {
+    "event": "messages.upsert",
+    "data": {"":  ""}
+  }
+}
+```
+
 ### state.change
 ⚠️ **DEPRECATED**, use `session.status` event instead.
 
