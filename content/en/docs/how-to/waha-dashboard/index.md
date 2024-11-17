@@ -9,8 +9,6 @@ images: [ ]
 weight: 202
 ---
 
-## Overview
-
 **Dashboard** is a UI to manage your WhatsApp sessions!
 
 <video autoplay loop muted playsinline controls='noremoteplayback' width="100%" poster='/images/waha-dashboard.png'>
@@ -25,12 +23,8 @@ You can access **Dashboard** by running the project and opening
 ℹ️ **Default username and password**: `waha/waha`
 
 ```bash
-docker run -it -p 3000:3000/tcp devlikeapro/waha-plus
+docker run -it -p 3000:3000/tcp devlikeapro/waha-plus #waha-plus
 ```
-
-If you're using [API Key]({{< relref "security" >}}), remember to set up the key in the dashboard.
-
-![Dashboard with API Key](waha-dashboard-key.png)
 
 ## Configuration
 
@@ -45,7 +39,21 @@ When running WAHA you can set the following environment variables to configure t
 docker run -it -p 3000:3000/tcp -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PASSWORD=waha devlikeapro/waha-plus
 ```
 
-## Single Dashboard - Multiple Servers
+## Api Key
+If you're using [API Key]({{< relref "security" >}}), remember to set up the key in the dashboard.
+
+![Dashboard with API Key](waha-dashboard-key.png)
+
+## Event Monitor
+You can observe [**Events**]({{< relref "webhooks" >}}) in real-time using **Event Monitor**:
+
+http://localhost:3000/dashboard/event-monitor
+
+![Event Monitor](waha-dashboard-event-monitor.png)
+
+
+## Notes
+### Single Dashboard - Multiple Servers
 If you're running multiple servers 
 (like [**using sharding to handle 50+ sessions ->**]({{< relref "/blog/waha-scaling" >}}))
 you can run a dedicated WAHA just to have a single place where from you can manage all servers:
@@ -55,8 +63,4 @@ you can run a dedicated WAHA just to have a single place where from you can mana
 After that you can connect all server to the single dashboard:
 
 {{< img src="/images/waha/dashboard/waha-single-dashboard-multiple-servers.png" >}}
-
-## Bug reports and feature requests
-If you're experiencing any issues or have a feature request, please create an issue in the
-[WAHA GitHub](https://github.com/devlikeapro/waha/issues)
 
