@@ -286,6 +286,7 @@ In [**Webhooks**](#webhooks) or [**Websockets**](#websockets) you'll receive the
 
 ```json
 {
+  "id": "evt_1111111111111111111111111111",
   "event": "message",
   "session": "default",
   // 'metadata' provided when you created the session
