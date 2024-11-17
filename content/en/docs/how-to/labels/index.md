@@ -191,7 +191,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 ## Webhooks
 
-### labels.upsert
+### label.upsert
 
 ```json
 {
@@ -209,7 +209,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 ```
 
-### labels.deleted
+### label.deleted
 
 ```json
 {
@@ -227,7 +227,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 ```
 
-### labels.chat.added
+### label.chat.added
 
 ```json
 {
@@ -243,7 +243,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 }
 ```
 
-### labels.chat.deleted
+### label.chat.deleted
 
 ```json
 {

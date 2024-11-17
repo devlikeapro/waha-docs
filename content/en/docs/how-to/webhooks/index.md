@@ -676,7 +676,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 }
 ```
 
-### labels.upsert
+### label.upsert
 
 ```json
 {
@@ -694,7 +694,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 
 ```
 
-### labels.deleted
+### label.deleted
 
 ```json
 {
@@ -712,7 +712,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 
 ```
 
-### labels.chat.added
+### label.chat.added
 
 ```json
 {
@@ -728,7 +728,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 }
 ```
 
-### labels.chat.deleted
+### label.chat.deleted
 
 ```json
 {

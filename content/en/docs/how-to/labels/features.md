@@ -7,10 +7,10 @@
 | **Get chats by label id**<br>`GET /api/{session}/labels/{labelId}/chats` | ✔️    | ✔️    |
 | **Get labels by chat id**<br>`GET /api/{session}/labels/chats/{chatId}/` | ✔️    | ✔️    |
 | **PUT labels to chat**<br>`PUT /api/{session}/labels/chats/{chatId}/`    | ✔️    | ✔️    |
-| `labels.upsert`                                                          |       | ✔️    |
-| `labels.deleted`                                                         |       | ✔️    |
-| `labels.chat.added`                                                      |       | ✔️    |
-| `labels.chat.deleted`                                                    |       | ✔️    |
+| `label.upsert`                                                          |       | ✔️    |
+| `label.deleted`                                                         |       | ✔️    |
+| `label.chat.added`                                                      |       | ✔️    |
+| `label.chat.deleted`                                                    |       | ✔️    |
 
 ****
 
