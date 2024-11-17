@@ -30,6 +30,8 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.11
+`2024.11.5`
+- All [**🔄 Webhooks**] features in **WAHA Core** version now: Retries, HMAC, Custom Headers!
 
 `2024.11.4`
 - **NOWEB** - fix many contacts send status issues {{< issue 390 >}}, {{< issue 413 >}}
