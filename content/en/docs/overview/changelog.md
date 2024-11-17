@@ -34,6 +34,7 @@ Latest Version:
 - [**🔄 Webhooks**]({{< relref "webhooks#webhooks" >}}) features in **WAHA Core** version now: Retries, HMAC, Custom Headers!
 - [**🔄 Websockets**]({{< relref "webhooks#websockets" >}}) supports all events now {{< issue 535 >}}
 - **NOWEB** - `me.pushName` fix after authentication {{< issue 409 >}}
+- Add `engine.event` for debug and troubleshooting
 
 `2024.11.4`
 - **NOWEB** - fix many contacts send status issues {{< issue 390 >}}, {{< issue 413 >}}
