@@ -9,17 +9,18 @@ images: []
 weight: 225
 ---
 
-The project uses 
-[Webhooks](https://en.wikipedia.org/wiki/Webhook) and [Websockets](https://en.wikipedia.org/wiki/WebSocket) 
-to notify your application about the messages and events from WhatsApp.
+In order to notify your application about events in the WhatsApp API, you can use 
+[**Webhooks**](#webhooks) and [**Websockets**](#websockets).
 
+👉 See the list of all available events in the [**Events**](#events) section.
+
+## Webhooks
 ![](webhooks.png)
 
-Webhooks are a way for two different applications to communicate with each other in real-time.
+**Webhooks** are a way for two different applications to communicate with each other in real-time.
 When a certain event happens in one application, it sends a message to another application through a webhook URL.
 The receiving application can then take action based on the information received.
 
-## Setup
 ### Session webhooks
 You can define webhooks configuration per session when you start it with `POST /api/sessions/` request data.
 
@@ -82,17 +83,206 @@ development.
 
 That webhook configuration **does not appear** in `session.config` field in `GET /api/sessions/` request.
 
-### Connect Websockets
-Alternatively, you can use Websockets to receive messages in real-time. 
-```bash
-websocat -E ws://localhost:3000/ws
+
+💡 You can open [https://webhook.site](https://webhook.site) and paste URL from it to `url` field,
+and you'll see all requests immediately in your browser to intercept the webhook's payload.
+
+### Retries
+You can configure retry policy for webhooks by settings `config.retries` structure when `POST /api/sessions/`:
+
+```json
+{
+  "name": "default",
+  "config": {
+    "webhooks": [
+      {
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
+        "events": [
+          "message"
+        ],
+        "retries": {
+          "delaySeconds": 2,
+          "attempts": 15,
+          "policy": "constant"
+        }
+      }
+    ]
+  }
+}
+
 ```
 
-👉 Read more about it in the [**Websockets section**](#websockets) below.
+Possible `policy`:
+- `constant` - retry with the same delay between attempts (2, 2, 2, 2)
+- `linear` - retry with linear backoff (2, 4, 6, 8)
+- `exponential` - retry with exponential backoff with 20% jitter (2, 4.1, 8.4, 16.3).
 
-## Webhook payload
+### Headers
+When you receive a webhook request to your API endpoint, you'll get **those headers**:
+- `X-Webhook-Request-Id` - unique request id for each webhook request.
+- `X-Webhook-Timestamp` - Unix timestamp in milliseconds when the webhook was sent.
 
-On the URL that you set you'll receive **HTTP POST** request with a JSON string with following format:
+If you're using [**HMAC authentication**](#hmac-authentication) you'll get two additional headers:
+- `X-Webhook-Hmac` - message authentication code for the raw **body** in HTTP POST request that send to your endpoint.
+- `X-Webhook-Hmac-Algorithm` - `sha512` - algorithm that have been used to create `X-Webhook-Hmac` value.
+
+You can send any **customer headers** by defining `config.webhooks.customHeaders` fields this way:
+```json
+{
+  "name": "default",
+  "config": {
+    "webhooks": [
+      {
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
+        "events": [
+          "message"
+        ],
+        "customHeaders": [
+          {
+            "name": "X-My-Custom-Header",
+            "value": "Value"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+
+### HMAC authentication
+
+You can authenticate webhook sender by using [HMAC Authentication](https://www.okta.com/identity-101/hmac/).
+
+1. Define you secret key in `config.hmac.key` field when you start session with `POST /api/sessions/`:
+
+```json
+{
+  "name": "default",
+  "config": {
+    "webhooks": [
+      {
+        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
+        "events": [
+          "message"
+        ],
+        "hmac": {
+          "key": "your-secret-key"
+        }
+      }
+    ]
+  }
+}
+```
+
+2. After that you'll receive all webhooks payload with two additional headers:
+- `X-Webhook-Hmac` - message authentication code for the raw **body** in HTTP POST request that send to your endpoint.
+- `X-Webhook-Hmac-Algorithm` - `sha512` - algorithm that have been used to create `X-Webhook-Hmac` value.
+
+3. Implement the authentication algorithm by hashing body and using secret key and then verifying it with `X-Webhook-Hmac`
+value. Please [check your implementation here ->](https://www.devglan.com/online-tools/hmac-sha256-online)
+
+Here's example for
+```
+# Full body
+{"event":"message","session":"default","engine":"WEBJS"}
+# Secret key
+my-secret-key
+# X-Webhook-Hmac-Algorithm
+sha512
+# X-Webhook-Hmac
+208f8a55dde9e05519e898b10b89bf0d0b3b0fdf11fdbf09b6b90476301b98d8097c462b2b17a6ce93b6b47a136cf2e78a33a63f6752c2c1631777076153fa89
+```
+
+### Examples
+Here's few examples of how to handle webhook in different languages:
+1. [Python guide]({{< relref "/docs/integrations/python" >}})
+
+**Do you use another language?**
+
+Please create a short guide how to handle webhook and send message after you finish your setup!
+You can create a pull request with your favorite language in the
+[GitHub, in examples folder ->](https://github.com/devlikeapro/waha/tree/core/examples).
+
+## Websockets
+You can use Websockets to receive messages in real-time!
+
+Install [websocat](https://github.com/vi/websocat?tab=readme-ov-file#installation) first.
+
+```bash
+# Listen all sessions and events
+# -E to end the connection when the server closes it
+websocat -E ws://localhost:3000/ws
+
+# Use secure (SSL/HTTPS) connection - add wss://
+websocat -E wss://localhost:3000/ws
+
+# Add your API key
+websocat -E ws://localhost:3000/ws?x-api-key=123
+
+# Listen all sessions and events
+websocat -E ws://localhost:3000/ws?session=*&events=*
+
+# Listen certain events
+websocat -E ws://localhost:3000/ws?session=*&events=session.status&events=message
+
+
+# If you want to see the logs and ping the server every 10 seconds
+websocat -v --ping-interval=10 -E ws://localhost:3000/ws
+
+# Listen certain session
+websocat -E ws://localhost:3000/ws?session=default&events=session.status
+```
+
+Parameters:
+- `session` - session name, `*` for all sessions
+- `events` - comma-separated list of events, `*` for all events
+- `x-api-key` - your API key
+
+### Examples
+#### JavaScript
+```javascript
+// Configuration
+const apiKey = '123'; // Replace with your API key
+const baseUrl = 'ws://localhost:3000/ws';
+const session = '*'; // Use '*' to listen to all sessions
+const events = ['session.status', 'message']; // List of events to listen to
+
+// Construct the WebSocket URL with query parameters
+const queryParams = new URLSearchParams({
+    'x-api-key': apiKey,
+    session,
+    ...events.reduce((acc, event) => ({ ...acc, events: event }), {}) // Add multiple 'events' params
+});
+const wsUrl = `${baseUrl}?${queryParams.toString()}`;
+
+// Initialize WebSocket connection
+const socket = new WebSocket(wsUrl);
+
+// Handle incoming messages
+socket.onmessage = (event) => {
+    console.log('Received:', event.data);
+};
+
+// Handle errors
+socket.onerror = (error) => {
+    console.error('WebSocket Error:', error);
+};
+
+// Handle connection open
+socket.onopen = () => {
+    console.log('WebSocket connection established:', wsUrl);
+};
+
+// Handle connection close
+socket.onclose = () => {
+    console.log('WebSocket connection closed');
+};
+```
+
+## Event Payload
+### Structure
+In [**Webhooks**](#webhooks) or [**Websockets**](#websockets) you'll receive the following payload:
 
 ```json
 {
@@ -119,22 +309,9 @@ On the URL that you set you'll receive **HTTP POST** request with a JSON string 
 }
 ```
 
-Where `event` value helps you identify the incoming event with `payload` for that events.
-
-Below the list of all events that WhatsApp API sends to your.
-
-💡 You can open [https://webhook.site](https://webhook.site) and paste UUID from it to `url` field,
-and you'll see all requests immediately in your browser to intercept the webhook's payload.
-
-Run the bellow command and see look at the logs - it prints body request for all events that happen in your WhatsApp!
-
-```bash
-docker run -it -e "WHATSAPP_HOOK_EVENTS=*" -e WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111 -p 3000:3000 devlikeapro/waha
-```
-
 ### Metadata
-You can provide additional `metadata` when you start the session with 
-[**Start Session**]({{< relref "/docs/how-to/sessions#start-session" >}}) 
+You can provide additional `metadata` when you start the session with
+[**Start Session**]({{< relref "/docs/how-to/sessions#start-session" >}})
 request data.
 
 ```json
@@ -150,9 +327,12 @@ request data.
 }
 ```
 
+You'll receive the same `metadata` in the webhook payload.
 
-## Webhooks
+
+## Events
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
+
 
 {{< include file="content/en/docs/how-to/webhooks/features.md" >}}
 
@@ -161,11 +341,11 @@ The `session.status` event is triggered when the session status changes.
 - `STOPPED` - session is stopped
 - `STARTING` - session is starting
 - `SCAN_QR_CODE` - session is required to scan QR code or login via phone number
-  - When you receive the `session.status` event with `SCAN_QR_CODE` status, you can [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}})
-  - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
+    - When you receive the `session.status` event with `SCAN_QR_CODE` status, you can [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}})
+    - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
 - `WORKING` - session is working and ready to use
 - `FAILED` - session is failed due to some error. It's likely that authorization is required again or device has been disconnected from that account.
-Try to restart the session and if it doesn't help - logout and start the session again.
+  Try to restart the session and if it doesn't help - logout and start the session again.
 
 ```json
 {
@@ -590,159 +770,3 @@ It's an internal engine's state, not **session** `status`.
   }
 }
 ```
-
-
-## Webhooks Advanced ![](/images/versions/plus.png)
-### Retries
-You can configure retry policy for webhooks by settings `config.retries` structure when `POST /api/sessions/`:
-
-```json
-{
-  "name": "default",
-  "config": {
-    "webhooks": [
-      {
-        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message"
-        ],
-        "retries": {
-          "delaySeconds": 2,
-          "attempts": 15,
-          "policy": "constant"
-        }
-      }
-    ]
-  }
-}
-
-```
-
-Possible `policy`:
-- `constant` - retry with the same delay between attempts (2, 2, 2, 2)
-- `linear` - retry with linear backoff (2, 4, 6, 8)
-- `exponential` - retry with exponential backoff with 20% jitter (2, 4.1, 8.4, 16.3).
-
-### Headers
-When you receive a webhook request to your API endpoint, you'll get **those headers**:
-- `X-Webhook-Request-Id` - unique request id for each webhook request.
-- `X-Webhook-Timestamp` - Unix timestamp in milliseconds when the webhook was sent.
-
-If you're using [**HMAC authentication**](#hmac-authentication) you'll get two additional headers:
-- `X-Webhook-Hmac` - message authentication code for the raw **body** in HTTP POST request that send to your endpoint.
-- `X-Webhook-Hmac-Algorithm` - `sha512` - algorithm that have been used to create `X-Webhook-Hmac` value.
-
-You can send any **customer headers** by defining `config.webhooks.customHeaders` fields this way:
-```json
-{
-  "name": "default",
-  "config": {
-    "webhooks": [
-      {
-        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message"
-        ],
-        "customHeaders": [
-          {
-            "name": "X-My-Custom-Header",
-            "value": "Value"
-          }
-        ]
-      }
-    ]
-  }
-}
-```
-
-
-### HMAC authentication
-
-You can authenticate webhook sender by using [HMAC Authentication](https://www.okta.com/identity-101/hmac/).
-
-1. Define you secret key in `config.hmac.key` field when you start session with `POST /api/sessions/`:
-
-```json
-{
-  "name": "default",
-  "config": {
-    "webhooks": [
-      {
-        "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message"
-        ],
-        "hmac": {
-          "key": "your-secret-key"
-        }
-      }
-    ]
-  }
-}
-```
-
-2. After that you'll receive all webhooks payload with two additional headers:
-- `X-Webhook-Hmac` - message authentication code for the raw **body** in HTTP POST request that send to your endpoint.
-- `X-Webhook-Hmac-Algorithm` - `sha512` - algorithm that have been used to create `X-Webhook-Hmac` value.
-
-3. Implement the authentication algorithm by hashing body and using secret key and then verifying it with `X-Webhook-Hmac`
-value. Please [check your implementation here ->](https://www.devglan.com/online-tools/hmac-sha256-online)
-
-Here's example for
-```
-# Full body
-{"event":"message","session":"default","engine":"WEBJS"}
-# Secret key
-my-secret-key
-# X-Webhook-Hmac-Algorithm
-sha512
-# X-Webhook-Hmac
-208f8a55dde9e05519e898b10b89bf0d0b3b0fdf11fdbf09b6b90476301b98d8097c462b2b17a6ce93b6b47a136cf2e78a33a63f6752c2c1631777076153fa89
-```
-
-## Websockets
-You can use Websockets to receive messages in real-time.
-
-Install [websocat](https://github.com/vi/websocat?tab=readme-ov-file#installation) first.
-
-```bash
-# Listen all sessions and events
-# -E to end the connection when the server closes it
-websocat -E ws://localhost:3000/ws
-# Listen all sessions and events (explicitly)
-websocat -E ws://localhost:3000/ws?session=*&events=*
-
-# Listen certain events
-# (!) Only 'session.status' event is supported now
-websocat -E ws://localhost:3000/ws?session=*&events=session.status
-
-# If you're using HTTPS (SSL) connection
-websocat -E wss://localhost:3000/ws?session=*&events=session.status
-
-# If you're using Api Key - make sure to add it to the URL
-websocat -E ws://localhost:3000/ws?x-api-key=123
-
-# If you want to see the logs and ping the server every 10 seconds
-websocat -v --ping-interval=10 -E ws://localhost:3000/ws
-
-# Listen certain session
-# NOT SUPPORTED YET
-# websocat -E ws://localhost:3000/ws?session=default&events=session.status
-```
-
-⚠️ Right now websockets has limited support for events, but we're working on it to add more events in the future. 
-- No session filtering, you can listen to all sessions only.
-- Only [session.status](#session.status) event is supported now.
-
-Fill free to [**Create Feature Request**](https://github.com/devlikeapro/waha/issues/new/choose)
-if you need more events or per session filters.
-
-## Examples
-Here's few examples of how to handle webhook in different languages:
-1. [Python guide]({{< relref "/docs/integrations/python" >}})
-
-**Do you use another language?**
-
-Please create a short guide how to handle webhook and send message after you finish your setup!
-You can create a pull request with your favorite language in the
-[GitHub, in examples folder ->](https://github.com/devlikeapro/waha/tree/core/examples).
