@@ -14,6 +14,9 @@ In order to notify your application about events in the WhatsApp API, you can us
 
 👉 See the list of all available events in the [**Events**](#events) section.
 
+🌟 You can observe **Events** in real-time using 
+[**📊 Dashboard - Event Monitor**]({{< relref "waha-dashboard#event-monitor" >}})!
+
 ## Webhooks
 ![](webhooks.png)
 
