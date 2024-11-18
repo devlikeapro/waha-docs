@@ -47,7 +47,7 @@ If you're using [API Key]({{< relref "security" >}}), remember to set up the key
 ## Event Monitor
 You can observe [**Events**]({{< relref "webhooks" >}}) in real-time using **Event Monitor**:
 
-http://localhost:3000/dashboard/event-monitor
+[http://localhost:3000/dashboard/event-monitor](http://localhost:3000/dashboard/event-monitor)
 
 ![Event Monitor](waha-dashboard-event-monitor.png)
 
