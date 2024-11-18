@@ -155,6 +155,43 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 - `messageId` - must be in format `{true|false}_213213@c.us_AAAAAAA`)
 - `downloadMedia` - download media files (images, files) or not
 
+### Pin message
+
+```
+POST /api/{session}/chats/{chatId}/messages/{messageId}/pin
+```
+
+Payload:
+```json
+{
+  "duration": 86400
+}
+```
+
+- 24 hours - `duration=86400`
+- 7 days - `duration=604800`
+- 30 days - `duration=2592000`
+
+Response:
+```json
+{
+  "success": true
+}
+```
+
+### Unpin message
+
+```
+POST /api/{session}/chats/{chatId}/messages/{messageId}/unpin
+```
+
+Response:
+```json
+{
+  "success": true
+}
+```
+
 ### Edit message
 You can edit **text** messages or **"caption"** in media messages.
 

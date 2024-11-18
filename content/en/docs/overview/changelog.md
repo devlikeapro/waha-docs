@@ -32,9 +32,11 @@ Latest Version:
 ## 2024.11
 `2024.11.5`
 - Add [**📊 Dashboard - Event Monitor**]({{< relref "waha-dashboard#event-monitor" >}}) - observe your events in real-time!
-- [**🔄 Webhooks**]({{< relref "webhooks#webhooks" >}}) features in **WAHA Core** version now: Retries, HMAC, Custom Headers!
+- All [**🔄 Webhooks**]({{< relref "webhooks#webhooks" >}}) features in **WAHA Core** version now: Retries, HMAC, Custom Headers!
 - [**🔄 Websockets**]({{< relref "webhooks#websockets" >}}) supports all events now {{< issue 535 >}}
-- **NOWEB** - `me.pushName` fix after authentication {{< issue 409 >}}
+- [**💬 Chats** - **Pin, Unpin message**]({{< relref "/docs/how-to/chats#pin-message" >}}) {{< issue 613>}}
+  - **WEBJS**, **NOWEB**
+- **NOWEB** - fix `me.pushName` after authentication {{< issue 409 >}}
 - Add `engine.event` for debug and troubleshooting
 
 `2024.11.4`
