@@ -18,5 +18,5 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
 Latest Version: 2024.11 #
-2024.11.4
-NOWEB - fix many contacts send status issues #390 , #413 NOWEB - contacts list for 🟢 Status (aka Stories) API is not required anymore WEBJS - fix HTTP ERROR 429 #633 2024.</description></item></channel></rss>
+2024.11.5
+Add 📊 Dashboard - Event Monitor - observe your events in real-time! All 🔄 Webhooks features in WAHA Core version now: Retries, HMAC, Custom Headers!</description></item></channel></rss>
