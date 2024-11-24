@@ -30,6 +30,10 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.11
+
+`2024.11.6`
+- Fix **WAHA Core** version {{< issue 645 >}}
+
 `2024.11.5`
 - Add [**📊 Dashboard - Event Monitor**]({{< relref "waha-dashboard#event-monitor" >}}) - observe your events in real-time!
 - All [**🔄 Webhooks**]({{< relref "webhooks#webhooks" >}}) features in **WAHA Core** version now: Retries, HMAC, Custom Headers!
