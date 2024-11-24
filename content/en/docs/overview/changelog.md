@@ -32,6 +32,8 @@ Latest Version:
 ## 2024.11
 
 `2024.11.6`
+- **WEBJS** - Add `WAHA_WEBJS_CACHE_TYPE=none` - ability to disable cache for `WEBJS` engine {{< issue 653 >}}, {{< issue 654 >}}
+  - [**⚙️ Configuration - WEBJS**]({{< relref "/docs/how-to/config#webjs" >}})
 - Fix **WAHA Core** version {{< issue 645 >}}
 
 `2024.11.5`

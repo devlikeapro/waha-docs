@@ -29,6 +29,11 @@ docker run -it -e "WHATSAPP_DEFAULT_ENGINE=WEBJS" devlikeapro/waha
 docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=WEBJS" devlikeapro/waha-plus
 ```
 
+## Configuration
+You can use some of the following environment variables to configure the [**WEBJS**]({{< relref "/docs/how-to/engines#webjs" >}}) session:
+- `WAHA_WEBJS_CACHE_TYPE=none` - disable cache (aka use the latest version) for the **web page** in the browser. By default, it's `local`, which means that the cache is stored in the container, latest compatible version is used.
+- `WAHA_WEBJS_WEB_VERSION=2.3000.XXXX` - set the version of the WhatsApp Web to use. By default, we're using the latest compatible version. Only works with `local` cache type.
+
 ## Links
 
 - [https://github.com/devlikeapro/whatsapp-web.js](https://github.com/devlikeapro/whatsapp-web.js)
