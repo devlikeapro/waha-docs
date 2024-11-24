@@ -31,9 +31,11 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.11
 
-`2024.11.6`
+`2024.11.7`
 - **WEBJS** - Add `WAHA_WEBJS_CACHE_TYPE=none` - ability to disable cache for `WEBJS` engine {{< issue 653 >}}, {{< issue 654 >}}
   - [**⚙️ Configuration - WEBJS**]({{< relref "/docs/how-to/config#webjs" >}})
+  
+`2024.11.6`
 - Fix **WAHA Core** version {{< issue 645 >}}
 
 `2024.11.5`
