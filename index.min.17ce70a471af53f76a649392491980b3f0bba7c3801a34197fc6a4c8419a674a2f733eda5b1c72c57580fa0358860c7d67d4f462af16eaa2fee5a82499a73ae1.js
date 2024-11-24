@@ -71,8 +71,9 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.11 #2024.11.6
-WEBJS - Add WAHA_WEBJS_CACHE_TYPE=none - ability to disable cache for WEBJS engine #653 , #654 ⚙️ Configuration - WEBJS Fix WAHA Core version #645 2024.11.5
+Latest Version: 2024.11 #2024.11.7
+WEBJS - Add WAHA_WEBJS_CACHE_TYPE=none - ability to disable cache for WEBJS engine #653 , #654 ⚙️ Configuration - WEBJS 2024.11.6
+Fix WAHA Core version #645 2024.11.5
 Add 📊 Dashboard - Event Monitor - observe your events in real-time! All 🔄 Webhooks features in WAHA Core version now: Retries, HMAC, Custom Headers! 🔄 Websockets supports all events now #535 💬 Chats - Pin, Unpin message #613 WEBJS, NOWEB NOWEB - fix me.pushName after authentication #409 Add engine.event for debug and troubleshooting 2024.11.4
 NOWEB - fix many contacts send status issues #390 , #413 NOWEB - contacts list for 🟢 Status (aka Stories) API is not required anymore WEBJS - fix HTTP ERROR 429 #633 2024.11.3
 add linkPreview flag in POST /api/sendText to disable generating preview for links #596 , #598 Fix \u0026ldquo;Sqlite: attempt to write to read only database\u0026rdquo; error #628 Fix POST /api/sendVideo - \u0026ldquo;TargetCloseError: Protocol error\u0026rdquo; #629 2024.11.2
