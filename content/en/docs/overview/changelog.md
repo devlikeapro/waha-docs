@@ -30,6 +30,8 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.11
+`2024.11.9`
+- **NOWEB** - attempt to fix missing message {{< issue 671 >}}
 
 `2024.11.8`
 - **WEBJS** - Fix QR code (set `WAHA_WEBJS_CACHE_TYPE=none` by default) - {{< issue 659 >}}
