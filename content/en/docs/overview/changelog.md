@@ -30,6 +30,9 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.11
+`2024.11.10`
+- **WEBJS** - fix empty groups and participants {{< issue 670 >}} {{< issue 674 >}}
+
 `2024.11.9`
 - **NOWEB** - attempt to fix missing message {{< issue 671 >}}
 
