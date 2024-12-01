@@ -71,7 +71,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.11 #2024.11.9
+Latest Version: 2024.11 #2024.11.10
+WEBJS - fix empty groups and participants #670 #674 2024.11.9
 NOWEB - attempt to fix missing message #671 2024.11.8
 WEBJS - Fix QR code (set WAHA_WEBJS_CACHE_TYPE=none by default) - #659 2024.11.7
 WEBJS - Add WAHA_WEBJS_CACHE_TYPE=none - ability to disable cache for WEBJS engine #653 , #654 ⚙️ Configuration - WEBJS 2024.11.6
