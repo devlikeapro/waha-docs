@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on</title><link>https://waha.devlike.pro/categories/releases/</link><description>Recent content in Releases on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 30 Sep 2024 08:48:45 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2024.10</title><link>https://waha.devlike.pro/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-10/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.10 🎉
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on</title><link>https://waha.devlike.pro/categories/releases/</link><description>Recent content in Releases on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 30 Nov 2024 08:48:45 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2024.11</title><link>https://waha.devlike.pro/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-11/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.11 🎉
+Event Monitor #
+Now you can observe the Events happening in your WAHA instance in real-time with the new Event Monitor feature!
+Click to open full size. Open dashboard/event-monitor or at your local instance http://localhost:3000/dashboard/event-monitor
+Websockets #
+WAHA now has full support for Websockets!
+Here&amp;rsquo;s how you can listen to it using websocat
+# Listen all sessions and events # -E to end the connection when the server closes it websocat -E ws://localhost:3000/ws Or JavaScript
+// Configuration const apiKey = '123'; // Replace with your API key const baseUrl = 'ws://localhost:3000/ws'; const session = '*'; // Use '*' to listen to all sessions const events = ['session.</description></item><item><title>WAHA 2024.10</title><link>https://waha.devlike.pro/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-10/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.10 🎉
 WAHA Core - Receive Media #
 We published 📥 Receive messages in free WAHA Core version, so you can receive media files in your WhatsApp API for free!
 We&amp;rsquo;ll continue to publish features from ➕ WAHA Plus to WAHA Core, so you can use them for free!
