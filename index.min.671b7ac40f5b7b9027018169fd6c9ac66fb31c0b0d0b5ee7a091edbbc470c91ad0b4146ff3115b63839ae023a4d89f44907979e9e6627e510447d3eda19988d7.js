@@ -71,7 +71,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.11 #2024.11.11
+Latest Version: 2024.12 #2024.12.1
+WEBJS - fix get channel info by id #682 WEBJS - fix channel messages #683 2024.11 #2024.11.11
 NOWEB - fix 403 on media message #667 WEBJS - fix channels list and message #664 2024.11.10
 WEBJS - fix empty groups and participants #670 #674 2024.11.9
 NOWEB - attempt to fix missing message #671 2024.11.8

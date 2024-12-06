@@ -17,7 +17,8 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 👉 We kindly recommend getting at least 2CPU and 2GB RAM for a VPS, it&amp;rsquo;s not comfortable to work with less resources.</description></item><item><title>🆕 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
-Latest Version: 2024.11 #
+Latest Version: 2024.12 #
+2024.12.1
+WEBJS - fix get channel info by id #682 WEBJS - fix channel messages #683 2024.11 #
 2024.11.11
-NOWEB - fix 403 on media message #667 WEBJS - fix channels list and message #664 2024.11.10
-WEBJS - fix empty groups and participants #670 #674 2024.</description></item></channel></rss>
+NOWEB - fix 403 on media message #667 WEBJS - fix channels list and message #664 2024.</description></item></channel></rss>
