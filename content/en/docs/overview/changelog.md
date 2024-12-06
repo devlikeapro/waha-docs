@@ -29,6 +29,11 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
+## 2024.12
+`2024.12.1`
+- **WEBJS** - fix get channel info by id {{< issue 682 >}}
+- **WEBJS** - fix channel messages {{< issue 683 >}}
+
 ## 2024.11
 `2024.11.11`
 - **NOWEB** - fix 403 on media message {{< issue 667 >}}
