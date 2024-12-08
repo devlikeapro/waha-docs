@@ -30,6 +30,9 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 ## 2024.12
+`2024.12.NEXT`
+- **NOWEB** - use **NOWEB** engine by default in [devlikeapro/waha-plus:noweb]({{< relref "/docs/how-to/engines#docker-images" >}}) - {{< issue 414 >}}
+
 `2024.12.2`
 - **NOWEB** - attempt #2 to fix missing message {{< issue 671 >}}
 

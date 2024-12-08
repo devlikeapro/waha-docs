@@ -53,33 +53,6 @@ Quotes from the users:
 ## Docker images
 WAHA provides few docker images with different setup.
 
-👉 Go to 
-[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
-to generate the command with the latest version and your key.
-
-```bash
-devlikeapro/{image}:{browser}[-cpu][-version]
-```
-
-### Image
-- `waha-plus` - [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) image
-- `waha` - **WAHA Core** image
-
-### Browsers
-- **Chromium** (`latest`) - is the default browser for **WAHA**. It's a good choice for most cases.
-- **Chrome** (`chrome`) - is a good choice if you need to receive videos in Plus version.
-- **None** (`noweb`) - is a good choice if you want to use **NOWEB** engine.
-
-### CPU
-- **x86** - is a good choice for most cases.
-- **ARM** (`-arm`) - is a good choice if you're using ARM processors (like **Apple Silicon M1\M2**, **Raspberry Pi**, etc.)
-
-### Versions
-- **latest** - is the latest version of WAHA.
-- **pinned** - you can pin WAHA version by adding `-{version}` at the end of image tag.
-
-### Examples
-
 👉 Go to
 [**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
 to generate the command with the latest version and your key.
@@ -100,6 +73,29 @@ to generate the command with the latest version and your key.
 | `-`                                                         | ARM | Chrome                  |
 | `devlikeapro/waha:arm`                                      | ARM | Chromium                |
 | `devlikeapro/waha:noweb-arm`                                | ARM | None                    |
+
+
+```bash
+devlikeapro/{image}:{browser}[-cpu][-version]
+```
+
+`{image}`:
+- `waha-plus` - [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) image
+- `waha` - **WAHA Core** image
+
+`{browser}`:
+- **Chromium** (`latest`) - is the default browser for **WAHA**. It's a good choice for most cases.
+- **Chrome** (`chrome`) - is a good choice if you need to receive videos in Plus version.
+- **None** (`noweb`) - is a good choice if you want to use **NOWEB** engine.
+
+`{cpu}`:
+- **x86** - is a good choice for most cases.
+- **ARM** (`-arm`) - is a good choice if you're using ARM processors (like **Apple Silicon M1\M2**, **Raspberry Pi**, etc.)
+
+`{version}`:
+- **latest** - is the latest version of WAHA.
+- **pinned** - you can pin WAHA version by adding `-{version}` at the end of image tag.
+
 ## Features
 
 Some engines may not support certain features.
