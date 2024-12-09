@@ -27,7 +27,7 @@ Get all chats
 GET /api/{session}/chats
 ```
 
-#### Pagination
+#### Chats Pagination
 If you see timeout or the request takes too long - consider using `limit` parameter to get chats in smaller chunks
 
 ```

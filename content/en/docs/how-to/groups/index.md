@@ -41,6 +41,32 @@ Request:
 
 `GET /api/{session}/groups`
 
+👉 If you see `rate-overlimit` error with **NOWEB** engine - try enabling [**🏭 NOWEB Store before using the endpoint**]({{< relref "/docs/engines/NOWEB#store" >}})!
+
+#### Groups Pagination
+If you see timeout or the request takes too long - consider using `limit` parameter to get objects in smaller chunks
+
+```
+GET /api/{session}/groups?limit=10&offset=0&sortBy=subject&sortOrder=desc
+```
+
+- `limit=10` - limit the number of chats to return
+- `offset=0` - skip the number of chats from the start
+- `sortBy={field}` - sort by field
+  - `sortBy=id` - sort by group id
+  - `sortBy=subject` - sort by group subject
+- `sortOrder=desc|asc` - sort order
+  - `desc` - descending order (New first, A-Z)
+  - `asc` - ascending order (Old first, Z-A)
+
+### Refresh groups
+If you see any inconsistency in groups list or in participants list, you can refresh the groups from the WhatsApp server:
+```bash
+POST /api/{session}/groups/refresh
+```
+
+⚠️ Do not call it frequently, it can lead to `rate-overlimit` error. Usually groups API has all up-to-date information.
+
 ### Get the group
 
 `GET /api/{session}/groups/{groupId}`

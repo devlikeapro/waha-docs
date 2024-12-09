@@ -42,7 +42,7 @@ Get your contacts - `GET /api/contacts/all`
 ]
 ```
 
-#### Pagination
+#### Contacts Pagination
 If you see timeout or the request takes too long - consider using `limit` parameter to get contacts in smaller chunks
 
 ```
