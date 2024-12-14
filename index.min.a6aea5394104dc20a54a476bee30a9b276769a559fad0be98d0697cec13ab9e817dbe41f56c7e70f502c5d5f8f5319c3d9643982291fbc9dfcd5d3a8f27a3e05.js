@@ -71,7 +71,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2024.12 #2024.12.3
+Latest Version: 2024.12 #2024.12.4
+Add 👥 Join Group API - #688 2024.12.3
 NOWEB - use NOWEB engine by default in devlikeapro/waha-plus:noweb - #414 NOWEB - fix rate-overlimit error on groups API #462 Add pagination to 👥 Get Groups API Add 👥 Refresh Groups API 2024.12.2
 NOWEB - attempt #2 to fix missing message #671 2024.12.1
 WEBJS - fix get channel info by id #682 WEBJS - fix channel messages #683 2024.11 #2024.11.11
@@ -576,7 +577,14 @@ Request:
 { \u0026quot;name\u0026quot;: \u0026quot;Group name\u0026quot;, \u0026quot;participants\u0026quot;: [ { \u0026quot;id\u0026quot;: \u0026quot;123123123123@c.us\u0026quot; } ] } Get all groups #GET /api/{session}/groups
 👉 If you see rate-overlimit error with NOWEB engine - try enabling 🏭 NOWEB Store before using the endpoint!
 Groups Pagination #If you see timeout or the request takes too long - consider using limit parameter to get objects in smaller chunks
-GET /api/{session}/groups?limit=10\u0026amp;offset=0\u0026amp;sortBy=subject\u0026amp;sortOrder=desc limit=10 - limit the number of chats to return offset=0 - skip the number of chats from the start sortBy={field} - sort by field sortBy=id - sort by group id sortBy=subject - sort by group subject sortOrder=desc|asc - sort order desc - descending order (New first, A-Z) asc - ascending order (Old first, Z-A) Refresh groups #If you see any inconsistency in groups list or in participants list, you can refresh the groups from the WhatsApp server:
+GET /api/{session}/groups?limit=10\u0026amp;offset=0\u0026amp;sortBy=subject\u0026amp;sortOrder=desc limit=10 - limit the number of chats to return offset=0 - skip the number of chats from the start sortBy={field} - sort by field sortBy=id - sort by group id sortBy=subject - sort by group subject sortOrder=desc|asc - sort order desc - descending order (New first, A-Z) asc - ascending order (Old first, Z-A) Join group #If you have invite URL for a group (like https://chat.whatsapp.com/invitecode), you can
+POST /api/{session}/groups/join Body
+{ \u0026quot;code\u0026quot;: \u0026quot;invitecode\u0026quot; } or using full link:
+{ \u0026quot;code\u0026quot;: \u0026quot;https://chat.whatsapp.com/invitecode\u0026quot; } Response:
+{ \u0026quot;id\u0026quot;: \u0026quot;123123123@g.us\u0026quot; } Get join info for group #If you have invite URL for a group (like https://chat.whatsapp.com/invitecode), you can get group info:
+GET /api/{session}/groups/join-info?code=invitecode or using full link (remember to encode the URL)
+GET /api/{session}/groups/join-info?code=https%3A%2F%2Fchat.whatsapp.com%2Finvitecode Response depends on engine you\u0026rsquo;re using
+Refresh groups #If you see any inconsistency in groups list or in participants list, you can refresh the groups from the WhatsApp server:
 POST /api/{session}/groups/refresh ⚠️ Do not call it frequently, it can lead to rate-overlimit error. Usually groups API has all up-to-date information.
 Get the group #GET /api/{session}/groups/{groupId}
 Delete the group #DELETE /api/{session}/groups/{groupId}
