@@ -59,6 +59,49 @@ GET /api/{session}/groups?limit=10&offset=0&sortBy=subject&sortOrder=desc
   - `desc` - descending order (New first, A-Z)
   - `asc` - ascending order (Old first, Z-A)
 
+### Join group
+If you have invite URL for a group (like `https://chat.whatsapp.com/invitecode`), you can 
+
+```bash
+POST /api/{session}/groups/join
+```
+
+**Body**
+```json
+{
+  "code": "invitecode"
+}
+```
+
+or using full link:
+```json
+{
+  "code": "https://chat.whatsapp.com/invitecode"
+}
+```
+
+**Response**:
+```json
+{
+  "id": "123123123@g.us"
+}
+```
+
+### Get join info for group
+If you have invite URL for a group (like `https://chat.whatsapp.com/invitecode`), you can get group info:
+
+```bash
+GET /api/{session}/groups/join-info?code=invitecode
+```
+
+or using full link (remember to encode the URL)
+
+```bash
+GET /api/{session}/groups/join-info?code=https%3A%2F%2Fchat.whatsapp.com%2Finvitecode
+```
+
+Response depends on engine you're using
+
 ### Refresh groups
 If you see any inconsistency in groups list or in participants list, you can refresh the groups from the WhatsApp server:
 ```bash

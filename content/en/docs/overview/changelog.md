@@ -31,6 +31,9 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.12
+`2024.12.4`
+- Add [**👥 Join Group API**]({{< relref "/docs/how-to/groups#join-group" >}}) - {{< issue 688 >}}
+
 `2024.12.3`
 - **NOWEB** - use **NOWEB** engine by default in [devlikeapro/waha-plus:noweb]({{< relref "/docs/how-to/engines#docker-images" >}}) - {{< issue 414 >}}
 - **NOWEB** - fix `rate-overlimit` error on groups API {{< issue 462 >}}
