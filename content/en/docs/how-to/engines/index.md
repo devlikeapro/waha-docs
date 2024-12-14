@@ -111,35 +111,51 @@ Here, you will find a list of supported endpoints and webhooks per engine.
 If you don't specify `WHATSAPP_DEFAULT_ENGINE` environment variable - look at **WEBJS** engine,
 it's the engine WAHA runs by default.
 
-### Protocols
+### 🏭 Engines
 
-|                                                              | WEBJS | NOWEB |
-|--------------------------------------------------------------|:-----:|:-----:|
-| Run a browser (chromium\chrome) to communicate with WhatsApp |  ✔️   |   ➖    |
-| Communicate with WhatsApp via websocket (no browser)         |   ➖    |  ✔️   |
+|                                                                  | WEBJS | NOWEB |
+|------------------------------------------------------------------|:-----:|:-----:|
+| Run a **browser** (chromium\chrome) to communicate with WhatsApp |  ✔️   |   ➖   |
+| Communicate with WhatsApp via **websocket (no browser)**         |   ➖   |  ✔️   |
 
-### Webhooks
+### 🔄 Webhooks
+
 {{< include file="content/en/docs/how-to/webhooks/features.md" >}}
 
 
-### Sessions
+### 🖥️ Sessions
 Read more about
 [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
+
 {{< include file="content/en/docs/how-to/sessions/features.md" >}}
 
-### Messages
+### 📤 Messages
+Read more about
+[**📤 Send Messages**]({{< relref "/docs/how-to/send-messages" >}})
+and
+[**📥 Receive Messages**]({{< relref "/docs/how-to/receive-messages" >}})
+
 {{< include file="content/en/docs/how-to/send-messages/features.md" >}}
 
-### Status
+### 🟢 Status
+Read more about
+[**🟢 Status**]({{< relref "/docs/how-to/status" >}})
+
 {{< include file="content/en/docs/how-to/status/features.md" >}}
 
-### Chats
+### 💬 Chats
+Read more about
+[**💬 Chats**]({{< relref "/docs/how-to/chats" >}})
+
 {{< include file="content/en/docs/how-to/chats/features.md" >}}
 
-### Contacts
+### 👤 Contacts
+Read more about
+[**👤 Contacts**]({{< relref "/docs/how-to/contacts" >}})
+
 {{< include file="content/en/docs/how-to/contacts/features.md" >}}
 
-### Channels
+### 📢 Channels
 Read more about
 [**📢 Channels**]({{< relref "/docs/how-to/channels" >}})
 
@@ -151,7 +167,7 @@ Read more about
 
 {{< include file="content/en/docs/how-to/groups/features.md" >}}
 
-### Presence
+### ✅ Presence
 Read more about 
 [**✅ Presence**]({{< relref "/docs/how-to/presence" >}})
 
@@ -162,25 +178,25 @@ Read more about
 | `GET /api/{session}/presence/{chatId}`            |       |  ✔️   |
 | `POST /api/{session}/presence/{chatId}/subscribe` |       |  ✔️   |
 
-### Labels
+### 🏷️ Labels
 Read more about 
 [**🏷️ Labels**]({{< relref "/docs/how-to/labels" >}})
 
 {{< include file="content/en/docs/how-to/labels/features.md" >}}
 
-### Calls
+### 📞 Calls
 Read more about 
 [**📞 Calls**]({{< relref "/docs/how-to/calls" >}})
 
 {{< include file="content/en/docs/how-to/calls/features.md" >}}
 
-### Storages
+### 🗄️ Storages
 Read more about
 [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}})
 
 {{< include file="content/en/docs/how-to/storages/features.md" >}}
 
-### Observability
+### 🔍 Observability
 
 Read more about 
 [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
