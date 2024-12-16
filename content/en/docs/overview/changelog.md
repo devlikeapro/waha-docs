@@ -31,6 +31,9 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.12
+`2024.12.5`
+- **NOWEB** - attempt #3 to fix missing messages {{< issue 671 >}}
+
 `2024.12.4`
 - Add [**👥 Join Group API**]({{< relref "/docs/how-to/groups#join-group" >}}) - {{< issue 688 >}}
 
@@ -41,7 +44,7 @@ Latest Version:
 - Add [**👥 Refresh Groups API**]({{< relref "/docs/how-to/groups#refresh-groups" >}})
 
 `2024.12.2`
-- **NOWEB** - attempt #2 to fix missing message {{< issue 671 >}}
+- **NOWEB** - attempt #2 to fix missing messages {{< issue 671 >}}
 
 `2024.12.1`
 - **WEBJS** - fix get channel info by id {{< issue 682 >}}
@@ -56,7 +59,7 @@ Latest Version:
 - **WEBJS** - fix empty groups and participants {{< issue 670 >}} {{< issue 674 >}}
 
 `2024.11.9`
-- **NOWEB** - attempt to fix missing message {{< issue 671 >}}
+- **NOWEB** - attempt to fix missing messages {{< issue 671 >}}
 
 `2024.11.8`
 - **WEBJS** - Fix QR code (set `WAHA_WEBJS_CACHE_TYPE=none` by default) - {{< issue 659 >}}
