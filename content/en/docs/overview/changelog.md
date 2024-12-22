@@ -31,6 +31,9 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.12
+`2024.12.6`
+- **WEBJS** - fix "Could not get the quoted message" error when replying to a message - {{< issue 576 >}}
+
 `2024.12.5`
 - **NOWEB** - attempt #3 to fix missing messages {{< issue 671 >}}
 
