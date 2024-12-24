@@ -44,6 +44,47 @@ GET /api/{session}/chats?limit=100&offset=0&sortBy=messageTimestamp&sortOrder=de
   - `desc` - descending order (New first, A-Z)
   - `asc` - ascending order (Old first, Z-A)
 
+### Get chats overview
+Get chats "overview" - the API that almost all "Chat UI" client needs!
+```
+GET /api/{session}/chats/overview?limit=20&offset=0
+```
+
+**Response** contains the main info you need to show in the chat list:
+1. `id` - chat id
+2. `name` - chat name (if any)
+3. `picture` - chat picture (if any)
+4. `lastMessage` - last message in the chat (if any). 
+5. `_chat` - the structure depends on engine you're using
+
+⚠️ `lastMessage` doesn't have media attachments, you need to [get message by id]({{< relref "#get-message-by-id" >}}) to get media attachments.
+
+```json
+[
+  {
+    "id": "12312l123@c.us",
+    "name": "John Doe",
+    "picture": "https://example.com/picture.jpg",
+    "lastMessage": {
+      "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "timestamp": 1667561485,
+      "from": "11111111111@c.us",
+      "fromMe": true,
+      "to": "11111111111@c.us",
+      "body": "Hi there!",
+      ...
+    },
+    "_chat": {
+      ...
+    }
+  }
+]
+
+```
+
+**Paginations**:
+- `limit=100` - limit the number of chats to return
+- `offset=0` - skip the number of chats from the start
 
 ### Archive chat
 
