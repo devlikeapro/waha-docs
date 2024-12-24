@@ -116,8 +116,14 @@ It's fine to send the response to `chatId` for incoming messages, though - the p
 ```
 
 ### Get contact profile picture
+```
+GET /api/contacts/profile-picture?contactId=11231231231&session=default`
+```
 
-- `GET /api/contacts/profile-picture?contactId=11231231231&session=default`
+**Query**:
+- `contactId` - contact ID
+- `session` - session name
+- `refresh=True` - force refresh the picture. By default, we cache it 24 hours. Do not frequently refresh the picture to avoid `rate-overlimit` error.
 
 ```json
 {

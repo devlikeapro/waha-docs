@@ -82,9 +82,26 @@ GET /api/{session}/chats/overview?limit=20&offset=0
 
 ```
 
-**Paginations**:
+**Pagination**:
 - `limit=100` - limit the number of chats to return
 - `offset=0` - skip the number of chats from the start
+
+### Get chat picture
+Get chat picture (avatar, profile picture, group image) by chat id
+```
+GET /api/{session}/chats/{chatId}/picture[?refresh=True]
+```
+
+**Query**
+- `refresh=True` - force refresh the picture. By default, we cache it 24 hours. Do not frequently refresh the picture to avoid `rate-overlimit` error.
+
+**Response**:
+```json
+{
+  "url": "https://example.com/picture.jpg"
+}
+```
+- `url` can be `null` if there's no picture for the chat
 
 ### Archive chat
 

@@ -2,6 +2,7 @@
 |----------------------------------------------------------------------------------------|:-----:|:-----:|
 | **Get all chats** <br> `GET /api/{session}/chats`                                      |  ✔️   |  ✔️¹  |
 | **Get chats overview** <br> `GET /api/{session}/chats/overview`                        |  ✔️   |  ✔️¹  |
+| **Get chat picture** <br> `GET /api/{session}/chats/{chatId}/picture`                  |  ✔️   |  ✔️¹  |
 | **Unread chat** <br> `POST /api/{session}/chats/{chatId}/unread`                       |  ✔️   |  ✔️¹  |
 | **Archive chat** <br> `POST /api/{session}/chats/{chatId}/archive`                     |  ✔️   |  ✔️¹  |
 | **Unarchive chat** <br> `POST /api/{session}/chats/{chatId}/unarchive`                 |  ✔️   |  ✔️¹  |
