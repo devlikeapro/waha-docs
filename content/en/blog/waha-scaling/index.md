@@ -169,7 +169,7 @@ and few more reasons:
 
 ### Single Dashboard - Multiple Servers
 If you're running multiple servers
-you can run a dedicated WAHA [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}) just to have a single place where from you can manage all servers:
+you can run a dedicated WAHA [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}) just to have a single place where from you can manage all servers:
 
 {{< img src="/images/waha/dashboard/waha-dashboard-servers.drawio.png" >}}
 

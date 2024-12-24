@@ -99,7 +99,7 @@ Copy those values from the Geonode dashboard:
 
 ### Option 1 - Start a session using WAHA Dashboard
 
-Start a session using [WAHA Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}).
+Start a session using [WAHA Dashboard]({{< relref "/docs/how-to/dashboard" >}}).
 
 ![](waha-proxy.png)
 

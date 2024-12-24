@@ -19,7 +19,7 @@ homepage: false
 </video>
 
 We are thrilled to introduce the latest addition to WAHA - 
-[the brand new **Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}),
+[the brand new **Dashboard**]({{< relref "/docs/how-to/dashboard" >}}),
 exclusively available in 
 [**WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) version!
 

@@ -28,7 +28,7 @@ You asked it, we did it - **contacts, chats, and messages** endpoints are now av
 
 
 ## Dashboard now available in WAHA Core
-[📊 WAHA Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}})
+[📊 WAHA Dashboard]({{< relref "/docs/how-to/dashboard" >}})
 a web interface to easily manage your WhatsApp sessions now is available in Free WAHA Core version!
 
 <video autoplay loop muted playsinline controls='noremoteplayback' width='100%' poster='/images/waha-dashboard.png'>

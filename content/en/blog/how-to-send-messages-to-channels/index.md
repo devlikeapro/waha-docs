@@ -74,7 +74,7 @@ docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 # WhatsApp API is running on: http://[::1]:3000
 ```
 
-👉 Now, open [Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}) at 
+👉 Now, open [Dashboard]({{< relref "/docs/how-to/dashboard" >}}) at 
 <a href="http://localhost:3000/dashboard" target="_blank">
 <b>http://localhost:3000/dashboard</b>
 </a>

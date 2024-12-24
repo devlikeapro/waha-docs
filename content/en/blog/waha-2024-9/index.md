@@ -42,7 +42,7 @@ For example, you can store your user’s unique identifier from your system.
 Associated `metadata` field is available in:
 1. [List Sessions](#list-sessions) and [Get Session](#get-session)  responses
 2. [**🔄 Webhooks**]({{< relref "webhooks#metadata" >}}) events
-3. [**📊 Dashboard**]({{< relref "waha-dashboard" >}}) for view, and search sessions by metadata
+3. [**📊 Dashboard**]({{< relref "dashboard" >}}) for view, and search sessions by metadata
 
 
 ```json

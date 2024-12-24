@@ -83,7 +83,7 @@ in `config` at [POST /api/sessions/]({{< relref "/docs/how-to/sessions#create-se
   - `fullSync=false` you'll get about 3 months of message history.
   - `fullSync=true` you'll get about 1 year of message history (max 100K messages per chat).
   - 
-Or enable it on [WAHA Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}) when **starting a new session**:
+Or enable it on [WAHA Dashboard]({{< relref "/docs/how-to/dashboard" >}}) when **starting a new session**:
 ![](dashboard-noweb-store.png)
 
 

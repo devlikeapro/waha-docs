@@ -116,7 +116,7 @@ docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 # WhatsApp API is running on: http://[::1]:3000
 ```
 
-👉 Now, open [📊 Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}) at
+👉 Now, open [📊 Dashboard]({{< relref "/docs/how-to/dashboard" >}}) at
 <a href="http://localhost:3000/dashboard" target="_blank">
 <b>http://localhost:3000/dashboard</b>
 </a>
@@ -187,7 +187,7 @@ Open Swagger at
 
 ## What is next?
 - Learn how to make **production-ready** installation for WAHA [**🔧 Install**]({{< relref "/docs/how-to/install" >}})
-- Learn about the easiest way to manage your WhatsApp sessions - [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
+- Learn about the easiest way to manage your WhatsApp sessions - [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
 - Learn how to send images and other messages [**📤 Send messages**]({{< relref "/docs/how-to/send-messages" >}})
 - Read how to receive and response to messages [**📥 Receive messages**]({{< relref "/docs/how-to/receive-messages" >}})
 - Make sure your API is protected with [**🔒 Security**]({{< relref "/docs/how-to/security" >}})

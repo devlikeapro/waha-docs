@@ -37,7 +37,7 @@ Latest Version:
   - {{< issue 566 >}}
   - {{< issue 573 >}}
   - {{< issue 701 >}}
-- Add [**📊 Chat UI to Dashboard**]({{< relref "/docs/how-to/waha-dashboard#chat-ui" >}}) -
+- Add [**📊 Chat UI to Dashboard**]({{< relref "/docs/how-to/dashboard#chat-ui" >}}) -
 as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/chats#get-chats-overview" >}})
 - Add [**💬 Get chat picture API**]({{< relref "/docs/how-to/chats#get-chat-picture" >}}) - {{< issue 687 >}}
 - Add `refresh` flag to **Get chat picture** and **Get contact picture** API
@@ -86,7 +86,7 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 - Fix **WAHA Core** version {{< issue 645 >}}
 
 `2024.11.5`
-- Add [**📊 Dashboard - Event Monitor**]({{< relref "waha-dashboard#event-monitor" >}}) - observe your events in real-time!
+- Add [**📊 Dashboard - Event Monitor**]({{< relref "dashboard#event-monitor" >}}) - observe your events in real-time!
 - All [**🔄 Webhooks**]({{< relref "webhooks#webhooks" >}}) features in **WAHA Core** version now: Retries, HMAC, Custom Headers!
 - [**🔄 Websockets**]({{< relref "webhooks#websockets" >}}) supports all events now {{< issue 535 >}}
 - [**💬 Chats** - **Pin, Unpin message**]({{< relref "/docs/how-to/chats#pin-message" >}}) {{< issue 613>}}
@@ -244,10 +244,10 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
   - `metadata` field available in:
     - [List Sessions]({{< relref "/docs/how-to/sessions#list-sessions" >}}) and [Get Session]({{< relref "/docs/how-to/sessions#get-session" >}})  responses
     - [**🔄 Webhooks**]({{< relref "webhooks#metadata" >}}) events
-    - [**📊 Dashboard**]({{< relref "waha-dashboard" >}}) for view, and search sessions by metadata
-- Add **Bulk Operations** (start, restart, etc.) for [**📊 Dashboard**]({{< relref "waha-dashboard" >}}) - [#438](https://github.com/devlikeapro/waha/issues/438)
-- Add environment variables on [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}) - [#319](https://github.com/devlikeapro/waha/issues/319)
-- Add [**🔄 Webhooks - Custom Headers**]({{< relref "/docs/how-to/webhooks#custom-headers" >}}) on [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}})
+    - [**📊 Dashboard**]({{< relref "dashboard" >}}) for view, and search sessions by metadata
+- Add **Bulk Operations** (start, restart, etc.) for [**📊 Dashboard**]({{< relref "dashboard" >}}) - [#438](https://github.com/devlikeapro/waha/issues/438)
+- Add environment variables on [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}) - [#319](https://github.com/devlikeapro/waha/issues/319)
+- Add [**🔄 Webhooks - Custom Headers**]({{< relref "/docs/how-to/webhooks#custom-headers" >}}) on [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
 - Add `GET /api/server/version` and `/api/server/environment` endpoints
   - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 - Validate API request on `/api/sessions/*` endpoints - [#470](https://github.com/devlikeapro/waha/issues/470)
@@ -399,16 +399,16 @@ Delete status endpoint - [`POST /api/{session}/status/delete`]({{<relref "/docs/
 
 ----
 
-Starting `2024.6.3` [Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}) is available in **WAHA Core** version!
+Starting `2024.6.3` [Dashboard]({{< relref "/docs/how-to/dashboard" >}}) is available in **WAHA Core** version!
 
-- Read more about [WAHA Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}})
+- Read more about [WAHA Dashboard]({{< relref "/docs/how-to/dashboard" >}})
 - Build: `2024.6.3`
 
 ----
 
-Starting `2024.6.3` [Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}}) allows connecting to **multiple WAHA instances**!
+Starting `2024.6.3` [Dashboard]({{< relref "/docs/how-to/dashboard" >}}) allows connecting to **multiple WAHA instances**!
 
-- Read more about [WAHA Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}})
+- Read more about [WAHA Dashboard]({{< relref "/docs/how-to/dashboard" >}})
 - Build: `2024.6.3`
 
 ----
@@ -529,7 +529,7 @@ WhatsApp has deprecated the version currently being used in the NOWEB engine
 **🎉 New**
 
 Add **WAHA Dashboard** - UI to manage your WhatsApp sessions!
-- Read more about [Dashboard]({{< relref "/docs/how-to/waha-dashboard" >}})
+- Read more about [Dashboard]({{< relref "/docs/how-to/dashboard" >}})
 - Open [screenshot](/images/waha-dashboard.png)
 
 ----

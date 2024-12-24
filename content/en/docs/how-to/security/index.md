@@ -48,7 +48,7 @@ When running WAHA you can set the following environment variables to configure t
 - `WAHA_DASHBOARD_USERNAME=waha` - username used to log in, by default `waha`.
 - `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, by default `waha`.
 
-Read more about [**Dashboard ->**]({{< relref "/docs/how-to/waha-dashboard" >}})
+Read more about [**Dashboard ->**]({{< relref "/docs/how-to/dashboard" >}})
 
 ## API security
 

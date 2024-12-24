@@ -158,7 +158,7 @@ Some important values you **MUST** change before running it:
 
 - API Key for secure API access. Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
    - `WHATSAPP_API_KEY=123`
-- Username, password for [**📊 Dashboard**]({{< relref "/docs/how-to/waha-dashboard" >}}):
+- Username, password for [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}):
    - `WAHA_DASHBOARD_USERNAME=waha`
    - `WAHA_DASHBOARD_PASSWORD=waha`
 - Username, password for [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}):

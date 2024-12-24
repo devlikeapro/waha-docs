@@ -46,7 +46,7 @@ GET /api/{session}/chats?limit=100&offset=0&sortBy=messageTimestamp&sortOrder=de
 
 ### Get chats overview
 Get chats "overview" - the API that almost all 
-[**Chat UI**]({{< relref "/docs/how-to/waha-dashboard#chat-ui" >}})
+[**Chat UI**]({{< relref "/docs/how-to/dashboard#chat-ui" >}})
 client needs!
 ```
 GET /api/{session}/chats/overview?limit=20&offset=0
