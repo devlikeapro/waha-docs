@@ -51,6 +51,26 @@ You can observe [**Events**]({{< relref "webhooks" >}}) in real-time using **Eve
 
 ![Event Monitor](waha-dashboard-event-monitor.png)
 
+## Chat UI
+We've built a simple **Chat UI** in Dashboard, so you can see what is possible to implement using WAHA!
+
+{{< img src="/images/waha/dashboard/waha-dashboard-chat-ui.png" >}}
+
+You can implement **Live Chat**, **Multiple Agents**, and more features using  
+[**WAHA API**](https://waha.devlike.pro/):
+- [**💬 Chats API**]({{< relref "/docs/how-to/chats" >}})
+  to get chats overview and messages.
+- [**📤 Send messages API**]({{< relref "/docs/how-to/send-messages" >}})
+  to send messages to chats.
+- [**🔄 Message ACK**]({{< relref "/docs/how-to/webhooks#messageack" >}})
+  to get message status.
+- [**🔄 Websockets**]({{< relref "/docs/how-to/webhooks#websockets" >}})
+  to get real-time messages on the client side.
+
+👉 [**Source Code on Github**](https://github.com/devlikeapro/waha-hub/tree/main/ui/components/chat) 
+(Vue3 + PrimeVue) available for [WAHA PRO](https://waha.devlike.pro/pricing/#tier-pro) supporters!
+
+
 
 ## Notes
 ### Single Dashboard - Multiple Servers
