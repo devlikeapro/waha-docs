@@ -32,7 +32,18 @@ Latest Version:
 
 ## 2024.12
 `2024.12.6`
+- Add [**💬 Get chats overview API**]({{< relref "/docs/how-to/chats#get-chats-overview" >}}) 
+  - **WEBJS**, **NOWEB
+  - {{< issue 566 >}}
+  - {{< issue 573 >}}
+  - {{< issue 701 >}}
+- Add [**📊 Chat UI to Dashboard**]({{< relref "/docs/how-to/waha-dashboard#chat-ui" >}}) -
+as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/chats#get-chats-overview" >}})
+- Add [**💬 Get chat picture API**]({{< relref "/docs/how-to/chats#get-chat-picture" >}}) - {{< issue 687 >}}
+- Add `refresh` flag to **Get chat picture** and **Get contact picture** API
+- Cache profile picture for 24 hours
 - **WEBJS** - fix "Could not get the quoted message" error when replying to a message - {{< issue 576 >}}
+- **NOWEB** - Fix `not-authorized` on get profile picture {{< issue 381 >}}
 
 `2024.12.5`
 - **NOWEB** - attempt #3 to fix missing messages {{< issue 671 >}}
