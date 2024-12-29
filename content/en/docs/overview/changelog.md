@@ -30,6 +30,10 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
+## 2025.1
+`2025.1.1`
+- **NOWEB** + **MongoDB** - add descending order for messages
+
 ## 2024.12
 `2024.12.6`
 - Add [**💬 Get chats overview API**]({{< relref "/docs/how-to/chats#get-chats-overview" >}}) 
