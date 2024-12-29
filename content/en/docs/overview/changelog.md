@@ -34,8 +34,8 @@ Latest Version:
 
 `2025.1.1`
 - **NOWEB** - do not save empty creds into file when session stops {{< issue 727 >}}
+- **NOWEB** + **MongoDB** - add descending order for messages
 - Some timeout fixes
-
 
 ## 2024.12
 
