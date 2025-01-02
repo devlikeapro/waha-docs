@@ -31,6 +31,9 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2024.12
+
+[**Release Notes**]({{< relref "/blog/waha-2024-12" >}})
+
 `2024.12.6`
 - Add [**💬 Get chats overview API**]({{< relref "/docs/how-to/chats#get-chats-overview" >}}) 
   - **WEBJS**, **NOWEB**
