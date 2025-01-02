@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on</title><link>https://waha.devlike.pro/contributors/devlikeapro/</link><description>Recent content in devlikeapro on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 30 Nov 2024 08:48:45 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2024.11</title><link>https://waha.devlike.pro/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-11/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.11 🎉
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on</title><link>https://waha.devlike.pro/contributors/devlikeapro/</link><description>Recent content in devlikeapro on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 30 Dec 2024 08:48:45 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2024.12</title><link>https://waha.devlike.pro/blog/waha-2024-12/</link><pubDate>Mon, 30 Dec 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-12/</guid><description>🎉🎉🎉 First of all, Happy New Year! We wish you all the best in the New 2025 Year! 🎉🎉🎉
+We are thrilled to announce the release of WAHA 2024.12!
+Chat Overview API #
+We&amp;rsquo;ve added 💬 Chats Overview API to help you build your custom UI clients!
+Click to open full size. Get chats &amp;ldquo;overview&amp;rdquo; - the API that almost all Chat UI client needs!
+GET /api/{session}/chats/overview?limit=20&amp;amp;offset=0 Response contains the main info you need to show in the chat list:</description></item><item><title>WAHA 2024.11</title><link>https://waha.devlike.pro/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-11/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.11 🎉
 Event Monitor #
 Now you can observe the Events happening in your WAHA instance in real-time with the new Event Monitor feature!
 Click to open full size. Open dashboard/event-monitor or at your local instance http://localhost:3000/dashboard/event-monitor
@@ -38,10 +43,4 @@ In this article, we&amp;rsquo;re going to cover different techniques for those w
 If you have any questions during this journey, kindly contact us at crypto@devlike.pro, we&amp;rsquo;ll find a way to help you!
 Get Crypto Address and Amount #
 Step 1 - Login to WAHA Portal #
-First, go to WAHA Patron Portal -&amp;gt; and Login with Email or any other available options.</description></item><item><title>WAHA 2024.6 - NOWEB Store, Dashboard for Core, HTTPS</title><link>https://waha.devlike.pro/blog/waha-2024.6-noweb-store-dashboard-for-core-https/</link><pubDate>Sun, 30 Jun 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024.6-noweb-store-dashboard-for-core-https/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.6 🎉
-Here&amp;rsquo;s the list of main changes we&amp;rsquo;ve made:
-NOWEB Store #
-You asked it, we did it - contacts, chats, and messages endpoints are now available in NOWEB engine!
-GET /api/contacts/all GET /api/{session}/chats GET /api/{session}/chats/{chatId}/messages 👉 Please make sure to 🏭 Enable NOWEB Store before using these endpoints!
-Dashboard now available in WAHA Core #
-📊 WAHA Dashboard a web interface to easily manage your WhatsApp sessions now is available in Free WAHA Core version!</description></item></channel></rss>
+First, go to WAHA Patron Portal -&amp;gt; and Login with Email or any other available options.</description></item></channel></rss>
