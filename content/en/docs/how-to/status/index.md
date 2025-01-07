@@ -93,8 +93,10 @@ Send status to specific contacts (available in **NOWEB**):
 👉 Please make sure your file has **mp4 using libx264** format.
 
 ```bash
-ffmpeg -i input_video.mp4 -c:v libx264 output_video.mp4
+ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.mp4
 ```
+
+- `-map 0 -movflags +faststart` - required for thumbnail generation.
 
 ---
 

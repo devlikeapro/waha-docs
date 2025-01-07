@@ -551,8 +551,10 @@ Use `POST /api/sendVideo` to send a message with a video attached.
 👉 Please make sure your file has **mp4 using libx264** format.
 
 ```bash
-ffmpeg -i input_video.mp4 -c:v libx264 output_video.mp4
+ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.mp4
 ```
+
+- `-map 0 -movflags +faststart` - required for thumbnail generation.
 
 ---
 
