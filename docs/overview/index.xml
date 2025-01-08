@@ -19,7 +19,4 @@ Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on fr
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
 Latest Version: 2025.1 #
 2025.1.1
-NOWEB - do not save empty creds into file when session stops #727 Some timeout fixes 2024.12 #
-Release Notes
-2024.12.6
-Add 💬 Get chats overview API WEBJS, NOWEB #566 #573 #701 Add 📊 Chat UI to Dashboard - as an example for 💬 Get chats overview API Add 💬 Get chat picture API Add refresh flag to Get chat picture and Get contact picture API Cache profile picture for 24 hours WEBJS - fix &amp;ldquo;Could not get the quoted message&amp;rdquo; error when replying to a message - #576 NOWEB - Fix not-authorized on get profile picture #381 2024.</description></item></channel></rss>
+NOWEB - do not save empty creds into file when session stops #727 NOWEB + MongoDB - add descending order for messages Some timeout fixes 2024.</description></item></channel></rss>
