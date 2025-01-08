@@ -17,7 +17,9 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 👉 We kindly recommend getting at least 2CPU and 2GB RAM for a VPS, it&amp;rsquo;s not comfortable to work with less resources.</description></item><item><title>🆕 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
-Latest Version: 2024.12 #
+Latest Version: 2025.1 #
+2025.1.1
+NOWEB - do not save empty creds into file when session stops #727 Some timeout fixes 2024.12 #
 Release Notes
 2024.12.6
 Add 💬 Get chats overview API WEBJS, NOWEB #566 #573 #701 Add 📊 Chat UI to Dashboard - as an example for 💬 Get chats overview API Add 💬 Get chat picture API Add refresh flag to Get chat picture and Get contact picture API Cache profile picture for 24 hours WEBJS - fix &amp;ldquo;Could not get the quoted message&amp;rdquo; error when replying to a message - #576 NOWEB - Fix not-authorized on get profile picture #381 2024.</description></item></channel></rss>
