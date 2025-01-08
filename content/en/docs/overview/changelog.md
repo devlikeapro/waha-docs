@@ -30,6 +30,12 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
+## 2025.1
+
+`2025.1.1`
+- **NOWEB** - do not save empty creds into file when session stops {{< issue 727 >}}
+- Some timeout fixes
+
 ## 2024.12
 
 [**Release Notes**]({{< relref "/blog/waha-2024-12" >}})
