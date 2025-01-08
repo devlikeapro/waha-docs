@@ -36,6 +36,7 @@ Latest Version:
 - **NOWEB** - do not save empty creds into file when session stops {{< issue 727 >}}
 - Some timeout fixes
 
+
 ## 2024.12
 
 [**Release Notes**]({{< relref "/blog/waha-2024-12" >}})
