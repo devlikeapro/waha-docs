@@ -31,6 +31,9 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2025.1
+`2025.1.2`
+- **NOWEB** - fix corrupted sessions {{< issue 731 >}}
+- Use atomic write for files (**NOWEB** + media files)
 
 `2025.1.1`
 - **NOWEB** - do not save empty creds into file when session stops {{< issue 727 >}}
