@@ -71,7 +71,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 `}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2025.1 #2025.1.1
+Latest Version: 2025.1 #2025.1.2
+NOWEB - fix corrupted sessions #731 Use atomic write for files (NOWEB + media files) 2025.1.1
 NOWEB - do not save empty creds into file when session stops #727 NOWEB + MongoDB - add descending order for messages Some timeout fixes 2024.12 #Release Notes
 2024.12.6
 Add 💬 Get chats overview API WEBJS, NOWEB #566 #573 #701 Add 📊 Chat UI to Dashboard - as an example for 💬 Get chats overview API Add 💬 Get chat picture API Add refresh flag to Get chat picture and Get contact picture API Cache profile picture for 24 hours WEBJS - fix \u0026ldquo;Could not get the quoted message\u0026rdquo; error when replying to a message - #576 NOWEB - Fix not-authorized on get profile picture #381 2024.12.5

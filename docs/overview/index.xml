@@ -18,5 +18,6 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
 Latest Version: 2025.1 #
-2025.1.1
+2025.1.2
+NOWEB - fix corrupted sessions #731 Use atomic write for files (NOWEB + media files) 2025.1.1
 NOWEB - do not save empty creds into file when session stops #727 NOWEB + MongoDB - add descending order for messages Some timeout fixes 2024.</description></item></channel></rss>
