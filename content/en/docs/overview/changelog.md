@@ -31,6 +31,10 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2025.1
+`2025.1.3`
+- Lazy QR code png generation (300+ sessions performance issue)
+- Shutdown HTTP server gracefully
+
 `2025.1.2`
 - **NOWEB** - fix corrupted sessions {{< issue 731 >}}
 - Use atomic write for files (**NOWEB** + media files)
