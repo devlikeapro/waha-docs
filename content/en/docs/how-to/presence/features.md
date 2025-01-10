@@ -1,9 +1,9 @@
 |                                                   | WEBJS | NOWEB | GOWS |
 |---------------------------------------------------|:-----:|:-----:|:-----|
-| `POST /api/{session}/presence`                    |  ✔️   |  ✔️   |      |
-| `GET /api/{session}/presence`                     |       |  ✔️   |      |
-| `GET /api/{session}/presence/{chatId}`            |       |  ✔️   |      |
-| `POST /api/{session}/presence/{chatId}/subscribe` |       |  ✔️   |      |
+| `POST /api/{session}/presence`                    |  ✔️   |  ✔️   | ✔️   |
+| `GET /api/{session}/presence`                     |       |  ✔️   | ✔️   |
+| `GET /api/{session}/presence/{chatId}`            |       |  ✔️   | ✔️   |
+| `POST /api/{session}/presence/{chatId}/subscribe` |       |  ✔️   | ✔️   |
 
 ****
 
