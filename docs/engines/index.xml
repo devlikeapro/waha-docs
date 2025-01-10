@@ -3,11 +3,16 @@ A WhatsApp API client that connects through the WhatsApp Web browser app. It use
 👉 WAHA uses WhatsApp WebJS engine by default (if you don&amp;rsquo;t set WHATSAPP_DEFAULT_ENGINE environment variable to another engine).
 ⚠ Read the article before using WEBJS engine How to avoid blocking -&amp;gt;.
 Run WEBJS #
-# Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=WEBJS&amp;quot; devlikeapro/waha # Plus docker run -v `pwd`/.</description></item><item><title>NOWEB</title><link>https://waha.devlike.pro/docs/engines/noweb/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/engines/noweb/</guid><description>Overview #
+# Plus docker run -v `pwd`/.sessions:/app/.sessions -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=WEBJS&amp;quot; devlikeapro/waha-plus # Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=WEBJS&amp;quot; devlikeapro/waha Configuration #
+You can use some of the following environment variables to configure the WEBJS session:</description></item><item><title>GOWS</title><link>https://waha.devlike.pro/docs/engines/gows/</link><pubDate>Mon, 06 Jan 2025 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/engines/gows/</guid><description>Overview #
+GOWS engine does not require a browser to work with WhatsApp Web, it does so directly using a WebSocket. Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!
+Run GOWS #
+# Plus docker run -v `pwd`/.sessions:/app/.sessions -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=GOWS&amp;quot; devlikeapro/waha-plus # Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=GOWS&amp;quot; devlikeapro/waha Links #
+https://github.com/devlikeapro/gows</description></item><item><title>NOWEB</title><link>https://waha.devlike.pro/docs/engines/noweb/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/engines/noweb/</guid><description>Overview #
 NOWEB engine does not require a browser to work with WhatsApp Web, it does so directly using a WebSocket. Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!
 ⚠ Read the article before using NOWEB engine How to avoid blocking -&amp;gt;.
 Run NOWEB #
-# Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=NOWEB&amp;quot; devlikeapro/waha # Plus docker run -v `pwd`/.sessions:/app/.sessions -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=NOWEB&amp;quot; devlikeapro/waha-plus Configuration #
+# Plus docker run -v `pwd`/.sessions:/app/.sessions -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=NOWEB&amp;quot; devlikeapro/waha-plus # Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=NOWEB&amp;quot; devlikeapro/waha Configuration #
 markOnline: true - send online presence when session starts (default true).</description></item><item><title>VENOM</title><link>https://waha.devlike.pro/docs/engines/venom/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/engines/venom/</guid><description>Overview #
 ⚠️ ⚠️ ⚠️ DEPRECATED - use WEBJS or NOWEB instead. ⚠️ ⚠️ ⚠️
 It&amp;rsquo;s a high-performance system developed with JavaScript to create a bot for WhatsApp. It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
