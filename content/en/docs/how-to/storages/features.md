@@ -1,9 +1,13 @@
-| Storage Type    |                **🖥️ Session** Storage                 |                 **🖼️ Media** Storage                  |
-|-----------------|:------------------------------------------------------:|:------------------------------------------------------:|
-| **Local**       |                           ✔️                           |                           ✔️                           |
-| **MongoDB**     |                           ✔️                           | [#508](https://github.com/devlikeapro/waha/issues/508) |
-| **S3**¹        |                           ➖                            |                          ✔️¹                           |
-| **PostgresSQL** | [#450](https://github.com/devlikeapro/waha/issues/450) |                           ➖                            |
+| Storage                           |       WEBJS       |       NOWEB       |       GOWS        |
+|-----------------------------------|:-----------------:|:-----------------:|:-----------------:|
+| **🖥️ Session** - **Local**       |        ✔️         |        ✔️         |        ✔️         |
+| **🖥️ Session** - **MongoDB**     |        ✔️         |        ✔️         |         ❌         |
+| **🖥️ Session** - **PostgresSQL** | {{< issue 450 >}} | {{< issue 450 >}} | {{< issue 450 >}} |
+| **🖼️ Media** - **Local**         |        ✔️         |        ✔️         |        ✔️         |
+| **🖼️ Media** - **S3**            |        ✔️         |        ✔️         |        ✔️         |
+| **🖼️ Media** - **MongoDB**       | {{< issue 508 >}} | {{< issue 508 >}} | {{< issue 508 >}} |
+
+
 
 ****
 1. Any **S3 Compatible** storage can be used, such as AWS S3, MinIO, DigitalOcean Spaces, etc. For in-house solutions, you can use [**MinIO**](https://min.io/).

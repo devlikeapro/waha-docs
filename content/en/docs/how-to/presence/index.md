@@ -25,6 +25,12 @@ Possible presence statuses that you can set or get for chats:
 - For [**🏭 NOWEB Engine**]({{< relref "/docs/engines/NOWEB" >}}) also mark sure to send `markOnline: false` 
 when you create a new session.
 
+## Features
+
+Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
+
+{{< include file="content/en/docs/how-to/presence/features.md" >}}
+
 ## Endpoints
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
