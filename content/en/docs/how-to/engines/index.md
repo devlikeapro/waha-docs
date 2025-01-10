@@ -26,6 +26,11 @@ All engines are available in both
 Core ![](/images/versions/core.png) and
 [Plus ![](/images/versions/plus.png) versions]({{< relref "/docs/how-to/waha-plus" >}}).
 
+|                                                                  | WEBJS | NOWEB | GOWS |
+|------------------------------------------------------------------|:-----:|:-----:|:-----|
+| Run a **browser** (chromium\chrome) to communicate with WhatsApp |  ✔️   |       |      |
+| Communicate with WhatsApp via **websocket (no browser)**         |       |  ✔️   | ✔️   |
+
 ### WEBJS
 
 👉 [Read more about **WEBJS**]({{< relref "/docs/engines/webjs" >}})
@@ -48,6 +53,15 @@ Quotes from the users:
 > The server has **2 CPU and 8GB** of memory. Today we have **85 sessions** in this instance.
 >
 > **400** sessions with **4CPU and 32RAM**. It's working fine.
+
+### GOWS
+👉 [Read more about **GOWS**]({{< relref "/docs/engines/gows" >}})
+
+`WHATSAPP_DEFAULT_ENGINE=GOWS`
+
+**GOWS** engine **does not require a browser** to work with WhatsApp Web, it does so directly using a WebSocket.
+
+🚀 It's new generation engine written in **Golang**, future replacement for **NOWEB** engine.
 
 
 ## Docker images
@@ -106,17 +120,10 @@ Here, you will find a list of supported endpoints and webhooks per engine.
 |                         ✔️                         | The engines supports the feature.                                                 |
 | [#123](https://github.com/devlikeapro/waha/issues) | Feature request or bug for the endpoint                                           |
 |           ![](/images/versions/plus.png)           | The feature available in [WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}}). |
-|                         ➖                          | The engine **does not** and will newer support this feature                       |
 
 If you don't specify `WHATSAPP_DEFAULT_ENGINE` environment variable - look at **WEBJS** engine,
 it's the engine WAHA runs by default.
 
-### 🏭 Engines
-
-|                                                                  | WEBJS | NOWEB |
-|------------------------------------------------------------------|:-----:|:-----:|
-| Run a **browser** (chromium\chrome) to communicate with WhatsApp |  ✔️   |   ➖   |
-| Communicate with WhatsApp via **websocket (no browser)**         |   ➖   |  ✔️   |
 
 ### 🔄 Webhooks
 

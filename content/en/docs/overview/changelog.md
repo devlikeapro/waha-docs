@@ -32,6 +32,7 @@ Latest Version:
 
 ## 2025.1
 `2025.1.3`
+- **GOWS** - add [**🏭 GOWS Engine**]({{< relref "/docs/how-to/engines#gows" >}}) beta version (does not support many features yet) 
 - Lazy QR code png generation (300+ sessions performance issue)
 - Shutdown HTTP server gracefully
 
