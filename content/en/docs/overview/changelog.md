@@ -31,6 +31,12 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2025.1
+`2025.1.4`
+- [**🗄️ Storages - PostgresSQL**]({{< relref "/docs/how-to/storages#sessions---postgresql" >}}) - add support for storing sessions in PostgreSQL
+  - Only **GOWS** engine supports it for now
+- **WEBJS** - remove unnecessary flags for chrome/chromium process to increase stability 
+  - {{< issue 685 >}}, {{< issue 714 >}}
+
 `2025.1.3`
 - **GOWS** - add [**🏭 GOWS Engine**]({{< relref "/docs/how-to/engines#gows" >}}) beta version (does not support many features yet) 
 - Lazy QR code png generation (300+ sessions performance issue)
