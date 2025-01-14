@@ -32,7 +32,8 @@ you **MUST** connect the session storage to the container.
 
 For the session storage, you can use the following options:
 1. [**Local**](#sessions---local) - the default option, stores the session data in the local storage using files.
-2. [**MongoDB**](#sessions---mongodb) - stores the session data in the MongoDB database.
+2. [**PostgreSQL**](#sessions---postgresql) - stores the session data in the PostgreSQL database.
+3. [**MongoDB**](#sessions---mongodb) - stores the session data in the MongoDB database.
 
 ## Sessions - Local
 By default, the WAHA uses the **local storage (files)** to store the session data.
@@ -75,6 +76,25 @@ it removes the directory with the session data.
 
 ### Health Check
 The [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/waha-plus" >}}) provides [the health check endpoint]({{< relref "/docs/how-to/observability" >}}) that checks the local storage.
+
+## Sessions - PostgreSQL
+If you want to use the PostgreSQL to store the session data, you need to:
+1. Start the PostgreSQL server
+2. Set `WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable` environment variable to connect to the PostgreSQL server.
+
+{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+
+{{< details "<b>I want to run >100 sessions on PostgresSQL</b>" >}}
+If you see the error:
+> pg sorry, too many clients already
+
+Make sure to increase the `max_connections` in the `postgresql.conf` file or start it with the flag:
+```bash
+postgres -c max_connections=200
+```
+
+{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+{{< /details >}}
 
 ## Sessions - MongoDB
 If you want to use the MongoDB to store the session data, you need to:
