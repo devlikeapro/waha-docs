@@ -33,7 +33,7 @@ Latest Version:
 ## 2025.1
 `2025.1.4`
 - [**🗄️ Storages - PostgresSQL**]({{< relref "/docs/how-to/storages#sessions---postgresql" >}}) - add support for storing sessions in PostgreSQL
-  - Only **GOWS** engine supports it for now
+  - Available in **WEBJS** and **GOWS** engines
 - **WEBJS** - remove unnecessary flags for chrome/chromium process to increase stability 
   - {{< issue 685 >}}, {{< issue 714 >}}
 
