@@ -92,8 +92,6 @@ Make sure to increase the `max_connections` in the `postgresql.conf` file or sta
 ```bash
 postgres -c max_connections=200
 ```
-
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
 {{< /details >}}
 
 ## Sessions - MongoDB
@@ -168,9 +166,6 @@ By default, the WAHA uses the **local file storage** to store the media files an
 
 So it's your app responsibility to download and store them in a safe persistent place during this time.
 
-### Save media files between the container restarts
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
-
 If you want to use the local storage and **save the media files between the container restarts for a long time** - you need to:
 1. Specify a dedicated folder to store the media files using `WHATSAPP_FILES_FOLDER=/app/.media` environment variable
 2. Disable automatic media files cleanup using `WHATSAPP_FILES_LIFETIME=0` environment variable
@@ -186,14 +181,22 @@ docker run -v /path/to/on/host/.media:/app/.media -e WHATSAPP_FILES_FOLDER=/app/
 ### Health Check
 The [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/waha-plus" >}}) provides [the health check endpoint]({{< relref "/docs/how-to/observability" >}}) that checks the local storage.
 
+## Media - PostgreSQL
+You can use the PostgreSQL to store the media files.
+
+{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+
+Configure the following environment variables to use the PostgreSQL storage:
+- `WAHA_MEDIA_STORAGE=POSTGRESQL` - enable the PostgreSQL storage
+- `WAHA_MEDIA_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable` - the connection URL to the PostgreSQL database
+  - You can use **the same** connection URL as for the [**Sessions - PostgreSQL**](#sessions---postgresql) storage
+
 ## Media - S3
 You can use the S3 storage to store the media files.
 
 Any **S3 Compatible** storage can be used, such as AWS S3, MinIO, DigitalOcean Spaces, etc. For in-house solutions, you can use [**MinIO**](https://min.io/).
 
 {{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
-
-### Configuration
 
 - `WAHA_MEDIA_STORAGE=S3` - enable the S3 storage
 - `WAHA_S3_REGION=eu-west-1` - the region of the S3 bucket
