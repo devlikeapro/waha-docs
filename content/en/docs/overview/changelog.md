@@ -38,6 +38,7 @@ Latest Version:
 - [**🗄️ Local Storage**]({{< relref "/docs/how-to/storages" >}}) available in **WAHA Core** now!
   - Both **🖥️ Session** and **🖼️ Media** storages
   - {{< issue 741 >}}
+- **S3**, **PostgreSQL** - add `chat-id` metadata {{< issue 717 >}}
 - **WEBJS** - remove unnecessary flags for chrome/chromium process to increase stability 
   - {{< issue 685 >}}, {{< issue 714 >}}
 
