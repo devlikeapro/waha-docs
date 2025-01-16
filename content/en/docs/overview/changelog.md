@@ -32,8 +32,9 @@ Latest Version:
 
 ## 2025.1
 `2025.1.4`
-- [**🗄️ Storages - PostgresSQL**]({{< relref "/docs/how-to/storages#sessions---postgresql" >}}) - add support for storing sessions in PostgreSQL
+- [**🖥️ Session Storage - PostgresSQL**]({{< relref "/docs/how-to/storages#sessions---postgresql" >}}) - add support for storing sessions in PostgreSQL
   - Available in **WEBJS** and **GOWS** engines
+- [**🖼️ Media Storage - PostgresSQL**]({{< relref "/docs/how-to/storages#media---postgresql" >}}) - add support for storing media files in PostgreSQL
 - **WEBJS** - remove unnecessary flags for chrome/chromium process to increase stability 
   - {{< issue 685 >}}, {{< issue 714 >}}
 
