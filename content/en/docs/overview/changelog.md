@@ -36,9 +36,8 @@ Latest Version:
   - Available in all [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}})!
 - [**🖼️ Media Storage - PostgresSQL**]({{< relref "/docs/how-to/storages#media---postgresql" >}}) - add support for storing media files in PostgreSQL
   - Available in all [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}})!
-- [**🗄️ Local Storage**]({{< relref "/docs/how-to/storages" >}}) available in **WAHA Core** now!
+- [**🗄️ Local Storage**]({{< relref "/docs/how-to/storages" >}}) available in **WAHA Core** now - {{< issue 741 >}}
   - Both **🖥️ Session** and **🖼️ Media** storages
-  - {{< issue 741 >}}
 - **S3**, **PostgreSQL** - add `chat-id` metadata {{< issue 717 >}}
 - **WEBJS** - remove unnecessary flags for chrome/chromium process to increase stability 
   - {{< issue 685 >}}, {{< issue 714 >}}
