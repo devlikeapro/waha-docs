@@ -33,8 +33,9 @@ Latest Version:
 ## 2025.1
 `2025.1.4`
 - [**🖥️ Session Storage - PostgresSQL**]({{< relref "/docs/how-to/storages#sessions---postgresql" >}}) - add support for storing sessions in PostgreSQL
-  - Available in **WEBJS** and **GOWS** engines
+  - Available in all [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}})!
 - [**🖼️ Media Storage - PostgresSQL**]({{< relref "/docs/how-to/storages#media---postgresql" >}}) - add support for storing media files in PostgreSQL
+  - Available in all [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}})!
 - [**🗄️ Local Storage**]({{< relref "/docs/how-to/storages" >}}) available in **WAHA Core** now!
   - Both **🖥️ Session** and **🖼️ Media** storages
   - {{< issue 741 >}}

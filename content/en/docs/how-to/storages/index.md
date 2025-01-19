@@ -90,11 +90,13 @@ If you see the error:
 
 Make sure to increase the `max_connections` in the `postgresql.conf` file or start it with the flag:
 ```bash
-postgres -c max_connections=200
+postgres -c max_connections=1000
 ```
 {{< /details >}}
 
 ## Sessions - MongoDB
+> ⚠️ **DEPRECATED** - MongoDB storage is deprecated. Use **PostgresSQL** instead for new installations.
+
 If you want to use the MongoDB to store the session data, you need to:
 1. Start the MongoDB server (using docker or any other way). You can either start your own MongoDB server or use the one of cloud providers, like [MongoDB Atlas](https://www.mongodb.com/atlas/database).
 2. Set `WHATSAPP_SESSIONS_MONGO_URL=mongodb://user:password@host:port/` environment variable to connect to the MongoDB server.
@@ -103,7 +105,7 @@ If you want to use the MongoDB to store the session data, you need to:
 
 {{< alert icon="💡" text="For <b>WEBJS</b> engine it can take up to 1 minute to save credentials in Mongo Database" />}}
 
-### Example
+#### Example
 {{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
 
 First, you need to start MongoDB server:
@@ -119,7 +121,7 @@ docker run -e WHATSAPP_SESSIONS_MONGO_URL=mongodb://localhost:27017/ --network h
 This is the only action you need to do to use the MongoDB storage -
 all session authentication data will be stored in the MongoDB database.
 
-### How it works
+#### How it works
 When you start a session, it stores the session data in the MongoDB database in two databases:
 1. `waha_{engine}` - it saves the session configuration in `sessions` collection with `name: {sessionName}` field.
 2. `waha_{engine}_{sessionName}` - it saves the WhatsApp authentication data and other session data. Each engine saves different data in this database.
@@ -134,30 +136,22 @@ For dealing and troubleshooting with the MongoDB, we recommend using [MongoDB Co
 
 ![](waha-mongodb.png)
 
-### MongoDB Atlas
-If you use the [MongoDB Atlas](https://www.mongodb.com/atlas/database) you must grant
-`Atlas Admin` role in **Security => Database Access** before you connect to the database.
-
-For production please consider running the MongoDB server close to the WAHA server for the best performance and security reasons.
-
-### Health Check
+#### Health Check
 The [WAHA Plus ![](/images/versions/plus.png)]({{< relref "/docs/how-to/waha-plus" >}}) provides [the health check endpoint]({{< relref "/docs/how-to/observability" >}}) that checks the MongoDB connection.
 
 ## Media
 When your WhatsApp instance receives media files, it stores them in the media storage.
 
 You can use the following options to store the media files:
-1. [Local](#local) - the default option, stores the media files in the local storage using files.
-2. [S3](#s3) - stores the media files in the S3 storage.
+1. [**Local**](#media---local) - the default option, stores the media files in the local storage using files.
+2. [**PostgreSQL**](#media---postgresql) - stores the media files in the PostgreSQL database.
+3. [**S3**](#media---s3) - stores the media files in the S3 storage.
+
+{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+
+{{< include file="content/en/docs/how-to/storages/features.md" >}}
 
 Read more about [available configuration options ->]({{<relref "/docs/how-to/config#files">}}).
-
-The following table shows the compatibility of the storage with the engines:
-
-|       | WEBJS | NOWEB |
-|-------|:-----:|:-----:|
-| Local |  ✔️   |  ✔️   |
-| S3    |  🕒   |  🕒   |
 
 ## Media - Local
 By default, the WAHA uses the **local file storage** to store the media files and those files has a short lifetime (180 seconds).
