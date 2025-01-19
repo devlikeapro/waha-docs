@@ -18,5 +18,5 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
 Latest Version: 2025.1 #
-2025.1.3
-GOWS - add 🏭 GOWS Engine beta version (does not support many features yet) Lazy QR code png generation (300+ sessions performance issue) Shutdown HTTP server gracefully 2025.</description></item></channel></rss>
+2025.1.4
+🖥️ Session Storage - PostgresSQL - add support for storing sessions in PostgreSQL Available in all 🏭 Engines! 🖼️ Media Storage - PostgresSQL - add support for storing media files in PostgreSQL Available in all 🏭 Engines!</description></item></channel></rss>

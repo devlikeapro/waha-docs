@@ -1,0 +1,1 @@
+import{t as n,v as c,Z as t}from"./C6RVWvg8.js";const s={__name:"ServerConnectionIcon",props:["connected"],setup(e){return(i,r)=>(n(),c("i",{class:t(["pi",{"pi pi-spin pi-spinner":e.connected===void 0,"text-green-500 pi-check-circle":e.connected===!0,"text-pink-500 pi-times-circle":e.connected===!1}])},null,2))}};export{s as _};
