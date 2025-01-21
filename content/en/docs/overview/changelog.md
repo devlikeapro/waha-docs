@@ -31,6 +31,11 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2025.1
+`2025.1.5`
+- **GOWS** - add [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) API
+- **GOWS** - add [**🟢 Status (aka Stories) API**]({{< relref "/docs/how-to/status" >}}) API
+- **GOWS** - add [**Check Contact exists**]({{< relref "/docs/how-to/contacts" >}}) API
+
 `2025.1.4`
 - [**🖥️ Session Storage - PostgresSQL**]({{< relref "/docs/how-to/storages#sessions---postgresql" >}}) - add support for storing sessions in PostgreSQL
   - Available in all [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}})!
