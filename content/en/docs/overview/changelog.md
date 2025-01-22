@@ -31,6 +31,9 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2025.1
+`2025.1.6`
+- **WEBJS** - fix send image/video to [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) - {{< issue 733 >}}
+
 `2025.1.5`
 - **GOWS** - add [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) API
 - **GOWS** - add [**🟢 Status (aka Stories) API**]({{< relref "/docs/how-to/status" >}}) API
