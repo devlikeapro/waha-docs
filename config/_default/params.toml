@@ -71,9 +71,9 @@ footer = 'This project is not affiliated, associated, authorized, endorsed by, o
 copyRight = "Copyright (c) 2021-2024 Dev Like A Pro"
 
 # Alert
-alert = false
+alert = true
 alertDismissable = true
-alertText = "📢 <a class=\"alert-link stretched-link\" href=\"https://waha.devlike.pro/docs/how-to/dashboard/\">WAHA Dashboard - UI to manage your WhatsApp sessions!</a> 📢"
+alertText = "🖥️ Looking for a reliable <b>VPS</b> to host <b>WAHA</b>? We personally use <a class=\"alert-link stretched-link\" href=\"https://pq.hosting/en/?from=686406\">PQ.hosting</a> - fast, affordable, and super stable! 🚀"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster

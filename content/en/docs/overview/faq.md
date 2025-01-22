@@ -17,6 +17,7 @@ toc: true
 We strongly recommend using VPS or servers with minimum **2CPU** and **2GB RAM** configuration for the project even for a single session.
 If you want to host more sessions - please check the numbers below
 
+{{< include file="content/en/docs/pq-hosting-ad.md" >}}
 
 ### How much CPU and Memory does WAHA consume?
 

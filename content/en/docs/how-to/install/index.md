@@ -51,6 +51,8 @@ If you want to host more sessions - please check the numbers in
 It might not work with **WSL2** backend properly.
 {{< /details >}}
 
+<br/>
+{{< include file="content/en/docs/pq-hosting-ad.md" >}}
 
 ### Pre-requisites
 Before proceeding, make sure you have the latest version of `docker` and `docker compose` installed.
