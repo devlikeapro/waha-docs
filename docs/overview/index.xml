@@ -18,6 +18,6 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
 Latest Version: 2025.1 #
-2025.1.5
-GOWS - add 📢 Channels API GOWS - add 🟢 Status (aka Stories) API API GOWS - add Check Contact exists API 2025.1.4
-🖥️ Session Storage - PostgresSQL - add support for storing sessions in PostgreSQL Available in all 🏭 Engines!</description></item></channel></rss>
+2025.1.6
+WEBJS - fix send image/video to 📢 Channels - #733 2025.1.5
+GOWS - add 📢 Channels API GOWS - add 🟢 Status (aka Stories) API API GOWS - add Check Contact exists API 2025.</description></item></channel></rss>
