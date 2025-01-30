@@ -30,6 +30,13 @@ If you wish to get **real-time updates** about WAHA, please subscribe to our cha
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
+## 2025.2
+`2025.2.1`
+- **GOWS** API is available now:
+  - [**👤 Contacts**]({{< relref "/docs/how-to/contacts" >}})
+  - [**💬 Chats - Get Chats Overview**]({{< relref "/docs/how-to/chats#get-chats-overview" >}})
+  - [**💬 Chats - Get Messages**]({{< relref "/docs/how-to/chats#get-messages" >}})
+
 ## 2025.1
 `2025.1.6`
 - **WEBJS** - fix send image/video to [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) - {{< issue 733 >}}
