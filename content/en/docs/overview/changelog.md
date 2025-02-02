@@ -39,6 +39,8 @@ Latest Version:
 - **GOWS** - fix group message error {{< issue 765 >}}, {{< issue 766 >}}
 
 ## 2025.1
+[**Release Notes**]({{< relref "/blog/waha-2025-1" >}})
+
 `2025.1.6`
 - **WEBJS** - fix send image/video to [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) - {{< issue 733 >}}
 
