@@ -32,10 +32,9 @@ Latest Version:
 
 ## 2025.2
 `2025.2.1`
-- **GOWS** API is available now:
-  - [**👤 Contacts**]({{< relref "/docs/how-to/contacts" >}})
-  - [**💬 Chats - Get Chats Overview**]({{< relref "/docs/how-to/chats#get-chats-overview" >}})
-  - [**💬 Chats - Get Messages**]({{< relref "/docs/how-to/chats#get-messages" >}})
+- **GOWS** - [**👤 Contacts**]({{< relref "/docs/how-to/contacts" >}}) API
+- **GOWS** - [**💬 Chats - Get Chats Overview**]({{< relref "/docs/how-to/chats#get-chats-overview" >}}) API
+- **GOWS** - [**💬 Chats - Get Messages**]({{< relref "/docs/how-to/chats#get-messages" >}}) API
 - **NOWEB** - fix group message error {{< issue 765 >}}, {{< issue 766 >}}
 - **GOWS** - fix group message error {{< issue 765 >}}, {{< issue 766 >}}
 
