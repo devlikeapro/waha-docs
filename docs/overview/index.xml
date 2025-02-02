@@ -16,7 +16,6 @@ Looking for a reliable VPS to host WAHA? 🖥️ We personally use PQ.hosting - 
 WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CPU and Memory requirements change</description></item><item><title>🆕 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get real-time updates about WAHA, please subscribe to our channels:
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
-Latest Version: 2025.1 #
-2025.1.6
-WEBJS - fix send image/video to 📢 Channels - #733 2025.1.5
-GOWS - add 📢 Channels API GOWS - add 🟢 Status (aka Stories) API API GOWS - add Check Contact exists API 2025.</description></item></channel></rss>
+Latest Version: 2025.2 #
+2025.2.1
+GOWS API is available now: 👤 Contacts 💬 Chats - Get Chats Overview 💬 Chats - Get Messages NOWEB - fix group message error #765 , #766 GOWS - fix group message error #765 , #766 2025.</description></item></channel></rss>
