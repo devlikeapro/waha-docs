@@ -72,7 +72,8 @@ In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026
 Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
 Latest Version: 2025.2 #2025.2.1
-GOWS - 👤 Contacts API GOWS - 💬 Chats - Get Chats Overview API GOWS - 💬 Chats - Get Messages API NOWEB - fix group message error #765 , #766 GOWS - fix group message error #765 , #766 2025.1 #2025.1.6
+GOWS - 👤 Contacts API GOWS - 💬 Chats - Get Chats Overview API GOWS - 💬 Chats - Get Messages API NOWEB - fix group message error #765 , #766 GOWS - fix group message error #765 , #766 2025.1 #Release Notes
+2025.1.6
 WEBJS - fix send image/video to 📢 Channels - #733 2025.1.5
 GOWS - add 📢 Channels API GOWS - add 🟢 Status (aka Stories) API API GOWS - add Check Contact exists API 2025.1.4
 🖥️ Session Storage - PostgresSQL - add support for storing sessions in PostgreSQL Available in all 🏭 Engines! 🖼️ Media Storage - PostgresSQL - add support for storing media files in PostgreSQL Available in all 🏭 Engines! 🗄️ Local Storage available in WAHA Core now - #741 Both 🖥️ Session and 🖼️ Media storages S3, PostgreSQL - add chat-id metadata #717 WEBJS - remove unnecessary flags for chrome/chromium process to increase stability #685 , #714 2025.1.3
