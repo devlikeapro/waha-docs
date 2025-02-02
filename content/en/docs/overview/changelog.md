@@ -36,6 +36,8 @@ Latest Version:
   - [**👤 Contacts**]({{< relref "/docs/how-to/contacts" >}})
   - [**💬 Chats - Get Chats Overview**]({{< relref "/docs/how-to/chats#get-chats-overview" >}})
   - [**💬 Chats - Get Messages**]({{< relref "/docs/how-to/chats#get-messages" >}})
+- **NOWEB** - fix group message error {{< issue 765 >}}, {{< issue 766 >}}
+- **GOWS** - fix group message error {{< issue 765 >}}, {{< issue 766 >}}
 
 ## 2025.1
 `2025.1.6`
