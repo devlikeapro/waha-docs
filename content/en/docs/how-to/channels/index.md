@@ -120,6 +120,8 @@ You can get a channel by Invite Code `GET /api/{session}/channels/{inviteCode}`
 
 ### Search channels by view
 
+{{< img src="/images/whatsapp/channels/channels-views.png" full="false" >}}
+
 You can search **public** (not subscribed yet) channels **by view**:
 
 ```bash
@@ -171,6 +173,7 @@ POST /api/{session}/channels/search/by-view
 ```
 
 ### Search channels by text
+{{< img src="/images/whatsapp/channels/channels-text.png" full="false" >}}
 
 You can search **public** (not subscribed yet) channels **by text**:
 ```bash
