@@ -90,7 +90,7 @@ If you see the error:
 
 Make sure to increase the `max_connections` in the `postgresql.conf` file or start it with the flag:
 ```bash
-postgres -c max_connections=1000
+postgres -c max_connections=3000
 ```
 {{< /details >}}
 

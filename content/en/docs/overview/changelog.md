@@ -31,6 +31,14 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2025.2
+`2025.2.2`
+- [**📢 Search Public Channels**]({{< relref "/docs/how-to/channels#search-channels-by-view" >}}) API - {{< issue 440 >}}
+  - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
+- [**📢 Get Messages (Preview) From Public Channels**]({{< relref "/docs/how-to/channels##get-messages-from-channel-preview" >}}) API
+  - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
+- **PostgreSQL** - fix `sorry, too many clients already` in some cases
+  - **WEBJS**, **NOWEB**, **GOWS** engines
+
 `2025.2.1`
 - **GOWS** - [**👤 Contacts**]({{< relref "/docs/how-to/contacts" >}}) API
 - **GOWS** - [**💬 Chats - Get Chats Overview**]({{< relref "/docs/how-to/chats#get-chats-overview" >}}) API

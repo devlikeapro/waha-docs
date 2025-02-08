@@ -1,11 +1,11 @@
 ---
-title : "📢 Channels"
+title: "📢 Channels"
 description: "Channels (aka Newsletter)"
 lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
-images: []
+images: [ ]
 weight: 231
 ---
 
@@ -13,21 +13,25 @@ Here's complete information about **WhatsApp Channels** (aka Newsletter) and how
 
 ![](channels.png)
 
-
 ## Features
+
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
 {{< include file="content/en/docs/how-to/channels/features.md" >}}
 
 ## Endpoints
-💡 Channels have a special `@newsletter` prefix, so you can distinguish them from regular chats and groups. 
+
+💡 Channels have a special `@newsletter` prefix, so you can distinguish them from regular chats and groups.
+
 - `123123123@newsletter` - channel ID
 
-### Get all channels
-You can get list of **known** channels 
+### Get your channels
+
+You can get list of **subscribed or owned** channels:
+
 - Get all (your and subscribed) channels `GET /api/{session}/channels`
-- Filter channels `GET /api/{session}/channels?role=OWNER`, 
-  - `role` can be `OWNER`, `ADMIN`, `SUBSCRIBER` 
+- Filter channels `GET /api/{session}/channels?role=OWNER`,
+    - `role` can be `OWNER`, `ADMIN`, `SUBSCRIBER`
 
 ```json
 [
@@ -55,7 +59,9 @@ You can get list of **known** channels
 ```
 
 ### Create a new channel
+
 You can create a new channel `POST /api/{session}/channels` with the payload:
+
 ```json
 {
   "name": "Channel Name",
@@ -69,10 +75,12 @@ You can create a new channel `POST /api/{session}/channels` with the payload:
 ```
 
 ### Delete a channel
+
 You can delete a channel `DELETE /api/{session}/channels/123123%40newsletter` (escape `@` to `%40`).
 Make sure have `OWNER` role for the channel.
 
 ### Get channel by ID
+
 You can get a channel by ID `GET /api/{session}/channels/123123%40newsletter` (escape `@` to `%40`).
 
 ```json
@@ -89,8 +97,11 @@ You can get a channel by ID `GET /api/{session}/channels/123123%40newsletter` (e
 ```
 
 ### Get channel by Invite Code
-You can get a channel by Invite Code `GET /api/{session}/channels/{inviteCode}` 
-- `inviteCode` here is the last part in invite URL `https://whatsapp.com/channel/111111111111111111GdZ60l` - `111111111111111111GdZ60l`
+
+You can get a channel by Invite Code `GET /api/{session}/channels/{inviteCode}`
+
+- `inviteCode` here is the last part in invite URL `https://whatsapp.com/channel/111111111111111111GdZ60l` -
+  `111111111111111111GdZ60l`
 
 💡 To get full `picture` you need to get channel by ID after you get the invite code.
 
@@ -107,10 +118,177 @@ You can get a channel by Invite Code `GET /api/{session}/channels/{inviteCode}`
 }
 ```
 
+### Search channels by view
+
+You can search **public** (not subscribed yet) channels **by view**:
+
+```bash
+POST /api/{session}/channels/search/by-view
+```
+
+**Payload**:
+
+```json
+{
+  "view": "RECOMMENDED",
+  "countries": [
+    "US"
+  ],
+  "categories": [],
+  "limit": 50,
+  "startCursor": ""
+}
+```
+
+- `view` - Use `value` from [get available views](#get-search-views)
+- `countries` - use `code` from [get available countries](#get-search-countries)
+- `categories` - use `id` from [get available categories](#get-search-categories)
+- `limit` - we recommend using default `50` value, it's the way official clients work
+- `startCursor` - use `endCursor` from the previous response (if any data available on the next page)
+
+**Response**:
+```json
+{
+  "page": {
+    "startCursor": null,
+    "endCursor": "base64encodedstring",
+    "hasNextPage": true,
+    "hasPreviousPage": false
+  },
+  "channels": [
+    {
+      "id": "123123123123@newsletter",
+      "name": "Channel Name",
+      "invite": "https://www.whatsapp.com/channel/111111111111111111111111",
+      "preview": "https://mmg.whatsapp.net/m1/v/t24/An&_nc_cat=10",
+      "picture": "https://mmg.whatsapp.net/m1/v/t24/An&_nc_cat=10",
+      "description": "string",
+      "verified": true,
+      "subscribersCount": 0
+    }
+  ]
+}
+```
+
+### Search channels by text
+
+You can search **public** (not subscribed yet) channels **by text**:
+```bash
+POST /api/{session}/channels/search/by-text
+```
+
+**Payload**:
+```json
+{
+  "text": "Donald Trump",
+  "categories": [],
+  "limit": 50,
+  "startCursor": ""
+}
+```
+- `text` - search text
+- `categories` - use `id` from [get available categories](#get-search-categories)
+- `limit` - we recommend using default `50` value, it's the way official clients work
+- `startCursor` - use `endCursor` from the previous response (if any data available on the next page)
+
+### Get Search Views
+List of available views for search:
+
+```bash
+GET /api/{session}/channels/search/views
+```
+
+**Response**:
+```json
+[
+  {
+    "value": "RECOMMENDED",
+    "name": "Explore"
+  }
+]
+```
+
+### Get Search Countries
+List of available countries for search (not full one, you can try different `code` values if you don't see your country):
+
+```bash
+GET /api/{session}/channels/search/countries
+```
+
+**Response**:
+```json
+[
+  {
+    "code": "US",
+    "name": "United States"
+  }
+]
+```
+
+### Get Search Categories
+List of available categories for search:
+
+```bash
+GET /api/{session}/channels/search/categories
+```
+
+**Response**:
+```json
+[
+  {
+    "value": "BUSINESS",
+    "name": "Business"
+  },
+  {
+    "value": "ENTERTAINMENT",
+    "name": "Entertainment"
+  }
+]
+```
+
+### Get Messages (Preview) for channel
+You can get latest messages from **public** channels (not subscribed yet) by invite code (or channel id).
+Returns only **preview** messages (one that you'll see on channel preview).
+
+```bash
+GET /api/{SESSION}/channels/{INVITE}/messages/preview?downloadMedia=false&limit=100
+```
+
+**Query parameters**:
+- `{SESSION}` - your session
+- `{INVITE}` - invite code (123123123) or channel id (123132123@newsletter). **Invite code is recommended**.
+- `downloadMedia` - whether to download media or not
+- `limit` - limit of messages to return. **100 is recommended**.
+
+```json
+[
+  {
+    "reactions": {
+      "👍": 10,
+      "❤️": 5
+    },
+    "viewCount": 0,
+    "message": {
+      "id": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+      "timestamp": 1666943582,
+      "body": "string",
+      "media": {
+        ...
+      }
+    }
+  }
+]
+```
+- `reactions` - reactions for the message
+- `viewCount` - views count for the message
+- `message` - message object - the same as in `payload` field [**message**]({{< relref "/docs/how-to/webhooks#message" >}}) event
 
 ## How-to
+
 ### Send Text to the channel
-You can use regular [`POST /api/sendText`]({{< relref "/docs/how-to/send-messages#send-text" >}}) endpoint to send a text message into the channel
+
+You can use regular [`POST /api/sendText`]({{< relref "/docs/how-to/send-messages#send-text" >}}) endpoint to send a
+text message into the channel
 
 👉 Make sure you're `OWNER` or `ADMIN` for the channel
 
@@ -123,7 +301,8 @@ You can use regular [`POST /api/sendText`]({{< relref "/docs/how-to/send-message
 ```
 
 ### Send Image to the channel
-You can use regular [`POST /api/sendImage`]({{< relref "/docs/how-to/send-messages#send-image" >}}) endpoint 
+
+You can use regular [`POST /api/sendImage`]({{< relref "/docs/how-to/send-messages#send-image" >}}) endpoint
 to send an image into the channel
 
 ```json
@@ -140,7 +319,8 @@ to send an image into the channel
 ```
 
 ### Send Video to the channel
-You can use regular [`POST /api/sendVideo`]({{< relref "/docs/how-to/send-messages#send-video" >}}) endpoint 
+
+You can use regular [`POST /api/sendVideo`]({{< relref "/docs/how-to/send-messages#send-video" >}}) endpoint
 to send a video message into the channel
 
 ```json
@@ -157,8 +337,9 @@ to send a video message into the channel
 ```
 
 ### Get messages from the channel
-You can use regular 
-[`GET /api/{session}/chats/{chatId}/messages`]({{< relref "/docs/how-to/chats#get-messages-from-chat" >}}) 
+
+You can use regular
+[`GET /api/{session}/chats/{chatId}/messages`]({{< relref "/docs/how-to/chats#get-messages-from-chat" >}})
 to fetch messages from the channel
 
 ```bash
@@ -192,37 +373,41 @@ GET /api/default/chats/123%40newsletter/messages?downloadMedia=true&limit=100
 ```
 
 ### Receive messages from the channel
-For all incoming messages in your own and subscribed channels you'll receive 
-- [`message`]({{< relref "/docs/how-to/receive-messages#message" >}}) event for a message from the channel (send by someone else)
-- [`message.any`]({{< relref "/docs/how-to/receive-messages#message.any" >}}) event for a message from the channel (including your messages)
+
+For all incoming messages in your own and subscribed channels you'll receive
+
+- [`message`]({{< relref "/docs/how-to/receive-messages#message" >}}) event for a message from the channel (send by
+  someone else)
+- [`message.any`]({{< relref "/docs/how-to/receive-messages#message.any" >}}) event for a message from the channel (
+  including your messages)
 
 ```json
 {
-    "event": "message",
-    "session": "default",
-    "me": {
-        "id": "111111111111@c.us",
-        "pushName": "Slovakia WAHA"
-    },
-    "payload": {
-        "id": "false_123123@newsletter_11111111111111111111111111111111",
-        "timestamp": 1720776511,
-        "from": "111111111111111111@newsletter",
-        "fromMe": false,
-        "body": "How are you all?! ❤️",
-        "hasMedia": false,
-        "ack": null,
-        "ackName": "UNKNOWN",
-        "_data": {
-          ...
-        }
-    },
-    "engine": "NOWEB",
-    "environment": {
-        "version": "2024.7.4",
-        "engine": "NOWEB",
-        "tier": "PLUS",
-        "browser": "/usr/bin/google-chrome-stable"
+  "event": "message",
+  "session": "default",
+  "me": {
+    "id": "111111111111@c.us",
+    "pushName": "Slovakia WAHA"
+  },
+  "payload": {
+    "id": "false_123123@newsletter_11111111111111111111111111111111",
+    "timestamp": 1720776511,
+    "from": "111111111111111111@newsletter",
+    "fromMe": false,
+    "body": "How are you all?! ❤️",
+    "hasMedia": false,
+    "ack": null,
+    "ackName": "UNKNOWN",
+    "_data": {
+      ...
     }
+  },
+  "engine": "NOWEB",
+  "environment": {
+    "version": "2024.7.4",
+    "engine": "NOWEB",
+    "tier": "PLUS",
+    "browser": "/usr/bin/google-chrome-stable"
+  }
 }
 ```
