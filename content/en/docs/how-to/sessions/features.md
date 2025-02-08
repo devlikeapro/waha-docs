@@ -13,7 +13,6 @@
 | **Get me** <br> `GET /api/sessions/{session}/me`                  |  ✔️   |                           ✔️                            | ✔️   |
 | **Get QR** <br> `POST /api/{session}/auth/qr`                     |  ✔️   |                           ✔️                            | ✔️   |
 | **Request code** <br> `POST /api/{session}/auth/request-code`     |  ✔️   |                           ✔️                            | ✔️   |
-| **Authorize code** <br> `POST /api/{session}/auth/authorize-code` |       | ️[#113](https://github.com/devlikeapro/waha/issues/113) |      |
 
 ****
 1. **Logout from a session** removes authentication information from a server (WAHA), 
