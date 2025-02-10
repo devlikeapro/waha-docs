@@ -95,49 +95,18 @@ Incoming message (text/audio/files)
     "ack": 1,
     "vCards": [],
     "_data": {
-      "id": {
-        "fromMe": true,
-        "remote": "11111111111@c.us",
-        "id": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-        "_serialized": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      },
-      "body": "Hi there!",
-      "type": "chat",
-      "t": 1667561485,
-      "notifyName": "MyName",
-      "from": "11111111111@c.us",
-      "to": "11111111111@c.us",
-      "self": "in",
-      "ack": 1,
-      "isNewMsg": true,
-      "star": false,
-      "kicNotified": false,
-      "recvFresh": true,
-      "isFromTemplate": false,
-      "pollInvalidated": false,
-      "latestEditMsgKey": null,
-      "latestEditSenderTimestampMs": null,
-      "broadcast": false,
-      "mentionedJidList": [],
-      "isVcardOverMmsDocument": false,
-      "isForwarded": false,
-      "hasReaction": false,
-      "ephemeralOutOfSync": false,
-      "productHeaderImageRejected": false,
-      "lastPlaybackProgress": 0,
-      "isDynamicReplyButtonsMsg": false,
-      "isMdHistoryMsg": false,
-      "stickerSentTs": 0,
-      "isAvatar": false,
-      "requiresDirectConnection": false,
-      "pttForwardedFeaturesEnabled": true,
-      "isEphemeral": false,
-      "isStatusV3": false,
-      "links": []
+      ...
     }
   }
 }
 ```
+
+Fields:
+- `hasMedia: true | false` - indicates if the message has media attached
+- `media.url: http://localhost:8000/...` - the URL to download the media
+- `_data` - internal **engine** data, can be different for each engine
+
+It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't download media due to configuration.
 
 ### message.any
 
@@ -277,6 +246,13 @@ For example, you can get the webhook like this with `media` value (we've skipped
   }
 }
 ```
+
+Fields:
+- `hasMedia: true | false` - indicates if the message has media attached
+- `media.url: http://localhost:8000/...` - the URL to download the media
+
+It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't download media due to configuration.
+
 Then you can use the link to download the file `http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg`.
 
 For documents (file attachments) there's also `filename` field with the original file name.

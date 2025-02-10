@@ -31,6 +31,10 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2025.2
+`2025.2.3`
+- Fix `hasMedia` behaviour - now when you request messages with `downloadMedia=False`, `hasMedia: true` if message has media
+  - **WEBJS**, **NOWEB**, **GOWS** engines
+
 `2025.2.2`
 - [**📢 Search Public Channels**]({{< relref "/docs/how-to/channels#search-channels-by-view" >}}) API - {{< issue 440 >}}
   - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
