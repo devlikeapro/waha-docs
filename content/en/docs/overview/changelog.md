@@ -38,6 +38,7 @@ Latest Version:
   - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 - **PostgreSQL** - fix `sorry, too many clients already` in some cases
   - **WEBJS**, **NOWEB**, **GOWS** engines
+- **S3** - fix `headers[headerName].trim is not a function` error {{< issue 790 >}}
 
 `2025.2.1`
 - **GOWS** - [**👤 Contacts**]({{< relref "/docs/how-to/contacts" >}}) API
