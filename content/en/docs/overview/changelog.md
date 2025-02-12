@@ -32,6 +32,8 @@ Latest Version:
 
 ## 2025.2
 `2025.2.3`
+- Add [**🆔 Profile API**]({{< relref "/docs/how-to/profile" >}} ) to get and update profile information {{< issue 529 >}} 
+  - **WEBJS**, **NOWEB**, **GOWS** engines
 - Fix `hasMedia` behaviour - now when you request messages with `downloadMedia=False`, `hasMedia: true` if message has media
   - **WEBJS**, **NOWEB**, **GOWS** engines
 
