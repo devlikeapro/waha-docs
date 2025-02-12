@@ -24,7 +24,12 @@ Session Lifecycle #
 Before you can 📤 Send or 📥 Receive messages , you need to Create a session (optionally, Start) and authenticate it using QR code or pairing code.
 Here&amp;rsquo;s Session Lifecycle State Diagram:
 Click to open full size. Session Status #
-Here&amp;rsquo;s the list of possible session.status values:</description></item><item><title>🔄 Webhooks</title><link>https://waha.devlike.pro/docs/how-to/webhooks/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/webhooks/</guid><description>In order to notify your application about events in the WhatsApp API, you can use Webhooks and Websockets.
+Here&amp;rsquo;s the list of possible session.status values:</description></item><item><title>🆔 Profile</title><link>https://waha.devlike.pro/docs/how-to/profile/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/profile/</guid><description>You can manage your WhatsApp profile with the following API!
+Features #
+Here&amp;rsquo;s the list of features that are available by 🏭 Engines:
+WEBJS NOWEB GOWS Get Profile GET /api/{SESSION}/profile ✔️ ✔️ ✔️ Set Profile Name PUT /api/{SESSION}/profile/name ✔️ ✔️ ✔️ Set Profile Status (About) PUT /api/{SESSION}/profile/status ✔️ ✔️ ✔️ Set/Delete Profile Status Picture PUT /api/{SESSION}/profile/picture DELETE /api/{SESSION}/profile/picture ➕ ➕ ➕ ➕ - Available in ➕ WAHA Plus API #
+Get Profile #
+You can get your profile information with the following API call:</description></item><item><title>🔄 Webhooks</title><link>https://waha.devlike.pro/docs/how-to/webhooks/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/webhooks/</guid><description>In order to notify your application about events in the WhatsApp API, you can use Webhooks and Websockets.
 👉 See the list of all available events in the Events section.
 🌟 You can observe Events in real-time using 📊 Dashboard - Event Monitor!
 Webhooks #
@@ -40,7 +45,4 @@ Send poll #
 Use the endpoint to send a poll!
 POST /api/sendPoll The request body is pretty simple:
 { &amp;quot;session&amp;quot;: &amp;quot;default&amp;quot;, &amp;quot;chatId&amp;quot;: &amp;quot;123123123@c.us&amp;quot;, &amp;quot;poll&amp;quot;: { &amp;quot;name&amp;quot;: &amp;quot;How are you?&amp;quot;, &amp;quot;options&amp;quot;: [ &amp;quot;Awesome!&amp;quot;, &amp;quot;Good!&amp;quot;, &amp;quot;Not bad!&amp;quot; ], &amp;quot;multipleAnswers&amp;quot;: false } } The response you get back:
-{ &amp;quot;id&amp;quot;: &amp;quot;true_321321321@c.</description></item><item><title>💬 Chats</title><link>https://waha.devlike.pro/docs/how-to/chats/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/chats/</guid><description>Chats methods.
-Features #
-Here&amp;rsquo;s the list of features that are available by 🏭 Engines:
-WEBJS NOWEB GOWS Get all chats GET /api/{session}/chats ✔️ ✔️¹ ✔️ Get chats overview GET /api/{session}/chats/overview ✔️ ✔️¹ ✔️ Get chat picture GET /api/{session}/chats/{chatId}/picture ✔️ ✔️¹ ✔️ Unread chat POST /api/{session}/chats/{chatId}/unread ✔️ ✔️¹ Archive chat POST /api/{session}/chats/{chatId}/archive ✔️ ✔️¹ Unarchive chat POST /api/{session}/chats/{chatId}/unarchive ✔️ ✔️¹ Delete chat DELETE /api/{session}/chats/{chatId} ✔️ Get messages GET /api/{session}/chats/{chatId}/messages ✔️ ✔️¹ ✔️ Get message by id GET /api/{session}/chats/{chatId}/messages/{messageId} ✔️ ✔️¹ ✔️ Pin message POST /api/{session}/chats/{chatId}/messages/{messageId}/pin ✔️ ✔️ Unpin message POST /api/{session}/chats/{chatId}/messages/{messageId}/unpin ✔️ ✔️ Edit message PUT /api/{session}/chats/{chatId}/messages/{messageId} ✔️ ✔️ Delete message DELETE /api/{session}/chats/{chatId}/messages/{messageId} ✔️ ✔️ Delete all messages DELETE /api/{session}/chats/{chatId}/messages ✔️ NOWEB - you need to Enable Store to get chats, contacts and messages If you see the feature is not available in the above list, please create a feature request or leave &amp;ldquo;+1&amp;rdquo; comment on the existing one.</description></item></channel></rss>
+{ &amp;quot;id&amp;quot;: &amp;quot;true_321321321@c.</description></item></channel></rss>

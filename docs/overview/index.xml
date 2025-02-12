@@ -17,5 +17,5 @@ WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CP
 Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
 💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
 Latest Version: 2025.2 #
-2025.2.2
-📢 Search Public Channels API - #440 Available in ➕ WAHA Plus 📢 Get Messages (Preview) From Public Channels API Available in ➕ WAHA Plus PostgreSQL - fix sorry, too many clients already in some cases WEBJS, NOWEB, GOWS engines S3 - fix headers[headerName].</description></item></channel></rss>
+2025.2.3
+Add 🆔 Profile API to get and update profile information #529 WEBJS, NOWEB, GOWS engines Fix hasMedia behaviour - now when you request messages with downloadMedia=False, hasMedia: true if message has media WEBJS, NOWEB, GOWS engines 2025.</description></item></channel></rss>
