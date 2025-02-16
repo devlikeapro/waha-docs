@@ -156,24 +156,29 @@
   parent = "more"
   url = "/whatsapp-status/"
   weight = 92
+[[main]]
+  name = "WhatsApp Groups Automation"
+  parent = "more"
+  url = "/whatsapp-groups/"
+  weight = 93
 
 [[main]]
   name = "WhatsApp Low-Code (n8n)"
   parent = "more"
   url = "/whatsapp-low-code/"
-  weight = 93
+  weight = 97
 
 [[main]]
   name = "WhatsApp Typebot Integration"
   parent = "more"
   url = "/whatsapp-typebot/"
-  weight = 94
+  weight = 98
 
 [[main]]
   name = "WhatsApp ChatWoot Integration"
   parent = "more"
   url = "/whatsapp-chatwoot/"
-  weight = 95
+  weight = 99
 
 [[main]]
   name = "🇦🇪 العربية (Arabic)"
