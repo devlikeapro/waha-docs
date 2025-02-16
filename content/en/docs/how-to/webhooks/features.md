@@ -17,5 +17,5 @@
 | `label.deleted`      |       |  ✔️   |      |
 | `label.chat.added`   |       |  ✔️   |      |
 | `label.chat.deleted` |       |  ✔️   |      |
-| `state.change`       |  ✔️   |  ✔️   |  ✔️  |
 | `engine.event`       |  ✔️   |  ✔️   |  ✔️  | 
+| `state.change`       |  ✔️   |  ✔️   |  ✔️  |

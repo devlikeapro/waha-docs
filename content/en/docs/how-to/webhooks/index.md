@@ -559,12 +559,6 @@ revokes a previously sent message.
 ### group.v2.update
 {{< include file="content/en/docs/how-to/groups/events-group.v2.update.md" >}}
 
-### group.join
-{{< include file="content/en/docs/how-to/groups/events-group.join.md" >}}
-
-### group.leave
-{{< include file="content/en/docs/how-to/groups/events-group.leave.md" >}}
-
 ### presence.update
 
 - `payload.id` indicates the chat - either direct chat with a contact or a group chat.
@@ -736,6 +730,15 @@ Low-level engine event, for **debug** and **troubleshooting** purposes.
   }
 }
 ```
+
+## Deprecated Events
+
+### group.join
+{{< include file="content/en/docs/how-to/groups/events-group.join.md" >}}
+
+### group.leave
+{{< include file="content/en/docs/how-to/groups/events-group.leave.md" >}}
+
 
 ### state.change
 ⚠️ **DEPRECATED**, use `session.status` event instead.
