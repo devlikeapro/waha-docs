@@ -340,6 +340,8 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 {{< include file="content/en/docs/how-to/webhooks/features.md" >}}
 
+{{< include file="content/en/docs/how-to/groups/features-events.md" >}}
+
 ### session.status
 The `session.status` event is triggered when the session status changes.
 - `STOPPED` - session is stopped
@@ -545,31 +547,23 @@ revokes a previously sent message.
 ### chat.archive
 {{< include file="content/en/docs/how-to/chats/webhooks-chat-archive.md" >}}
 
-### group.join
+### group.v2.join
+{{< include file="content/en/docs/how-to/groups/events-group.v2.join.md" >}}
 
-```json
-{
-  "event": "group.join",
-  "session": "default",
-  "engine": "WEBJS",
-  "payload": {
-    ...
-  }
-}
-```
+### group.v2.leave
+{{< include file="content/en/docs/how-to/groups/events-group.v2.leave.md" >}}
+
+### group.v2.participants
+{{< include file="content/en/docs/how-to/groups/events-group.v2.participants.md" >}}
+
+### group.v2.update
+{{< include file="content/en/docs/how-to/groups/events-group.v2.update.md" >}}
+
+### group.join
+{{< include file="content/en/docs/how-to/groups/events-group.join.md" >}}
 
 ### group.leave
-
-```json
-{
-  "event": "group.leave",
-  "session": "default",
-  "engine": "WEBJS",
-  "payload": {
-    ...
-  }
-}
-```
+{{< include file="content/en/docs/how-to/groups/events-group.leave.md" >}}
 
 ### presence.update
 

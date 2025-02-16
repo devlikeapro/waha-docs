@@ -31,6 +31,15 @@ Latest Version:
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
 ## 2025.2
+`2025.2.4`
+- Add [**👥 group.v2 events**]({{< relref "/docs/how-to/groups#events" >}}) 
+  - `group.v2.join` - when you join a group
+  - `group.v2.leave` - when you leave a group
+  - `group.v2.participants` - when someone joins, leaves, get promoted or demoted in a group
+  - `group.v2.update` - when group information are updated
+  - **WEBJS**, **NOWEB**, **GOWS** engines
+  - {{< issue 583 >}}, {{< issue 527 >}}, {{< issue 404 >}}
+  
 `2025.2.3`
 - Add [**🆔 Profile API**]({{< relref "/docs/how-to/profile" >}} ) to get and update profile information {{< issue 529 >}} 
   - **WEBJS**, **NOWEB**, **GOWS** engines

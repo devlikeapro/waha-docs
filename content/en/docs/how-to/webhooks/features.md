@@ -6,8 +6,6 @@
 | `message.ack`        |  ✔️   |  ✔️   |  ✔️  |
 | `message.waiting`    |  ✔️   |       |      |
 | `message.revoked`    |  ✔️   |       |      |
-| `group.join`         |  ✔️   |  ✔️   |      |
-| `group.leave`        |  ✔️   |       |      |
 | `presence.update`    |       |  ✔️   |  ✔️  |
 | `poll.vote`          |       |  ✔️   |      |
 | `poll.vote.failed`   |       |  ✔️   |      |

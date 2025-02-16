@@ -281,31 +281,25 @@ Invalidates the current group invite code and generates a new one.
 
 `POST /api/{session}/groups/{groupId}/invite-code/revoke`
 
-## Webhooks
-See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
+## Events
+Check [**🔄 Webhooks**]({{< relref "/docs/how-to/webhooks" >}}) for more information how to subscribe to events.
+
+{{< include file="content/en/docs/how-to/groups/features-events.md" >}}
+
+### group.v2.join
+{{< include file="content/en/docs/how-to/groups/events-group.v2.join.md" >}}
+
+### group.v2.leave
+{{< include file="content/en/docs/how-to/groups/events-group.v2.leave.md" >}}
+
+### group.v2.participants
+{{< include file="content/en/docs/how-to/groups/events-group.v2.participants.md" >}}
+
+### group.v2.update
+{{< include file="content/en/docs/how-to/groups/events-group.v2.update.md" >}}
 
 ### group.join
-
-```json
-{
-  "event": "group.join",
-  "session": "default",
-  "engine": "WEBJS",
-  "payload": {
-    ...
-  }
-}
-```
+{{< include file="content/en/docs/how-to/groups/events-group.join.md" >}}
 
 ### group.leave
-
-```json
-{
-  "event": "group.leave",
-  "session": "default",
-  "engine": "WEBJS",
-  "payload": {
-    ...
-  }
-}
-```
+{{< include file="content/en/docs/how-to/groups/events-group.leave.md" >}}
