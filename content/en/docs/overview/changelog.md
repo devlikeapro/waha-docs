@@ -15,7 +15,7 @@ toc: true
 
 
 ## Get Notified
-If you wish to get **Monthly Summary** about WAHA, please subscribe to our channels
+If you wish to get **Monthly Summary** about WAHA changes, please subscribe to our channels
 
 👉 **You can subscribe on free tier!**
 - [**Patreon ->**](https://patreon.com/wa_http_api)
@@ -24,7 +24,7 @@ If you wish to get **Monthly Summary** about WAHA, please subscribe to our chann
 
 
 
-If you wish to get **Real-Time Email** about new releases,
+If you wish to get **Real-Time Email** about new changes,
 you can **Watch Releases** in [**🐙 WAHA GitHub**](https://github.com/devlikeapro/waha)
 
 {{< details "GitHub - How To Subscribe" >}}
