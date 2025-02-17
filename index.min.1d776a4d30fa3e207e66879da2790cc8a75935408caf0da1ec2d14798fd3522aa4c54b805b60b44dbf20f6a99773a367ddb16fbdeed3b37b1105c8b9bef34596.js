@@ -68,10 +68,14 @@ Meaning that the installed WAHA will continue to work even after you subscriptio
 In order to update WAHA you need to have active docker key (which you get on WAHA Patron Portal), meaning at this time you need to be active subscriber.
 In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026ldquo;every 3-6 months\u0026rdquo; purchase to get the latest update.
 💡 We recommend staying subscribing, so we can keep developing awesome product for you! Your support the only reason why we\u0026rsquo;re able to publish and maintain the project 🫶
-`}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`If you wish to get real-time updates about WAHA, please subscribe to our channels:
-Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; 👉 You can subscribe on free tier!
-💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-Latest Version: 2025.2 #2025.2.4
+`}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`Get Notified #If you wish to get Monthly Summary about WAHA, please subscribe to our channels
+👉 You can subscribe on free tier!:
+Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; If you wish to get Real-Time Email about new releases, you can Watch Releases in 🐙 WAHA GitHub
+GitHub - How To SubscribeGo to https://github.com/devlikeapro/waha, click Watch - Custom:
+Select Releases, click Apply:
+You will get notifications about new releases in associated email!
+Releases #Latest Version: 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
+2025.2 #2025.2.4
 Add 👥 group.v2 events group.v2.join - when you join a group group.v2.leave - when you leave a group group.v2.participants - when someone joins, leaves, get promoted or demoted in a group group.v2.update - when group information are updated WEBJS, NOWEB, GOWS engines #583 , #527 , #404 NOWEB - catch and log unhandled errors #809 2025.2.3
 Add 🆔 Profile API to get and update profile information #529 WEBJS, NOWEB, GOWS engines Fix hasMedia behaviour - now when you request messages with downloadMedia=False, hasMedia: true if message has media WEBJS, NOWEB, GOWS engines 2025.2.2
 📢 Search Public Channels API - #440 Available in ➕ WAHA Plus 📢 Get Messages (Preview) From Public Channels API Available in ➕ WAHA Plus PostgreSQL - fix sorry, too many clients already in some cases WEBJS, NOWEB, GOWS engines S3 - fix headers[headerName].trim is not a function error #790 2025.2.1

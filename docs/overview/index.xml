@@ -13,9 +13,11 @@ Guidelines to Follow #
 When developing a bot for WhatsApp, you should never initiate a conversation. Instead, your bot should only reply to messages that it receives.</description></item><item><title>❓ FAQ</title><link>https://waha.devlike.pro/docs/overview/faq/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/faq/</guid><description>System Requirements #
 We strongly recommend using VPS or servers with minimum 2CPU and 2GB RAM configuration for the project even for a single session. If you want to host more sessions - please check the numbers below
 Looking for a reliable VPS to host WAHA? 🖥️ We personally use PQ.hosting - fast, affordable, and super stable! 🚀 How much CPU and Memory does WAHA consume? #
-WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CPU and Memory requirements change</description></item><item><title>🆕 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>If you wish to get real-time updates about WAHA, please subscribe to our channels:
-Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; 👉 You can subscribe on free tier!
-💡 Check the 🔧 Install &amp;amp; Update page to learn how to update WAHA.
-Latest Version: 2025.2 #
-2025.2.4
-Add 👥 group.v2 events group.v2.join - when you join a group group.v2.leave - when you leave a group group.v2.participants - when someone joins, leaves, get promoted or demoted in a group group.</description></item></channel></rss>
+WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CPU and Memory requirements change</description></item><item><title>🆕 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>Get Notified #
+If you wish to get Monthly Summary about WAHA, please subscribe to our channels
+👉 You can subscribe on free tier!:
+Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; If you wish to get Real-Time Email about new releases, you can Watch Releases in 🐙 WAHA GitHub
+GitHub - How To Subscribe
+Go to https://github.com/devlikeapro/waha, click Watch - Custom:
+Select Releases, click Apply:
+You will get notifications about new releases in associated email!</description></item></channel></rss>
