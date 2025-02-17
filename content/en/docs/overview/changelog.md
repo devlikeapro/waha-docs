@@ -17,7 +17,7 @@ toc: true
 ## Get Notified
 If you wish to get **Monthly Summary** about WAHA, please subscribe to our channels
 
-👉 **You can subscribe on free tier!**:
+👉 **You can subscribe on free tier!**
 - [**Patreon ->**](https://patreon.com/wa_http_api)
 - [**Boosty ->**](https://boosty.to/wa-http-api)
 - [**dev.to ->**](https://dev.to/waha)
