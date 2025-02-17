@@ -39,6 +39,7 @@ Latest Version:
   - `group.v2.update` - when group information are updated
   - **WEBJS**, **NOWEB**, **GOWS** engines
   - {{< issue 583 >}}, {{< issue 527 >}}, {{< issue 404 >}}
+- **NOWEB** - catch and log unhandled errors  {{< issue 809 >}}
   
 `2025.2.3`
 - Add [**🆔 Profile API**]({{< relref "/docs/how-to/profile" >}} ) to get and update profile information {{< issue 529 >}} 
