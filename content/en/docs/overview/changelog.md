@@ -14,23 +14,38 @@ toc: true
 ---
 
 
-If you wish to get **real-time updates** about WAHA, please subscribe to our channels:
+## Get Notified
+If you wish to get **Monthly Summary** about WAHA, please subscribe to our channels
+
+👉 **You can subscribe on free tier!**:
 - [**Patreon ->**](https://patreon.com/wa_http_api)
 - [**Boosty ->**](https://boosty.to/wa-http-api)
 - [**dev.to ->**](https://dev.to/waha)
 
-👉 **You can subscribe on free tier!**
 
-----
 
-💡 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
+If you wish to get **Real-Time Email** about new releases,
+you can **Watch Releases** in [**🐙 WAHA GitHub**](https://github.com/devlikeapro/waha)
 
-----
+{{< details "GitHub - How To Subscribe" >}}
+
+Go to [https://github.com/devlikeapro/waha](https://github.com/devlikeapro/waha), click **Watch - Custom**:
+{{< img src="/images/github/github-watch.png" full="false" >}}
+
+Select **Releases**, click **Apply**:
+{{< img src="/images/github/github-watch-releases.png" full="false" >}}
+
+You will get notifications about new releases in associated email!
+
+{{< /details >}}
+## Releases
 
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
-## 2025.2
+💡 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
+
+### 2025.2
 `2025.2.4`
 - Add [**👥 group.v2 events**]({{< relref "/docs/how-to/groups#events" >}}) 
   - `group.v2.join` - when you join a group
@@ -63,7 +78,7 @@ Latest Version:
 - **NOWEB** - fix group message error {{< issue 765 >}}, {{< issue 766 >}}
 - **GOWS** - fix group message error {{< issue 765 >}}, {{< issue 766 >}}
 
-## 2025.1
+### 2025.1
 [**Release Notes**]({{< relref "/blog/waha-2025-1" >}})
 
 `2025.1.6`
@@ -99,7 +114,7 @@ Latest Version:
 - **NOWEB** + **MongoDB** - add descending order for messages
 - Some timeout fixes
 
-## 2024.12
+### 2024.12
 
 [**Release Notes**]({{< relref "/blog/waha-2024-12" >}})
 
@@ -136,7 +151,7 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 - **WEBJS** - fix get channel info by id {{< issue 682 >}}
 - **WEBJS** - fix channel messages {{< issue 683 >}}
 
-## 2024.11
+### 2024.11
 `2024.11.11`
 - **NOWEB** - fix 403 on media message {{< issue 667 >}}
 - **WEBJS** - fix channels list and message {{< issue 664 >}}
@@ -187,7 +202,7 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 - **NOWEB** + **MongoDB** - fix double message issue - {{< issue 623 >}}
 
 
-## 2024.10
+### 2024.10
 `2024.10.13`
 - **NOWEB** - fix waves issue on voice message {{< issue 621 >}}
 - Fix `GET /api/messages` limit {{< issue 620 >}}
@@ -275,7 +290,7 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 - Use `axios` as default library for sending webhooks - solve bad webhooks performance issues for many sessions installation.
 - Handle webhooks retries properly in **WAHA Plus** version (using `axios`)
 
-## 2024.9
+### 2024.9
 
 `2024.9.6`
 - **NOWEB** - set session presence (`online|offline`) at the start - [#412](https://github.com/devlikeapro/waha/issues/412)
@@ -335,7 +350,7 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
   - [**📥 Receive messages** - replyTo]({{<relref "/docs/how-to/receive-messages#replyto" >}})
 - Update **NOWEB** engine to the latest upstream changes
 
-## 2024.8
+### 2024.8
 `2024.8.5`
 - **NOWEB** - ⚠️ urgent fix [#511](https://github.com/devlikeapro/waha/issues/511)
 
@@ -365,7 +380,7 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 
 ----
 
-## 2024.7
+### 2024.7
 
 - `2024.7.7` - **WEBJS** + **MongoDB** fix - `unexpected end of file` [#457](https://github.com/devlikeapro/waha/issues/457)
 - `2024.7.6` - **WEBJS** restart fix [#444](https://github.com/devlikeapro/waha/issues/444)
@@ -377,8 +392,8 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 
 ----
 
-## 2024.6
-### 📢 Breaking changes
+### 2024.6
+#### 📢 Breaking changes
 
 ----
 
@@ -494,7 +509,7 @@ Sender presence keeps on typing after sending message.
 
 ----
 
-## 2024.5
+### 2024.5
 **🎉 New**
 
 ----
@@ -597,7 +612,7 @@ WhatsApp has deprecated the version currently being used in the NOWEB engine
 
 ----
 
-## 2024.4
+### 2024.4
 **🎉 New**
 
 Add **WAHA Dashboard** - UI to manage your WhatsApp sessions!
@@ -618,7 +633,7 @@ Implement `GET /api/contacts/profile-picture` for **NOWEB** engine.
 
 ----
 
-## 2024.3
+### 2024.3
 **🎉 New**
 
 ----
@@ -671,7 +686,7 @@ Add `config.debug` field to `POST /api/sessions/start` to enable debug and verbo
 
 ----
 
-### 📢 Breaking changes
+#### 📢 Breaking changes
 - **NOWEB** - reactions were sent in `'message'` and `'message.any'` events, not it's available **only** in `'message.reaction'`!
 - Add **required body** in `PUT /api/{session}/groups/{groupId}/settings/security/info-admin-only` endpoint.
 ```json
@@ -682,27 +697,27 @@ Add `config.debug` field to `POST /api/sessions/start` to enable debug and verbo
 
 - `POST /api/sendContactVcard` doesn't work in **VENOM** anymore (use **NOWEB** engine).
 
-## 2024.2
+### 2024.2
 - Add support for [MongoDB as storage for Session data]({{< relref "/docs/how-to/storages" >}})
 - Support persistent file storage for media files - [now you can save media files between container restarts]({{< relref "/docs/how-to/storages#media" >}})
 - If you set `WHATSAPP_FILES_LIFETIME=0` environment variable - media files will be never deleted.
 - Add `GET /api/health` endpoint to [check the health of the service](https://waha.devlike.pro/docs/how-to/observability/)
 
-## 2024.1
+### 2024.1
 - Implement [Patron Portal](https://portal.devlike.pro/) where you can get your personal API key and manage your perks.
   - Read more on [Patreon ->](https://www.patreon.com/posts/waha-patron-97637416)
   - Read more on [Boosty ->](https://boosty.to/wa-http-api/posts/8319079f-dac1-4179-b954-fcc559097c76)
 
-## 2024.2
+### 2024.2
 - Listen for browser disconnected and page close events in **WEBJS** engine [#262](https://github.com/devlikeapro/waha/issues/262)
 
-## 2023.12
+### 2023.12
 December 2023
 - Add `chatId` field to `GET /api/contacts/check-exists` to help get the right `chatId` for Brazilian numbers.
 Read more about
   [error sending text to half of Brazilian numbers (every number registered before 2012) ->](https://github.com/devlikeapro/waha/issues/238)
 
-## 2023.11
+### 2023.11
 November 2023
 - Add different formats for QR code:
   1. **binary image** - `GET /api/{session}/auth/qr`
@@ -735,14 +750,14 @@ November 2023
 - Add `/api/sendVideo` endpoint to **NOWEB** and **WEBJS** engines. Available only in Plus version.
 - Add security settings for edit group info `GET /api/{session}/groups/{groupId}/settings/security/info-admin-only` - updates the group settings to only allow admins to edit group info (title, description, photo).
 
-## 2023.10
+### 2023.10
 October 2023
 - Add `session.status` event for all engines! Now you can get the latest session's status immediately after it changes.
 - Add `message.revoked` event in **WEBJS** engine
 - Add `me` field in webhook payload - now you can know which number is associated with the session
 - Add `enviroment` field in webhook payload - now you can know which environment is used for the session
 
-## 2023.9
+### 2023.9
 September 2023
 - Add `GET /api/sessions/{session/me` endpoint so you [can get the phone number associated with the session](https://waha.devlike.pro/docs/how-to/sessions/#get-me)
 - Add [polls support in NOWEB engine](https://waha.devlike.pro/docs/how-to/polls)
@@ -751,7 +766,7 @@ September 2023
 - Add string field `ackName: DEVICE|READ|...` in [message.ack payload](https://waha.devlike.pro/docs/how-to/webhooks/#messageack)
 - Support `message.ack` event webhook in **NOWEB** engine
 
-## 2023.8
+### 2023.8
 August 2023
 - Added [stories (aka status) endpoints](https://waha.devlike.pro/docs/how-to/send-messages/#send-status-aka-stories) to **NOWEB** engine!
   - `POST /api/{session}/status/text|image|voice|video` - choose one that suites your!
@@ -766,7 +781,7 @@ August 2023
   - With `offline` presence you can get notifications for your device [#28](https://github.com/devlikeapro/waha/issues/28)
 - Added security settings for edit group info `PUT /api/{session}/groups/{groupId}/settings/security/info-admin-only` - updates the group settings to only allow admins to edit group info (title, description, photo).
 
-## 2023.7
+### 2023.7
 July 2023
 - Now session can have their own [🔄 Webhooks]({{< relref "/docs/how-to/webhooks" >}}) -
    you can define webhook configuration when you start a session with `POST /api/sessions/start`!
@@ -781,7 +796,7 @@ July 2023
 - Now you can mention contact in groups by settings `mentions` field in `POST /api/sendText`
   [read more about it in Send Messages ->]({{< relref "/docs/how-to/send-messages" >}})
 
-## 2023.6
+### 2023.6
 June 2023
 
 Improvements on session management, restarting sessions and more:
@@ -813,7 +828,7 @@ Improvements on session management, restarting sessions and more:
 }
 ```
 
-## 2023.5
+### 2023.5
 May 2023
 
 - Added new [NOWEB engine]({{< relref "/docs/how-to/engines" >}}). **NOWEB** engine does not require a browser to work
@@ -824,13 +839,13 @@ May 2023
   - Send Link Preview API works!
   - ⚠ Read the article before using it [How to avoid blocking ->]({{< relref "/docs/overview/how-to-avoid-blocking" >}}).
 
-## 2023.4
+### 2023.4
 March 2023
 
 - Add [Groups API]({{< relref "/docs/how-to/groups" >}})
 - Use Chromium by default instead of Chrome
 
-## 2023.1
+### 2023.1
 January 2023
 
 - Added  [Contacts API]({{< relref "/docs/how-to/contacts" >}})
@@ -841,13 +856,13 @@ January 2023
   - Check number exists (is registered in WhatsApp) - works even if the number is not in the contact list
   - Block and unblock contact
 
-## 2022.12
+### 2022.12
 December 2023
 
 - Added `GET /messages/` endpoint to get chat messages [#31](https://github.com/devlikeapro/waha/issues/31)
 - Added `WHATSAPP_SWAGGER_USERNAME` and `WHATSAPP_SWAGGER_PASSWORD` to hide and protect swagger panel.
 
-## 2022.11
+### 2022.11
 
 **Please test changes in test environment before update production!!**
 
