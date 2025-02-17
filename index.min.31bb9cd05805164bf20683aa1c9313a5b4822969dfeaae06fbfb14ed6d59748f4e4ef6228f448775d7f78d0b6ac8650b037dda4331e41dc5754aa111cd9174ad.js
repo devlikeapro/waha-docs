@@ -68,9 +68,9 @@ Meaning that the installed WAHA will continue to work even after you subscriptio
 In order to update WAHA you need to have active docker key (which you get on WAHA Patron Portal), meaning at this time you need to be active subscriber.
 In summary, it\u0026rsquo;s not one time purchase, it\u0026rsquo;s rather \u0026ldquo;every 3-6 months\u0026rdquo; purchase to get the latest update.
 💡 We recommend staying subscribing, so we can keep developing awesome product for you! Your support the only reason why we\u0026rsquo;re able to publish and maintain the project 🫶
-`}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`Get Notified #If you wish to get Monthly Summary about WAHA, please subscribe to our channels
-👉 You can subscribe on free tier!:
-Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; If you wish to get Real-Time Email about new releases, you can Watch Releases in 🐙 WAHA GitHub
+`}),e.add({id:5,href:"/docs/overview/changelog/",title:"🆕 Changelog",description:"WAHA's changelog",content:`Get Notified #If you wish to get Monthly Summary about WAHA changes, please subscribe to our channels
+👉 You can subscribe on free tier!
+Patreon -\u0026gt; Boosty -\u0026gt; dev.to -\u0026gt; If you wish to get Real-Time Email about new changes, you can Watch Releases in 🐙 WAHA GitHub
 GitHub - How To SubscribeGo to https://github.com/devlikeapro/waha, click Watch - Custom:
 Select Releases, click Apply:
 You will get notifications about new releases in associated email!
