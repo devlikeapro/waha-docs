@@ -19,7 +19,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 {{< include file="content/en/docs/how-to/channels/features.md" >}}
 
-## Endpoints
+## Channels API
 
 💡 Channels have a special `@newsletter` prefix, so you can distinguish them from regular chats and groups.
 
@@ -118,6 +118,8 @@ You can get a channel by Invite Code `GET /api/{session}/channels/{inviteCode}`
   "role": "OWNER"
 }
 ```
+
+## Search API
 
 ### Search channels by view
 
@@ -250,7 +252,7 @@ GET /api/{session}/channels/search/categories
 ]
 ```
 
-### Get Messages (Preview) for channel
+### Get Messages (Preview) for Channel
 You can get latest messages from **public** channels (not subscribed yet) by invite code (or channel id).
 Returns only **preview** messages (one that you'll see on channel preview).
 
