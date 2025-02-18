@@ -79,7 +79,7 @@ You can create a new channel `POST /api/{session}/channels` with the payload:
 You can delete a channel `DELETE /api/{session}/channels/123123%40newsletter` (escape `@` to `%40`).
 Make sure have `OWNER` role for the channel.
 
-### Get channel by ID
+### Get channel by Id
 
 You can get a channel by ID `GET /api/{session}/channels/123123%40newsletter` (escape `@` to `%40`).
 
@@ -92,7 +92,8 @@ You can get a channel by ID `GET /api/{session}/channels/123123%40newsletter` (e
   "preview": "https://mmg.whatsapp.net/m1/v/t24/123",
   "picture": "https://mmg.whatsapp.net/m1/v/t24/123",
   "verified": false,
-  "role": "OWNER"
+  "role": "OWNER",
+  "subscribersCount": 0
 }
 ```
 
