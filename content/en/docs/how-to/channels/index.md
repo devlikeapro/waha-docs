@@ -93,7 +93,7 @@ You can get a channel by ID `GET /api/{session}/channels/123123%40newsletter` (e
   "picture": "https://mmg.whatsapp.net/m1/v/t24/123",
   "verified": false,
   "role": "OWNER",
-  "subscribersCount": 0
+  "subscribersCount": 12323
 }
 ```
 
