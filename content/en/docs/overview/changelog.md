@@ -46,6 +46,10 @@ Latest Version:
 💡 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
 ### 2025.2
+`2025.2.5`
+- **NOWEB** - fix `body: null` or empty `body` in some cases - {{< issue 813 >}}
+- **NOWEB** - add `message.revoked` event
+
 `2025.2.4`
 - Add [**👥 group.v2 events**]({{< relref "/docs/how-to/groups#events" >}}) 
   - `group.v2.join` - when you join a group

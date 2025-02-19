@@ -5,7 +5,7 @@
 | `message.any`        |  ✔️   |  ✔️   |  ✔️  |
 | `message.ack`        |  ✔️   |  ✔️   |  ✔️  |
 | `message.waiting`    |  ✔️   |       |      |
-| `message.revoked`    |  ✔️   |       |      |
+| `message.revoked`    |  ✔️   |  ✔️   |      |
 | `presence.update`    |       |  ✔️   |  ✔️  |
 | `poll.vote`          |       |  ✔️   |      |
 | `poll.vote.failed`   |       |  ✔️   |      |
