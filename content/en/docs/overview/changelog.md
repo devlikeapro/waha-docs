@@ -46,6 +46,9 @@ Latest Version:
 💡 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
 ### 2025.2
+`2025.2.6`
+- **NOWEB** + **PostgreSQL** - fix `\u0000 - unsupported Unicode escape sequence` - {{< issue 820 >}}
+
 `2025.2.5`
 - **NOWEB** - fix `body: null` or empty `body` in some cases - {{< issue 813 >}}
 - **NOWEB** - add `message.revoked` event
