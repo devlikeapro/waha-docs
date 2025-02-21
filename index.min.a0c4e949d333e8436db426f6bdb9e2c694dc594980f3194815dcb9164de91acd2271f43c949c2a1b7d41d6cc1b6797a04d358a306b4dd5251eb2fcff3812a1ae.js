@@ -75,7 +75,8 @@ GitHub - How To SubscribeGo to https://github.com/devlikeapro/waha, click Watch
 Select Releases, click Apply:
 You will get notifications about new releases in associated email!
 Releases #Latest Version: 💡 Check the 🔧 Install \u0026amp; Update page to learn how to update WAHA.
-2025.2 #2025.2.5
+2025.2 #2025.2.6
+NOWEB + PostgreSQL - fix \\u0000 - unsupported Unicode escape sequence - #820 2025.2.5
 NOWEB - fix body: null or empty body in some cases - #813 NOWEB - add message.revoked event 2025.2.4
 Add 👥 group.v2 events group.v2.join - when you join a group group.v2.leave - when you leave a group group.v2.participants - when someone joins, leaves, get promoted or demoted in a group group.v2.update - when group information are updated WEBJS, NOWEB, GOWS engines #583 , #527 , #404 NOWEB - catch and log unhandled errors #809 2025.2.3
 Add 🆔 Profile API to get and update profile information #529 WEBJS, NOWEB, GOWS engines Fix hasMedia behaviour - now when you request messages with downloadMedia=False, hasMedia: true if message has media WEBJS, NOWEB, GOWS engines 2025.2.2
