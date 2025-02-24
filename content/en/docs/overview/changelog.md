@@ -27,7 +27,7 @@ If you wish to get **Monthly Summary** about WAHA changes, please subscribe to o
 If you wish to get **Real-Time Email** about new changes,
 you can **Watch Releases** in [**🐙 WAHA GitHub**](https://github.com/devlikeapro/waha)
 
-{{< details "GitHub - How To Subscribe" >}}
+{{< details "💡 GitHub - How To Subscribe" >}}
 
 Go to [https://github.com/devlikeapro/waha](https://github.com/devlikeapro/waha), click **Watch - Custom**:
 {{< img src="/images/github/github-watch.png" full="false" >}}
@@ -43,10 +43,13 @@ You will get notifications about new releases in associated email!
 Latest Version: 
 [![GitHub Release](https://img.shields.io/github/v/release/devlikeapro/waha)](https://github.com/devlikeapro/waha/releases)
 
-💡 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
+Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
 ### 2025.2
 `2025.2.7`
+- Add [**👥 Group Picture API**]({{< relref "/docs/how-to/groups#group-picture" >}}) - {{< issue 802 >}}
+  - **WEBJS**, **NOWEB**, **GOWS** engines
+  - Picture Update available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 - **GOWS** - Add [**👥 Group API**]({{< relref "/docs/how-to/groups" >}}) - {{< issue 825 >}}
 - **NOWEB** - Add [**👥 Group Settings API**]({{< relref "/docs/how-to/groups" >}}) - {{< issue 695 >}}, {{< issue 808 >}} 
 

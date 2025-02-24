@@ -7,6 +7,9 @@
 | `GET /api/{session}/groups/{id}`                                       |  ✔️   |  ✔️   |  ✔️  |
 | `DELETE /api/{session}/groups/{id}`                                    |  ✔️   |       |      |
 | `POST /api/{session}/groups/{id}/leave`                                |  ✔️   |  ✔️   |  ✔️  |
+| `GET /api/{session}/groups/{id}/picture`                               |  ✔️   |  ✔️   |  ✔️  |
+| `POST /api/{session}/groups/{id}/picture`                              |   ➕   |   ➕   |  ➕   |
+| `DELETE /api/{session}/groups/{id}/picture`                            |   ➕   |   ➕   |  ➕   |
 | `PUT /api/{session}/groups/{id}/description`                           |  ✔️   |  ✔️   |  ✔️  |
 | `PUT /api/{session}/groups/{id}/subject`                               |  ✔️   |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/invite-code`                           |  ✔️   |  ✔️   |  ✔️  |
@@ -23,5 +26,6 @@
 
 ****
 
-_If you see the feature is not available in the above list, please [create a feature request](https://github.com/devlikeapro/waha/issues/new/choose) or **leave "+1" comment** on the existing one._
+- ➕ - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
+
 ****
