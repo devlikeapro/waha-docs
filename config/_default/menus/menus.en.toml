@@ -181,6 +181,12 @@
   weight = 96
 
 [[main]]
+  name = "WhatsApp + PHP"
+  parent = "more"
+  url = "/whatsapp-plus-php/"
+  weight = 99
+
+[[main]]
   name = "WhatsApp + JS/TS"
   parent = "more"
   url = "/whatsapp-plus-javascript/"
