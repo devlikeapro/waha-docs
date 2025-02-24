@@ -48,6 +48,7 @@ Latest Version:
 ### 2025.2
 `2025.2.7`
 - **GOWS** - Add [**👥 Group API**]({{< relref "/docs/how-to/groups" >}}) - {{< issue 825 >}}
+- **NOWEB** - Add [**👥 Group Settings API**]({{< relref "/docs/how-to/groups" >}}) - {{< issue 695 >}}, {{< issue 808 >}} 
 
 `2025.2.6`
 - **NOWEB** + **PostgreSQL** - fix `\u0000 - unsupported Unicode escape sequence` - {{< issue 820 >}}
