@@ -229,17 +229,20 @@ websocat -E ws://localhost:3000/ws?session=*&events=*
 # Listen certain events
 websocat -E ws://localhost:3000/ws?session=*&events=session.status&events=message
 
-
 # If you want to see the logs and ping the server every 10 seconds
 websocat -v --ping-interval=10 -E ws://localhost:3000/ws
 
 # Listen certain session
 websocat -E ws://localhost:3000/ws?session=default&events=session.status
+
+# With API Key
+websocat -E ws://localhost:3000/ws?x-api-key=123
 ```
 
 Parameters:
 - `session` - session name, `*` for all sessions
-- `events` - comma-separated list of events, `*` for all events
+- `events` - list of events, `*` for all events
+  - `events=*` doesn't include `engine.event`. You need to specify `events=*&events=engine.event` if you want to listen all events
 - `x-api-key` - your API key
 
 ### Examples
