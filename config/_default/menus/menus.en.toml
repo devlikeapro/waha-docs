@@ -199,6 +199,30 @@
   weight = 99
 
 [[main]]
+  name = "WhatsApp + Java"
+  parent = "more"
+  url = "/whatsapp-plus-java/"
+  weight = 99
+
+[[main]]
+  name = "WhatsApp + Kotlin"
+  parent = "more"
+  url = "/whatsapp-plus-kotlin/"
+  weight = 99
+
+[[main]]
+  name = "WhatsApp + Go"
+  parent = "more"
+  url = "/whatsapp-plus-go/"
+  weight = 99
+
+[[main]]
+  name = "WhatsApp + C#"
+  parent = "more"
+  url = "/whatsapp-plus-csharp/"
+  weight = 99
+
+[[main]]
   name = "🇦🇪 العربية (Arabic)"
   parent="language"
   url="https://translate.google.com/translate?sl=en&tl=ar&hl=ar&u=https://waha.devlike.pro/&client=webapp"

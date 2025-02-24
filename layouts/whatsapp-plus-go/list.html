@@ -18,7 +18,7 @@
                 <div>
                     <p class="lead">
                         <a href="/">WAHA</a> provides a private, self-hosted,
-                        and free HTTP API to seamlessly integrate and automate <b>WhatsApp</b> using <b>PHP</b>.
+                        and free HTTP API to seamlessly integrate and automate <b>WhatsApp</b> using <b>Go</b>.
                         <br>
                         <br>
                         Send messages, manage chats, and streamline workflows effortlessly with a simple API!
@@ -39,8 +39,9 @@
             <div class='col-lg-6 order-first order-lg-last d-flex justify-content-start mb-4' data-aos="fade-up">
                 <div>
                     <img
-                            src='/images/php.svg' title='WhatsApp + PHP'
-                            alt='WhatsApp + PHP'
+                            src='/images/go.svg' title='WhatsApp + Go'
+                            alt='WhatsApp + Go'
+                            height="180"
                     />
                 </div>
             </div>
@@ -59,7 +60,7 @@
         <div class='row justify-content-center text-center'>
             <div class='col-12 mt-4' data-aos="fade-up">
                 <h2>
-                    WhatsApp + PHP
+                    WhatsApp + Go
                 </h2>
             </div>
 
@@ -75,8 +76,8 @@
 
                 <div class='code-block highlight' style='text-align: left'>
           <pre tabindex='0' class='chroma m-0'>
-            <code class='language-bash' data-lang='bash' style='padding: 1rem!important; border-radius: 0.5rem'>php -v
-composer require guzzlehttp/guzzle
+            <code class='language-bash' data-lang='bash' style='padding: 1rem!important; border-radius: 0.5rem'>
+go get -u github.com/gofiber/fiber/v2
             </code>
           </pre>
                 </div>
@@ -89,24 +90,31 @@ composer require guzzlehttp/guzzle
                 <div class='code-block highlight' style='text-align: left'>
           <pre tabindex='0' class='chroma m-0'>
             <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>
-<?php
-$url = "http://localhost:3000/api/sendText";
-$data = [
-    "session" => "default",
-    "chatId" => "12132132130@newsletter",
-    "text" => "Hi there!"
-];
+package main
 
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    'Content-Type: application/json'
-]);
-$response = curl_exec($ch);
-curl_close($ch);
-?>
+import (
+    "bytes"
+    "encoding/json"
+    "net/http"
+)
+
+type Message struct {
+    Session string `json:"session"`
+    ChatID  string `json:"chatId"`
+    Text    string `json:"text"`
+}
+
+func main() {
+    url := "http://localhost:3000/api/sendText"
+    msg := Message{Session: "default", ChatID: "12132132130@newsletter", Text: "Hi there!"}
+    jsonData, _ := json.Marshal(msg)
+
+    resp, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
+    if err != nil {
+        panic(err)
+    }
+    defer resp.Body.Close()
+}
             </code>
           </pre>
                 </div>
@@ -122,15 +130,31 @@ curl_close($ch);
                 <div class='code-block highlight' style='text-align: left'>
           <pre tabindex='0' class='chroma m-0'>
             <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>
-<?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $data = json_decode(file_get_contents("php://input"), true);
-    if ($data["event"] !== "message") {
-        processMessage($data["payload"]);
-    }
-    echo "OK";
+package main
+
+import (
+    "fmt"
+    "github.com/gofiber/fiber/v2"
+)
+
+func main() {
+    app := fiber.New()
+
+    app.Post("/bot", func(c *fiber.Ctx) error {
+        var data map[string]interface{}
+        if err := c.BodyParser(&data); err != nil {
+            return err
+        }
+
+        if event, ok := data["event"].(string); ok && event == "message" {
+            fmt.Println("Received message:", data["payload"])
+            // Process message...
+        }
+        return c.SendString("OK")
+    })
+
+    app.Listen(":3000")
 }
-?>
             </code>
           </pre>
                 </div>
