@@ -41,16 +41,22 @@ Request:
 
 ### Get all groups
 
-`GET /api/{session}/groups`
+```bash
+GET /api/{session}/groups
+```
 
-👉 If you see `rate-overlimit` error with **NOWEB** engine - try enabling [**🏭 NOWEB Store before using the endpoint**]({{< relref "/docs/engines/NOWEB#store" >}})!
 
-#### Groups Pagination
-If you see timeout or the request takes too long - consider using `limit` parameter to get objects in smaller chunks
+**Response**:
+
+depends on [**🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) you use.
+
+**Query parameters**:
 
 ```
 GET /api/{session}/groups?limit=10&offset=0&sortBy=subject&sortOrder=desc
 ```
+
+If you see timeout or the request takes too long - consider using `limit` parameter to get objects in smaller chunks
 
 - `limit=10` - limit the number of chats to return
 - `offset=0` - skip the number of chats from the start
@@ -60,6 +66,11 @@ GET /api/{session}/groups?limit=10&offset=0&sortBy=subject&sortOrder=desc
 - `sortOrder=desc|asc` - sort order
   - `desc` - descending order (New first, A-Z)
   - `asc` - ascending order (Old first, Z-A)
+- `exclude=participants` - you can exclude participants data from the response
+
+{{< details "I see rate-overlimit in NOWEB" >}}
+  👉 If you see `rate-overlimit` error with **NOWEB** engine - try enabling [**🏭 NOWEB Store before using the endpoint**]({{< relref "/docs/engines/NOWEB#store" >}})!
+{{< /details >}}
 
 ### Join group
 If you have invite URL for a group (like `https://chat.whatsapp.com/invitecode`), you can 

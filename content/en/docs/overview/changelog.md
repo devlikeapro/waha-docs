@@ -48,10 +48,12 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 ### 2025.2
 `2025.2.7`
 - Add [**👥 Group Picture API**]({{< relref "/docs/how-to/groups#group-picture" >}}) - {{< issue 802 >}}
-  - **WEBJS**, **NOWEB**, **GOWS** engines
+  - **WEBJS**, **NOWEB**, **GOWS**
   - Picture Update available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 - **GOWS** - Add [**👥 Group API**]({{< relref "/docs/how-to/groups" >}}) - {{< issue 825 >}}
 - **NOWEB** - Add [**👥 Group Settings API**]({{< relref "/docs/how-to/groups" >}}) - {{< issue 695 >}}, {{< issue 808 >}} 
+- Add `exclude=participants` to [**👥 Get All Groups API**]({{< relref "/docs/how-to/groups#get-all-groups" >}}) - {{< issue 242 >}} 
+  - **WEBJS**, **NOWEB**, **GOWS**
 
 `2025.2.6`
 - **NOWEB** + **PostgreSQL** - fix `\u0000 - unsupported Unicode escape sequence` - {{< issue 820 >}}
