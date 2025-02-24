@@ -54,6 +54,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - **NOWEB** - Add [**👥 Group Settings API**]({{< relref "/docs/how-to/groups" >}}) - {{< issue 695 >}}, {{< issue 808 >}} 
 - Add `exclude=participants` to [**👥 Get All Groups API**]({{< relref "/docs/how-to/groups#get-all-groups" >}}) - {{< issue 242 >}} 
   - **WEBJS**, **NOWEB**, **GOWS**
+- **NOWEB** - fix `TypeError: group.participants is not iterable` - {{< issue 810 >}}
 
 `2025.2.6`
 - **NOWEB** + **PostgreSQL** - fix `\u0000 - unsupported Unicode escape sequence` - {{< issue 820 >}}
