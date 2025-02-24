@@ -166,18 +166,24 @@
   name = "WhatsApp Low-Code (n8n)"
   parent = "more"
   url = "/whatsapp-low-code/"
-  weight = 97
+  weight = 94
 
 [[main]]
   name = "WhatsApp Typebot Integration"
   parent = "more"
   url = "/whatsapp-typebot/"
-  weight = 98
+  weight = 95
 
 [[main]]
   name = "WhatsApp ChatWoot Integration"
   parent = "more"
   url = "/whatsapp-chatwoot/"
+  weight = 96
+
+[[main]]
+  name = "WhatsApp + Python"
+  parent = "more"
+  url = "/whatsapp-plus-python/"
   weight = 99
 
 [[main]]
