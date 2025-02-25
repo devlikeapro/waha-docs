@@ -55,6 +55,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - Add `exclude=participants` to [**👥 Get All Groups API**]({{< relref "/docs/how-to/groups#get-all-groups" >}}) - {{< issue 242 >}} 
   - **WEBJS**, **NOWEB**, **GOWS**
 - **NOWEB** - fix `TypeError: group.participants is not iterable` - {{< issue 810 >}}
+- **NOWEB** - disable auto-restart every 30 mins, restart will happen only on socket error - {{< issue 756 >}}
 
 `2025.2.6`
 - **NOWEB** + **PostgreSQL** - fix `\u0000 - unsupported Unicode escape sequence` - {{< issue 820 >}}
