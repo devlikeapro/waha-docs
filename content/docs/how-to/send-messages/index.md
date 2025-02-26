@@ -221,13 +221,6 @@ You can send images in two ways:
 {{< /tabs >}}
 
 ## Send voice
-
-Use API to send voice messages to the chat.
-
-```http request
-POST /api/sendVoice
-```
-
 {{< callout context="note" title="Convert file before sending" icon="outline/file" >}}
 Make sure your file has **OPUS** encoding and packed in **OGG** container. You can convert to this using ffmpeg (
 there's many libs for that in popular languages).
@@ -236,6 +229,12 @@ there's many libs for that in popular languages).
 ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 ```
 {{< /callout >}}
+
+Use API to send voice messages to the chat.
+
+```http request
+POST /api/sendVoice
+```
 
 You can send voice messages in two ways:
 
@@ -275,12 +274,6 @@ You can send voice messages in two ways:
 {{< /tabs >}}
 
 ## Send video
-
-Use API to send a video to a chat.
-```http request
-POST /api/sendVideo
-```
-
 {{< callout context="note" title="Convert file before sending" icon="outline/file" >}}
 Make sure your file has **mp4 using libx264** format.
 
@@ -290,12 +283,17 @@ ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.
 - `-map 0 -movflags +faststart` options required for thumbnail generation.
 {{< /callout >}}
 
-
 {{< callout context="tip" title="WEBJS - use :chrome image" icon="outline/browser" >}}
 If you're using **WEBJS** (default engine) - make sure to use `devlikeapro/waha-plus:chrome` docker image.
 
 Read more about [**Docker images and engines →**]({{< relref "/docs/how-to/engines" >}}).
 {{< /callout >}}
+
+Use API to send a video to a chat.
+
+```http request
+POST /api/sendVideo
+```
 
 You can send voice messages in two ways:
 
