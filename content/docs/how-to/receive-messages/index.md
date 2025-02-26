@@ -33,8 +33,11 @@ Start a new session with configured `message` event in webhooks - call `POST /ap
 
 After that WAHA sends events (see below) about new messages to an endpoint you provided.
 
-💡 You can open [https://webhook.site](https://webhook.site) and paste UUID from it to `url` field,
-and you'll see all requests immediately in your browser to intercept the webhook's payload.
+{{< callout context="note" title="Observe Events" icon="outline/info-circle" >}}
+To observe events and payload you can:
+- Open [**📊 Dashboard / Event Monitor**]({{< relref "/docs/how-to/dashboard#event-monitor" >}}) and see the events in real-time
+- Open [https://webhook.site](https://webhook.site), paste UUID from it to `url` field in webhook for a session
+{{< /callout >}}
 
 ## Fields
 ### chatId, from, to, participant
