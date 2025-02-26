@@ -228,17 +228,21 @@ Use API to send voice messages to the chat.
 POST /api/sendVoice
 ```
 
+{{< callout context="note" title="Convert file before sending" icon="outline/file" >}}
+Make sure your file has **OPUS** encoding and packed in OGG container. You can convert to this using ffmpeg (
+there's many libs for that in popular languages).
+
 You can send voice messages in two ways:
 
 1. Provide a **URL** for the voice.
 2. Encode the whole file content into **BASE64** and send it in the request body.
 
-👉 Please make sure your file has **OPUS** encoding and packed in OGG container. You can convert to this using ffmpeg (
-there's many libs for that in popular languages).
-
 ```bash
 ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 ```
+
+{{< /callout >}}
+
 
 **Body**
 {{< tabs "send-voice-body" >}}
