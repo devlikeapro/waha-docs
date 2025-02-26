@@ -501,11 +501,14 @@ To **remove reaction from a message** - send empty string in the reaction reques
 ```
 
 ## Star and unstar message
+Use API to star or unstar a message.
 
-Use `PUT /api/star` method to star or unstar a message.
+```http request
+PUT /api/star
+```
 
-{{< callout note >}}
-  Star API uses PUT, not POST request! Please make sure you send right request.
+{{< callout context="note" title="Use PUT method" icon="outline/alert-octagon" >}}
+Star API uses **PUT**, not **POST** request! Please make sure you send right request.
 {{< /callout >}}
 
 **Star:**
