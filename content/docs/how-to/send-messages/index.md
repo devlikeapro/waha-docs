@@ -667,17 +667,14 @@ POST /api/sendButtons
 }
 ```
 
-⚠️ **Buttons** is not super stable feature, consider
-adding fallback logic in case the buttons are not working right now.
-
 👉 `headerImage` is available only in
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 
 ### Buttons
 Here's available buttons you can use in `buttons`:
 
-**Quick Reply**
-
+{{< tabs "send-buttons-types" >}}
+{{< tab "Quick Reply" >}}
 ```json
 {
   // Optional id
@@ -686,9 +683,10 @@ Here's available buttons you can use in `buttons`:
   "text": "I am good!"
 }
 ```
+{{< /tab >}}
 
-**URL**
 
+{{< tab "URL" >}}
 ```json
 {
   "type": "url",
@@ -696,9 +694,9 @@ Here's available buttons you can use in `buttons`:
   "url": "https://waha.devlike.pro"
 }
 ```
+{{< /tab >}}
 
-**Call**
-
+{{< tab "Call" >}}
 ```json
 {
   "type": "call",
@@ -706,9 +704,9 @@ Here's available buttons you can use in `buttons`:
   "phoneNumber": "+1234567890"
 }
 ```
+{{< /tab >}}
 
-**Copy**
-
+{{< tab "Copy" >}}
 ```json
 {
   "type": "copy",
@@ -716,5 +714,6 @@ Here's available buttons you can use in `buttons`:
   "copyCode": "4321"
 }
 ```
-
+{{< /tab >}}
+{{< /tabs >}}
 
