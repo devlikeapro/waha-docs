@@ -158,14 +158,8 @@ Receive events when a message is reacted to by a user (or **yourself** reacting 
 }
 ```
 
-{{< callout note >}}
-  NOWEB engine note - reactions were sent in 'message' and 'message.any' events, not it's available only in 'message.reaction'!
-{{< /callout >}}
-
 ### message.ack
 Receive events when server or recipient gets the message, read or played it.
-
-[See details on Webhooks page ->]({{< relref "webhooks#messageack" >}}).
 
 ```json
 {
@@ -225,7 +219,7 @@ on your phone.
 ```
 
 
-## Files
+## Media Files
 
 When people send you media - images, voice messages, and documents - WAHA saves it in the file storage.
 In your application you must download it and use it as you want to. You can find the URL in `media.url` field.
@@ -280,16 +274,16 @@ For documents (file attachments) there's also `filename` field with the original
 ```
 
 To configure the `media.url` you can use environment variables: 
-- `WHATSAPP_API_SCHEMA=https`, 
-- `WHATSAPP_API_HOSTNAME=waha.example.com` 
-- `WHATSAPP_API_PORT=3000`
-
-Or define the single
 - `WAHA_BASE_URL=https://waha.example.com` (only affects `media.url`)
+
+Or define 
+- `WHATSAPP_API_SCHEMA=https`,
+- `WHATSAPP_API_HOSTNAME=waha.example.com`
+- `WHATSAPP_API_PORT=3000`
 
 By default, WAHA download all files that the account receive.
 If you want to limit files lifetime, specify file types for download or change directory for files -
-[read more about file storage configuration and variables ->]({{< relref "config" >}}).
+read more about [**⚙️ Configuration**]({{< relref "config" >}}).
 
 ## Endpoints
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
@@ -300,7 +294,7 @@ Read messages from the history - use `GET /api/messages` endpoint.
 Accept the same parameters as
 [**💬 Chats** - **Get messages from chat**]({{< relref "/docs/how-to/chats#get-messages" >}}) endpoint.
 
-{{< callout note >}}
+{{< callout context="caution" icon="outline/alert-triangle" >}}
   We recommend using webhooks instead of constantly calling it to avoid performance issues.
 {{< /callout >}}
 
