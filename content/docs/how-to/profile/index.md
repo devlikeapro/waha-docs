@@ -95,8 +95,9 @@ You can set your profile picture with the following API call:
 PUT /api/{SESSSION}/profile/picture
 ```
 
-**Body - URL**
-
+**Body**
+{{< tabs "set-profile-picture" >}}
+{{< tab "URL" >}}
 ```json
 {
   "file": {
@@ -104,9 +105,9 @@ PUT /api/{SESSSION}/profile/picture
   }
 }
 ```
+{{< /tab >}}
 
-**Body - Base64**
-
+{{< tab "BASE64" >}}
 ```json
 {
   "file": {
@@ -114,6 +115,8 @@ PUT /api/{SESSSION}/profile/picture
   }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 **Response**
 
