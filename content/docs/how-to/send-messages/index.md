@@ -141,6 +141,11 @@ also mention it in `mentions` in format `2132132130@c.us`
 ```
 
 ## Send Buttons
+{{< callout context="danger" title="Buttons do not work at the moment!" icon="outline/alert-octagon" >}}
+Buttons are fragile creatures and may not work as expected. 
+Please consider adding fallback logic using text/poll messages.
+{{< /callout >}}
+
 
 ![alt](send-buttons.jpg)
 
