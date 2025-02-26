@@ -567,7 +567,10 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 
 ## Send video 
 
-Use `POST /api/sendVideo` to send a message with a video attached.
+Use API to send a video to a chat.
+```http request
+POST /api/sendVideo
+```
 
 ---
 
@@ -632,15 +635,20 @@ You can send voice messages in two ways:
 
 ## Send file 
 
-Use `POST /api/sendFile` to send a file as a document.
+Use API to send a file (as a document/attachment) to a chat.
+
+```http request
+POST /api/sendFile
+```
 
 You can send files in two ways:
 
 1. Provide a URL for the file.
 2. Encode the whole file content into base64 and send it in the request body.
 
-### URL
-
+**Body**
+{{< tabs "send-file-body" >}}
+{{< tab "URL" >}}
 ```json
 {
   "session": "default",
@@ -653,9 +661,9 @@ You can send files in two ways:
   }
 }
 ```
+{{< /tab >}}
 
-### Base64
-
+{{< tab "BASE64" >}}
 ```json
 {
   "session": "default",
@@ -668,6 +676,8 @@ You can send files in two ways:
   "caption": "string"
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Send location
 
