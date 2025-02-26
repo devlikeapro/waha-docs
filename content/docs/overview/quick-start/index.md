@@ -187,12 +187,44 @@ Open Swagger at
 
 ![alt](swagger-send-text.png)
 
-## What is next?
-- Learn how to make **production-ready** installation for WAHA [**🔧 Install**]({{< relref "/docs/how-to/install" >}})
-- Learn about the easiest way to manage your WhatsApp sessions - [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
-- Learn how to send images and other messages [**📤 Send messages**]({{< relref "/docs/how-to/send-messages" >}})
-- Read how to receive and response to messages [**📥 Receive messages**]({{< relref "/docs/how-to/receive-messages" >}})
-- Make sure your API is protected with [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
-- Enable one of [**🗄️ Storages**]({{< relref "/docs/how-to/sessions" >}}) to save sessions info between container restarts
-- 👉 Ask [**🤖 WAHA GPT**]({{< relref "/gpt" >}}) to help you build **{python|js|php}** client!
+## What's next?
 
+{{< card-grid >}}
+{{< card title="Learn WAHA" icon="outline/book" color="yellow" >}}
+
+- [📤 Send messages]({{<relref "/docs/how-to/send-messages" >}})
+- [📥 Receive messages]({{<relref "/docs/how-to/receive-messages" >}})
+- [📊 Dashboard]({{< relref "/docs/how-to/dashboard" >}})
+- [🔍 Other How-to guides]({{<relref "/docs/how-to" >}})
+
+{{< /card >}}
+{{< card title="Get Ready for Production" icon="outline/server" color="purple" >}}
+
+- [🔧 Installation Guide]({{< relref "/docs/how-to/install" >}})
+- [🔒 Security]({{< relref "/docs/how-to/security" >}})
+- [🗄️ Storages]({{< relref "/docs/how-to/sessions" >}})
+- [➕ WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}})
+
+
+{{< /card >}}
+{{< /card-grid >}}
+
+{{< card-grid >}}
+{{< card title="What's going on?" icon="outline/info-circle" color="green" >}}
+
+- [🆕 Changelog]({{< relref "/docs/overview/changelog" >}})
+- [🐙 GitHub](https://github.com/devlikeapro/waha)
+
+{{< /card >}}
+{{< card title="Other docs" icon="outline/books" color="red" >}}
+
+- [🧩 Integrations]({{< relref "/docs/integrations" >}})
+- [📚 Swagger]({{< relref "/docs/how-to/swagger" >}})
+- [🏭 Engines]({{< relref "/docs/how-to/engines" >}})
+
+{{< /card >}}
+{{< /card-grid >}}
+
+{{< callout type="tip" icon="outline/robot" title="Build Faster" >}} 
+Ask [**🤖 WAHA GPT**]({{< relref "/gpt" >}}) to help you build **{python|js|php}** code!
+{{< /callout >}} 
