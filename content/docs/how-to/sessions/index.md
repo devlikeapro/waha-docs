@@ -86,7 +86,9 @@ In order to create (and start) a new session - call `POST /api/sessions` with [*
 }
 ```
 
-📖 WAHA uses session `name` more like `id`, but we call it `name` for historical reasons.
+{{< callout >}}
+**WAHA** uses session `name` more like "id", but we call it `name` for historical and compatibility reasons.
+{{< /callout >}}
 
 ### Postpone start
 
@@ -156,8 +158,6 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
   }
 }
 ```
-
-📖 WAHA uses session `name` more like `id`, but we call it `name` for historical reasons.
 
 ### NOWEB
 
@@ -387,7 +387,10 @@ but keeps the **session's configuration**, so you can start a new session with t
 
 ## Delete Session
 
-In order to delete a session - call `DELETE /api/sessions/{session}`.
+In order to delete a session - call 
+```http request
+DELETE /api/sessions/{session}
+```
 
 ⚠️ **Delete** also **logs out** the session (removes both session configuration and data).
 
@@ -397,7 +400,10 @@ In order to delete a session - call `DELETE /api/sessions/{session}`.
 
 ## List Sessions
 
-To get session list - call `GET /api/sessions`.
+To get session list - call 
+```http request
+GET /api/sessions`
+```
 
 The response:
 
@@ -433,12 +439,19 @@ The response:
 ]
 ```
 
-You can add `?all=true` parameter to the request `GET /api/session?all=True` it'll show you ALL session,
-including **STOPPED**.
+You can add `?all=true` parameter to the request it'll show you ALL session, including **STOPPED**.
+
+```http request
+GET /api/sessions?all=true
+```
 
 ## Get Session
 
-To get information about a specific session - call `GET /api/sessions/{session}`.
+To get information about a specific session - call
+
+```http request
+GET /api/sessions/{session}
+```
 
 ```json
 {
@@ -676,9 +689,12 @@ Before new granular API we have a simple API to control the session.
 **Kindly switch to new API** that allows you to control the session **in a more flexible way**.
 
 ### Start
-
-`POST /api/sessions/start` - the endpoint **Create** (if not exists),
+The endpoint **Create** (if not exists),
 **Update** (if existed before) and **Start** a new session.
+
+```http request
+POST /api/sessions/start
+```
 
 Accepts the same configuration as
 [Create](#create-session) and [Update](#update-session) API.
@@ -701,7 +717,9 @@ Accepts the same configuration as
 
 ### Stop
 
-`POST /api/sessions/stop`
+```http request
+POST /api/sessions/stop
+```
 
 - **Stop** if `logout: false`
 - **Stop**, **Logout** and **Delete** session if `logout: true`
@@ -715,7 +733,11 @@ Accepts the same configuration as
 
 ### Logout
 
-`POST /api/sessions/logout` - **Logout** and **Delete** session.
+**Logout** and **Delete** session.
+
+```http request
+POST /api/sessions/logout
+```
 
 ```json
 {
