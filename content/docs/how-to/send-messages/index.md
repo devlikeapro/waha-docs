@@ -226,7 +226,7 @@ Make sure your file has **OPUS** encoding and packed in **OGG** container. You c
 there's many libs for that in popular languages).
 
 ```bash
-ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
+ffmpeg -i input.mp3 -c:a libopus -b:a 32k -ar 48000 -ac 1 output.opus
 ```
 {{< /callout >}}
 
