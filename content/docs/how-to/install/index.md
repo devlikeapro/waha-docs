@@ -9,12 +9,12 @@ draft: false
 weight: 201
 ---
 
----
 
-👉 If you wish to follow a Step-By-Step guide which show you how to send you first message via HTTP API
+{{< callout context="note" icon="outline/info-circle" >}}
+If you wish to follow a **Step-By-Step guide** which show you how to send you first message via HTTP API
 please go to [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
+{{< /callout >}}
 
----
 
 You probably already have run the docker run command during
 [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}) guide:
@@ -77,59 +77,10 @@ Then, with a single command, you create and start all the services from your con
 {{< /details >}}
 
 ### Get docker image
-We'll use
-[**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) docker image in the guide:
 
-```bash
-docker login -u devlikeapro -p {KEY}
-docker pull devlikeapro/waha-plus
-docker logout
-```
+Follow the instructions below:
+{{< include file="content/docs/how-to/install/download-image.md" >}}
 
-👉 Go to
-[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
-to generate the command with the latest version and your key!
-
-
-Alternatively, you can use the **WAHA Core** image:
-
-```bash
-docker pull devlikeapro/waha
-```
-
-{{< details "If you see<br/><code>docker: no matching manifest for linux/arm64/v8 in the manifest list entries</code>">}}
-Looks like you're using **ARM** architecture, you need to use the `:arm` tag for the image.
-
-```bash
-docker login -u devlikeapro -p {KEY}
-docker pull devlikeapro/waha-plus:arm
-docker logout
-
-# Rename it, so you can use devlikeapro/waha image in other place
-docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus
-```
-
-👉 Go to
-[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
-to generate the command with the latest version and your key!
-
-{{< /details >}}
-
-{{< details "macOS (Apple Silicon)" >}}
-👉 If you're using **Apple Silicon** (like Apple M1) - you need to use the `:arm` tag for the image.
-
-Go to
-[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
-to generate the command with the right image.
-{{< /details >}}
-
-{{< details "Raspberry Pi" >}}
-👉 If you're using **Raspberry Pi** - you need to use the `:arm` tag for the image (depends on your CPU arch tho)
-
-Go to
-[**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
-to generate the command with the right image.
-{{< /details >}}
 ## Install
 
 1. Install Docker on your VM
