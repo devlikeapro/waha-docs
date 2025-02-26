@@ -470,16 +470,20 @@ Or even combine it:
 ```
 
 ## Send image 
+Use API to send images to the chat.
 
-Use `POST /api/sendImage` to send images.
+```http request
+POST /api/sendImage
+```
 
 You can send images in two ways:
 
-1. Provide a URL for the image.
-2. Encode the whole file content into base64 and send it in the request body.
+1. Provide a **URL** for the image.
+2. Encode the whole file content into **BASE64** and send it in the request body.
 
-### URL
-
+**Body**
+{{< tabs "send-image-body" >}}
+{{< tab "URL" >}}
 ```json
 {
   "session": "default",
@@ -492,9 +496,9 @@ You can send images in two ways:
   "caption": "string"
 }
 ```
+{{< /tab >}}
 
-### Base64
-
+{{< tab "BASE64" >}}
 ```json
 {
   "session": "default",
@@ -507,6 +511,8 @@ You can send images in two ways:
   "caption": "string"
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Send voice 
 
