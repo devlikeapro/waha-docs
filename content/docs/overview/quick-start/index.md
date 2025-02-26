@@ -124,7 +124,7 @@ docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 
 You'll see WAHA Dashboard:
 
-{{< imgo src="dashboard.png" alt="WAHA Dashboard" >}}
+![Dashboard](dashboard.png)
 
 ## Step 3. Start a new session
 
