@@ -516,7 +516,11 @@ You can send images in two ways:
 
 ## Send voice 
 
-Use `POST /api/sendVoice` to send voice messages.
+Use API to send voice messages to the chat.
+
+```http request
+POST /api/sendVoice
+```
 
 You can send voice messages in two ways:
 
@@ -530,8 +534,9 @@ there's many libs for that in popular languages).
 ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 ```
 
-### URL
-
+**Body**
+{{< tabs "send-image-body" >}}
+{{< tab "URL" >}}
 ```json
 {
   "session": "default",
@@ -543,9 +548,9 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
   "caption": "string"
 }
 ```
+{{< /tab >}}
 
-### Base64
-
+{{< tab "BASE64" >}}
 ```json
 {
   "chatId": "11111111111@c.us",
@@ -557,6 +562,8 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
   "session": "default"
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Send video 
 
