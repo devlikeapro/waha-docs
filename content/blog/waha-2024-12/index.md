@@ -28,7 +28,7 @@ Get chats "overview" - the API that almost all
 [**Chat UI**]({{< relref "/docs/how-to/dashboard#chat-ui" >}})
 client needs!
 
-```
+```http request
 GET /api/{session}/chats/overview?limit=20&offset=0
 ```
 

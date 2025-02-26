@@ -52,7 +52,7 @@ depends on [**🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) you use.
 
 **Query parameters**:
 
-```
+```http request
 GET /api/{session}/groups?limit=10&offset=0&sortBy=subject&sortOrder=desc
 ```
 
@@ -272,6 +272,7 @@ Updates the group settings to only allow admins to send messages.
   "adminsOnly": true
 }
 ```
+
 Returns `true` if the setting was properly updated. This can return false if the user does not have the necessary permissions.
 
 Get the group settings to only allow admins to send messages.

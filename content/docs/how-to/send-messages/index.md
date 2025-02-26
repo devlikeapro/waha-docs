@@ -151,7 +151,7 @@ Please consider adding fallback logic using text/poll messages.
 
 You can send **interactive message** (aka **buttons**) using
 
-```
+```http request
 POST /api/sendButtons
 ```
 
@@ -246,7 +246,7 @@ Here's available buttons you can use in `buttons`:
 
 You can forward a message to another chat (that you chatted before, otherwise it may fail):
 
-```
+```http request
 POST /api/forwardMessage
 ```
 
@@ -264,7 +264,7 @@ If you get a new message via [**🔄 Webhooks**]({{< relref "docs/how-to/webhook
 and want to reply to that message, you need to first send that you've seen the message
 (double green tick) - [⚠️ How to Avoid Blocking]({{< relref "docs/overview/how-to-avoid-blocking" >}})
 
-```
+```http request
 POST /api/sendSeen
 ```
 
@@ -293,7 +293,7 @@ POST /api/sendSeen
 
 You can edit **text** messages or **"caption"** in media messages.
 
-```
+```http request
 PUT /api/{session}/chats/{chatId}/messages/{messageId}
 ```
 
@@ -301,7 +301,7 @@ PUT /api/{session}/chats/{chatId}/messages/{messageId}
 
 So if you want to edit `true_123@c.us_AAA` message in `123@c.us` chat you need to send request to:
 
-```
+```http request
 PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
@@ -317,7 +317,7 @@ PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 
 You can delete messages from the chat.
 
-```
+```http request
 DELETE /api/{session}/chats/{chatId}/messages/{messageId}
 ```
 
@@ -325,7 +325,7 @@ DELETE /api/{session}/chats/{chatId}/messages/{messageId}
 
 So if you want to delete `true_123@c.us_AAA` message in `123@c.us` chat you need to send request to:
 
-```
+```http request
 DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
@@ -655,7 +655,7 @@ You can send files in two ways:
 
 ## Send location
 
-```
+```http request
 POST /api/sendLocation
 ```
 

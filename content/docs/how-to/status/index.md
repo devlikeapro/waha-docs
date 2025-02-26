@@ -181,7 +181,7 @@ When you send status - you'll get the response like below, save `key.id` (it's m
 ```
 
 Then call
-```
+```http request
 POST /api/{session}/status/delete
 ```
 
@@ -192,5 +192,6 @@ with payload from `key.id`
   "id": "AAAAAAAAAAAAAAAAAAAAAA"
 }
 ```
+
 It removes status from all contacts in the list.
 

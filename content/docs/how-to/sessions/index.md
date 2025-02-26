@@ -374,7 +374,7 @@ In order to start a session - call `POST /api/sessions/{session}/restart`
 
 In order to log out the session - call 
 
-```
+```http request
 POST /api/sessions/{session}/logout
 ```
 

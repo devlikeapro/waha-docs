@@ -152,7 +152,7 @@ nano <YOURDOMAIN.COM>.conf
 ```
 
 2. Use the following Nginx config and **replace** the `<YOURDOMAIN.COM>` in `server_name`.
-```
+```config
 server {
   server_name <YOURDOMAIN.COM>;
 
@@ -229,6 +229,7 @@ docker compose up -d
 ```yaml
 image: devlikeapro/waha-plus:latest-2024.7.8
 ```
+
 remember to change it to `latest-{YEAR}.{MONTH}.{BUILD}` to get the latest version.
 
 

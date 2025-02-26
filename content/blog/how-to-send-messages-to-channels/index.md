@@ -59,6 +59,7 @@ docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 # It prints logs and the last line must be
 # WhatsApp API is running on: http://[::1]:3000
 ```
+
 It may take time to download the image, depending on your internet speed.
 
 If you're using **ARM** processor (like **Apple M1/M2**, **Raspberry Pi**) run the following commands instead:

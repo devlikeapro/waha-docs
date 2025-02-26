@@ -157,7 +157,7 @@ You can [**💬 Pin and Unpin Messages**](/docs/how-to/chats#pin-message) in WAH
 
 {{< details "Pin message" >}}
 
-```
+```http request
 POST /api/{session}/chats/{chatId}/messages/{messageId}/pin
 ```
 
@@ -184,7 +184,7 @@ Response:
 
 {{< details "Unpin message" >}}
 
-```
+```http request
 POST /api/{session}/chats/{chatId}/messages/{messageId}/unpin
 ```
 

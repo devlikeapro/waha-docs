@@ -23,14 +23,14 @@ Parameters in path that you can find in below endpoints:
 
 ### Get all chats
 Get all chats 
-```
+```http request
 GET /api/{session}/chats
 ```
 
 #### Chats Pagination
 If you see timeout or the request takes too long - consider using `limit` parameter to get chats in smaller chunks
 
-```
+```http request
 GET /api/{session}/chats?limit=100&offset=0&sortBy=messageTimestamp&sortOrder=desc
 ```
 
@@ -48,7 +48,7 @@ GET /api/{session}/chats?limit=100&offset=0&sortBy=messageTimestamp&sortOrder=de
 Get chats "overview" - the API that almost all 
 [**Chat UI**]({{< relref "/docs/how-to/dashboard#chat-ui" >}})
 client needs!
-```
+```http request
 GET /api/{session}/chats/overview?limit=20&offset=0
 ```
 
@@ -90,7 +90,7 @@ GET /api/{session}/chats/overview?limit=20&offset=0
 
 ### Get chat picture
 Get chat picture (avatar, profile picture, group image) by chat id
-```
+```http request
 GET /api/{session}/chats/{chatId}/picture[?refresh=True]
 ```
 
@@ -136,7 +136,7 @@ Use the method to delete chat
 ### Get messages
 Get **10 messages** from the chat
 
-```
+```http request
 GET /api/{session}/chats/{chatId}/messages?limit=10
 ```
 
@@ -152,7 +152,7 @@ Available parameters:
 
 Get **10 messages** from the chat, skip **downloading media** (images, files)
 
-```
+```http request
 GET /api/{session}/chats/{chatId}/messages?limit=10&downloadMedia=false
 ```
 
@@ -177,20 +177,20 @@ GET /api/{session}/chats/{chatId}/messages?limit=10&downloadMedia=false
 
 Get **10 messages** from 1727745026 timestamp, not from me
 
-```
+```http request
 GET /api/{session}/chats/{chatId}/messages?limit=10&filter.timestamp.gte=1727745026&filter.fromMe=false
 ```
 
 👉 If you have more messages - you can set `offset` flag 
 (increase it always for `limit` amount, even if you get less messages)
-```
+```http request
 GET /api/{session}/chats/{chatId}/messages?limit=10&offset=10&filter.timestamp.gte=1727745026&filter.fromMe=false
 ```
 
 
 ### Get message by id
 Get message by id 
-```
+```http request
 GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 ```
 
@@ -217,7 +217,7 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 
 ### Pin message
 
-```
+```http request
 POST /api/{session}/chats/{chatId}/messages/{messageId}/pin
 ```
 
@@ -241,7 +241,7 @@ Response:
 
 ### Unpin message
 
-```
+```http request
 POST /api/{session}/chats/{chatId}/messages/{messageId}/unpin
 ```
 
@@ -255,13 +255,13 @@ Response:
 ### Edit message
 You can edit **text** messages or **"caption"** in media messages.
 
-```
+```http request
 PUT /api/{session}/chats/{chatId}/messages/{messageId}
 ```
 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
 
 So if you want to edit `true_123@c.us_AAA` message in `123@c.us` chat you need to send request to:
-```
+```http request
 PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
@@ -275,14 +275,14 @@ PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ### Delete message
 You can delete messages from the chat.
 
-```
+```http request
 DELETE /api/{session}/chats/{chatId}/messages/{messageId}
 ```
 
 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
 
 So if you want to delete `true_123@c.us_AAA` message in `123@c.us` chat you need to send request to:
-```
+```http request
 DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 

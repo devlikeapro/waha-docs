@@ -81,6 +81,7 @@ You can configure proxy for a session by setting `config.proxy` fields when you 
   }
 }
 ```
+
 Read more about it on [**Sessions page** ->]({{< relref "/docs/how-to/sessions#configure-proxy" >}}).
 
 

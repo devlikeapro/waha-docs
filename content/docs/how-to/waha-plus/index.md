@@ -49,6 +49,7 @@ docker login -u devlikeapro -p {KEY}
 docker pull devlikeapro/waha-plus
 docker logout
 ```
+
 Then in all commands use **Plus** image `devlikeapro/waha-plus` instead of Core `devlikeapro/waha`.
 
 ### Invite Team

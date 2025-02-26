@@ -56,6 +56,7 @@ in the current directory and `.sessions` directory:
 ```bash
 docker run -v `pwd`/.sessions:/app/.sessions -p 3000:3000/tcp devlikeapro/waha-plus
 ```
+
 This is the only action you need to do to use the local storage - all session data will be available between the container restarts.
 
 ### Config
@@ -230,6 +231,7 @@ After you enabled S3 here's example for [**message**]({{< relref "/docs/how-to/w
   }
 }
 ```
+
 in addition to `media.*` field it will have `media.s3.*` field with the S3 bucket information.
 
 ### S3 Metadata

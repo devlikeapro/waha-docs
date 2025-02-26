@@ -43,7 +43,7 @@ Can be useful for debugging purposes when you're experiencing some issues.
 
 Returns a simple response to check if the service is running.
 
-```
+```http request
 GET /ping
 ```
 
@@ -57,7 +57,7 @@ GET /ping
 
 Returns the version of the installed docker image.
 
-```
+```http request
 GET /api/server/version
 ```
 
@@ -76,7 +76,7 @@ Returns the environment variables of the server
 
 Return only WAHA related variables.
 
-```
+```http request
 GET /api/server/environment?all=false
 ```
 
@@ -92,7 +92,7 @@ GET /api/server/environment?all=false
 
 Return all environment variables
 
-```
+```http request
 GET /api/server/environment?all=true
 ```
 
@@ -111,7 +111,7 @@ GET /api/server/environment?all=true
 
 Returns the server status, start timestamp, and uptime.
 
-```
+```http request
 GET /api/server/status
 ```
 
@@ -126,7 +126,7 @@ GET /api/server/status
 
 You can stop the server by calling
 
-```
+```http request
 POST /api/server/stop
 ```
 
@@ -148,7 +148,7 @@ only.</b>
 
 The health check endpoint is used to determine the health of the service.
 
-```
+```http request
 GET /health
 ```
 
@@ -323,7 +323,7 @@ authentication:
 ```
 
 ## Get Node.js heapsnapshot
-```
+```http request
 GET /api/server/debug/heapsnapshot
 ```
 

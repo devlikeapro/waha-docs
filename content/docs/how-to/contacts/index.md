@@ -47,7 +47,7 @@ Get your contacts - `GET /api/contacts/all`
 #### Contacts Pagination
 If you see timeout or the request takes too long - consider using `limit` parameter to get contacts in smaller chunks
 
-```
+```http request
 GET /api/{session}/contacts/all?limit=100&offset=0&sortBy=id&sortOrder=asc
 ```
 
@@ -89,6 +89,7 @@ this endpoint for that.
 ```bash
 GET /api/contacts/check-exists?phone=11231231231&session=default
 ```
+
 It returns `numberExists` field with `true` or `false` value and `chatId` field with chat ID of the number (if exists).
 
 ```json
@@ -118,7 +119,7 @@ It's fine to send the response to `chatId` for incoming messages, though - the p
 ```
 
 ### Get contact profile picture
-```
+```http request
 GET /api/contacts/profile-picture?contactId=11231231231&session=default`
 ```
 

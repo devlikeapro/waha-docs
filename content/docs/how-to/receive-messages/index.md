@@ -311,7 +311,7 @@ curl -X 'GET' \
 You also can get message by id using
 [**💬 Chats** - **Get message by id from chat**]({{< relref "/docs/how-to/chats#get-message-by-id" >}}) endpoint.
 
-```
+```http request
 GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 ```
 

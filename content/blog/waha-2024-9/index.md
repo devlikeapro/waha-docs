@@ -101,6 +101,7 @@ After you enabled S3 here's example for [**message**]({{< relref "/docs/how-to/w
   }
 }
 ```
+
 in addition to `media.*` field it will have `media.s3.*` field with the S3 bucket information.
 
 
@@ -148,7 +149,7 @@ Read more about [**📤 Send messages - reply_to**]({{< relref "/docs/how-to/sen
 
 Returns the server status, start timestamp, and uptime.
 
-```
+```http request
 GET /api/server/status
 ```
 
@@ -163,7 +164,7 @@ GET /api/server/status
 
 You can stop the server by calling
 
-```
+```http request
 POST /api/server/stop
 ```
 
