@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-start mb-4' data-aos="fade-up">
+            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-center mb-4' data-aos="fade-up">
                 <img
                         src='/images/whatsapp/whatsapp-groups.jpg' title='WhatsApp GRoups Automation'
                         alt='WhatsApp Groups Img'
@@ -75,39 +75,13 @@
                     Get WhatsApp Groups
                 </h2>
 
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>GET /api/{session}/groups
-[{
-  "id": "123@g.us",
-  "name": "Work Group",
-  "description": "...",
-  "invite": "...",
-  "participants": [...],
-   ...
-}]
-            </code>
-          </pre>
-                </div>
+                {{ .Page.RenderString (readFile "/layouts/code/requests/Groups.List.md") | safeHTML }}
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="50">
                 <img src='/images/icons/message-green.png' alt='Free' style='width: 5rem'>
                 <h2 class='h4 color-accent'>Send Messages</h2>
-
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>POST /api/sendText
-{
-  "session": "default",
-  "chatId": "12132132130@g.us",
-  "text": "Hi there!"
-}
-
-            </code>
-          </pre>
-                </div>
-
+                {{ .Page.RenderString (readFile "/layouts/code/requests/Groups.SendText.md") | safeHTML }}
             </div>
 
 
@@ -117,24 +91,7 @@
                     Receive Messages
                 </h2>
 
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>
-{
-    "event": "message",
-    "session": "default",
-    "payload": {
-        "id": "123@g.us",
-        "timestamp": 1720776511,
-        "from": "999@c.us",
-        "body": "How are you all?! ❤️",
-        ...
-    },
-    ...
-}
-            </code>
-          </pre>
-                </div>
+                {{ .Page.RenderString (readFile "/layouts/code/events/message.group.md") | safeHTML }}
             </div>
 
         </div>

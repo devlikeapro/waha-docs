@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-start mb-4' data-aos="fade-up">
+            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-center mb-4' data-aos="fade-up">
                 <img
                         src='/images/whatsapp/whatsapp-status.png' title='WhatsApp Status Automation'
                         alt='WhatsApp Channels Logo'
@@ -75,43 +75,14 @@
                     Send Text Status
                 </h2>
 
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>POST /api/{session}/status/text
-{
-  "contacts": [
-    "55xxxxxxxxxxx@c.us"
-  ],
-  "text": "Have a look! https://waha.devlike.pro/",
-  "backgroundColor": "#38b42f",
-  "font": 1
-}
-            </code>
-          </pre>
-                </div>
+                {{ .Page.RenderString (readFile "/layouts/code/requests/Status.SendText.md") | safeHTML }}
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="50">
                 <img src='/images/icons/message-green.png' alt='Free' style='width: 5rem'>
                 <h2 class='h4 color-accent'>Send Image Status</h2>
 
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>POST /api/{session}/status/image
-{
-  "contacts": [
-    "55xxxxxxxxxxx@c.us"
-  ],
-  "file": {
-    "mimetype": "image/jpeg",
-    "url": "https://github.com/devlikeapro/waha/raw/core/examples/dev.likeapro.jpg"
-  },
-  "caption": "string"
-}
-            </code>
-          </pre>
-                </div>
-
+                {{ .Page.RenderString (readFile "/layouts/code/requests/Status.SendImage.md") | safeHTML }}
             </div>
 
 
@@ -121,22 +92,7 @@
                     Send Video Status
                 </h2>
 
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>POST /api/{session}/status/video
-{
-  "contacts": [
-    "55xxxxxxxxxxx@c.us"
-  ],
-  "file": {
-    "mimetype": "video/mp4",
-    "url": "https://github.com/devlikeapro/waha/raw/core/examples/video.mp4"
-  },
-  "backgroundColor": "#38b42f"
-}
-            </code>
-          </pre>
-                </div>
+                {{ .Page.RenderString (readFile "/layouts/code/requests/Status.SendVideo.md") | safeHTML }}
             </div>
 
         </div>

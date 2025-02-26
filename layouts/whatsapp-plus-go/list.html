@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-start mb-4' data-aos="fade-up">
+            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-center mb-4' data-aos="fade-up">
                 <div>
                     <img
                             src='/images/go.svg' title='WhatsApp + Go'
@@ -65,101 +65,19 @@
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="100">
-                <img
-                        src='/images/icons/whatsapp-channels.svg'
-                        alt='WhatsApp Channel Logo'
-                        style='width: 5rem'
-                >
-                <h2 class='h4'>
-                    Install Dependencies
-                </h2>
-
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-bash' data-lang='bash' style='padding: 1rem!important; border-radius: 0.5rem'>
-go get -u github.com/gofiber/fiber/v2
-            </code>
-          </pre>
-                </div>
+                <img src='/images/icons/whatsapp-channels.svg' alt='WhatsApp Channel Logo' style='width: 5rem' >
+                {{ .Page.RenderString (readFile "/layouts/code/language/go/install-dependencies.md") | safeHTML }}
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="50">
                 <img src='/images/icons/message-green.png' alt='Free' style='width: 5rem'>
-                <h2 class='h4 color-accent'>Send Messages</h2>
-
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>
-package main
-
-import (
-    "bytes"
-    "encoding/json"
-    "net/http"
-)
-
-type Message struct {
-    Session string `json:"session"`
-    ChatID  string `json:"chatId"`
-    Text    string `json:"text"`
-}
-
-func main() {
-    url := "http://localhost:3000/api/sendText"
-    msg := Message{Session: "default", ChatID: "12132132130@newsletter", Text: "Hi there!"}
-    jsonData, _ := json.Marshal(msg)
-
-    resp, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
-    if err != nil {
-        panic(err)
-    }
-    defer resp.Body.Close()
-}
-            </code>
-          </pre>
-                </div>
-
+                {{ .Page.RenderString (readFile "/layouts/code/language/go/send-message.md") | safeHTML }}
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="150">
                 <img src='/images/icons/button-green.png' alt='API' style='width: 5rem'>
-                <h2 class='h4'>
-                    Receive Messages
-                </h2>
-
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>
-package main
-
-import (
-    "fmt"
-    "github.com/gofiber/fiber/v2"
-)
-
-func main() {
-    app := fiber.New()
-
-    app.Post("/bot", func(c *fiber.Ctx) error {
-        var data map[string]interface{}
-        if err := c.BodyParser(&data); err != nil {
-            return err
-        }
-
-        if event, ok := data["event"].(string); ok && event == "message" {
-            fmt.Println("Received message:", data["payload"])
-            // Process message...
-        }
-        return c.SendString("OK")
-    })
-
-    app.Listen(":3000")
-}
-            </code>
-          </pre>
-                </div>
+                {{ .Page.RenderString (readFile "/layouts/code/language/go/receive-message.md") | safeHTML }}
             </div>
-
         </div>
     </div>
 </section>

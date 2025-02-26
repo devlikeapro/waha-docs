@@ -20,7 +20,7 @@
     {{ if ne .Params.toc false -}}
     <div class="mb-4">
         <nav aria-label="Quaternary navigation">
-          {{ partial "sidebar/docs-toc.html" . }}
+          {{ partial "sidebar/docs-toc-desktop.html" . }}
         </nav>
     </div>
     {{ end -}}
@@ -50,8 +50,6 @@
   {{ range . -}}
   <div class="col">
     <div class="card">
-      {{- .Scratch.Set "fillImageCard" "1270x620 Center" -}}
-      {{ partial "content/card-image.html" . }}
       <div class="card-body">
         <article>
           <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>

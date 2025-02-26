@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-start mb-4' data-aos="fade-up">
+            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-center mb-4' data-aos="fade-up">
                 <div>
                     <img
                             src='/images/java.svg' title='WhatsApp + Java'
@@ -65,89 +65,19 @@
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="100">
-                <img
-                        src='/images/icons/whatsapp-channels.svg'
-                        alt='WhatsApp Channel Logo'
-                        style='width: 5rem'
-                >
-                <h2 class='h4'>
-                    Install Dependencies
-                </h2>
-
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-bash' data-lang='bash' style='padding: 1rem!important; border-radius: 0.5rem'>java --version
-            </code>
-          </pre>
-                </div>
+                <img src='/images/icons/whatsapp-channels.svg' alt='WhatsApp Channel Logo' style='width: 5rem' >
+                {{ .Page.RenderString (readFile "/layouts/code/language/java/install-dependencies.md") | safeHTML }}
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="50">
                 <img src='/images/icons/message-green.png' alt='Free' style='width: 5rem'>
-                <h2 class='h4 color-accent'>Send Messages</h2>
-
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>
-import kong.unirest.HttpResponse;
-import kong.unirest.JsonNode;
-import kong.unirest.Unirest;
-
-public class WhatsAppClient {
-    public static void main(String[] args) {
-        String url = "http://localhost:3000/api/sendText";
-
-        HttpResponse<JsonNode> response = Unirest.post(url)
-            .header("Content-Type", "application/json")
-            .body("{\"session\": \"default\", \"chatId\": \"12132132130@newsletter\", \"text\": \"Hi there!\"}")
-            .asJson();
-
-        System.out.println(response.getBody());
-    }
-}
-            </code>
-          </pre>
-                </div>
-
+                {{ .Page.RenderString (readFile "/layouts/code/language/java/send-message.md") | safeHTML }}
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="150">
                 <img src='/images/icons/button-green.png' alt='API' style='width: 5rem'>
-                <h2 class='h4'>
-                    Receive Messages
-                </h2>
-
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>
-import io.javalin.Javalin;
-import io.javalin.http.Context;
-import org.json.JSONObject;
-
-public class WhatsAppWebhook {
-    public static void main(String[] args) {
-        Javalin app = Javalin.create().start(7000);
-
-        app.post("/bot", WhatsAppWebhook::handleWebhook);
-    }
-
-    private static void handleWebhook(Context ctx) {
-        JSONObject json = new JSONObject(ctx.body());
-        if (!"message".equals(json.getString("event"))) {
-            processMessage(json.getJSONObject("payload"));
-        }
-        ctx.result("OK");
-    }
-
-    private static void processMessage(JSONObject payload) {
-        System.out.println("Received message: " + payload.toString());
-    }
-}
-            </code>
-          </pre>
-                </div>
+                {{ .Page.RenderString (readFile "/layouts/code/language/java/receive-message.md") | safeHTML }}
             </div>
-
         </div>
     </div>
 </section>

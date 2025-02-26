@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-start mb-4' data-aos="fade-up">
+            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-center mb-4' data-aos="fade-up">
                 <div>
                     <img
                             src='/images/kotlin-whatsapp.png' title='WhatsApp + Kotlin'
@@ -64,96 +64,19 @@
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="100">
-                <img
-                        src='/images/icons/whatsapp-channels.svg'
-                        alt='WhatsApp Channel Logo'
-                        style='width: 5rem'
-                >
-                <h2 class='h4'>
-                    Install Dependencies
-                </h2>
-
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-bash' data-lang='bash' style='padding: 1rem!important; border-radius: 0.5rem'>
-# build.gradle.kts
-dependencies {
-    implementation("io.ktor:ktor-server-core:2.3.5")
-    implementation("io.ktor:ktor-server-netty:2.3.5")
-    implementation("io.ktor:ktor-client-core:2.3.5")
-    implementation("io.ktor:ktor-client-cio:2.3.5") // Optional HTTP client
-}
-            </code>
-          </pre>
-                </div>
+                <img src='/images/icons/whatsapp-channels.svg' alt='WhatsApp Channel Logo' style='width: 5rem' >
+                {{ .Page.RenderString (readFile "/layouts/code/language/kotlin/install-dependencies.md") | safeHTML }}
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="50">
                 <img src='/images/icons/message-green.png' alt='Free' style='width: 5rem'>
-                <h2 class='h4 color-accent'>Send Messages</h2>
-
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>
-import io.ktor.client.*
-import io.ktor.client.request.*
-import io.ktor.http.*
-
-suspend fun sendMessage() {
-    val client = HttpClient()
-    val response = client.post("http://localhost:3000/api/sendText") {
-        contentType(ContentType.Application.Json)
-        setBody(
-            mapOf(
-                "session" to "default",
-                "chatId" to "12132132130@newsletter",
-                "text" to "Hi there!"
-            )
-        )
-    }
-    println(response.status)
-}
-            </code>
-          </pre>
-                </div>
-
+                {{ .Page.RenderString (readFile "/layouts/code/language/kotlin/send-message.md") | safeHTML }}
             </div>
-
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="150">
                 <img src='/images/icons/button-green.png' alt='API' style='width: 5rem'>
-                <h2 class='h4'>
-                    Receive Messages
-                </h2>
-
-                <div class='code-block highlight' style='text-align: left'>
-          <pre tabindex='0' class='chroma m-0'>
-            <code class='language-json' data-lang='json' style='padding: 1rem!important; border-radius: 0.5rem'>
-import io.ktor.application.*
-import io.ktor.request.*
-import io.ktor.response.*
-import io.ktor.routing.*
-import io.ktor.server.engine.*
-import io.ktor.server.netty.*
-
-fun main() {
-    embeddedServer(Netty, port = 8080) {
-        routing {
-            post(&quot;/bot&quot;) {
-                val data = call.receive&lt;Map&lt;String, Any&gt;&gt;()
-                if (data[&quot;event&quot;] != &quot;message&quot;) {
-                    processMessage(data[&quot;payload&quot;])
-                }
-                call.respondText(&quot;OK&quot;)
-            }
-        }
-    }.start(wait = true)
-}
-            </code>
-          </pre>
-                </div>
+                {{ .Page.RenderString (readFile "/layouts/code/language/kotlin/receive-message.md") | safeHTML }}
             </div>
-
         </div>
     </div>
 </section>
