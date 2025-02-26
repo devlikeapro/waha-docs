@@ -61,14 +61,20 @@ Also, Docker makes installation and update processes so simple, just one command
 
 ## Step 1. Download image
 
-Assuming you have installed [Docker](https://docs.docker.com/get-docker/), let's download the image.
+Assuming you have installed [Docker](https://docs.docker.com/get-docker/), let's download the image!
+Follow the instructions below:
 
+{{< tabs "download-docker-image" >}}
+
+{{< tab "WAHA Core" >}}
 Run the command below:
 
 ```bash
 docker pull devlikeapro/waha
 ```
+{{< /tab >}}
 
+{{< tab "➕ WAHA Plus" >}}
 If you got the
 [➕ WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}})
 , use the following commands:
@@ -82,9 +88,9 @@ docker logout
 👉 Go to
 [**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
 to generate the command with the right version.
+{{< /tab >}}
 
-#### ARM processors
-
+{{< tab "WAHA (ARM)" >}}
 If you're using ARM (like Apple M1/M2, Raspberry Pi etc.) - use following commands to download the image:
 ```bash
 # Download the image
@@ -105,6 +111,9 @@ docker logout
 # Rename it, so you can use devlikeapro/waha image in other place
 docker tag devlikeapro/waha-plus:arm devlikeapro/waha-plus
 ```
+{{< /tab >}}
+
+{{< /tabs >}}
 
 ## Step 2. Run WAHA
 
