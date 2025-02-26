@@ -349,8 +349,8 @@ POST /api/sendFile
 
 You can send files in two ways:
 
-1. Provide a URL for the file.
-2. Encode the whole file content into base64 and send it in the request body.
+1. Provide a **URL** for the file.
+2. Encode the whole file content into **BASE64** and send it in the request body.
 
 **Body**
 {{< tabs "send-file-body" >}}
@@ -471,11 +471,14 @@ The request body is pretty simple:
 ```
 
 ## Add a reaction
+Use API to add a reaction to a message.
 
-Use `PUT /api/reaction` method to set reaction to a message.
+```http request
+PUT /api/reaction
+```
 
-{{< callout note >}}
-  Reaction API uses PUT, not POST request! Please make sure you send right request.
+{{< callout context="note" title="Use PUT method" icon="outline/alert-octagon" >}}
+Reaction API uses **PUT**, not **POST** request! Please make sure you send right request.
 {{< /callout >}}
 
 
@@ -487,7 +490,7 @@ Use `PUT /api/reaction` method to set reaction to a message.
 }
 ```
 
-To remove reaction from a message - send empty string in the reaction request.
+To **remove reaction from a message** - send empty string in the reaction request:
 
 ```json
 {
