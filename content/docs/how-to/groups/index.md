@@ -13,7 +13,7 @@ weight: 240
 
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
-{{< include file="content/en/docs/how-to/groups/features.md" >}}
+{{< include file="content/docs/how-to/groups/features.md" >}}
 
 ## Endpoints
 - `{session}` - use the session name for Whatsapp instance that you created with `POST /api/session` endpoint
@@ -368,22 +368,22 @@ Invalidates the current group invite code and generates a new one.
 ## Events
 Check [**🔄 Webhooks**]({{< relref "/docs/how-to/webhooks" >}}) for more information how to subscribe to events.
 
-{{< include file="content/en/docs/how-to/groups/features-events.md" >}}
+{{< include file="content/docs/how-to/groups/features-events.md" >}}
 
 ### group.v2.join
-{{< include file="content/en/docs/how-to/groups/events-group.v2.join.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.v2.join.md" >}}
 
 ### group.v2.leave
-{{< include file="content/en/docs/how-to/groups/events-group.v2.leave.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.v2.leave.md" >}}
 
 ### group.v2.participants
-{{< include file="content/en/docs/how-to/groups/events-group.v2.participants.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.v2.participants.md" >}}
 
 ### group.v2.update
-{{< include file="content/en/docs/how-to/groups/events-group.v2.update.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.v2.update.md" >}}
 
 ### group.join
-{{< include file="content/en/docs/how-to/groups/events-group.join.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.join.md" >}}
 
 ### group.leave
-{{< include file="content/en/docs/how-to/groups/events-group.leave.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.leave.md" >}}

@@ -29,7 +29,7 @@ when you create a new session.
 
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
-{{< include file="content/en/docs/how-to/presence/features.md" >}}
+{{< include file="content/docs/how-to/presence/features.md" >}}
 
 ## Endpoints
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).

@@ -130,14 +130,14 @@ it's the engine WAHA runs by default.
 
 ### 🔄 Webhooks
 
-{{< include file="content/en/docs/how-to/webhooks/features.md" >}}
+{{< include file="content/docs/how-to/webhooks/features.md" >}}
 
 
 ### 🖥️ Sessions
 Read more about
 [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
 
-{{< include file="content/en/docs/how-to/sessions/features.md" >}}
+{{< include file="content/docs/how-to/sessions/features.md" >}}
 
 ### 📤 Messages
 Read more about
@@ -145,61 +145,61 @@ Read more about
 and
 [**📥 Receive Messages**]({{< relref "/docs/how-to/receive-messages" >}})
 
-{{< include file="content/en/docs/how-to/send-messages/features.md" >}}
+{{< include file="content/docs/how-to/send-messages/features.md" >}}
 
 ### 🟢 Status
 Read more about
 [**🟢 Status**]({{< relref "/docs/how-to/status" >}})
 
-{{< include file="content/en/docs/how-to/status/features.md" >}}
+{{< include file="content/docs/how-to/status/features.md" >}}
 
 ### 💬 Chats
 Read more about
 [**💬 Chats**]({{< relref "/docs/how-to/chats" >}})
 
-{{< include file="content/en/docs/how-to/chats/features.md" >}}
+{{< include file="content/docs/how-to/chats/features.md" >}}
 
 ### 👤 Contacts
 Read more about
 [**👤 Contacts**]({{< relref "/docs/how-to/contacts" >}})
 
-{{< include file="content/en/docs/how-to/contacts/features.md" >}}
+{{< include file="content/docs/how-to/contacts/features.md" >}}
 
 ### 📢 Channels
 Read more about
 [**📢 Channels**]({{< relref "/docs/how-to/channels" >}})
 
-{{< include file="content/en/docs/how-to/channels/features.md" >}}
+{{< include file="content/docs/how-to/channels/features.md" >}}
 
 ### 👥 Groups
 Read more about 
 [**👥 Groups**]({{< relref "/docs/how-to/groups" >}})
 
-{{< include file="content/en/docs/how-to/groups/features.md" >}}
+{{< include file="content/docs/how-to/groups/features.md" >}}
 
 ### ✅ Presence
 Read more about 
 [**✅ Presence**]({{< relref "/docs/how-to/presence" >}})
 
-{{< include file="content/en/docs/how-to/presence/features.md" >}}
+{{< include file="content/docs/how-to/presence/features.md" >}}
 
 ### 🏷️ Labels
 Read more about 
 [**🏷️ Labels**]({{< relref "/docs/how-to/labels" >}})
 
-{{< include file="content/en/docs/how-to/labels/features.md" >}}
+{{< include file="content/docs/how-to/labels/features.md" >}}
 
 ### 📞 Calls
 Read more about 
 [**📞 Calls**]({{< relref "/docs/how-to/calls" >}})
 
-{{< include file="content/en/docs/how-to/calls/features.md" >}}
+{{< include file="content/docs/how-to/calls/features.md" >}}
 
 ### 🗄️ Storages
 Read more about
 [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}})
 
-{{< include file="content/en/docs/how-to/storages/features.md" >}}
+{{< include file="content/docs/how-to/storages/features.md" >}}
 
 ### 🔍 Observability
 

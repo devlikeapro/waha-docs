@@ -341,9 +341,9 @@ You'll receive the same `metadata` in the webhook payload.
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
 
-{{< include file="content/en/docs/how-to/webhooks/features.md" >}}
+{{< include file="content/docs/how-to/webhooks/features.md" >}}
 
-{{< include file="content/en/docs/how-to/groups/features-events.md" >}}
+{{< include file="content/docs/how-to/groups/features-events.md" >}}
 
 ### session.status
 The `session.status` event is triggered when the session status changes.
@@ -550,19 +550,19 @@ revokes a previously sent message.
 3. `before` field can be null in some cases.
 
 ### chat.archive
-{{< include file="content/en/docs/how-to/chats/webhooks-chat-archive.md" >}}
+{{< include file="content/docs/how-to/chats/webhooks-chat-archive.md" >}}
 
 ### group.v2.join
-{{< include file="content/en/docs/how-to/groups/events-group.v2.join.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.v2.join.md" >}}
 
 ### group.v2.leave
-{{< include file="content/en/docs/how-to/groups/events-group.v2.leave.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.v2.leave.md" >}}
 
 ### group.v2.participants
-{{< include file="content/en/docs/how-to/groups/events-group.v2.participants.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.v2.participants.md" >}}
 
 ### group.v2.update
-{{< include file="content/en/docs/how-to/groups/events-group.v2.update.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.v2.update.md" >}}
 
 ### presence.update
 
@@ -711,15 +711,15 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 
 ### call.received
 
-{{< include file="content/en/docs/how-to/calls/webhooks-call-received.md" >}}
+{{< include file="content/docs/how-to/calls/webhooks-call-received.md" >}}
 
 ### call.accepted
 
-{{< include file="content/en/docs/how-to/calls/webhooks-call-accepted.md" >}}
+{{< include file="content/docs/how-to/calls/webhooks-call-accepted.md" >}}
 
 ### call.rejected
 
-{{< include file="content/en/docs/how-to/calls/webhooks-call-rejected.md" >}}
+{{< include file="content/docs/how-to/calls/webhooks-call-rejected.md" >}}
 
 ### engine.event
 Low-level engine event, for **debug** and **troubleshooting** purposes.
@@ -739,10 +739,10 @@ Low-level engine event, for **debug** and **troubleshooting** purposes.
 ## Deprecated Events
 
 ### group.join
-{{< include file="content/en/docs/how-to/groups/events-group.join.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.join.md" >}}
 
 ### group.leave
-{{< include file="content/en/docs/how-to/groups/events-group.leave.md" >}}
+{{< include file="content/docs/how-to/groups/events-group.leave.md" >}}
 
 
 ### state.change

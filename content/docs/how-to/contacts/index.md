@@ -14,7 +14,7 @@ Methods for contacts.
 ## Features
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
-{{< include file="content/en/docs/how-to/contacts/features.md" >}}
+{{< include file="content/docs/how-to/contacts/features.md" >}}
 
 {{< callout note >}}
   WhatsApp Web does not support adding contacts, so the API doesn't support it too.

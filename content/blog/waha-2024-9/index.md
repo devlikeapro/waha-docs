@@ -74,7 +74,7 @@ You can use the S3 storage to store the media files.
 
 Any **S3 Compatible** storage can be used, such as AWS S3, MinIO, DigitalOcean Spaces, etc. For in-house solutions, you can use [**MinIO**](https://min.io/).
 
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+{{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
 <br>
 

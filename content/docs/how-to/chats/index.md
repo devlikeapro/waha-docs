@@ -14,7 +14,7 @@ Chats methods.
 ## Features
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
-{{< include file="content/en/docs/how-to/chats/features.md" >}}
+{{< include file="content/docs/how-to/chats/features.md" >}}
 
 ## Endpoints
 Parameters in path that you can find in below endpoints:
@@ -293,4 +293,4 @@ Use the method to clear all messages from the chat
 
 ## Webhooks
 ### chat.archive
-{{< include file="content/en/docs/how-to/chats/webhooks-chat-archive.md" >}}
+{{< include file="content/docs/how-to/chats/webhooks-chat-archive.md" >}}

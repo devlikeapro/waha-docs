@@ -17,7 +17,7 @@ You can send statuses (aka stories) using HTTP API!
 ## Features
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
-{{< include file="content/en/docs/how-to/status/features.md" >}}
+{{< include file="content/docs/how-to/status/features.md" >}}
 
 ## Endpoints
 

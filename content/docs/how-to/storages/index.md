@@ -18,9 +18,9 @@ There are several storages that are used by the WAHA, below you can find the lis
 1. [**🖥️ Session** Storage](#sessions) - used to store the session data, such as authentication information, configuration, and other data that is required to keep the session alive and connected to WhatsApp.
 2. [**🖼️ Media** Storage](#media) - used to store the media files, such as images, videos, and other files that are received from the WhatsApp instance.
 
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+{{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
-{{< include file="content/en/docs/how-to/storages/features.md" >}}
+{{< include file="content/docs/how-to/storages/features.md" >}}
 
 ## Sessions
 The **🖥️ Session** storage is used to store the session data, 
@@ -42,7 +42,7 @@ By default, the WAHA uses the **local storage (files)** to store the session dat
   It's <b>well tested solution</b> for <b>production</b>" 
 {{< /callout >}}
 
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+{{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
 In order to use the local storage and save the session data between the container restarts,
 you need to mount the volume to the `/app/.sessions` directory using the `-v` option in `docker run` command:
@@ -84,7 +84,7 @@ If you want to use the PostgreSQL to store the session data, you need to:
 1. Start the PostgreSQL server
 2. Set `WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable` environment variable to connect to the PostgreSQL server.
 
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+{{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
 {{< details "<b>I want to run >100 sessions on PostgresSQL</b>" >}}
 If you see the error:
@@ -110,7 +110,7 @@ If you want to use the MongoDB to store the session data, you need to:
 {{< /callout >}}
 
 #### Example
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+{{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
 First, you need to start MongoDB server:
 ```bash
@@ -151,16 +151,16 @@ You can use the following options to store the media files:
 2. [**PostgreSQL**](#media---postgresql) - stores the media files in the PostgreSQL database.
 3. [**S3**](#media---s3) - stores the media files in the S3 storage.
 
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+{{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
-{{< include file="content/en/docs/how-to/storages/features.md" >}}
+{{< include file="content/docs/how-to/storages/features.md" >}}
 
 Read more about [available configuration options ->]({{<relref "/docs/how-to/config#files">}}).
 
 ## Media - Local
 By default, the WAHA uses the **local file storage** to store the media files and those files has a short lifetime (180 seconds).
 
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+{{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
 So it's your app responsibility to download and store them in a safe persistent place during this time.
 
@@ -182,7 +182,7 @@ The [WAHA Plus ]({{< relref "/docs/how-to/waha-plus" >}}) provides [the health c
 ## Media - PostgreSQL
 You can use the PostgreSQL to store the media files.
 
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+{{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
 Configure the following environment variables to use the PostgreSQL storage:
 - `WAHA_MEDIA_STORAGE=POSTGRESQL` - enable the PostgreSQL storage
@@ -194,7 +194,7 @@ You can use the S3 storage to store the media files.
 
 Any **S3 Compatible** storage can be used, such as AWS S3, MinIO, DigitalOcean Spaces, etc. For in-house solutions, you can use [**MinIO**](https://min.io/).
 
-{{< include file="content/en/docs/how-to/storages/docker-compose.md" >}}
+{{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
 - `WAHA_MEDIA_STORAGE=S3` - enable the S3 storage
 - `WAHA_S3_REGION=eu-west-1` - the region of the S3 bucket

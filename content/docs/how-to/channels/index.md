@@ -17,7 +17,7 @@ Here's complete information about **WhatsApp Channels** (aka Newsletter) and how
 
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
-{{< include file="content/en/docs/how-to/channels/features.md" >}}
+{{< include file="content/docs/how-to/channels/features.md" >}}
 
 ## Channels API
 

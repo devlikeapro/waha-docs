@@ -17,7 +17,7 @@ available in **WhatsApp Business** using the API!
 
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
-{{< include file="content/en/docs/how-to/labels/features.md" >}}
+{{< include file="content/docs/how-to/labels/features.md" >}}
 
 ## Label color
 You'll see two color-related fields in the body and response:

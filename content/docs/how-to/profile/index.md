@@ -17,7 +17,7 @@ You can manage your WhatsApp profile with the following API!
 
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
-{{< include file="content/en/docs/how-to/profile/features.md" >}}
+{{< include file="content/docs/how-to/profile/features.md" >}}
 
 ## API
 

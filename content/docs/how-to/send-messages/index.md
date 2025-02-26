@@ -15,7 +15,7 @@ If you haven't yet - please follow the steps from [**⚡ Quick Start**]({{< relr
 
 ## Features
 
-{{< include file="content/en/docs/how-to/send-messages/features.md" >}}
+{{< include file="content/docs/how-to/send-messages/features.md" >}}
 
 ## Fields
 

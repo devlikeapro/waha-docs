@@ -49,7 +49,7 @@ Here's the list of possible `session.status` values:
 
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
-{{< include file="content/en/docs/how-to/sessions/features.md" >}}
+{{< include file="content/docs/how-to/sessions/features.md" >}}
 
 ## Create Session
 
