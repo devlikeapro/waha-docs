@@ -24,7 +24,7 @@ happening in your WAHA instance in real-time with the new
 [**Event Monitor**]({{< relref "/docs/how-to/dashboard#event-monitor" >}})
 feature!
 
-{{< img src="/images/waha/dashboard/dashboard-event-monitor.png" >}}
+{{< imgo src="/images/waha/dashboard/dashboard-event-monitor.png" >}}
 
 Open
 [dashboard/event-monitor](/dashboard/event-monitor) or at your local instance

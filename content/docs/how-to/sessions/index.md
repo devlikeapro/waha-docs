@@ -26,7 +26,7 @@ messages
 
 Here's Session Lifecycle State Diagram:
 
-{{< img src="/images/waha/waha-session-lifecycle.png" >}}
+{{< imgo src="/images/waha/waha-session-lifecycle.png" >}}
 
 
 ### Session Status
@@ -498,7 +498,7 @@ Accept: application/json
 
 You can change it in Swagger by clicking on **Media Type** dropdown and selecting **application/json**:
 
-{{< img src="/images/swagger-media-type.png" alt="swagger" >}}
+{{< imgo src="/images/swagger-media-type.png" alt="swagger" >}}
 
 ## Get me
 
@@ -575,7 +575,7 @@ Accept: application/json
 
 You can change it in Swagger by clicking on **Media Type** dropdown and selecting **application/json**:
 
-{{< img src="/images/swagger-media-type.png" alt="swagger" >}}
+{{< imgo src="/images/swagger-media-type.png" alt="swagger" >}}
 
 ### Raw
 

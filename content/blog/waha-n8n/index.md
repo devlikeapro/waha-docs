@@ -23,7 +23,7 @@ aliases:
 Here's how you can start developing your WhatsApp automation with using **n8n** and **WAHA** in pair so you can create 
 your own no-code or low-code **WhatsApp automation**:
 
-{{< img src="/images/n8n/waha-n8n.png" >}}
+{{< imgo src="/images/n8n/waha-n8n.png" >}}
 
 ## Installation
 Here's a quick docker-compose we have prepared for you to start using **n8n** with **WAHA**:
@@ -82,7 +82,7 @@ Before starting using the node, you need to add **WAHA API** credentials.
 4. **API Key** - `321` or your API key set in `docker-compose.yaml`
 5. Click **Save** - it'll check the connection and save the credentials
 
-{{< img src="/images/blog/waha-n8n/waha-n8n-credentials.png" >}}
+{{< imgo src="/images/blog/waha-n8n/waha-n8n-credentials.png" >}}
 
 If you need help with that, check the
 [**Create credentials**](https://docs.n8n.io/credentials/add-edit-credentials/)
@@ -91,31 +91,31 @@ If you need help with that, check the
 1. Go to **n8n** => **Home** => **Workflows** => **Create new workflow**.
 2. Remove **Manual trigger**
 
-{{< img src="/images/blog/waha-n8n/waha-n8n-init-workflow.png" >}}
+{{< imgo src="/images/blog/waha-n8n/waha-n8n-init-workflow.png" >}}
 
 ### Step 3: Add WAHA Trigger
 Add **WAHA Trigger** node.
 
-{{< img src="/images/blog/waha-n8n/waha-n8n-WAHATrigger.png" >}}
+{{< imgo src="/images/blog/waha-n8n/waha-n8n-WAHATrigger.png" >}}
 
 ### Step 4: Add Send a text message action
 Add **Send a text message** **WAHA Action** and connect it to `message` **WAHA Trigger** output:
-{{< img src="/images/blog/waha-n8n/waha-n8n-actions.png" >}}
+{{< imgo src="/images/blog/waha-n8n/waha-n8n-actions.png" >}}
 
 ### Step 5: Activate the workflow
 Click **Save** and **Activate** the workflow:
-{{< img src="/images/blog/waha-n8n/waha-n8n-activate-workflow.png" >}}
+{{< imgo src="/images/blog/waha-n8n/waha-n8n-activate-workflow.png" >}}
 
 ### Step 6: Start a new session
 Open the **WAHA Trigger** and expand **Webhook URLs** => **Production URL**
-{{< img src="/images/blog/waha-n8n/waha-n8n-WAHATrigger-url.png" >}}
+{{< imgo src="/images/blog/waha-n8n/waha-n8n-WAHATrigger-url.png" >}}
 
 Go to [http://localhost:3000/dashboard/](http://localhost:3000/dashboard/) (`waha/waha`) and 
 **Start New** session with the URL you got from the **WAHA Trigger**:
-{{< img src="/images/blog/waha-n8n/waha-n8n-dashboard-session.png" >}}
+{{< imgo src="/images/blog/waha-n8n/waha-n8n-dashboard-session.png" >}}
 
 **Scan QR** and wait till session in `WORKING` state:
-{{< img src="/images/blog/waha-n8n/waha-n8n-dashboard-scan-qr.png" >}}
+{{< imgo src="/images/blog/waha-n8n/waha-n8n-dashboard-scan-qr.png" >}}
 
 ### Step 7: Send a message
 Now you can **send any message** to your WhatsApp account, and it'll respond with **"Hi there"** message!
@@ -125,7 +125,7 @@ Now you can **send any message** to your WhatsApp account, and it'll respond wit
 [**https://waha-n8n-workflows.devlike.pro**](http://waha-n8n-templates.devlike.pro/) 
 for workflow templates!
 
-{{< img src="/images/n8n/waha-n8n.png" >}}
+{{< imgo src="/images/n8n/waha-n8n.png" >}}
 
 ## Troubleshooting
 If you're experiencing any issues or have a feature request, please check the below resources:

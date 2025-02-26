@@ -88,7 +88,7 @@ Using the n8n workflow you can integrate **ChatWoot** with **WAHA**!
 [**https://waha-n8n-workflows.devlike.pro**](http://waha-n8n-templates.devlike.pro/)
 for workflow templates!
 
-{{< img src="/images/n8n/waha-n8n.png" >}}
+{{< imgo src="/images/n8n/waha-n8n.png" >}}
 
 
 ## Stability fixes

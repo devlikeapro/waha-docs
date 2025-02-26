@@ -56,7 +56,7 @@ You can observe [**Events**]({{< relref "webhooks" >}}) in real-time using **Eve
 ## Chat UI
 We've built a simple **Chat UI** in Dashboard, so you can see what is possible to implement using WAHA!
 
-{{< img src="/images/waha/dashboard/waha-dashboard-chat-ui.png" >}}
+{{< imgo src="/images/waha/dashboard/waha-dashboard-chat-ui.png" >}}
 
 You can implement **Live Chat**, **Multiple Agents**, and more features using  
 [**WAHA API**](https://waha.devlike.pro/):
@@ -80,9 +80,9 @@ If you're running multiple servers
 (like [**using sharding to handle 50+ sessions ->**]({{< relref "/blog/waha-scaling" >}}))
 you can run a dedicated WAHA just to have a single place where from you can manage all servers:
 
-{{< img src="/images/waha/dashboard/waha-dashboard-servers.drawio.png" >}}
+{{< imgo src="/images/waha/dashboard/waha-dashboard-servers.drawio.png" >}}
 
 After that you can connect all server to the single dashboard:
 
-{{< img src="/images/waha/dashboard/waha-single-dashboard-multiple-servers.png" >}}
+{{< imgo src="/images/waha/dashboard/waha-single-dashboard-multiple-servers.png" >}}
 

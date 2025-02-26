@@ -24,7 +24,7 @@ kindly check the [**🆕 Changelog**]({{< relref "/docs/overview/changelog#20249
 for the full list of changes.
 
 ## Session API
-{{< img src="/images/waha/waha-session-lifecycle.png" >}}
+{{< imgo src="/images/waha/waha-session-lifecycle.png" >}}
 
 We've added a new [**🖥️ Sessions API**]({{< relref "/docs/how-to/sessions" >}}) 
 to manage the session lifecycle.
@@ -70,7 +70,7 @@ WAHA does not use metadata for any internal purposes, it's up to you how to use 
 ## Media S3 Storage
 You can use the S3 storage to store the media files.
 
-{{< img src="/images/waha/storages/waha-storages.drawio.png" >}}
+{{< imgo src="/images/waha/storages/waha-storages.drawio.png" >}}
 
 Any **S3 Compatible** storage can be used, such as AWS S3, MinIO, DigitalOcean Spaces, etc. For in-house solutions, you can use [**MinIO**](https://min.io/).
 
@@ -110,7 +110,7 @@ in addition to `media.*` field it will have `media.s3.*` field with the S3 bucke
 ## Dashboard
 Here's a quick overview of new features available in Dashboard:
 
-{{< img src="/images/blog/waha-2024-9/dashboard-overview.png" >}}
+{{< imgo src="/images/blog/waha-2024-9/dashboard-overview.png" >}}
 - **Server Uptime** - see how long your server is running
 - **Server Restart** - restart the server
 - **Session Metadata** - see the metadata of the session
@@ -118,11 +118,11 @@ Here's a quick overview of new features available in Dashboard:
 - **Session Bulk Actions** - see the bulk actions available for the session
 
 
-{{< img src="/images/blog/waha-2024-9/dashboard-server.png" >}}
+{{< imgo src="/images/blog/waha-2024-9/dashboard-server.png" >}}
 - **Server Environment Variables** - see the environment variables of the server
 - **Server Uptime**
 
-{{< img src="/images/blog/waha-2024-9/dashboard-session.png" >}}
+{{< imgo src="/images/blog/waha-2024-9/dashboard-session.png" >}}
 - **Session Metadata** - add metadata to the session
 
 ## Reply on Message

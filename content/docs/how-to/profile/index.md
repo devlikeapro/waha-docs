@@ -11,7 +11,7 @@ weight: 222
 
 You can manage your WhatsApp profile with the following API!
 
-{{< img src="/images/whatsapp/whatsapp-profile.jpg" full="false" >}}
+{{< imgo src="/images/whatsapp/whatsapp-profile.jpg" full="false" >}}
 
 ## Features
 

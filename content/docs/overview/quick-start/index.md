@@ -10,7 +10,8 @@ parent: "overview"
 weight: 102
 toc: true
 ---
-![alt](waha-first-message.jpg)
+
+{{< imgo src="waha-first-message.jpg" full="false" >}}
 
 ## Step-by-Step guide
 On this page you're going to install and run WAHA,
@@ -122,7 +123,8 @@ docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 </a>
 
 You'll see WAHA Dashboard:
-![alt](dashboard.png)
+
+{{< imgo src="dashboard.png" alt="WAHA Dashboard" >}}
 
 ## Step 3. Start a new session
 

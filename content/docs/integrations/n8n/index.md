@@ -17,7 +17,7 @@ images: ['WAHA+n8n.png']
   <img src="/images/n8n/WAHA+n8n.png" width='200'/>
 </p>
 
-{{< img src="/images/n8n/waha-n8n.png" >}}
+{{< imgo src="/images/n8n/waha-n8n.png" >}}
 
 ## Overview
 
@@ -49,7 +49,7 @@ If you need help with that, check the
 Before using the node you need to add **WAHA API** credentials.
 
 Go to your n8n installation and create a new **WAHA API** credential:
-{{< img src="/images/n8n/waha-n8n-credentials.png" >}}
+{{< imgo src="/images/n8n/waha-n8n-credentials.png" >}}
 
 If it doesn't allow you to **Save** it (no save button) - just put **any string** in `Api Key` field, know issue :(
 
@@ -57,27 +57,27 @@ If it doesn't allow you to **Save** it (no save button) - just put **any string*
 **@devlikeapro/n8n-nodes-waha** provides **WAHA Actions** with all available API calls that you can find 
 in the [WAHA API documentation](https://waha.devlike.pro/docs/how-to/) or [Swagger](https://waha.devlike.pro/swagger/).
 
-{{< img src="/images/n8n/waha-n8n-actions.png" >}}
+{{< imgo src="/images/n8n/waha-n8n-actions.png" >}}
 
 ## WAHA Trigger
 **@devlikeapro/n8n-nodes-waha** provides **WAHA Trigger** node,
 which make it possible to trigger the workflow when the specific event happens in WAHA.
 
-{{< img src="/images/n8n/waha-n8n-WAHATrigger.png" >}}
+{{< imgo src="/images/n8n/waha-n8n-WAHATrigger.png" >}}
 
 💡 **Remember to configure your WAHA Session** with proper **Webhook** with **WAHA trigger** -> **Webhook URL** and 
 the events you want to listen!
 
-{{< img src="/images/n8n/waha-n8n-WAHATrigger-url.png" >}}
+{{< imgo src="/images/n8n/waha-n8n-WAHATrigger-url.png" >}}
 
-{{< img src="/images/n8n/waha-n8n-dashboard-session.png" >}}
+{{< imgo src="/images/n8n/waha-n8n-dashboard-session.png" >}}
 
 ## Workflow Examples
 👉 Check out
 [**https://waha-n8n-workflows.devlike.pro**](http://waha-n8n-templates.devlike.pro/)
 for workflow templates!
 
-{{< img src="/images/n8n/waha-n8n.png" >}}
+{{< imgo src="/images/n8n/waha-n8n.png" >}}
 
 ## Troubleshooting
 If you're experiencing any issues or have a feature request, please check the below resources:

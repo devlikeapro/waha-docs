@@ -22,7 +22,7 @@ We are thrilled to announce the release of [**WAHA 2024.12**]({{< relref "/docs/
 We've added [**💬 Chats Overview API**]({{< relref "/docs/how-to/chats#get-chats-overview" >}})
 to help you build your custom UI clients!
 
-{{< img src="/images/waha/dashboard/waha-dashboard-chat-ui.png" >}}
+{{< imgo src="/images/waha/dashboard/waha-dashboard-chat-ui.png" >}}
 
 Get chats "overview" - the API that almost all
 [**Chat UI**]({{< relref "/docs/how-to/dashboard#chat-ui" >}})

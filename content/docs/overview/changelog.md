@@ -30,10 +30,10 @@ you can **Watch Releases** in [**🐙 WAHA GitHub**](https://github.com/devlikea
 {{< details "💡 GitHub - How To Subscribe" >}}
 
 Go to [https://github.com/devlikeapro/waha](https://github.com/devlikeapro/waha), click **Watch - Custom**:
-{{< img src="/images/github/github-watch.png" full="false" >}}
+{{< imgo src="/images/github/github-watch.png" full="false" >}}
 
 Select **Releases**, click **Apply**:
-{{< img src="/images/github/github-watch-releases.png" full="false" >}}
+{{< imgo src="/images/github/github-watch-releases.png" full="false" >}}
 
 You will get notifications about new releases in associated email!
 
@@ -43,7 +43,7 @@ You will get notifications about new releases in associated email!
 Latest Version: 
 
 [//]: # ([![GitHub Release]&#40;https://img.shields.io/github/v/release/devlikeapro/waha&#41;]&#40;https://github.com/devlikeapro/waha/releases&#41;)
-{{< img src="https://img.shields.io/github/v/release/devlikeapro/waha" full="true" >}}
+{{< imgo src="https://img.shields.io/github/v/release/devlikeapro/waha" full="true" >}}
 
 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 

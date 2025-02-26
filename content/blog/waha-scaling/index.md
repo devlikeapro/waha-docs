@@ -39,7 +39,7 @@ There are two ways to scale WAHA:
 Assuming you've followed the guide [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) and
 you got something like this architecture:
 
-{{< img src="/images/waha/scaling/waha-vertical-scaling.drawio.png" >}}
+{{< imgo src="/images/waha/scaling/waha-vertical-scaling.drawio.png" >}}
 
 **How many sessions you can run adding more resources (CPU and RAM) to the single WAHA server?**
 
@@ -73,7 +73,7 @@ It's not safe to run more than the above numbers on a single server!
 Right now the only way to do it is to run multiple WAHA instances and distribute the sessions between them in
 **Your Application** logic using **Sharding** technique:
 
-{{< img src="/images/waha/scaling/waha-horizontal-scaling.drawio.png" >}}
+{{< imgo src="/images/waha/scaling/waha-horizontal-scaling.drawio.png" >}}
 
 Here's key points how to set up **Horizontal Scaling** using **Sharding** technique:
 
@@ -135,7 +135,7 @@ We'll use **User** for simplicity with a single field:
 
 When a new user asks to **run a new session** - you need to find a suitable WAHA instance to run it.
 You can simply get a list of session with `capacity>0` and pick the one with the highest `capacity`.
-{{< img src="/images/waha/scaling/waha-run-session.png" >}}
+{{< imgo src="/images/waha/scaling/waha-run-session.png" >}}
 
 It's just an example with simple logic. You can adjust it and distribute WhatsApp session based on **country**, **proxy
 settings**,
@@ -146,7 +146,7 @@ customer level, etc.
 When you need to **send a request** to WhatsApp API - you need to find the WAHA instance to send the request.
 You can simply get the `worker_id` from the **WAHASession** and send the request to the WAHA instance using
 the `url` and `api_key`.
-{{< img src="/images/waha/scaling/waha-send-request.png" >}}
+{{< imgo src="/images/waha/scaling/waha-send-request.png" >}}
 
 ### Why this way?
 
@@ -171,11 +171,11 @@ and few more reasons:
 If you're running multiple servers
 you can run a dedicated WAHA [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}) just to have a single place where from you can manage all servers:
 
-{{< img src="/images/waha/dashboard/waha-dashboard-servers.drawio.png" >}}
+{{< imgo src="/images/waha/dashboard/waha-dashboard-servers.drawio.png" >}}
 
 After that you can connect all server to the single dashboard:
 
-{{< img src="/images/waha/dashboard/waha-single-dashboard-multiple-servers.png" >}}
+{{< imgo src="/images/waha/dashboard/waha-single-dashboard-multiple-servers.png" >}}
 
 ## Horizontal Scaling - Auto-Scaling
 
@@ -188,7 +188,7 @@ based on information where each session is running.
 
 It'll also control (using underlying k8s or docker infrastructure) the number of workers based on the load.
 
-{{< img src="/images/waha/scaling/waha-hub.png" >}}
+{{< imgo src="/images/waha/scaling/waha-hub.png" >}}
 
 Kindly [**support the project**]({{< relref "/pricing" >}}) on **PRO** tier if you wish to
 use the feature in the future! 🙏

@@ -13,7 +13,7 @@ weight: 700
 There are several storages that are used by the WAHA, below you can find the list of them and the way to configure them.
 
 
-{{< img src="/images/waha/storages/waha-storages.drawio.png" >}}
+{{< imgo src="/images/waha/storages/waha-storages.drawio.png" >}}
 
 1. [**🖥️ Session** Storage](#sessions) - used to store the session data, such as authentication information, configuration, and other data that is required to keep the session alive and connected to WhatsApp.
 2. [**🖼️ Media** Storage](#media) - used to store the media files, such as images, videos, and other files that are received from the WhatsApp instance.
