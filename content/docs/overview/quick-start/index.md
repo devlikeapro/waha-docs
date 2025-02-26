@@ -170,7 +170,10 @@ The session status will move to `WORKING` status:
 Now we're ready to send first messages to WhatsApp via API!
 
 Replace `123123` with **your phone number without +**, but keep `@c.us` part:
-```bash
+{{< tabs "send-text-message" >}}
+
+{{< tab "curl" >}}
+```sh
 curl -X 'POST' \
   'http://localhost:3000/api/sendText' \
   -H 'accept: application/json' \
@@ -181,6 +184,49 @@ curl -X 'POST' \
   "session": "default"
 }'
 ```
+{{< /tab >}}
+
+{{< tab "JavaScript" >}}
+```js
+fetch('http://localhost:3000/api/sendText', {
+  method: 'POST',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    chatId: "123123@c.us",
+    text: "Hi there!",
+    session: "default"
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+```
+{{< /tab >}}
+
+{{< tab "Python" >}}
+```python
+import requests
+
+url = "http://localhost:3000/api/sendText"
+headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+}
+data = {
+    "chatId": "123123@c.us",
+    "text": "Hi there!",
+    "session": "default"
+}
+
+response = requests.post(url, json=data, headers=headers)
+print(response.json())
+```
+{{< /tab >}}
+
+{{< /tabs >}}
 
 As alternative to `curl`, you can use [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}) for that.
 
