@@ -1,20 +1,20 @@
 [[main]]
-  name = "🤖 GPT"
-  identifier = "gpt"
-  weight = 1
-  url = "/gpt"
+name = "🤖 GPT"
+identifier = "gpt"
+weight = 1
+url = "/gpt"
 
 [[docs]]
-  name = "Overview"
-  weight = 10
-  identifier = "overview"
-  url = "/docs/overview/"
+name = "Overview"
+weight = 10
+identifier = "overview"
+url = "/docs/overview/"
 
 [[docs]]
-  name = "Help"
-  weight = 60
-  identifier = "help"
-  url = "/docs/help/"
+name = "Help"
+weight = 60
+identifier = "help"
+url = "/docs/help/"
 
 # [[docs]]
 #   name = "Lorem"
@@ -24,275 +24,275 @@
 
 
 [[main]]
-  name = "Documentation"
-  identifier = "docs"
-  url = "/docs/overview/introduction/"
-  weight = 10
+name = "Documentation"
+identifier = "docs"
+url = "/docs/overview/introduction/"
+weight = 10
 
 [[main]]
-  name = "⚡ Quick Start"
-  weight = 12
-  url = "/docs/overview/quick-start"
-  parent = "docs"
+name = "⚡ Quick Start"
+weight = 12
+url = "/docs/overview/quick-start"
+parent = "docs"
 
 [[main]]
-  name = "📄 Overview"
-  weight = 13
-  url = "/docs/overview"
-  parent = "docs"
+name = "📄 Overview"
+weight = 13
+url = "/docs/overview"
+parent = "docs"
 
 [[main]]
-  name = "🔍 How to guides"
-  weight = 14
-  url = "/docs/how-to"
-  parent = "docs"
+name = "🔍 How to guides"
+weight = 14
+url = "/docs/how-to"
+parent = "docs"
 
 [[main]]
-  name = "🏭 Engines"
-  weight = 15
-  url = "/docs/engines"
-  parent = "docs"
+name = "🏭 Engines"
+weight = 15
+url = "/docs/engines"
+parent = "docs"
 
 [[main]]
-  name = "🧩 Integrations"
-  weight = 16
-  identifier = "integrations"
-  url = "/docs/integrations"
-  parent = "docs"
+name = "🧩 Integrations"
+weight = 16
+identifier = "integrations"
+url = "/docs/integrations"
+parent = "docs"
 
 [[main]]
-  name = "Dashboard ->"
-  weight = 97
-  url = "/dashboard"
-  parent = "docs"
+name = "Dashboard ->"
+weight = 97
+url = "/dashboard"
+parent = "docs"
 
 [[main]]
-  name = "Swagger ->"
-  weight = 97
-  url = "/swagger"
-  parent = "docs"
-  target = "_blank"
+name = "Swagger ->"
+weight = 97
+url = "/swagger"
+parent = "docs"
+target = "_blank"
 
 [[main]]
-  name = "Postman ->"
-  weight = 98
-  url = "https://www.postman.com/devlikeapro/workspace/waha/collection/35390377-42210829-5a92-45c5-a001-6a453c5d764a?action=share&creator=35390377"
-  parent = "docs"
+name = "Postman ->"
+weight = 98
+url = "https://www.postman.com/devlikeapro/workspace/waha/collection/35390377-42210829-5a92-45c5-a001-6a453c5d764a?action=share&creator=35390377"
+parent = "docs"
 
 [[main]]
-  name = "OpenAPI JSON ->"
-  weight = 99
-  url = "https://waha.devlike.pro/swagger/openapi.json"
-  parent = "docs"
+name = "OpenAPI JSON ->"
+weight = 99
+url = "https://waha.devlike.pro/swagger/openapi.json"
+parent = "docs"
 
 [[main]]
-  name = "WAHA Plus"
-  weight = 20
-  identifier = "waha-plus"
+name = "WAHA Plus"
+weight = 20
+identifier = "waha-plus"
 
 [[main]]
-  name = "➕ WAHA Plus"
-  weight = 10
-  url = "/docs/how-to/waha-plus"
-  parent = "waha-plus"
+name = "➕ WAHA Plus"
+weight = 10
+url = "/docs/how-to/waha-plus"
+parent = "waha-plus"
 
 [[main]]
-  name = "Patron Portal ->"
-  weight = 20
-  url = "https://portal.devlike.pro/"
-  parent = "waha-plus"
+name = "Patron Portal ->"
+weight = 20
+url = "https://portal.devlike.pro/"
+parent = "waha-plus"
 
 [[main]]
-  name = "Get on Patreon ->"
-  weight = 60
-  url = "https://patreon.com/wa_http_api"
-  parent = "waha-plus"
+name = "Get on Patreon ->"
+weight = 60
+url = "https://patreon.com/wa_http_api"
+parent = "waha-plus"
 
 [[main]]
-  name = "Get on Boosty ->"
-  weight = 50
-  url = "https://boosty.to/wa-http-api"
-  parent = "waha-plus"
+name = "Get on Boosty ->"
+weight = 50
+url = "https://boosty.to/wa-http-api"
+parent = "waha-plus"
 [[main]]
-  name = "Get with Crypto ->"
-  weight = 70
-  url = "/pricing/#how-to-donate"
-  parent = "waha-plus"
+name = "Get with Crypto ->"
+weight = 70
+url = "/pricing/#how-to-donate"
+parent = "waha-plus"
 
 [[main]]
-  name = "Blog"
-  weight = 60
-  url = "/blog"
+name = "Blog"
+weight = 60
+url = "/blog"
 
 [[main]]
-  name = "Pricing"
-  weight = 70
-  url = "/pricing"
+name = "Pricing"
+weight = 70
+url = "/pricing"
 
 [[main]]
-  name = "Contact"
-  weight = 80
-  url = "/contact"
+name = "Contact"
+weight = 80
+url = "/contact"
 
 [[main]]
-  name = "🌍 Language"
-  identifier = "language"
-  weight = 99
+name = "🌍 Language"
+identifier = "language"
+weight = 99
 
 [[main]]
-  name = "More"
-  identifier = "more"
-  weight = 90
+name = "More"
+identifier = "more"
+weight = 90
 
 
 [[main]]
-  name = "WhatsApp Channels Automation"
-  parent = "more"
-  url = "/whatsapp-channels/"
-  weight = 91
+name = "WhatsApp Channels Automation"
+parent = "more"
+url = "/whatsapp-channels/"
+weight = 91
 
 [[main]]
-  name = "WhatsApp Status Automation"
-  parent = "more"
-  url = "/whatsapp-status/"
-  weight = 92
+name = "WhatsApp Status Automation"
+parent = "more"
+url = "/whatsapp-status/"
+weight = 92
 [[main]]
-  name = "WhatsApp Groups Automation"
-  parent = "more"
-  url = "/whatsapp-groups/"
-  weight = 93
+name = "WhatsApp Groups Automation"
+parent = "more"
+url = "/whatsapp-groups/"
+weight = 93
 
 [[main]]
-  name = "WhatsApp Low-Code (n8n)"
-  parent = "more"
-  url = "/whatsapp-low-code/"
-  weight = 94
+name = "WhatsApp Low-Code (n8n)"
+parent = "more"
+url = "/whatsapp-low-code/"
+weight = 94
 
 [[main]]
-  name = "WhatsApp Typebot Integration"
-  parent = "more"
-  url = "/whatsapp-typebot/"
-  weight = 95
+name = "WhatsApp Typebot Integration"
+parent = "more"
+url = "/whatsapp-typebot/"
+weight = 95
 
 [[main]]
-  name = "WhatsApp ChatWoot Integration"
-  parent = "more"
-  url = "/whatsapp-chatwoot/"
-  weight = 96
+name = "WhatsApp ChatWoot Integration"
+parent = "more"
+url = "/whatsapp-chatwoot/"
+weight = 96
 
 [[main]]
-  name = "WhatsApp + PHP"
-  parent = "more"
-  url = "/whatsapp-plus-php/"
-  weight = 99
+name = "WhatsApp + PHP"
+parent = "more"
+url = "/whatsapp-plus-php/"
+weight = 99
 
 [[main]]
-  name = "WhatsApp + JS/TS"
-  parent = "more"
-  url = "/whatsapp-plus-javascript/"
-  weight = 99
+name = "WhatsApp + JS/TS"
+parent = "more"
+url = "/whatsapp-plus-javascript/"
+weight = 99
 
 [[main]]
-  name = "WhatsApp + Python"
-  parent = "more"
-  url = "/whatsapp-plus-python/"
-  weight = 99
+name = "WhatsApp + Python"
+parent = "more"
+url = "/whatsapp-plus-python/"
+weight = 99
 
 [[main]]
-  name = "WhatsApp + Java"
-  parent = "more"
-  url = "/whatsapp-plus-java/"
-  weight = 99
+name = "WhatsApp + Java"
+parent = "more"
+url = "/whatsapp-plus-java/"
+weight = 99
 
 [[main]]
-  name = "WhatsApp + Kotlin"
-  parent = "more"
-  url = "/whatsapp-plus-kotlin/"
-  weight = 99
+name = "WhatsApp + Kotlin"
+parent = "more"
+url = "/whatsapp-plus-kotlin/"
+weight = 99
 
 [[main]]
-  name = "WhatsApp + Go"
-  parent = "more"
-  url = "/whatsapp-plus-go/"
-  weight = 99
+name = "WhatsApp + Go"
+parent = "more"
+url = "/whatsapp-plus-go/"
+weight = 99
 
 [[main]]
-  name = "WhatsApp + C#"
-  parent = "more"
-  url = "/whatsapp-plus-csharp/"
-  weight = 99
+name = "WhatsApp + C#"
+parent = "more"
+url = "/whatsapp-plus-csharp/"
+weight = 99
 
 [[main]]
-  name = "🇦🇪 العربية (Arabic)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=ar&hl=ar&u=https://waha.devlike.pro/&client=webapp"
+name = "🇦🇪 العربية (Arabic)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=ar&hl=ar&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇧🇩 বাংলা (Bengali)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=bn&hl=bn&u=https://waha.devlike.pro/&client=webapp"
+name = "🇧🇩 বাংলা (Bengali)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=bn&hl=bn&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇬🇧 English (English)"
-  parent="language"
-  url="https://waha.devlike.pro/"
+name = "🇬🇧 English (English)"
+parent="language"
+url="https://waha.devlike.pro/"
 
 [[main]]
-  name = "🇮🇷 فارسی (Persian)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=fa&hl=fa&u=https://waha.devlike.pro/&client=webapp"
+name = "🇮🇷 فارسی (Persian)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=fa&hl=fa&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇮🇳 हिंदी (Hindi)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=hi&hl=hi&u=https://waha.devlike.pro/&client=webapp"
+name = "🇮🇳 हिंदी (Hindi)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=hi&hl=hi&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇮🇩 Bahasa Indonesia (Indonesian)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=id&hl=id&u=https://waha.devlike.pro/&client=webapp"
+name = "🇮🇩 Bahasa Indonesia (Indonesian)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=id&hl=id&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇧🇷🇵🇹 Português (Portuguese)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=pt&hl=pt&u=https://waha.devlike.pro/&client=webapp"
+name = "🇧🇷🇵🇹 Português (Portuguese)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=pt&hl=pt&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇷🇺 Русский (Russian)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=ru&hl=ru&u=https://waha.devlike.pro/&client=webapp"
+name = "🇷🇺 Русский (Russian)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=ru&hl=ru&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇪🇸 Español (Spanish)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=es&hl=es&u=https://waha.devlike.pro/&client=webapp"
+name = "🇪🇸 Español (Spanish)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=es&hl=es&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇹🇷 Türkçe (Turkish)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=tr&hl=tr&u=https://waha.devlike.pro/&client=webapp"
+name = "🇹🇷 Türkçe (Turkish)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=tr&hl=tr&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇺🇦 Українська (Ukrainian)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=uk&hl=uk&u=https://waha.devlike.pro/&client=webapp"
+name = "🇺🇦 Українська (Ukrainian)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=uk&hl=uk&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇵🇰 ਪੰਜਾਬੀ (Punjabi)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=pa&hl=pa&u=https://waha.devlike.pro/&client=webapp"
+name = "🇵🇰 ਪੰਜਾਬੀ (Punjabi)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=pa&hl=pa&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-  name = "🇫🇷 Français (French)"
-  parent="language"
-  url="https://translate.google.com/translate?sl=en&tl=fr&hl=fr&u=https://waha.devlike.pro/&client=webapp"
+name = "🇫🇷 Français (French)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=fr&hl=fr&u=https://waha.devlike.pro/&client=webapp"
 
 [[social]]
-  name = "GitHub"
-  pre = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-github\"><path d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\"></path></svg>"
-  url = "https://github.com/devlikeapro/waha"
-  post = "v0.1.0"
-  weight = 10
+name = "GitHub"
+pre = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-github\"><path d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\"></path></svg>"
+url = "https://github.com/devlikeapro/waha"
+post = "v0.1.0"
+weight = 10
 
 #[[social]]
 #  name = "Twitter"
