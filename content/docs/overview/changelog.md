@@ -15,14 +15,13 @@ toc: true
 
 
 ## Get Notified
-If you wish to get **Monthly Summary** about WAHA changes, please subscribe to our channels
+If you wish to get **Monthly Summary** about WAHA changes, subscribe to our channels.
 
-👉 **You can subscribe on free tier!**
+{{< callout context="tip" title="You can subscribe on free tier!" icon="outline/rss" >}}
 - [**Patreon ->**](https://patreon.com/wa_http_api)
 - [**Boosty ->**](https://boosty.to/wa-http-api)
 - [**dev.to ->**](https://dev.to/waha)
-
-
+{{< /callout >}}
 
 If you wish to get **Real-Time Email** about new changes,
 you can **Watch Releases** in [**🐙 WAHA GitHub**](https://github.com/devlikeapro/waha)
@@ -39,13 +38,14 @@ You will get notifications about new releases in associated email!
 
 {{< /details >}}
 ## Releases
+Latest Version:
+<a href="https://github.com/devlikeapro/waha/releases" target="_blank">
+<img alt="GitHub Release" src="https://img.shields.io/github/v/release/devlikeapro/waha">
+</a>
 
-Latest Version: 
-
-[//]: # ([![GitHub Release]&#40;https://img.shields.io/github/v/release/devlikeapro/waha&#41;]&#40;https://github.com/devlikeapro/waha/releases&#41;)
-{{< imgo src="https://img.shields.io/github/v/release/devlikeapro/waha" full="true" >}}
-
+{{< callout context="note" icon="outline/info-circle" >}}
 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
+{{< /callout >}}
 
 ### 2025.2
 `2025.2.7`
