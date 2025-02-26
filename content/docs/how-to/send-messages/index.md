@@ -524,8 +524,8 @@ POST /api/sendVoice
 
 You can send voice messages in two ways:
 
-1. Provide a URL for the voice.
-2. Encode the whole file content into base64 and send it in the request body.
+1. Provide a **URL** for the voice.
+2. Encode the whole file content into **BASE64** and send it in the request body.
 
 👉 Please make sure your file has **OPUS** encoding and packed in OGG container. You can convert to this using ffmpeg (
 there's many libs for that in popular languages).
@@ -535,7 +535,7 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 64k output.opus
 ```
 
 **Body**
-{{< tabs "send-image-body" >}}
+{{< tabs "send-voice-body" >}}
 {{< tab "URL" >}}
 ```json
 {
@@ -590,11 +590,12 @@ ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.
 
 You can send voice messages in two ways:
 
-1. Provide a URL for the file and the API will download it and send it in the request body.
-2. Provide the file as a base64 string in the request body.
+1. Provide a **URL** for the file and the API will download it and send it in the request body.
+2. Provide the file as a **BASE64** string in the request body.
 
-### URL
-
+**Body**
+{{< tabs "send-video-body" >}}
+{{< tab "URL" >}}
 ```json
 {
   "session": "default",
@@ -609,9 +610,9 @@ You can send voice messages in two ways:
   }
 }
 ```
+{{< /tab >}}
 
-### Base64
-
+{{< tab "BASE64" >}}
 ```json
 {
   "chatId": "11111111111@c.us",
@@ -626,6 +627,8 @@ You can send voice messages in two ways:
   "session": "default"
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Send file 
 
