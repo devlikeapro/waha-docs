@@ -252,8 +252,6 @@ docker compose logs -f
 docker compose logs --since 1h  
 ```
 
-## What is next?
-- Learn how to send images and other messages [**📤 Send messages**]({{< relref "/docs/how-to/send-messages" >}})
-- Read how to receive and response to messages [**📥 Receive messages**]({{< relref "/docs/how-to/receive-messages" >}})
-- Make sure your API is protected with [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
-- 👉 Ask [**🤖 WAHA GPT**]({{< relref "/gpt" >}}) to help you build **{python|js|php}** client!
+## What's next?
+
+{{< include file="content/docs/overview/quick-start/links.md" >}}

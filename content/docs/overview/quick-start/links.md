@@ -1,5 +1,4 @@
-<br>
-
+<div></div>
 {{< card-grid >}}
 {{< card title="Learn WAHA" icon="outline/book" color="yellow" >}}
 
