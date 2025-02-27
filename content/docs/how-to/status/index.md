@@ -146,13 +146,19 @@ Read more about [**Docker images and engines →**]({{< relref "/docs/how-to/eng
 POST /api/{session}/status/voice
 ```
 
-👉 Please make sure your file has **OPUS** encoding and packed in OGG container. You can convert to this using ffmpeg (there's many libs for that in popular languages).
+{{< callout context="note" title="Convert file before sending" icon="outline/file" >}}
+Make sure your file has **OPUS** encoding and packed in **OGG** container. You can convert to this using ffmpeg (
+there's many libs for that in popular languages).
+
 ```bash
 ffmpeg -i input.mp3 -c:a libopus -b:a 32k -ar 48000 -ac 1 output.opus
 ```
+{{< /callout >}}
 
-#### URL
-```json
+**Body**
+{{< tabs "send-voice-status-body" >}}
+{{< tab "URL" >}}
+```json { title="Body" }
 {
   "file": {
     "mimetype": "audio/ogg; codecs=opus",
@@ -161,10 +167,10 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 32k -ar 48000 -ac 1 output.opus
   "backgroundColor": "#38b42f"
 }
 ```
+{{< /tab >}}
 
-#### Base64
-
-```json
+{{< tab "BASE64" >}}
+```json { title="Body" }
 {
   "file": {
     "mimetype": "audio/ogg; codecs=opus",
@@ -173,13 +179,19 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 32k -ar 48000 -ac 1 output.opus
   "backgroundColor": "#38b42f"
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 
 ### Delete status
 Here's how you can delete status message you previously sent.
 
+```http request
+POST /api/{session}/status/delete
+```
+
 When you send status - you'll get the response like below, save `key.id` (it's message id).
-```json
+```json { title="Response" }
 {
   "key": {
     "remoteJid": "status@broadcast",
@@ -192,14 +204,7 @@ When you send status - you'll get the response like below, save `key.id` (it's m
 }
 ```
 
-Then call
-```http request
-POST /api/{session}/status/delete
-```
-
-with payload from `key.id`
-
-```json
+```json { title="Body" }
 {
   "id": "AAAAAAAAAAAAAAAAAAAAAA"
 }
