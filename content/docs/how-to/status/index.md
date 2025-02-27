@@ -64,8 +64,9 @@ Send status to specific contacts (available in **NOWEB**):
 POST /api/{session}/status/image
 ```
 
-#### URL
-```json
+{{< tabs "send-image-status-body" >}}
+{{< tab "URL" >}}
+```json { title="Body" }
 {
   "file": {
     "mimetype": "image/jpeg",
@@ -74,8 +75,9 @@ POST /api/{session}/status/image
   "caption": "string"
 }
 ```
+{{< /tab >}}
 
-#### Base64
+{{< tab "BASE64" >}}
 
 ```json
 {
@@ -86,33 +88,34 @@ POST /api/{session}/status/image
   "caption": "string"
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Send video status 
 ```http request
 POST /api/{session}/status/video
 ```
 
----
-
-👉 Please make sure your file has **mp4 using libx264** format.
+{{< callout context="note" title="Convert file before sending" icon="outline/file" >}}
+Make sure your file has **mp4 using libx264** format.
 
 ```bash
 ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.mp4
 ```
+`-map 0 -movflags +faststart` options required for thumbnail generation.
+{{< /callout >}}
 
-- `-map 0 -movflags +faststart` - required for thumbnail generation.
 
----
+{{< callout context="tip" title="WEBJS - use :chrome image" icon="outline/browser" >}}
+If you're using **WEBJS** (default engine) - make sure to use `devlikeapro/waha-plus:chrome` docker image.
 
-👉  **WEBJS** (default) engine notes for sending videos 
-- Use `devlikeapro/waha-plus:chrome` docker image.
-  Read more about [**Docker images and engines →**]({{< relref "/docs/how-to/engines" >}}).
+Read more about [**Docker images and engines →**]({{< relref "/docs/how-to/engines" >}}).
+{{< /callout >}}
 
----
 
-#### URL
-
-```json
+{{< tabs "send-video-status-body" >}}
+{{< tab "URL" >}}
+```json { title="Body" }
 {
   "file": {
     "mimetype": "video/mp4",
@@ -121,10 +124,10 @@ ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.
   "backgroundColor": "#38b42f"
 }
 ```
+{{< /tab >}}
 
-#### Base64
-
-```json
+{{< tab "BASE64" >}}
+```json { title="Body" }
 {
   "file": {
     "mimetype": "video/mp4",
@@ -134,6 +137,8 @@ ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.
   "backgroundColor": "#38b42f"
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Send voice status 
 

@@ -274,13 +274,17 @@ You can send voice messages in two ways:
 {{< /tabs >}}
 
 ## Send video
+```http request
+POST /api/sendVideo
+```
+
 {{< callout context="note" title="Convert file before sending" icon="outline/file" >}}
 Make sure your file has **mp4 using libx264** format.
 
 ```bash
 ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.mp4
 ```
-- `-map 0 -movflags +faststart` options required for thumbnail generation.
+`-map 0 -movflags +faststart` options required for thumbnail generation.
 {{< /callout >}}
 
 {{< callout context="tip" title="WEBJS - use :chrome image" icon="outline/browser" >}}
@@ -290,10 +294,6 @@ Read more about [**Docker images and engines →**]({{< relref "/docs/how-to/eng
 {{< /callout >}}
 
 Use API to send a video to a chat.
-
-```http request
-POST /api/sendVideo
-```
 
 You can send voice messages in two ways:
 
