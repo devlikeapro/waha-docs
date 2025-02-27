@@ -30,7 +30,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 ### Send text status
 Send status to **all** your contacts:
-```bash
+```http request
 POST /api/{session}/status/text
 ```
 

@@ -57,7 +57,7 @@ Here's the **current** color map (`color` - `colorHex` - **preview**):
 
 You can get a list of labels for the session using the endpoint:
 
-```bash
+```http request
 GET /api/{session}/labels
 ```
 
@@ -78,7 +78,7 @@ Response:
 
 ### Create label
 
-```bash
+```http request
 POST /api/{session}/labels
 ```
 
@@ -99,7 +99,7 @@ Using `colorHex`
 ```
 
 ### Update label
-```bash
+```http request
 PUT /api/{session}/labels/{labelId}
 ```
 
@@ -120,7 +120,7 @@ Using `colorHex`
 ```
 
 ### Delete label
-```bash
+```http request
 DELETE /api/{session}/labels/{labelId}
 ```
 
@@ -128,7 +128,7 @@ DELETE /api/{session}/labels/{labelId}
 
 You can get a list of chats by label id using the endpoint:
 
-```bash
+```http request
 GET /api/{session}/labels/{labelId}/chats
 ```
 
@@ -142,7 +142,7 @@ the same way as
 
 You can get a list of labels by chat id using the endpoint:
 
-```bash
+```http request
 GET /api/{session}/labels/chats/{chatId}/
 ```
 
@@ -162,7 +162,7 @@ Response:
 
 ### Update labels to chat
 
-```bash
+```http request
 PUT /api/{session}/labels/chats/{chatId}/
 ```
 

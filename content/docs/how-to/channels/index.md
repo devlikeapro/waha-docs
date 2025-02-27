@@ -127,7 +127,7 @@ You can get a channel by Invite Code `GET /api/{session}/channels/{inviteCode}`
 
 You can search **public** (not subscribed yet) channels **by view**:
 
-```bash
+```http request
 POST /api/{session}/channels/search/by-view
 ```
 
@@ -179,7 +179,7 @@ POST /api/{session}/channels/search/by-view
 {{< imgo src="/images/whatsapp/channels/channels-text.png" full="false" >}}
 
 You can search **public** (not subscribed yet) channels **by text**:
-```bash
+```http request
 POST /api/{session}/channels/search/by-text
 ```
 
@@ -200,7 +200,7 @@ POST /api/{session}/channels/search/by-text
 ### Get Search Views
 List of available views for search:
 
-```bash
+```http request
 GET /api/{session}/channels/search/views
 ```
 
@@ -217,7 +217,7 @@ GET /api/{session}/channels/search/views
 ### Get Search Countries
 List of available countries for search (not full one, you can try different `code` values if you don't see your country):
 
-```bash
+```http request
 GET /api/{session}/channels/search/countries
 ```
 
@@ -234,7 +234,7 @@ GET /api/{session}/channels/search/countries
 ### Get Search Categories
 List of available categories for search:
 
-```bash
+```http request
 GET /api/{session}/channels/search/categories
 ```
 
@@ -256,7 +256,7 @@ GET /api/{session}/channels/search/categories
 You can get latest messages from **public** channels (not subscribed yet) by invite code (or channel id).
 Returns only **preview** messages (one that you'll see on channel preview).
 
-```bash
+```http request
 GET /api/{SESSION}/channels/{INVITE}/messages/preview?downloadMedia=false&limit=100
 ```
 
@@ -348,7 +348,7 @@ You can use regular
 [`GET /api/{session}/chats/{chatId}/messages`]({{< relref "/docs/how-to/chats#get-messages-from-chat" >}})
 to fetch messages from the channel
 
-```bash
+```http request
 GET /api/default/chats/123%40newsletter/messages?downloadMedia=true&limit=100
 ```
 

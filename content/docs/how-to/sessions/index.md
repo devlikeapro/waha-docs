@@ -489,7 +489,7 @@ Get screenshot of the session's screen.
 
 ### Binary
 
-```bash
+```http request
 GET /api/screenshot?session=default
 ```
 
@@ -497,8 +497,11 @@ GET /api/screenshot?session=default
 
 You can get screenshot in base64 format by adding `Accept: application/json` header to the request.
 
-```bash
+```http request
 GET /api/screenshot?session=default
+```
+
+```http request {title="Headers"}
 Accept: application/json
 ```
 
@@ -519,7 +522,7 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 
 Get information about the associated account for that session (if any).
 
-```bash
+```http request
 GET /api/sessions/{session}/me
 ```
 
@@ -542,7 +545,7 @@ null
 
 The simplest way to authenticate a new session - get QR code and scan it on your device.
 
-```bash
+```http request
 GET /api/{session}/auth/qr
 ```
 
@@ -574,8 +577,11 @@ Accept: image/png
 
 **Base64 image** - you'll get image in base64 format in response if you set `Accept: application/json` header.
 
-```bash
+```http request
 GET /api/{session}/auth/qr?format=image
+```
+
+```http request {title="Headers"}
 Accept: application/json
 ```
 
@@ -594,7 +600,7 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 
 **Raw** - you'll get raw data in response, you can use it **to generate QR code on your side** with the `value`.
 
-```bash
+```http request
 GET /api/{session}/auth/qr?format=raw
 ```
 
@@ -610,7 +616,7 @@ See the list of engines [**that support the features ->**]({{< relref "/docs/how
 
 You can [link a session with phone number](https://faq.whatsapp.com/1324084875126592) - make a request to the endpoint.
 
-```bash
+```http request
 POST /api/{session}/auth/request-code
 ```
 

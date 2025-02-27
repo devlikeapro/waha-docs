@@ -108,7 +108,7 @@ GET /api/{session}/chats/{chatId}/picture[?refresh=True]
 ### Archive chat
 
 Use the method to archive chat
-```bash
+```http request
 POST /api/{session}/chats/{chatId}/archive
 ```
 
@@ -116,14 +116,14 @@ POST /api/{session}/chats/{chatId}/archive
 
 Use the method to unarchive chat
 
-```bash
+```http request
 POST /api/{session}/chats/{chatId}/unarchive
 ```
 
 ### Unread chat
 Mark chat as unread
 
-```bash
+```http request
 POST /api/{session}/chats/{chatId}/unread
 ```
 

@@ -95,7 +95,7 @@ Now you can manage (create, update, delete) [**🏷️ Labels**](/docs/how-to/la
 
 {{< details "Create Label" >}}
 
-```bash
+```http request
 POST /api/{session}/labels
 ```
 
@@ -119,7 +119,7 @@ Using `colorHex`
 
 {{< details "Update Label" >}}
 
-```bash
+```http request
 PUT /api/{session}/labels/{labelId}
 ```
 
@@ -143,7 +143,7 @@ Using `colorHex`
 
 {{< details "Delete Label" >}}
 
-```bash
+```http request
 DELETE /api/{session}/labels/{labelId}
 ```
 

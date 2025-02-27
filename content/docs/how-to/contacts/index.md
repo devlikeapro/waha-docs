@@ -86,7 +86,7 @@ Get contact
 
 If you want to check if phone number is registered in WhatsApp (even if the number is not in your contact list) - use
 this endpoint for that.
-```bash
+```http request
 GET /api/contacts/check-exists?phone=11231231231&session=default
 ```
 

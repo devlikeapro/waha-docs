@@ -41,7 +41,7 @@ Request:
 
 ### Get all groups
 
-```bash
+```http request
 GET /api/{session}/groups
 ```
 
@@ -75,7 +75,7 @@ If you see timeout or the request takes too long - consider using `limit` parame
 ### Join group
 If you have invite URL for a group (like `https://chat.whatsapp.com/invitecode`), you can 
 
-```bash
+```http request
 POST /api/{session}/groups/join
 ```
 
@@ -103,13 +103,13 @@ or using full link:
 ### Get join info for group
 If you have invite URL for a group (like `https://chat.whatsapp.com/invitecode`), you can get group info:
 
-```bash
+```http request
 GET /api/{session}/groups/join-info?code=invitecode
 ```
 
 or using full link (remember to encode the URL)
 
-```bash
+```http request
 GET /api/{session}/groups/join-info?code=https%3A%2F%2Fchat.whatsapp.com%2Finvitecode
 ```
 
@@ -117,7 +117,7 @@ Response depends on engine you're using
 
 ### Refresh groups
 If you see any inconsistency in groups list or in participants list, you can refresh the groups from the WhatsApp server:
-```bash
+```http request
 POST /api/{session}/groups/refresh
 ```
 
@@ -140,7 +140,7 @@ You can get, set and remove group picture
 
 #### Get Group Picture
 
-```bash
+```http request
 GET /api/{SESSION}/groups/{ID}/picture?refresh=false
 ```
 
@@ -160,7 +160,7 @@ GET /api/{SESSION}/groups/{ID}/picture?refresh=false
 #### Set Group Picture
 👉 Available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 
-```bash
+```http request
 POST /api/{SESSION}/groups/{ID}/picture
 ```
 
@@ -195,7 +195,7 @@ POST /api/{SESSION}/groups/{ID}/picture
 #### Delete Group Picture
 👉 Available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 
-```bash
+```http request
 DELETE /api/{SESSION}/groups/{ID}/picture
 ```
 - `{SESSION}` - session name

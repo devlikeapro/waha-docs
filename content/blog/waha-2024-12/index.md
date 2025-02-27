@@ -49,7 +49,7 @@ before joining!
 
 If you have invite URL for a group (like `https://chat.whatsapp.com/invitecode`), you can
 
-```bash
+```http request
 POST /api/{session}/groups/join
 ```
 

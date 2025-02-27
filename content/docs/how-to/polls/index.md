@@ -21,7 +21,7 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 
 Use the endpoint to send a poll!
 
-```bash
+```http request
 POST /api/sendPoll
 ```
 

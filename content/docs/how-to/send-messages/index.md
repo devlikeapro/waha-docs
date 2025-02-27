@@ -446,7 +446,7 @@ We have a dedicated page [📶 Polls]({{< relref "/docs/how-to/polls" >}})!
 
 ![alt](poll-example.jpg)
 
-```bash
+```http request
 POST /api/sendPoll
 ```
 

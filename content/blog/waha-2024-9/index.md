@@ -128,7 +128,7 @@ Here's a quick overview of new features available in Dashboard:
 
 ## Reply on Message
 You can reply on a message with any type of message now by adding `reply_to` in the request!
-```bash
+```http request
 POST /api/sendText
 ```
 
