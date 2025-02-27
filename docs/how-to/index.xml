@@ -1,48 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>How-to guides on</title><link>https://waha.devlike.pro/docs/how-to/</link><description>Recent content in How-to guides on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 06 Oct 2020 08:49:15 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/docs/how-to/index.xml" rel="self" type="application/rss+xml"/><item><title>🔧 Install &amp; Update</title><link>https://waha.devlike.pro/docs/how-to/install/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/install/</guid><description>👉 If you wish to follow a Step-By-Step guide which show you how to send you first message via HTTP API please go to ⚡ Quick Start.
-You probably already have run the docker run command during ⚡ Quick Start guide:
-docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha ☝️ The above command is good for testing and development purposes, but not for production.
-To make it production-ready, you need to configure few more parameters to make it secure, reliable, and easy to manage.</description></item><item><title>📊 Dashboard</title><link>https://waha.devlike.pro/docs/how-to/dashboard/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/dashboard/</guid><description>Dashboard is a UI to manage your WhatsApp sessions!
-Download the Dashboard Overview video . You can access Dashboard by running the project and opening http://localhost:3000/dashboard (or similar, but with /dashboard at the end).
-ℹ️ Default username and password: waha/waha
-docker run -it -p 3000:3000/tcp devlikeapro/waha-plus #waha-plus Configuration #
-When running WAHA you can set the following environment variables to configure the dashboard:
-WAHA_DASHBOARD_ENABLED=true - enable or disable the dashboard, by default true.</description></item><item><title>📚 Swagger (OpenAPI)</title><link>https://waha.devlike.pro/docs/how-to/swagger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/swagger/</guid><description>Overview #
-The project provides HTTP API (REST), which is documented with OpenAPI specification and Swagger UI.
-Download the Swagger Overview video . You can see all available endpoints, request/response examples, and even execute them directly from the Swagger UI.
-Find the latest versions:
-Swagger documentation -&amp;gt; Postman -&amp;gt; OpenAPI specification -&amp;gt; You can find Swagger documentation on the following url after you install and started it:
-Swagger: http://localhost:3000. OpenAPI: http://localhost:3000/-json.</description></item><item><title>📤 Send messages</title><link>https://waha.devlike.pro/docs/how-to/send-messages/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/send-messages/</guid><description>We consider that you&amp;rsquo;ve run docker container and authenticated the session with QR code.
-If you haven&amp;rsquo;t yet - please follow the steps from ⚡ Quick Start.
-Features #
-WEBJS NOWEB GOWS POST /api/sendText ✔️ ✔️ ✔️ POST /api/sendSeen ✔️ ✔️ ✔️ PUT /api/{session}/chats/{chatId}/messages/{messageId} ✔️ ✔️ DELETE /api/{session}/chats/{chatId}/messages/{messageId} ✔️ ✔️ POST /api/sendImage ✔️ ✔️ ✔️ POST /api/sendFile ✔️ ✔️ ✔️ POST /api/sendVoice ✔️ ✔️ ✔️ POST /api/sendVideo ✔️ ✔️ ✔️ POST /api/sendButtons ✔️ POST /api/sendPoll #189 ✔️ POST /api/forwardMessage ✔️</description></item><item><title>📥 Receive messages</title><link>https://waha.devlike.pro/docs/how-to/receive-messages/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/receive-messages/</guid><description>We consider that you&amp;rsquo;ve run docker container and authenticated the session with QR code.
-If you haven&amp;rsquo;t yet - please follow the steps from Quick Start →.
-You must use Webhooks to receive messages from WhatsApp to your application.
-Start a new session with configured message event in webhooks - call POST /api/sessions/ with the payload:
-{ &amp;quot;name&amp;quot;: &amp;quot;default&amp;quot;, &amp;quot;config&amp;quot;: { &amp;quot;webhooks&amp;quot;: [ { &amp;quot;url&amp;quot;: &amp;quot;https://webhook.site/11111111-1111-1111-1111-11111111&amp;quot;, &amp;quot;events&amp;quot;: [ &amp;quot;message&amp;quot; ] } ] } } After that WAHA sends events (see below) about new messages to an endpoint you provided.</description></item><item><title>🖥️ Sessions</title><link>https://waha.devlike.pro/docs/how-to/sessions/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/sessions/</guid><description>Overview #
-Session represents a WhatsApp Account (Phone Number) connected to WAHA that you can use to send and receive messages.
-Session Lifecycle #
-Before you can 📤 Send or 📥 Receive messages , you need to Create a session (optionally, Start) and authenticate it using QR code or pairing code.
-Here&amp;rsquo;s Session Lifecycle State Diagram:
-Click to open full size. Session Status #
-Here&amp;rsquo;s the list of possible session.status values:</description></item><item><title>🆔 Profile</title><link>https://waha.devlike.pro/docs/how-to/profile/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/profile/</guid><description>You can manage your WhatsApp profile with the following API!
-Features #
-Here&amp;rsquo;s the list of features that are available by 🏭 Engines:
-WEBJS NOWEB GOWS Get Profile GET /api/{SESSION}/profile ✔️ ✔️ ✔️ Set Profile Name PUT /api/{SESSION}/profile/name ✔️ ✔️ ✔️ Set Profile Status (About) PUT /api/{SESSION}/profile/status ✔️ ✔️ ✔️ Set/Delete Profile Status Picture PUT /api/{SESSION}/profile/picture DELETE /api/{SESSION}/profile/picture ➕ ➕ ➕ ➕ - Available in ➕ WAHA Plus API #
-Get Profile #
-You can get your profile information with the following API call:</description></item><item><title>🔄 Webhooks</title><link>https://waha.devlike.pro/docs/how-to/webhooks/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/webhooks/</guid><description>In order to notify your application about events in the WhatsApp API, you can use Webhooks and Websockets.
-👉 See the list of all available events in the Events section.
-🌟 You can observe Events in real-time using 📊 Dashboard - Event Monitor!
-Webhooks #
-Webhooks are a way for two different applications to communicate with each other in real-time. When a certain event happens in one application, it sends a message to another application through a webhook URL.</description></item><item><title>🌐 Proxy</title><link>https://waha.devlike.pro/docs/how-to/proxy/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/proxy/</guid><description>Overview #
-If you&amp;rsquo;re experiencing issues scanning QR codes in WhatsApp, especially with Indian 🇮🇳 phone numbers, using a proxy located close to the phone number&amp;rsquo;s location may help resolve the problem.
-It affects both WEBJS and NOWEB engines.
-👉 If proxy doesn&amp;rsquo;t help but the project works on YOUR local laptop - check Tunneling.
-Symptoms #
-You start a new session in WhatsApp. Scan the QR code. Experience a long loading time.</description></item><item><title>📶 Polls</title><link>https://waha.devlike.pro/docs/how-to/polls/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/how-to/polls/</guid><description>Waiting for WEBJS engine to support it, and we&amp;rsquo;ll add it ASAP!
-Endpoints #
-See the list of engines that support the feature -&amp;gt;.
-Send poll #
-Use the endpoint to send a poll!
-POST /api/sendPoll The request body is pretty simple:
-{ &amp;quot;session&amp;quot;: &amp;quot;default&amp;quot;, &amp;quot;chatId&amp;quot;: &amp;quot;123123123@c.us&amp;quot;, &amp;quot;poll&amp;quot;: { &amp;quot;name&amp;quot;: &amp;quot;How are you?&amp;quot;, &amp;quot;options&amp;quot;: [ &amp;quot;Awesome!&amp;quot;, &amp;quot;Good!&amp;quot;, &amp;quot;Not bad!&amp;quot; ], &amp;quot;multipleAnswers&amp;quot;: false } } The response you get back:
-{ &amp;quot;id&amp;quot;: &amp;quot;true_321321321@c.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>How-to guides on WAHA</title><link>/docs/how-to/</link><description>Recent content in How-to guides on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="/docs/how-to/index.xml" rel="self" type="application/rss+xml"/><item><title>🔧 Install &amp; Update</title><link>/docs/how-to/install-update/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/install-update/</guid><description>&lt;div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/info-circle svg-inline callout-icon me-2 mb-3" id="svg-info-circle" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+ &lt;path d="M12 9h.01" />
+ &lt;path d="M11 12h1v4h1" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ 
+ &lt;div class="callout-body">
+ &lt;p>If you wish to follow a &lt;strong>Step-By-Step guide&lt;/strong> which show you how to send you first message via HTTP API
+please go to &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>📊 Dashboard</title><link>/docs/how-to/dashboard/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/dashboard/</guid><description>&lt;p>&lt;strong>Dashboard&lt;/strong> is a UI to manage your WhatsApp sessions!&lt;/p>
+&lt;video autoplay loop muted playsinline controls='noremoteplayback' width="100%" poster='/images/waha-dashboard.png'>
+ &lt;source src="/videos/waha-dashboard-overview.webm" type="video/webm" />
+ Download the &lt;a href="/videos/waha-dashboard-overview.webm">Dashboard Overview video&lt;/a> .
+&lt;/video>
+&lt;p>You can access &lt;strong>Dashboard&lt;/strong> by running the project and opening
+&lt;a href="http://localhost:3000/dashboard" target="_blank">http://localhost:3000/dashboard&lt;/a>
+(or similar, but with &lt;a href="/dashboard" target="_blank">/dashboard&lt;/a> at the end).&lt;/p></description></item><item><title>📚 Swagger (OpenAPI)</title><link>/docs/how-to/swagger-openapi/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/swagger-openapi/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The project provides HTTP API (REST), which is documented with OpenAPI specification and Swagger UI.&lt;/p>
+&lt;video autoplay loop muted playsinline controls='noremoteplayback' width="100%" poster='/images/swagger.png'>
+ &lt;source src="/videos/swagger-overview.webm" type="video/webm" />
+ Download the &lt;a href="/videos/swagger-overview.webm">Swagger Overview video&lt;/a> .
+&lt;/video>
+&lt;p>You can see all available endpoints, request/response examples, and even execute them directly from the Swagger UI.&lt;/p></description></item><item><title>📤 Send messages</title><link>/docs/how-to/send-messages/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/send-messages/</guid><description>&lt;p>We consider that you&amp;rsquo;ve run docker container and authenticated the session with QR code.&lt;/p>
+&lt;p>If you haven&amp;rsquo;t yet - please follow the steps from &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>📥 Receive messages</title><link>/docs/how-to/receive-messages/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/receive-messages/</guid><description>&lt;p>We consider that you&amp;rsquo;ve run docker container and authenticated the session with QR code.&lt;/p>
+&lt;p>If you haven&amp;rsquo;t yet - please follow the steps from &lt;a href="/docs/overview/quick-start/">&lt;strong>Quick Start →&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>🖥️ Sessions</title><link>/docs/how-to/sessions/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/sessions/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>&lt;strong>Session&lt;/strong> represents a &lt;strong>WhatsApp Account (Phone Number)&lt;/strong> connected to &lt;strong>WAHA&lt;/strong>
+that you can use to send and receive messages.&lt;/p></description></item><item><title>🆔 Profile</title><link>/docs/how-to/profile/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/profile/</guid><description>&lt;p>You can manage your WhatsApp profile with the following API!&lt;/p>
+&lt;div class="mb-2 text-center">
+ &lt;a href="/images/whatsapp/whatsapp-profile.jpg" target="_blank" style="cursor: pointer;">
+ &lt;img src="/images/whatsapp/whatsapp-profile.jpg" alt="">
+ &lt;/a>
+ 
+&lt;/div>
+&lt;h2 id="features">Features&lt;/h2>
+&lt;p>Here&amp;rsquo;s the list of features that are available by &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engines&lt;/strong>&lt;/a>:&lt;/p></description></item><item><title>🔄 Webhooks</title><link>/docs/how-to/webhooks/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/webhooks/</guid><description>&lt;p>In order to notify your application about events in the WhatsApp API, you can use
+&lt;a href="#webhooks">&lt;strong>Webhooks&lt;/strong>&lt;/a> and &lt;a href="#websockets">&lt;strong>Websockets&lt;/strong>&lt;/a>.&lt;/p>
+&lt;p>👉 See the list of all available events in the &lt;a href="#events">&lt;strong>Events&lt;/strong>&lt;/a> section.&lt;/p></description></item><item><title>🌐 Proxy</title><link>/docs/how-to/proxy/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/proxy/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>If you&amp;rsquo;re experiencing issues scanning QR codes in WhatsApp, especially with &lt;strong>Indian 🇮🇳 phone numbers&lt;/strong>,
+using a proxy located close to the phone number&amp;rsquo;s location may help resolve the problem.&lt;/p></description></item><item><title>📶 Polls</title><link>/docs/how-to/polls/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/polls/</guid><description>&lt;p>Waiting for WEBJS engine to support it, and we&amp;rsquo;ll add it ASAP!&lt;/p>
+&lt;p>
+
+&lt;img
+ src="/docs/how-to/polls/poll-example_hu_4340c7607d4af01f.webp"
+ width="1500"
+ height="1000"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="poll-example.jpg"id="h-rh-i-0"
+/>&lt;/p>
+&lt;h2 id="endpoints">Endpoints&lt;/h2>
+&lt;p>See the list of engines &lt;a href="/docs/how-to/engines/#features">&lt;strong>that support the feature -&amp;gt;&lt;/strong>&lt;/a>.&lt;/p></description></item></channel></rss>

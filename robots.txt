@@ -1,4 +1,3 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://waha.devlike.pro/sitemap.xml
+Disallow: /admin/
+Sitemap: /sitemap.xml

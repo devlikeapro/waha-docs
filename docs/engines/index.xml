@@ -1,21 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🏭 Engines on</title><link>https://waha.devlike.pro/docs/engines/</link><description>Recent content in 🏭 Engines on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/docs/engines/index.xml" rel="self" type="application/rss+xml"/><item><title>WEBJS</title><link>https://waha.devlike.pro/docs/engines/webjs/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/engines/webjs/</guid><description>Overview #
-A WhatsApp API client that connects through the WhatsApp Web browser app. It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
-👉 WAHA uses WhatsApp WebJS engine by default (if you don&amp;rsquo;t set WHATSAPP_DEFAULT_ENGINE environment variable to another engine).
-⚠ Read the article before using WEBJS engine How to avoid blocking -&amp;gt;.
-Run WEBJS #
-# Plus docker run -v `pwd`/.sessions:/app/.sessions -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=WEBJS&amp;quot; devlikeapro/waha-plus # Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=WEBJS&amp;quot; devlikeapro/waha Configuration #
-You can use some of the following environment variables to configure the WEBJS session:</description></item><item><title>GOWS</title><link>https://waha.devlike.pro/docs/engines/gows/</link><pubDate>Mon, 06 Jan 2025 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/engines/gows/</guid><description>Overview #
-GOWS engine does not require a browser to work with WhatsApp Web, it does so directly using a WebSocket. Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!
-Run GOWS #
-# Plus docker run -v `pwd`/.sessions:/app/.sessions -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=GOWS&amp;quot; devlikeapro/waha-plus # Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=GOWS&amp;quot; devlikeapro/waha Links #
-https://github.com/devlikeapro/gows</description></item><item><title>NOWEB</title><link>https://waha.devlike.pro/docs/engines/noweb/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/engines/noweb/</guid><description>Overview #
-NOWEB engine does not require a browser to work with WhatsApp Web, it does so directly using a WebSocket. Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!
-⚠ Read the article before using NOWEB engine How to avoid blocking -&amp;gt;.
-Run NOWEB #
-# Plus docker run -v `pwd`/.sessions:/app/.sessions -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=NOWEB&amp;quot; devlikeapro/waha-plus # Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=NOWEB&amp;quot; devlikeapro/waha Configuration #
-markOnline: true - send online presence when session starts (default true).</description></item><item><title>VENOM</title><link>https://waha.devlike.pro/docs/engines/venom/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/docs/engines/venom/</guid><description>Overview #
-⚠️ ⚠️ ⚠️ DEPRECATED - use WEBJS or NOWEB instead. ⚠️ ⚠️ ⚠️
-It&amp;rsquo;s a high-performance system developed with JavaScript to create a bot for WhatsApp. It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
-Run VENOM #
-# Core docker run -it -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=VENOM&amp;quot; devlikeapro/waha # Plus docker run -v `pwd`/.sessions:/app/.sessions -e &amp;quot;WHATSAPP_DEFAULT_ENGINE=VENOM&amp;quot; devlikeapro/waha-plus Links #
-https://github.com/devlikeapro/venom</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🏭 Engines on WAHA</title><link>/docs/engines/</link><description>Recent content in 🏭 Engines on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 06 Jan 2025 08:48:45 +0000</lastBuildDate><atom:link href="/docs/engines/index.xml" rel="self" type="application/rss+xml"/><item><title>WEBJS</title><link>/docs/engines/webjs/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/engines/webjs/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>A WhatsApp API client that connects through the WhatsApp Web browser app.
+It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.&lt;/p></description></item><item><title>GOWS</title><link>/docs/engines/gows/</link><pubDate>Mon, 06 Jan 2025 08:48:45 +0000</pubDate><guid>/docs/engines/gows/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>&lt;strong>GOWS&lt;/strong> engine &lt;strong>does not require a browser&lt;/strong> to work with WhatsApp Web, it does so directly using a WebSocket.
+Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!&lt;/p></description></item><item><title>NOWEB</title><link>/docs/engines/noweb/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/engines/noweb/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>&lt;strong>NOWEB&lt;/strong> engine &lt;strong>does not require a browser&lt;/strong> to work with WhatsApp Web, it does so directly using a WebSocket.
+Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!&lt;/p></description></item><item><title>VENOM</title><link>/docs/engines/venom/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/engines/venom/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>⚠️ ⚠️ ⚠️
+&lt;strong>DEPRECATED&lt;/strong> - use
+&lt;a href="/docs/engines/webjs/">WEBJS&lt;/a> or
+&lt;a href="/docs/engines/noweb/">NOWEB&lt;/a>
+instead.
+⚠️ ⚠️ ⚠️&lt;/p>
+&lt;p>It&amp;rsquo;s a high-performance system developed with JavaScript to create a bot for WhatsApp.
+It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.&lt;/p></description></item></channel></rss>

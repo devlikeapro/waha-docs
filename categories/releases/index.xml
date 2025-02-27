@@ -1,51 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on</title><link>https://waha.devlike.pro/categories/releases/</link><description>Recent content in Releases on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 30 Jan 2025 08:48:45 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.1</title><link>https://waha.devlike.pro/blog/waha-2025-1/</link><pubDate>Thu, 30 Jan 2025 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2025-1/</guid><description>🎉 We are thrilled to announce the changes we made during the WAHA 2025.1 🎉
-GOWS engine #
-Meet GOWS - new, fast, super-reliable and stable 🏭 Engine for your WAHA instance!
-GOWS engine does not require a browser to work with WhatsApp Web, it does so directly using a WebSocket.
-🚀 It&amp;rsquo;s new generation engine written in Golang, future replacement for NOWEB engine.
-You can test it by setting WHATSAPP_DEFAULT_ENGINE=GOWS environment variable.</description></item><item><title>WAHA 2024.12</title><link>https://waha.devlike.pro/blog/waha-2024-12/</link><pubDate>Mon, 30 Dec 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-12/</guid><description>🎉🎉🎉 First of all, Happy New Year! We wish you all the best in the New 2025 Year! 🎉🎉🎉
-We are thrilled to announce the release of WAHA 2024.12!
-Chat Overview API #
-We&amp;rsquo;ve added 💬 Chats Overview API to help you build your custom UI clients!
-Click to open full size. Get chats &amp;ldquo;overview&amp;rdquo; - the API that almost all Chat UI client needs!
-GET /api/{session}/chats/overview?limit=20&amp;amp;offset=0 Response contains the main info you need to show in the chat list:</description></item><item><title>WAHA 2024.11</title><link>https://waha.devlike.pro/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-11/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.11 🎉
-Event Monitor #
-Now you can observe the Events happening in your WAHA instance in real-time with the new Event Monitor feature!
-Click to open full size. Open dashboard/event-monitor or at your local instance http://localhost:3000/dashboard/event-monitor
-Websockets #
-WAHA now has full support for Websockets!
-Here&amp;rsquo;s how you can listen to it using websocat
-# Listen all sessions and events # -E to end the connection when the server closes it websocat -E ws://localhost:3000/ws Or JavaScript
-// Configuration const apiKey = '123'; // Replace with your API key const baseUrl = 'ws://localhost:3000/ws'; const session = '*'; // Use '*' to listen to all sessions const events = ['session.</description></item><item><title>WAHA 2024.10</title><link>https://waha.devlike.pro/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-10/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.10 🎉
-WAHA Core - Receive Media #
-We published 📥 Receive messages in free WAHA Core version, so you can receive media files in your WhatsApp API for free!
-We&amp;rsquo;ll continue to publish features from ➕ WAHA Plus to WAHA Core, so you can use them for free!
-{ &amp;quot;event&amp;quot;: &amp;quot;message&amp;quot;, &amp;quot;session&amp;quot;: &amp;quot;default&amp;quot;, &amp;quot;payload&amp;quot;: { &amp;quot;id&amp;quot;: &amp;quot;true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&amp;quot;, &amp;quot;timestamp&amp;quot;: 1667561485, &amp;quot;body&amp;quot;: &amp;quot;Check this out (caption for the media)!</description></item><item><title>WAHA 2024.9 - S3, Session API, Metadata, Dashboard and more!</title><link>https://waha.devlike.pro/blog/waha-2024-9/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-9/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.9 🎉
-The release has a lot of changes, but we&amp;rsquo;ll cover only few of them in this blog post, kindly check the 🆕 Changelog for the full list of changes.
-Session API #
-Click to open full size. We&amp;rsquo;ve added a new 🖥️ Sessions API to manage the session lifecycle.
-Now you can change configuration after the session is created, you can log out the session without removing it, and more!</description></item><item><title>WAHA 2024.8 - WhatsApp Business Labels API, Chat Archive and more!</title><link>https://waha.devlike.pro/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</link><pubDate>Thu, 01 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.8 🎉
-WhatsApp Business Labels API #
-You can now work with WhatsApp Labels available in WhatsApp Business using the API!
-Labels API #
-Here&amp;rsquo;s Get labels API example:
-GET /api/{session}/labels Response:
-[ { &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;New Client&amp;quot;, &amp;quot;color&amp;quot;: 1, &amp;quot;colorHex&amp;quot;: &amp;quot;#64c4ff&amp;quot; }, ... ] 👉 Read more about the WhatsApp Business Labels API on 🏷️ Labels page!
-Labels Events #
-You can now receive information about label creation, update, and deletion using webhooks!</description></item><item><title>WAHA 2024.7 - WhatsApp Channels API, JSON logs</title><link>https://waha.devlike.pro/blog/waha-2024.7-whatsapp-channels-api-json-logs/</link><pubDate>Sat, 20 Jul 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024.7-whatsapp-channels-api-json-logs/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.7 🎉
-WhatsApp Channels API #
-WAHA now supports WhatsApp Channels - a brand-new feature introduced by WhatsApp. You can manage, read and send messages to WhatsApp Channels (aka Newsletters) via API.
-👉 Read more about available features on 📢 Channels documentation page.
-💡 If you&amp;rsquo;re completely new with the project, we wrote a Step-By-Step Guide on How to send a post to WhatsApp Channel via API</description></item><item><title>WAHA 2024.6 - NOWEB Store, Dashboard for Core, HTTPS</title><link>https://waha.devlike.pro/blog/waha-2024.6-noweb-store-dashboard-for-core-https/</link><pubDate>Sun, 30 Jun 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024.6-noweb-store-dashboard-for-core-https/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.6 🎉
-Here&amp;rsquo;s the list of main changes we&amp;rsquo;ve made:
-NOWEB Store #
-You asked it, we did it - contacts, chats, and messages endpoints are now available in NOWEB engine!
-GET /api/contacts/all GET /api/{session}/chats GET /api/{session}/chats/{chatId}/messages 👉 Please make sure to 🏭 Enable NOWEB Store before using these endpoints!
-Dashboard now available in WAHA Core #
-📊 WAHA Dashboard a web interface to easily manage your WhatsApp sessions now is available in Free WAHA Core version!</description></item><item><title>WAHA 2024.5 - Swagger White Label and stability improvements</title><link>https://waha.devlike.pro/blog/waha-2024.5-swagger-white-label-and-stability-improvements/</link><pubDate>Thu, 30 May 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024.5-swagger-white-label-and-stability-improvements/</guid><description>We are excited to announce the release of WAHA 2024.5! This version introduces the Swagger White Label feature and includes several stability improvements.
-Check the 🆕 Changelog for a full list of changes.
-🌟 NEW - Swagger White Label #
-👉 Swagger White Label is available in WAHA Plus version only.
-If you&amp;rsquo;re running SaaS or want to show your brand in the Swagger documentation, you can now customize the Swagger documentation with your own brand!</description></item><item><title>WAHA 2024.4 - Dashboard to manage your sessions!</title><link>https://waha.devlike.pro/blog/waha-2024.4-dashboard-to-manage-your-sessions/</link><pubDate>Mon, 01 Apr 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024.4-dashboard-to-manage-your-sessions/</guid><description>Download the Dashboard Overview video . We are thrilled to introduce the latest addition to WAHA - the brand new Dashboard, exclusively available in WAHA Plus version!
-🌟 Dashboard allows you to do:
-Monitor Sessions: The Dashboard displays the total number of sessions on the server along with their statuses. It conveniently highlights sessions that require actions, allowing you to address any issues promptly. Session Management: Take full control of your sessions with the Dashboard.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on WAHA</title><link>/categories/releases/</link><description>Recent content in Releases on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 30 Jan 2025 08:48:45 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.1</title><link>/blog/waha-2025-1/</link><pubDate>Thu, 30 Jan 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-1/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the &lt;a href="/docs/overview/changelog/#20251">&lt;strong>WAHA 2025.1&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;h2 id="gows-engine">GOWS engine&lt;/h2>
+&lt;p>Meet &lt;strong>GOWS&lt;/strong> - new, fast, super-reliable and stable &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engine&lt;/strong>&lt;/a> for your WAHA instance!&lt;/p></description></item><item><title>WAHA 2024.12</title><link>/blog/waha-2024-12/</link><pubDate>Mon, 30 Dec 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-12/</guid><description>&lt;p>🎉🎉🎉 First of all, &lt;strong>Happy New Year!&lt;/strong> We wish you all the best in the New 2025 Year! 🎉🎉🎉&lt;/p>
+&lt;p>We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202412">&lt;strong>WAHA 2024.12&lt;/strong>&lt;/a>!&lt;/p></description></item><item><title>WAHA 2024.11</title><link>/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-11/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202411">&lt;strong>WAHA 2024.11&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;h2 id="event-monitor">Event Monitor&lt;/h2>
+&lt;p>Now you can observe the
+&lt;a href="/docs/how-to/webhooks/">&lt;strong>Events&lt;/strong>&lt;/a>
+happening in your WAHA instance in real-time with the new
+&lt;a href="/docs/how-to/dashboard/#event-monitor">&lt;strong>Event Monitor&lt;/strong>&lt;/a>
+feature!&lt;/p></description></item><item><title>WAHA 2024.10</title><link>/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-10/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202410">&lt;strong>WAHA 2024.10&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;h2 id="waha-core---receive-media">WAHA Core - Receive Media&lt;/h2>
+&lt;p>We published &lt;a href="/docs/how-to/receive-messages/#files">&lt;strong>📥 Receive messages&lt;/strong> &lt;/a>
+in free &lt;strong>WAHA Core&lt;/strong> version, so you can receive media files in your WhatsApp API for free!&lt;/p></description></item><item><title>WAHA 2024.9 - S3, Session API, Metadata, Dashboard and more!</title><link>/blog/waha-2024-9/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-9/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#20249">&lt;strong>WAHA 2024.9&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;p>The release has a lot of changes, but we&amp;rsquo;ll cover only few of them in this blog post,
+kindly check the &lt;a href="/docs/overview/changelog/#20249">&lt;strong>🆕 Changelog&lt;/strong>&lt;/a>
+for the full list of changes.&lt;/p></description></item><item><title>WAHA 2024.8 - WhatsApp Business Labels API, Chat Archive and more!</title><link>/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</link><pubDate>Thu, 01 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#20248">&lt;strong>WAHA 2024.8&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;h2 id="whatsapp-business-labels-api">WhatsApp Business Labels API&lt;/h2>
+&lt;p>You can now work with &lt;strong>WhatsApp Labels&lt;/strong> available in WhatsApp Business using the API!&lt;/p></description></item><item><title>WAHA 2024.7 - WhatsApp Channels API, JSON logs</title><link>/blog/waha-2024.7-whatsapp-channels-api-json-logs/</link><pubDate>Sat, 20 Jul 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.7-whatsapp-channels-api-json-logs/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/">&lt;strong>WAHA 2024.7&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;h2 id="whatsapp-channels-api">WhatsApp Channels API&lt;/h2>
+&lt;p>
+
+&lt;img
+ src="/blog/waha-2024.7-whatsapp-channels-api-json-logs/whatsapp-channels_hu_56de8c47c53d6fda.webp"
+ width="962"
+ height="865"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="alt"id="h-rh-i-0"
+/>&lt;/p>
+&lt;p>WAHA now supports &lt;a href="/whatsapp-channels/">&lt;strong>WhatsApp Channels&lt;/strong>&lt;/a> - a brand-new feature introduced by WhatsApp.
+You can manage, read and send messages to &lt;strong>WhatsApp Channels&lt;/strong> (aka Newsletters) via API.&lt;/p></description></item><item><title>WAHA 2024.6 - NOWEB Store, Dashboard for Core, HTTPS</title><link>/blog/waha-2024.6-noweb-store-dashboard-for-core-https/</link><pubDate>Sun, 30 Jun 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.6-noweb-store-dashboard-for-core-https/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/">&lt;strong>WAHA 2024.6&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;p>Here&amp;rsquo;s the list of main changes we&amp;rsquo;ve made:&lt;/p>
+&lt;h2 id="noweb-store">NOWEB Store&lt;/h2>
+&lt;p>You asked it, we did it - &lt;strong>contacts, chats, and messages&lt;/strong> endpoints are now available in NOWEB engine!&lt;/p></description></item><item><title>WAHA 2024.5 - Swagger White Label and stability improvements</title><link>/blog/waha-2024.5-swagger-white-label-and-stability-improvements/</link><pubDate>Thu, 30 May 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.5-swagger-white-label-and-stability-improvements/</guid><description>&lt;p>We are excited to announce the release of &lt;strong>WAHA 2024.5&lt;/strong>!
+This version introduces the &lt;a href="/docs/how-to/swagger-openapi/#white-label">Swagger White Label&lt;/a>
+feature and includes several stability improvements.&lt;/p></description></item><item><title>WAHA 2024.4 - Dashboard to manage your sessions!</title><link>/blog/waha-2024.4-dashboard-to-manage-your-sessions/</link><pubDate>Mon, 01 Apr 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.4-dashboard-to-manage-your-sessions/</guid><description>&lt;video autoplay loop muted playsinline controls='noremoteplayback' width="100%" poster='/images/waha-dashboard.png'>
+ &lt;source src="/videos/waha-dashboard-overview.webm" type="video/webm" />
+ Download the &lt;a href="/videos/waha-dashboard-overview.webm">Dashboard Overview video&lt;/a> .
+&lt;/video>
+&lt;p>We are thrilled to introduce the latest addition to WAHA -
+&lt;a href="/docs/how-to/dashboard/">the brand new &lt;strong>Dashboard&lt;/strong>&lt;/a>,
+exclusively available in
+&lt;a href="/docs/how-to/waha-plus/">&lt;strong>WAHA Plus&lt;/strong>&lt;/a> version!&lt;/p></description></item></channel></rss>

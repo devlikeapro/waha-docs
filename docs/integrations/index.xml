@@ -1,20 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🧩 Integrations on</title><link>https://waha.devlike.pro/docs/integrations/</link><description>Recent content in 🧩 Integrations on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 06 Oct 2020 08:49:15 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/docs/integrations/index.xml" rel="self" type="application/rss+xml"/><item><title>n8n</title><link>https://waha.devlike.pro/docs/integrations/n8n/</link><pubDate>Thu, 05 Sep 2024 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/integrations/n8n/</guid><description>Click to open full size. Overview #
-👉 You can follow WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide to start WAHA and n8n from the scratch and start your first &amp;ldquo;echo&amp;rdquo; workflow!
-Alternatively, check the installation guides for n8n and WAHA:
-WAHA:
-⚡ Quick Start 🔧 Install &amp;amp; Update n8n:
-Installation guide Install WAHA n8n node #
-Go to your n8n =&amp;gt; Settings =&amp;gt; Community nodes and install:</description></item><item><title>ChatWoot</title><link>https://waha.devlike.pro/docs/integrations/chatwoot/</link><pubDate>Thu, 05 Sep 2024 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/integrations/chatwoot/</guid><description>To set up WhatsApp ChatWoot integration you&amp;rsquo;ll need few things:
-WAHA - installed self-hosted WhatsApp API - ⚡ Quick Start 🧩 n8n Integration - to create workflows ChatWoot - either self-hosted or cloud version To use ChatWoot Cloud you need to make sure your n8n webhook is accessible from the internet PostgreSQL - to store ChatWoot data (and WAHA-ChatWoot relations) 👉 Check out WAHA + ChatWoot Templates to start from the scratch and create your first ChatWoot integration!</description></item><item><title>Typebot</title><link>https://waha.devlike.pro/docs/integrations/typebot/</link><pubDate>Thu, 05 Sep 2024 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/integrations/typebot/</guid><description>To set up WhatsApp Typebot integration you&amp;rsquo;ll need few things:
-WAHA - installed self-hosted WhatsApp API - ⚡ Quick Start 🧩 n8n Integration - to create workflows Typebot - either self-hosted or cloud version To use Typebot Cloud you need to make sure your n8n webhook is accessible from the internet PostgreSQL - to store Typebot data (and WAHA-Typebot relations) 👉 Check out WAHA + Typebot Template to start from the scratch and create your first Typebot integration!</description></item><item><title>Python</title><link>https://waha.devlike.pro/docs/integrations/python/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/integrations/python/</guid><description>We&amp;rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Python.
-You can find the examples in examples folder on GitHub with detailed instructions in README.md -&amp;gt;
-Installation #
-We assume that you have installed software:
-Python 3 Docker Download and start image #
-First of all, you must run WhatsApp API locally (which under the hood it runs real WhatsApp Web instance and expose HTTP API for interaction).</description></item><item><title>Kotlin</title><link>https://waha.devlike.pro/docs/integrations/kotlin/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/integrations/kotlin/</guid><description>We&amp;rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Kotlin (ktor).
-You can find the examples in examples folder on GitHub with detailed instructions in README.md -&amp;gt;
-Installation #
-We assume that you have installed software:
-Kotlin + JVM Docker Download and start image #
-First of all, you must run WhatsApp API locally (which under the hood it runs real WhatsApp Web instance and expose HTTP API for interaction).</description></item><item><title>Live Helper Chat</title><link>https://waha.devlike.pro/docs/integrations/live-helper-chat/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/integrations/live-helper-chat/</guid><description>Open source Live Helper Chat -&amp;gt; system with mobile app, Bot, AI, Voice &amp;amp; Video &amp;amp; ScreenShare.
-👉 Please checkout WhatsApp WAHA integration on Live Helper Chat -&amp;gt; documentation for more details how to integrate WhatsApp with Live Helper Chat.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🧩 Integrations on WAHA</title><link>/docs/integrations/</link><description>Recent content in 🧩 Integrations on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 06 Sep 2024 08:49:31 +0000</lastBuildDate><atom:link href="/docs/integrations/index.xml" rel="self" type="application/rss+xml"/><item><title>n8n</title><link>/docs/integrations/n8n/</link><pubDate>Thu, 05 Sep 2024 08:49:31 +0000</pubDate><guid>/docs/integrations/n8n/</guid><description>&lt;p align="center">
+ &lt;img src="/images/n8n/WAHA+n8n.png" style="width: 150px">
+&lt;/p>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;div class="mb-2 text-center">
+ &lt;a href="/images/n8n/waha-n8n.png" target="_blank" style="cursor: pointer;">
+ &lt;img src="/images/n8n/waha-n8n.png" alt="">
+ &lt;/a>
+ 
+ &lt;div class="text-center small" style="color: #6c757d">
+ Click to open full size.
+ &lt;/div>
+ 
+&lt;/div>
+&lt;p>👉 You can follow
+&lt;a href="/blog/waha-n8n/">&lt;strong>WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide&lt;/strong>&lt;/a>
+to start &lt;strong>WAHA&lt;/strong> and &lt;strong>n8n&lt;/strong> from the scratch and start your first &amp;ldquo;echo&amp;rdquo; workflow!&lt;/p></description></item><item><title>ChatWoot</title><link>/docs/integrations/chatwoot/</link><pubDate>Thu, 05 Sep 2024 08:49:31 +0000</pubDate><guid>/docs/integrations/chatwoot/</guid><description>&lt;p align="center">
+ &lt;img src="/images/chatwoot/waha-chatwoot.png" style="width: 150px">
+&lt;/p>
+&lt;p>To set up &lt;strong>WhatsApp ChatWoot&lt;/strong> integration you&amp;rsquo;ll need few things:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>WAHA&lt;/strong> - installed self-hosted WhatsApp API - &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="/docs/integrations/n8n/">&lt;strong>🧩 n8n Integration&lt;/strong>&lt;/a> - to create workflows&lt;/li>
+&lt;li>&lt;strong>ChatWoot&lt;/strong> - either &lt;a href="https://www.chatwoot.com/docs/self-hosted">self-hosted&lt;/a> or &lt;a href="https://app.chatwoot.com/">cloud&lt;/a> version
+&lt;ol>
+&lt;li>To use &lt;strong>ChatWoot Cloud&lt;/strong> you need to make sure your &lt;strong>n8n&lt;/strong> webhook is accessible from the internet&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;strong>PostgreSQL&lt;/strong> - to store ChatWoot data (and WAHA-ChatWoot relations)&lt;/li>
+&lt;/ol>
+&lt;p>👉 Check out &lt;a href="https://waha-n8n-templates.devlike.pro/chatwoot/">&lt;strong>WAHA + ChatWoot Templates&lt;/strong>&lt;/a>
+to start from the scratch and create your first &lt;strong>ChatWoot&lt;/strong> integration!&lt;/p></description></item><item><title>Typebot</title><link>/docs/integrations/typebot/</link><pubDate>Thu, 05 Sep 2024 08:49:31 +0000</pubDate><guid>/docs/integrations/typebot/</guid><description>&lt;p align="center">
+ &lt;img src="/images/typebot/waha+typebot.png" style="width: 150px">
+&lt;/p>
+&lt;p>To set up &lt;strong>WhatsApp Typebot&lt;/strong> integration you&amp;rsquo;ll need few things:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>WAHA&lt;/strong> - installed self-hosted WhatsApp API - &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="/docs/integrations/n8n/">&lt;strong>🧩 n8n Integration&lt;/strong>&lt;/a> - to create workflows&lt;/li>
+&lt;li>&lt;strong>Typebot&lt;/strong> - either &lt;a href="https://docs.typebot.io/self-hosting/get-started">self-hosted&lt;/a> or &lt;a href="https://app.typebot.io/">cloud&lt;/a> version
+&lt;ol>
+&lt;li>To use &lt;strong>Typebot Cloud&lt;/strong> you need to make sure your &lt;strong>n8n&lt;/strong> webhook is accessible from the internet&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;strong>PostgreSQL&lt;/strong> - to store Typebot data (and WAHA-Typebot relations)&lt;/li>
+&lt;/ol>
+&lt;p>👉 Check out &lt;a href="https://waha-n8n-templates.devlike.pro/whatsapp-typebot/">&lt;strong>WAHA + Typebot Template&lt;/strong>&lt;/a>
+to start from the scratch and create your first &lt;strong>Typebot&lt;/strong> integration!&lt;/p></description></item><item><title>Python</title><link>/docs/integrations/python/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/python/</guid><description>&lt;p align="center">
+ &lt;img src="/images/python-whatsapp.png" style="width: 200px">
+&lt;/p>
+&lt;p>We&amp;rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Python.&lt;/p>
+&lt;p>You can find the examples in &lt;a href="https://github.com/devlikeapro/waha/tree/core/examples/python">examples folder on GitHub with detailed instructions in README.md -&amp;gt;&lt;/a>&lt;/p></description></item><item><title>Kotlin</title><link>/docs/integrations/kotlin/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/kotlin/</guid><description>&lt;p align="center">
+ &lt;img src="/images/kotlin-whatsapp.png" style="width: 200px">
+&lt;/p>
+&lt;p>We&amp;rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Kotlin (ktor).&lt;/p>
+&lt;p>You can find the examples in
+&lt;a href="https://github.com/devlikeapro/waha-kotlin">examples folder on GitHub with detailed instructions in README.md -&amp;gt;&lt;/a>&lt;/p></description></item><item><title>Live Helper Chat</title><link>/docs/integrations/live-helper-chat/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/live-helper-chat/</guid><description>&lt;div class="text-center">
+&lt;p>
+
+&lt;img
+ src="/docs/integrations/live-helper-chat/logo_hu_87465c1d903b096.webp"
+ width="51"
+ height="50"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="Logo"id="h-rh-i-0"
+/>&lt;/p>
+&lt;/div>
+&lt;p>Open source
+&lt;a href="https://livehelperchat.com/" target="_blank" rel="noopener noreferrer">Live Helper Chat -&amp;gt;&lt;/a>
+system with mobile app, Bot, AI, Voice &amp;amp; Video &amp;amp; ScreenShare.&lt;/p>
+&lt;div class="text-center">
+&lt;p>
+
+&lt;img
+ src="/docs/integrations/live-helper-chat/screenshot_hu_180a9ae49d8375e.webp"
+ width="372"
+ height="463"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="Screenshot"id="h-rh-i-1"
+/>&lt;/p>
+&lt;/div>
+&lt;p>👉 Please checkout
+&lt;a href="https://doc.livehelperchat.com/docs/integrating/waha" target="_blank" rel="noopener noreferrer">
+WhatsApp WAHA integration on Live Helper Chat -&amp;gt;
+&lt;/a>
+documentation for more details how to integrate WhatsApp with Live Helper Chat.&lt;/p></description></item></channel></rss>

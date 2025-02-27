@@ -1,46 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on</title><link>https://waha.devlike.pro/blog/</link><description>Recent content in Blog on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 06 Oct 2020 08:49:55 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.1</title><link>https://waha.devlike.pro/blog/waha-2025-1/</link><pubDate>Thu, 30 Jan 2025 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2025-1/</guid><description>🎉 We are thrilled to announce the changes we made during the WAHA 2025.1 🎉
-GOWS engine #
-Meet GOWS - new, fast, super-reliable and stable 🏭 Engine for your WAHA instance!
-GOWS engine does not require a browser to work with WhatsApp Web, it does so directly using a WebSocket.
-🚀 It&amp;rsquo;s new generation engine written in Golang, future replacement for NOWEB engine.
-You can test it by setting WHATSAPP_DEFAULT_ENGINE=GOWS environment variable.</description></item><item><title>WAHA 2024.12</title><link>https://waha.devlike.pro/blog/waha-2024-12/</link><pubDate>Mon, 30 Dec 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-12/</guid><description>🎉🎉🎉 First of all, Happy New Year! We wish you all the best in the New 2025 Year! 🎉🎉🎉
-We are thrilled to announce the release of WAHA 2024.12!
-Chat Overview API #
-We&amp;rsquo;ve added 💬 Chats Overview API to help you build your custom UI clients!
-Click to open full size. Get chats &amp;ldquo;overview&amp;rdquo; - the API that almost all Chat UI client needs!
-GET /api/{session}/chats/overview?limit=20&amp;amp;offset=0 Response contains the main info you need to show in the chat list:</description></item><item><title>WAHA 2024.11</title><link>https://waha.devlike.pro/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-11/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.11 🎉
-Event Monitor #
-Now you can observe the Events happening in your WAHA instance in real-time with the new Event Monitor feature!
-Click to open full size. Open dashboard/event-monitor or at your local instance http://localhost:3000/dashboard/event-monitor
-Websockets #
-WAHA now has full support for Websockets!
-Here&amp;rsquo;s how you can listen to it using websocat
-# Listen all sessions and events # -E to end the connection when the server closes it websocat -E ws://localhost:3000/ws Or JavaScript
-// Configuration const apiKey = '123'; // Replace with your API key const baseUrl = 'ws://localhost:3000/ws'; const session = '*'; // Use '*' to listen to all sessions const events = ['session.</description></item><item><title>WAHA 2024.10</title><link>https://waha.devlike.pro/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-10/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.10 🎉
-WAHA Core - Receive Media #
-We published 📥 Receive messages in free WAHA Core version, so you can receive media files in your WhatsApp API for free!
-We&amp;rsquo;ll continue to publish features from ➕ WAHA Plus to WAHA Core, so you can use them for free!
-{ &amp;quot;event&amp;quot;: &amp;quot;message&amp;quot;, &amp;quot;session&amp;quot;: &amp;quot;default&amp;quot;, &amp;quot;payload&amp;quot;: { &amp;quot;id&amp;quot;: &amp;quot;true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&amp;quot;, &amp;quot;timestamp&amp;quot;: 1667561485, &amp;quot;body&amp;quot;: &amp;quot;Check this out (caption for the media)!</description></item><item><title>WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide</title><link>https://waha.devlike.pro/blog/waha-n8n/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-n8n/</guid><description>Here&amp;rsquo;s how you can start developing your WhatsApp automation with using n8n and WAHA in pair so you can create your own no-code or low-code WhatsApp automation:
-Click to open full size. Installation #
-Here&amp;rsquo;s a quick docker-compose we have prepared for you to start using n8n with WAHA:
-wget https://raw.githubusercontent.com/devlikeapro/waha/core/docker-compose/n8n/docker-compose.yaml If you&amp;rsquo;re using WAHA Plus (donation version) - kindly go to https://portal.devlike.pro and docker pull the image with your credentials: docker login -u devlikeapro -p &amp;lt;dckr_pat_1111111111&amp;gt; docker pull devlikeapro/waha-plus docker logout If you&amp;rsquo;re using WAHA Core (free version) - you can use the image from Docker Hub: sed -i 's/devlikeapro\/waha-plus/devlikeapro\/waha/g' docker-compose.</description></item><item><title>WAHA 2024.9 - S3, Session API, Metadata, Dashboard and more!</title><link>https://waha.devlike.pro/blog/waha-2024-9/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024-9/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.9 🎉
-The release has a lot of changes, but we&amp;rsquo;ll cover only few of them in this blog post, kindly check the 🆕 Changelog for the full list of changes.
-Session API #
-Click to open full size. We&amp;rsquo;ve added a new 🖥️ Sessions API to manage the session lifecycle.
-Now you can change configuration after the session is created, you can log out the session without removing it, and more!</description></item><item><title>WAHA Scaling - How To Handle 500+ Sessions</title><link>https://waha.devlike.pro/blog/waha-scaling-how-to-handle-500-sessions/</link><pubDate>Wed, 14 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-scaling-how-to-handle-500-sessions/</guid><description>Overview #
-The article is for people who want to scale their WhatsApp API for customers, like CRM, SaaS, or other services and who needs to handle a lot (&amp;gt;100) of 🖥️ Sessions (WhatsApp Accounts)
-If you&amp;rsquo;re using WAHA for 1-10 sessions - just make sure to follow 🔧 Install &amp;amp; Update guide. It handles all the necessary steps to make it work. 🚀
-There are two ways to scale WAHA:</description></item><item><title>WAHA 2024.8 - WhatsApp Business Labels API, Chat Archive and more!</title><link>https://waha.devlike.pro/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</link><pubDate>Thu, 01 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.8 🎉
-WhatsApp Business Labels API #
-You can now work with WhatsApp Labels available in WhatsApp Business using the API!
-Labels API #
-Here&amp;rsquo;s Get labels API example:
-GET /api/{session}/labels Response:
-[ { &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;New Client&amp;quot;, &amp;quot;color&amp;quot;: 1, &amp;quot;colorHex&amp;quot;: &amp;quot;#64c4ff&amp;quot; }, ... ] 👉 Read more about the WhatsApp Business Labels API on 🏷️ Labels page!
-Labels Events #
-You can now receive information about label creation, update, and deletion using webhooks!</description></item><item><title>WAHA 2024.7 - WhatsApp Channels API, JSON logs</title><link>https://waha.devlike.pro/blog/waha-2024.7-whatsapp-channels-api-json-logs/</link><pubDate>Sat, 20 Jul 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-2024.7-whatsapp-channels-api-json-logs/</guid><description>🎉 We are thrilled to announce the release of WAHA 2024.7 🎉
-WhatsApp Channels API #
-WAHA now supports WhatsApp Channels - a brand-new feature introduced by WhatsApp. You can manage, read and send messages to WhatsApp Channels (aka Newsletters) via API.
-👉 Read more about available features on 📢 Channels documentation page.
-💡 If you&amp;rsquo;re completely new with the project, we wrote a Step-By-Step Guide on How to send a post to WhatsApp Channel via API</description></item><item><title>How to send a post to WhatsApp Channel via API</title><link>https://waha.devlike.pro/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</link><pubDate>Tue, 16 Jul 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</guid><description>WAHA, Free Self-Hosted WhatsApp API, supports WhatsApp Channels , a brand-new feature introduced by WhatsApp. It is a one-way broadcast tool that allows administrators to send various content types such as text, photos, videos, and polls. Users receive push notifications from the channel, similar to a private message.
-In this article, we give you a Step-By-Step guide how to send messages to WhatsApp Channels using WAHA - free, self-hosted WhatsApp API!</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 30 Jan 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.1</title><link>/blog/waha-2025-1/</link><pubDate>Thu, 30 Jan 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-1/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the &lt;a href="/docs/overview/changelog/#20251">&lt;strong>WAHA 2025.1&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;h2 id="gows-engine">GOWS engine&lt;/h2>
+&lt;p>Meet &lt;strong>GOWS&lt;/strong> - new, fast, super-reliable and stable &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engine&lt;/strong>&lt;/a> for your WAHA instance!&lt;/p></description></item><item><title>WAHA 2024.12</title><link>/blog/waha-2024-12/</link><pubDate>Mon, 30 Dec 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-12/</guid><description>&lt;p>🎉🎉🎉 First of all, &lt;strong>Happy New Year!&lt;/strong> We wish you all the best in the New 2025 Year! 🎉🎉🎉&lt;/p>
+&lt;p>We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202412">&lt;strong>WAHA 2024.12&lt;/strong>&lt;/a>!&lt;/p></description></item><item><title>WAHA 2024.11</title><link>/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-11/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202411">&lt;strong>WAHA 2024.11&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;h2 id="event-monitor">Event Monitor&lt;/h2>
+&lt;p>Now you can observe the
+&lt;a href="/docs/how-to/webhooks/">&lt;strong>Events&lt;/strong>&lt;/a>
+happening in your WAHA instance in real-time with the new
+&lt;a href="/docs/how-to/dashboard/#event-monitor">&lt;strong>Event Monitor&lt;/strong>&lt;/a>
+feature!&lt;/p></description></item><item><title>WAHA 2024.10</title><link>/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-10/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202410">&lt;strong>WAHA 2024.10&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;h2 id="waha-core---receive-media">WAHA Core - Receive Media&lt;/h2>
+&lt;p>We published &lt;a href="/docs/how-to/receive-messages/#files">&lt;strong>📥 Receive messages&lt;/strong> &lt;/a>
+in free &lt;strong>WAHA Core&lt;/strong> version, so you can receive media files in your WhatsApp API for free!&lt;/p></description></item><item><title>WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide</title><link>/blog/waha-n8n/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-n8n/</guid><description>&lt;p align="center">
+ &lt;img src="/images/n8n/WAHA+n8n.png" width='200'/>
+&lt;/p>
+&lt;p>Here&amp;rsquo;s how you can start developing your WhatsApp automation with using &lt;strong>n8n&lt;/strong> and &lt;strong>WAHA&lt;/strong> in pair so you can create
+your own no-code or low-code &lt;strong>WhatsApp automation&lt;/strong>:&lt;/p></description></item><item><title>WAHA 2024.9 - S3, Session API, Metadata, Dashboard and more!</title><link>/blog/waha-2024-9/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-9/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#20249">&lt;strong>WAHA 2024.9&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;p>The release has a lot of changes, but we&amp;rsquo;ll cover only few of them in this blog post,
+kindly check the &lt;a href="/docs/overview/changelog/#20249">&lt;strong>🆕 Changelog&lt;/strong>&lt;/a>
+for the full list of changes.&lt;/p></description></item><item><title>WAHA Scaling - How To Handle 500+ Sessions</title><link>/blog/waha-scaling-how-to-handle-500-sessions/</link><pubDate>Wed, 14 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-scaling-how-to-handle-500-sessions/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The article is for people who want to scale their WhatsApp API for customers, like CRM, SaaS, or other services and
+who needs to handle a lot (&lt;strong>&amp;gt;100&lt;/strong>) of &lt;a href="/docs/how-to/sessions/">&lt;strong>🖥️ Sessions&lt;/strong>&lt;/a> (WhatsApp Accounts)&lt;/p></description></item><item><title>WAHA 2024.8 - WhatsApp Business Labels API, Chat Archive and more!</title><link>/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</link><pubDate>Thu, 01 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#20248">&lt;strong>WAHA 2024.8&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;h2 id="whatsapp-business-labels-api">WhatsApp Business Labels API&lt;/h2>
+&lt;p>You can now work with &lt;strong>WhatsApp Labels&lt;/strong> available in WhatsApp Business using the API!&lt;/p></description></item><item><title>WAHA 2024.7 - WhatsApp Channels API, JSON logs</title><link>/blog/waha-2024.7-whatsapp-channels-api-json-logs/</link><pubDate>Sat, 20 Jul 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.7-whatsapp-channels-api-json-logs/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/">&lt;strong>WAHA 2024.7&lt;/strong>&lt;/a> 🎉&lt;/p>
+&lt;h2 id="whatsapp-channels-api">WhatsApp Channels API&lt;/h2>
+&lt;p>
+
+&lt;img
+ src="/blog/waha-2024.7-whatsapp-channels-api-json-logs/whatsapp-channels_hu_56de8c47c53d6fda.webp"
+ width="962"
+ height="865"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="alt"id="h-rh-i-0"
+/>&lt;/p>
+&lt;p>WAHA now supports &lt;a href="/whatsapp-channels/">&lt;strong>WhatsApp Channels&lt;/strong>&lt;/a> - a brand-new feature introduced by WhatsApp.
+You can manage, read and send messages to &lt;strong>WhatsApp Channels&lt;/strong> (aka Newsletters) via API.&lt;/p></description></item><item><title>How to send a post to WhatsApp Channel via API</title><link>/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</link><pubDate>Tue, 16 Jul 2024 08:48:45 +0000</pubDate><guid>/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</guid><description>&lt;p>&lt;a href="/">WAHA&lt;/a>, Free Self-Hosted WhatsApp API, supports
+&lt;a href="/whatsapp-channels/">&lt;strong>WhatsApp Channels&lt;/strong>&lt;/a>
+, a brand-new feature introduced by WhatsApp.
+It is a one-way broadcast tool that allows administrators to send various content types such as text, photos, videos,
+and polls.
+Users receive push notifications from the channel, similar to a private message.&lt;/p></description></item></channel></rss>

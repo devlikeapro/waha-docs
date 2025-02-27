@@ -1,16 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tips on</title><link>https://waha.devlike.pro/categories/tips/</link><description>Recent content in Tips on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 27 Aug 2024 08:48:45 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/categories/tips/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide</title><link>https://waha.devlike.pro/blog/waha-n8n/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-n8n/</guid><description>Here&amp;rsquo;s how you can start developing your WhatsApp automation with using n8n and WAHA in pair so you can create your own no-code or low-code WhatsApp automation:
-Click to open full size. Installation #
-Here&amp;rsquo;s a quick docker-compose we have prepared for you to start using n8n with WAHA:
-wget https://raw.githubusercontent.com/devlikeapro/waha/core/docker-compose/n8n/docker-compose.yaml If you&amp;rsquo;re using WAHA Plus (donation version) - kindly go to https://portal.devlike.pro and docker pull the image with your credentials: docker login -u devlikeapro -p &amp;lt;dckr_pat_1111111111&amp;gt; docker pull devlikeapro/waha-plus docker logout If you&amp;rsquo;re using WAHA Core (free version) - you can use the image from Docker Hub: sed -i 's/devlikeapro\/waha-plus/devlikeapro\/waha/g' docker-compose.</description></item><item><title>WAHA Scaling - How To Handle 500+ Sessions</title><link>https://waha.devlike.pro/blog/waha-scaling-how-to-handle-500-sessions/</link><pubDate>Wed, 14 Aug 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha-scaling-how-to-handle-500-sessions/</guid><description>Overview #
-The article is for people who want to scale their WhatsApp API for customers, like CRM, SaaS, or other services and who needs to handle a lot (&amp;gt;100) of 🖥️ Sessions (WhatsApp Accounts)
-If you&amp;rsquo;re using WAHA for 1-10 sessions - just make sure to follow 🔧 Install &amp;amp; Update guide. It handles all the necessary steps to make it work. 🚀
-There are two ways to scale WAHA:</description></item><item><title>How to send a post to WhatsApp Channel via API</title><link>https://waha.devlike.pro/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</link><pubDate>Tue, 16 Jul 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</guid><description>WAHA, Free Self-Hosted WhatsApp API, supports WhatsApp Channels , a brand-new feature introduced by WhatsApp. It is a one-way broadcast tool that allows administrators to send various content types such as text, photos, videos, and polls. Users receive push notifications from the channel, similar to a private message.
-In this article, we give you a Step-By-Step guide how to send messages to WhatsApp Channels using WAHA - free, self-hosted WhatsApp API!</description></item><item><title>Setting up HTTPS for WAHA</title><link>https://waha.devlike.pro/blog/setting-up-https-for-waha/</link><pubDate>Mon, 17 Jun 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/setting-up-https-for-waha/</guid><description>Why bother with HTTPS? #
-Even if you have set up WAHA and protected it with an API key and username/password (as we recommend on 🔒 Security) - it&amp;rsquo;s still not enough, because of Man-in-the-middle attacks. If you&amp;rsquo;re exposing WAHA to the internet, you should always use HTTPS to protect your data from being intercepted.
-💡 We recommend handling HTTPS termination with a reverse proxy like Nginx - kindly follow 🔧 Install &amp;amp; Update - Additional Steps to set up Nginx with Let&amp;rsquo;s Encrypt.</description></item><item><title>WAHA + Geonode Proxy - bypassing errors on Cloud or VPS</title><link>https://waha.devlike.pro/blog/waha--geonode-proxy-bypassing-errors-on-cloud-or-vps/</link><pubDate>Tue, 11 Jun 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha--geonode-proxy-bypassing-errors-on-cloud-or-vps/</guid><description>WAHA + Geonode Proxy #
-If you see the below error, you can use the Geonode proxies to solve this issue.
-Read more about Proxies.
-Could not log in. Check your phone&amp;rsquo;s internet connection and try again. Unfortunately, that issue is caused by the WhatsApp server blocking your IP address - likely you&amp;rsquo;re using Cloud or VPS. The Geonode proxy is a solution that allows you to bypass this block and continue using WAHA.</description></item><item><title>WAHA + Ngrok - Running WAHA on local network</title><link>https://waha.devlike.pro/blog/waha--ngrok-running-waha-on-local-network/</link><pubDate>Tue, 11 Jun 2024 08:48:45 +0000</pubDate><guid>https://waha.devlike.pro/blog/waha--ngrok-running-waha-on-local-network/</guid><description>WAHA + Ngrok #
-If you see the below error, you can use the Geonode proxies to solve this issue.
-Could not log in. Check your phone&amp;rsquo;s internet connection and try again. Unfortunately, that issue is caused by the WhatsApp server blocking your IP address - likely you&amp;rsquo;re using Cloud or VPS. The Geonode proxy is a solution that allows you to bypass this block and continue using WAHA.
-The issue has nothing to do with WAHA itself, but with the WhatsApp server blocking your IP address.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tips on WAHA</title><link>/categories/tips/</link><description>Recent content in Tips on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 27 Aug 2024 08:48:45 +0000</lastBuildDate><atom:link href="/categories/tips/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide</title><link>/blog/waha-n8n/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-n8n/</guid><description>&lt;p align="center">
+ &lt;img src="/images/n8n/WAHA+n8n.png" width='200'/>
+&lt;/p>
+&lt;p>Here&amp;rsquo;s how you can start developing your WhatsApp automation with using &lt;strong>n8n&lt;/strong> and &lt;strong>WAHA&lt;/strong> in pair so you can create
+your own no-code or low-code &lt;strong>WhatsApp automation&lt;/strong>:&lt;/p></description></item><item><title>WAHA Scaling - How To Handle 500+ Sessions</title><link>/blog/waha-scaling-how-to-handle-500-sessions/</link><pubDate>Wed, 14 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-scaling-how-to-handle-500-sessions/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The article is for people who want to scale their WhatsApp API for customers, like CRM, SaaS, or other services and
+who needs to handle a lot (&lt;strong>&amp;gt;100&lt;/strong>) of &lt;a href="/docs/how-to/sessions/">&lt;strong>🖥️ Sessions&lt;/strong>&lt;/a> (WhatsApp Accounts)&lt;/p></description></item><item><title>How to send a post to WhatsApp Channel via API</title><link>/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</link><pubDate>Tue, 16 Jul 2024 08:48:45 +0000</pubDate><guid>/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</guid><description>&lt;p>&lt;a href="/">WAHA&lt;/a>, Free Self-Hosted WhatsApp API, supports
+&lt;a href="/whatsapp-channels/">&lt;strong>WhatsApp Channels&lt;/strong>&lt;/a>
+, a brand-new feature introduced by WhatsApp.
+It is a one-way broadcast tool that allows administrators to send various content types such as text, photos, videos,
+and polls.
+Users receive push notifications from the channel, similar to a private message.&lt;/p></description></item><item><title>Setting up HTTPS for WAHA</title><link>/blog/setting-up-https-for-waha/</link><pubDate>Mon, 17 Jun 2024 08:48:45 +0000</pubDate><guid>/blog/setting-up-https-for-waha/</guid><description>&lt;h2 id="why-bother-with-https">Why bother with HTTPS?&lt;/h2>
+&lt;p>Even if you have set up WAHA and protected it with an API key and username/password
+(as we recommend on &lt;a href="/docs/how-to/security/">&lt;strong>🔒 Security&lt;/strong>&lt;/a>) - it&amp;rsquo;s still not enough, because of
+&lt;a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">Man-in-the-middle attacks&lt;/a>.
+
+
+&lt;img
+ src="/blog/setting-up-https-for-waha/mitm_hu_9a6e96aced174fef.webp"
+ width="768"
+ height="403"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="alt"id="h-rh-i-0"
+/>&lt;/p></description></item><item><title>WAHA + Geonode Proxy - bypassing errors on Cloud or VPS</title><link>/blog/waha--geonode-proxy-bypassing-errors-on-cloud-or-vps/</link><pubDate>Tue, 11 Jun 2024 08:48:45 +0000</pubDate><guid>/blog/waha--geonode-proxy-bypassing-errors-on-cloud-or-vps/</guid><description>&lt;h2 id="waha--geonode-proxy">WAHA + Geonode Proxy&lt;/h2>
+&lt;p>If you see the below error, you can use
+the &lt;b>&lt;a href="https://geonode.com/invite/90920" target="_blank">Geonode proxies&lt;/a>&lt;/b> to solve this issue.&lt;/p></description></item><item><title>WAHA + Ngrok - Running WAHA on local network</title><link>/blog/waha--ngrok-running-waha-on-local-network/</link><pubDate>Tue, 11 Jun 2024 08:48:45 +0000</pubDate><guid>/blog/waha--ngrok-running-waha-on-local-network/</guid><description>&lt;h2 id="waha--ngrok">WAHA + Ngrok&lt;/h2>
+&lt;p>If you see the below error, you can use
+the &lt;b>&lt;a href="https://geonode.com/invite/90920" target="_blank">Geonode proxies&lt;/a>&lt;/b> to solve this issue.&lt;/p>
+&lt;blockquote>
+&lt;p>Could not log in. Check your phone&amp;rsquo;s internet connection and try again.
+
+
+&lt;img
+ src="/blog/waha--ngrok-running-waha-on-local-network/could-not-login_hu_3844c9b10ef85514.webp"
+ width="239"
+ height="125"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="Could not login"id="h-rh-i-0"
+/>&lt;/p></description></item></channel></rss>

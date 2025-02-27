@@ -1,23 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Overview on</title><link>https://waha.devlike.pro/docs/overview/</link><description>Recent content in Overview on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://waha.devlike.pro/docs/overview/index.xml" rel="self" type="application/rss+xml"/><item><title>📖 Introduction</title><link>https://waha.devlike.pro/docs/overview/introduction/</link><pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/introduction/</guid><description>WAHA - WhatsApp HTTP API that you can install on your own server and run in less than 5 minutes!
-Get started #
-👉 Run WhatsApp API in less than 5 minutes! We will guide you through the necessary steps to successfully send your first text message using WhatsApp API in ⚡ Quick Start.
-Disclaimer #
-This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or its affiliates.</description></item><item><title>⚡ Quick Start</title><link>https://waha.devlike.pro/docs/overview/quick-start/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://waha.devlike.pro/docs/overview/quick-start/</guid><description>Step-by-Step guide #
-On this page you&amp;rsquo;re going to install and run WAHA, authenticate the client using QR code, and send your first message to WhatsApp using API!
-We will guide you through the necessary steps to successfully send your first text message using WhatsApp API.
-Are you a visual learner? We&amp;rsquo;ve got you covered! Watch the video tutorial below to see how to send your first message using WAHA</description></item><item><title>⚠️ How to Avoid Blocking</title><link>https://waha.devlike.pro/docs/overview/how-to-avoid-blocking/</link><pubDate>Thu, 12 Nov 2020 13:26:54 +0100</pubDate><guid>https://waha.devlike.pro/docs/overview/how-to-avoid-blocking/</guid><description>How to Avoid Blocking in WhatsApp when developing bots.
-It&amp;rsquo;s important to keep in mind that WhatsApp has strict policies in place to prevent spamming and abuse of their platform.
-If you&amp;rsquo;re developing a bot for WhatsApp, it&amp;rsquo;s crucial to follow these guidelines to avoid getting blocked.
-Guidelines to Follow #
-1. Only Reply to Messages #
-When developing a bot for WhatsApp, you should never initiate a conversation. Instead, your bot should only reply to messages that it receives.</description></item><item><title>❓ FAQ</title><link>https://waha.devlike.pro/docs/overview/faq/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/faq/</guid><description>System Requirements #
-We strongly recommend using VPS or servers with minimum 2CPU and 2GB RAM configuration for the project even for a single session. If you want to host more sessions - please check the numbers below
-Looking for a reliable VPS to host WAHA? 🖥️ We personally use PQ.hosting - fast, affordable, and super stable! 🚀 How much CPU and Memory does WAHA consume? #
-WAHA uses multiple 🏭 Engines under the hood and depends on the used engine CPU and Memory requirements change</description></item><item><title>🆕 Changelog</title><link>https://waha.devlike.pro/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>https://waha.devlike.pro/docs/overview/changelog/</guid><description>Get Notified #
-If you wish to get Monthly Summary about WAHA changes, please subscribe to our channels
-👉 You can subscribe on free tier!
-Patreon -&amp;gt; Boosty -&amp;gt; dev.to -&amp;gt; If you wish to get Real-Time Email about new changes, you can Watch Releases in 🐙 WAHA GitHub
-GitHub - How To Subscribe
-Go to https://github.com/devlikeapro/waha, click Watch - Custom:
-Select Releases, click Apply:
-You will get notifications about new releases in associated email!</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Overview on WAHA</title><link>/docs/overview/</link><description>Recent content in Overview on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 16 Nov 2020 13:59:39 +0100</lastBuildDate><atom:link href="/docs/overview/index.xml" rel="self" type="application/rss+xml"/><item><title>📖 Introduction</title><link>/docs/overview/introduction/</link><pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate><guid>/docs/overview/introduction/</guid><description>&lt;p>&lt;strong>WAHA&lt;/strong> - &lt;u>W&lt;/u>hats&lt;u>A&lt;/u>pp &lt;u>H&lt;/u>TTP &lt;u>A&lt;/u>PI that you can install on your own server and run in less than 5 minutes!&lt;/p></description></item><item><title>⚡ Quick Start</title><link>/docs/overview/quick-start/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>/docs/overview/quick-start/</guid><description>&lt;div class="mb-2 text-center">
+ &lt;a href="waha-first-message.jpg" target="_blank" style="cursor: pointer;">
+ &lt;img src="waha-first-message.jpg" alt="">
+ &lt;/a>
+ 
+&lt;/div>
+&lt;h2 id="step-by-step-guide">Step-by-Step guide&lt;/h2>
+&lt;p>On this page you&amp;rsquo;re going to install and run WAHA,
+authenticate the client using QR code,
+and send &lt;strong>your first message&lt;/strong> to WhatsApp using API!&lt;/p></description></item><item><title>⚠️ How to Avoid Blocking</title><link>/docs/overview/%EF%B8%8F-how-to-avoid-blocking/</link><pubDate>Thu, 12 Nov 2020 13:26:54 +0100</pubDate><guid>/docs/overview/%EF%B8%8F-how-to-avoid-blocking/</guid><description>&lt;p>How to Avoid Blocking in WhatsApp when developing bots.&lt;/p>
+&lt;p>It&amp;rsquo;s important to keep in mind that WhatsApp has strict policies in place to prevent spamming and abuse of their
+platform.&lt;/p></description></item><item><title>❓ FAQ</title><link>/docs/overview/faq/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/overview/faq/</guid><description>&lt;h2 id="system-requirements">System Requirements&lt;/h2>
+&lt;p>We strongly recommend using VPS or servers with minimum &lt;strong>2CPU&lt;/strong> and &lt;strong>2GB RAM&lt;/strong> configuration for the project even for a single session.
+If you want to host more sessions - please check the numbers below&lt;/p></description></item><item><title>🆕 Changelog</title><link>/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/overview/changelog/</guid><description>&lt;h2 id="get-notified">Get Notified&lt;/h2>
+&lt;p>If you wish to get &lt;strong>Monthly Summary&lt;/strong> about WAHA changes, subscribe to our channels.&lt;/p>
+&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/rss svg-inline callout-icon me-2 mb-3" id="svg-rss" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+ &lt;path d="M4 4a16 16 0 0 1 16 16" />
+ &lt;path d="M4 11a9 9 0 0 1 9 9" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>You can subscribe on free tier!&lt;/p></description></item></channel></rss>
