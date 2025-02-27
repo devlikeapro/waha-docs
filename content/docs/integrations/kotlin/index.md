@@ -13,7 +13,9 @@ weight: 903
 toc: true
 ---
 
-{{< imgo src="/images/kotlin-whatsapp.png" alt="Kotlin WhatsApp" >}}
+<p align="center">
+  <img src="/images/kotlin-whatsapp.png" style="width: 200px">
+</p>
 
 We've created a few examples on how to interact with WAHA WhatsApp API with Kotlin (ktor).
 

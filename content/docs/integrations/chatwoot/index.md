@@ -14,7 +14,7 @@ toc: true
 ---
 
 <p align="center">
-  <img src="/images/chatwoot/waha-chatwoot.png" width='200'/>
+  <img src="/images/chatwoot/waha-chatwoot.png" style="width: 150px">
 </p>
 
 To set up **WhatsApp ChatWoot** integration you'll need few things:

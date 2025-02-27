@@ -14,12 +14,12 @@ images: ['WAHA+n8n.png']
 ---
 
 <p align="center">
-  <img src="/images/n8n/WAHA+n8n.png" width='200'/>
+  <img src="/images/n8n/WAHA+n8n.png" style="width: 150px">
 </p>
 
-{{< imgo src="/images/n8n/waha-n8n.png" >}}
-
 ## Overview
+
+{{< imgo src="/images/n8n/waha-n8n.png" >}}
 
 👉 You can follow 
 [**WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide**]({{< relref "/blog/waha-n8n" >}}) 
@@ -37,7 +37,7 @@ Alternatively, check the installation guides for **n8n** and **WAHA**:
 ## Install WAHA n8n node
 Go to your **n8n** => **Settings** => **Community nodes** and install:
 
-```
+```sh
 @devlikeapro/n8n-nodes-waha
 ```
 

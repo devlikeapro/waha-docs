@@ -13,7 +13,9 @@ weight: 902
 toc: true
 ---
 
-{{< imgo src="/images/python-whatsapp.png" alt="WhatsApp API + Python examples." >}}
+<p align="center">
+  <img src="/images/python-whatsapp.png" style="width: 200px">
+</p>
 
 We've created a few examples on how to interact with WAHA WhatsApp API with Python.
 

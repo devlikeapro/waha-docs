@@ -14,7 +14,7 @@ toc: true
 ---
 
 <p align="center">
-  <img src="/images/typebot/waha+typebot.png" width='200'/>
+  <img src="/images/typebot/waha+typebot.png" style="width: 150px">
 </p>
 
 To set up **WhatsApp Typebot** integration you'll need few things:
