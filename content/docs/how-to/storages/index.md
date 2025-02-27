@@ -39,7 +39,7 @@ For the session storage, you can use the following options:
 By default, the WAHA uses the **local storage (files)** to store the session data.
 
 {{< callout note >}}
-  It's <b>well tested solution</b> for <b>production</b>" 
+It's <b>well tested solution</b> for <b>production</b>" 
 {{< /callout >}}
 
 {{< include file="content/docs/how-to/storages/docker-compose.md" >}}
@@ -107,7 +107,7 @@ If you want to use the MongoDB to store the session data, you need to:
 **We recommend using your own MongoDB server as close as possible to WAHA server** for the best performance and security reasons.
 
 {{< callout note >}}
-  For <b>WEBJS</b> engine it can take up to 1 minute to save credentials in Mongo Database"
+For <b>WEBJS</b> engine it can take up to 1 minute to save credentials in Mongo Database"
 {{< /callout >}}
 
 #### Example

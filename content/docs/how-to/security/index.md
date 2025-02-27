@@ -9,7 +9,7 @@ draft: false
 weight: 700
 ---
 {{< callout note >}}
-    Do not expose WhatsApp API on public networks!" 
+Do not expose WhatsApp API on public networks!" 
 {{< /callout >}}
 
 We do not recommend exposing the API on any public networks!
@@ -40,7 +40,7 @@ Open http://localhost:3000/ and enter `admin / admin` in the inputs:
 You also can hide swagger completely by setting `WHATSAPP_SWAGGER_ENABLED=false` environment variable.
 
 {{< callout note >}}
-    Disabling Swagger does not protect the API, please use API security as well
+Disabling Swagger does not protect the API, please use API security as well
 {{< /callout >}}
 
 

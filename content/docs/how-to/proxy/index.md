@@ -95,7 +95,7 @@ Another option is <b><a href="https://proxy6.net/en/?r=628046" target="_blank">P
 where you can get a dedicated proxy (only you'll use it) for **$1.77 per month**.
 
 {{< callout note >}}
-    Unfortunately, it uses VPS IP ranges, so doesn't work 100%
+Unfortunately, it uses VPS IP ranges, so doesn't work 100%
 {{< /callout >}}
 
 Apply the promocode get a **5% discount** on your purchase.

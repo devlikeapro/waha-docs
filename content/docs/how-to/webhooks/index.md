@@ -459,7 +459,7 @@ Receive events when a message is reacted to by a user (or **yourself** reacting 
 ```
 
 {{< callout note >}}
-  NOWEB engine note - reactions were sent in 'message' and 'message.any' events, not it's available only in 'message.reaction'!" 
+NOWEB engine note - reactions were sent in 'message' and 'message.any' events, not it's available only in 'message.reaction'!" 
 {{< /callout >}}
 
 ### message.ack

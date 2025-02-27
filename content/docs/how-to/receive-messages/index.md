@@ -290,13 +290,17 @@ read more about [**⚙️ Configuration**]({{< relref "config" >}}).
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Get messages
-Read messages from the history - use `GET /api/messages` endpoint.
+Read messages from the history use API:
+
+```http request
+GET /api/messages
+```
 
 Accept the same parameters as
 [**💬 Chats** - **Get messages from chat**]({{< relref "/docs/how-to/chats#get-messages" >}}) endpoint.
 
 {{< callout context="caution" icon="outline/alert-triangle" >}}
-  We recommend using webhooks instead of constantly calling it to avoid performance issues.
+We recommend using webhooks instead of constantly calling it to avoid performance issues.
 {{< /callout >}}
 
 ```bash
@@ -314,7 +318,7 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 ```
 
 {{< callout note >}}
-  We recommend using webhooks instead to avoid performance issues.
+We recommend using webhooks instead to avoid performance issues.
 {{< /callout >}}
 
 ## Examples
