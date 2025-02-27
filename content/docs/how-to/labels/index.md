@@ -64,7 +64,6 @@ GET /api/{session}/labels
 Response:
 
 ```json
-
 [
   {
     "id": "1",
@@ -193,7 +192,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 ### label.upsert
 
-```json
+```json { title="label.upsert" }
 {
   "event": "label.upsert",
   "session": "default",
@@ -211,7 +210,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 ### label.deleted
 
-```json
+```json { title="label.deleted" }
 {
   "event": "label.deleted",
   "session": "default",
@@ -229,7 +228,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 ### label.chat.added
 
-```json
+```json { title="label.chat.added" }
 {
   "event": "label.chat.added",
   "session": "default",
@@ -245,7 +244,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 ### label.chat.deleted
 
-```json
+```json { title="label.chat.deleted" }
 {
   "event": "label.chat.deleted",
   "session": "default",

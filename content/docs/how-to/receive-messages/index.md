@@ -52,7 +52,8 @@ with that properly. Kindly don't use it in `chatId` when sending messages
 
 ### replyTo
 If you get a message as a reply to another message, you'll see `replyTo` field with the message ID that was replied to.
-```json
+
+```json { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -83,7 +84,7 @@ Read [Webhooks ->]({{< relref "/docs/how-to/webhooks" >}}) to find how to set th
 
 Incoming message (text/audio/files)
 
-```json
+```json { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -115,7 +116,7 @@ It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't
 
 Fired on all message creations, including your own. The payload is the same as for [message](#message) event.
 
-```json
+```json { title="message.any" }
 {
   "event": "message.any",
   "session": "default",
@@ -128,7 +129,7 @@ Receive events when a message is reacted to by a user (or **yourself** reacting 
 - `payload.reaction.text` - emoji that was used to react to the message. It'll be an empty string if the reaction was removed.
 - `payload.reaction.messageId` - id of the message that was reacted to.
 
-```json
+```json { title="message.reaction" }
 {
     "event": "message.reaction",
     "session": "default",
@@ -161,7 +162,7 @@ Receive events when a message is reacted to by a user (or **yourself** reacting 
 ### message.ack
 Receive events when server or recipient gets the message, read or played it.
 
-```json
+```json { title="message.ack" }
 {
   "event": "message.ack",
   "session": "default",
@@ -176,7 +177,7 @@ on your phone.
 
 ![waiting for this message](waiting-for-this-message.jpg)
 
-```json
+```json { title="message.waiting" }
 {
   "event": "message.waiting",
   "session": "default",
@@ -199,7 +200,7 @@ on your phone.
 
 [See details on Webhooks page ->]({{< relref "webhooks#messageack" >}}).
 
-```json
+```json { title="message.ack" }
 {
   "event": "message.ack",
   "session": "default",
@@ -226,7 +227,7 @@ In your application you must download it and use it as you want to. You can find
 
 For example, you can get the webhook like this with `media` value (we've skipped other fields):
 
-```json
+```json { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -255,7 +256,7 @@ It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't
 Then you can use the link to download the file `http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg`.
 
 For documents (file attachments) there's also `filename` field with the original file name.
-```json
+```json { title="message" }
 {
   "event": "message",
   "session": "default",

@@ -164,7 +164,7 @@ The following environment variables can be used to configure the file storage op
 
 💡 Even if WAHA doesn't process the message media because of `WHATSAPP_FILES_MIMETYPES` or `WHATSAPP_DOWNLOAD_MEDIA`
 you'll get a webhook event with `hasMedia: True` field, but with no `media.url`.
-```json
+```json { title="message" }
 {
   "event": "message",
   "session": "default",

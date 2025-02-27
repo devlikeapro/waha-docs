@@ -3,7 +3,7 @@
 ℹ️ It might duplicate [group.v2.join](#groupv2join) and [group.v2.leave](#groupv2leave) events for your ID.
 
 
-```json
+```json { title="group.v2.participants" }
 {
   "event": "group.v2.participants",
   "session": "default",

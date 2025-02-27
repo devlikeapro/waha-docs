@@ -1,4 +1,4 @@
-```json
+```json { title="message" }
 {
   "event": "message",
   "session": "default",

@@ -1,7 +1,7 @@
 `group.v2.leave` happens when **you** leave or are removed from a group.
 
 
-```json
+```json { title="group.v2.leave" }
 {
   "event": "group.v2.leave",
   "session": "default",

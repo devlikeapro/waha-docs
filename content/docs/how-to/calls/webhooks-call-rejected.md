@@ -1,4 +1,4 @@
-```json
+```json { title="call.rejected" }
 {
   "event": "call.rejected",
   "session": "default",

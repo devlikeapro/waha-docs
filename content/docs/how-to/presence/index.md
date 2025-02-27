@@ -149,7 +149,7 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 
 You can subscribe to `presence.update` webhook event to get the most recent presence information.
 
-```json
+```json { title="presence.update" }
 {
     "event": "presence.update",
     "session": "default",

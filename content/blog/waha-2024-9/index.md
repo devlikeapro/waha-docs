@@ -79,7 +79,7 @@ Any **S3 Compatible** storage can be used, such as AWS S3, MinIO, DigitalOcean S
 <br>
 
 After you enabled S3 here's example for [**message**]({{< relref "/docs/how-to/webhooks#message" >}}) webhook payload:
-```json
+```json { title="message" }
 {
   "event": "message",
   "session": "default",

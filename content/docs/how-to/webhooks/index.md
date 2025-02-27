@@ -321,7 +321,7 @@ You can provide additional `metadata` when you start the session with
 [**Start Session**]({{< relref "/docs/how-to/sessions#start-session" >}})
 request data.
 
-```json
+```json { title="message" }
 {
   "event": "message",
   "session": "default",

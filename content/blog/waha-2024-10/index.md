@@ -25,7 +25,7 @@ We'll continue to publish features from
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) 
 to WAHA Core, so you can use them for free!
 
-```json
+```json { title="message" }
 {
   "event": "message",
   "session": "default",

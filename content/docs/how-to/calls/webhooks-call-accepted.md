@@ -1,4 +1,4 @@
-```json
+```json { title="call.accepted" }
 {
   "event": "call.accepted",
   "session": "default",

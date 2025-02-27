@@ -647,7 +647,7 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 
 The `session.status` event is triggered when the session status changes.
 
-```json
+```json { title="session.status" }
 {
   "event": "session.status",
   "session": "default",

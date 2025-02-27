@@ -387,7 +387,7 @@ For all incoming messages in your own and subscribed channels you'll receive
 - [`message.any`]({{< relref "/docs/how-to/receive-messages#message.any" >}}) event for a message from the channel (
   including your messages)
 
-```json
+```json { title="message" }
 {
   "event": "message",
   "session": "default",

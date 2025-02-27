@@ -63,7 +63,7 @@ With this event, you receive new votes for the poll sent.
 
 #### Vote from a user in direct messages.
 
-```json
+```json { title="poll.vote" }
 {
   "event": "poll.vote",
   "session": "default",
@@ -119,7 +119,7 @@ the future.
 
 #### Vote from a user in a group
 
-```json
+```json { title="poll.vote" }
 {
   "event": "poll.vote",
   "session": "default",
@@ -152,7 +152,7 @@ a `poll.vote.failed` event on your webhook.
 
 The payload for `poll.vote.failed` is the same as for `poll.vote`, but with an empty list in `selectedOptions`.
 
-```json
+```json { title="poll.vote.failed" }
 {
   "event": "poll.vote.failed",
   "session": "default",
