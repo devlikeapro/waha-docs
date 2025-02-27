@@ -356,7 +356,7 @@ The `session.status` event is triggered when the session status changes.
 - `FAILED` - session is failed due to some error. It's likely that authorization is required again or device has been disconnected from that account.
   Try to restart the session and if it doesn't help - logout and start the session again.
 
-```json
+```json { title="session.status" }
 {
     "event": "session.status",
     "session": "default",
@@ -380,7 +380,7 @@ The `session.status` event is triggered when the session status changes.
 
 Incoming message (text/audio/files)
 
-```json
+```json { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -413,8 +413,7 @@ It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't
 
 Fired on all message creations, including your own. The payload is the same as for [message](#message) event.
 
-```json
-{
+```json { title="message.any" }
   "event": "message.any",
   "session": "default",
   "engine": "WEBJS",
@@ -429,7 +428,7 @@ Receive events when a message is reacted to by a user (or **yourself** reacting 
 - `payload.reaction.text` - emoji that was used to react to the message. It'll be an empty string if the reaction was removed.
 - `payload.reaction.messageId` - id of the message that was reacted to.
 
-```json
+```json { title="message.reaction" }
 {
     "event": "message.reaction",
     "session": "default",
@@ -478,7 +477,7 @@ Possible message ack statuses:
 
 
 The payload may have more fields, it depends on the engine you use, but here's a minimum amount that all engines send:
-```json
+```json { title="message.ack" }
 {
   "event": "message.ack",
   "session": "default",
@@ -501,7 +500,7 @@ on your phone.
 
 ![waiting for this message](waiting-for-this-message.jpg)
 
-```json
+```json { title="message.waiting" }
 {
   "event": "message.waiting",
   "session": "default",
@@ -524,7 +523,7 @@ on your phone.
 The `message.revoked` event is triggered when a user, whether it be you or any other participant,
 revokes a previously sent message.
 
-```json
+```json { title="message.revoked" }
 {
   "event": "message.revoked",
   "session": "default",
@@ -569,7 +568,7 @@ revokes a previously sent message.
 - `payload.id` indicates the chat - either direct chat with a contact or a group chat.
 - `payload.id.[].participant` - certain participant presence status. For a direct chat there's only one participant.
 
-```json
+```json { title="presence.update" }
 {
     "event": "presence.update",
     "session": "default",
@@ -590,7 +589,7 @@ revokes a previously sent message.
 ### poll.vote
 We have a dedicated page [how to send polls and receive votes]({{< relref "/docs/how-to/polls" >}})!
 
-```json
+```json { title="poll.vote" }
 {
   "event": "poll.vote",
   "session": "default",
@@ -617,7 +616,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 ### poll.vote.failed
 We have a dedicated page [how to send polls and receive votes]({{< relref "/docs/how-to/polls" >}})!
 
-```json
+```json { title="poll.vote.failed" }
 {
   "event": "poll.vote.failed",
   "session": "default",
@@ -643,7 +642,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 
 ### label.upsert
 
-```json
+```json { title="label.upsert" }
 {
   "event": "label.upsert",
   "session": "default",
@@ -661,7 +660,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 
 ### label.deleted
 
-```json
+```json { title="label.deleted" }
 {
   "event": "label.deleted",
   "session": "default",
@@ -679,7 +678,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 
 ### label.chat.added
 
-```json
+```json { title="label.chat.added" }
 {
   "event": "label.chat.added",
   "session": "default",
@@ -695,7 +694,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 
 ### label.chat.deleted
 
-```json
+```json { title="label.chat.deleted" }
 {
   "event": "label.chat.deleted",
   "session": "default",
@@ -724,7 +723,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 ### engine.event
 Low-level engine event, for **debug** and **troubleshooting** purposes.
 
-```json
+```json { title="engine.event" }
 {
   "event": "engine.event",
   "session": "default",
@@ -750,7 +749,7 @@ Low-level engine event, for **debug** and **troubleshooting** purposes.
 
 It's an internal engine's state, not **session** `status`.
 
-```json
+```json { title="state.change" }
 {
   "event": "state.change",
   "session": "default",
