@@ -130,3 +130,88 @@
         display: none !important;
     }
 </style>
+
+<!--highlight - http request-->
+<!-- Compiled from highlight-http-request.scss -->
+<style>
+    .http-method {
+        font-weight: bold !important;
+        padding: 0.25rem 0.7rem !important;
+        border-radius: 4px !important;
+        color: white !important;
+    }
+
+    .http-method-GET {
+        background-color: #61affe !important;
+    }
+
+    .http-method-POST {
+        background-color: #49cc90 !important;
+    }
+
+    .http-method-PUT {
+        background-color: #fca130 !important;
+    }
+
+    .http-method-DELETE {
+        background-color: #f93e3e !important;
+    }
+
+    .http-method-PATCH {
+        background-color: #50e3c2 !important;
+    }
+
+    .http-method-OPTIONS {
+        background-color: #0d5aa7 !important;
+    }
+
+    .http-method-HEAD {
+        background-color: #9012fe !important;
+    }
+
+    code.language-http[data-lang="http"] {
+        font-weight: bold;
+    }
+
+    pre.chroma:has(.http-method-GET) {
+        background-color: rgba(97, 175, 254, 0.1);
+        border-color: #61affe;
+        border-radius: 0.25rem;
+    }
+
+    pre.chroma:has(.http-method-POST) {
+        background-color: rgba(73, 204, 144, 0.1);
+        border-color: #49cc90;
+        border-radius: 0.25rem;
+    }
+
+    pre.chroma:has(.http-method-PUT) {
+        background-color: rgba(252, 161, 48, 0.1);
+        border-color: #fca130;
+        border-radius: 0.25rem;
+    }
+
+    pre.chroma:has(.http-method-DELETE) {
+        background-color: rgba(249, 62, 62, 0.1);
+        border-color: #f93e3e;
+        border-radius: 0.25rem;
+    }
+
+    pre.chroma:has(.http-method-PATCH) {
+        background-color: rgba(80, 227, 194, 0.1);
+        border-color: #50e3c2;
+        border-radius: 0.25rem;
+    }
+
+    pre.chroma:has(.http-method-OPTIONS) {
+        background-color: rgba(13, 90, 167, 0.1);
+        border-color: #0d5aa7;
+        border-radius: 0.25rem;
+    }
+
+    pre.chroma:has(.http-method-HEAD) {
+        background-color: rgba(144, 18, 254, 0.1);
+        border-color: #9012fe;
+        border-radius: 0.25rem;
+    }
+</style>
