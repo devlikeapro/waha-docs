@@ -300,10 +300,9 @@ You can send voice messages in two ways:
 1. Provide a **URL** for the file and the API will download it and send it in the request body.
 2. Provide the file as a **BASE64** string in the request body.
 
-**Body**
 {{< tabs "send-video-body" >}}
 {{< tab "URL" >}}
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -320,7 +319,7 @@ You can send voice messages in two ways:
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json
+```json { title="Body" }
 {
   "chatId": "11111111111@c.us",
   "caption": "Watch this video!",
@@ -538,8 +537,10 @@ Use  to send contact (vcard)
 POST /api/sendContactVcard
 ```
 
-You can use fields this way:
+You can send contacts in ways:
 
+{{< tabs "send-vcard-body" >}}
+{{< tab "Fields" >}}
 ```json { title="Body" }
 {
   "session": "default",
@@ -554,8 +555,9 @@ You can use fields this way:
   ]
 }
 ```
+{{</ tab >}}
 
-Or provide a vCard file content:
+{{< tab "vCard" >}}
 
 ```json { title="Body" }
 {
@@ -568,9 +570,9 @@ Or provide a vCard file content:
   ]
 }
 ```
+{{</ tab >}}
 
-Or even combine it:
-
+{{< tab "Combined" >}}
 ```json { title="Body" }
   {
   "chatId": "79111111@c.us",
@@ -588,6 +590,9 @@ Or even combine it:
   "session": "default"
 }
 ```
+{{</ tab >}}
+
+{{< /tabs >}}
 
 ## Send location
 
