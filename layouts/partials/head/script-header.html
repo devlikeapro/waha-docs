@@ -1,3 +1,42 @@
 <!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    //
+    // highlight - http request
+    //
+    document.addEventListener("DOMContentLoaded", function () {
+        // List of HTTP methods you want to highlight
+        const methods = [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE",
+            "PATCH",
+            "HEAD",
+            "OPTIONS",
+            "CONNECT",
+            "TRACE"
+        ];
+
+        // Build a RegExp that matches any of the methods at the start of the line
+        // e.g.  ^(GET|POST|PUT|...)
+        const methodRegex = new RegExp(`^(${methods.join("|")})\\b`);
+
+        // Select all <code class="language-http"> elements (or narrow down further if you need)
+        document.querySelectorAll("code.language-http .line .err").forEach(span => {
+            const text = span.textContent; // e.g. "GET /api/{SESSION}/profile"
+
+            // Check if the line starts with one of the listed methods
+            // If match, wrap the method with a <span class="http-method">,
+            // plus a more specific class like "http-method-GET".
+            if (methodRegex.test(text)) {
+                span.innerHTML = text.replace(methodRegex, function (match) {
+                    // match is e.g. "GET"
+                    // We'll produce: <span class="http-method http-method-GET">GET</span>
+                    return `<span class="http-method http-method-${match.toUpperCase()}">${match}</span>`;
+                });
+            }
+        });
+    });
+</script>
