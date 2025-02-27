@@ -1,7 +1,7 @@
 ```http request
 GET /api/{session}/groups
 ```
-```json
+```json { title="Body" }
 [{
   "id": "123@g.us",
   "name": "Work Group",

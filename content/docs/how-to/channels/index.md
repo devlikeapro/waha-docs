@@ -157,9 +157,8 @@ You can search **public** (not subscribed yet) channels **by view**:
 POST /api/{session}/channels/search/by-view
 ```
 
-**Payload**:
 
-```json
+```json { title="Body" }
 {
   "view": "RECOMMENDED",
   "countries": [
@@ -177,8 +176,7 @@ POST /api/{session}/channels/search/by-view
 - `limit` - we recommend using default `50` value, it's the way official clients work
 - `startCursor` - use `endCursor` from the previous response (if any data available on the next page)
 
-**Response**:
-```json
+```json { title="Response" }
 {
   "page": {
     "startCursor": null,
@@ -209,8 +207,7 @@ You can search **public** (not subscribed yet) channels **by text**:
 POST /api/{session}/channels/search/by-text
 ```
 
-**Payload**:
-```json
+```json { title="Body" }
 {
   "text": "Donald Trump",
   "categories": [],
@@ -324,7 +321,7 @@ text message into the channel
 
 👉 Make sure you're `OWNER` or `ADMIN` for the channel
 
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "12132132130@newsletter",
@@ -337,7 +334,7 @@ text message into the channel
 You can use regular [`POST /api/sendImage`]({{< relref "/docs/how-to/send-messages#send-image" >}}) endpoint
 to send an image into the channel
 
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@newsletter",
@@ -355,7 +352,7 @@ to send an image into the channel
 You can use regular [`POST /api/sendVideo`]({{< relref "/docs/how-to/send-messages#send-video" >}}) endpoint
 to send a video message into the channel
 
-```json
+```json { title="Body" }
 {
   "chatId": "111111111111111111@newsletter",
   "file": {

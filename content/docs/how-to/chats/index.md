@@ -97,8 +97,7 @@ GET /api/{session}/chats/{chatId}/picture[?refresh=True]
 **Query**
 - `refresh=True` - force refresh the picture. By default, we cache it 24 hours. Do not frequently refresh the picture to avoid `rate-overlimit` error.
 
-**Response**:
-```json
+```json { title="Response" }
 {
   "url": "https://example.com/picture.jpg"
 }
@@ -196,7 +195,7 @@ Get message by id
 GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 ```
 
-```json
+```json { title="Response" }
 {
     "id": "false_123123@c.us_AAAAAA",
     "timestamp": 1727745026,
@@ -223,8 +222,7 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 POST /api/{session}/chats/{chatId}/messages/{messageId}/pin
 ```
 
-Payload:
-```json
+```json { title="Body" }
 {
   "duration": 86400
 }
@@ -234,8 +232,7 @@ Payload:
 - 7 days - `duration=604800`
 - 30 days - `duration=2592000`
 
-Response:
-```json
+```json { title="Response" }
 {
   "success": true
 }
@@ -247,8 +244,7 @@ Response:
 POST /api/{session}/chats/{chatId}/messages/{messageId}/unpin
 ```
 
-Response:
-```json
+```json { title="Response" }
 {
   "success": true
 }
@@ -267,8 +263,7 @@ So if you want to edit `true_123@c.us_AAA` message in `123@c.us` chat you need t
 PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
-**Payload:**
-```json
+```json { title="Body" }
 {
   "text": "Hello, world!"
 }

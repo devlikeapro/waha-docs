@@ -82,7 +82,7 @@ POST /api/{session}/labels
 ```
 
 Using `color`
-```json
+```json { title="Body" }
 {
   "name": "New Client",
   "color": 1
@@ -90,7 +90,7 @@ Using `color`
 ```
 
 Using `colorHex`
-```json
+```json { title="Body" }
 {
   "name": "New Client",
   "colorHex" : "#64c4ff"
@@ -103,7 +103,7 @@ PUT /api/{session}/labels/{labelId}
 ```
 
 Using `color`
-```json
+```json { title="Body" }
 {
   "name": "New Client",
   "color": 1
@@ -111,7 +111,7 @@ Using `color`
 ```
 
 Using `colorHex`
-```json
+```json { title="Body" }
 {
   "name": "New Client",
   "colorHex" : "#64c4ff"
@@ -169,7 +169,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 👉 You need to provide **the full list of labels** you want to set to the chat. All other labels will be removed.
 
-```json
+```json { title="Body" }
 {
   "labels": [
     {
@@ -181,7 +181,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 **Remove labels**:
 
-```json
+```json { title="Body" }
 {
   "labels": []
 }

@@ -1,7 +1,7 @@
 ```http request
 POST /api/{session}/status/video
 ```
-```json
+```json { title="Body" }
 {
   "file": {
     "mimetype": "video/mp4",

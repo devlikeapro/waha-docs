@@ -2,7 +2,7 @@
 GET /api/{session}/channels
 ```
 
-```json
+```json { title="Body" }
 [{
   "id": "123@newsletter",
   "name": "Local News",

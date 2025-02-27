@@ -1,7 +1,7 @@
 ```http request
 POST /api/{session}/status/text
 ```
-```json
+```json { title="Body" }
 {
   "text": "Have a look! https://waha.devlike.pro/",
   "backgroundColor": "#38b42f",

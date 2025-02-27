@@ -34,7 +34,7 @@ Send status to **all** your contacts:
 POST /api/{session}/status/text
 ```
 
-```json
+```json { title="Body" }
 {
   "text": "Have a look! https://waha.devlike.pro/",
   "backgroundColor": "#38b42f",
@@ -47,7 +47,7 @@ POST /api/{session}/status/text
 - `contacts` - array of contacts to send status to.
 
 Send status to specific contacts (available in **NOWEB**):
-```json
+```json { title="Body" }
 {
   "text": "Have a look! https://waha.devlike.pro/",
   "backgroundColor": "#38b42f",
@@ -79,7 +79,7 @@ POST /api/{session}/status/image
 
 {{< tab "BASE64" >}}
 
-```json
+```json { title="Body" }
 {
   "file": {
     "mimetype": "image/jpeg",

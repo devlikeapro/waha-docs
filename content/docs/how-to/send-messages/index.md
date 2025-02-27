@@ -103,7 +103,7 @@ POST /api/sendSeen
 
 **Send seen for direct message**:
 
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -113,7 +113,7 @@ POST /api/sendSeen
 
 **Send seen for Group Message** you need to provide `participant` field:
 
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@g.us",
@@ -129,8 +129,7 @@ Use API to send text messages to the chat.
 POST /api/sendText
 ```
 
-**Body**
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "12132132130@c.us",
@@ -147,7 +146,7 @@ Here's some additional options:
 
 To reply on a message - add `reply_to` field:
 
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -164,7 +163,7 @@ use `mentions` field for that in `POST /api/sendText` request.
 Please note that you MUST mention a number in the text as well in the format `@2132132130` and
 also mention it in `mentions` in format `2132132130@c.us`
 
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "12132132130@c.us",
@@ -187,10 +186,9 @@ You can send images in two ways:
 1. Provide a **URL** for the image.
 2. Encode the whole file content into **BASE64** and send it in the request body.
 
-**Body**
 {{< tabs "send-image-body" >}}
 {{< tab "URL" >}}
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -205,7 +203,7 @@ You can send images in two ways:
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -243,10 +241,9 @@ You can send voice messages in two ways:
 2. Encode the whole file content into **BASE64** and send it in the request body.
 
 
-**Body**
 {{< tabs "send-voice-body" >}}
 {{< tab "URL" >}}
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -260,7 +257,7 @@ You can send voice messages in two ways:
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json
+```json { title="Body" }
 {
   "chatId": "11111111111@c.us",
   "file": {
@@ -350,10 +347,9 @@ You can send files in two ways:
 1. Provide a **URL** for the file.
 2. Encode the whole file content into **BASE64** and send it in the request body.
 
-**Body**
 {{< tabs "send-file-body" >}}
 {{< tab "URL" >}}
-```json
+```json { title="Body" }
 {
   "session": "default",
   "caption": "Check this out!",
@@ -368,7 +364,7 @@ You can send files in two ways:
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -391,7 +387,7 @@ You can forward a message to another chat (that you chatted before, otherwise it
 POST /api/forwardMessage
 ```
 
-```json
+```json { title="Body" }
 {
   "chatId": "11111111111@c.us",
   "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
@@ -416,9 +412,7 @@ So if you want to edit `true_123@c.us_AAA` message in `123@c.us` chat you need t
 PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
-**Payload:**
-
-```json
+```json { title="Body" }
 {
   "text": "Hello, world!"
 }
@@ -452,7 +446,7 @@ POST /api/sendPoll
 
 The request body is pretty simple:
 
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "123123123@c.us",
@@ -480,7 +474,7 @@ Reaction API uses **PUT**, not **POST** request! Please make sure you send right
 {{< /callout >}}
 
 
-```json
+```json { title="Body" }
 {
   "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
   "reaction": "👍",
@@ -490,7 +484,7 @@ Reaction API uses **PUT**, not **POST** request! Please make sure you send right
 
 To **remove reaction from a message** - send empty string in the reaction request:
 
-```json
+```json { title="Body" }
 {
   "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
   "reaction": "",
@@ -511,7 +505,7 @@ Star API uses **PUT**, not **POST** request! Please make sure you send right req
 
 **Star:**
 
-```json
+```json { title="Body" }
 {
   "messageId": "false_71111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
   "chatId": "71111111111@c.us",
@@ -522,7 +516,7 @@ Star API uses **PUT**, not **POST** request! Please make sure you send right req
 
 **Unstar:**
 
-```json
+```json { title="Body" }
 {
   "messageId": "false_71111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
   "chatId": "71111111111@c.us",

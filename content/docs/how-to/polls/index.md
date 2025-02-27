@@ -26,7 +26,7 @@ POST /api/sendPoll
 ```
 
 The request body is pretty simple:
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "123123123@c.us",
@@ -44,7 +44,7 @@ The request body is pretty simple:
 
 The response you get back:
 
-```json
+```json { title="Response" }
 {
   "id": "true_321321321@c.us_83ACBAAAAAAAAAAAAAAAAAAAA",
   "other-fields-here": "value"

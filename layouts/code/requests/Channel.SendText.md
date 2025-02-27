@@ -2,7 +2,7 @@
 POST /api/sendText
 ```
 
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "12132132130@newsletter",
