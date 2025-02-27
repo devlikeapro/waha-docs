@@ -39,7 +39,7 @@ For the session storage, you can use the following options:
 By default, the WAHA uses the **local storage (files)** to store the session data.
 
 {{< callout note >}}
-It's <b>well tested solution</b> for <b>production</b>" 
+It's **well tested solution** event for **production** with multiple sessions
 {{< /callout >}}
 
 {{< include file="content/docs/how-to/storages/docker-compose.md" >}}
@@ -67,7 +67,7 @@ This is the only action you need to do to use the local storage - all session da
 In the host machine, the session data will be stored in the current directory in the `.sessions` directory.
 
 Under the hood, the WAHA stores the session data in the following directory structure:
-```
+```sh
 .sessions/{engine}/{sessionName}/...
 ```
 
