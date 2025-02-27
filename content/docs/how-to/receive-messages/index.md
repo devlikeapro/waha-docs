@@ -296,12 +296,14 @@ Read messages from the history use API:
 GET /api/messages
 ```
 
-Accept the same parameters as
-[**💬 Chats** - **Get messages from chat**]({{< relref "/docs/how-to/chats#get-messages" >}}) endpoint.
-
 {{< callout context="caution" icon="outline/alert-triangle" >}}
-We recommend using webhooks instead of constantly calling it to avoid performance issues.
+We recommend using 
+[🔄 Webhooks]({{< relref "docs/how-to/webhooks" >}})
+instead of constantly calling it to avoid performance issues.
 {{< /callout >}}
+
+Accept the same parameters as
+[**💬 Chats** - **Get messages from chat**]({{< relref "/docs/how-to/chats#get-messages" >}}) endpoint:
 
 ```bash
 curl -X 'GET' \
@@ -317,8 +319,10 @@ You also can get message by id using
 GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 ```
 
-{{< callout note >}}
-We recommend using webhooks instead to avoid performance issues.
+{{< callout context="note" icon="outline/alert-triangle" >}}
+We recommend using
+[🔄 Webhooks]({{< relref "docs/how-to/webhooks" >}})
+instead to avoid performance issues.
 {{< /callout >}}
 
 ## Examples
