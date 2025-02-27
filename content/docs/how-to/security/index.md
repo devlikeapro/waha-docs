@@ -8,16 +8,15 @@ draft: false
 
 weight: 700
 ---
-{{< callout note >}}
-Do not expose WhatsApp API on public networks!" 
-{{< /callout >}}
 
+{{< callout context="caution" title="Do not expose WhatsApp API on public networks!" icon="outline/shield-check" >}}
 We do not recommend exposing the API on any public networks!
 
-Either protect the API with [Api Key](https://www.fortinet.com/resources/cyberglossary/api-key) or deny access by using
-firewalls.
+Either protect the API with [**Api Key**](#api-security) or deny access by using firewalls.
 
-👉 Security options are available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}})  version only.
+{{< /callout >}}
+
+👉 Built-in security is available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}})  version.
 
 ## Swagger Security
 ### Username and password
@@ -33,7 +32,7 @@ Open http://localhost:3000/ and enter `admin / admin` in the inputs:
 ![alt](swagger-basic-auth.png)
 
 {{< callout note >}}
-    Protecting Swagger under the password does not protect your API from other request! Use both techniques to protect your API and Swagger!
+Protecting Swagger under the password does not protect your API from other request! Use both techniques to protect your API and Swagger!
 {{< /callout >}}
 
 ### Disable Swagger
@@ -62,7 +61,7 @@ Read more about [**Dashboard ->**]({{< relref "/docs/how-to/dashboard" >}})
 You can protect the API by requiring Api Key in a request's headers.
 
 {{< callout note >}}
-    Api Key does not hide your Swagger documentation. Please have a look at the previous section to find how to hide Swagger under the password.
+Api Key does not hide your Swagger documentation. Please have a look at the previous section to find how to hide Swagger under the password.
 {{< /callout >}}
 
 ### Set Api Key
@@ -115,12 +114,12 @@ Read more about it on [Webhooks page ->]({{< relref "/docs/how-to/webhooks#hmac-
 After you set up the security options - you should set up HTTPS to protect the data in transit and prevent [Man-in-the-middle attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack).
 That's fine to run it on the **local network** without HTTPS, but for **the production** environment, HTTPS is a must-have.
 
-----
+{{< callout context="tip" title="Use Reverse Proxy" icon="outline/info-circle" >}}
+We recommend handling HTTPS termination with a reverse proxy like Nginx.
 
-💡 We recommend handling HTTPS termination with a reverse proxy like Nginx - kindly follow
-[**🔧 Install & Update - Additional Steps**]({{< relref "/docs/how-to/install" >}}) to set up Nginx with Let's Encrypt.
-
-----
+Follow
+[**🔧 Install & Update - Additional Steps**]({{< relref "/docs/how-to/install" >}}) to set up Nginx with Let's Encrypt (it's free).
+{{< /callout >}}
 
 ### Environment variables
 WAHA supports HTTPS out of the box, if you don't want to use a reverse proxy like Nginx.
