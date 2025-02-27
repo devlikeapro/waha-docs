@@ -60,7 +60,9 @@ Send status to specific contacts (available in **NOWEB**):
 ```
 
 ### Send image status 
-`POST /api/{session}/status/image`
+```http request
+POST /api/{session}/status/image
+```
 
 #### URL
 ```json
@@ -86,7 +88,9 @@ Send status to specific contacts (available in **NOWEB**):
 ```
 
 ### Send video status 
-`POST /api/{session}/status/video`
+```http request
+POST /api/{session}/status/video
+```
 
 ---
 
@@ -132,7 +136,10 @@ ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.
 ```
 
 ### Send voice status 
-`POST /api/{session}/status/voice`
+
+```http request
+POST /api/{session}/status/voice
+```
 
 👉 Please make sure your file has **OPUS** encoding and packed in OGG container. You can convert to this using ffmpeg (there's many libs for that in popular languages).
 ```bash

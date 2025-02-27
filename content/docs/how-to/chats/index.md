@@ -130,7 +130,9 @@ POST /api/{session}/chats/{chatId}/unread
 ### Delete chat
 Use the method to delete chat
 
-`DELETE /api/{session}/chats/{chatId}`
+```http request
+DELETE /api/{session}/chats/{chatId}
+```
 
 
 ### Get messages
@@ -289,7 +291,9 @@ DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ### Delete all messages
 Use the method to clear all messages from the chat
 
-`DELETE /api/{session}/chats/{chatId}/messages`
+```http request
+DELETE /api/{session}/chats/{chatId}/messages 
+```
 
 ## Webhooks
 ### chat.archive

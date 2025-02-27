@@ -24,7 +24,9 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 ### Create a new group
 
-`POST /api/{session}/groups`
+```http request
+POST /api/{session}/groups
+```
 
 Request:
 
@@ -125,15 +127,21 @@ POST /api/{session}/groups/refresh
 
 ### Get the group
 
-`GET /api/{session}/groups/{groupId}`
+```http request
+GET /api/{session}/groups/{groupId}
+```
 
 ### Delete the group
 
-`DELETE /api/{session}/groups/{groupId}`
+```http request
+DELETE /api/{session}/groups/{groupId}
+```
 
 ### Leave the group
 
-`POST /api/{session}/groups/{groupId}/leave`
+```http request
+POST /api/{session}/groups/{groupId}/leave
+```
 
 ### Group Picture
 You can get, set and remove group picture
@@ -215,7 +223,9 @@ Updates the group subject.
 Returns `true` if the subject was properly updated. This can return false if the user does not have the necessary
 permissions.
 
-`PUT /api/{session}/groups/{groupId}/subject`
+```http request
+PUT /api/{session}/groups/{groupId}/subject
+```
 
 Request:
 
@@ -232,7 +242,9 @@ Updates the group description.
 Returns `true` if the subject was properly updated. This can return false if the user does not have the necessary
 permissions.
 
-`PUT /api/{session}/groups/{groupId}/description`
+```http request
+PUT /api/{session}/groups/{groupId}/description
+```
 
 Request:
 
@@ -244,7 +256,11 @@ Request:
 
 ### Security - update group info
 Updates the group settings to only allow admins to edit group info (title, description, photo).
-`PUT /api/{session}/groups/{groupId}/settings/security/info-admin-only`
+
+```http request
+PUT /api/{session}/groups/{groupId}/settings/security/info-admin-only
+```
+
 ```json
 {
   "adminsOnly": true
@@ -253,7 +269,10 @@ Updates the group settings to only allow admins to edit group info (title, descr
 
 Get the group settings to only allow admins to edit group info (title, description, photo).
 
-`GET /api/{session}/groups/{groupId}/settings/security/info-admin-only`
+```http request
+GET /api/{session}/groups/{groupId}/settings/security/info-admin-only
+```
+
 ```json
 {
   "adminsOnly": true
@@ -262,11 +281,13 @@ Get the group settings to only allow admins to edit group info (title, descripti
 
 Returns `true` if the setting was properly updated. This can return false if the user does not have the necessary permissions.
 
-
 ### Security - who can send messages
 Updates the group settings to only allow admins to send messages.
 
-`PUT /api/{session}/groups/{groupId}/settings/security/messages-admin-only`
+```http request
+PUT /api/{session}/groups/{groupId}/settings/security/messages-admin-only
+```
+
 ```json
 {
   "adminsOnly": true
@@ -277,7 +298,10 @@ Returns `true` if the setting was properly updated. This can return false if the
 
 Get the group settings to only allow admins to send messages.
 
-`GET /api/{session}/groups/{groupId}/settings/security/messages-admin-only`
+```http request
+GET /api/{session}/groups/{groupId}/settings/security/messages-admin-only
+```
+
 ```json
 {
   "adminsOnly": true
@@ -288,11 +312,15 @@ Get the group settings to only allow admins to send messages.
 
 #### Get participants
 
-`GET /api/{session}/groups/{groupId}/participants`
+```http request
+GET /api/{session}/groups/{groupId}/participants
+```
 
 #### Add participants
 
-`POST /api/{session}/groups/{groupId}/participants/add`
+```http request
+POST /api/{session}/groups/{groupId}/participants/add
+```
 
 ```json
 {
@@ -306,7 +334,9 @@ Get the group settings to only allow admins to send messages.
 
 #### Remove participants
 
-`POST /api/{session}/groups/{groupId}/participants/remove`
+```http request
+POST /api/{session}/groups/{groupId}/participants/remove
+```
 
 ```json
 {
@@ -324,7 +354,9 @@ Get the group settings to only allow admins to send messages.
 
 Promote participants to admin users.
 
-`POST /api/{session}/groups/{groupId}/admin/promote`
+```http request
+POST /api/{session}/groups/{groupId}/admin/promote
+```
 
 ```json
 {
@@ -340,7 +372,9 @@ Promote participants to admin users.
 
 Demote participants by to regular users.
 
-`POST /api/{session}/groups/{groupId}/admin/demote`
+```http request
+POST /api/{session}/groups/{groupId}/admin/demote
+```
 
 ```json
 {
@@ -356,7 +390,9 @@ Demote participants by to regular users.
 
 #### Get invite code
 
-`GET /api/{session}/groups/{groupId}/invite-code`
+```http request
+GET /api/{session}/groups/{groupId}/invite-code
+```
 
 Then you can put it in the url `https://chat.whatsapp.com/{inviteCode}` and send it to contacts.
 
@@ -364,7 +400,9 @@ Then you can put it in the url `https://chat.whatsapp.com/{inviteCode}` and send
 
 Invalidates the current group invite code and generates a new one.
 
-`POST /api/{session}/groups/{groupId}/invite-code/revoke`
+```http request
+POST /api/{session}/groups/{groupId}/invite-code/revoke
+```
 
 ## Events
 Check [**🔄 Webhooks**]({{< relref "/docs/how-to/webhooks" >}}) for more information how to subscribe to events.
