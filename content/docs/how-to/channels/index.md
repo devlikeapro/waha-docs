@@ -29,9 +29,16 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 You can get list of **subscribed or owned** channels:
 
-- Get all (your and subscribed) channels `GET /api/{session}/channels`
-- Filter channels `GET /api/{session}/channels?role=OWNER`,
-    - `role` can be `OWNER`, `ADMIN`, `SUBSCRIBER`
+Get all (your and subscribed) channels:
+```http request
+GET /api/{session}/channels
+```
+
+Filter channels by your role:
+```http request
+GET /api/{session}/channels?role=OWNER
+```
+- `role` can be `OWNER`, `ADMIN`, `SUBSCRIBER`
 
 ```json
 [
@@ -60,9 +67,13 @@ You can get list of **subscribed or owned** channels:
 
 ### Create a new channel
 
-You can create a new channel `POST /api/{session}/channels` with the payload:
+You can create a new channel:
 
-```json
+```http request
+POST /api/{session}/channels
+```
+
+```json { title="Body" }
 {
   "name": "Channel Name",
   "description": "Channel Description",
@@ -76,14 +87,25 @@ You can create a new channel `POST /api/{session}/channels` with the payload:
 
 ### Delete a channel
 
-You can delete a channel `DELETE /api/{session}/channels/123123%40newsletter` (escape `@` to `%40`).
-Make sure have `OWNER` role for the channel.
+You can delete a channel `DELETE /api/{session}/channels/123123%40newsletter`
+```http request
+DELETE /api/{session}/channels/{ID}
+```
+
+- 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
+- Allowing to delete only channels where you're `OWNER`.
 
 ### Get channel by Id
 
-You can get a channel by ID `GET /api/{session}/channels/123123%40newsletter` (escape `@` to `%40`).
+You can get a channel by ID
 
-```json
+```http request
+GET /api/{SESSION}/channels/{ID}
+```
+
+- 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
+
+```json {title="Response"}
 {
   "id": "111111111111111111@newsletter",
   "name": "Channel - Owner - Picture",
@@ -99,14 +121,18 @@ You can get a channel by ID `GET /api/{session}/channels/123123%40newsletter` (e
 
 ### Get channel by Invite Code
 
-You can get a channel by Invite Code `GET /api/{session}/channels/{inviteCode}`
+You can get a channel information by Invite Code
+
+```http request
+GET /api/{session}/channels/{inviteCode}
+```
 
 - `inviteCode` here is the last part in invite URL `https://whatsapp.com/channel/111111111111111111GdZ60l` -
   `111111111111111111GdZ60l`
 
 💡 To get full `picture` you need to get channel by ID after you get the invite code.
 
-```json
+```json {title="Response"}
 {
   "id": "111111111111111111@newsletter",
   "name": "Channel - Owner - Picture",

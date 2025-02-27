@@ -25,9 +25,13 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 
 ### Get all contacts
 
-Get your contacts - `GET /api/contacts/all`
+Get your contacts 
 
-```json
+```http request
+GET /api/{session}/contacts/all
+```
+
+```json {title="Response"}
 [
   {
     "id": "11231231231@c.us",
@@ -63,11 +67,13 @@ GET /api/{session}/contacts/all?limit=100&offset=0&sortBy=id&sortOrder=asc
 ### Get contact
 
 Get contact
+```http request
+GET /api/contacts?contactId={ID}&session={SESSION}
+```
 
-- `GET /api/contacts?contactId=11231231231&session=default`
-- `GET /api/contacts?contactId=11231231231@c.us&session=default`
+- `ID` - either phone number (`123123123`) or chat id (`123123@c.us`)
 
-```json
+```json {title="Response"}
 {
   "id": "11231231231@c.us",
   "number": "11231231231",
@@ -110,7 +116,11 @@ It's fine to send the response to `chatId` for incoming messages, though - the p
 
 ### Get "about" contact
 
-- `GET /api/contacts/about?contactId=11231231231&session=default`
+```http request
+GET /api/contacts/about?contactId={ID}&session={SESSION}
+```
+
+- `ID` - either phone number (`123123123`) or chat id (`123123@c.us`)
 
 ```json
 {
@@ -135,11 +145,17 @@ GET /api/contacts/profile-picture?contactId=11231231231&session=default`
 ```
 
 ### Block (unblock) contact
-- To block contact - `POST /api/contacts/block`
-- To unblock contact - `POST /api/contacts/unblock`
+Block contact
+```http request
+POST /api/contacts/block
+```
 
-Request:
-```json
+Unblock contact
+```http request
+POST /api/contacts/unblock
+```
+
+```json { title="Body" }
 {
   "contactId": "11231231231",
   "session": "default"

@@ -35,11 +35,19 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Set presence
-You can set your global or chat-related presence with `POST /api/{session}/presence` endpoint
+You can set your global or chat-related presence with endpoint
 
-Start typing to a chat (you can use `POST /startTyping` instead)
 ```http request
 POST /api/{session}/presence
+```
+
+Start typing to a chat (you can use `POST /startTyping` instead)
+
+```http request
+POST /api/{session}/presence
+```
+
+```json { title="Body" }
 {
   "chatId": "111111111@c.us",
   "presence": "typing"
@@ -47,8 +55,8 @@ POST /api/{session}/presence
 ```
 
 Clear "typing" state (you can use `POST /stopTyping` instead)
-```http request
-POST /api/{session}/presence
+
+```json { title="Body" }
 {
   "chatId": "111111111@c.us",
   "presence": "paused"
@@ -56,8 +64,8 @@ POST /api/{session}/presence
 ```
 
 Set global "online", all contacts will see it
-```http request
-POST /api/{session}/presence
+
+```json { title="Body" }
 {
   "presence": "online"
 }
@@ -67,8 +75,7 @@ POST /api/{session}/presence
 to the device.
 If you would like to receive said notifications - you need to mark a session's presence as `offline`.
 
-```http request
-POST /api/{session}/presence
+```json { title="Body" }
 {
   "presence": "offline"
 }
@@ -76,18 +83,21 @@ POST /api/{session}/presence
 
 ### Get all chats presence
 
-Here's few notes about fields:
+You can get all presence information available for a session by calling
 
+```http request
+GET /api/{session}/presence
+```
+
+It returns both groups' and personal chats' presence information.
+
+Here's few notes about fields:
 - `chatId` - either contact id (`213213213@c.us`) or group chat id (`1111111111111@g.us`).
 - `lastSeen` - contains Unix timestamps indicating when a participant was last online
 - `lastKnownPresence` - contains the last known presence status, which can be
   `offline`, `online`, `typing`, `recording`, or `paused`
 
-
-You can get all presence information available for a session by calling `GET /api/{session}/presence/`.
-It returns both groups' and personal chats' presence information.
-
-```json
+```json {title="Response"}
 [
   {
     "id": "2132132130@c.us",
@@ -122,7 +132,7 @@ It returns both groups' and personal chats' presence information.
 To get presence information for a single chat - call `GET /api/{session}/presence/{chatId}`.
 For a group, you'll get participants' statuses.
 
-```json
+```json {title="Response"}
 {
   "id": "2132132130@c.us",
   "presences": [
@@ -137,8 +147,13 @@ For a group, you'll get participants' statuses.
 
 ### Subscribe to presence
 
-You can subscribe to presence information by calling `POST /api/{session}/presence/{chatId}/subscribe` request
+You can subscribe to presence information by calling
+```http request
+POST /api/{session}/presence/{chatId}/subscribe
+```
+
 (no body required).
+
 You can get later presence information for the chat with above `GET` endpoints or by listening to `presence.update`
 webhook.
 

@@ -532,12 +532,15 @@ Star API uses **PUT**, not **POST** request! Please make sure you send right req
 ```
 
 ## Send contact (vcard)
+Use  to send contact (vcard)
 
-Use `POST /api/sendContactVcard` to send contact (vcard).
+```http request
+POST /api/sendContactVcard
+```
 
 You can use fields this way:
 
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "79111111@c.us",
@@ -554,7 +557,7 @@ You can use fields this way:
 
 Or provide a vCard file content:
 
-```json
+```json { title="Body" }
 {
   "session": "default",
   "chatId": "79111111@c.us",
@@ -568,7 +571,7 @@ Or provide a vCard file content:
 
 Or even combine it:
 
-```json
+```json { title="Body" }
   {
   "chatId": "79111111@c.us",
   "contacts": [

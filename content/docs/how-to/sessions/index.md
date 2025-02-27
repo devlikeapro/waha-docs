@@ -53,12 +53,13 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 ## Create Session
 
-In order to create (and start) a new session - call `POST /api/sessions` with [**Session Config**](#session-config).
+In order to create (and start) a new session - with [**Session Config**](#session-config).
 
+```http request
+POST /api/sessions
+```
 
-**Body**:
-
-```json
+```json { title="Body" }
 {
   // "name" is Optional - it'll be generated automatically
   "name": "default",
@@ -352,13 +353,21 @@ In order to update a session - call `PUT /api/sessions/{session}` with a **full*
 
 ## Start Session
 
-In order to start a session - call `POST /api/sessions/{session}/start`.
+In order to start a session - call
+
+```http request
+POST /api/sessions/{session}/start
+```
 
 🎯 **Idempotent operation** - you can call it multiple times, and it'll start the session only if it's not running.
 
 ## Stop Session
 
-In order to stop a session - call `POST /api/sessions/{session}/stop`
+In order to stop a session - call 
+
+```http request
+POST /api/sessions/{session}/stop
+```
 
 ℹ️ **Stop** doesn't **Log out** or **Delete** anything
 
@@ -366,7 +375,11 @@ In order to stop a session - call `POST /api/sessions/{session}/stop`
 
 ## Restart Session
 
-In order to start a session - call `POST /api/sessions/{session}/restart`
+In order to start a session - call
+
+```http request
+POST /api/sessions/{session}/restart
+```
 
 ⚠️ If the session is already running (status is not `STOPPED`), it'll be **stopped** and **started**.
 
@@ -388,6 +401,7 @@ but keeps the **session's configuration**, so you can start a new session with t
 ## Delete Session
 
 In order to delete a session - call 
+
 ```http request
 DELETE /api/sessions/{session}
 ```
@@ -401,13 +415,14 @@ DELETE /api/sessions/{session}
 ## List Sessions
 
 To get session list - call 
+
 ```http request
 GET /api/sessions`
 ```
 
 The response:
 
-```json
+```json { title="Response" }
 [
   {
     "name": "default",
