@@ -35,18 +35,16 @@ Core  and
 
 ### WEBJS
 
-👉 [Read more about **WEBJS**]({{< relref "/docs/engines/webjs" >}})
-
-`WHATSAPP_DEFAULT_ENGINE=WEBJS`
-
 A WhatsApp API client that connects through the WhatsApp Web browser app.
 It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
 
+```bash
+WHATSAPP_DEFAULT_ENGINE=WEBJS
+```
+
+{{< link-card title="👉 Read more about WEBJS" href="/docs/engines/webjs/" >}}
 
 ### NOWEB
-👉 [Read more about **NOWEB**]({{< relref "/docs/engines/noweb" >}})
-
-`WHATSAPP_DEFAULT_ENGINE=NOWEB`
 
 **NOWEB** engine **does not require a browser** to work with WhatsApp Web, it does so directly using a WebSocket.
 Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!
@@ -55,16 +53,24 @@ Quotes from the users:
 > The server has **2 CPU and 8GB** of memory. Today we have **85 sessions** in this instance.
 >
 > **400** sessions with **4CPU and 32RAM**. It's working fine.
+> 
+```bash
+WHATSAPP_DEFAULT_ENGINE=NOWEB
+```
+
+{{< link-card title="👉 Read more about NOWEB" href="/docs/engines/noweb/" >}}
 
 ### GOWS
-👉 [Read more about **GOWS**]({{< relref "/docs/engines/gows" >}})
-
-`WHATSAPP_DEFAULT_ENGINE=GOWS`
 
 **GOWS** engine **does not require a browser** to work with WhatsApp Web, it does so directly using a WebSocket.
 
 🚀 It's new generation engine written in **Golang**, future replacement for **NOWEB** engine.
 
+```bash
+WHATSAPP_DEFAULT_ENGINE=GOWS
+```
+
+{{< link-card title="👉 Read more about GOWS" href="/docs/engines/gows/" >}}
 
 ## Docker images
 WAHA provides few docker images with different setup.
