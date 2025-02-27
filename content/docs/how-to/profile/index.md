@@ -25,7 +25,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 You can get your profile information with the following API call:
 
-```bash
+```http request
 GET /api/{SESSION}/profile
 ```
 
@@ -43,7 +43,7 @@ GET /api/{SESSION}/profile
 
 You can set your name with the following API call
 
-```bash
+```http request
 PUT /api/{SESSION}/profile/name
 ```
 
@@ -67,7 +67,7 @@ PUT /api/{SESSION}/profile/name
 
 You can set your status (aka **About**) message with the following API call:
 
-```bash
+```http request
 PUT /api/{SESSION}/profile/status
 ```
 
@@ -91,7 +91,7 @@ PUT /api/{SESSION}/profile/status
 
 You can set your profile picture with the following API call:
 
-```bash
+```http request
 PUT /api/{SESSSION}/profile/picture
 ```
 
@@ -130,7 +130,7 @@ PUT /api/{SESSSION}/profile/picture
 
 You can delete your profile picture using this endpoint.
 
-```bash
+```http request
 DELETE /api/{SESSION}/profile/picture
 ```
 
