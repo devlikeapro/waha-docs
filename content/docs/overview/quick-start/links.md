@@ -35,6 +35,3 @@
 {{< /card >}}
 {{< /card-grid >}}
 
-{{< callout type="tip" icon="outline/robot" title="Build Faster" >}}
-Ask [**🤖 WAHA GPT**]({{< relref "/gpt" >}}) to help you build **{python|js|php}** code!
-{{< /callout >}} 

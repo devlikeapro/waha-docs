@@ -195,4 +195,8 @@ Open Swagger at
 
 ## What's next?
 
+{{< callout type="tip" icon="outline/robot" title="Build Fast" >}}
+Ask [**🤖 WAHA GPT**]({{< relref "/gpt" >}}) to help you build **{python|js|php}** code!
+{{< /callout >}}
+
 {{< include file="content/docs/overview/quick-start/links.md" >}}
