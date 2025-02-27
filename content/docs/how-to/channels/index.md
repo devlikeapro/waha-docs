@@ -227,8 +227,7 @@ List of available views for search:
 GET /api/{session}/channels/search/views
 ```
 
-**Response**:
-```json
+```json { title="Response" }
 [
   {
     "value": "RECOMMENDED",
@@ -244,8 +243,7 @@ List of available countries for search (not full one, you can try different `cod
 GET /api/{session}/channels/search/countries
 ```
 
-**Response**:
-```json
+```json { title="Response" }
 [
   {
     "code": "US",
@@ -261,8 +259,7 @@ List of available categories for search:
 GET /api/{session}/channels/search/categories
 ```
 
-**Response**:
-```json
+```json { title="Response" }
 [
   {
     "value": "BUSINESS",

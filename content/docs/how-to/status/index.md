@@ -155,7 +155,6 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 32k -ar 48000 -ac 1 output.opus
 ```
 {{< /callout >}}
 
-**Body**
 {{< tabs "send-voice-status-body" >}}
 {{< tab "URL" >}}
 ```json { title="Body" }

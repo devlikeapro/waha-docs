@@ -47,7 +47,6 @@ GET /api/{session}/groups
 
 
 **Response**:
-
 depends on [**🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) you use.
 
 **Query parameters**:
