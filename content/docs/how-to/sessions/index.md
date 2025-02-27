@@ -415,7 +415,7 @@ DELETE /api/sessions/{session}
 To get session list - call 
 
 ```http request
-GET /api/sessions`
+GET /api/sessions
 ```
 
 ```json { title="Response" }
