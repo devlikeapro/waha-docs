@@ -61,9 +61,7 @@ You can get a list of labels for the session using the endpoint:
 GET /api/{session}/labels
 ```
 
-Response:
-
-```json
+```json { title="Response" }
 [
   {
     "id": "1",
@@ -145,9 +143,7 @@ You can get a list of labels by chat id using the endpoint:
 GET /api/{session}/labels/chats/{chatId}/
 ```
 
-Response:
-
-```json
+```json { title="Response" }
 [
   {
     "id": "1",

@@ -418,8 +418,6 @@ To get session list - call
 GET /api/sessions`
 ```
 
-The response:
-
 ```json { title="Response" }
 [
   {
