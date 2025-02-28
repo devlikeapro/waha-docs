@@ -1,5 +1,5 @@
 ---
-title: "Python"
+title: "WAHA + Python"
 description: "WhatsApp API + Python examples."
 lead: "WhatsApp API + Python examples."
 date: 2020-10-06T08:49:31+00:00
@@ -9,7 +9,7 @@ images: ["python-whatsapp.png"]
 menu:
 docs:
 parent: "help"
-weight: 902
+weight: 999
 toc: true
 ---
 
