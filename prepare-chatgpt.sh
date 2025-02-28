@@ -2,7 +2,8 @@
 
 # Set source and output file
 SOURCE_DIR="content"
-OUTPUT_FILE="$HOME/Downloads/chatgpt/waha.md"
+OUTPUT_DIR="$HOME/Downloads/chatgpt"
+OUTPUT_FILE="$OUTPUT_DIR/waha.md"
 
 # Create or clear the output file
 rm -f "$OUTPUT_FILE"
@@ -17,4 +18,7 @@ find "$SOURCE_DIR" -type f -name "*.md" | while read -r file; do
   echo -e "\n-------\n" >> "$OUTPUT_FILE"
 done
 
+cp -f static/swagger/openapi.json "$OUTPUT_DIR/openapi.json"
+
 echo "All .md files combined into $OUTPUT_FILE with separators."
+echo "openapi.json copied to $OUTPUT_DIR/openapi.json"
