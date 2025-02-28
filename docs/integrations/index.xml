@@ -44,16 +44,7 @@ to start from the scratch and create your first &lt;strong>ChatWoot&lt;/strong> 
 &lt;li>&lt;strong>PostgreSQL&lt;/strong> - to store Typebot data (and WAHA-Typebot relations)&lt;/li>
 &lt;/ol>
 &lt;p>👉 Check out &lt;a href="https://waha-n8n-templates.devlike.pro/whatsapp-typebot/">&lt;strong>WAHA + Typebot Template&lt;/strong>&lt;/a>
-to start from the scratch and create your first &lt;strong>Typebot&lt;/strong> integration!&lt;/p></description></item><item><title>Python</title><link>/docs/integrations/python/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/python/</guid><description>&lt;p align="center">
- &lt;img src="/images/python-whatsapp.png" style="width: 200px">
-&lt;/p>
-&lt;p>We&amp;rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Python.&lt;/p>
-&lt;p>You can find the examples in &lt;a href="https://github.com/devlikeapro/waha/tree/core/examples/python">examples folder on GitHub with detailed instructions in README.md -&amp;gt;&lt;/a>&lt;/p></description></item><item><title>Kotlin</title><link>/docs/integrations/kotlin/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/kotlin/</guid><description>&lt;p align="center">
- &lt;img src="/images/kotlin-whatsapp.png" style="width: 200px">
-&lt;/p>
-&lt;p>We&amp;rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Kotlin (ktor).&lt;/p>
-&lt;p>You can find the examples in
-&lt;a href="https://github.com/devlikeapro/waha-kotlin">examples folder on GitHub with detailed instructions in README.md -&amp;gt;&lt;/a>&lt;/p></description></item><item><title>Live Helper Chat</title><link>/docs/integrations/live-helper-chat/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/live-helper-chat/</guid><description>&lt;div class="text-center">
+to start from the scratch and create your first &lt;strong>Typebot&lt;/strong> integration!&lt;/p></description></item><item><title>Live Helper Chat</title><link>/docs/integrations/live-helper-chat/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/live-helper-chat/</guid><description>&lt;div class="text-center">
 &lt;p>
 
 &lt;img
@@ -86,4 +77,38 @@ system with mobile app, Bot, AI, Voice &amp;amp; Video &amp;amp; ScreenShare.&lt
 &lt;a href="https://doc.livehelperchat.com/docs/integrating/waha" target="_blank" rel="noopener noreferrer">
 WhatsApp WAHA integration on Live Helper Chat -&amp;gt;
 &lt;/a>
-documentation for more details how to integrate WhatsApp with Live Helper Chat.&lt;/p></description></item></channel></rss>
+documentation for more details how to integrate WhatsApp with Live Helper Chat.&lt;/p></description></item><item><title>WAHA + C#</title><link>/docs/integrations/csharp/</link><pubDate>Thu, 05 Sep 2024 08:49:31 +0000</pubDate><guid>/docs/integrations/csharp/</guid><description>&lt;p align="center">
+ &lt;img src="/images/csharp.svg" style="width: 150px">
+&lt;/p>
+&lt;h2 id="waha-net-library">waha-net library&lt;/h2>
+&lt;div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/alert-triangle svg-inline callout-icon me-2 mb-3" id="svg-alert-triangle" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M12 9v4" />
+ &lt;path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+ &lt;path d="M12 16h.01" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ 
+ &lt;div class="callout-body">
+ &lt;p>It&amp;rsquo;s &lt;strong>community-driven library&lt;/strong>, so please check the code before using it.&lt;/p></description></item><item><title>WAHA + Kotlin</title><link>/docs/integrations/kotlin/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/kotlin/</guid><description>&lt;p align="center">
+ &lt;img src="/images/kotlin-whatsapp.png" style="width: 200px">
+&lt;/p>
+&lt;p>We&amp;rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Kotlin (ktor).&lt;/p>
+&lt;p>You can find the examples in
+&lt;a href="https://github.com/devlikeapro/waha-kotlin">examples folder on GitHub with detailed instructions in README.md -&amp;gt;&lt;/a>&lt;/p></description></item><item><title>WAHA + Python</title><link>/docs/integrations/python/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/python/</guid><description>&lt;p align="center">
+ &lt;img src="/images/python-whatsapp.png" style="width: 200px">
+&lt;/p>
+&lt;p>We&amp;rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Python.&lt;/p>
+&lt;p>You can find the examples in &lt;a href="https://github.com/devlikeapro/waha/tree/core/examples/python">examples folder on GitHub with detailed instructions in README.md -&amp;gt;&lt;/a>&lt;/p></description></item></channel></rss>
