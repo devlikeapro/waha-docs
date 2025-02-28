@@ -50,6 +50,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 ### 2025.2
 `2025.2.8`
 - **WEBJS** - fix empty channels {{< issue 832 >}}
+- Edit message `linkPreview`  {{< issue 833 >}}
 
 `2025.2.7`
 - Add [**👥 Group Picture API**]({{< relref "/docs/how-to/groups#group-picture" >}}) - {{< issue 802 >}}
