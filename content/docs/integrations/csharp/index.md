@@ -11,6 +11,7 @@ parent: "help"
 weight: 999
 images: [ 'csharp.svg' ]
 toc: true
+slug: csharp
 ---
 
 <p align="center">
