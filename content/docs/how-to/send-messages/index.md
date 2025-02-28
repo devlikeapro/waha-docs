@@ -133,7 +133,8 @@ POST /api/sendText
 {
   "session": "default",
   "chatId": "12132132130@c.us",
-  "text": "Hi there!"
+  "text": "Hi there!",
+  "linkPreview": true
 }
 ```
 
@@ -414,9 +415,12 @@ PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 
 ```json { title="Body" }
 {
-  "text": "Hello, world!"
+  "text": "Hello, world!",
+  "linkPreview": true
 }
 ```
+
+- `linkPreview: false` - to disable preview generation for links in the message
 
 ## Delete message
 
