@@ -48,6 +48,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< /callout >}}
 
 ### 2025.2
+`2025.2.8`
+- **WEBJS** - fix empty channels {{< issue 832 >}}
+
 `2025.2.7`
 - Add [**👥 Group Picture API**]({{< relref "/docs/how-to/groups#group-picture" >}}) - {{< issue 802 >}}
   - **WEBJS**, **NOWEB**, **GOWS**
