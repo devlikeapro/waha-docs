@@ -199,7 +199,7 @@ sha512
 
 ### Examples
 Here's few examples of how to handle webhook in different languages:
-1. [Python guide]({{< relref "/docs/integrations/python" >}})
+1. [Python guide]({{< relref "/docs/integrations/waha+python" >}})
 
 **Do you use another language?**
 

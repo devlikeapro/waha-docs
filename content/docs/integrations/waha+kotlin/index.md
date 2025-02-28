@@ -11,6 +11,7 @@ docs:
 parent: "help"
 weight: 999
 toc: true
+slug: kotlin
 ---
 
 <p align="center">

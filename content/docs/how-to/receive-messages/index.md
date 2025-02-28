@@ -327,7 +327,7 @@ instead to avoid performance issues.
 
 ## Examples
 Here's few examples of how to receive messages in different languages:
-1. [Python guide ->]({{< relref "/docs/integrations/python" >}})
+1. [Python guide ->]({{< relref "/docs/integrations/waha+python" >}})
 
 **Do you use another language?**
 
