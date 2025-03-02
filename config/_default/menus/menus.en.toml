@@ -29,11 +29,11 @@ identifier = "docs"
 url = "/docs/overview/introduction/"
 weight = 10
 
-[[main]]
-name = "⚡ Quick Start"
-weight = 12
-url = "/docs/overview/quick-start"
-parent = "docs"
+#[[main]]
+#name = "⚡ Quick Start"
+#weight = 12
+#url = "/docs/overview/quick-start"
+#parent = "docs"
 
 [[main]]
 name = "📄 Overview"
