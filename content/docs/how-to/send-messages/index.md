@@ -133,8 +133,7 @@ POST /api/sendText
 {
   "session": "default",
   "chatId": "12132132130@c.us",
-  "text": "Hi there!",
-  "linkPreview": true
+  "text": "Hi there!"
 }
 ```
 
@@ -142,6 +141,27 @@ Here's some additional options:
 - `reply_to: false_1111@c.us_AAA` - to reply on a message
 - `mentions` - to mention a contact in a group
 - `linkPreview: false` - to disable preview generation for links in the message
+
+### Link preview
+
+If the text has a link - it will generate a preview for that link. You adjust the behaviour by setting
+- `linkPreview: true` - to enable link preview
+- `linkPreviewHighQuality: true` - to enable high-quality link preview (requires additional upload to WA servers)
+
+```json { title="Body" }
+{
+  "session": "default",
+  "chatId": "12132132130@c.us",
+  "text": "Hi there!",
+  "linkPreview": true,
+  "linkPreviewHighQuality": true
+}
+```
+
+{{< details-html "🖼️ **Link Preview** Screenshot" >}}
+{{< imgo src="whatsapp-link-preview.jpg" alt="WhatsApp Link Preview" >}}
+{{< /details-html >}}
+
 
 ### Reply on message
 
