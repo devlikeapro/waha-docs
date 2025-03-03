@@ -144,9 +144,9 @@ Here's some additional options:
 
 ### Link preview
 
-If the text has a link - it will generate a preview for that link. You adjust the behaviour by setting
-- `linkPreview: true` - to enable link preview
-- `linkPreviewHighQuality: true` - to enable high-quality link preview (requires additional upload to WA servers)
+```http request
+POST /api/sendText
+```
 
 ```json { title="Body" }
 {
@@ -157,6 +157,10 @@ If the text has a link - it will generate a preview for that link. You adjust th
   "linkPreviewHighQuality": true
 }
 ```
+
+If the text has a link - it generates a preview for that link. You adjust the behaviour by setting
+- `linkPreview: true` - to enable link preview
+- `linkPreviewHighQuality: true` - to enable high-quality link preview (requires additional upload to WA servers)
 
 {{< details-html "🖼️ **Link Preview** Screenshot" >}}
 {{< imgo src="whatsapp-link-preview.jpg" alt="WhatsApp Link Preview" >}}

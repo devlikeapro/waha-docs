@@ -47,6 +47,12 @@ Latest Version:
 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 {{< /callout >}}
 
+### 2025.3
+`2025.3.1`
+- **GOWS** - Enable Link Previews {{< issue 763 >}}
+- `linkPreviewHighQuality: true` for [**📤 Send messages - Link Preview**]({{< relref "/docs/how-to/send-messages#link-preview" >}})
+  - **GOWS**, **NOWEB**
+
 ### 2025.2
 `2025.2.8`
 - **WEBJS** - fix empty channels {{< issue 832 >}}
