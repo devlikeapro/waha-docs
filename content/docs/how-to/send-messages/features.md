@@ -4,15 +4,14 @@
 | `POST /api/sendSeen`                                        |                              ✔️                              |  ✔️   |  ✔️  |
 | `PUT /api/{session}/chats/{chatId}/messages/{messageId}`    |                              ✔️                              |  ✔️   |      |
 | `DELETE /api/{session}/chats/{chatId}/messages/{messageId}` |                              ✔️                              |  ✔️   |      |
-| `POST /api/sendImage`         |                              ✔️                              |  ✔️   |  ✔️  |
-| `POST /api/sendFile`          |                              ✔️                              |  ✔️   |  ✔️  |
-| `POST /api/sendVoice`         |                              ✔️                              |  ✔️   |  ✔️  |
-| `POST /api/sendVideo`         |                              ✔️                              |  ✔️   |  ✔️  |
+| `POST /api/sendImage`                                       |                              ✔️                              |  ✔️   |  ✔️  |
+| `POST /api/sendFile`                                        |                              ✔️                              |  ✔️   |  ✔️  |
+| `POST /api/sendVoice`                                       |                              ✔️                              |  ✔️   |  ✔️  |
+| `POST /api/sendVideo`                                       |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/sendButtons`                                     |                                                              |  ✔️   |      |
 | `POST /api/sendPoll`                                        |    [#189](https://github.com/devlikeapro/waha/issues/189)    |  ✔️   |      |
 | `POST /api/forwardMessage`                                  | ✔️<br>[#588](https://github.com/devlikeapro/waha/issues/588) |  ✔️   |      |
 | `POST /api/sendLocation`                                    |                              ✔️                              |  ✔️   |      |
-| `POST /api/sendLinkPreview`                                 |                                                              |  ✔️   |      |
 | `POST /api/startTyping`                                     |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/stopTyping`                                      |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/{session}/presence`                              |                              ✔️                              |  ✔️   |  ✔️  |
