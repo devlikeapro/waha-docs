@@ -12,7 +12,6 @@
 | `POST /api/sendPoll`                                        |    [#189](https://github.com/devlikeapro/waha/issues/189)    |  ✔️   |      |
 | `POST /api/forwardMessage`                                  | ✔️<br>[#588](https://github.com/devlikeapro/waha/issues/588) |  ✔️   |      |
 | `POST /api/sendLocation`                                    |                              ✔️                              |  ✔️   |      |
-| `POST /api/sendLinkPreview`                                 |                                                              |  ✔️   |      |
 | `POST /api/startTyping`                                     |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/stopTyping`                                      |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/{session}/presence`                              |                              ✔️                              |  ✔️   |  ✔️  |
