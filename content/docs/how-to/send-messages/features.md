@@ -3,7 +3,7 @@
 | `POST /api/sendText`                                        |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/sendSeen`                                        |                              ✔️                              |  ✔️   |  ✔️  |
 | `PUT /api/{session}/chats/{chatId}/messages/{messageId}`    |                              ✔️                              |  ✔️   |      |
-| `DELETE /api/{session}/chats/{chatId}/messages/{messageId}` |                              ✔️                              |  ✔️   |      |
+| `DELETE /api/{session}/chats/{chatId}/messages/{messageId}` |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/sendImage`                                       |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/sendFile`                                        |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/sendVoice`                                       |                              ✔️                              |  ✔️   |  ✔️  |

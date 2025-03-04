@@ -52,6 +52,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - **GOWS** - Enable Link Previews {{< issue 763 >}}
 - `linkPreviewHighQuality: true` for [**📤 Send messages - Link Preview**]({{< relref "/docs/how-to/send-messages#link-preview" >}})
   - **GOWS**, **NOWEB**
+- **GOWS** - Delete Message {{< issue 796  >}}
+- **GOWS** - Delete Status Message {{< issue 754  >}}
 
 ### 2025.2
 `2025.2.8`
