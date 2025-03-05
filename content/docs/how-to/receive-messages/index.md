@@ -62,11 +62,7 @@ If you get a message as a reply to another message, you'll see `replyTo` field w
     "timestamp": 1667561485,
     "from": "11111111111@c.us",
     "body": "Yes!",
-    "replyTo": {
-      "id": "BBBBBBBBBBBBBBB",
-      "participant": "2222222222@c.us",
-      "body": "Are you going?"
-    }
+    "replyTo": "false_22222222@c.us_AAAAAAAAAAAAAAAAAAA"
   }
 }
 
