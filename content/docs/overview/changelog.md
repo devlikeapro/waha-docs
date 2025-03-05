@@ -55,6 +55,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - **GOWS** - Delete Message {{< issue 796  >}}
 - **GOWS** - Delete Status Message {{< issue 754  >}}
 - **GOWS** - Edit Message {{< issue 797  >}}
+- **GOWS** - Add `filename` on `/api/sendFile`
 
 ### 2025.2
 `2025.2.8`
