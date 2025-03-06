@@ -14,58 +14,36 @@ toc: true
 ---
 
 ## System Requirements
+### How much CPU and Memory does WAHA need?
+
+{{< callout note >}}
 We strongly recommend using VPS or servers with minimum **2CPU** and **2GB RAM** configuration for the project even for a single session.
 If you want to host more sessions - please check the numbers below
+{{< /callout >}}
 
-### How much CPU and Memory does WAHA consume?
-
-WAHA uses multiple [🏭 Engines]({{< relref "/docs/how-to/engines" >}}) under the hood and depends on the used engine 
+WAHA has multiple [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}) under the hood and depends on the used engine
 CPU and Memory requirements change
 
-👉 We kindly recommend getting **at least** **2CPU and 2GB RAM** for a VPS, 
-it's not comfortable to work with less resources.
+| Sessions (accounts) in the container |    **WEBJS**    |    **NOWEB**    |    **GOWS**     |
+|--------------------------------------|:---------------:|:---------------:|:---------------:|
+| 1                                    | 0.3CPU  / 400MB | 0.1 CPU / 200MB | 0.1 CPU / 200MB |
+| 10                                   |  3CPU / 2.5GB   |   1CPU / 2GB    |  0.5 CPU / 1GB  |
+| 50                                   |  15CPU / 20GB   |   2CPU / 4GB    |  1.5 CPU / 3GB  |               
+| 100                                  |        -        |   4CPU / 8GB    |  3-5 CPU / 5GB  | 
+| 500                                  |        -        |        -        | 5-8 CPU / 25GB  |     
 
-
-#### WEBJS
-
-The nature of [WEBJS]({{< relref "/docs/engines/WEBJS" >}}) engine - it runs **real WhatsApp Web** version in **Chromium (or Chrome)** and
-communicate with it to prevent blocking from WhatsApp.
-
-It's the reason why it's so demanding on resources.
-
-
-| Accounts (sessions) in the container                                                       | CPU   | Memory |
-|--------------------------------------------------------------------------------------------|-------|--------|
-| 1                                                                                          | 30%   | 400MB  |
-| 10                                                                                         | 270%  | 2.5GB  |
-| 50                                                                                         | 1500% | 20GB   |
-| 💡 [**WAHA Scaling - how to handle 50+ sessions ->**]({{< relref "/blog/waha-scaling" >}}) |       |        |
-
-👉 The benchmark may differ from case to case, it depends on usage pattern - how many messages you get, how many send, etc.
-
-#### NOWEB
-If you're looking for less resource demanded engine - [have a look at **NOWEB** engine ->]({{< relref "/docs/engines/NOWEB" >}})
-
-| Accounts (sessions) in the container                                                        | CPU  | Memory |
-|---------------------------------------------------------------------------------------------|------|--------|
-| 1                                                                                           | 10%  | 200MB  |
-| 10                                                                                          | 100% | 2GB    |
-| 50                                                                                          | 150% | 4GB    |
-| 100                                                                                         | 200% | 6GB    |
-| 500                                                                                         | 300% | 30GB   |
-| 💡 [**WAHA Scaling - How To Handle 500+ Sessions ->**]({{< relref "/blog/waha-scaling" >}}) |      |        |
-
-Quotes from the users:
-> The server has **2 CPU and 8GB** of memory. Today we have **85 sessions** in this instance.
-
-> **400** sessions with **4CPU and 32RAM**. It's working fine.
-
+{{< callout context="note" title="Real feedback from the users" >}}
+- The server has **2 CPU and 8GB** of memory. Today we have **85 sessions** in this instance.
+- **NOWEB** and **400** sessions with **4CPU and 32RAM**. It's working fine.
+{{< /callout >}}
 
 ### How to horizontally scale WAHA?
-You can scale WAHA horizontally by running multiple instances of WAHA on different servers and distribute 
-the load between them.
+You can scale WAHA horizontally by **running multiple instances of WAHA** on **different servers**
+and distribute the load between them.
 
-Read more [**WAHA Scaling - How To Handle 500+ Sessions ->**]({{< relref "/blog/waha-scaling" >}})
+{{< callout context="tip" icon="outline/rocket" >}}
+Read about [**WAHA Scaling - how to handle 50+ sessions ->**]({{< relref "/blog/waha-scaling" >}})
+{{< /callout >}}
 
 ## WAHA Plus
 ### What is the difference between WAHA Core and WAHA Plus?
@@ -85,19 +63,25 @@ which means you need to make sure your infrastructure is secure.
 - Sends and receives **multimedia messages** (images, videos)
 - Have built-in [🔒 Security]({{< relref "/docs/how-to/security" >}}) features
 
+{{< callout >}}
 You can find the full comparison table on [**Pricing**]({{< relref "/pricing#donations" >}}) page.
-### What is the difference between Core, Plus and PRO tiers?
+{{< /callout >}}
 
-- **Core** free tier (aka community edition) that you're already in, and you can use **WAHA Core** for free!
-- **Plus** tier allows you to have access to **WAHA Plus** docker image and enjoy all features available in the product!
-- **PRO** tier also gives you access to **WAHA Plus** image AND **WAHA Plus Source Code** on [GitHub](https://github.com/devlikeapro/waha-plus)
-, but also our team will pay additional attentions to your requests 🫶
+### What is the difference between Core, Plus and PRO Tiers?
 
-You can find the full comparison table on [**Pricing**]({{< relref "/pricing#donations" >}}) page.
+- **Core Tier** - it's free tier (aka community edition) that you're already in, and you can use **WAHA Core** for free!
+- **Plus Tier** - allows you to have access to **WAHA Plus** docker image and enjoy all features available in the product!
+- **PRO Tier** - also gives you access to **WAHA Plus** image AND **WAHA Plus Source Code** on [GitHub](https://github.com/devlikeapro/waha-plus). Also our team will pay additional attentions to your requests 🫶
+  - [waha-plus](https://github.com/devlikeapro/waha-plus)
+  - [gow-plus](https://github.com/devlikeapro/gows-plus)
+  - [dashboard](https://github.com/devlikeapro/waha-hub)
+
+{{< callout >}}
+You can find the full tier comparison table on [**Pricing**]({{< relref "/pricing#donations" >}}) page.
+{{< /callout >}}
 
 
-
-### I want to purchase WAHA Plus (WAHA Pro), is it one time purchase?
+### Is it one time donation?
 
 According to [**Pricing**]({{< relref "/pricing#donations" >}}) page:
 > It doesn't require monthly subscriptions, once installed on your server - it always works!
@@ -113,6 +97,11 @@ In order to update WAHA you need to have **active docker key**
 
 In summary, it's not one time purchase, it's rather **"every 3-6 months" purchase** to get the latest update.
 
-💡 We recommend staying subscribing, so we can keep developing awesome product for you! 
+
+{{< callout >}}
+💡 We recommend staying subscribing, so we can keep developing awesome product for you!
 Your support the only reason why we're able to publish and maintain the project 🫶
+
+You can find the full comparison table on [**Pricing**]({{< relref "/pricing#donations" >}}) page.
+{{< /callout >}}
 
