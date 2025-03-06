@@ -58,6 +58,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - **GOWS** - Reply To Message {{< issue 799  >}}
 - **GOWS** - Add `filename` on `/api/sendFile`
 - Add `event.timestamp` to [**🔄 Webhooks and Websockets**]({{< relref "/docs/how-to/webhooks" >}}) {{< issue 755 >}}
+- **NOWEB** - Filter [**📞 Calls**] from `message` event - {{< issue 840 >}}
 
 ### 2025.2
 `2025.2.8`
