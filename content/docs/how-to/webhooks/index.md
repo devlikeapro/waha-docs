@@ -296,8 +296,13 @@ In [**Webhooks**](#webhooks) or [**Websockets**](#websockets) you'll receive the
 
 ```json
 {
+  // lower case ULID - https://github.com/ulid/spec
   "id": "evt_1111111111111111111111111111",
+  // timestamp in milliseconds
+  "timestamp": 1741249702485,
+  // event name
   "event": "message",
+  // session name
   "session": "default",
   // 'metadata' provided when you created the session
   "metadata": {
