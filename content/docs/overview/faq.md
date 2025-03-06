@@ -16,13 +16,15 @@ toc: true
 ## System Requirements
 ### How much CPU and Memory does WAHA need?
 
-{{< callout note >}}
-We strongly recommend using VPS or servers with minimum **2CPU** and **2GB RAM** configuration for the project even for a single session.
-If you want to host more sessions - please check the numbers below
-{{< /callout >}}
-
 WAHA has multiple [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}) under the hood and depends on the used engine
 CPU and Memory requirements change
+
+{{< callout icon="outline/server" >}}
+We **strongly recommend** using VPS or servers with minimum **2CPU** and **2GB RAM** configuration for the project **even for a single session**.
+
+If you want to host **more sessions** - please check the numbers below
+{{< /callout >}}
+
 
 | Sessions (accounts) in the container |    **WEBJS**    |    **NOWEB**    |    **GOWS**     |
 |--------------------------------------|:---------------:|:---------------:|:---------------:|
@@ -52,14 +54,14 @@ It's two versions of product we build:
 
 **WAHA Core** 
 - The free and open source project available for everyone. 
-- Supports automating a single **WhatsApp Account** (aka [🖥️ Sessions]({{< relref "/docs/how-to/sessions" >}}) 
+- Supports automating a single **WhatsApp Account** (aka [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}}) 
 - Sends and receives **unlimited text messages**.
 - Doesn't have any built-in [🔒 Security]({{< relref "/docs/how-to/security" >}}) features, 
 which means you need to make sure your infrastructure is secure.
 
 **WAHA Plus**
 - The full available through donations version of the project
-- Supports **unlimited** [🖥️ Sessions]({{< relref "/docs/how-to/sessions" >}})
+- Supports **unlimited** [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
 - Sends and receives **multimedia messages** (images, videos)
 - Have built-in [🔒 Security]({{< relref "/docs/how-to/security" >}}) features
 
