@@ -5,8 +5,8 @@ lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
-
 weight: 700
+slug: security
 ---
 
 {{< callout context="caution" title="Do not expose WhatsApp API on public networks!" icon="outline/shield-check" >}}

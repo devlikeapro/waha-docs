@@ -1,12 +1,16 @@
 ---
-title : "🔄 Webhooks"
-description: "Webhooks, how to set up and handle them."
+title : "🔄 Events"
+description: "Events - how to set up and handle them using Webhooks and Websockets"
 lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
-
 weight: 225
+slug: events
+aliases:
+  - /docs/how-to/events
+  - /docs/how-to/webhooks
+  - /docs/how-to/websockets
 ---
 
 In order to notify your application about events in the WhatsApp API, you can use 

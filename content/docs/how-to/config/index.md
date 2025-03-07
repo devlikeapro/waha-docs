@@ -6,6 +6,7 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 299
+slug: config
 ---
 
 You can configure WhatsApp API behaviour via environment variables, by adding `-e WHATSAPP_VARNAME=value` at the

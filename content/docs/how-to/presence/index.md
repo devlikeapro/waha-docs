@@ -5,8 +5,8 @@ lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
-
 weight: 291
+slug: presence
 ---
 
 You can get presence information (online, offline with last seen, typing status) for a contact if they share their
