@@ -7,7 +7,7 @@
 &lt;p>We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202412">&lt;strong>WAHA 2024.12&lt;/strong>&lt;/a>!&lt;/p></description></item><item><title>WAHA 2024.11</title><link>/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-11/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202411">&lt;strong>WAHA 2024.11&lt;/strong>&lt;/a> 🎉&lt;/p>
 &lt;h2 id="event-monitor">Event Monitor&lt;/h2>
 &lt;p>Now you can observe the
-&lt;a href="/docs/how-to/webhooks/">&lt;strong>Events&lt;/strong>&lt;/a>
+&lt;a href="/docs/how-to/events/">&lt;strong>Events&lt;/strong>&lt;/a>
 happening in your WAHA instance in real-time with the new
 &lt;a href="/docs/how-to/dashboard/#event-monitor">&lt;strong>Event Monitor&lt;/strong>&lt;/a>
 feature!&lt;/p></description></item><item><title>WAHA 2024.10</title><link>/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-10/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202410">&lt;strong>WAHA 2024.10&lt;/strong>&lt;/a> 🎉&lt;/p>
@@ -36,5 +36,5 @@ You can manage, read and send messages to &lt;strong>WhatsApp Channels&lt;/stron
 &lt;p>Here&amp;rsquo;s the list of main changes we&amp;rsquo;ve made:&lt;/p>
 &lt;h2 id="noweb-store">NOWEB Store&lt;/h2>
 &lt;p>You asked it, we did it - &lt;strong>contacts, chats, and messages&lt;/strong> endpoints are now available in NOWEB engine!&lt;/p></description></item><item><title>WAHA 2024.5 - Swagger White Label and stability improvements</title><link>/blog/waha-2024.5-swagger-white-label-and-stability-improvements/</link><pubDate>Thu, 30 May 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.5-swagger-white-label-and-stability-improvements/</guid><description>&lt;p>We are excited to announce the release of &lt;strong>WAHA 2024.5&lt;/strong>!
-This version introduces the &lt;a href="/docs/how-to/swagger-openapi/#white-label">Swagger White Label&lt;/a>
+This version introduces the &lt;a href="/docs/how-to/swagger/#white-label">Swagger White Label&lt;/a>
 feature and includes several stability improvements.&lt;/p></description></item></channel></rss>
