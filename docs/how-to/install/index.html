@@ -59,38 +59,37 @@ Setup something like Nginx or any other proxy server to proxy the requests to th
 It&rsquo;s recommended to revert this change back and use Nginx or some proxy server in the front.</p><h3 id=additional-steps>Additional Steps<a href=#additional-steps class=anchor aria-hidden=true>#</a></h3><h4 id=configure-nginx-and-lets-encrypt>Configure Nginx and Let&rsquo;s Encrypt<a href=#configure-nginx-and-lets-encrypt class=anchor aria-hidden=true>#</a></h4><p>👉 Replace <strong>&lt;YOURDOMAIN.COM></strong> with your domain name in the following steps (use lowercase).</p><ol><li>Configure Nginx to serve as a frontend proxy.</li></ol><div class=expressive-code><figure class="frame is-terminal not-content"><figcaption class=header><span class=title></span></figcaption><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sudo apt-get install nginx
 </span></span><span class=line><span class=cl><span class=nb>cd</span> /etc/nginx/sites-enabled
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>nano &lt;YOURDOMAIN.COM&gt;.conf</span></span></code></pre></div></figure></div><ol start=2><li>Use the following Nginx config and <strong>replace</strong> the <code>&lt;YOURDOMAIN.COM></code> in <code>server_name</code>.</li></ol><div class=expressive-code><figure class="frame not-content"><figcaption class=header><span class=title></span></figcaption><pre tabindex=0><code class=language-config data-lang=config>server {
-  server_name &lt;YOURDOMAIN.COM&gt;;
-
-  # Point upstream to WAHA Server
-  set $upstream 127.0.0.1:3000;
-
-  location /.well-known {
-    alias /var/www/ssl-proof/waha/.well-known;
-  }
-
-  location / {
-    proxy_pass_header Authorization;
-    proxy_pass http://$upstream;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection &#34;upgrade&#34;;
-    proxy_set_header Host $host;
-    proxy_set_header X-Forwarded-Proto $scheme;
-    proxy_set_header X-Forwarded-Ssl on; # Optional
-
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-
-    proxy_http_version 1.1;
-    proxy_set_header Connection “”;
-    proxy_buffering off;
-
-    client_max_body_size 0;
-    proxy_read_timeout 36000s;
-    proxy_redirect off;
-  }
-  listen 80;
-}</code></pre></figure></div><ol start=3><li>Verify and reload your Nginx config by running the following command.</li></ol><div class=expressive-code><figure class="frame is-terminal not-content"><figcaption class=header><span class=title></span></figcaption><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>nginx -t
+</span></span><span class=line><span class=cl>nano &lt;YOURDOMAIN.COM&gt;.conf</span></span></code></pre></div></figure></div><ol start=2><li>Use the following Nginx config and <strong>replace</strong> the <code>&lt;YOURDOMAIN.COM></code> in <code>server_name</code>.</li></ol><div class=expressive-code><figure class="frame not-content"><figcaption class=header><span class=title></span></figcaption><div class=highlight><pre tabindex=0 class=chroma><code class=language-nginx data-lang=nginx><span class=line><span class=cl><span class=k>server</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kn>server_name</span> <span class=s>&lt;YOURDOMAIN.COM&gt;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1># Point upstream to WAHA Server
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=kn>set</span> <span class=nv>$upstream</span> <span class=n>127.0.0.1</span><span class=p>:</span><span class=mi>3000</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kn>location</span> <span class=s>/.well-known</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kn>alias</span> <span class=s>/var/www/ssl-proof/waha/.well-known</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kn>location</span> <span class=s>/</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_pass_header</span> <span class=s>Authorization</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_pass</span> <span class=s>http://</span><span class=nv>$upstream</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_set_header</span> <span class=s>Upgrade</span> <span class=nv>$http_upgrade</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_set_header</span> <span class=s>Connection</span> <span class=s>&#34;Upgrade&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_set_header</span> <span class=s>Host</span> <span class=nv>$host</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_set_header</span> <span class=s>X-Forwarded-Proto</span> <span class=nv>$scheme</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_set_header</span> <span class=s>X-Forwarded-Ssl</span> <span class=no>on</span><span class=p>;</span> <span class=c1># Optional
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_set_header</span> <span class=s>X-Real-IP</span> <span class=nv>$remote_addr</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_set_header</span> <span class=s>X-Forwarded-For</span> <span class=nv>$proxy_add_x_forwarded_for</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_http_version</span> <span class=mi>1</span><span class=s>.1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_buffering</span> <span class=no>off</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kn>client_max_body_size</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_read_timeout</span> <span class=s>36000s</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>proxy_redirect</span> <span class=no>off</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=kn>listen</span> <span class=mi>80</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></div></figure></div><ol start=3><li>Verify and reload your Nginx config by running the following command.</li></ol><div class=expressive-code><figure class="frame is-terminal not-content"><figcaption class=header><span class=title></span></figcaption><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>nginx -t
 </span></span><span class=line><span class=cl>systemctl reload nginx</span></span></code></pre></div></figure></div><ol start=4><li>Run Let&rsquo;s Encrypt to configure SSL certificate. (replace <strong>&lt;YOURDOMAIN.COM></strong>!)</li></ol><div class=expressive-code><figure class="frame is-terminal not-content"><figcaption class=header><span class=title></span></figcaption><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>apt install certbot
 </span></span><span class=line><span class=cl>apt-get install python3-certbot-nginx
 </span></span><span class=line><span class=cl>mkdir -p /var/www/ssl-proof/waha/.well-known
