@@ -169,7 +169,7 @@ server {
     proxy_pass_header Authorization;
     proxy_pass http://$upstream;
     proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection "upgrade";
+    proxy_set_header Connection "Upgrade";
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-Proto $scheme;
     proxy_set_header X-Forwarded-Ssl on; # Optional
@@ -178,7 +178,6 @@ server {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
     proxy_http_version 1.1;
-    proxy_set_header Connection “”;
     proxy_buffering off;
 
     client_max_body_size 0;
