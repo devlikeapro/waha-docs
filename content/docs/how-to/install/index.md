@@ -154,7 +154,7 @@ nano <YOURDOMAIN.COM>.conf
 ```
 
 2. Use the following Nginx config and **replace** the `<YOURDOMAIN.COM>` in `server_name`.
-```config
+```nginx
 server {
   server_name <YOURDOMAIN.COM>;
 
