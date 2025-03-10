@@ -49,16 +49,16 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.3
 `2025.3.1`
-- `linkPreviewHighQuality: true` for [**📤 Send messages - Link Preview**]({{< relref "/docs/how-to/send-messages#link-preview" >}})
-  - **GOWS**, **NOWEB**
 - **GOWS** - Enable Link Previews {{< issue 763 >}}
 - **GOWS** - Delete Status Message {{< issue 754  >}}
 - **GOWS** - Delete Message {{< issue 796  >}}
 - **GOWS** - Edit Message {{< issue 797  >}}
 - **GOWS** - Reply To Message {{< issue 799  >}}
 - **GOWS** - Add `filename` on `/api/sendFile`
+- `linkPreviewHighQuality: true` for [**📤 Send messages - Link Preview**]({{< relref "/docs/how-to/send-messages#link-preview" >}})
+  - **GOWS**, **NOWEB**
 - Add `event.timestamp` to [**🔄 Webhooks and Websockets**]({{< relref "/docs/how-to/webhooks" >}}) {{< issue 755 >}}
-- **NOWEB** - Filter [**📞 Calls**] from `message` event - {{< issue 840 >}}
+- **NOWEB** - Filter [**📞 Calls**]({{< relref "/docs/how-to/calls" >}}) from `message` event - {{< issue 840 >}}
 - Support **disappearing messages** in [**📤 Send messages**]({{< relref "/docs/how-to/send-messages" >}}) - {{< issue 736 >}}
   - **GOWS**, **NOWEB**, **WEBJS**
   - Might require repairing (logout/scan qr)
