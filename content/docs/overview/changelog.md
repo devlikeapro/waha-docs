@@ -59,6 +59,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - **GOWS** - Add `filename` on `/api/sendFile`
 - Add `event.timestamp` to [**🔄 Webhooks and Websockets**]({{< relref "/docs/how-to/webhooks" >}}) {{< issue 755 >}}
 - **NOWEB** - Filter [**📞 Calls**] from `message` event - {{< issue 840 >}}
+- Support **disappearing messages** in [**📤 Send messages**]({{< relref "/docs/how-to/send-messages" >}}) - {{< issue 736 >}}
+  - **GOWS**, **NOWEB**, **WEBJS**
+  - Might require repairing (logout/scan qr)
 
 ### 2025.2
 `2025.2.8`
