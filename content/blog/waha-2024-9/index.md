@@ -41,7 +41,7 @@ For example, you can store your user’s unique identifier from your system.
 
 Associated `metadata` field is available in:
 1. [List Sessions](#list-sessions) and [Get Session](#get-session)  responses
-2. [**🔄 Webhooks**]({{< relref "webhooks#metadata" >}}) events
+2. [**🔄 Webhooks**]({{< relref "events#metadata" >}}) events
 3. [**📊 Dashboard**]({{< relref "dashboard" >}}) for view, and search sessions by metadata
 
 
@@ -78,7 +78,7 @@ Any **S3 Compatible** storage can be used, such as AWS S3, MinIO, DigitalOcean S
 
 <br>
 
-After you enabled S3 here's example for [**message**]({{< relref "/docs/how-to/webhooks#message" >}}) webhook payload:
+After you enabled S3 here's example for [**message**]({{< relref "/docs/how-to/events#message" >}}) webhook payload:
 ```json { title="message" }
 {
   "event": "message",

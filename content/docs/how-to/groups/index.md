@@ -398,7 +398,7 @@ POST /api/{session}/groups/{groupId}/invite-code/revoke
 ```
 
 ## Events
-Check [**🔄 Webhooks**]({{< relref "/docs/how-to/webhooks" >}}) for more information how to subscribe to events.
+Check [**🔄 Webhooks**]({{< relref "/docs/how-to/events" >}}) for more information how to subscribe to events.
 
 {{< include file="content/docs/how-to/groups/features-events.md" >}}
 

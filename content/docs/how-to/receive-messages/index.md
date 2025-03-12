@@ -12,7 +12,7 @@ We consider that you've run docker container and authenticated the session with 
 
 If you haven't yet - please follow the steps from [**Quick Start →**]({{< relref "/docs/overview/quick-start" >}}).
 
-You must use [Webhooks]({{< relref "/docs/how-to/webhooks" >}}) to receive messages from WhatsApp to your application.
+You must use [Webhooks]({{< relref "/docs/how-to/events" >}}) to receive messages from WhatsApp to your application.
 
 Start a new session with configured `message` event in webhooks - call `POST /api/sessions/` with the payload:
 ```json
@@ -74,7 +74,7 @@ If you get a message as a reply to another message, you'll see `replyTo` field w
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 Here's examples of message-related events.
-Read [Webhooks ->]({{< relref "/docs/how-to/webhooks" >}}) to find how to set them up.
+Read [Webhooks ->]({{< relref "/docs/how-to/events" >}}) to find how to set them up.
 
 ### message
 
@@ -194,7 +194,7 @@ on your phone.
 
 ### message.revoked
 
-[See details on Webhooks page ->]({{< relref "webhooks#messageack" >}}).
+[See details on Webhooks page ->]({{< relref "events#messageack" >}}).
 
 ```json { title="message.ack" }
 {
@@ -294,7 +294,7 @@ GET /api/messages
 
 {{< callout context="caution" icon="outline/alert-triangle" >}}
 We recommend using 
-[🔄 Webhooks]({{< relref "docs/how-to/webhooks" >}})
+[🔄 Webhooks]({{< relref "docs/how-to/events" >}})
 instead of constantly calling it to avoid performance issues.
 {{< /callout >}}
 
@@ -317,7 +317,7 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 
 {{< callout context="note" icon="outline/alert-triangle" >}}
 We recommend using
-[🔄 Webhooks]({{< relref "docs/how-to/webhooks" >}})
+[🔄 Webhooks]({{< relref "docs/how-to/events" >}})
 instead to avoid performance issues.
 {{< /callout >}}
 

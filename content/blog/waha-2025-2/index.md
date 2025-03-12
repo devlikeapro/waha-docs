@@ -116,7 +116,7 @@ POST /api/{SESSION}/groups/{ID}/picture
 We added new `group.v2.*` events and made `payload` body **the same** across of all engines!
 
 Check 
-[**🔄 Webhooks**]({{< relref "/docs/how-to/webhooks" >}}) or 
+[**🔄 Webhooks**]({{< relref "/docs/how-to/events" >}}) or 
 [**👥 Groups API**]({{< relref "/docs/how-to/groups" >}}) for more details.
 
 

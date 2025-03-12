@@ -103,7 +103,7 @@ and receive information about chat archive in WhatsApp using events:
 }
 ```
 
-👉 Read more about the events on [**🔄 Webhooks**]({{< relref "docs/how-to/webhooks#chatarchive" >}}) page!
+👉 Read more about the events on [**🔄 Webhooks**]({{< relref "docs/how-to/events#chatarchive" >}}) page!
 
 
 ## Calls Events

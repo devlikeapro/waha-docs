@@ -173,4 +173,4 @@ As alternative to `curl`, you can use [WAHA Swagger]({{< relref "/docs/how-to/sw
 Here's what you can lear next:
 - Check the full [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) documentation
 - Learn more about how to send images [**📤 Send messages**]({{< relref "/docs/how-to/send-messages" >}}) to WhatsApp Channel via API
-- Learn how to [**📥 Receive messages**]({{< relref "/docs/how-to/receive-messages" >}}) from WhatsApp Channels via [**🔄 Webhooks**]({{< relref "/docs/how-to/webhooks" >}})
+- Learn how to [**📥 Receive messages**]({{< relref "/docs/how-to/receive-messages" >}}) from WhatsApp Channels via [**🔄 Webhooks**]({{< relref "/docs/how-to/events" >}})

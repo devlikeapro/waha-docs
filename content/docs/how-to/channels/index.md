@@ -307,7 +307,7 @@ GET /api/{SESSION}/channels/{INVITE}/messages/preview?downloadMedia=false&limit=
 ```
 - `reactions` - reactions for the message
 - `viewCount` - views count for the message
-- `message` - message object - the same as in `payload` field [**message**]({{< relref "/docs/how-to/webhooks#message" >}}) event
+- `message` - message object - the same as in `payload` field [**message**]({{< relref "/docs/how-to/events#message" >}}) event
 
 ## How-to
 

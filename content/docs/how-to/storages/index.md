@@ -208,7 +208,7 @@ Any **S3 Compatible** storage can be used, such as AWS S3, MinIO, DigitalOcean S
   - `WAHA_S3_PROXY_FILES=False` - generate pre-signed URLs for media files and send them to the client in `media.url`
   - `WAHA_S3_PROXY_FILES=True` - WAHA will proxy media files through itself in `media.url`
 
-After you enabled S3 here's example for [**message**]({{< relref "/docs/how-to/webhooks#message" >}}) webhook payload:
+After you enabled S3 here's example for [**message**]({{< relref "/docs/how-to/events#message" >}}) webhook payload:
 ```json { title="message" }
 {
   "event": "message",

@@ -58,12 +58,12 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - Add `filename` on `/api/sendFile`
 - `linkPreviewHighQuality: true` for [**📤 Send messages - Link Preview**]({{< relref "/docs/how-to/send-messages#link-preview" >}})
   - **GOWS**, **NOWEB**
-- Add `event.timestamp` to [**🔄 Events**]({{< relref "/docs/how-to/webhooks" >}}) {{< issue 755 >}}
+- Add `event.timestamp` to [**🔄 Events**]({{< relref "/docs/how-to/events" >}}) {{< issue 755 >}}
 - **NOWEB** - Filter [**📞 Calls**]({{< relref "/docs/how-to/calls" >}}) from `message` event - {{< issue 840 >}}
 - Support **disappearing messages** in [**📤 Send messages**]({{< relref "/docs/how-to/send-messages" >}}) - {{< issue 736 >}}
   - **GOWS**, **NOWEB**, **WEBJS**
   - Might require repairing (logout/scan qr) for old chats
-- Add `source: api|app` in [**🔄 Events** - message.any]({{< relref "/docs/how-to/webhooks#messageany" >}}) - {{< issue 787 >}}
+- Add `source: api|app` in [**🔄 Events** - message.any]({{< relref "/docs/how-to/events#messageany" >}}) - {{< issue 787 >}}
 
 ### 2025.2
 `2025.2.8`
@@ -216,8 +216,8 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 
 `2024.11.5`
 - Add [**📊 Dashboard - Event Monitor**]({{< relref "dashboard#event-monitor" >}}) - observe your events in real-time!
-- All [**🔄 Webhooks**]({{< relref "webhooks#webhooks" >}}) features in **WAHA Core** version now: Retries, HMAC, Custom Headers!
-- [**🔄 Websockets**]({{< relref "webhooks#websockets" >}}) supports all events now {{< issue 535 >}}
+- All [**🔄 Webhooks**]({{< relref "events#webhooks" >}}) features in **WAHA Core** version now: Retries, HMAC, Custom Headers!
+- [**🔄 Websockets**]({{< relref "events#websockets" >}}) supports all events now {{< issue 535 >}}
 - [**💬 Chats** - **Pin, Unpin message**]({{< relref "/docs/how-to/chats#pin-message" >}}) {{< issue 613>}}
   - **WEBJS**, **NOWEB**
 - **NOWEB** - fix `me.pushName` after authentication {{< issue 409 >}}
@@ -304,9 +304,9 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 - Track session status and do not restart it - [#491](https://github.com/devlikeapro/waha/issues/491) 
 - Add workers environment variables: `WAHA_WORKER_ID`, `WAHA_WORKER_RESTART_SESSIONS`
 - Add request id in webhooks headers and logs [#580](https://github.com/devlikeapro/waha/issues/580)
-  - [**🔄 Webhooks** - Headers]({{< relref "webhooks#headers" >}})
+  - [**🔄 Webhooks** - Headers]({{< relref "events#headers" >}})
 - Add `policy` for webhook retries [#587](https://github.com/devlikeapro/waha/issues/587)
-  - [**🔄 Webhooks** - Headers]({{< relref "webhooks#retries" >}})
+  - [**🔄 Webhooks** - Headers]({{< relref "events#retries" >}})
 
 `2024.10.4`
 - **NOWEB** - send video note via `POST /api/sendVideo` via `asNote: true`
@@ -326,7 +326,7 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 - Add `PORT` environment variable for Heroku deployment - [#555](https://github.com/devlikeapro/waha/issues/555)
 - Add `WAHA_BASE_URL` environment variable to set the base URL for the server for `media.url` links
 - **WEBJS** - Add `message.waiting` event for encrypted but not yet decrypted messages [#554](https://github.com/devlikeapro/waha/issues/554)
-  - [**🔄 Webhooks** - message.waiting]({{< relref "webhooks#messagewaiting" >}})
+  - [**🔄 Webhooks** - message.waiting]({{< relref "events#messagewaiting" >}})
   - [https://faq.whatsapp.com/3398056720476987](https://faq.whatsapp.com/3398056720476987)
 - **WEBJS** - handle connectivity issues better, restart client if required [#552](https://github.com/devlikeapro/waha/issues/552)
 - Use `axios` as default library for sending webhooks - solve bad webhooks performance issues for many sessions installation.
@@ -372,11 +372,11 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 - Add ability to add your [**Metadata**]({{< relref "/docs/how-to/sessions#metadata" >}}) to a session [#443](https://github.com/devlikeapro/waha/issues/443). 
   - `metadata` field available in:
     - [List Sessions]({{< relref "/docs/how-to/sessions#list-sessions" >}}) and [Get Session]({{< relref "/docs/how-to/sessions#get-session" >}})  responses
-    - [**🔄 Webhooks**]({{< relref "webhooks#metadata" >}}) events
+    - [**🔄 Webhooks**]({{< relref "events#metadata" >}}) events
     - [**📊 Dashboard**]({{< relref "dashboard" >}}) for view, and search sessions by metadata
 - Add **Bulk Operations** (start, restart, etc.) for [**📊 Dashboard**]({{< relref "dashboard" >}}) - [#438](https://github.com/devlikeapro/waha/issues/438)
 - Add environment variables on [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}) - [#319](https://github.com/devlikeapro/waha/issues/319)
-- Add [**🔄 Webhooks - Custom Headers**]({{< relref "/docs/how-to/webhooks#custom-headers" >}}) on [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
+- Add [**🔄 Webhooks - Custom Headers**]({{< relref "/docs/how-to/events#custom-headers" >}}) on [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
 - Add `GET /api/server/version` and `/api/server/environment` endpoints
   - [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 - Validate API request on `/api/sessions/*` endpoints - [#470](https://github.com/devlikeapro/waha/issues/470)
@@ -414,7 +414,7 @@ as an example for [**💬 Get chats overview API**]({{< relref "/docs/how-to/cha
 `2024.8.1` - [**Release Notes**]({{< relref "/blog/waha-2024-8" >}})
 - Add [**🏷️ Labels**]({{< relref "docs/how-to/labels" >}}) support [#318](https://github.com/devlikeapro/waha/issues/318)
 - Add [**📞 Calls**]({{< relref "docs/how-to/calls" >}}) events [#307](https://github.com/devlikeapro/waha/issues/307)
-- Add [**chat.archive**]({{< relref "docs/how-to/webhooks#chatarchive" >}}) event [#434](https://github.com/devlikeapro/waha/issues/434)
+- Add [**chat.archive**]({{< relref "docs/how-to/events#chatarchive" >}}) event [#434](https://github.com/devlikeapro/waha/issues/434)
 - Add [**Archive and Unarchive chat endpoints**]({{< relref "docs/how-to/chats" >}})  [#434](https://github.com/devlikeapro/waha/issues/434)
 - Add "sessions.name" index for MongoDB storage [#447](https://github.com/devlikeapro/waha/issues/447)
 - Add `WHATSAPP_API_KEY_EXCLUDE_PATH` to exclude URI from key auth [#451](https://github.com/devlikeapro/waha/issues/451) - [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
@@ -478,9 +478,9 @@ Added Out of the box **HTTPS Support**!
 
 ----
 
-Add [Websockets](({{< relref "/docs/how-to/webhooks#websockets" >}})) support!
+Add [Websockets](({{< relref "/docs/how-to/events#websockets" >}})) support!
 
-- Read more about [Websockets]({{< relref "/docs/how-to/webhooks#websockets" >}})
+- Read more about [Websockets]({{< relref "/docs/how-to/events#websockets" >}})
 - Build: `2024.6.7`
 
 ----
@@ -680,7 +680,7 @@ Implement `GET /api/contacts/profile-picture` for **NOWEB** engine.
 ----
 
 Add `message.reaction` webhook in **WEBJS** and **NOWEB** engines
-- Read more about [message.reaction]({{< relref "/docs/how-to/webhooks#messagereaction" >}}) event
+- Read more about [message.reaction]({{< relref "/docs/how-to/events#messagereaction" >}}) event
 - Issue: [#275](https://github.com/devlikeapro/waha/issues/275)
 
 👉 **NOWEB** engine note - reactions were sent in `'message'` and `'message.any'` events, not it's available **only** in `'message.reaction'`!
@@ -824,7 +824,7 @@ August 2023
 
 ### 2023.7
 July 2023
-- Now session can have their own [🔄 Webhooks]({{< relref "/docs/how-to/webhooks" >}}) -
+- Now session can have their own [🔄 Webhooks]({{< relref "/docs/how-to/events" >}}) -
    you can define webhook configuration when you start a session with `POST /api/sessions/start`!
   - Add HMAC authentication for webhooks
   - Configure retries

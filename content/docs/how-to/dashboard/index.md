@@ -48,7 +48,7 @@ If you're using [API Key]({{< relref "security" >}}), remember to set up the key
 ![Dashboard with API Key](waha-dashboard-key.png)
 
 ## Event Monitor
-You can observe [**Events**]({{< relref "webhooks" >}}) in real-time using **Event Monitor**:
+You can observe [**Events**]({{< relref "events" >}}) in real-time using **Event Monitor**:
 
 [http://localhost:3000/dashboard/event-monitor](http://localhost:3000/dashboard/event-monitor)
 
@@ -65,9 +65,9 @@ You can implement **Live Chat**, **Multiple Agents**, and more features using
   to get chats overview and messages.
 - [**📤 Send messages API**]({{< relref "/docs/how-to/send-messages" >}})
   to send messages to chats.
-- [**🔄 Message ACK**]({{< relref "/docs/how-to/webhooks#messageack" >}})
+- [**🔄 Message ACK**]({{< relref "/docs/how-to/events#messageack" >}})
   to get message status.
-- [**🔄 Websockets**]({{< relref "/docs/how-to/webhooks#websockets" >}})
+- [**🔄 Websockets**]({{< relref "/docs/how-to/events#websockets" >}})
   to get real-time messages on the client side.
 
 👉 [**Source Code on Github**](https://github.com/devlikeapro/waha-hub/tree/main/ui/components/chat) 

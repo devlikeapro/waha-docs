@@ -19,7 +19,7 @@ slug: waha-2024-11
 ## Event Monitor
 
 Now you can observe the 
-[**Events**]({{< relref "/docs/how-to/webhooks" >}})
+[**Events**]({{< relref "/docs/how-to/events" >}})
 happening in your WAHA instance in real-time with the new 
 [**Event Monitor**]({{< relref "/docs/how-to/dashboard#event-monitor" >}})
 feature!
@@ -35,7 +35,7 @@ Open
 
 ![websockets](websockets.png)
 
-WAHA now has full support for [Websockets]({{< relref "/docs/how-to/webhooks#websockets" >}})!
+WAHA now has full support for [Websockets]({{< relref "/docs/how-to/events#websockets" >}})!
 
 Here's how you can listen to it using [websocat](https://github.com/vi/websocat?tab=readme-ov-file#installation)
 
