@@ -42,7 +42,7 @@ url = "/docs/overview"
 parent = "docs"
 
 [[main]]
-name = "🔍 How to guides"
+name = "🔍 How-to guides"
 weight = 14
 url = "/docs/how-to"
 parent = "docs"
