@@ -804,7 +804,7 @@ September 2023
 - Add [polls support in NOWEB engine](https://waha.devlike.pro/docs/how-to/polls)
 - Add dedicated [Get QR](https://waha.devlike.pro/docs/how-to/sessions/#get-qr) endpoint!
 - Support [pairing method (NOWEB)](https://waha.devlike.pro/docs/how-to/sessions/#get-pairing-code) - you can connect with a code instead of QR.
-- Add string field `ackName: DEVICE|READ|...` in [message.ack payload](https://waha.devlike.pro/docs/how-to/webhooks/#messageack)
+- Add string field `ackName: DEVICE|READ|...` in [message.ack payload](https://waha.devlike.pro/docs/how-to/events/#messageack)
 - Support `message.ack` event webhook in **NOWEB** engine
 
 ### 2023.8

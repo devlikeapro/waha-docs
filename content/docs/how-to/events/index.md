@@ -350,7 +350,7 @@ You'll receive the same `metadata` in the webhook payload.
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
 
-{{< include file="content/docs/how-to/webhooks/features.md" >}}
+{{< include file="content/docs/how-to/events/features.md" >}}
 
 {{< include file="content/docs/how-to/groups/features-events.md" >}}
 

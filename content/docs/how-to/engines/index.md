@@ -137,7 +137,7 @@ it's the engine WAHA runs by default.
 
 ### 🔄 Webhooks
 
-{{< include file="content/docs/how-to/webhooks/features.md" >}}
+{{< include file="content/docs/how-to/events/features.md" >}}
 
 
 ### 🖥️ Sessions
