@@ -399,6 +399,7 @@ Incoming message (text/audio/files)
     "timestamp": 1667561485,
     "from": "11111111111@c.us",
     "fromMe": true,
+    "source": "app",
     "to": "11111111111@c.us",
     "body": "Hi there!",
     "hasMedia": false,
@@ -415,6 +416,7 @@ Fields:
 - `hasMedia: true | false` - indicates if the message has media attached
 - `media.url: http://localhost:8000/...` - the URL to download the media
 - `_data` - internal **engine** data, can be different for each engine 
+- `source: app|api` - can be `api` for [message.any](#messageany) event if you send a message via WAHA API. Otherwise, it's `app`.
 
 It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't download media due to configuration.
 
@@ -431,6 +433,9 @@ Fired on all message creations, including your own. The payload is the same as f
   }
 }
 ```
+
+Fields:
+- `source: app|api` - can be `api` for [message.any](#messageany) event if you send a message via WAHA API. Otherwise, it's `app`.
 
 ### message.reaction
 Receive events when a message is reacted to by a user (or **yourself** reacting to a message).
