@@ -7,6 +7,8 @@ lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 100
 slug: overview
+sidebar:
+  collapsed: true
 ---
 
 Overview of the **WAHA** - WhatsApp API. 
