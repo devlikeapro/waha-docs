@@ -108,7 +108,9 @@ docker run -it \
 
 ## Webhook security
 To make sure that you get a webhook from your WAHA instance - you can use **HMAC authentication**.
-Read more about it on [Webhooks page ->]({{< relref "/docs/how-to/events#hmac-authentication" >}})
+
+Read more about
+[**🔄 Events**]({{< relref "/docs/how-to/events#hmac-authentication" >}}).
 
 ## HTTPS
 After you set up the security options - you should set up HTTPS to protect the data in transit and prevent [Man-in-the-middle attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack).

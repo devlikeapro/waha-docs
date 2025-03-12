@@ -54,8 +54,9 @@ The response you get back:
 You must save the `id` field from the response in your database so that you can identify the poll for which you receive
 a vote (see webhook events below).
 
-## Webhooks
-See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
+## Events
+Read more about
+[**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
 ### poll.vote
 

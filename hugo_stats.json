@@ -372,6 +372,7 @@
       "-channels",
       "-chats",
       "-contacts",
+      "-events",
       "-groups",
       "-groups-api---noweb-gows",
       "-groupv2-events",

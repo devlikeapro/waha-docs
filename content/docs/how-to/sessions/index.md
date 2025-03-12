@@ -186,7 +186,7 @@ For example, you can store your user’s unique identifier from your system.
 
 Associated `metadata` field is available in:
 1. [List Sessions](#list-sessions) and [Get Session](#get-session)  responses
-2. [**🔄 Webhooks**]({{< relref "events#metadata" >}}) events
+2. [**🔄 Events**]({{< relref "events#metadata" >}}) events
 3. [**📊 Dashboard**]({{< relref "dashboard" >}}) for view, and search sessions by metadata
 
 
@@ -211,6 +211,8 @@ WAHA does not use metadata for any internal purposes, it's up to you how to use 
 
 
 ### Webhooks
+Read more about
+[**🔄 Events - Webhooks**]({{< relref "/docs/how-to/events#webhooks" >}}).
 
 You can configure webhooks for a session:
 
@@ -650,9 +652,10 @@ You'll get code in the need to enter in **WhatsApp app** to authenticate the ses
 👉 **Always** add to [**QR code auth flow**](#get-qr) in your application as a fallback, 
 because the pairing code is not always available and works as expected.
 
-## Webhooks
+## Events
 
-See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
+Read more about
+[**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
 ### session.status
 

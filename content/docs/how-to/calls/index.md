@@ -16,8 +16,9 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 {{< include file="content/docs/how-to/calls/features.md" >}}
 
-## Webhooks
-You can receive information about calls in WhatsApp using events
+## Events
+Read more about 
+[**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
 ### call.received
 

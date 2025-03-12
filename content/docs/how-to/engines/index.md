@@ -135,10 +135,13 @@ If you don't specify `WHATSAPP_DEFAULT_ENGINE` environment variable - look at **
 it's the engine WAHA runs by default.
 
 
-### 🔄 Webhooks
+### 🔄 Events
+Read more about 
+[**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
 {{< include file="content/docs/how-to/events/features.md" >}}
 
+{{< include file="content/docs/how-to/groups/features-events.md" >}}
 
 ### 🖥️ Sessions
 Read more about

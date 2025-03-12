@@ -184,7 +184,9 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 ```
 
-## Webhooks
+## Events
+Read more about
+[**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
 ### label.upsert
 

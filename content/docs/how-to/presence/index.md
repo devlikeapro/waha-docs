@@ -157,8 +157,9 @@ POST /api/{session}/presence/{chatId}/subscribe
 You can get later presence information for the chat with above `GET` endpoints or by listening to `presence.update`
 webhook.
 
-## Webhooks
-See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
+## Events
+Read more about
+[**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
 ### presence.update
 

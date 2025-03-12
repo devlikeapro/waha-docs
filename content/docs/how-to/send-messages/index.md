@@ -93,9 +93,9 @@ You can add `reply_to` field in order to reply on certain message.
 - 
 ## Send seen
 
-If you get a new message via [**🔄 Webhooks**]({{< relref "docs/how-to/events#message" >}})
+If you get a new message via [**🔄 Events**]({{< relref "docs/how-to/events#message" >}})
 and want to reply to that message, you need to first send that you've seen the message
-(double green tick) - [⚠️ How to Avoid Blocking]({{< relref "docs/overview/how-to-avoid-blocking" >}})
+(double green tick) - read [**⚠️ How to Avoid Blocking**]({{< relref "docs/overview/how-to-avoid-blocking" >}})
 
 ```http request
 POST /api/sendSeen

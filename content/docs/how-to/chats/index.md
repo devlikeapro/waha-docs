@@ -290,6 +290,9 @@ Use the method to clear all messages from the chat
 DELETE /api/{session}/chats/{chatId}/messages 
 ```
 
-## Webhooks
+## Events
+Read more about 
+[**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
+
 ### chat.archive
 {{< include file="content/docs/how-to/chats/webhooks-chat-archive.md" >}}

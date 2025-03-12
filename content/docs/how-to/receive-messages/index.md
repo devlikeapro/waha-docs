@@ -8,11 +8,12 @@ draft: false
 weight: 221
 slug: receive-messages
 ---
-We consider that you've run docker container and authenticated the session with QR code.
+We consider that you've run docker container and authenticated the session with QR code. 
 
-If you haven't yet - please follow the steps from [**Quick Start →**]({{< relref "/docs/overview/quick-start" >}}).
+If you haven't yet - please follow the steps from [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 
-You must use [Webhooks]({{< relref "/docs/how-to/events" >}}) to receive messages from WhatsApp to your application.
+## Receive Message
+You can use [**🔄 Events via Webhooks or Websockets**]({{< relref "/docs/how-to/events" >}}) to receive messages from WhatsApp to your application.
 
 Start a new session with configured `message` event in webhooks - call `POST /api/sessions/` with the payload:
 ```json
@@ -70,11 +71,11 @@ If you get a message as a reply to another message, you'll see `replyTo` field w
 
 
 
-## Webhooks
-See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
+## Events
+Read more about
+[**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
-Here's examples of message-related events.
-Read [Webhooks ->]({{< relref "/docs/how-to/events" >}}) to find how to set them up.
+Here's examples of message-related events:
 
 ### message
 
@@ -194,11 +195,12 @@ on your phone.
 
 ### message.revoked
 
-[See details on Webhooks page ->]({{< relref "events#messageack" >}}).
+Read more about
+[**🔄 Events**]({{< relref "/docs/how-to/events#messagerevoked" >}}).
 
-```json { title="message.ack" }
+```json { title="message.revoked" }
 {
-  "event": "message.ack",
+  "event": "message.revoked",
   "session": "default",
   "payload": {
     "before": {
@@ -293,9 +295,9 @@ GET /api/messages
 ```
 
 {{< callout context="caution" icon="outline/alert-triangle" >}}
-We recommend using 
-[🔄 Webhooks]({{< relref "docs/how-to/events" >}})
-instead of constantly calling it to avoid performance issues.
+We recommend using
+[**🔄 Events via Webhooks or Websockets**]({{< relref "docs/how-to/events" >}})
+instead of constantly calling it to prevent performance issues.
 {{< /callout >}}
 
 Accept the same parameters as
@@ -317,8 +319,10 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 
 {{< callout context="note" icon="outline/alert-triangle" >}}
 We recommend using
-[🔄 Webhooks]({{< relref "docs/how-to/events" >}})
-instead to avoid performance issues.
+[**🔄 Events via Webhooks or Websockets**]({{< relref "docs/how-to/events" >}})
+instead to prevent performance issues. 
+
+However, for single message requests, you can retrieve the message by its ID to obtain the latest `ack`, for example.
 {{< /callout >}}
 
 ## Examples

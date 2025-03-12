@@ -81,7 +81,7 @@ and you'll see all requests immediately in your browser to intercept the webhook
 
 ### Global webhooks
 There's a way how you can configure
-[🔄 Webhooks]({{< relref "/docs/how-to/events" >}})
+[🔄 Webhooks]({{< relref "/docs/how-to/events#webhooks" >}})
 for ALL sessions - by settings these environment variables:
 
 - `WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111`  - to set up a URL for the webhook
