@@ -5,7 +5,7 @@ lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
-weight: 211
+weight: 221
 slug: receive-messages
 ---
 We consider that you've run docker container and authenticated the session with QR code.
