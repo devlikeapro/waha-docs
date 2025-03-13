@@ -55,7 +55,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - Delete Message {{< issue 796  >}}
   - Edit Message {{< issue 797  >}}
   - Reply To Message {{< issue 799  >}}
-  - Add `filename` on `/api/sendFile`
+  - Add `filename` on `/api/sendFile` {{< issue 853 >}}
 - `linkPreviewHighQuality: true` for [**📤 Send messages - Link Preview**]({{< relref "/docs/how-to/send-messages#link-preview" >}})
   - **GOWS**, **NOWEB**
 - Add `event.timestamp` to [**🔄 Events**]({{< relref "/docs/how-to/events" >}}) {{< issue 755 >}}
