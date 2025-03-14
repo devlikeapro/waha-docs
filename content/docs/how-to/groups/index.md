@@ -71,6 +71,19 @@ If you see timeout or the request takes too long - consider using `limit` parame
   👉 If you see `rate-overlimit` error with **NOWEB** engine - try enabling [**🏭 NOWEB Store before using the endpoint**]({{< relref "/docs/engines/NOWEB#store" >}})!
 {{< /details >}}
 
+### Get groups count
+Get the total number of groups
+
+```http request
+GET /api/{session}/groups/count
+```
+
+```json { title="Response" }
+{
+  "count": 10
+}
+```
+
 ### Join group
 If you have invite URL for a group (like `https://chat.whatsapp.com/invitecode`), you can 
 

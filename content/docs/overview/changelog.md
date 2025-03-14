@@ -64,6 +64,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - **GOWS**, **NOWEB**, **WEBJS**
   - Might require repairing (logout/scan qr) for old chats
 - Add `source: api|app` in [**🔄 Events** - message.any]({{< relref "/docs/how-to/events#messageany" >}}) - {{< issue 787 >}}
+- Add [**👥 Groups Count API**]({{< relref "/docs/how-to/groups#get-groups-count" >}}) - {{< issue 752 >}}
+  - **GOWS**, **NOWEB**, **WEBJS**
 
 ### 2025.2
 `2025.2.8`

@@ -2,6 +2,7 @@
 |------------------------------------------------------------------------|:-----:|:-----:|:----:|
 | `POST /api/{session}/groups`                                           |  ✔️   |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups`                                            |  ✔️   |  ✔️   |  ✔️  |
+| `GET /api/{session}/groups/count`                                      |  ✔️   |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/join-info`                                  |  ✔️   |  ✔️   |  ✔️  |
 | `POST /api/{session}/groups/join`                                      |  ✔️   |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}`                                       |  ✔️   |  ✔️   |  ✔️  |

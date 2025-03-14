@@ -533,6 +533,7 @@
       "get-crypto-address-and-amount",
       "get-docker-image",
       "get-group-picture",
+      "get-groups-count",
       "get-invite-code",
       "get-join-info-for-group",
       "get-labels",
