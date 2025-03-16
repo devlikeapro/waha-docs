@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>How-to guides on WAHA</title><link>/docs/how-to/</link><description>Recent content in How-to guides on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="/docs/how-to/index.xml" rel="self" type="application/rss+xml"/><item><title>🔧 Install &amp; Update</title><link>/docs/how-to/install/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/install/</guid><description>&lt;div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🔍 How-to guides on WAHA</title><link>/docs/how-to/</link><description>Recent content in 🔍 How-to guides on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="/docs/how-to/index.xml" rel="self" type="application/rss+xml"/><item><title>🔧 Install &amp; Update</title><link>/docs/how-to/install/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/install/</guid><description>&lt;div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
  &lt;svg
  xmlns="http://www.w3.org/2000/svg"
  width="24"
@@ -33,11 +33,14 @@ please go to &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start
  &lt;source src="/videos/swagger-overview.webm" type="video/webm" />
  Download the &lt;a href="/videos/swagger-overview.webm">Swagger Overview video&lt;/a> .
 &lt;/video>
-&lt;p>You can see all available endpoints, request/response examples, and even execute them directly from the Swagger UI.&lt;/p></description></item><item><title>📤 Send messages</title><link>/docs/how-to/send-messages/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/send-messages/</guid><description>&lt;p>We consider that you&amp;rsquo;ve run docker container and authenticated the session with QR code.&lt;/p>
+&lt;p>You can see all available endpoints, request/response examples, and even execute them directly from the Swagger UI.&lt;/p></description></item><item><title>🖥️ Sessions</title><link>/docs/how-to/sessions/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/sessions/</guid><description>&lt;p>&lt;strong>Session&lt;/strong> represents a &lt;strong>WhatsApp Account (Phone Number)&lt;/strong> connected to &lt;strong>WAHA&lt;/strong>
+that you can use to send and receive messages.&lt;/p>
+&lt;h2 id="features">Features&lt;/h2>
+&lt;p>Here&amp;rsquo;s the list of features that are available by &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engines&lt;/strong>&lt;/a>:&lt;/p></description></item><item><title>📤 Send messages</title><link>/docs/how-to/send-messages/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/send-messages/</guid><description>&lt;p>We consider that you&amp;rsquo;ve run docker container and authenticated the session with QR code.&lt;/p>
 &lt;p>If you haven&amp;rsquo;t yet - please follow the steps from &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>📥 Receive messages</title><link>/docs/how-to/receive-messages/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/receive-messages/</guid><description>&lt;p>We consider that you&amp;rsquo;ve run docker container and authenticated the session with QR code.&lt;/p>
-&lt;p>If you haven&amp;rsquo;t yet - please follow the steps from &lt;a href="/docs/overview/quick-start/">&lt;strong>Quick Start →&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>🖥️ Sessions</title><link>/docs/how-to/sessions/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/sessions/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>&lt;strong>Session&lt;/strong> represents a &lt;strong>WhatsApp Account (Phone Number)&lt;/strong> connected to &lt;strong>WAHA&lt;/strong>
-that you can use to send and receive messages.&lt;/p></description></item><item><title>🆔 Profile</title><link>/docs/how-to/profile/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/profile/</guid><description>&lt;p>You can manage your WhatsApp profile with the following API!&lt;/p>
+&lt;p>If you haven&amp;rsquo;t yet - please follow the steps from &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>🔄 Events</title><link>/docs/how-to/events/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/events/</guid><description>&lt;p>In order to notify your application about events in the WhatsApp API, you can use
+&lt;a href="#webhooks">&lt;strong>Webhooks&lt;/strong>&lt;/a> and &lt;a href="#websockets">&lt;strong>Websockets&lt;/strong>&lt;/a>.&lt;/p>
+&lt;p>👉 See the list of all available events in the &lt;a href="#events">&lt;strong>Events&lt;/strong>&lt;/a> section.&lt;/p></description></item><item><title>🆔 Profile</title><link>/docs/how-to/profile/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/profile/</guid><description>&lt;p>You can manage your WhatsApp profile with the following API!&lt;/p>
 &lt;div class="mb-2 text-center">
  &lt;a href="/images/whatsapp/whatsapp-profile.jpg" target="_blank" style="cursor: pointer;">
  &lt;img src="/images/whatsapp/whatsapp-profile.jpg" alt="">
@@ -45,21 +48,9 @@ that you can use to send and receive messages.&lt;/p></description></item><item>
  
 &lt;/div>
 &lt;h2 id="features">Features&lt;/h2>
-&lt;p>Here&amp;rsquo;s the list of features that are available by &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engines&lt;/strong>&lt;/a>:&lt;/p></description></item><item><title>🔄 Events</title><link>/docs/how-to/events/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/events/</guid><description>&lt;p>In order to notify your application about events in the WhatsApp API, you can use
-&lt;a href="#webhooks">&lt;strong>Webhooks&lt;/strong>&lt;/a> and &lt;a href="#websockets">&lt;strong>Websockets&lt;/strong>&lt;/a>.&lt;/p>
-&lt;p>👉 See the list of all available events in the &lt;a href="#events">&lt;strong>Events&lt;/strong>&lt;/a> section.&lt;/p></description></item><item><title>🌐 Proxy</title><link>/docs/how-to/proxy/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/proxy/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Here&amp;rsquo;s the list of features that are available by &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engines&lt;/strong>&lt;/a>:&lt;/p></description></item><item><title>🌐 Proxy</title><link>/docs/how-to/proxy/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/proxy/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>If you&amp;rsquo;re experiencing issues scanning QR codes in WhatsApp, especially with &lt;strong>Indian 🇮🇳 phone numbers&lt;/strong>,
-using a proxy located close to the phone number&amp;rsquo;s location may help resolve the problem.&lt;/p></description></item><item><title>📶 Polls</title><link>/docs/how-to/polls/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/polls/</guid><description>&lt;p>Waiting for WEBJS engine to support it, and we&amp;rsquo;ll add it ASAP!&lt;/p>
-&lt;p>
-
-&lt;img
- src="/docs/how-to/polls/poll-example_hu_4340c7607d4af01f.webp"
- width="1500"
- height="1000"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="poll-example.jpg"id="h-rh-i-0"
-/>&lt;/p>
-&lt;h2 id="endpoints">Endpoints&lt;/h2>
-&lt;p>See the list of engines &lt;a href="/docs/how-to/engines/#features">&lt;strong>that support the feature -&amp;gt;&lt;/strong>&lt;/a>.&lt;/p></description></item></channel></rss>
+using a proxy located close to the phone number&amp;rsquo;s location may help resolve the problem.&lt;/p></description></item><item><title>📶 Polls</title><link>/docs/how-to/polls/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/polls/</guid><description>&lt;p>&lt;a href="/docs/how-to/polls/">&lt;strong>📶 Polls&lt;/strong>&lt;/a>
+in WhatsApp is a good alternative for buttons and other interactive messages.&lt;/p>
+&lt;p>You can ask a question and provide a few options for the user to choose from.
+The user can select only one option or multiple options, depending on the poll configuration.&lt;/p></description></item></channel></rss>
