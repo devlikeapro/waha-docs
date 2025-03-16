@@ -211,3 +211,21 @@ When you send status - you'll get the response like below, save `key.id` (it's m
 
 It removes status from all contacts in the list.
 
+
+## How-to
+### Get status messages
+
+You can use regular
+[`GET /api/{session}/chats/{chatId}/messages`]({{< relref "/docs/how-to/chats#get-messages-from-chat" >}})
+to fetch status messages. Set `chatId` to `status@broadcast` for that
+
+```http request
+GET /api/default/chats/status%40broadcast/messages?downloadMedia=true&limit=100
+```
+
+### Receive status messages
+
+For all incoming messages in your own and contacts status you'll receive
+
+- [`message`]({{< relref "/docs/how-to/receive-messages#message" >}}) event for a message (send by someone else)
+- [`message.any`]({{< relref "/docs/how-to/receive-messages#message.any" >}}) event for a message (including your messages)
