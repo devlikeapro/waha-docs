@@ -10,8 +10,9 @@ slug: status
 ---
 
 You can send statuses (aka stories) using HTTP API!
-
-![alt](status.png)
+<div style="width: 400px; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="status.png" alt="WhatsApp Status" >}}
+</div>
 
 
 ## Features

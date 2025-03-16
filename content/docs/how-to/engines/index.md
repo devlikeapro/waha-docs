@@ -135,19 +135,13 @@ If you don't specify `WHATSAPP_DEFAULT_ENGINE` environment variable - look at **
 it's the engine WAHA runs by default.
 
 
-### 🔄 Events
-Read more about 
-[**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
-
-{{< include file="content/docs/how-to/events/features.md" >}}
-
-{{< include file="content/docs/how-to/groups/features-events.md" >}}
-
 ### 🖥️ Sessions
 Read more about
 [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
 
 {{< include file="content/docs/how-to/sessions/features.md" >}}
+
+{{< include file="content/docs/how-to/sessions/features-events.md" >}}
 
 ### 📤 Messages
 Read more about
@@ -156,6 +150,8 @@ and
 [**📥 Receive Messages**]({{< relref "/docs/how-to/receive-messages" >}})
 
 {{< include file="content/docs/how-to/send-messages/features.md" >}}
+
+{{< include file="content/docs/how-to/receive-messages/features-events.md" >}}
 
 ### 🟢 Status
 Read more about
@@ -168,6 +164,8 @@ Read more about
 [**💬 Chats**]({{< relref "/docs/how-to/chats" >}})
 
 {{< include file="content/docs/how-to/chats/features.md" >}}
+
+{{< include file="content/docs/how-to/chats/features-events.md" >}}
 
 ### 👤 Contacts
 Read more about
@@ -187,11 +185,15 @@ Read more about
 
 {{< include file="content/docs/how-to/groups/features.md" >}}
 
+{{< include file="content/docs/how-to/groups/features-events.md" >}}
+
 ### ✅ Presence
 Read more about 
 [**✅ Presence**]({{< relref "/docs/how-to/presence" >}})
 
 {{< include file="content/docs/how-to/presence/features.md" >}}
+
+{{< include file="content/docs/how-to/presence/features-events.md" >}}
 
 ### 🏷️ Labels
 Read more about 
@@ -199,11 +201,21 @@ Read more about
 
 {{< include file="content/docs/how-to/labels/features.md" >}}
 
+{{< include file="content/docs/how-to/labels/features-events.md" >}}
+
+### 📶 Polls
+Read more about
+[**📶 Polls**]({{< relref "/docs/how-to/polls" >}})
+
+{{< include file="content/docs/how-to/polls/features.md" >}}
+
+{{< include file="content/docs/how-to/polls/features-events.md" >}}
+
 ### 📞 Calls
 Read more about 
 [**📞 Calls**]({{< relref "/docs/how-to/calls" >}})
 
-{{< include file="content/docs/how-to/calls/features.md" >}}
+{{< include file="content/docs/how-to/calls/features-events.md" >}}
 
 ### 🗄️ Storages
 Read more about
@@ -216,10 +228,9 @@ Read more about
 Read more about 
 [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 
-|                                                   | WEBJS | NOWEB |
-|---------------------------------------------------|:-----:|:-----:|
-| **Other**                                         |       |       |
-| `GET /api/version`                                |  ✔️   |  ✔️   |
-| `GET /health`       |  ✔️   |  ✔️   |
+### 🔄 Events
+Read more about
+[**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
+{{< include file="content/docs/how-to/events/features-events.md" >}}
 

@@ -16,6 +16,8 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 {{< include file="content/docs/how-to/chats/features.md" >}}
 
+{{< include file="content/docs/how-to/chats/features-events.md" >}}
+
 ## Endpoints
 Parameters in path that you can find in below endpoints:
 - `{session}` - use the session name for Whatsapp instance that you created with `POST /api/sessions` endpoint

@@ -11,13 +11,18 @@ slug: labels
 
 You can work with [WhatsApp Labels](https://faq.whatsapp.com/3398508707096369/?cms_platform=android)
 available in **WhatsApp Business** using the API!
-![alt](whatsapp-labels.png)
+
+<div style="width: 400px; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="whatsapp-labels.png" alt="WhatsApp Labels" >}}
+</div>
 
 ## Features
 
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
 {{< include file="content/docs/how-to/labels/features.md" >}}
+
+{{< include file="content/docs/how-to/labels/features-events.md" >}}
 
 ## Label color
 You'll see two color-related fields in the body and response:

@@ -12,7 +12,6 @@ We consider that you've run docker container and authenticated the session with 
 
 If you haven't yet - please follow the steps from [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 
-## Receive Message
 You can use [**🔄 Events via Webhooks or Websockets**]({{< relref "/docs/how-to/events" >}}) to receive messages from WhatsApp to your application.
 
 Start a new session with configured `message` event in webhooks - call `POST /api/sessions/` with the payload:
@@ -39,6 +38,12 @@ To observe events and payload you can:
 - Open [**📊 Dashboard / Event Monitor**]({{< relref "/docs/how-to/dashboard#event-monitor" >}}) and see the events in real-time
 - Open [https://webhook.site](https://webhook.site), paste UUID from it to `url` field in webhook for a session
 {{< /callout >}}
+
+## Features
+
+Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
+
+{{< include file="content/docs/how-to/receive-messages/features-events.md" >}}
 
 ## Fields
 ### chatId, from, to, participant

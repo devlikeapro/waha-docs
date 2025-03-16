@@ -9,12 +9,18 @@ weight: 210
 slug: sessions
 ---
 
-## Overview
-
 **Session** represents a **WhatsApp Account (Phone Number)** connected to **WAHA**
 that you can use to send and receive messages.
 
-### Session Lifecycle
+## Features
+
+Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
+
+{{< include file="content/docs/how-to/sessions/features.md" >}}
+
+{{< include file="content/docs/how-to/sessions/features-events.md" >}}
+
+## Session Lifecycle
 
 Before you can
 [**📤 Send**]({{< relref "/docs/how-to/send-messages" >}})
@@ -45,11 +51,6 @@ Here's the list of possible `session.status` values:
   Try to [**Restart**](#restart-session) the session and if it doesn't help - [**Logout**](#logout-session) and [**Start
   **](#start-session) the session again.
 
-## Features
-
-Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
-
-{{< include file="content/docs/how-to/sessions/features.md" >}}
 
 ## Create Session
 
@@ -677,6 +678,32 @@ The `session.status` event is triggered when the session status changes.
     "version": "2023.10.12",
     "engine": "WEBJS",
     "tier": "PLUS"
+  }
+}
+```
+
+## engine.event
+Internal event that is triggered when the engine emits an event.
+
+```json { title="engine.event" }
+{
+  "id": "evt_11111111111111111111111111",
+  "session": "default",
+  "event": "engine.event",
+  "payload": {
+    "session": "default",
+    "event": "{{engine.EventName}}",
+    "data": {
+      "field": "value"
+    }
+  },
+  "timestamp": 1742102571277,
+  "metadata": {},
+  "me": {
+    "": null
+  },
+  "environment": {
+    "": null
   }
 }
 ```

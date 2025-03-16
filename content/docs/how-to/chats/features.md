@@ -1,4 +1,7 @@
-|                                                                                        | WEBJS | NOWEB | GOWS  |
+<div></div>
+{{< details "**💬 Chats - API**" >}}
+
+| **API**                                                                                | WEBJS | NOWEB | GOWS  |
 |----------------------------------------------------------------------------------------|:-----:|:-----:|:-----:|
 | **Get all chats** <br> `GET /api/{session}/chats`                                      |  ✔️   |  ✔️¹  |  ✔️   |
 | **Get chats overview** <br> `GET /api/{session}/chats/overview`                        |  ✔️   |  ✔️¹  |  ✔️   |
@@ -15,8 +18,8 @@
 | **Delete message** <br> `DELETE /api/{session}/chats/{chatId}/messages/{messageId}`    |  ✔️   |  ✔️   |       |
 | **Delete all messages** <br> `DELETE /api/{session}/chats/{chatId}/messages`           |  ✔️   |       |       |
 
-****
 1. **NOWEB** - you need to [**Enable Store**]({{< relref "/docs/engines/noweb#store" >}}) to get **chats, contacts and messages**
 
 _If you see the feature is not available in the above list, please [create a feature request](https://github.com/devlikeapro/waha/issues/new/choose) or **leave "+1" comment** on the existing one._
-****
+
+{{< /details >}}

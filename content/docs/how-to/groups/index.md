@@ -14,6 +14,7 @@ slug: groups
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
 {{< include file="content/docs/how-to/groups/features.md" >}}
+{{< include file="content/docs/how-to/groups/features-events.md" >}}
 
 ## Endpoints
 - `{session}` - use the session name for Whatsapp instance that you created with `POST /api/session` endpoint

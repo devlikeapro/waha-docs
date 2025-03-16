@@ -9,7 +9,6 @@ weight: 700
 slug: storages
 ---
 
-## Overview
 There are several storages that are used by the WAHA, below you can find the list of them and the way to configure them.
 
 
@@ -19,6 +18,10 @@ There are several storages that are used by the WAHA, below you can find the lis
 2. [**🖼️ Media** Storage](#media) - used to store the media files, such as images, videos, and other files that are received from the WhatsApp instance.
 
 {{< include file="content/docs/how-to/storages/docker-compose.md" >}}
+
+
+## Features
+Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
 {{< include file="content/docs/how-to/storages/features.md" >}}
 

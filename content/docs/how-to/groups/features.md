@@ -1,4 +1,7 @@
-|                                                                        | WEBJS | NOWEB | GOWS |
+<div></div>
+{{< details "**👥 Groups - API**" >}}
+
+| **API**                                                                | WEBJS | NOWEB | GOWS |
 |------------------------------------------------------------------------|:-----:|:-----:|:----:|
 | `POST /api/{session}/groups`                                           |  ✔️   |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups`                                            |  ✔️   |  ✔️   |  ✔️  |
@@ -25,8 +28,6 @@
 | `POST /api/{session}/groups/{id}/admin/promote`                        |  ✔️   |  ✔️   |  ✔️  |
 | `POST /api/{session}/groups/{id}/admin/demote`                         |  ✔️   |  ✔️   |  ✔️  |
 
-****
-
 - ➕ - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 
-****
+{{< /details >}}

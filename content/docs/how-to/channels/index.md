@@ -9,9 +9,11 @@ weight: 231
 slug: channels
 ---
 
-Here's complete information about **WhatsApp Channels** (aka Newsletter) and how to use them.
+Here's complete information about **WhatsApp Channels** (aka _Newsletters_) and how to use them.
 
-![alt](channels.png)
+<div style="width: 400px; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="channels.png" alt="WhatsApp Channels" >}}
+</div>
 
 ## Features
 

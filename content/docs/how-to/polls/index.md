@@ -9,10 +9,23 @@ weight: 226
 slug: polls
 ---
 
+[**📶 Polls**]({{< relref "/docs/how-to/polls" >}})
+in WhatsApp is a good alternative for buttons and other interactive messages.
 
-Waiting for WEBJS engine to support it, and we'll add it ASAP!
+You can ask a question and provide a few options for the user to choose from. 
+The user can select only one option or multiple options, depending on the poll configuration.
 
-![poll-example.jpg](poll-example.jpg)
+<div style="width: 400px; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="poll-example.jpg" alt="WhatsApp Poll" >}}
+</div>
+
+## Features
+
+Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
+
+{{< include file="content/docs/how-to/polls/features.md" >}}
+
+{{< include file="content/docs/how-to/polls/features-events.md" >}}
 
 ## Endpoints
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).

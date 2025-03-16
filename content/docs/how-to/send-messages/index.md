@@ -15,6 +15,8 @@ If you haven't yet - please follow the steps from [**⚡ Quick Start**]({{< relr
 
 ## Features
 
+Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
+
 {{< include file="content/docs/how-to/send-messages/features.md" >}}
 
 ## Fields

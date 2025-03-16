@@ -1,5 +1,7 @@
+<div></div>
+{{< details "**📢 Channels - API**" >}}
 
-|                                                                                                                                 | WEBJS                                                  | NOWEB                                                          | GOWS |
+| **API**                                                                                                                         | WEBJS                                                  | NOWEB                                                          | GOWS |
 |---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|----------------------------------------------------------------|:-----|
 | **Search public channels** <br> `POST /api/{session}/channels/search/by-view` <br>`POST /api/{session}/channels/search/by-text` | ➕                                                      | ➕                                                              | ➕    |
 | **"Views" for Search** <br> `GET /api/{session}/channels/search/views`                                                          | ➕                                                      | ➕                                                              | ➕    |
@@ -12,8 +14,8 @@
 | **Delete channel** <br> `DELETE /api/{session}/channels/{ChannelID}`                                                            |                                                        | ✔️                                                             |      |
 | **Get messages** <br> `GET /api/{session}/chats/{ChannelID}/messages`                                                           | ✔️                                                     | ✔️ <br> [#433](https://github.com/devlikeapro/waha/issues/433) |      |
 | **Send messages - Text** <br> `POST /api/sendText`                                                                              | ✔️                                                     | ✔️                                                             | ✔️   |
-| **Send messages - Image**  <br> `POST /api/sendImage`                                             | ✔️                                                     | ✔️                                                             | ✔️   |
-| **Send messages - Video**  <br> `POST /api/sendVideo`                                             | ✔️                                                     | ✔️                                                             | ✔️   |
+| **Send messages - Image**  <br> `POST /api/sendImage`                                                                           | ✔️                                                     | ✔️                                                             | ✔️   |
+| **Send messages - Video**  <br> `POST /api/sendVideo`                                                                           | ✔️                                                     | ✔️                                                             | ✔️   |
 | **Send messages - Poll** <br> `POST /api/sendPoll`                                                                              |                                                        |                                                                |      |
 | **Receive messages - Text** <br> `message` event                                                                                | ✔️                                                     | ✔️                                                             | ✔️   |
 | **Receive messages - Media** <br> `message` event                                                                               | ✔️                                                     | ✔️                                                             | ✔️   |
@@ -26,8 +28,8 @@
 | **Admins - Revoke Invite**                                                                                                      |                                                        |                                                                |      |
 | **Admins - Accept Invite**                                                                                                      |                                                        |                                                                |      |
 | **Admins - Demote Admin**                                                                                                       |                                                        |                                                                |      |
-****
 
 _If you see the feature is not available in the above list, please [create a feature request](https://github.com/devlikeapro/waha/issues/new/choose) or **leave "+1" comment** on the existing one._
 - ➕ - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
-****
+
+{{< /details >}}

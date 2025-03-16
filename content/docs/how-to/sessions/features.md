@@ -1,4 +1,7 @@
-|                                                               | WEBJS | NOWEB | GOWS |
+<div></div>
+{{< details "**🖥️ Sessions - API**" >}}
+
+| **API**                                                       | WEBJS | NOWEB | GOWS |
 |---------------------------------------------------------------|:-----:|:-----:|:-----|
 | **List sessions** <br> `GET /api/sessions/`                   |  ✔️   |  ✔️   | ✔️   |
 | **Get session** <br> `GET /api/sessions/{name}`               |  ✔️   |  ✔️   | ✔️   |
@@ -14,8 +17,6 @@
 | **Get QR** <br> `POST /api/{session}/auth/qr`                 |  ✔️   |  ✔️   | ✔️   |
 | **Request code** <br> `POST /api/{session}/auth/request-code` |  ✔️   |  ✔️   | ✔️   |
 
-****
-
 _If you see the feature is not available in the above list, please [create a feature request](https://github.com/devlikeapro/waha/issues/new/choose) or **leave "+1" comment** on the existing one._
 
-****
+{{< /details >}}
