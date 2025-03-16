@@ -6,10 +6,15 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 230
+images: ["contacts.png"]
 slug: contacts
 ---
 
 Methods for contacts.
+
+<div style="width: 200px; max-width: 100%; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="contacts.png" alt="WhatsApp Contacts" >}}
+</div>
 
 ## Features
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):

@@ -7,13 +7,16 @@ lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 226
 slug: proxy
+images: [ "proxy.png" ]
 ---
 
 ## Overview
 If you're experiencing issues scanning QR codes in WhatsApp, especially with **Indian 🇮🇳 phone numbers**,
 using a proxy located close to the phone number's location may help resolve the problem.
 
-It affects both **WEBJS** and **NOWEB** [engines]({{< relref "/docs/how-to/engines" >}}).
+<div style="width: 400px; max-width: 100%; margin: 1rem auto;">
+{{< img lqip="21x webp q20" src="proxy.png" alt="Proxy" >}}
+</div>
 
 👉 If proxy doesn't help but the project works on YOUR local laptop - check [Tunneling](#tunneling).
 

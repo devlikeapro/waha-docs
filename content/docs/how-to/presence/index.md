@@ -6,18 +6,17 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 291
+images: ["typing.jpg"]
 slug: presence
 ---
 
 You can get presence information (online, offline with last seen, typing status) for a contact if they share their
 presence information.
 
-Possible presence statuses that you can set or get for chats:
-- `online`
-- `offline`
-- `typing`
-- `recording`
-- `paused` resets the chat presence after you were `typing`
+<div style="width: 400px; max-width: 100%; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="typing.jpg" alt="WhatsApp Typing" >}}
+</div>
+
 
 ## FAQ
 👉 **I don't get notifications on my phone when WAHA session is connected**
@@ -41,11 +40,21 @@ You can set your global or chat-related presence with endpoint
 POST /api/{session}/presence
 ```
 
-Start typing to a chat (you can use `POST /startTyping` instead)
-
-```http request
-POST /api/{session}/presence
+```json { title="Body" }
+{
+  "chatId": "111111111@c.us",
+  "presence": "typing"
+}
 ```
+
+Possible presence statuses that you can set or get for chats:
+- `online` - send the status with no `chatId`
+- `offline` - send the status with no `chatId`
+- `typing` - `chatId` required
+- `recording` - `chatId` required
+- `paused` - resets the chat presence after you were `typing`. `chatId` required.
+
+**Start typing** to a chat (you can use `POST /startTyping` instead)
 
 ```json { title="Body" }
 {
@@ -54,7 +63,7 @@ POST /api/{session}/presence
 }
 ```
 
-Clear "typing" state (you can use `POST /stopTyping` instead)
+**Clear "typing" state** (you can use `POST /stopTyping` instead)
 
 ```json { title="Body" }
 {
@@ -63,7 +72,7 @@ Clear "typing" state (you can use `POST /stopTyping` instead)
 }
 ```
 
-Set global "online", all contacts will see it
+**Set global "online"**, all contacts will see it
 
 ```json { title="Body" }
 {

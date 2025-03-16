@@ -7,6 +7,7 @@ lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 223
 slug: events
+images: [ "webhooks.png" ]
 aliases:
   - /docs/how-to/events
   - /docs/how-to/webhooks
@@ -22,7 +23,10 @@ In order to notify your application about events in the WhatsApp API, you can us
 [**📊 Dashboard - Event Monitor**]({{< relref "dashboard#event-monitor" >}})!
 
 ## Webhooks
-![alt](webhooks.png)
+
+<div style="width: 500px; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="webhooks.png" alt="Webhooks" >}}
+</div>
 
 **Webhooks** are a way for two different applications to communicate with each other in real-time.
 When a certain event happens in one application, it sends a message to another application through a webhook URL.

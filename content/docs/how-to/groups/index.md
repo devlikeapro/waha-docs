@@ -6,8 +6,15 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 240
+images: ["groups.jpg"]
 slug: groups
 ---
+
+Manage WhatsApp groups with the API.
+
+<div style="width: 200px; max-width: 100%; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="groups.jpg" alt="WhatsApp Groups" >}}
+</div>
 
 ## Features
 

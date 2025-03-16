@@ -7,6 +7,7 @@ lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 210
 slug: sessions
+images: ["waha-session-lifecycle.png"]
 ---
 
 **Session** represents a **WhatsApp Account (Phone Number)** connected to **WAHA**

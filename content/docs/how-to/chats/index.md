@@ -6,10 +6,15 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 227
+images: ["chats.jpg"]
 slug: chats
 ---
 
 Chats methods.
+
+<div style="width: 200px; max-width: 100%; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="chats.jpg" alt="WhatsApp Chats" >}}
+</div>
 
 ## Features
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):

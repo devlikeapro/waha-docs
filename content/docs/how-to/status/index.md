@@ -7,6 +7,7 @@ lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 232
 slug: status
+images: [ "status.png" ]
 ---
 
 You can send statuses (aka stories) using HTTP API!

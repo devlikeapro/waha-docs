@@ -7,6 +7,7 @@ lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 226
 slug: polls
+images: [ "poll-example.jpg" ]
 ---
 
 [**📶 Polls**]({{< relref "/docs/how-to/polls" >}})

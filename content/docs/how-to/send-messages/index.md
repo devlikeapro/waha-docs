@@ -6,12 +6,17 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 220
+images: ["messages.jpg"]
 slug: send-messages
 ---
 
 We consider that you've run docker container and authenticated the session with QR code.
 
 If you haven't yet - please follow the steps from [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
+
+<div style="width: 500px; max-width: 100%; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="messages.jpg" alt="WhatsApp Messages" >}}
+</div>
 
 ## Features
 

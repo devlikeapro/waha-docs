@@ -7,9 +7,13 @@ lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 293
 slug: calls
+images: [ "whatsapp-phone-call.png" ]
 ---
 You can receive events about calls in WhatsApp using API!
-![alt](whatsapp-phone-call.png)
+
+<div style="width: 300px; max-width: 100%; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="whatsapp-calls.png" alt="WhatsApp Calls" >}}
+</div>
 
 ## Features
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
