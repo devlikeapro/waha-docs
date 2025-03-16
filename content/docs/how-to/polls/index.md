@@ -28,7 +28,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 {{< include file="content/docs/how-to/polls/features-events.md" >}}
 
-## Endpoints
+## API
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Send poll

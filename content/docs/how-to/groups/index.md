@@ -23,7 +23,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 {{< include file="content/docs/how-to/groups/features.md" >}}
 {{< include file="content/docs/how-to/groups/features-events.md" >}}
 
-## Endpoints
+## API
 - `{session}` - use the session name for Whatsapp instance that you created with `POST /api/session` endpoint
 - `{groupId}` - group id in format `123123123123@g.us`. You can get the id in a few ways:
   - By [handling incoming message webhook]({{< relref "/docs/how-to/receive-messages" >}}).

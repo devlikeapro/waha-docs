@@ -25,7 +25,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 WhatsApp Web does not support adding contacts, so the API doesn't support it too.
 {{< /callout >}}
 
-## Endpoints
+## API
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Get all contacts

@@ -21,7 +21,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 {{< include file="content/docs/how-to/status/features.md" >}}
 
-## Endpoints
+## API
 
 💡 Note about `contacts` field:
 

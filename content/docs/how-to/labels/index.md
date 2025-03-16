@@ -57,7 +57,7 @@ Here's the **current** color map (`color` - `colorHex` - **preview**):
 - `19` - `#9368cf` - <span style="display:inline-block;width:15px;height:15px;background-color:#9368cf;"></span>
 
 
-## Endpoints
+## API
 
 ### Get labels
 

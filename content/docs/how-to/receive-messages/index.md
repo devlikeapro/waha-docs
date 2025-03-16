@@ -290,7 +290,7 @@ By default, WAHA download all files that the account receive.
 If you want to limit files lifetime, specify file types for download or change directory for files -
 read more about [**⚙️ Configuration**]({{< relref "config" >}}).
 
-## Endpoints
+## API
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Get messages
