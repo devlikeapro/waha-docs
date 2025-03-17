@@ -65,7 +65,7 @@ This is the only action you need to do to use the local storage - all session da
 
 ### Config
 - `WAHA_LOCAL_STORE_BASE_DIR=/app/.sessions` you can override the base directory for the local storage
-  - For instance, to handle Azure "dot" restrictions [#597](https://github.com/devlikeapro/waha/issues/597]
+  - For instance, to handle Azure "dot" restrictions {{< issue 597 >}}
 
 ### How it works
 In the host machine, the session data will be stored in the current directory in the `.sessions` directory.

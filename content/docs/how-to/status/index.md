@@ -11,7 +11,8 @@ images: [ "status.png" ]
 ---
 
 You can send statuses (aka stories) using HTTP API!
-<div style="width: 400px; margin: 0 auto;">
+
+<div style="width: 400px; max-width: 100%; margin: 0 auto;">
 {{< img lqip="21x webp q20" src="status.png" alt="WhatsApp Status" >}}
 </div>
 

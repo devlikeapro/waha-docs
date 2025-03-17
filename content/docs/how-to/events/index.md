@@ -24,7 +24,7 @@ In order to notify your application about events in the WhatsApp API, you can us
 
 ## Webhooks
 
-<div style="width: 500px; margin: 0 auto;">
+<div style="width: 500px; max-width: 100%; margin: 0 auto;">
 {{< img lqip="21x webp q20" src="webhooks.png" alt="Webhooks" >}}
 </div>
 

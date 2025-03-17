@@ -12,7 +12,7 @@ slug: channels
 
 Here's complete information about **WhatsApp Channels** (aka _Newsletters_) and how to use them.
 
-<div style="width: 400px; margin: 0 auto;">
+<div style="width: 400px; max-width: 100%; margin: 0 auto;">
 {{< img lqip="21x webp q20" src="channels.png" alt="WhatsApp Channels" >}}
 </div>
 

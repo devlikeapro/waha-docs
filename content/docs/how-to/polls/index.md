@@ -16,7 +16,7 @@ in WhatsApp is a good alternative for buttons and other interactive messages.
 You can ask a question and provide a few options for the user to choose from. 
 The user can select only one option or multiple options, depending on the poll configuration.
 
-<div style="width: 400px; margin: 0 auto;">
+<div style="width: 400px; max-width: 100%; margin: 0 auto;">
 {{< img lqip="21x webp q20" src="poll-example.jpg" alt="WhatsApp Poll" >}}
 </div>
 
