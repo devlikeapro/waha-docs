@@ -652,6 +652,46 @@ You can send messages to channels!
 
 Check out [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) page.
 
+## Send Buttons Reply
+If you're using **Official Business API** to send buttons and wanna "click" on the buttons 
+(for testing or other purposes) you can do it using the API
+
+```http request
+POST /api/send/buttons/reply
+```
+
+```json { title="Body" }
+{
+  "chatId": "11111111111@c.us",
+  "replyTo": "false_11111111111@c.us_AAAAAAAAAAAAAAAAA",
+  "selectedDisplayText": "No",
+  "selectedButtonID": "button:id",
+  "session": "default"
+}
+```
+
+{{< details "**How to get fields for the Body**" >}}
+When you get `message` event to the session, you need to get some fields from it.
+
+For testing purpose you can use [**📊 Dashboard - Event Monitor**]({{< relref "/docs/how-to/dashboard#event-monitor" >}}) to get the fields.
+
+{{< tabs "send-buttons-reply-message" >}}
+{{< tab "WEBJS" >}}
+- **Message ID** - `payload.id` in format `false_11111111111@c.us_AAAAAAAAAA666`
+- **Button ID** - `payload._data.dynamicReplyButtons.[1].buttonId` - like `button:id`
+- **Button Display Text** - `payload._data.dynamicReplyButtons.[1].buttonText.displayText` - like `No`
+{{< /tab >}}
+
+{{< tab "NOWEB" >}}
+- **Not implemented yet**
+{{< /tab >}}
+{{< tab "GOWS" >}}
+- **Not implemented yet**
+{{< /tab >}}
+{{< /tabs >}}
+
+{{< /details >}}
+
 ## Send Buttons
 {{< callout context="danger" title="Buttons do not work at the moment!" icon="outline/alert-octagon" >}}
 Buttons are fragile creatures and may not work as expected.
