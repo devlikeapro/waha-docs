@@ -149,3 +149,7 @@ FLASK_APP=whatsapp_download_files_bot.py flask run
 Open http://127.0.0.1:5000/bot - if you see **WhatsApp Download Files Bot!**
 then the bot is ready to receive message with files!
 
+## Using Built-in HTTP API
+{{< include file="/layouts/code/language/python/install-dependencies.md" >}}
+{{< include file="/layouts/code/language/python/send-message.md" >}}
+{{< include file="/layouts/code/language/python/receive-message.md" >}}

@@ -116,3 +116,7 @@ Send message to the WhatsApp (that you used to scan QR code) and it'll echo text
 back to you!
 
 
+## Using Built-in HTTP API
+{{< include file="/layouts/code/language/kotlin/install-dependencies.md" >}}
+{{< include file="/layouts/code/language/kotlin/send-message.md" >}}
+{{< include file="/layouts/code/language/kotlin/receive-message.md" >}}
