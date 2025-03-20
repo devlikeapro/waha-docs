@@ -48,6 +48,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< /callout >}}
 
 ### 2025.3
+`2025.3.2`
+- Add [**📤 Button Reply**]({{< relref "/docs/how-to/send-messages#send-buttons-reply" >}}) API - {{< issue 848 >}}
+  - **WEBJS**
+
 `2025.3.1`
 - **GOWS** 
   - Enable Link Previews - {{< issue 763 >}}
