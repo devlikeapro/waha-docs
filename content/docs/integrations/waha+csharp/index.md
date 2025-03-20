@@ -8,7 +8,7 @@ draft: false
 menu:
 docs:
 parent: "help"
-weight: 999
+weight: 990
 images: [ 'csharp.svg' ]
 toc: true
 slug: csharp

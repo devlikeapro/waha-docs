@@ -49,7 +49,7 @@ Start and scan the QR code to connect to WhatsApp.
 Download and install [Ngrok](https://ngrok.com/).
 
 {{< callout note >}} 
-    You can test it with a free account, but you'll need a paid account to use a static name.
+You can test it with a free account, but you'll need a paid account to use a static name.
 {{< /callout >}}
 
 Run Ngrok and expose the WAHA port:

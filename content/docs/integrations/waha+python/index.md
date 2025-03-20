@@ -9,7 +9,7 @@ images: ["python-whatsapp.png"]
 menu:
 docs:
 parent: "help"
-weight: 999
+weight: 990
 toc: true
 slug: python
 ---

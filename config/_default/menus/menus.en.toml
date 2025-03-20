@@ -223,6 +223,12 @@ url = "/whatsapp-plus-csharp/"
 weight = 99
 
 [[main]]
+name = "Uptime Kuma => WhatsApp"
+parent = "more"
+url = "/waha-uptime-kuma/"
+weight = 199
+
+[[main]]
 name = "🇦🇪 العربية (Arabic)"
 parent="language"
 url="https://translate.google.com/translate?sl=en&tl=ar&hl=ar&u=https://waha.devlike.pro/&client=webapp"
