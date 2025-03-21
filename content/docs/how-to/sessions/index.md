@@ -144,6 +144,7 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
         ],
         // Optional
         "retries": {
+          "policy": "constant",
           "delaySeconds": 2,
           "attempts": 15
         }
@@ -258,11 +259,12 @@ You can configure webhooks for a session:
         ],
         // Optional
         "retries": {
+          "policy": "constant",
           "delaySeconds": 2,
           "attempts": 15
         }
       }
-    ],
+    ]
   }
 }
 

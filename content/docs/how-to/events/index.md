@@ -68,6 +68,7 @@ Here's available configuration options for webhooks
           "key": "your-secret-key"
         },
         "retries": {
+          "policy": "constant",
           "delaySeconds": 2,
           "attempts": 15
         },
@@ -112,9 +113,9 @@ You can configure retry policy for webhooks by settings `config.retries` structu
           "message"
         ],
         "retries": {
+          "policy": "constant",
           "delaySeconds": 2,
-          "attempts": 15,
-          "policy": "constant"
+          "attempts": 15
         }
       }
     ]
