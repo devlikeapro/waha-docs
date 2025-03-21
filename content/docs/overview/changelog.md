@@ -56,6 +56,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - Set HMAC using `WHATSAPP_HOOK_HMAC_KEY` environment variable
   - Set retries using `WHATSAPP_HOOK_RETRIES_*` environment variables
   - Set custom headers using `WHATSAPP_HOOK_CUSTOM_HEADERS` environment variables
+- **GOWS** - Fix Get Contact `The "original" argument must be of type function` - {{< issue 866 >}}
 
 
 `2025.3.1`
