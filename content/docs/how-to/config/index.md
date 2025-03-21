@@ -81,14 +81,24 @@ and you'll see all requests immediately in your browser to intercept the webhook
 
 ### Global webhooks
 There's a way how you can configure
-[🔄 Webhooks]({{< relref "/docs/how-to/events#webhooks" >}})
-for ALL sessions - by settings these environment variables:
+[**🔄 Webhooks**]({{< relref "/docs/how-to/events#webhooks" >}})
+for **all sessions** at once - by settings these environment variables:
 
 - `WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111`  - to set up a URL for the webhook
-- `WHATSAPP_HOOK_EVENTS=message,message.any,state.change` - specify events. Do not specify all of
-  them, it's too heavy payload, choose the right for you.
-- `WHATSAPP_HOOK_EVENTS=*` - subscribe to all events. It's not recommended for production, but it's fine for
-  development.
+- `WHATSAPP_HOOK_EVENTS=message,message.any,state.change` - specify events.
+  - `WHATSAPP_HOOK_EVENTS=*` - subscribe to all events.
+  - We don't suggest using `*` or all events for production, it can generate a lot of requests.
+- `WHATSAPP_HOOK_HMAC_KEY=your-secret-key` - the same as `hmac.key` field in the webhook configuration.
+- `WHATSAPP_HOOK_RETRIES_POLICY=linear` - the same as `retries.policy` field in the webhook configuration.
+- `WHATSAPP_HOOK_RETRIES_DELAY_SECONDS=2` - the same as `retries.delaySeconds` field in the webhook configuration.
+- `WHATSAPP_HOOK_RETRIES_ATTEMPTS=4`
+- `WHATSAPP_HOOK_CUSTOM_HEADERS=X-My-Custom-Header-1:Value;X-My-Custom-Header-2:Value` - the same as `customHeaders` field in the webhook configuration.
+  - Use `Header:Value` format and separate them by `;`.
+
+That webhook configuration **does not appear** in `session.config` field in `GET /api/sessions/` request.
+
+💡 You can open [https://webhook.site](https://webhook.site) and paste URL from it to `url` field,
+and you'll see all requests immediately in your browser to intercept the webhook's payload.
 
 ### Session webhooks
 You can configure webhook when you start session by setting `config.webhook` fields.

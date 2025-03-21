@@ -51,9 +51,15 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 `2025.3.2`
 - Add [**📤 Button Reply**]({{< relref "/docs/how-to/send-messages#send-buttons-reply" >}}) API - {{< issue 848 >}}
   - **WEBJS**
+- Add features for [**🔄 Global Webhooks**]({{< relref "/docs/how-to/events#global-webhooks" >}}) - {{< issue 855 >}}
+  - **GOWS**, **NOWEB**, **WEBJS**
+  - Set HMAC using `WHATSAPP_HOOK_HMAC_KEY` environment variable
+  - Set retries using `WHATSAPP_HOOK_RETRIES_*` environment variables
+  - Set custom headers using `WHATSAPP_HOOK_CUSTOM_HEADERS` environment variables
+
 
 `2025.3.1`
-- **GOWS** 
+- **GOWS** multiple improvements
   - Enable Link Previews - {{< issue 763 >}}
   - Delete Status Message - {{< issue 754  >}}
   - Delete Message - {{< issue 796  >}}
