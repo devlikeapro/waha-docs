@@ -71,6 +71,7 @@ It&rsquo;ll create a session in <code>STOPPED</code> status, and you can start i
 </span></span><span class=line><span class=cl>        <span class=p>],</span>
 </span></span><span class=line><span class=cl>        <span class=c1>// Optional
 </span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;retries&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;policy&#34;</span><span class=p>:</span> <span class=s2>&#34;constant&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>          <span class=nt>&#34;delaySeconds&#34;</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>          <span class=nt>&#34;attempts&#34;</span><span class=p>:</span> <span class=mi>15</span>
 </span></span><span class=line><span class=cl>        <span class=p>}</span>
@@ -141,11 +142,12 @@ use, so you don&rsquo;t have to look into two systems.</li></ul><p>WAHA does not
 </span></span><span class=line><span class=cl>        <span class=p>],</span>
 </span></span><span class=line><span class=cl>        <span class=c1>// Optional
 </span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;retries&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;policy&#34;</span><span class=p>:</span> <span class=s2>&#34;constant&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>          <span class=nt>&#34;delaySeconds&#34;</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>          <span class=nt>&#34;attempts&#34;</span><span class=p>:</span> <span class=mi>15</span>
 </span></span><span class=line><span class=cl>        <span class=p>}</span>
 </span></span><span class=line><span class=cl>      <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>],</span>
+</span></span><span class=line><span class=cl>    <span class=p>]</span>
 </span></span><span class=line><span class=cl>  <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></div></figure></div><p>👉 Read more about available options on
 <a href=/docs/how-to/events/#webhooks-advanced-imagesversionspluspng><strong>🔄 Webhooks</strong></a> page.</p><h3 id=proxy>Proxy<a href=#proxy class=anchor aria-hidden=true>#</a></h3><p>You can configure proxy for a session by setting <code>config.proxy</code> fields when you create or update a session.</p><ul><li><code>server</code> - proxy server address, without <code>http://</code> or <code>https://</code> prefixes</li><li><code>username</code> and <code>password</code> - set this if the proxy requires authentication</li></ul><p><strong>No authentication</strong></p><div class=expressive-code><figure class="frame not-content"><figcaption class=header><span class=title></span></figcaption><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
