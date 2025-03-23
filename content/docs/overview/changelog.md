@@ -57,6 +57,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - Set retries using `WHATSAPP_HOOK_RETRIES_*` environment variables
   - Set custom headers using `WHATSAPP_HOOK_CUSTOM_HEADERS` environment variables
 - **GOWS** - Fix Get Contact `The "original" argument must be of type function` - {{< issue 866 >}}
+- **NOWEB** - fix out of memory when session stuck in `STARTING` statuses
+  - {{< issue 821 >}}, {{< issue 860 >}}, {{< issue 869 >}}
 
 
 `2025.3.1`
