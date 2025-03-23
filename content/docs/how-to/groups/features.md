@@ -12,7 +12,7 @@
 | `DELETE /api/{session}/groups/{id}`                                    |  ✔️   |       |      |
 | `POST /api/{session}/groups/{id}/leave`                                |  ✔️   |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/picture`                               |  ✔️   |  ✔️   |  ✔️  |
-| `POST /api/{session}/groups/{id}/picture`                              |   ➕   |   ➕   |  ➕   |
+| `PUT /api/{session}/groups/{id}/picture`                               |   ➕   |   ➕   |  ➕   |
 | `DELETE /api/{session}/groups/{id}/picture`                            |   ➕   |   ➕   |  ➕   |
 | `PUT /api/{session}/groups/{id}/description`                           |  ✔️   |  ✔️   |  ✔️  |
 | `PUT /api/{session}/groups/{id}/subject`                               |  ✔️   |  ✔️   |  ✔️  |

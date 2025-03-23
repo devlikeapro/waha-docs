@@ -92,7 +92,7 @@ Available in [**➕ WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 {{< /callout >}}
 
 ```http request
-POST /api/{SESSION}/groups/{ID}/picture
+PUT /api/{SESSION}/groups/{ID}/picture
 ```
 
 - `{SESSION}` - session name
