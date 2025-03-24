@@ -60,6 +60,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - **NOWEB** - fix out of memory when session stuck in `STARTING` statuses
   - {{< issue 821 >}}, {{< issue 860 >}}, {{< issue 869 >}}
 - **NOWEB** - mark session as `FAILED` if QR code is not scanned in the interval.
+- **NOWEB** - presences optimizations - store presence for 1 hour and fetch new if not accessed
 - Add searches by Name and Phone Number to [**📊Dashboard**]({{< relref "/docs/how-to/dashboard#chat-ui" >}})
 
 
