@@ -24,12 +24,26 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 ## API
 
-💡 Note about `contacts` field:
+{{< callout context="note" icon="outline/info-circle" title="About contacts field" >}}
+When you send status you can provide optional `contacts` field - list of contacts to send status to.
 
-[**WEBJS**]({{< relref "/docs/how-to/engines#webjs" >}}) engine **doesn't accept or require it**, you can send it as `contacts: null` or omit completely
+- [**WEBJS**]({{< relref "/docs/how-to/engines#webjs" >}}) engine **doesn't suppport** `contacts` field. You can send status to all contacts (or configure white/black list in the app before).
+- [**NOWEB**]({{< relref "/docs/how-to/engines#noweb" >}}) engine **supports** `contacts` field, you must [**🏭 Enable NOWEB Store before using these endpoints**]({{< relref "/docs/engines/NOWEB#store" >}})
+- [**GOWS**]({{< relref "/docs/how-to/engines#gows" >}}) engine **supports** `contacts` field.
 
-[**NOWEB**]({{< relref "/docs/how-to/engines#noweb" >}}) engine **doesn't require** `contacts` field, but you can send the list of contacts to send status to.
-- Please make sure to [**🏭 Enable NOWEB Store before using these endpoints**]({{< relref "/docs/engines/NOWEB#store" >}})!
+You can fetch your contacts using [**👤 Contacts API**]({{< relref "/docs/how-to/contacts#get-all-contacts" >}}).
+
+```json { title="Body" }
+{
+  "text": "Have a look! https://waha.devlike.pro/",
+  "contacts": ["123123@c.us", "3333@c.us"],
+  "backgroundColor": "#38b42f",
+  "font": 1
+}
+```
+
+{{< /callout >}}
+
 
 ### Send text status
 Send status to **all** your contacts:
@@ -49,7 +63,7 @@ POST /api/{session}/status/text
 - `backgroundColor` - background color of the status.
 - `contacts` - array of contacts to send status to.
 
-Send status to specific contacts (available in **NOWEB**):
+Send status to specific contacts:
 ```json { title="Body" }
 {
   "text": "Have a look! https://waha.devlike.pro/",
@@ -228,7 +242,27 @@ GET /api/default/chats/status%40broadcast/messages?downloadMedia=true&limit=100
 
 ### Receive status messages
 
-For all incoming messages in your own and contacts status you'll receive
+If you wish to receive status messages in real-time - you can subscribe to the following 
+[**🔄 Events**]({{< relref "/docs/how-to/events" >}})
+:
 
 - [`message`]({{< relref "/docs/how-to/receive-messages#message" >}}) event for a message (send by someone else)
-- [`message.any`]({{< relref "/docs/how-to/receive-messages#message.any" >}}) event for a message (including your messages)
+- [`message.any`]({{< relref "/docs/how-to/receive-messages#messageany" >}}) event for a message (including your messages)
+
+```json { title="message" }
+{
+  "event": "message",
+  "session": "default",
+  "payload": {
+    "id": "false_status@broadcast_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_123123@c.us",
+    "timestamp": 1667561485,
+    "body": "Check this out!",
+    "hasMedia": true,
+    "media": {
+      "url": "http://localhost:3000/api/files/false_status@broadcast_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_123123@c.us.jpg",
+      "mimetype": "image/jpeg",
+      "filename": null
+    }
+  }
+}
+```
