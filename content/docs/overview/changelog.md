@@ -61,6 +61,11 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - {{< issue 821 >}}, {{< issue 860 >}}, {{< issue 869 >}}
 - **NOWEB** - mark session as `FAILED` if QR code is not scanned in the interval.
 - **NOWEB** - presences optimizations - store presence for 1 hour and fetch new if not accessed
+- Handle sending [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) to 50K contacts - {{< issue 858 >}}
+  - **GOWS**, **NOWEB**
+- Add [**🟢 Status - Get New Status Message ID**]({{< relref "/docs/how-to/status" >}}) - {{< issue 858 >}}
+  - **GOWS**, **NOWEB**
+  - You can use it in  [**Send Status to 10K contacts**]({{< relref "/docs/how-to/status#send-status-to-10k-contacts" >}}) flow
 - Add searches by Name and Phone Number to [**📊Dashboard**]({{< relref "/docs/how-to/dashboard#chat-ui" >}})
 
 

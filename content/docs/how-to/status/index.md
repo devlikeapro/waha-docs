@@ -228,6 +228,32 @@ When you send status - you'll get the response like below, save `key.id` (it's m
 
 It removes status from all contacts in the list.
 
+### Get New Status Message ID
+Generates new message ID for status message.
+You can use it in 
+[Send Status to 10K contacts](#send-status-to-10k-contacts)
+flow for manually sending status messages to big amount of contacts.
+
+```http request
+GET /api/{session}/status/new-message-id
+```
+
+```json { title="Response" }
+{
+  "id": "AAAAAAAAAAAAAAAAAAAAAA"
+}
+```
+
+After that you can set it when you send status messages:
+```json { title="Body" }
+
+{
+  "id": "AAAAAAAAAAAAAAAAAAAAAA",
+  "text": "Have a look! https://waha.devlike.pro/",
+  "contacts": ["first-chunk-of-contacts-here"],
+  ...
+}
+```
 
 ## How-to
 ### Get status messages
@@ -266,3 +292,6 @@ If you wish to receive status messages in real-time - you can subscribe to the f
   }
 }
 ```
+
+### Send Status to 10K contacts
+tbd
