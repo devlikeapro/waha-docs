@@ -231,7 +231,7 @@ It removes status from all contacts in the list.
 ### Get New Status Message ID
 Generates new message ID for status message.
 You can use it in 
-[Send Status to 10K contacts](#send-status-to-10k-contacts)
+[Send Status to 10K contacts](#send-status-to-10k-contacts-manually)
 flow for manually sending status messages to big amount of contacts.
 
 ```http request
@@ -293,5 +293,107 @@ If you wish to receive status messages in real-time - you can subscribe to the f
 }
 ```
 
-### Send Status to 10K contacts
-tbd
+
+### Send Status to 10K Contacts Manually
+
+If you have a large contact list (e.g., **10,000 contacts or more**), different engines handle status messages differently.
+
+{{< callout context="note" icon="outline/info-circle" title="How Engines Send Status to Many Contacts" >}}
+
+- **WEBJS**: Handles the process internally, following the official WhatsApp Web behavior. It automatically chunks the contact list.
+- **NOWEB**: Splits the contact list into chunks of **5,000 contacts** and sends status messages sequentially.
+    - When sending **image, voice, or video** status messages, **NOWEB re-uploads** the media for each chunk.
+- **GOWS**: Also splits the contact list into chunks of **5,000 contacts**, sending them sequentially.
+    - For **image, voice, or video** status messages, **GOWS reuses** the uploaded media for each chunk (no re-uploads).
+
+Both **NOWEB** and **GOWS** use the same `message.id` for each chunk, allowing you to track "views" for status messages just like regular messages.
+
+{{< /callout >}}
+
+You might encounter errors when sending status messages to 10K contacts.
+
+If that happens, or if you'd like more control over the process, you can use the following manual flow to send the status message to your contacts in smaller chunks.
+
+
+#### 1. Generate a New Message ID
+
+First, generate a new message ID. You’ll use this ID for all status messages in this batch.
+
+```http request
+GET /api/{SESSION}/status/new-message-id
+```
+
+```json { title="Response" }
+{
+  "id": "AAAAAAAAAAAAAAAAAAAAAA"
+}
+```
+
+
+#### 2. Get Your Own ID
+
+To view your own status message on your device, retrieve your user ID:
+
+```http request
+GET /api/{SESSION}/me
+```
+
+```json { title="Response" }
+{
+  "id": "11111111111@c.us",
+  ...
+}
+```
+
+
+#### 3. Get Your Contacts List
+
+You can either use your existing contact list from a CRM or database, or fetch all contacts from WhatsApp:
+
+```http request
+GET /api/{SESSION}/contacts/all
+```
+
+```json {title="Response"}
+[
+  {
+    "id": "88888888888@c.us",
+    ...
+  },
+  {
+    "id": "99999999999@c.us",
+    ...
+  }
+]
+```
+
+
+#### 4. Send the Status Message to Contacts
+
+Once you have your **Message ID**, **your own ID**, and the **contacts list**, you can start sending status messages in chunks.
+
+We recommend using smaller chunks (**256–512 contacts**) to make retries and error handling easier.
+
+If you set `contacts: null`, the system uses the default chunk size of **5,000 contacts**, which works well for most cases.
+
+{{< callout context="caution" icon="outline/alert-triangle" >}}
+- Always use the same **Message ID** for all chunks. This allows you to track views consistently across all recipients.
+- Include **your own ID** in the **first chunk**, so you can immediately view the status and receive the `message.ack` event.
+  {{< /callout >}}
+
+```http request
+POST /api/{session}/status/text
+```
+
+```json { title="Body" }
+{
+  "id": "AAAAAAAAA",
+  "contacts": ["11111111111@c.us", "88888888888@c.us", "..."],
+  "text": "Check this out!"
+}
+```
+
+Continue sending the status message to the next chunk until you’ve sent it to all contacts.
+
+If you encounter any errors, you can retry sending the message to the same chunk.
+
