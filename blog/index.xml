@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 27 Feb 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.2</title><link>/blog/waha-2025-2/</link><pubDate>Thu, 27 Feb 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-2/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 26 Mar 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.3</title><link>/blog/waha-2025-3/</link><pubDate>Wed, 26 Mar 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-3/</guid><description>&lt;p>We’re excited to roll out &lt;a href="/docs/overview/changelog/#202503">&lt;strong>WAHA 2025.3&lt;/strong>&lt;/a>!&lt;/p>
+&lt;h2 id="gows-10">GOWS 1.0&lt;/h2>
+&lt;p>&lt;a href="/docs/how-to/engines/#gows">&lt;strong>GOWS Engine&lt;/strong>&lt;/a> just got its &lt;strong>1.0&lt;/strong> moment!&lt;/p>
+&lt;p>Here’s what’s new:&lt;/p>
+&lt;ul>
+&lt;li>Enable Link Previews - &lt;a href='https://github.com/devlikeapro/waha/issues/763' target="_blank">
+#763
+&lt;/a>
+&lt;/li>
+&lt;li>Delete Status Message - &lt;a href='https://github.com/devlikeapro/waha/issues/754' target="_blank">
+#754
+&lt;/a>
+&lt;/li>
+&lt;li>Delete Message - &lt;a href='https://github.com/devlikeapro/waha/issues/796' target="_blank">
+#796
+&lt;/a>
+&lt;/li>
+&lt;li>Edit Message - &lt;a href='https://github.com/devlikeapro/waha/issues/797' target="_blank">
+#797
+&lt;/a>
+&lt;/li>
+&lt;li>Reply To Message - &lt;a href='https://github.com/devlikeapro/waha/issues/799' target="_blank">
+#799
+&lt;/a>
+&lt;/li>
+&lt;li>Add &lt;code>filename&lt;/code> on &lt;code>/api/sendFile&lt;/code> - &lt;a href='https://github.com/devlikeapro/waha/issues/853' target="_blank">
+#853
+&lt;/a>
+&lt;/li>
+&lt;li>Extract &lt;code>replyTo&lt;/code> - &lt;a href='https://github.com/devlikeapro/waha/issues/876' target="_blank">
+#876
+&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="status-to-50k-contacts">Status to 50K Contacts&lt;/h2>
+&lt;p>You can now send &lt;a href="/docs/how-to/status/">&lt;strong>WhatsApp Status updates to up to 50,000 contacts&lt;/strong>&lt;/a> at once!&lt;/p></description></item><item><title>WAHA 2025.2</title><link>/blog/waha-2025-2/</link><pubDate>Thu, 27 Feb 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-2/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the
 &lt;a href="/docs/overview/changelog/#20252">&lt;strong>WAHA 2025.2&lt;/strong>&lt;/a> 🎉&lt;/p>
 &lt;h2 id="-profile-api">🆔 Profile API&lt;/h2>
 &lt;p>Managing your WhatsApp profile has never been easier.&lt;/p></description></item><item><title>WAHA 2025.1</title><link>/blog/waha-2025-1/</link><pubDate>Thu, 30 Jan 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-1/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the &lt;a href="/docs/overview/changelog/#20251">&lt;strong>WAHA 2025.1&lt;/strong>&lt;/a> 🎉&lt;/p>
@@ -24,18 +59,4 @@ for the full list of changes.&lt;/p></description></item><item><title>WAHA Scali
 &lt;p>The article is for people who want to scale their WhatsApp API for customers, like CRM, SaaS, or other services and
 who needs to handle a lot (&lt;strong>&amp;gt;100&lt;/strong>) of &lt;a href="/docs/how-to/sessions/">&lt;strong>🖥️ Sessions&lt;/strong>&lt;/a> (WhatsApp Accounts)&lt;/p></description></item><item><title>WAHA 2024.8 - WhatsApp Business Labels API, Chat Archive and more!</title><link>/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</link><pubDate>Thu, 01 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#20248">&lt;strong>WAHA 2024.8&lt;/strong>&lt;/a> 🎉&lt;/p>
 &lt;h2 id="whatsapp-business-labels-api">WhatsApp Business Labels API&lt;/h2>
-&lt;p>You can now work with &lt;strong>WhatsApp Labels&lt;/strong> available in WhatsApp Business using the API!&lt;/p></description></item><item><title>WAHA 2024.7 - WhatsApp Channels API, JSON logs</title><link>/blog/waha-2024.7-whatsapp-channels-api-json-logs/</link><pubDate>Sat, 20 Jul 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.7-whatsapp-channels-api-json-logs/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/">&lt;strong>WAHA 2024.7&lt;/strong>&lt;/a> 🎉&lt;/p>
-&lt;h2 id="whatsapp-channels-api">WhatsApp Channels API&lt;/h2>
-&lt;p>
-
-&lt;img
- src="/blog/waha-2024.7-whatsapp-channels-api-json-logs/whatsapp-channels_hu_56de8c47c53d6fda.webp"
- width="962"
- height="865"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="alt"id="h-rh-i-0"
-/>&lt;/p>
-&lt;p>WAHA now supports &lt;a href="/whatsapp-channels/">&lt;strong>WhatsApp Channels&lt;/strong>&lt;/a> - a brand-new feature introduced by WhatsApp.
-You can manage, read and send messages to &lt;strong>WhatsApp Channels&lt;/strong> (aka Newsletters) via API.&lt;/p></description></item></channel></rss>
+&lt;p>You can now work with &lt;strong>WhatsApp Labels&lt;/strong> available in WhatsApp Business using the API!&lt;/p></description></item></channel></rss>

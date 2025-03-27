@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on WAHA</title><link>/categories/releases/</link><description>Recent content in Releases on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 27 Feb 2025 08:48:45 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.2</title><link>/blog/waha-2025-2/</link><pubDate>Thu, 27 Feb 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-2/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on WAHA</title><link>/categories/releases/</link><description>Recent content in Releases on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 26 Mar 2025 08:48:45 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.3</title><link>/blog/waha-2025-3/</link><pubDate>Wed, 26 Mar 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-3/</guid><description>&lt;p>We’re excited to roll out &lt;a href="/docs/overview/changelog/#202503">&lt;strong>WAHA 2025.3&lt;/strong>&lt;/a>!&lt;/p>
+&lt;h2 id="gows-10">GOWS 1.0&lt;/h2>
+&lt;p>&lt;a href="/docs/how-to/engines/#gows">&lt;strong>GOWS Engine&lt;/strong>&lt;/a> just got its &lt;strong>1.0&lt;/strong> moment!&lt;/p>
+&lt;p>Here’s what’s new:&lt;/p>
+&lt;ul>
+&lt;li>Enable Link Previews - &lt;a href='https://github.com/devlikeapro/waha/issues/763' target="_blank">
+#763
+&lt;/a>
+&lt;/li>
+&lt;li>Delete Status Message - &lt;a href='https://github.com/devlikeapro/waha/issues/754' target="_blank">
+#754
+&lt;/a>
+&lt;/li>
+&lt;li>Delete Message - &lt;a href='https://github.com/devlikeapro/waha/issues/796' target="_blank">
+#796
+&lt;/a>
+&lt;/li>
+&lt;li>Edit Message - &lt;a href='https://github.com/devlikeapro/waha/issues/797' target="_blank">
+#797
+&lt;/a>
+&lt;/li>
+&lt;li>Reply To Message - &lt;a href='https://github.com/devlikeapro/waha/issues/799' target="_blank">
+#799
+&lt;/a>
+&lt;/li>
+&lt;li>Add &lt;code>filename&lt;/code> on &lt;code>/api/sendFile&lt;/code> - &lt;a href='https://github.com/devlikeapro/waha/issues/853' target="_blank">
+#853
+&lt;/a>
+&lt;/li>
+&lt;li>Extract &lt;code>replyTo&lt;/code> - &lt;a href='https://github.com/devlikeapro/waha/issues/876' target="_blank">
+#876
+&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="status-to-50k-contacts">Status to 50K Contacts&lt;/h2>
+&lt;p>You can now send &lt;a href="/docs/how-to/status/">&lt;strong>WhatsApp Status updates to up to 50,000 contacts&lt;/strong>&lt;/a> at once!&lt;/p></description></item><item><title>WAHA 2025.2</title><link>/blog/waha-2025-2/</link><pubDate>Thu, 27 Feb 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-2/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the
 &lt;a href="/docs/overview/changelog/#20252">&lt;strong>WAHA 2025.2&lt;/strong>&lt;/a> 🎉&lt;/p>
 &lt;h2 id="-profile-api">🆔 Profile API&lt;/h2>
 &lt;p>Managing your WhatsApp profile has never been easier.&lt;/p></description></item><item><title>WAHA 2025.1</title><link>/blog/waha-2025-1/</link><pubDate>Thu, 30 Jan 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-1/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the &lt;a href="/docs/overview/changelog/#20251">&lt;strong>WAHA 2025.1&lt;/strong>&lt;/a> 🎉&lt;/p>
@@ -35,6 +70,4 @@ for the full list of changes.&lt;/p></description></item><item><title>WAHA 2024.
 You can manage, read and send messages to &lt;strong>WhatsApp Channels&lt;/strong> (aka Newsletters) via API.&lt;/p></description></item><item><title>WAHA 2024.6 - NOWEB Store, Dashboard for Core, HTTPS</title><link>/blog/waha-2024.6-noweb-store-dashboard-for-core-https/</link><pubDate>Sun, 30 Jun 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.6-noweb-store-dashboard-for-core-https/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/">&lt;strong>WAHA 2024.6&lt;/strong>&lt;/a> 🎉&lt;/p>
 &lt;p>Here&amp;rsquo;s the list of main changes we&amp;rsquo;ve made:&lt;/p>
 &lt;h2 id="noweb-store">NOWEB Store&lt;/h2>
-&lt;p>You asked it, we did it - &lt;strong>contacts, chats, and messages&lt;/strong> endpoints are now available in NOWEB engine!&lt;/p></description></item><item><title>WAHA 2024.5 - Swagger White Label and stability improvements</title><link>/blog/waha-2024.5-swagger-white-label-and-stability-improvements/</link><pubDate>Thu, 30 May 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.5-swagger-white-label-and-stability-improvements/</guid><description>&lt;p>We are excited to announce the release of &lt;strong>WAHA 2024.5&lt;/strong>!
-This version introduces the &lt;a href="/docs/how-to/swagger/#white-label">Swagger White Label&lt;/a>
-feature and includes several stability improvements.&lt;/p></description></item></channel></rss>
+&lt;p>You asked it, we did it - &lt;strong>contacts, chats, and messages&lt;/strong> endpoints are now available in NOWEB engine!&lt;/p></description></item></channel></rss>
