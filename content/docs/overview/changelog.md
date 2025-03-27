@@ -67,6 +67,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - **GOWS**, **NOWEB**
   - You can use it in  [**Send Status to 10K contacts**]({{< relref "/docs/how-to/status#send-status-to-10k-contacts-manually" >}}) flow
 - Add searches by Name and Phone Number to [**📊Dashboard**]({{< relref "/docs/how-to/dashboard#chat-ui" >}})
+- **GOWS** - extract `replyTo` - {{< issue 876 >}}
 
 
 `2025.3.1`
