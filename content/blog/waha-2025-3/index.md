@@ -29,6 +29,12 @@ Here’s what’s new:
 - Add `filename` on `/api/sendFile` - {{< issue 853 >}}
 - Extract `replyTo` - {{< issue 876 >}}
 
+## NOWEB Stability
+If you faced any issues with the NOWEB engine, like
+{{< issue 821 >}}, {{< issue 860 >}}, {{< issue 869 >}}
+we have fixed them in this release!
+
+No more container restarts due to Out of Memory errors and sessions restarts!
 
 ## Status to 50K Contacts
 
