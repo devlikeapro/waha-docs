@@ -48,6 +48,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< /callout >}}
 
 ### 2025.3
+`2025.3.3`
+- **GOWS** - fix timeout on chat overview - {{< issue 881 >}}, {{< issue 878 >}}
+- **NOWEB** - cache presence data for 1 minute
+
 `2025.3.2`
 - Add [**📤 Button Reply**]({{< relref "/docs/how-to/send-messages#send-buttons-reply" >}}) API - {{< issue 848 >}}
   - **WEBJS**
