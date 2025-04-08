@@ -365,6 +365,75 @@ to send a video message into the channel
 }
 ```
 
+### Send Reaction to the channel
+
+```http request
+PUT /api/reaction
+```
+
+```json { title="Body" }
+{
+  "messageId": "false_11111111111@newsletter_AAAAAAAAAAAAAAAAAAAA",
+  "reaction": "👍",
+  "session": "default"
+}
+```
+
+`messageId` can be in 2 format:
+1. `false_11111111111@newsletter_AAAAAAAAAAAAAAAAAAAA` - using characters. Works if you're subscribed to the channel.
+2. `false_11111111111@newsltter_123` - using `server_id`. If you're not subscribed to the channel, you can use this format.
+
+You can find `server_id` in message:
+{{< tabs "channel-message-id-for-reaction" >}}
+{{< tab "NOWEB" >}}
+Find `_data.key.server_id` value:
+```json
+{
+  "event": "message.any",
+  "payload": {
+    ...
+    "_data": {
+      "key": {
+        "remoteJid": "120363417343416222@newsletter",
+        ...
+        "server_id": "101" # <=== this one
+      },
+      ...
+    }
+  },
+  ...
+}
+```
+{{< /tab >}}
+
+{{< tab "GOWS" >}}
+Find `_data.Info.ServerID` value:
+```json
+{
+  "event": "message.any",
+  "payload": {
+    ...
+    "_data": {
+      "Info": {
+        "Chat": "111111111111111111@newsletter",
+        ...
+        "ServerID": 105, # <=== this one
+        ...
+      },
+      ...
+    }
+  }
+}
+```
+{{< /tab >}}
+
+{{< tab "WEBJS" >}}
+Not supported
+{{< /tab >}}
+{{< /tabs >}}
+
+
+
 ### Get messages from the channel
 
 You can use regular
