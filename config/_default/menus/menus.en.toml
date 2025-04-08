@@ -181,6 +181,12 @@ url = "/whatsapp-chatwoot/"
 weight = 96
 
 [[main]]
+name = "Uptime Kuma => WhatsApp"
+parent = "more"
+url = "/waha-uptime-kuma/"
+weight = 98
+
+[[main]]
 name = "WhatsApp + PHP"
 parent = "more"
 url = "/whatsapp-plus-php/"
@@ -221,12 +227,6 @@ name = "WhatsApp + C#"
 parent = "more"
 url = "/whatsapp-plus-csharp/"
 weight = 99
-
-[[main]]
-name = "Uptime Kuma => WhatsApp"
-parent = "more"
-url = "/waha-uptime-kuma/"
-weight = 199
 
 [[main]]
 name = "🇦🇪 العربية (Arabic)"

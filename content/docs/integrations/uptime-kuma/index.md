@@ -8,7 +8,7 @@ draft: false
 menu:
 docs:
 parent: "help"
-weight: 999
+weight: 980
 images: ["uptime-kuma.jpg"]
 toc: true
 ---
