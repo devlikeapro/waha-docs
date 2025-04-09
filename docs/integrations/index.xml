@@ -77,7 +77,27 @@ system with mobile app, Bot, AI, Voice &amp;amp; Video &amp;amp; ScreenShare.&lt
 &lt;a href="https://doc.livehelperchat.com/docs/integrating/waha" target="_blank" rel="noopener noreferrer">
 WhatsApp WAHA integration on Live Helper Chat -&amp;gt;
 &lt;/a>
-documentation for more details how to integrate WhatsApp with Live Helper Chat.&lt;/p></description></item><item><title>WAHA + C#</title><link>/docs/integrations/csharp/</link><pubDate>Thu, 05 Sep 2024 08:49:31 +0000</pubDate><guid>/docs/integrations/csharp/</guid><description>&lt;p align="center">
+documentation for more details how to integrate WhatsApp with Live Helper Chat.&lt;/p></description></item><item><title>Uptime Kuma</title><link>/docs/integrations/uptime-kuma/</link><pubDate>Thu, 05 Sep 2024 08:49:31 +0000</pubDate><guid>/docs/integrations/uptime-kuma/</guid><description>&lt;div style="width: 100px; max-width: 100%; margin: 0 auto;">
+
+&lt;img
+ srcset="data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAwCdASoVABUAP1mOu00pJKghKA1RJisJ7AAAQgRJGAAA/uvTUxYtfbjoQ3Dsg5&amp;#43;y7&amp;#43;72GyYQDJqc5dwQAgAA"
+ data-srcset="/docs/integrations/uptime-kuma/uptime-kuma_hu_ae254df740b81c94.webp 480w,/docs/integrations/uptime-kuma/uptime-kuma_hu_bce6a4d0df0cbaec.webp 576w,/docs/integrations/uptime-kuma/uptime-kuma_hu_9f20f9d2085d9fa4.webp 768w,/docs/integrations/uptime-kuma/uptime-kuma_hu_b7671f856add4ec.webp 1025w,/docs/integrations/uptime-kuma/uptime-kuma_hu_6862a72a3d896a9d.webp 1200w,/docs/integrations/uptime-kuma/uptime-kuma_hu_41b1e7abe11880e4.webp 1440w,/docs/integrations/uptime-kuma/uptime-kuma_hu_ab77825a51d89a94.webp 2000w"
+ data-sizes="auto"
+ src="/docs/integrations/uptime-kuma/uptime-kuma_hu_d5724a9d2ccef6d6.jpg"
+ width="2000"
+ height="2000"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="Uptime Kuma &amp;#43; WhatsApp"
+ class="lazyload blur-up"
+>
+&lt;/div>
+&lt;p>If you&amp;rsquo;re using &lt;strong>self-hosted&lt;/strong>
+&lt;a href="https://github.com/louislam/uptime-kuma">&lt;strong>Uptime Kuma&lt;/strong>&lt;/a>
+you can use &lt;strong>self-hosted&lt;/strong>
+&lt;a href="/">&lt;strong>WAHA&lt;/strong>&lt;/a>
+to send notifications from Kuma to your WhatsApp!&lt;/p></description></item><item><title>WAHA + C#</title><link>/docs/integrations/csharp/</link><pubDate>Thu, 05 Sep 2024 08:49:31 +0000</pubDate><guid>/docs/integrations/csharp/</guid><description>&lt;p align="center">
  &lt;img src="/images/csharp.svg" style="width: 150px">
 &lt;/p>
 &lt;h2 id="waha-net-library">waha-net library&lt;/h2>
@@ -298,7 +318,7 @@ documentation for more details how to integrate WhatsApp with Live Helper Chat.&
 
 &lt;/p></description></item><item><title>WAHA + JS/TS</title><link>/docs/integrations/javascript/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/javascript/</guid><description>&lt;p>WhatsApp API + JavaScript/TypeScript&lt;/p>
 &lt;p align="center">
- &lt;img src="/images//images/javascript-whatsapp.png" style="width: 150px">
+ &lt;img src="/images/javascript-whatsapp.png" style="width: 150px">
 &lt;/p>
 &lt;p>
 &lt;h3 id="install-dependencies">Install Dependencies&lt;/h3>
@@ -379,86 +399,4 @@ documentation for more details how to integrate WhatsApp with Live Helper Chat.&
 &lt;/p>
 &lt;p>We&amp;rsquo;ve created a few examples on how to interact with WAHA WhatsApp API with Kotlin (ktor).&lt;/p>
 &lt;p>You can find the examples in
-&lt;a href="https://github.com/devlikeapro/waha-kotlin">examples folder on GitHub with detailed instructions in README.md -&amp;gt;&lt;/a>&lt;/p></description></item><item><title>WAHA + PHP</title><link>/docs/integrations/php/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/integrations/php/</guid><description>&lt;p align="center">
- &lt;img src="/images/php.svg" style="width: 150px">
-&lt;/p>
-&lt;p>
-&lt;h3 id="install-dependencies">Install Dependencies&lt;/h3>
-
-
-
-&lt;div class="expressive-code">
- &lt;figure class="frame is-terminal not-content">
- &lt;figcaption class="header">
- &lt;span class="title">&lt;/span>
- &lt;/figcaption>
- &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">php -m &lt;span class="p">|&lt;/span> grep curl
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">php -m &lt;span class="p">|&lt;/span> grep json&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
- &lt;/figure>
-&lt;/div>
-
-
-
-
-
-&lt;h3 id="send-message">Send Message&lt;/h3>
-
-
-
-&lt;div class="expressive-code">
- &lt;figure class="frame not-content">
- &lt;figcaption class="header">
- &lt;span class="title">&lt;/span>
- &lt;/figcaption>
- &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;http://localhost:3000/api/sendText&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;session&amp;#34;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s2">&amp;#34;default&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;chatId&amp;#34;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s2">&amp;#34;12132132130@newsletter&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s2">&amp;#34;Hi there!&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">];&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$url&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_RETURNTRANSFER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_POST&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_POSTFIELDS&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">json_encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$data&lt;/span>&lt;span class="p">));&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">curl_setopt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">CURLOPT_HTTPHEADER&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Content-Type: application/json&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">]);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curl_exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">curl_close&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$ch&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">?&amp;gt;&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
- &lt;/figure>
-&lt;/div>
-
-
-
-
-
-&lt;h3 id="receive-message">Receive Message&lt;/h3>
-
-
-
-&lt;div class="expressive-code">
- &lt;figure class="frame not-content">
- &lt;figcaption class="header">
- &lt;span class="title">&lt;/span>
- &lt;/figcaption>
- &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$_SERVER&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;REQUEST_METHOD&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;POST&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">json_decode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">file_get_contents&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;php://input&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;event&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s2">&amp;#34;message&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">processMessage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;payload&amp;#34;&lt;/span>&lt;span class="p">]);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">echo&lt;/span> &lt;span class="s2">&amp;#34;OK&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">?&amp;gt;&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err"> 
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
- &lt;/figure>
-&lt;/div>
-
-
-
-&lt;/p></description></item></channel></rss>
+&lt;a href="https://github.com/devlikeapro/waha-kotlin">examples folder on GitHub with detailed instructions in README.md -&amp;gt;&lt;/a>&lt;/p></description></item></channel></rss>
