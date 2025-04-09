@@ -51,6 +51,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 `2025.4.1`
 - Fix Send Reaction to [**📢 Channels**]({{< relref "/docs/how-to/channels#send-reaction-to-the-channel" >}}) - {{< issue 889 >}}
   - **GOWS**, **NOWEB**
+- [**📤 Send Link Custom Preview**]({{< relref "/docs/how-to/send-messages#send-link-custom-preview" >}}) - {{< issue 880 >}}, {{< issue 596 >}}
+  - **GOWS**, **NOWEB**
 - **GOWS** - fix Send Reaction to other participants messages {{< issue 894 >}}
 
 ### 2025.3
