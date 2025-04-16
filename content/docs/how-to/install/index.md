@@ -110,10 +110,10 @@ Refer to the available environment variables in [**⚙️ Configuration**]({{< r
 Some important values you **MUST** change before running it:
 
 - API Key for secure API access. Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
-   - `WHATSAPP_API_KEY=123`
+   - `WHATSAPP_API_KEY=admin`
 - Username, password for [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}):
-   - `WAHA_DASHBOARD_USERNAME=waha`
-   - `WAHA_DASHBOARD_PASSWORD=waha`
+   - `WAHA_DASHBOARD_USERNAME=admin`
+   - `WAHA_DASHBOARD_PASSWORD=admin`
 - Username, password for [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}):
    - `WHATSAPP_SWAGGER_USERNAME=admin`
    - `WHATSAPP_SWAGGER_PASSWORD=admin`
@@ -137,7 +137,7 @@ Please note that the **containers are not exposed to the internet**, and they on
 Setup something like Nginx or any other proxy server to proxy the requests to the container.
 
 6. Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and login with the credentials you've set
-   (`waha/waha` by default).
+   (`admin/admin` by default).
 
 Also, you could temporarily drop the `127.0.0.1:3000:3000` for **waha** to `3000:3000` in the compose file to access your instance at `http://<your-external-ip>:3000`. 
 It's recommended to revert this change back and use Nginx or some proxy server in the front.

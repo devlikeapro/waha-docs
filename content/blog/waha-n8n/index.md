@@ -56,7 +56,7 @@ docker compose up
 
 After that, open:
 1. **n8n** at [https://localhost:5678](https://localhost:5678) and set up your email/password
-2. **WAHA** at [https://localhost:3000/dashboard](https://localhost:3000/dashboard) (`waha/waha`)
+2. **WAHA** at [https://localhost:3000/dashboard](https://localhost:3000/dashboard) (`admin/admin`)
 
 ### Install WAHA n8n node
 We provide WAHA Node, which you can install at your n8n installation.
@@ -79,7 +79,7 @@ Before starting using the node, you need to add **WAHA API** credentials.
 1. Go to your **n8n** => **Home** => **Credentials** => **Add first credential**
 2. Find **WAHA API** in dropdown
 3. **Host URL** - `http://waha:3000` or use your domain
-4. **API Key** - `321` or your API key set in `docker-compose.yaml`
+4. **API Key** - `admin` or your API key set in `docker-compose.yaml`
 5. Click **Save** - it'll check the connection and save the credentials
 
 {{< imgo src="/images/blog/waha-n8n/waha-n8n-credentials.png" >}}
@@ -110,7 +110,7 @@ Click **Save** and **Activate** the workflow:
 Open the **WAHA Trigger** and expand **Webhook URLs** => **Production URL**
 {{< imgo src="/images/blog/waha-n8n/waha-n8n-WAHATrigger-url.png" >}}
 
-Go to [http://localhost:3000/dashboard/](http://localhost:3000/dashboard/) (`waha/waha`) and 
+Go to [http://localhost:3000/dashboard/](http://localhost:3000/dashboard/) (`admin/admin`) and 
 **Start New** session with the URL you got from the **WAHA Trigger**:
 {{< imgo src="/images/blog/waha-n8n/waha-n8n-dashboard-session.png" >}}
 

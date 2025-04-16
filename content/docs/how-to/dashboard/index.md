@@ -23,7 +23,7 @@ You can access **Dashboard** by running the project and opening
 <a href="http://localhost:3000/dashboard" target="_blank">http://localhost:3000/dashboard</a>
 (or similar, but with <a href="/dashboard" target="_blank">/dashboard</a> at the end).
 
-ℹ️ **Default username and password**: `waha/waha`
+ℹ️ **Default username and password**: `admin/admin` (or `waha/waha`)
 
 ```bash
 docker run -it -p 3000:3000/tcp devlikeapro/waha-plus #waha-plus
@@ -35,8 +35,8 @@ When running WAHA you can set the following environment variables to configure t
 
 - `WAHA_DASHBOARD_ENABLED=true` - enable or disable the dashboard, by default `true`. Set to `false` to disable the
   dashboard.
-- `WAHA_DASHBOARD_USERNAME=waha` - username used to log in, by default `waha`.
-- `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, by default `waha`.
+- `WAHA_DASHBOARD_USERNAME=waha` - username used to log in, by default `admin` or `waha`
+- `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, by default `admin` or `waha`
 
 ```bash
 docker run -it -p 3000:3000/tcp -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PASSWORD=waha devlikeapro/waha-plus

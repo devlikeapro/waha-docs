@@ -52,8 +52,8 @@ options instead of hiding the Swagger panel.
 ## Dashboard Security
 When running WAHA you can set the following environment variables to configure the dashboard:
 - `WAHA_DASHBOARD_ENABLED=true` - enable or disable the dashboard, by default `true`. Set to `false` to disable the dashboard.
-- `WAHA_DASHBOARD_USERNAME=waha` - username used to log in, by default `waha`.
-- `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, by default `waha`.
+- `WAHA_DASHBOARD_USERNAME=waha` - username used to log in, by default `admin` or `waha` 
+- `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, by default `admin` or `waha`.
 
 Read more about [**Dashboard ->**]({{< relref "/docs/how-to/dashboard" >}})
 
