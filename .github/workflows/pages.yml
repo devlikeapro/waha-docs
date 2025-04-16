@@ -15,10 +15,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install hugo
-        run: |
-          sudo snap install hugo
-
       - name: Install dependencies
         run: |
           npm install
