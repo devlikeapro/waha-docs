@@ -143,6 +143,8 @@ DELETE /api/{session}/chats/{chatId}
 ### Read messages
 You can mark all **unread** messages in the chat as **read** (double blue checkmark) using one query:
 
+It'll find all unread messages in the chat and mark them as read.
+
 ```http request
 POST /api/{SESSION}/chats/{chatId}/messages/read
 ```
@@ -150,9 +152,20 @@ POST /api/{SESSION}/chats/{chatId}/messages/read
 ```json { title="Body" }
 {}
 ```
-It'll find all unread messages in the chat and mark them as read.
 
-- 👉 **NOWEB**: Please make sure to [**🏭 Enable NOWEB Store before using this API**]({{< relref "/docs/engines/NOWEB#store" >}})!
+```json { title="Response" }
+{
+  "ids": [
+    "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+    "true_99999999999@c.us_AAAAAAAAAAAAAAAAAAAA"
+  ]
+}
+```
+- `ids` - list of message ids that were marked as read
+
+{{< callout note >}}
+👉 **NOWEB**: Please make sure to [**🏭 Enable NOWEB Store before using this API**]({{< relref "/docs/engines/NOWEB#store" >}})!
+{{< /callout >}}
 
 Optionally, you can control how many messages you need to read:
 
