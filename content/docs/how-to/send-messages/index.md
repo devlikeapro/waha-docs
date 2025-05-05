@@ -104,6 +104,12 @@ If you get a new message via [**🔄 Events**]({{< relref "docs/how-to/events#me
 and want to reply to that message, you need to first send that you've seen the message
 (double green tick) - read [**⚠️ How to Avoid Blocking**]({{< relref "docs/overview/how-to-avoid-blocking" >}})
 
+{{< callout context="note" title="Read all unread messages in the chat" >}}
+Check 
+[**💬 Chats - Read messages**]({{< relref "/docs/how-to/chats#read-messages" >}}) API
+to read messages without providing message id.
+{{< /callout >}}
+
 ```http request
 POST /api/sendSeen
 ```

@@ -694,6 +694,7 @@
       "python",
       "quick-links",
       "raw",
+      "read-messages",
       "receive-message",
       "receive-messages-from-the-channel",
       "receive-status-messages",

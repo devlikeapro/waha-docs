@@ -140,6 +140,36 @@ Use the method to delete chat
 DELETE /api/{session}/chats/{chatId}
 ```
 
+### Read messages
+You can mark all **unread** messages in the chat as **read** (double blue checkmark) using one query:
+
+```http request
+POST /api/{SESSION}/chats/{chatId}/messages/read
+```
+
+```json { title="Body" }
+{}
+```
+It'll find all unread messages in the chat and mark them as read.
+
+- 👉 **NOWEB**: Please make sure to [**🏭 Enable NOWEB Store before using this API**]({{< relref "/docs/engines/NOWEB#store" >}})!
+
+Optionally, you can control how many messages you need to read:
+
+```json { title="Body" }
+{
+  "messages": 30,
+  "days": 7
+}
+```
+- `messages: 30` - how many messages you need to read
+  - defaults is `30` for **direct chats** and `100` for **groups**
+- `days: 7` - how many days you need to read
+  - default is `7`
+
+For more granular control, you can use the
+[**POST /api/sendSeen**]({{< relref "/docs/how-to/send-messages#send-seen" >}})
+API.
 
 ### Get messages
 Get **10 messages** from the chat

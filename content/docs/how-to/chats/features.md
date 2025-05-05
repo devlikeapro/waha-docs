@@ -10,6 +10,7 @@
 | **Archive chat** <br> `POST /api/{session}/chats/{chatId}/archive`                     |  ✔️   |  ✔️¹  |       |
 | **Unarchive chat** <br> `POST /api/{session}/chats/{chatId}/unarchive`                 |  ✔️   |  ✔️¹  |       |
 | **Delete chat** <br> `DELETE /api/{session}/chats/{chatId}`                            |  ✔️   |       |       |
+| **Read messages** <br> `POST /api/{session}/chats/{chatId}/messages/read`              |  ✔️   |  ✔️¹  |  ✔️   |
 | **Get messages** <br> `GET /api/{session}/chats/{chatId}/messages`                     |  ✔️   |  ✔️¹  |  ✔️   |
 | **Get message by id** <br> `GET /api/{session}/chats/{chatId}/messages/{messageId}`    |  ✔️   |  ✔️¹  |  ✔️   |
 | **Pin message** <br> `POST /api/{session}/chats/{chatId}/messages/{messageId}/pin`     |  ✔️   |  ✔️   |       |

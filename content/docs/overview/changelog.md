@@ -49,9 +49,11 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.4
 `2025.4.2`
-- Add `filter.ack` to [**💬 Chats - Get messages**]({{< relref "/docs/how-to/chats#get-messages" >}})
+- Add [**💬 Chats - Read messages**]({{< relref "/docs/how-to/chats#read-messages" >}}) API to mark unread messages as read {{< issue 783>}}
   - **WEBJS**, **NOWEB**, **GOWS**
-- Allow reading multiple messages by using `messageIds` in [**/api/sendSeen**]({{< relref "/docs/how-to/send-messages#send-seen" >}})
+- Add `filter.ack` to [**💬 Chats - Get messages**]({{< relref "/docs/how-to/chats#get-messages" >}}) API
+  - **WEBJS**, **NOWEB**, **GOWS**
+- Allow reading multiple messages by using `messageIds` in [**POST /api/sendSeen**]({{< relref "/docs/how-to/send-messages#send-seen" >}}) API
   - **NOWEB**, **GOWS**
 
 `2025.4.1`
