@@ -49,12 +49,41 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.4
 `2025.4.2`
+
+**🆕 NEW**
 - Add [**💬 Chats - Read messages**]({{< relref "/docs/how-to/chats#read-messages" >}}) API to mark unread messages as read {{< issue 783>}}
   - **WEBJS**, **NOWEB**, **GOWS**
 - Add `filter.ack` to [**💬 Chats - Get messages**]({{< relref "/docs/how-to/chats#get-messages" >}}) API
   - **WEBJS**, **NOWEB**, **GOWS**
-- Allow reading multiple messages by using `messageIds` in [**POST /api/sendSeen**]({{< relref "/docs/how-to/send-messages#send-seen" >}}) API
+- **WEBJS** - add `message.ack` events for [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) and [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) messages
+  - {{< issue 495 >}}, {{< issue 900 >}}
+- **WEBJS** - add `message._data.receipts` in [**💬 Chats** - **Get message by id**]({{< relref "/docs/how-to/chats#get-message-by-id" >}}) [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) and [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) 
+  - It shows all receipts (ack status) for the message
+  - {{< issue 495 >}}, {{< issue 900 >}}
+- Read multiple messages by using `messageIds` in [**POST /api/sendSeen**]({{< relref "/docs/how-to/send-messages#send-seen" >}}) API
   - **NOWEB**, **GOWS**
+
+🛠️ **Fixes**
+- **WEBJS** - restart browser on **ProtocolError** and **Promise was collected**
+  - {{< issue 244 >}}, {{< issue 714 >}}, {{< issue 685 >}}, {{< issue 936 >}}
+- **NOWEB** - Fix `ack` for new messages (it was `UNKNOWN`, now it's `DEVICE`)
+- **GOWS** - send `DEVICE` `message.ack` for all groups participants
+- Fix **sending** messages to **anonymous groups** (one with `@lid` participants)
+  - **NOWEB**
+  - **GOWS**
+- Fix **receiving** messages to **groups** and **status** (some messages were missed)
+  - **NOWEB**
+  - **GOWS**
+
+**⚙️ Updates**
+
+- **NOWEB** - update engine to the latest version
+- **GOWS** - update engine to the latest version
+- **WEBJS**  - update
+  - **puppeter** (all images)
+  - **chrome** (`devlikeapro/waha-plus:chrome`and `devlikeapro/waha:chrome` images)
+
+---
 
 `2025.4.1`
 - Fix Send Reaction to [**📢 Channels**]({{< relref "/docs/how-to/channels#send-reaction-to-the-channel" >}}) - {{< issue 889 >}}
@@ -62,6 +91,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - [**📤 Send Link Custom Preview**]({{< relref "/docs/how-to/send-messages#send-link-custom-preview" >}}) - {{< issue 880 >}}, {{< issue 596 >}}
   - **GOWS**, **NOWEB**
 - **GOWS** - fix Send Reaction to other participants messages {{< issue 894 >}}
+
+---
 
 ### 2025.3
 `2025.3.3`

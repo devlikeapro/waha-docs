@@ -114,7 +114,7 @@ to read messages without providing message id.
 POST /api/sendSeen
 ```
 
-**Send seen for all unread messages older than 7 days**
+Send seen (read a message) for **all unread** messages **older than 7 days** (30 max for DM, 100 max for groups)
 ```json { title="Body" }
 {
   "session": "default",
@@ -126,7 +126,7 @@ In **NOWEB** and **GOWS**
 [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}})
 you can control what messages to read by using `messagesIds` (or deprecated `messageId`) field:
 
-**Send seen for direct message**:
+Send seen for **direct message**:
 
 ```json { title="Body" }
 {
@@ -138,7 +138,7 @@ you can control what messages to read by using `messagesIds` (or deprecated `mes
 }
 ```
 
-**Send seen for Group Message** you need to provide `participant` field:
+Send seen for **Group Message** you need to provide `participant` field:
 
 ```json { title="Body" }
 {
