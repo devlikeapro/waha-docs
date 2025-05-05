@@ -64,6 +64,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - **NOWEB**, **GOWS**
 
 🛠️ **Fixes**
+- **NOWEB** - update message status on `/api/sendSeen` - {{< issue 635 >}}
+- **NOWEB* - fix "Cannot read properties of undefined (reading 'protocolMessage')" - {{< issue 932 >}}
 - **WEBJS** - restart browser on **ProtocolError** and **Promise was collected**
   - {{< issue 244 >}}, {{< issue 714 >}}, {{< issue 685 >}}, {{< issue 936 >}}
 - **NOWEB** - Fix `ack` for new messages (it was `UNKNOWN`, now it's `DEVICE`)
