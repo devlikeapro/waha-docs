@@ -1465,7 +1465,7 @@
             "required": true,
             "in": "query",
             "schema": {
-              "default": 100,
+              "default": 10,
               "type": "number"
             }
           },
@@ -1503,11 +1503,38 @@
             "schema": {
               "type": "boolean"
             }
+          },
+          {
+            "name": "filter.ack",
+            "required": false,
+            "in": "query",
+            "description": "Filter messages by acknowledgment status",
+            "schema": {
+              "enum": [
+                "ERROR",
+                "PENDING",
+                "SERVER",
+                "DEVICE",
+                "READ",
+                "PLAYED"
+              ],
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WAMessage"
+                  }
+                }
+              }
+            }
           }
         },
         "tags": [
@@ -1885,7 +1912,7 @@
             "required": true,
             "in": "query",
             "schema": {
-              "default": 100,
+              "default": 10,
               "type": "number"
             }
           },
@@ -1925,6 +1952,23 @@
             }
           },
           {
+            "name": "filter.ack",
+            "required": false,
+            "in": "query",
+            "description": "Filter messages by acknowledgment status",
+            "schema": {
+              "enum": [
+                "ERROR",
+                "PENDING",
+                "SERVER",
+                "DEVICE",
+                "READ",
+                "PLAYED"
+              ],
+              "type": "string"
+            }
+          },
+          {
             "name": "session",
             "required": true,
             "in": "path",
@@ -1946,7 +1990,17 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WAMessage"
+                  }
+                }
+              }
+            }
           }
         },
         "tags": [
@@ -1985,6 +2039,73 @@
         "responses": {
           "200": {
             "description": ""
+          }
+        },
+        "tags": [
+          "💬 Chats"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/chats/{chatId}/messages/read": {
+      "post": {
+        "operationId": "ChatsController_readChatMessages",
+        "summary": "Read unread messages in the chat",
+        "parameters": [
+          {
+            "name": "messages",
+            "required": false,
+            "in": "query",
+            "example": 30,
+            "description": "How much messages to read (latest first)",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "days",
+            "required": false,
+            "in": "query",
+            "description": "How much days to read (latest first)",
+            "schema": {
+              "default": 7,
+              "type": "number"
+            }
+          },
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "chatId",
+            "required": true,
+            "in": "path",
+            "description": "Chat ID",
+            "example": "123456789@c.us",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadChatMessagesResponse"
+                }
+              }
+            }
           }
         },
         "tags": [
@@ -2636,7 +2757,7 @@
             "required": true,
             "in": "query",
             "schema": {
-              "default": 100,
+              "default": 10,
               "type": "number"
             }
           }
@@ -5701,7 +5822,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2025.4.1",
+    "version": "2025.4.2",
     "contact": {}
   },
   "tags": [
@@ -7041,14 +7162,23 @@
           },
           "messageId": {
             "type": "string",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
-            "description": "NOWEB engine only - it's important to mark ALL messages as seen"
+            "example": null,
+            "deprecated": true
+          },
+          "messageIds": {
+            "example": [
+              "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "participant": {
             "type": "string",
             "example": "11111111111@c.us",
             "default": null,
-            "description": "NOWEB engine only - the ID of the user that sent the  message (undefined for individual chats)"
+            "description": "NOWEB engine only - the ID of the user that sent the message (undefined for individual chats)"
           },
           "session": {
             "type": "string",
@@ -7440,6 +7570,18 @@
         "required": [
           "url"
         ]
+      },
+      "ReadChatMessagesResponse": {
+        "type": "object",
+        "properties": {
+          "ids": {
+            "description": "Messages IDs that have been read",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
       },
       "PinMessageRequest": {
         "type": "object",
