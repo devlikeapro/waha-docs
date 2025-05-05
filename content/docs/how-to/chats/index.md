@@ -156,7 +156,14 @@ Available parameters:
 - `offset=0` - skip the number of chats from the start
 - `filter.timestamp.lte=1727745026` - filter messages by timestamp less than or equal to `1727745026`
 - `filter.timestamp.gte=1727745026` - filter messages by timestamp greater than or equal to `1727745026`
-- `filter.fromMe=false` - filter messages from me (by default shows all messages)
+- `filter.fromMe=false` - filter messages from me (by default, shows all messages)
+- `filter.ack=DEVICE` - filter messages by ack 
+  - `ERROR, ack: -1` - error occurred
+  - `PENDING, ack: 0` - message is pending
+  - `SERVER, ack: 1` - message was sent to server
+  - `DEVICE, ack: 2` - message was sent to the device
+  - `READ, ack: 3` - recipient read message
+  - `PLAYED, ack: 4` - recipient played the message
 
 Get **10 messages** from the chat, skip **downloading media** (images, files)
 

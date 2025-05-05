@@ -492,12 +492,12 @@ Receive events when server or recipient gets the message, read or played it.
 `ackName` field contains message status (`ack` has the same meaning, but show the value in int, but we keep it for backward compatability, they much to each other)
 
 Possible message ack statuses:
-- `ackName: ERROR, ack: -1`
-- `ackName: PENDING, ack: 0`
-- `ackName: SERVER, ack: 1`
-- `ackName: DEVICE, ack: 2`
-- `ackName: READ, ack: 3`
-- `ackName: PLAYED, ack: 4`
+- `ackName: ERROR, ack: -1` - error occurred
+- `ackName: PENDING, ack: 0` - message is pending
+- `ackName: SERVER, ack: 1` - message was sent to server
+- `ackName: DEVICE, ack: 2` - message was sent to the device
+- `ackName: READ, ack: 3` - recipient read message
+- `ackName: PLAYED, ack: 4` - recipient played the message
 
 
 The payload may have more fields, it depends on the engine you use, but here's a minimum amount that all engines send:

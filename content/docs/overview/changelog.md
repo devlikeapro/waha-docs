@@ -48,6 +48,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< /callout >}}
 
 ### 2025.4
+`2025.4.2`
+- Add `filter.ack` to [**💬 Chats - Get messages**]({{< relref "/docs/how-to/chats#get-messages" >}})
+  - **WEBJS**, **NOWEB**, **GOWS**
+
 `2025.4.1`
 - Fix Send Reaction to [**📢 Channels**]({{< relref "/docs/how-to/channels#send-reaction-to-the-channel" >}}) - {{< issue 889 >}}
   - **GOWS**, **NOWEB**
