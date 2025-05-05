@@ -221,7 +221,10 @@ Read more about
 Read more about
 [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}})
 
+<div></div>
+{{< details "**🗄️ Storages**" >}}
 {{< include file="content/docs/how-to/storages/features.md" >}}
+{{< /details >}}
 
 ### 🔍 Observability
 

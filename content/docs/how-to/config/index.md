@@ -154,7 +154,6 @@ Read more about HTTPS options and how to configure it on [**🔒 Security**]({{<
 Read more about security settings for Swagger and API on [*🔒 Security**]({{< relref "/docs/how-to/security" >}}).
 
 ## Files
-<b>Files configuration is available in [WAHA Plus ]({{< relref "/docs/how-to/waha-plus" >}}) only.</b>
 
 ### Files - Local
 The following environment variables can be used to configure the file storage options for the WAHA:
