@@ -97,7 +97,7 @@ You can add `reply_to` field in order to reply on certain message.
 - [Send video](#send-video-)
 - [Send poll](#send-poll)
 - [Send location](#send-location)
-- 
+
 ## Send seen
 
 If you get a new message via [**🔄 Events**]({{< relref "docs/how-to/events#message" >}})
@@ -108,13 +108,27 @@ and want to reply to that message, you need to first send that you've seen the m
 POST /api/sendSeen
 ```
 
+**Send seen for all unread messages older than 7 days**
+```json { title="Body" }
+{
+  "session": "default",
+  "chatId": "11111111111@c.us"
+}
+```
+
+In **NOWEB** and **GOWS** 
+[**🏭 Engines**]({{< relref "/docs/how-to/engines" >}})
+you can control what messages to read by using `messagesIds` (or deprecated `messageId`) field:
+
 **Send seen for direct message**:
 
 ```json { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
-  "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+  "messageIds": [
+    "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+  ]
 }
 ```
 
@@ -124,7 +138,9 @@ POST /api/sendSeen
 {
   "session": "default",
   "chatId": "11111111111@g.us",
-  "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+  "messageIds": [
+    "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA_33333333333@c.us"
+  ],
   "participant": "33333333333@c.us"
 }
 ```

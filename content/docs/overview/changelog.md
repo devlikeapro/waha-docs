@@ -51,6 +51,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 `2025.4.2`
 - Add `filter.ack` to [**💬 Chats - Get messages**]({{< relref "/docs/how-to/chats#get-messages" >}})
   - **WEBJS**, **NOWEB**, **GOWS**
+- Allow reading multiple messages by using `messageIds` in [**/api/sendSeen**]({{< relref "/docs/how-to/send-messages#send-seen" >}})
+  - **NOWEB**, **GOWS**
 
 `2025.4.1`
 - Fix Send Reaction to [**📢 Channels**]({{< relref "/docs/how-to/channels#send-reaction-to-the-channel" >}}) - {{< issue 889 >}}
