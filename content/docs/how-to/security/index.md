@@ -25,7 +25,7 @@ If you want to hide the project Swagger panel under the password - run the follo
 login and password.
 
 ```bash
-docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin -eWHATSAPP_SWAGGER_PASSWORD=admin devlikeapro/waha-plus
+docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin -e WHATSAPP_SWAGGER_PASSWORD=admin devlikeapro/waha-plus
 ```
 
 Open http://localhost:3000/ and enter `admin / admin` in the inputs:
