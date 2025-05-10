@@ -49,7 +49,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.5
 🛠️ **Fixes**:
-
+- `2025.5.1` - **NOWEB** - fix syncing for accounts with many messages/contacts - {{< issue 952 >}}
+  - [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}): **Local**, **PostgreSQL**, **MongoDB** 
+- `2025.5.1` - **WEBJS** - fix potential connection leak to storages - {{< issue 952 >}}
 - `2025.5.1` - **WEBJS** - fix adding/removing participant to group - {{< issue 944 >}}
 - `2025.5.1` - **WEBJS** - fix sorting groups in `/chats` and `/chats/overview` - {{< issue 915 >}}
 
