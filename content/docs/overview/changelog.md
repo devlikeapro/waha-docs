@@ -47,6 +47,11 @@ Latest Version:
 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 {{< /callout >}}
 
+### 2025.5
+🛠️ **Fixes**:
+
+- `2025.5.1` - **WEBJS** - fix adding/removing participant to group - {{< issue 944 >}}
+
 ### 2025.4
 `2025.4.2`
 
