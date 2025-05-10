@@ -51,6 +51,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 🛠️ **Fixes**:
 
 - `2025.5.1` - **WEBJS** - fix adding/removing participant to group - {{< issue 944 >}}
+- `2025.5.1` - **WEBJS** - fix sorting groups in `/chats` and `/chats/overview` - {{< issue 915 >}}
 
 ### 2025.4
 `2025.4.2`
