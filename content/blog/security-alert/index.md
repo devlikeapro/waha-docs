@@ -32,7 +32,7 @@ It didn’t take long for bots and malicious actors to find those ports. Once th
 </div>
 <br/>
 
-**This IS NOT just a theoretical risk**. We had multiple cases this month alone. If your API is open, **you are exposed**.
+⚠️ **This IS NOT just a theoretical risk**. We had multiple cases this month alone. If your API is open, **you are exposed**.
 
 
 ### 👥 Who Is Affected?
@@ -99,5 +99,4 @@ Leaving your API exposed is like leaving your house door wide open with a sign s
 
 ----
 
-Stay safe,
-**The WAHA Team**
+**Stay safe 🛡️**
