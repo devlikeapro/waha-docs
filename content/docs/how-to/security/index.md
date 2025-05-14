@@ -17,7 +17,60 @@ Either protect the API with [**Api Key**](#api-security) or deny access by using
 
 {{< /callout >}}
 
+{{< callout note >}}
 👉 Built-in security is available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}})  version.
+{{< /callout >}}
+
+## API security
+
+You can protect the API by requiring Api Key in a request's headers.
+
+{{< callout note >}}
+Api Key does not hide your Swagger documentation. Please have a look at the next section to find how to hide Swagger under the password.
+{{< /callout >}}
+
+### Set Api Key
+
+Set `WHATSAPP_API_KEY=yoursecretkey` environment variable for that:
+
+```bash
+docker run -it -e WHATSAPP_API_KEY=yoursecretkey devlikeapro/waha-plus
+```
+
+### Use Api-Key in Swagger
+
+After you set api key - to authorize on swagger use **Authorize** button at the top:
+![alt](swagger-auth.png)
+
+### Add X-Api-Key header
+
+To authorize requests - set `X-Api-Key` header to `yoursecretkey` for all requests that go to WAHA.
+
+#### Python
+Example for Python **requests** library:
+
+```python
+import requests
+
+headers = {
+  'Content-type': 'application/json',
+  'X-Api-Key': 'yoursecretkey',
+}
+requests.get("http://localhost:3000/api/sessions", headers=headers)
+```
+
+### Exclude endpoints
+If you need to exclude some endpoints (like `GET /health` or `GET /ping`) from the API Key requirement - you can
+set `WHATSAPP_API_KEY_EXCLUDE_PATH` environment variable with a comma-separated list of endpoints (no `/` at the beginning).
+
+```bash
+docker run -it \
+ -e WHATSAPP_API_KEY_EXCLUDE_PATH="health,ping" \
+ -e WHATSAPP_API_KEY=yoursecretkey \
+ devlikeapro/waha-plus
+```
+
+
 
 ## Swagger Security
 ### Username and password
@@ -56,56 +109,6 @@ When running WAHA you can set the following environment variables to configure t
 - `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, by default `admin` or `waha`.
 
 Read more about [**Dashboard ->**]({{< relref "/docs/how-to/dashboard" >}})
-
-## API security
-
-You can protect the API by requiring Api Key in a request's headers.
-
-{{< callout note >}}
-Api Key does not hide your Swagger documentation. Please have a look at the previous section to find how to hide Swagger under the password.
-{{< /callout >}}
-
-### Set Api Key
-
-Set `WHATSAPP_API_KEY=yoursecretkey` environment variable for that:
-
-```bash
-docker run -it -e WHATSAPP_API_KEY=yoursecretkey devlikeapro/waha-plus
-```
-
-### Use Api-Key in Swagger
-
-After you set api key - to authorize on swagger use **Authorize** button at the top:
-![alt](swagger-auth.png)
-
-### Add X-Api-Key header
-
-To authorize requests - set `X-Api-Key` header to `yoursecretkey` for all requests that go to WAHA.
-
-#### Python
-Example for Python **requests** library:
-
-```python
-import requests
-
-headers = {
-  'Content-type': 'application/json',
-  'X-Api-Key': 'yoursecretkey',
-}
-requests.get("http://localhost:3000/api/sessions", headers=headers)
-```
-
-### Exclude endpoints
-If you need to exclude some endpoints (like `GET /health` or `GET /ping`) from the API Key requirement - you can 
-set `WHATSAPP_API_KEY_EXCLUDE_PATH` environment variable with a comma-separated list of endpoints (no `/` at the beginning).
-
-```bash
-docker run -it \
- -e WHATSAPP_API_KEY_EXCLUDE_PATH="health,ping" \
- -e WHATSAPP_API_KEY=yoursecretkey \
- devlikeapro/waha-plus
-```
-
 
 ## Webhook security
 To make sure that you get a webhook from your WAHA instance - you can use **HMAC authentication**.
