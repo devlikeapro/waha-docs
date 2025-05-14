@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on WAHA</title><link>/categories/releases/</link><description>Recent content in Releases on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 29 Apr 2025 08:48:45 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.4 - Read Chat Messages, Group Acks, and Engines Stability!</title><link>/blog/waha-2025-4/</link><pubDate>Tue, 29 Apr 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-4/</guid><description>&lt;hr>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on WAHA</title><link>/categories/releases/</link><description>Recent content in Releases on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 29 Apr 2025 08:48:45 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>🚨 WAHA Security Alert</title><link>/blog/security-alert/</link><pubDate>Tue, 29 Apr 2025 08:48:45 +0000</pubDate><guid>/blog/security-alert/</guid><description>&lt;hr>
+&lt;h2 id="-waha-security-alert">🚨 WAHA Security Alert&lt;/h2>
+&lt;p>We’ve recently seen a disturbing trend: users running WAHA with the &lt;strong>API publicly exposed&lt;/strong> and &lt;strong>without any form of protection&lt;/strong>.&lt;/p></description></item><item><title>WAHA 2025.4 - Read Chat Messages, Group Acks, and Engines Stability!</title><link>/blog/waha-2025-4/</link><pubDate>Tue, 29 Apr 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-4/</guid><description>&lt;hr>
 &lt;p>We’re excited to introduce &lt;a href="/docs/overview/changelog/#20254">&lt;strong>WAHA 2025.4&lt;/strong>&lt;/a>, packed with new API capabilities, group handling improvements, and crucial bug fixes across all engines!&lt;/p></description></item><item><title>WAHA 2025.3</title><link>/blog/waha-2025-3/</link><pubDate>Wed, 26 Mar 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-3/</guid><description>&lt;p>We’re excited to roll out &lt;a href="/docs/overview/changelog/#202503">&lt;strong>WAHA 2025.3&lt;/strong>&lt;/a>!&lt;/p>
 &lt;h2 id="gows-10">GOWS 1.0&lt;/h2>
 &lt;p>&lt;a href="/docs/how-to/engines/#gows">&lt;strong>GOWS Engine&lt;/strong>&lt;/a> just got its &lt;strong>1.0&lt;/strong> moment!&lt;/p>
@@ -65,18 +67,4 @@ in free &lt;strong>WAHA Core&lt;/strong> version, so you can receive media files
 kindly check the &lt;a href="/docs/overview/changelog/#20249">&lt;strong>🆕 Changelog&lt;/strong>&lt;/a>
 for the full list of changes.&lt;/p></description></item><item><title>WAHA 2024.8 - WhatsApp Business Labels API, Chat Archive and more!</title><link>/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</link><pubDate>Thu, 01 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.8-whatsapp-business-labels-api-chat-archive-and-more/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#20248">&lt;strong>WAHA 2024.8&lt;/strong>&lt;/a> 🎉&lt;/p>
 &lt;h2 id="whatsapp-business-labels-api">WhatsApp Business Labels API&lt;/h2>
-&lt;p>You can now work with &lt;strong>WhatsApp Labels&lt;/strong> available in WhatsApp Business using the API!&lt;/p></description></item><item><title>WAHA 2024.7 - WhatsApp Channels API, JSON logs</title><link>/blog/waha-2024.7-whatsapp-channels-api-json-logs/</link><pubDate>Sat, 20 Jul 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024.7-whatsapp-channels-api-json-logs/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/">&lt;strong>WAHA 2024.7&lt;/strong>&lt;/a> 🎉&lt;/p>
-&lt;h2 id="whatsapp-channels-api">WhatsApp Channels API&lt;/h2>
-&lt;p>
-
-&lt;img
- src="/blog/waha-2024.7-whatsapp-channels-api-json-logs/whatsapp-channels_hu_56de8c47c53d6fda.webp"
- width="962"
- height="865"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="alt"id="h-rh-i-0"
-/>&lt;/p>
-&lt;p>WAHA now supports &lt;a href="/whatsapp-channels/">&lt;strong>WhatsApp Channels&lt;/strong>&lt;/a> - a brand-new feature introduced by WhatsApp.
-You can manage, read and send messages to &lt;strong>WhatsApp Channels&lt;/strong> (aka Newsletters) via API.&lt;/p></description></item></channel></rss>
+&lt;p>You can now work with &lt;strong>WhatsApp Labels&lt;/strong> available in WhatsApp Business using the API!&lt;/p></description></item></channel></rss>
