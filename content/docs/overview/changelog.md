@@ -49,6 +49,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.5
 🛠️ **Fixes**:
+- `2025.5.3` - **NOWEB** - fix `poll.vote` event - {{< issue 960 >}}
 - `2025.5.2` - **GOWS** - fix pairing Business Accounts connected to official Meta API - {{< issue 864 >}}
 - `2025.5.2` - **NOWEB** - fix pairing via code {{< issue 961 >}}
 - `2025.5.2` - **GOWS** and **NOWEB** - fix "undefined senderKeyDistributionMessage" error
