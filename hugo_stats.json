@@ -787,7 +787,6 @@
       "sessions---postgresql",
       "sessions-storage",
       "sessionstatus",
-      "set-api-key",
       "set-group-description",
       "set-group-picture",
       "set-group-subject",
