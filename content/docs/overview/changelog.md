@@ -49,6 +49,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.5
 🛠️ **Fixes**:
+- `2025.5.2` - **GOWS** and **NOWEB** - fix "undefined senderKeyDistributionMessage" error
+- `2025.5.2` - protect **PostgreSQL** media with an API key
+- `2025.5.2` - minor security update
 - `2025.5.1` - **NOWEB** - fix syncing for accounts with many messages/contacts - {{< issue 952 >}}
   - [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}): **Local**, **PostgreSQL**, **MongoDB** 
 - `2025.5.1` - **NOWEB** - no duplicate `message.ack` for a single message - {{< issue 948 >}}
