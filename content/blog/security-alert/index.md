@@ -49,7 +49,8 @@ This includes Docker deployments, VPS installs, even cloud setups that skip secu
 ### 🛠️ How to Fix It
 
 {{< callout context="caution" title="Do not expose WhatsApp API on public networks!" icon="outline/shield-check" >}}
-Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
+- Use at **least 64 symbols random string** as `WHATSAPP_API_KEY` string that contains letters (a-z, A-Z) and numbers (1-9)
+- Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
 {{< /callout >}}
 
 Here's how you can immediately protect your setup:

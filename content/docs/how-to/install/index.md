@@ -118,6 +118,10 @@ Some important values you **MUST** change before running it:
    - `WHATSAPP_SWAGGER_USERNAME=admin`
    - `WHATSAPP_SWAGGER_PASSWORD=admin`
 
+{{< callout context="caution" title="Use long API Key" >}}
+Use at **least 64 symbols random string** as `WHATSAPP_API_KEY` string that contains letters (a-z, A-Z) and numbers (1-9)
+{{< /callout >}}
+
 ```bash
 # update .env file with your values
 nano .env

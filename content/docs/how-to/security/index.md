@@ -23,19 +23,20 @@ Either protect the API with [**Api Key**](#api-security) or deny access by using
 
 ## API security
 
-You can protect the API by requiring Api Key in a request's headers.
+You can protect the API by requiring **Api Key** in a request's header - `X-Api-Key`
 
-{{< callout note >}}
-Api Key does not hide your Swagger documentation. Please have a look at the next section to find how to hide Swagger under the password.
-{{< /callout >}}
-
-### Set Api Key
 
 Set `WHATSAPP_API_KEY=yoursecretkey` environment variable for that:
 
 ```bash
 docker run -it -e WHATSAPP_API_KEY=yoursecretkey devlikeapro/waha-plus
 ```
+
+{{< callout context="caution" title="Use long API Key" >}}
+Use at **least 64 symbols random string** as `WHATSAPP_API_KEY` string that contains letters (a-z, A-Z) and numbers (1-9)
+{{< /callout >}}
+
+> Api Key does not hide your Swagger documentation or Dashboard. Please have a look at the next section to find how to hide Swagger under the password.
 
 ### Use Api-Key in Swagger
 
