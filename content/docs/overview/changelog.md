@@ -48,6 +48,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< /callout >}}
 
 ### 2025.5
+**🆕 NEW**
+- `2025.5.4` - **GOWS** - add `POST /api/sendContactVcard` support - {{< issue 902 >}}
+
 🛠️ **Fixes**:
 - `2025.5.3` - **NOWEB** - fix `poll.vote` event - {{< issue 960 >}}
 - `2025.5.2` - **GOWS** - fix pairing Business Accounts connected to official Meta API - {{< issue 864 >}}
