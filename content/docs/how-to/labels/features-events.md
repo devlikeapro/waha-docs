@@ -3,9 +3,9 @@
 
 | **Events**           | WEBJS | NOWEB | GOWS |
 |----------------------|-------|-------|:-----|
-| `label.upsert`       |       | ✔️    |      |
-| `label.deleted`      |       | ✔️    |      |
-| `label.chat.added`   |       | ✔️    |      |
-| `label.chat.deleted` |       | ✔️    |      |
+| `label.upsert`       |       | ✔️    | ✔️   |
+| `label.deleted`      |       | ✔️    | ✔️   |
+| `label.chat.added`   |       | ✔️    | ✔️   |
+| `label.chat.deleted` |       | ✔️    | ✔️   |
 
 {{< /details >}}
