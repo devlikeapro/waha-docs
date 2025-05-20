@@ -203,6 +203,14 @@ Read more about
 
 {{< include file="content/docs/how-to/labels/features-events.md" >}}
 
+### 📅 Event Message
+Read more about
+[**📅 Event Message**]({{< relref "/docs/how-to/event-message" >}})
+
+{{< include file="content/docs/how-to/event-message/features.md" >}}
+
+{{< include file="content/docs/how-to/event-message/features-events.md" >}}
+
 ### 📶 Polls
 Read more about
 [**📶 Polls**]({{< relref "/docs/how-to/polls" >}})

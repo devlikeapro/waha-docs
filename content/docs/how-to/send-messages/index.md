@@ -88,17 +88,9 @@ You can add `reply_to` field in order to reply on certain message.
 }
 ```
 
-`reply_to` is available in all messages:
+`reply_to` is available in all messages
 
-- [Send text](#send-text)
-- [Send image](#send-image-)
-- [Send file](#send-file-)
-- [Send voice](#send-voice-)
-- [Send video](#send-video-)
-- [Send poll](#send-poll)
-- [Send location](#send-location)
-
-## Send seen
+## Send Seen
 
 If you get a new message via [**🔄 Events**]({{< relref "docs/how-to/events#message" >}})
 and want to reply to that message, you need to first send that you've seen the message
@@ -151,7 +143,7 @@ Send seen for **Group Message** you need to provide `participant` field:
 }
 ```
 
-## Send text
+## Send Text
 Use API to send text messages to the chat.
 
 ```http request
@@ -233,7 +225,7 @@ also mention it in `mentions` in format `2132132130@c.us`
 }
 ```
 
-## Send image
+## Send Image
 Use API to send images to the chat.
 
 ```http request
@@ -277,7 +269,7 @@ You can send images in two ways:
 {{< /tab >}}
 {{< /tabs >}}
 
-## Send voice
+## Send Voice
 Use API to send voice messages to the chat.
 
 ```http request
@@ -330,7 +322,7 @@ You can send voice messages in two ways:
 {{< /tab >}}
 {{< /tabs >}}
 
-## Send video
+## Send Video
 ```http request
 POST /api/sendVideo
 ```
@@ -393,7 +385,7 @@ You can send video messages in two ways:
 {{< /tab >}}
 {{< /tabs >}}
 
-## Send file
+## Send File
 
 Use API to send a file (as a document/attachment) to a chat.
 
@@ -437,6 +429,53 @@ You can send files in two ways:
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+## Send Poll
+
+We have a dedicated page [📶 Polls]({{< relref "/docs/how-to/polls" >}})!
+
+![alt](poll-example.jpg)
+
+```http request
+POST /api/sendPoll
+```
+
+The request body is pretty simple:
+
+```json { title="Body" }
+{
+  "session": "default",
+  "chatId": "123123123@c.us",
+  "poll": {
+    "name": "How are you?",
+    "options": [
+      "Awesome!",
+      "Good!",
+      "Not bad!"
+    ],
+    "multipleAnswers": false
+  }
+}
+```
+
+
+## Send Event
+You can send Event Message using API
+
+```http request
+POST /api/{SESSION}/events
+```
+
+{{< callout note >}}
+👉 Read more about how to send [**📅 Event Message**]({{< relref "/docs/how-to/event-message" >}}) and receive responses.
+{{< /callout >}}
+
+
+<div style="width: 500px; max-width: 100%; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="whatsapp-event-message.jpg" alt="WhatsApp Event Message" >}}
+</div>
+
+
 
 ## Send Link Custom Preview
 {{< callout tip >}}
@@ -563,33 +602,6 @@ So if you want to delete `true_123@c.us_AAA` message in `123@c.us` chat you need
 DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
-## Send poll
-
-We have a dedicated page [📶 Polls]({{< relref "/docs/how-to/polls" >}})!
-
-![alt](poll-example.jpg)
-
-```http request
-POST /api/sendPoll
-```
-
-The request body is pretty simple:
-
-```json { title="Body" }
-{
-  "session": "default",
-  "chatId": "123123123@c.us",
-  "poll": {
-    "name": "How are you?",
-    "options": [
-      "Awesome!",
-      "Good!",
-      "Not bad!"
-    ],
-    "multipleAnswers": false
-  }
-}
-```
 
 ## Add a reaction
 Use API to add a reaction to a message.
