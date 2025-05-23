@@ -30,6 +30,11 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
   - By getting all groups (see below).
   - By creating a new group and saving the id.
 
+{{< callout tip >}}
+Check [**👤 Contacts - Lids**]({{< relref "/docs/how-to/contacts/#api---lids" >}}) if you see `@lid` 
+in participants list for a group
+{{< /callout >}}
+
 ### Create a new group
 
 ```http request

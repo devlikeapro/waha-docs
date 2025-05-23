@@ -25,7 +25,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 WhatsApp Web does not support adding contacts, so the API doesn't support it too.
 {{< /callout >}}
 
-## API
+## API - Contacts
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Get all contacts
@@ -166,3 +166,126 @@ POST /api/contacts/unblock
   "session": "default"
 }
 ```
+
+## API - Lids
+
+WhatsApp uses so-called **Linked ID** (`lid`) identifier to hide a user phone number (`pn`) from public groups and other places.
+
+The API below you can use to map a linked identifier (`@lid`) to a contact phone number (`@c.us`).
+
+### Get All Known LIDs
+
+```http request
+GET /api/{session}/lids
+```
+
+Query all known LID-to-phone number mappings for a session.
+
+**Query Parameters:**
+
+* `limit`: (optional, default: 100) Number of records to return
+* `offset`: (optional, default: 0) Pagination offset
+
+**Response:**
+
+```json
+[
+  {
+    "lid": "123123123@lid",
+    "pn": "123456789@c.us"
+  }
+]
+```
+
+{{< callout tip >}}
+Call
+[**Get all groups**]({{< relref "/docs/how-to/groups/#get-all-groups" >}})
+or
+[**Refresh groups**]({{< relref "/docs/how-to/groups/#refresh-groups" >}}) to populate lid to phone number mapping for all groups.
+{{< /callout >}}
+
+### Get Count of LIDs
+
+```http request
+GET /api/{session}/lids/count
+```
+
+Returns the number of known LID mappings for a session.
+
+**Response:**
+
+```json
+{
+  "count": 123
+}
+```
+
+### Get Phone Number by LID
+
+```http request
+GET /api/{session}/lids/{lid}
+```
+
+Retrieve the associated phone number for a specific LID.
+
+👉 Remember to escape `@` in `lid` with `%40` (`123123%40lid`) or use just a number (`123123`)
+
+{{< tabs "lids-get-pn-response" >}}
+{{< tab "Response (Found)" >}}
+```json
+{
+  "lid": "123123123@lid",
+  "pn": "123456789@c.us"
+}
+```
+{{< /tab >}}
+{{< tab "Response (Not Found)" >}}
+```json
+{
+  "lid": "123123123@lid",
+  "pn": null
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+### Get LID by Phone Number
+
+```http request
+GET /api/{session}/lids/pn/{phoneNumber}
+```
+
+Fetch the LID for a given phone number (chat ID).
+
+👉 Remember to escape `@` in `phoneNumber` with `%40` (`123123%40lid`) or use just a number (`123123`)
+
+{{< tabs "lids-get-lid-response" >}}
+{{< tab "Response (Found)" >}}
+```json
+{
+  "lid": "123123123@lid",
+  "pn": "123456789@c.us"
+}
+```
+{{< /tab >}}
+{{< tab "Response (Not Found)" >}}
+```json
+{
+  "lid": null,
+  "pn": "123456789@c.us"
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+### Lids FAQ
+- If you **don't find a phone number by lid** - you don't have the phone number in your contact list or you're not **admin** in the group.
+- For [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) - try [**Refresh groups**]({{< relref "/docs/how-to/groups" >}}) if you don't find the `lid` but you're **admin** in the group.
+
+{{< callout tip >}}
+👉 If nothing helped, and **you see phone number for participant on your phone app** - please 
+[**open an issue**](https://github.com/devlikeapro/waha)
+and tell what
+[**🏭 Engine**]({{< relref "/docs/how-to/engines" >}})
+you're using and what behaviour you see.
+{{< /callout >}}

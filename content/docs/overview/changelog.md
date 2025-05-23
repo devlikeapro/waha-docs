@@ -49,6 +49,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.5
 **🆕 NEW**
+- `2025.5.4` - Add [**👤 Contacts - Lids API**]({{< relref "/docs/how-to/contacts/#api---lids" >}}) to map `@lid` to `@c.us` - {{< issue 957 >}}
+  - **WEBJS**, **NOWEB**, **GOWS** 
 - `2025.5.4` - **GOWS** - [**🏷️ Labels**]({{< relref "docs/how-to/labels" >}}) support - {{< issue 922 >}} 
 - `2025.5.4` - **GOWS** - add `POST /api/sendContactVcard` support - {{< issue 902 >}}
 
