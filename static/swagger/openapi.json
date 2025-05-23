@@ -4023,6 +4023,191 @@
         ]
       }
     },
+    "/api/{session}/lids": {
+      "get": {
+        "operationId": "LidsController_getAll",
+        "summary": "Get all known lids to phone number mapping",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "offset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": 0,
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LidToPhoneNumber"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👤 Contacts"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/lids/count": {
+      "get": {
+        "operationId": "LidsController_getLidsCount",
+        "summary": "Get the number of known lids",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👤 Contacts"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/lids/{lid}": {
+      "get": {
+        "operationId": "LidsController_findPNByLid",
+        "summary": "Get phone number by lid",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "lid",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LidToPhoneNumber"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👤 Contacts"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/lids/pn/{phoneNumber}": {
+      "get": {
+        "operationId": "LidsController_findLIDByPhoneNumber",
+        "summary": "Get lid by phone number (chat id)",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "phoneNumber",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LidToPhoneNumber"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👤 Contacts"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/{session}/groups": {
       "post": {
         "operationId": "GroupsController_createGroup",
@@ -5434,6 +5619,53 @@
         ]
       }
     },
+    "/api/{session}/events": {
+      "post": {
+        "operationId": "EventsController_sendEvent",
+        "summary": "Send an event message",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventMessageRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WAMessage"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "📅 Events"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/ping": {
       "get": {
         "operationId": "PingController_ping",
@@ -5822,7 +6054,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2025.4.2",
+    "version": "2025.5.3",
     "contact": {}
   },
   "tags": [
@@ -5869,6 +6101,10 @@
     {
       "name": "✅ Presence",
       "description": "Presence information"
+    },
+    {
+      "name": "📅 Events",
+      "description": "Event Message"
     },
     {
       "name": "🏷️ Labels",
@@ -7415,6 +7651,11 @@
               ]
             }
           },
+          "reply_to": {
+            "type": "string",
+            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "example": null
+          },
           "session": {
             "type": "string",
             "default": "default"
@@ -8209,6 +8450,33 @@
           "session"
         ]
       },
+      "LidToPhoneNumber": {
+        "type": "object",
+        "properties": {
+          "lid": {
+            "type": "string",
+            "description": "Linked ID for the user",
+            "example": "1111111@lid"
+          },
+          "pn": {
+            "type": "string",
+            "description": "Phone number (chat id) for the user",
+            "example": "3333333@c.us"
+          }
+        }
+      },
+      "CountResponse": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "number",
+            "default": 0
+          }
+        },
+        "required": [
+          "count"
+        ]
+      },
       "Participant": {
         "type": "object",
         "properties": {
@@ -8263,18 +8531,6 @@
         },
         "required": [
           "id"
-        ]
-      },
-      "CountResponse": {
-        "type": "object",
-        "properties": {
-          "count": {
-            "type": "number",
-            "default": 0
-          }
-        },
-        "required": [
-          "count"
         ]
       },
       "DescriptionRequest": {
@@ -8395,6 +8651,82 @@
         "required": [
           "id",
           "presences"
+        ]
+      },
+      "EventLocation": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the location",
+            "example": "Luxe Nail Studio 💅"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "EventMessage": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the event",
+            "example": "John's Nail Appointment 💅"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the event",
+            "example": "It's time for your nail care session! 🌟\\n\\nYou'll be getting a *classic gel manicure* – clean, polished, and long-lasting. 💖\\n\\n📍 *Location:* Luxe Nail Studio\\nWe're on the *2nd floor of the Plaza Mall*, next to the flower shop. Look for the *pink neon sign*!\\n\\nFeel free to arrive *5–10 mins early* so we can get started on time 😊"
+          },
+          "startTime": {
+            "type": "number",
+            "description": "Start time of the event (Unix timestamp in seconds)",
+            "example": 2063137000
+          },
+          "endTime": {
+            "type": "number",
+            "description": "End time of the event (Unix timestamp in seconds)",
+            "example": null
+          },
+          "location": {
+            "description": "Location of the event",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EventLocation"
+              }
+            ]
+          },
+          "extraGuestsAllowed": {
+            "type": "boolean",
+            "description": "Whether extra guests are allowed",
+            "example": false
+          }
+        },
+        "required": [
+          "name",
+          "startTime"
+        ]
+      },
+      "EventMessageRequest": {
+        "type": "object",
+        "properties": {
+          "chatId": {
+            "type": "string",
+            "example": "11111111111@c.us"
+          },
+          "reply_to": {
+            "type": "string",
+            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "example": null
+          },
+          "event": {
+            "$ref": "#/components/schemas/EventMessage"
+          }
+        },
+        "required": [
+          "chatId",
+          "event"
         ]
       },
       "PingResponse": {
@@ -8585,6 +8917,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -8676,6 +9010,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -8845,6 +9181,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -8936,6 +9274,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -9078,6 +9418,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -9183,6 +9525,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -9367,6 +9711,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -9491,6 +9837,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -9603,6 +9951,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -9733,6 +10083,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -9824,6 +10176,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -9997,6 +10351,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -10088,6 +10444,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -10199,6 +10557,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -10319,6 +10679,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -10410,6 +10772,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -10501,6 +10865,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -10592,6 +10958,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -10683,6 +11051,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -10802,6 +11172,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -10893,6 +11265,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -10901,6 +11275,279 @@
           },
           "payload": {
             "$ref": "#/components/schemas/LabelChatAssociation"
+          },
+          "me": {
+            "$ref": "#/components/schemas/MeInfo"
+          },
+          "environment": {
+            "$ref": "#/components/schemas/WAHAEnvironment"
+          }
+        },
+        "required": [
+          "id",
+          "timestamp",
+          "session",
+          "engine",
+          "event",
+          "payload",
+          "environment"
+        ]
+      },
+      "EventResponse": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "enum": [
+              "UNKNOWN",
+              "GOING",
+              "NOT_GOING",
+              "MAYBE"
+            ]
+          },
+          "timestampMs": {
+            "type": "number"
+          },
+          "extraGuestCount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "response",
+          "timestampMs",
+          "extraGuestCount"
+        ]
+      },
+      "EventResponsePayload": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Message ID",
+            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+          },
+          "timestamp": {
+            "type": "number",
+            "description": "Unix timestamp for when the message was created",
+            "example": 1666943582
+          },
+          "from": {
+            "type": "string",
+            "description": "ID for the Chat that this message was sent to, except if the message was sent by the current user ",
+            "example": "11111111111@c.us"
+          },
+          "fromMe": {
+            "type": "boolean",
+            "description": "Indicates if the message was sent by the current user"
+          },
+          "source": {
+            "enum": [
+              "api",
+              "app"
+            ],
+            "type": "string",
+            "description": "The device that sent the message - either API or APP. Available in events (webhooks/websockets) only and only \"fromMe: true\" messages.",
+            "example": "api"
+          },
+          "to": {
+            "type": "string",
+            "description": "\n* ID for who this message is for.\n* If the message is sent by the current user, it will be the Chat to which the message is being sent.\n* If the message is sent by another user, it will be the ID for the current user.\n",
+            "example": "11111111111@c.us"
+          },
+          "participant": {
+            "type": "string",
+            "description": "For groups - participant who sent the message"
+          },
+          "_data": {
+            "type": "object",
+            "description": "Message in a raw format that we get from WhatsApp. May be changed anytime, use it with caution! It depends a lot on the underlying backend."
+          },
+          "eventCreationKey": {
+            "$ref": "#/components/schemas/MessageDestination"
+          },
+          "eventResponse": {
+            "$ref": "#/components/schemas/EventResponse"
+          }
+        },
+        "required": [
+          "id",
+          "timestamp",
+          "from",
+          "fromMe",
+          "source",
+          "to",
+          "participant",
+          "eventCreationKey"
+        ]
+      },
+      "WAHAWebhookEventResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "evt_01aaaaaaaaaaaaaaaaaaaaaaaa",
+            "description": "Unique identifier for the event - lower case ULID format. https://github.com/ulid/spec"
+          },
+          "timestamp": {
+            "type": "number",
+            "example": 1634567890123,
+            "description": "Unix timestamp (ms) for when the event was created."
+          },
+          "session": {
+            "type": "string",
+            "example": "default"
+          },
+          "metadata": {
+            "example": {
+              "user.id": "123",
+              "user.email": "email@example.com"
+            },
+            "description": "Metadata for the session.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Map"
+              }
+            ]
+          },
+          "engine": {
+            "enum": [
+              "WEBJS",
+              "NOWEB",
+              "GOWS"
+            ],
+            "type": "string",
+            "example": "WEBJS"
+          },
+          "event": {
+            "enum": [
+              "session.status",
+              "message",
+              "message.reaction",
+              "message.any",
+              "message.ack",
+              "message.waiting",
+              "message.revoked",
+              "state.change",
+              "group.join",
+              "group.leave",
+              "group.v2.join",
+              "group.v2.leave",
+              "group.v2.update",
+              "group.v2.participants",
+              "presence.update",
+              "poll.vote",
+              "poll.vote.failed",
+              "chat.archive",
+              "call.received",
+              "call.accepted",
+              "call.rejected",
+              "label.upsert",
+              "label.deleted",
+              "label.chat.added",
+              "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
+              "engine.event"
+            ],
+            "type": "object",
+            "default": "event.response",
+            "description": "The event is triggered when the event response is received."
+          },
+          "payload": {
+            "$ref": "#/components/schemas/EventResponsePayload"
+          },
+          "me": {
+            "$ref": "#/components/schemas/MeInfo"
+          },
+          "environment": {
+            "$ref": "#/components/schemas/WAHAEnvironment"
+          }
+        },
+        "required": [
+          "id",
+          "timestamp",
+          "session",
+          "engine",
+          "event",
+          "payload",
+          "environment"
+        ]
+      },
+      "WAHAWebhookEventResponseFailed": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "evt_01aaaaaaaaaaaaaaaaaaaaaaaa",
+            "description": "Unique identifier for the event - lower case ULID format. https://github.com/ulid/spec"
+          },
+          "timestamp": {
+            "type": "number",
+            "example": 1634567890123,
+            "description": "Unix timestamp (ms) for when the event was created."
+          },
+          "session": {
+            "type": "string",
+            "example": "default"
+          },
+          "metadata": {
+            "example": {
+              "user.id": "123",
+              "user.email": "email@example.com"
+            },
+            "description": "Metadata for the session.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Map"
+              }
+            ]
+          },
+          "engine": {
+            "enum": [
+              "WEBJS",
+              "NOWEB",
+              "GOWS"
+            ],
+            "type": "string",
+            "example": "WEBJS"
+          },
+          "event": {
+            "enum": [
+              "session.status",
+              "message",
+              "message.reaction",
+              "message.any",
+              "message.ack",
+              "message.waiting",
+              "message.revoked",
+              "state.change",
+              "group.join",
+              "group.leave",
+              "group.v2.join",
+              "group.v2.leave",
+              "group.v2.update",
+              "group.v2.participants",
+              "presence.update",
+              "poll.vote",
+              "poll.vote.failed",
+              "chat.archive",
+              "call.received",
+              "call.accepted",
+              "call.rejected",
+              "label.upsert",
+              "label.deleted",
+              "label.chat.added",
+              "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
+              "engine.event"
+            ],
+            "type": "object",
+            "default": "event.response.failed",
+            "description": "The event is triggered when the event response is failed to decrypt."
+          },
+          "payload": {
+            "$ref": "#/components/schemas/EventResponsePayload"
           },
           "me": {
             "$ref": "#/components/schemas/MeInfo"
@@ -10999,6 +11646,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -11090,6 +11739,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -11182,6 +11833,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -11274,6 +11927,8 @@
               "label.deleted",
               "label.chat.added",
               "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
               "engine.event"
             ],
             "type": "object",
@@ -11717,6 +12372,46 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/WAHAWebhookLabelChatDeleted"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Return a 200 status to indicate that the data was received successfully"
+          }
+        }
+      }
+    },
+    "event.response": {
+      "post": {
+        "summary": "The event is triggered when the event response is received.",
+        "deprecated": false,
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WAHAWebhookEventResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Return a 200 status to indicate that the data was received successfully"
+          }
+        }
+      }
+    },
+    "event.response.failed": {
+      "post": {
+        "summary": "The event is triggered when the event response is failed to decrypt.",
+        "deprecated": false,
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WAHAWebhookEventResponseFailed"
               }
             }
           }
