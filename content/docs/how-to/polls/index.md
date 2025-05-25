@@ -60,7 +60,7 @@ POST /api/sendPoll
 }
 ```
 
-{{< callout type="tip" icon="outline/hand-finger-right" >}}
+{{< callout context="tip" icon="outline/hand-finger-right" >}}
 Save the `id` field from the response in your database so that you can identify the poll for which you receive
 a vote (see webhook events below).
 {{< /callout >}}

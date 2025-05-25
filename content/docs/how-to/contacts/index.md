@@ -21,7 +21,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 {{< include file="content/docs/how-to/contacts/features.md" >}}
 
-{{< callout note >}}
+{{< callout context="note" icon="outline/info-circle" >}}
 WhatsApp Web does not support adding contacts, so the API doesn't support it too.
 {{< /callout >}}
 
@@ -197,7 +197,7 @@ Query all known LID-to-phone number mappings for a session.
 ]
 ```
 
-{{< callout tip >}}
+{{< callout context="tip" icon="outline/hand-finger-right" >}}
 Call
 [**Get all groups**]({{< relref "/docs/how-to/groups/#get-all-groups" >}})
 or
@@ -282,7 +282,7 @@ Fetch the LID for a given phone number (chat ID).
 - If you **don't find a phone number by lid** - you don't have the phone number in your contact list or you're not **admin** in the group.
 - For [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) - try [**Refresh groups**]({{< relref "/docs/how-to/groups" >}}) if you don't find the `lid` but you're **admin** in the group.
 
-{{< callout tip >}}
+{{< callout context="tip" icon="outline/hand-finger-right" >}}
 👉 If nothing helped, and **you see phone number for participant on your phone app** - please 
 [**open an issue**](https://github.com/devlikeapro/waha)
 and tell what

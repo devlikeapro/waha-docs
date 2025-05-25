@@ -39,7 +39,7 @@ For the session storage, you can use the following options:
 ### Sessions - Local
 By default, the WAHA uses the **local storage (files)** to store the session data.
 
-{{< callout note >}}
+{{< callout context="note" icon="outline/info-circle" >}}
 It's a **well-tested solution** even for **production** with multiple sessions
 {{< /callout >}}
 

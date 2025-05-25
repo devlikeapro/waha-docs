@@ -57,7 +57,7 @@ DELETE /api/{session}/profile/picture
 
 ## 📢🔎 Search Channels API
 
-{{< callout tip >}}
+{{< callout context="tip" icon="outline/hand-finger-right" >}}
 Available in [**➕ WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 {{< /callout >}}
 
@@ -87,7 +87,7 @@ POST /api/{session}/channels/search/by-text
 Added [**👥 Set Group Picture API**]({{< relref "/docs/how-to/groups#set-group-picture" >}}) to update the group picture.
 
 **Set Group Picture**
-{{< callout tip >}}
+{{< callout context="tip" icon="outline/hand-finger-right" >}}
 Available in [**➕ WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 {{< /callout >}}
 

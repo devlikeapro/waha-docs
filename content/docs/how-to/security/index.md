@@ -17,7 +17,7 @@ Either protect the API with [**Api Key**](#api-security) or deny access by using
 
 {{< /callout >}}
 
-{{< callout note >}}
+{{< callout context="note" icon="outline/info-circle" >}}
 👉 Built-in security is available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}})  version.
 {{< /callout >}}
 
@@ -86,14 +86,14 @@ Open http://localhost:3000/ and enter `admin / admin` in the inputs:
 
 ![alt](swagger-basic-auth.png)
 
-{{< callout note >}}
+{{< callout context="note" icon="outline/info-circle" >}}
 Protecting Swagger under the password does not protect your API from other request! Use both techniques to protect your API and Swagger!
 {{< /callout >}}
 
 ### Disable Swagger
 You also can hide swagger completely by setting `WHATSAPP_SWAGGER_ENABLED=false` environment variable.
 
-{{< callout note >}}
+{{< callout context="note" icon="outline/info-circle" >}}
 Disabling Swagger does not protect the API, please use API security as well
 {{< /callout >}}
 

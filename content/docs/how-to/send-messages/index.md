@@ -466,7 +466,7 @@ You can send Event Message using API
 POST /api/{SESSION}/events
 ```
 
-{{< callout note >}}
+{{< callout context="note" icon="outline/info-circle" >}}
 👉 Read more about how to send [**📅 Event Message**]({{< relref "/docs/how-to/event-message" >}}) and receive responses.
 {{< /callout >}}
 
@@ -478,7 +478,7 @@ POST /api/{SESSION}/events
 
 
 ## Send Link Custom Preview
-{{< callout tip >}}
+{{< callout context="tip" icon="outline/hand-finger-right" >}}
 Available in [**➕ WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 {{< /callout >}}
 

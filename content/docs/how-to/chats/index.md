@@ -163,7 +163,7 @@ POST /api/{SESSION}/chats/{chatId}/messages/read
 ```
 - `ids` - list of message ids that were marked as read
 
-{{< callout note >}}
+{{< callout context="note" icon="outline/info-circle" >}}
 👉 **NOWEB**: Please make sure to [**🏭 Enable NOWEB Store before using this API**]({{< relref "/docs/engines/NOWEB#store" >}})!
 {{< /callout >}}
 

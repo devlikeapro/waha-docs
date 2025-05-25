@@ -482,7 +482,7 @@ Receive events when a message is reacted to by a user (or **yourself** reacting 
 }
 ```
 
-{{< callout note >}}
+{{< callout context="note" icon="outline/info-circle" >}}
 NOWEB engine note - reactions were sent in 'message' and 'message.any' events, not it's available only in 'message.reaction'!" 
 {{< /callout >}}
 

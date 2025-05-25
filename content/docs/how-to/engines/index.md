@@ -21,7 +21,7 @@ docker run -it -e "WHATSAPP_DEFAULT_ENGINE=WEBJS" devlikeapro/waha
 
 If you have any problems with one engine - try another!
 
-{{< callout note >}}
+{{< callout context="note" icon="outline/info-circle" >}}
 API responses and webhook payloads may differ significantly, test everything before changing the engine
 {{< /callout >}}
 

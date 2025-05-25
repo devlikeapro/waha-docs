@@ -33,7 +33,7 @@ Here's what you'll get:
 ## Setup
 Go to **Kuma** -> **Settings** -> **Notifications** and find **WhatsApp (WAHA)** notification type.
 
-{{< callout note >}}
+{{< callout context="note" icon="outline/info-circle" >}}
 If you don't find it there - kindly update **Uptime Kuma** to the latest version or
 try setting up it from
 [Uptime Kuma](https://github.com/louislam/uptime-kuma)
