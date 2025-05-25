@@ -20,7 +20,6 @@ If you wish to get **Monthly Summary** about WAHA changes, subscribe to our chan
 {{< callout context="tip" title="You can subscribe on free tier!" icon="outline/rss" >}}
 - [**Patreon ->**](https://patreon.com/wa_http_api)
 - [**Boosty ->**](https://boosty.to/wa-http-api)
-- [**dev.to ->**](https://dev.to/waha)
 {{< /callout >}}
 
 If you wish to get **Real-Time Email** about new changes,
