@@ -29,8 +29,6 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 {{< include file="content/docs/how-to/polls/features-events.md" >}}
 
 ## API
-See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
-
 ### Send poll
 
 Use the endpoint to send a poll!
@@ -39,7 +37,6 @@ Use the endpoint to send a poll!
 POST /api/sendPoll
 ```
 
-The request body is pretty simple:
 ```json { title="Body" }
 {
   "session": "default",
@@ -56,8 +53,6 @@ The request body is pretty simple:
 }
 ```
 
-The response you get back:
-
 ```json { title="Response" }
 {
   "id": "true_321321321@c.us_83ACBAAAAAAAAAAAAAAAAAAAA",
@@ -65,8 +60,10 @@ The response you get back:
 }
 ```
 
-You must save the `id` field from the response in your database so that you can identify the poll for which you receive
+{{< callout type="tip" icon="outline/hand-finger-right" >}}
+Save the `id` field from the response in your database so that you can identify the poll for which you receive
 a vote (see webhook events below).
+{{< /callout >}}
 
 ## Events
 Read more about
