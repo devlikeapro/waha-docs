@@ -432,7 +432,7 @@ You can send files in two ways:
 
 ## Send Poll
 
-We have a dedicated page [📶 Polls]({{< relref "/docs/how-to/polls" >}})!
+We have a dedicated page about [**📶 Polls**]({{< relref "/docs/how-to/polls" >}})!
 
 ![alt](poll-example.jpg)
 
