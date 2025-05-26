@@ -57,6 +57,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 🛠️ **Fixes**
 - `2025.5.5` - **WEBJS** - hide "Fresh Look" modal form {{< issue 987 >}}
 - `2025.5.5` - **WEBJS** - add `tini` to docker to handle zombie processes {{< issue 990 >}}
+- `2025.5.5` - **Local Storage** - fix empty session name issues when calling logout or delete
 - `2025.5.4` - **PostgreSQL** - use `5432` port by default if not provided {{< issue 975 >}}
 - `2025.5.4` - **NOWEB** - fix "async-lock timed out in queue" error on session actions {{< issue 831 >}}
 - `2025.5.3` - **NOWEB** - fix `poll.vote` event - {{< issue 960 >}}
