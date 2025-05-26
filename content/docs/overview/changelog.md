@@ -54,7 +54,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.5.4` - **GOWS** - [**🏷️ Labels**]({{< relref "docs/how-to/labels" >}}) support - {{< issue 922 >}} 
 - `2025.5.4` - **GOWS** - add `POST /api/sendContactVcard` support - {{< issue 902 >}}
 
-🛠️ **Fixes**:
+🛠️ **Fixes**
 - `2025.5.5` - **WEBJS** - add `tini` to docker to handle zombie processes {{< issue 990 >}}
 - `2025.5.4` - **PostgreSQL** - use `5432` port by default if not provided {{< issue 975 >}}
 - `2025.5.4` - **NOWEB** - fix "async-lock timed out in queue" error on session actions {{< issue 831 >}}
@@ -70,6 +70,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.5.1` - **WEBJS** - fix potential connection leak to storages - {{< issue 952 >}}
 - `2025.5.1` - **WEBJS** - fix adding/removing participant to group - {{< issue 944 >}}
 - `2025.5.1` - **WEBJS** - fix sorting groups in `/chats` and `/chats/overview` - {{< issue 915 >}}
+
+**⚙️ Updates**
+- `2025.5.5` - update nestjs - fixes `DeprecationWarning: The 'util.isObject' API is deprecated`
 
 ### 2025.4
 `2025.4.2`
