@@ -49,6 +49,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 ### 2025.5
 **🆕 NEW**
 - `2025.5.5` - **GOWS** - [**📶 Polls**]({{< relref "docs/how-to/polls" >}}) support - {{< issue 899 >}}
+- `2025.5.5` - Filter chats by `ids` in [**💬 Chats - Get Chats Overview**]({{< relref "/docs/how-to/chats#get-chats-overview" >}}) API - {{< issue 791 >}}
 - `2025.5.4` - Add [**👤 Contacts - Lids API**]({{< relref "/docs/how-to/contacts/#api---lids" >}}) to map `@lid` to `@c.us` - {{< issue 957 >}}
   - **WEBJS**, **NOWEB**, **GOWS** 
 - `2025.5.4` - **GOWS** - [**🏷️ Labels**]({{< relref "docs/how-to/labels" >}}) support - {{< issue 922 >}} 

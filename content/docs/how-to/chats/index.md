@@ -55,8 +55,35 @@ GET /api/{session}/chats?limit=100&offset=0&sortBy=messageTimestamp&sortOrder=de
 Get chats "overview" - the API that almost all 
 [**Chat UI**]({{< relref "/docs/how-to/dashboard#chat-ui" >}})
 client needs!
+
 ```http request
 GET /api/{session}/chats/overview?limit=20&offset=0
+```
+
+**Query Parameters**:
+- `limit=100` - limit the number of chats to return
+- `offset=0` - skip the number of chats from the start
+- `ids=11111&ids=9999@c.us` - optional, filter result by chat id or phone number
+
+
+{{< callout context="tip" icon="outline/hand-finger-right" >}}
+Use `POST` request if you have a lot of chats (>400) in `ids` filter
+{{< /callout >}}
+
+```http request
+POST /api/{session}/chats/overview
+```
+
+```json { title="Request (POST)" }
+{
+  "pagination": {
+    "limit": 20,
+    "offset": 0
+  },
+  "filter": {
+    "ids": ["111111@c.us"]
+  }
+}
 ```
 
 **Response** contains the main info you need to show in the chat list:
@@ -68,7 +95,7 @@ GET /api/{session}/chats/overview?limit=20&offset=0
 
 ⚠️ `lastMessage` doesn't have media attachments, you need to [get message by id]({{< relref "#get-message-by-id" >}}) to get media attachments.
 
-```json
+```json { title="Response" }
 [
   {
     "id": "12312l123@c.us",
@@ -91,9 +118,6 @@ GET /api/{session}/chats/overview?limit=20&offset=0
 
 ```
 
-**Pagination**:
-- `limit=100` - limit the number of chats to return
-- `offset=0` - skip the number of chats from the start
 
 ### Get chat picture
 Get chat picture (avatar, profile picture, group image) by chat id
