@@ -1768,10 +1768,73 @@
             "schema": {
               "type": "number"
             }
+          },
+          {
+            "name": "ids",
+            "required": false,
+            "in": "query",
+            "description": "Filter by chat ids",
+            "example": [
+              "111111111@c.us"
+            ],
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           }
         ],
         "responses": {
           "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChatSummary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "💬 Chats"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "ChatsController_postChatsOverview",
+        "summary": "Get chats overview. Use POST if you have too many \"ids\" params - GET can limit it",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OverviewBodyRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
             "description": "",
             "content": {
               "application/json": {
@@ -6054,7 +6117,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2025.5.3",
+    "version": "2025.5.5",
     "contact": {}
   },
   "tags": [
@@ -7799,6 +7862,48 @@
           "picture",
           "lastMessage",
           "_chat"
+        ]
+      },
+      "OverviewPaginationParams": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "default": 20
+          },
+          "offset": {
+            "type": "number"
+          }
+        }
+      },
+      "OverviewFilter": {
+        "type": "object",
+        "properties": {
+          "ids": {
+            "description": "Filter by chat ids",
+            "example": [
+              "111111111@c.us"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "OverviewBodyRequest": {
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/OverviewPaginationParams"
+          },
+          "filter": {
+            "$ref": "#/components/schemas/OverviewFilter"
+          }
+        },
+        "required": [
+          "pagination",
+          "filter"
         ]
       },
       "ChatPictureResponse": {
@@ -10235,6 +10340,9 @@
           },
           "fromMe": {
             "type": "boolean"
+          },
+          "participant": {
+            "type": "string"
           }
         },
         "required": [
@@ -10262,6 +10370,9 @@
           },
           "fromMe": {
             "type": "boolean"
+          },
+          "participant": {
+            "type": "string"
           }
         },
         "required": [
@@ -10279,6 +10390,9 @@
           },
           "poll": {
             "$ref": "#/components/schemas/MessageDestination"
+          },
+          "_data": {
+            "type": "object"
           }
         },
         "required": [
