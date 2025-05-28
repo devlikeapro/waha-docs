@@ -6,7 +6,7 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 293
-slug: calls
+slug: event-message
 images: [ "whatsapp-event-message.jpg"]
 ---
 You can **send Event Message** and **receive responses** in WhatsApp using API .
