@@ -57,6 +57,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.5.4` - **GOWS** - add `POST /api/sendContactVcard` support - {{< issue 902 >}}
 
 🛠️ **Fixes**
+- `2025.5.5` - Subscribe [**✅ Presence**]({{<relref "docs/how-to/presence" >}}) on each request 
+  - **WEBJS**, **NOWEB**, **GOWS** 
 - `2025.5.5` - **WEBJS** - hide "Fresh Look" modal form {{< issue 987 >}}
 - `2025.5.5` - **WEBJS** - add `tini` to docker to handle zombie processes {{< issue 990 >}}
 - `2025.5.5` - **Local Storage** - fix empty session name issues when calling logout or delete
