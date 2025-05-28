@@ -30,8 +30,9 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 {{< include file="content/docs/how-to/presence/features.md" >}}
 
+{{< include file="content/docs/how-to/presence/features-events.md" >}}
+
 ## API
-See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Set presence
 You can set your global or chat-related presence with endpoint
@@ -90,6 +91,39 @@ If you would like to receive said notifications - you need to mark a session's p
 }
 ```
 
+### Get chat presence
+
+```http request
+GET /api/{session}/presence/{chatId}
+```
+
+Get presence information for a single chat. For a group, you'll get participants' statuses.
+
+```json {title="Response"}
+{
+  "id": "2132132130@c.us",
+  "presences": [
+    {
+      "participant": "2132132130@c.us",
+      "lastKnownPresence": "online",
+      "lastSeen": null
+    }
+  ]
+}
+```
+
+### Subscribe to presence
+
+You can subscribe to presence information by calling
+```http request
+POST /api/{session}/presence/{chatId}/subscribe
+```
+
+(no body required).
+
+You can get later presence information for the chat with above `GET` endpoints or by listening to `presence.update`
+webhook.
+
 ### Get all chats presence
 
 You can get all presence information available for a session by calling
@@ -136,35 +170,6 @@ Here's few notes about fields:
 ]
 ```
 
-### Get chat presence
-
-To get presence information for a single chat - call `GET /api/{session}/presence/{chatId}`.
-For a group, you'll get participants' statuses.
-
-```json {title="Response"}
-{
-  "id": "2132132130@c.us",
-  "presences": [
-    {
-      "participant": "2132132130@c.us",
-      "lastKnownPresence": "online",
-      "lastSeen": null
-    }
-  ]
-}
-```
-
-### Subscribe to presence
-
-You can subscribe to presence information by calling
-```http request
-POST /api/{session}/presence/{chatId}/subscribe
-```
-
-(no body required).
-
-You can get later presence information for the chat with above `GET` endpoints or by listening to `presence.update`
-webhook.
 
 ## Events
 Read more about

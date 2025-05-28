@@ -3,7 +3,7 @@
 
 | **Events**        | WEBJS | NOWEB | GOWS |
 |-------------------|:-----:|:-----:|:-----|
-| `presence.update` |       |  ✔️   | ✔️   |
+| `presence.update` |  ✔️   |  ✔️   | ✔️   |
 
 
 {{< /details >}}
