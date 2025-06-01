@@ -19,12 +19,16 @@ aliases:
 1. Core  the basic version that meet almost 80% people’s needs. 100% free and open source.
 2. Plus  the version with advanced messages, security, and reliability features.
 
-👉👉 Compare versions on [**Pricing page ->**](/pricing)
+👉👉 Compare versions on 
+[**🎁 Support Us**](/support-us)
+page
 
 ## Tiers
 You support the project and get WAHA Plus by donating to the project on one of the platforms.
 
-👉👉 See tiers and available platforms on [**Pricing page ->**](/pricing)
+👉👉 See tiers and available platforms on
+[**🎁 Support Us**](/support-us)
+
 
 ## Patron Portal
 <p align="center">
@@ -54,7 +58,7 @@ docker logout
 Then in all commands use **Plus** image `devlikeapro/waha-plus` instead of Core `devlikeapro/waha`.
 
 ### Invite Team
-If you support the project with [**WAHA PRO**](/pricing#tier-pro) tier - invite **up to 5 members** to your team 
+If you support the project with [**WAHA PRO**](/support-us#tier-pro) tier - invite **up to 5 members** to your team 
 to help you with developing the project!
 
 The members inherit **PRO** tier and will have their own docker key and GitHub access to the project.

@@ -43,4 +43,4 @@ We've made several stability improvements to WEBJS and NOWEB engines, check the
 [🆕 Changelog]({{< relref "/docs/overview/changelog#20245" >}}) for more details.
 
 # Thank you for your support!
-We appreciate your [continued support](/pricing) and enthusiasm for the project!
+We appreciate your [continued support](/support-us) and enthusiasm for the project!

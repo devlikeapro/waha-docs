@@ -71,7 +71,7 @@ You can implement **Live Chat**, **Multiple Agents**, and more features using
   to get real-time messages on the client side.
 
 👉 [**Source Code on Github**](https://github.com/devlikeapro/waha-hub/tree/main/ui/components/chat) 
-(Vue3 + PrimeVue) available for [WAHA PRO](https://waha.devlike.pro/pricing/#tier-pro) supporters!
+(Vue3 + PrimeVue) available for [WAHA PRO](https://waha.devlike.pro/support-us/#tier-pro) supporters!
 
 
 

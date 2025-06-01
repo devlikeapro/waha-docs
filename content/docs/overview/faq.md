@@ -66,7 +66,7 @@ which means you need to make sure your infrastructure is secure.
 - Have built-in [🔒 Security]({{< relref "/docs/how-to/security" >}}) features
 
 {{< callout >}}
-You can find the full comparison table on [**Pricing**]({{< relref "/pricing#donations" >}}) page.
+You can find the full comparison table on [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page.
 {{< /callout >}}
 
 ### What is the difference between Core, Plus and PRO Tiers?
@@ -79,13 +79,13 @@ You can find the full comparison table on [**Pricing**]({{< relref "/pricing#don
   - [dashboard](https://github.com/devlikeapro/waha-hub)
 
 {{< callout >}}
-You can find the full tier comparison table on [**Pricing**]({{< relref "/pricing#donations" >}}) page.
+You can find the full tier comparison table on [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page.
 {{< /callout >}}
 
 
 ### Is it one time donation?
 
-According to [**Pricing**]({{< relref "/pricing#donations" >}}) page:
+According to [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page:
 > It doesn't require monthly subscriptions, once installed on your server - it always works!
 > **(until WhatsApp made backward-incompatible changes, and you have to update the image, or you need to reinstall it on new server )**
 
@@ -104,6 +104,6 @@ In summary, it's not one time purchase, it's rather **"every 3-6 months" purchas
 💡 We recommend staying subscribing, so we can keep developing awesome product for you!
 Your support the only reason why we're able to publish and maintain the project 🫶
 
-You can find the full comparison table on [**Pricing**]({{< relref "/pricing#donations" >}}) page.
+You can find the full comparison table on [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page.
 {{< /callout >}}
 

@@ -190,7 +190,7 @@ It'll also control (using underlying k8s or docker infrastructure) the number of
 
 {{< imgo src="/images/waha/scaling/waha-hub.png" >}}
 
-Kindly [**support the project**]({{< relref "/pricing" >}}) on **PRO** tier if you wish to
+Kindly [**support the project**]({{< relref "/support-us" >}}) on **PRO** tier if you wish to
 use the feature in the future! 🙏
 
 For now, [**Vertical Scaling**](#vertical-scaling) and 

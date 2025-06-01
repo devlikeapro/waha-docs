@@ -116,7 +116,7 @@ parent = "waha-plus"
 [[main]]
 name = "Get with Crypto ->"
 weight = 70
-url = "/pricing/#how-to-donate"
+url = "/support-us/#how-to-donate"
 parent = "waha-plus"
 
 [[main]]
@@ -125,9 +125,9 @@ weight = 60
 url = "/blog"
 
 [[main]]
-name = "🎁 Pricing"
+name = "🎁 Support Us"
 weight = 70
-url = "/pricing"
+url = "/support-us"
 
 [[main]]
 name = "📧 Contact"

@@ -16,7 +16,7 @@ homepage: false
 We have special [**⚡50% OFF Yearly Crypto Offer!⚡**]({{< relref "/blog/crypto-yearly-offer" >}}) for you! 
 
 In this article, we're going to cover different techniques for those who not familiar with crypto payments how you can still support the project 
-and get [WAHA Plus and WAHA PRO](/pricing). 
+and get [WAHA Plus and WAHA PRO](/support-us). 
 
 If you have any questions during this journey, kindly contact us at 
 <a href="mailto:waha@devlike.pro?subject=Crypto+Payments">crypto@devlike.pro</a>, 
