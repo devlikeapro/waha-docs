@@ -24,7 +24,7 @@ url = "/docs/help/"
 
 
 [[main]]
-name = "Documentation"
+name = "📖 Documentation"
 identifier = "docs"
 url = "/docs/overview/introduction/"
 weight = 10
@@ -86,12 +86,12 @@ url = "https://waha.devlike.pro/swagger/openapi.json"
 parent = "docs"
 
 [[main]]
-name = "WAHA Plus"
+name = "➕ WAHA Plus"
 weight = 20
 identifier = "waha-plus"
 
 [[main]]
-name = "➕ WAHA Plus"
+name = "WAHA Plus"
 weight = 10
 url = "/docs/how-to/waha-plus"
 parent = "waha-plus"
@@ -120,17 +120,17 @@ url = "/pricing/#how-to-donate"
 parent = "waha-plus"
 
 [[main]]
-name = "Blog"
+name = "📝 Blog"
 weight = 60
 url = "/blog"
 
 [[main]]
-name = "Pricing"
+name = "🎁 Pricing"
 weight = 70
 url = "/pricing"
 
 [[main]]
-name = "Contact"
+name = "📧 Contact"
 weight = 80
 url = "/contact"
 
@@ -140,7 +140,7 @@ identifier = "language"
 weight = 99
 
 [[main]]
-name = "More"
+name = "👇 More"
 identifier = "more"
 weight = 90
 
