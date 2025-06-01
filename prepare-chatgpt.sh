@@ -12,9 +12,9 @@ touch "$OUTPUT_FILE"
 # Find all .md files in the source directory and combine them
 find "$SOURCE_DIR" -type f -name "*.md" | while read -r file; do
   # Add file name  to OUTPUT_FILE
-  echo "\n-------" >> "$OUTPUT_FILE"
+  echo "\n" >> "$OUTPUT_FILE"
   echo "File: $file" >> "$OUTPUT_FILE"
-  echo "-------\n" >> "$OUTPUT_FILE"
+  echo "\n" >> "$OUTPUT_FILE"
 
   # Append the content of the file to the output file
   cat "$file" >> "$OUTPUT_FILE"
