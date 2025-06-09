@@ -14,7 +14,7 @@ aliases:
 
 
 {{< callout context="note" icon="outline/info-circle" >}}
-If you wish to follow a **Step-By-Step guide** which show you how to send you first message via HTTP API
+If you wish to follow a **Step-By-Step guide** which shows you how to send your first message via HTTP API,
 please go to [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 {{< /callout >}}
 
@@ -27,7 +27,7 @@ docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 
 ☝️ The above command is good **for testing and development purposes**, but **not for production**.
 
-To make it **production-ready**, you need to configure few more parameters to make it secure, reliable, and easy to manage.
+To make it **production-ready**, you need to configure a few more parameters to make it secure, reliable, and easy to manage.
 
 
 
@@ -57,7 +57,7 @@ It might not work with **WSL2** backend properly.
 ### Pre-requisites
 Before proceeding, make sure you have the latest version of `docker` and `docker compose` installed.
 
-As of now *at the time of writing this doc*, we recommend a version equal to or higher than the following.
+We recommend using Docker version equal to or higher than the following:
 
 ```bash
 $ docker --version
@@ -143,8 +143,8 @@ Setup something like Nginx or any other proxy server to proxy the requests to th
 6. Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and login with the credentials you've set
    (`admin/admin` by default).
 
-Also, you could temporarily drop the `127.0.0.1:3000:3000` for **waha** to `3000:3000` in the compose file to access your instance at `http://<your-external-ip>:3000`. 
-It's recommended to revert this change back and use Nginx or some proxy server in the front.
+For temporary external access, you can change the port binding from `127.0.0.1:3000:3000` to `3000:3000` in the compose file. This will make your instance accessible at `http://<your-external-ip>:3000`.
+However, for production use, we recommend reverting this change and using Nginx or another proxy server as a frontend.
 
 ### Additional Steps
 #### Configure Nginx and Let's Encrypt 
@@ -219,7 +219,7 @@ docker compose restart
 ```
 
 ## Update
-When there's a new version of WAHA, you can update it with a single commands:
+When there's a new version of WAHA, you can update it with these simple commands:
 
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) image:
 ```bash

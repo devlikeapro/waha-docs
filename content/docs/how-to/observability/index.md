@@ -1,6 +1,6 @@
 ---
 title: "🔍 Observability"
-description: "Logging, monitoring, healthchecks, etc"
+description: "Logging, monitoring, healthchecks, etc."
 lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
@@ -18,14 +18,14 @@ Options you can use to control how WAHA outputs logs:
     - `WAHA_LOG_FORMAT=JSON` - can be useful if you're using a central logging management system
 - `WAHA_LOG_LEVEL` - how much information to log `error | warn | info | debug | trace`.
     - 👉 Do not set `debug` and `trace` in production, as these levels generate excessive log output.
-- `WAHA_HTTP_LOG_LEVEL=info` - controls the level of `request completed` log (HTTP access), you can set it
+- `WAHA_HTTP_LOG_LEVEL=info` - controls the level of `request completed` log (HTTP access). You can set it
   to `error | warn | info | debug | trace`.
 - `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides
   the `WAHA_LOG_LEVEL` to `debug` if both defined.
 
 ### Session logging
 
-You can enable debug mode for a session by setting `config.debug` field to `true` when 
+You can enable debug mode for a session by setting the `config.debug` field to `true` when 
 [Starting a session]({{< relref "/docs/how-to/sessions#debug" >}})
 
 This can be useful for debugging purposes when you're experiencing issues.
@@ -74,7 +74,7 @@ GET /api/server/version
 
 Returns the environment variables of the server.
 
-This endpoint returns only WAHA related variables:
+This endpoint returns only WAHA-related variables:
 
 ```http request
 GET /api/server/environment?all=false
@@ -137,8 +137,8 @@ POST /api/server/stop
   "force": false
 }
 ```
-👉 If you're using Docker and followed [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) guide,
-Docker will **automatically restart** the server, so you can use this endpoint to **restart** the server.
+👉 If you're using Docker and followed the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) guide,
+Docker will **automatically restart** the server, so you can use this endpoint to **reboot** the service.
 
 
 ## Health Check
@@ -183,7 +183,7 @@ Where:
 
 ### Health Check Indicators
 
-Here are the things we check in the health check:
+The health check monitors the following components:
 
 - Media files storage space - `mediaFiles.space`
 - Sessions files storage space - `sessionsFiles.space`
@@ -324,7 +324,7 @@ authentication:
 
 ## WAHA Debug Mode
 If you enable `WAHA_DEBUG_MODE=True`, WAHA exposes a few additional features for helping with 
-troubleshooting (usually memory and CPU related).
+troubleshooting (usually memory and CPU-related).
 
 {{< callout context="caution" icon="outline/info-circle" >}}
 `WAHA_DEBUG_MODE=True` is for **troubleshooting** purposes only

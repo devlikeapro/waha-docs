@@ -10,7 +10,7 @@ slug: config
 ---
 
 You can configure WhatsApp API behaviour via environment variables, by adding `-e WHATSAPP_VARNAME=value` at the
-begging of the command line or by using [other options](https://docs.docker.com/engine/reference/commandline/run/)
+beginning of the command line or by using [other options](https://docs.docker.com/engine/reference/commandline/run/)
 
 ```bash
 docker run -it -e "WAHA_WORKER_ID=waha" -e WAHA_PRINT_QR=False devlikeapro/waha
@@ -37,19 +37,19 @@ The following environment variables can be used to configure the WAHA.
 
 
 ## Logging
-Options you can use to control the way how WAHA output the logs:
+Options you can use to control how WAHA outputs logs:
 - `WAHA_LOG_FORMAT` - supports formats:
   - `WAHA_LOG_FORMAT=PRETTY` - good for local development, **default** format
-  - `WAHA_LOG_FORMAT=JSON` - can be useful if you're using central logging management system
+  - `WAHA_LOG_FORMAT=JSON` - can be useful if you're using a central logging management system
 - `WAHA_LOG_LEVEL` - how much information to log `error | warn | info | debug | trace`.
-  - 👉 Do not set `debug` and `trace` in production, it gives too many logs.
-- `WAHA_HTTP_LOG_LEVEL=info` - controls the level of `request completed` log (HTTP access), you can set it to `error | warn | info | debug | trace`.
+  - 👉 Do not set `debug` and `trace` in production, as these levels generate excessive log output.
+- `WAHA_HTTP_LOG_LEVEL=info` - controls the level of `request completed` log (HTTP access). You can set it to `error | warn | info | debug | trace`.
 - `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides the `WAHA_LOG_LEVEL` to `debug` if both defined. 
 👉 Learn more about logging configuration on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page.
 
 
 ## Sessions
-- `WAHA_AUTO_START_DELAY_SECONDS=0` - when docker container restarts, WAHA starts all `STOPPED` session (or all session if you set `WAHA_RESTART_ALL_SESSIONS=True`). You can set the delay between session restarts in seconds. 
+- `WAHA_AUTO_START_DELAY_SECONDS=0` - when docker-container restarts, WAHA starts all `STOPPED` sessions (or all sessions if you set `WAHA_RESTART_ALL_SESSIONS=True`). You can set the delay between session restarts in seconds.
   - By default, it's `0`.
   - **WEBJS** - consider setting it to `5` if you have many sessions
   - **NOWEB** - it's fine to leave to `0` or you can increase to `1` if you experience issues with starting sessions.
@@ -81,9 +81,8 @@ You can use some of the following environment variables to configure the [**WEBJ
 and you'll see all requests immediately in your browser to intercept the webhook's payload.
 
 ### Global webhooks
-There's a way how you can configure
-[**🔄 Webhooks**]({{< relref "/docs/how-to/events#webhooks" >}})
-for **all sessions** at once - by settings these environment variables:
+You can configure [**🔄 Webhooks**]({{< relref "/docs/how-to/events#webhooks" >}})
+for **all sessions** at once by setting these environment variables:
 
 - `WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111`  - to set up a URL for the webhook
 - `WHATSAPP_HOOK_EVENTS=message,message.any,state.change` - specify events.
@@ -133,7 +132,7 @@ Read more about it on [**Session page** ->]({{< relref "/docs/how-to/sessions#co
 Keep in mind that session's proxy configuration takes precedence over proxy configuration set by environment variables!
 
 ## HTTPS 
-💡 We recommend handling HTTPS termination with a reverse proxy like Nginx - kindly follow 
+💡 We recommend handling HTTPS termination with a reverse proxy like Nginx. Please follow 
 [**🔧 Install & Update - Additional Steps**]({{< relref "/docs/how-to/install" >}}) to set up Nginx with Let's Encrypt.
 
 However, you can enable HTTPS directly in WAHA by setting the following environment variables:
@@ -173,8 +172,8 @@ The following environment variables can be used to configure the file storage op
   - The folder must be mounted to the host machine to keep the files between container restarts. [ Read more about how to persist files ->]({{< relref "/docs/how-to/storages#media" >}})
 - Also read more about [Media Storages on the dedicated page ->]({{< relref "/docs/how-to/storages#media" >}})
 
-💡 Even if WAHA doesn't process the message media because of `WHATSAPP_FILES_MIMETYPES` or `WHATSAPP_DOWNLOAD_MEDIA`
-you'll get a webhook event with `hasMedia: True` field, but with no `media.url`.
+💡 When media files are not processed due to `WHATSAPP_FILES_MIMETYPES` or `WHATSAPP_DOWNLOAD_MEDIA` settings,
+you'll still receive a webhook event with `hasMedia: True` field, but without a `media.url`.
 ```json { title="message" }
 {
   "event": "message",
@@ -204,7 +203,7 @@ you'll get a webhook event with `hasMedia: True` field, but with no `media.url`.
 - `WAHA_S3_PROXY_FILES` - proxy media files through WAHA (`False` by default)
   - `WAHA_S3_PROXY_FILES=False` - generate pre-signed URLs for media files and send them to the client in `media.url`
   - `WAHA_S3_PROXY_FILES=True` - WAHA will proxy media files through itself in `media.url`
-  
+
 👉 Learn more on [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}) page.
 
 ## Health Check
@@ -216,4 +215,3 @@ The following environment variables can be used to configure the [Health Check -
 - `WHATSAPP_HEALTH_MONGODB_TIMEOUT` - the timeout in milliseconds for the MongoDB health check. The default value is `5000`.
 
 👉 Learn more on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page.
-

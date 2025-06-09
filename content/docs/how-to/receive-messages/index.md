@@ -9,7 +9,7 @@ weight: 221
 images: ["messages.jpg"]
 slug: receive-messages
 ---
-We consider that you've run docker container and authenticated the session with QR code. 
+We assume that you've already run the Docker container and authenticated the session with a QR code.
 
 If you haven't yet - please follow the steps from [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 
@@ -32,7 +32,7 @@ Start a new session with configured `message` event in webhooks - call `POST /ap
 }
 ```
 
-After that WAHA sends events (see below) about new messages to an endpoint you provided.
+After that, WAHA sends events (see below) about new messages to an endpoint you provided.
 
 {{< callout context="note" title="Observe Events" icon="outline/info-circle" >}}
 To observe events and payload you can:
@@ -48,11 +48,10 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 
 ## Fields
 ### chatId, from, to, participant
-You can see some in `from`, `to`, and `participant` fields here's what they mean:
+You may notice various identifiers in the `from`, `to`, and `participant` fields. Here's what they mean:
 - `123123123@c.us`  **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at the end.
   For phone number `12132132131` the `chatId` is  `12132132131@c.us`
-- `123123123@s.whatsapp.net` can also appear in **internal data for NOWEB**, just convert it to `@c.us` to work
-with that properly. Kindly don't use it in `chatId` when sending messages
+- `123123123@s.whatsapp.net` can also appear in **internal data for NOWEB**. Just convert it to `@c.us` to work with that properly. Kindly don't use it in `chatId` when sending messages
 - `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
 - `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that type of ID along with communities functionality.
 - `123123123@newsletter` - for [**📰 WhatsApp Channels**]({{< relref "/docs/how-to/channels" >}}).
@@ -113,7 +112,7 @@ Fields:
 - `media.url: http://localhost:8000/...` - the URL to download the media
 - `_data` - internal **engine** data, can be different for each engine
 
-It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't download media due to configuration.
+It's possible to have `hasMedia: true`, but `media: null` - this means that WAHA didn't download media due to configuration.
 
 ### message.any
 
@@ -128,7 +127,7 @@ Fired on all message creations, including your own. The payload is the same as f
 ```
 
 ### message.reaction
-Receive events when a message is reacted to by a user (or **yourself** reacting to a message).
+This event is triggered when a message is reacted to by a user (or when **you** react to a message).
 - `payload.reaction.text` - emoji that was used to react to the message. It'll be an empty string if the reaction was removed.
 - `payload.reaction.messageId` - id of the message that was reacted to.
 
@@ -163,7 +162,7 @@ Receive events when a message is reacted to by a user (or **yourself** reacting 
 ```
 
 ### message.ack
-Receive events when server or recipient gets the message, read or played it.
+This event is triggered when the server or recipient gets the message, reads it, or plays it.
 
 ```json { title="message.ack" }
 {
@@ -226,8 +225,8 @@ Read more about
 
 ## Media Files
 
-When people send you media - images, voice messages, and documents - WAHA saves it in the file storage.
-In your application you must download it and use it as you want to. You can find the URL in `media.url` field.
+When people send you media - images, voice messages, and documents - WAHA saves them in the file storage.
+In your application, you must download these files and use them as needed. You can find the URL in the `media.url` field.
 
 For example, you can get the webhook like this with `media` value (we've skipped other fields):
 
@@ -255,7 +254,7 @@ Fields:
 - `hasMedia: true | false` - indicates if the message has media attached
 - `media.url: http://localhost:8000/...` - the URL to download the media
 
-It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't download media due to configuration.
+Note: If you see `hasMedia: true` but no `media.url`, this indicates that WAHA detected media but didn't download it due to your configuration settings.
 
 Then you can use the link to download the file `http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg`.
 
@@ -294,7 +293,7 @@ read more about [**⚙️ Configuration**]({{< relref "config" >}}).
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Get messages
-Read messages from the history use API:
+To read messages from the history, use the API:
 
 ```http request
 GET /api/messages
@@ -332,7 +331,7 @@ However, for single message requests, you can retrieve the message by its ID to 
 {{< /callout >}}
 
 ## Examples
-Here's few examples of how to receive messages in different languages:
+Here are a few examples of how to receive messages in different languages:
 1. [Python guide ->]({{< relref "/docs/integrations/waha+python" >}})
 
 **Do you use another language?**
@@ -340,4 +339,3 @@ Here's few examples of how to receive messages in different languages:
 Please create a short guide how to handle webhook and send message after you finish your setup!
 You can create a pull request with your favorite language in the
 [GitHub, in examples folder ->](https://github.com/devlikeapro/waha/tree/core/examples).
-

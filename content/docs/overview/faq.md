@@ -16,11 +16,10 @@ toc: true
 ## System Requirements
 ### How much CPU and Memory does WAHA need?
 
-WAHA has multiple [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}) under the hood and depends on the used engine
-CPU and Memory requirements change
+WAHA has multiple [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}) under the hood, and the CPU and Memory requirements change depending on the engine used.
 
 {{< callout icon="outline/server" >}}
-We **strongly recommend** using VPS or servers with minimum **2CPU** and **2GB RAM** configuration for the project **even for a single session**.
+We **strongly recommend** using a VPS or server with a minimum **2CPU** and **2GB RAM** configuration for the project **even for a single session**.
 
 If you want to host **more sessions** - please check the numbers below
 {{< /callout >}}
@@ -50,20 +49,20 @@ Read about [**WAHA Scaling - how to handle 50+ sessions ->**]({{< relref "/blog/
 ## WAHA Plus
 ### What is the difference between WAHA Core and WAHA Plus?
 
-It's two versions of product we build:
+These are two versions of the product we build:
 
 **WAHA Core** 
 - The free and open source project available for everyone. 
-- Supports automating a single **WhatsApp Account** (aka [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}}) 
+- Supports automating a single **WhatsApp Account** (aka [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}}))
 - Sends and receives **unlimited text messages**.
 - Doesn't have any built-in [🔒 Security]({{< relref "/docs/how-to/security" >}}) features, 
 which means you need to make sure your infrastructure is secure.
 
 **WAHA Plus**
-- The full available through donations version of the project
+- The full version available through donations
 - Supports **unlimited** [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
 - Sends and receives **multimedia messages** (images, videos)
-- Have built-in [🔒 Security]({{< relref "/docs/how-to/security" >}}) features
+- Has built-in [🔒 Security]({{< relref "/docs/how-to/security" >}}) features
 
 {{< callout >}}
 You can find the full comparison table on [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page.

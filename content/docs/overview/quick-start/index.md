@@ -14,11 +14,11 @@ toc: true
 {{< imgo src="waha-first-message.jpg" full="false" >}}
 
 ## Step-by-Step guide
-On this page you're going to install and run WAHA,
-authenticate the client using QR code,
-and send **your first message** to WhatsApp using API!
+On this page, you're going to install and run WAHA,
+authenticate the client using a QR code,
+and send **your first message** to WhatsApp using the API!
 
-We will guide you through the necessary steps to successfully send your first text message using WhatsApp API.
+We will guide you through the necessary steps to successfully send your first text message using the WhatsApp API.
 
 <div class='article-card'>
   <b class='h4'>Are you a visual learner?</b>
@@ -42,7 +42,7 @@ Watch the video tutorial below to see how to send your first message using <b>WA
 
 ## Step 0. Requirements
 
-WAHA works on top of **Docker**, that's the only think you'll need!
+WAHA works on top of **Docker**, that's the only thing you'll need!
 <div class="text-center">
    <img src='/logos/docker.svg' title='WhatsApp API' alt='logo' style='border-radius: 50%; width: 8rem'/>
 </div>
@@ -53,8 +53,8 @@ WAHA works on top of **Docker**, that's the only think you'll need!
 </a>
 
 {{< details "Why Docker?" >}}
-Docker makes it easy to ship **all-in-one solution** with the runtime and dependencies. 
-You don't have to worry about language-specific libraries or chrome installation.
+Docker makes it easy to ship an **all-in-one solution** with the runtime and dependencies. 
+You don't have to worry about language-specific libraries or Chrome installation.
 
 Also, Docker makes installation and update processes so simple, just one command!
 {{< /details >}}
@@ -77,18 +77,18 @@ docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 # WhatsApp API is running on: http://[::1]:3000
 ```
 
-👉 Now, open [📊 Dashboard]({{< relref "/docs/how-to/dashboard" >}}) at
+👉 Now, open the [📊 Dashboard]({{< relref "/docs/how-to/dashboard" >}}) at
 <a href="http://localhost:3000/dashboard" target="_blank">
 <b>http://localhost:3000/dashboard</b>
 </a>
 
-You'll see WAHA Dashboard:
+You'll see the WAHA Dashboard:
 
 ![Dashboard](dashboard.png)
 
 ## Step 3. Start a new session
 
-To start a new session you should have your mobile phone with installed **WhatsApp application** close to you.
+To start a new session, you should have your mobile phone with the **WhatsApp application** installed close to you.
 
 Here is the 
 <a href="https://faq.whatsapp.com/381777293328336/?helpref=hc_fnav" target="_blank">
@@ -96,21 +96,21 @@ official instruction on WhatsApp site
 </a>
 on how to log in.
 
-Now you start **default** session (current status should be `STOPPED`).
+Now you can start the **default** session (current status should be `STOPPED`).
 
-You can leave all configuration parameters by default:
+You can leave all configuration parameters as default:
 ![alt](dashboard-start-session.png)
 
 ## Step 4. Get and scan QR
 
-Wait until the session status is `SCAN_QR` and click on "camera" icon:
+Wait until the session status is `SCAN_QR` and click on the "camera" icon:
 <br>
 ![alt](dashboard-qr.png)
-👉 If instead of QR you see **Click to reload QR** - **stop** the session and **start** it again.
+👉 If instead of the QR you see **Click to reload QR** - **stop** the session and **start** it again.
 
 <br>
 
-You'll see QR code from WhatsApp Web app, now get **your phone** with installed WhatsApp application and **scan the QR**:
+You'll see the QR code from the WhatsApp Web app. Now get **your phone** with the WhatsApp application installed and **scan the QR**:
 ![alt](whatsapp-link-devices.jpeg)
 
 The session status will move to `WORKING` status:
@@ -118,9 +118,9 @@ The session status will move to `WORKING` status:
 
 ## Step 5. Send a text message
 
-Now we're ready to send first messages to WhatsApp via API!
+Now we're ready to send the first messages to WhatsApp via the API!
 
-Replace `123123` with **your phone number without +**, but keep `@c.us` part:
+Replace `123123` with **your phone number without +**, but keep the `@c.us` part:
 {{< tabs "send-text-message" >}}
 
 {{< tab "curl" >}}

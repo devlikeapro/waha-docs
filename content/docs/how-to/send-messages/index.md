@@ -10,7 +10,7 @@ images: ["messages.jpg"]
 slug: send-messages
 ---
 
-We consider that you've run docker container and authenticated the session with QR code.
+We assume that you've already run the Docker container and authenticated the session with a QR code.
 
 If you haven't yet - please follow the steps from [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 
@@ -48,7 +48,7 @@ Read more about [multiple sessions →]({{< relref "/docs/how-to/sessions" >}})
 
 ### chatId
 
-`chatId` - it's a phone number or Group identifier where you're sending the message.
+`chatId` - this is a phone number or Group identifier where you're sending the message.
 
 - `123123123@c.us`  **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at
   the end.
@@ -78,7 +78,7 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 
 ### reply_to
 
-You can add `reply_to` field in order to reply on certain message.
+You can add the `reply_to` field in order to reply to a specific message.
 
 ```json
 {
@@ -144,7 +144,7 @@ Send seen for **Group Message** you need to provide `participant` field:
 ```
 
 ## Send Text
-Use API to send text messages to the chat.
+Use the API to send text messages to the chat.
 
 ```http request
 POST /api/sendText
@@ -346,7 +346,7 @@ Use API to send a video to a chat.
 
 You can send video messages in two ways:
 
-1. Provide a **URL** for the file and the API will download it and send it in the request body.
+1. Provide a **URL** for the file and the API will download and send it in the request body.
 2. Provide the file as a **BASE64** string in the request body.
 
 {{< tabs "send-video-body" >}}
@@ -667,13 +667,13 @@ Star API uses **PUT**, not **POST** request! Please make sure you send right req
 ```
 
 ## Send contact (vcard)
-Use  to send contact (vcard)
+Use the API to send contact (vcard)
 
 ```http request
 POST /api/sendContactVcard
 ```
 
-You can send contacts in ways:
+You can send contacts in multiple ways:
 
 {{< tabs "send-vcard-body" >}}
 {{< tab "Fields" >}}
@@ -898,4 +898,3 @@ Here's available buttons you can use in `buttons`:
 ```
 {{< /tab >}}
 {{< /tabs >}}
-

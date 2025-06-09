@@ -10,7 +10,7 @@ images: ["waha-storages.drawio.png"]
 slug: storages
 ---
 
-There are several **Storages** that are used by the WAHA, below you can find the list of them and the way to configure them.
+WAHA uses several **Storage** types. Below you can find a list of these storage options and how to configure them.
 
 1. [**🖥️ Session Storage**](#sessions) - store **the session data** (such as authentication information, configuration, and other data that is required to keep the session alive and connected to WhatsApp)
 2. [**🖼️ Media Storage**](#media) - store **the media files** (such as images, videos, and other files that are received from the WhatsApp instance)
@@ -26,7 +26,7 @@ There are several **Storages** that are used by the WAHA, below you can find the
 such as authentication information, configuration,
 and other data that is required to keep the session alive and connected to WhatsApp.
 
-If you want to save your session and do not scan QR code everytime when you launch WAHA -
+If you want to save your session and avoid scanning the QR code every time you launch WAHA,
 you **MUST** connect the session storage to the container.
 
 For the session storage, you can use the following options:
@@ -156,7 +156,7 @@ If you want to use the MongoDB to store the session data, you need to:
 1. Start the MongoDB server (using docker or any other way). You can either start your own MongoDB server or use the one of cloud providers, like [MongoDB Atlas](https://www.mongodb.com/atlas/database).
 2. Set `WHATSAPP_SESSIONS_MONGO_URL=mongodb://user:password@host:port/` environment variable to connect to the MongoDB server.
 
-**We recommend using your own MongoDB server as close as possible to WAHA server** for the best performance and security reasons.
+**We recommend using your own MongoDB server as close as possible to the WAHA server** for the best performance and security reasons.
 
 {{< callout title="WAHA uses Multiple Databases schema" context="note" icon="outline/database" >}}
 👉 Read how WAHA uses databases in the [**Database Schema**](#database-schema) section.
@@ -172,10 +172,10 @@ Then, you need to run the WAHA with the `WHATSAPP_SESSIONS_MONGO_URL` environmen
 docker run -e WHATSAPP_SESSIONS_MONGO_URL=mongodb://localhost:27017/ --network host devlikeapro/waha-plus
 ```
 
-This is the only action you need to do to use the MongoDB storage -
-all session authentication data will be stored in the MongoDB database.
+That's all you need to do to use MongoDB storage.
+All session authentication data will be automatically stored in the MongoDB database.
 
-For dealing and troubleshooting with the MongoDB, we recommend using [MongoDB Compass](https://www.mongodb.com/products/tools/compass).
+For managing and troubleshooting MongoDB, we recommend using [MongoDB Compass](https://www.mongodb.com/products/tools/compass).
 
 ![alt](waha-mongodb.png)
 
@@ -385,4 +385,3 @@ services:
 volumes:
   postgres_data:
 ```
-

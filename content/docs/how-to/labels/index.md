@@ -28,10 +28,10 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 ## Label color
 You'll see two color-related fields in the body and response:
 - `color: 1` - internal color number, `0-19` values.
-- `colorHex: #64c4ff` - is the **latest know** hex color for the label
+- `colorHex: #64c4ff` - is the **latest known** hex color for the label
 
 
-⚠️ It's possible that `color` - `colorHex` map will be changed so consider using `color` value instead
+⚠️ It's possible that `color` - `colorHex` map will be changed, so consider using `color` value instead
 when creating or updating labels.
 
 Here's the **current** color map (`color` - `colorHex` - **preview**):
@@ -135,10 +135,10 @@ You can get a list of chats by label id using the endpoint:
 GET /api/{session}/labels/{labelId}/chats
 ```
 
-ℹ️ Response right now depends on
+ℹ️ The response format currently depends on the
 [**🏭 Engine**]({{< relref "/docs/how-to/engines" >}})
 you're using,
-the same way as
+similar to how it works with
 [**💬 Chats**]({{< relref "/docs/how-to/chats" >}})
 
 ### Get labels by chat id
@@ -239,7 +239,7 @@ Read more about
   "payload": {
     "labelId": "6",
     "chatId": "11111111111@c.us",
-    "label": null <=== right after scanning QR it can be null. 
+    "label": null  // Note: This can be null right after scanning QR code
   },
   "engine": "NOWEB",
   ...
