@@ -1,6 +1,6 @@
 ---
 title: "🔍 Observability"
-description: "Logging, monitoring, hatchecks, etc"
+description: "Logging, monitoring, healthchecks, etc"
 lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
@@ -11,13 +11,13 @@ slug: observability
 
 ## Logging
 
-Options you can use to control the way how WAHA output the logs:
+Options you can use to control how WAHA outputs logs:
 
 - `WAHA_LOG_FORMAT` - supports formats:
     - `WAHA_LOG_FORMAT=PRETTY` - good for local development, **default** format
-    - `WAHA_LOG_FORMAT=JSON` - can be useful if you're using central logging management system
+    - `WAHA_LOG_FORMAT=JSON` - can be useful if you're using a central logging management system
 - `WAHA_LOG_LEVEL` - how much information to log `error | warn | info | debug | trace`.
-    - 👉 Do not set `debug` and `trace` in production, it gives too many logs.
+    - 👉 Do not set `debug` and `trace` in production, as these levels generate excessive log output.
 - `WAHA_HTTP_LOG_LEVEL=info` - controls the level of `request completed` log (HTTP access), you can set it
   to `error | warn | info | debug | trace`.
 - `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides
@@ -28,7 +28,7 @@ Options you can use to control the way how WAHA output the logs:
 You can enable debug mode for a session by setting `config.debug` field to `true` when 
 [Starting a session]({{< relref "/docs/how-to/sessions#debug" >}})
 
-Can be useful for debugging purposes when you're experiencing some issues.
+This can be useful for debugging purposes when you're experiencing issues.
 
 ```json
 {
@@ -72,9 +72,9 @@ GET /api/server/version
 
 ## Get server environment variables
 
-Returns the environment variables of the server
+Returns the environment variables of the server.
 
-Return only WAHA related variables.
+This endpoint returns only WAHA related variables:
 
 ```http request
 GET /api/server/environment?all=false
@@ -90,7 +90,7 @@ GET /api/server/environment?all=false
 
 ```
 
-Return all environment variables
+To return all environment variables:
 
 ```http request
 GET /api/server/environment?all=true
@@ -124,7 +124,7 @@ GET /api/server/status
 
 ## Restart (stop) server
 
-You can stop the server by calling
+You can stop the server by calling:
 
 ```http request
 POST /api/server/stop
@@ -132,7 +132,7 @@ POST /api/server/stop
 
 ```json
 {
-  // By default, it gracefully stop all sessions and connections
+  // By default, it gracefully stops all sessions and connections,
   // but you can force it to stop immediately
   "force": false
 }
@@ -183,7 +183,7 @@ Where:
 
 ### Health Check Indicators
 
-Few things we check in the health check:
+Here are the things we check in the health check:
 
 - Media files storage space - `mediaFiles.space`
 - Sessions files storage space - `sessionsFiles.space`
@@ -322,16 +322,35 @@ authentication:
 }
 ```
 
-## Get Node.js heapsnapshot
+## WAHA Debug Mode
+If you enable `WAHA_DEBUG_MODE=True`, WAHA exposes a few additional features for helping with 
+troubleshooting (usually memory and CPU related).
+
+{{< callout context="caution" icon="outline/info-circle" >}}
+`WAHA_DEBUG_MODE=True` is for **troubleshooting** purposes only
+{{< /callout >}}
+
+### Get Node.js heapsnapshot
 ```http request
 GET /api/server/debug/heapsnapshot
 ```
 
-⚠️ For troubleshooting usage only
-
-Creates and download heap dump for Node.js. 
-
-You need to enabled it by setting `WAHA_DEBUG_MODE=True` before you can use it.
+Creates and downloads a heap dump from Node.js.
 
 
+### GOWS pprof
 
+You can expose the `6060` port and connect using pprof for the **GOWS** engine:
+
+```bash
+go tool pprof -http=:8081 http://localhost:6060/debug/pprof/heap
+```
+
+Make sure to add it to docker-compose:
+```yaml
+services:
+  waha:
+    image: devlikeapro/waha-plus
+    ports:
+      - "127.0.0.1:6060:6060"
+```
