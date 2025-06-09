@@ -5,14 +5,13 @@
  
 &lt;/div>
 &lt;h2 id="step-by-step-guide">Step-by-Step guide&lt;/h2>
-&lt;p>On this page you&amp;rsquo;re going to install and run WAHA,
-authenticate the client using QR code,
-and send &lt;strong>your first message&lt;/strong> to WhatsApp using API!&lt;/p></description></item><item><title>⚠️ How to Avoid Blocking</title><link>/docs/overview/%EF%B8%8F-how-to-avoid-blocking/</link><pubDate>Thu, 12 Nov 2020 13:26:54 +0100</pubDate><guid>/docs/overview/%EF%B8%8F-how-to-avoid-blocking/</guid><description>&lt;p>How to Avoid Blocking in WhatsApp when developing bots.&lt;/p>
+&lt;p>On this page, you&amp;rsquo;re going to install and run WAHA,
+authenticate the client using a QR code,
+and send &lt;strong>your first message&lt;/strong> to WhatsApp using the API!&lt;/p></description></item><item><title>⚠️ How to Avoid Blocking</title><link>/docs/overview/%EF%B8%8F-how-to-avoid-blocking/</link><pubDate>Thu, 12 Nov 2020 13:26:54 +0100</pubDate><guid>/docs/overview/%EF%B8%8F-how-to-avoid-blocking/</guid><description>&lt;p>How to Avoid Blocking in WhatsApp when developing bots.&lt;/p>
 &lt;p>It&amp;rsquo;s important to keep in mind that WhatsApp has strict policies in place to prevent spamming and abuse of their
 platform.&lt;/p></description></item><item><title>❓ FAQ</title><link>/docs/overview/faq/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/overview/faq/</guid><description>&lt;h2 id="system-requirements">System Requirements&lt;/h2>
 &lt;h3 id="how-much-cpu-and-memory-does-waha-need">How much CPU and Memory does WAHA need?&lt;/h3>
-&lt;p>WAHA has multiple &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engines&lt;/strong>&lt;/a> under the hood and depends on the used engine
-CPU and Memory requirements change&lt;/p></description></item><item><title>🆕 Changelog</title><link>/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/overview/changelog/</guid><description>&lt;h2 id="get-notified">Get Notified&lt;/h2>
+&lt;p>WAHA has multiple &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engines&lt;/strong>&lt;/a> under the hood, and the CPU and Memory requirements change depending on the engine used.&lt;/p></description></item><item><title>🆕 Changelog</title><link>/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/overview/changelog/</guid><description>&lt;h2 id="get-notified">Get Notified&lt;/h2>
 &lt;p>If you wish to get &lt;strong>Monthly Summary&lt;/strong> about WAHA changes, subscribe to our channels.&lt;/p>
 &lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
  &lt;svg

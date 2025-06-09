@@ -3,8 +3,8 @@
 &lt;/p>
 &lt;p>Here&amp;rsquo;s how you can start developing your WhatsApp automation with using &lt;strong>n8n&lt;/strong> and &lt;strong>WAHA&lt;/strong> in pair so you can create
 your own no-code or low-code &lt;strong>WhatsApp automation&lt;/strong>:&lt;/p></description></item><item><title>WAHA Scaling - How To Handle 500+ Sessions</title><link>/blog/waha-scaling-how-to-handle-500-sessions/</link><pubDate>Wed, 14 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-scaling-how-to-handle-500-sessions/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>The article is for people who want to scale their WhatsApp API for customers, like CRM, SaaS, or other services and
-who needs to handle a lot (&lt;strong>&amp;gt;100&lt;/strong>) of &lt;a href="/docs/how-to/sessions/">&lt;strong>🖥️ Sessions&lt;/strong>&lt;/a> (WhatsApp Accounts)&lt;/p></description></item><item><title>How to send a post to WhatsApp Channel via API</title><link>/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</link><pubDate>Tue, 16 Jul 2024 08:48:45 +0000</pubDate><guid>/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</guid><description>&lt;p>&lt;a href="/">WAHA&lt;/a>, Free Self-Hosted WhatsApp API, supports
+&lt;p>This article is for people who want to scale their WhatsApp API for customers, like CRM, SaaS, or other services and
+who need to handle a lot (&lt;strong>&amp;gt;100&lt;/strong>) of &lt;a href="/docs/how-to/sessions/">&lt;strong>🖥️ Sessions&lt;/strong>&lt;/a> (WhatsApp Accounts).&lt;/p></description></item><item><title>How to send a post to WhatsApp Channel via API</title><link>/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</link><pubDate>Tue, 16 Jul 2024 08:48:45 +0000</pubDate><guid>/blog/how-to-send-a-post-to-whatsapp-channel-via-api/</guid><description>&lt;p>&lt;a href="/">WAHA&lt;/a>, Free Self-Hosted WhatsApp API, supports
 &lt;a href="/whatsapp-channels/">&lt;strong>WhatsApp Channels&lt;/strong>&lt;/a>
 , a brand-new feature introduced by WhatsApp.
 It is a one-way broadcast tool that allows administrators to send various content types such as text, photos, videos,
