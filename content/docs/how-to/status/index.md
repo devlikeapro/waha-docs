@@ -45,7 +45,7 @@ You can fetch your contacts using [**👤 Contacts API**]({{< relref "/docs/how-
 {{< /callout >}}
 
 
-### Send text status
+### Send Text Status
 Send status to **all** your contacts:
 ```http request
 POST /api/{session}/status/text
@@ -76,7 +76,7 @@ Send status to specific contacts:
 }
 ```
 
-### Send image status 
+### Send Image Status 
 ```http request
 POST /api/{session}/status/image
 ```
@@ -108,27 +108,10 @@ POST /api/{session}/status/image
 {{< /tab >}}
 {{< /tabs >}}
 
-### Send video status 
+### Send Video Status 
 ```http request
 POST /api/{session}/status/video
 ```
-
-{{< callout context="note" title="Convert file before sending" icon="outline/file" >}}
-Make sure your file has **mp4 using libx264** format.
-
-```bash
-ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.mp4
-```
-`-map 0 -movflags +faststart` options required for thumbnail generation.
-{{< /callout >}}
-
-
-{{< callout context="tip" title="WEBJS - use :chrome image" icon="outline/browser" >}}
-If you're using **WEBJS** (default engine) - make sure to use `devlikeapro/waha-plus:chrome` docker image.
-
-Read more about [**Docker images and engines →**]({{< relref "/docs/how-to/engines" >}}).
-{{< /callout >}}
-
 
 {{< tabs "send-video-status-body" >}}
 {{< tab "URL" >}}
@@ -157,20 +140,24 @@ Read more about [**Docker images and engines →**]({{< relref "/docs/how-to/eng
 {{< /tab >}}
 {{< /tabs >}}
 
-### Send voice status 
+**Fields**:
+- `file` - provide **one of** the fields:
+  - `url` - URL to the file
+  - `data` - Base 64 encoded binary content of the file
+- `convert: false` - convert the file to the right format. **Default:** `false`
+  - Set `convert: true` if you don't have the right format, check the format note below.
+
+{{< include file="content/docs/how-to/send-messages/media-video-format.md" >}}
+
+#### Media - Convert Video
+
+{{< include file="content/docs/how-to/send-messages/media-video-convert.md" >}}
+
+### Send Voice Status 
 
 ```http request
 POST /api/{session}/status/voice
 ```
-
-{{< callout context="note" title="Convert file before sending" icon="outline/file" >}}
-Make sure your file has **OPUS** encoding and packed in **OGG** container. You can convert to this using ffmpeg (
-there's many libs for that in popular languages).
-
-```bash
-ffmpeg -i input.mp3 -c:a libopus -b:a 32k -ar 48000 -ac 1 output.opus
-```
-{{< /callout >}}
 
 {{< tabs "send-voice-status-body" >}}
 {{< tab "URL" >}}
@@ -180,7 +167,8 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 32k -ar 48000 -ac 1 output.opus
     "mimetype": "audio/ogg; codecs=opus",
     "url": "https://github.com/devlikeapro/waha/raw/core/examples/dev.likeapro.opus"
   },
-  "backgroundColor": "#38b42f"
+  "backgroundColor": "#38b42f",
+  "convert": false
 }
 ```
 {{< /tab >}}
@@ -198,8 +186,19 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 32k -ar 48000 -ac 1 output.opus
 {{< /tab >}}
 {{< /tabs >}}
 
+**Fields**:
+- `file` - provide **one of** the fields:
+  - `url` - URL to the file
+  - `data` - Base 64 encoded binary content of the file
+- `convert: false` - convert the file to the right format. **Default:** `false`
+  - Set `convert: true` if you don't have the right format, check the format note below.
 
-### Delete status
+{{< include file="content/docs/how-to/send-messages/media-voice-format.md" >}}
+
+#### Media - Convert Voice
+{{< include file="content/docs/how-to/send-messages/media-voice-convert.md" >}}
+
+### Delete Status
 Here's how you can delete status message you previously sent.
 
 ```http request

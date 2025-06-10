@@ -19,11 +19,13 @@
 | `POST /api/{session}/presence`                              |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/reaction`                                        |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/star`                                            |                              ✔️                              |  ✔️   |      |
-| `POST /api/sendContactVcard`                                 |                                                              |  ✔️   |  ✔️  |
+| `POST /api/sendContactVcard`                                |                                                              |  ✔️   |  ✔️  |
 | `GET /api/messages`                                         |                              ✔️                              |  ✔️¹  |      |
 | `GET /api/checkNumberStatus`                                |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/send/buttons/reply`                              |                              ➕                               |       |      |
 | `POST /api/sendButtons`                                     |                                                              |       |      |
+| `POST /api/{session}/media/convert/voice`                   |                              ➕                               |   ➕   |  ➕   |
+| `POST /api/{session}/media/convert/video`                   |                              ➕                               |   ➕   |  ➕   |
 
 1. **NOWEB** - you need to [**Enable Store**]({{< relref "/docs/engines/noweb#store" >}}) to get **chats, contacts and messages**
 

@@ -47,6 +47,13 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< /callout >}}
 
 ### 2025.6
+**🆕 NEW**
+- `2025.6.2` - Add `convert: true` flag (`false` by default) to `/api/sendVoice` and `/api/sendVideo` - {{< issue 724 >}}
+- `2025.6.2` - Add API to convert voice and video files before sending it - {{< issue 724 >}}
+  - [**POST /api/{session}/media/convert/voice**]({{< relref "/docs/how-to/send-messages#media---convert-voice" >}})
+  - [**POST /api/{session}/media/convert/video**]({{< relref "/docs/how-to/send-messages#media---convert-video" >}})
+  - No more `ffmpeg` required, just use `convert: true` or convert API!
+
 🛠️ **Fixes**
 - `2025.6.1` - **GOWS** - fix memory leak {{< issue 919 >}}
 - `2025.6.1` - **WEBJS** - fix [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) management issues
