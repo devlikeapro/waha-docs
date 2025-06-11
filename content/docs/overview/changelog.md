@@ -55,11 +55,13 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - No more `ffmpeg` required, just use `convert: true` or convert API!
 
 🛠️ **Fixes**
+- `2025.6.2` - **WEBJS** - fix disconnection issues {{< 1032 >}}
 - `2025.6.1` - **GOWS** - fix memory leak {{< issue 919 >}}
 - `2025.6.1` - **WEBJS** - fix [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) management issues
   - {{< issue 1023 >}}, {{< issue 1024 >}}, {{< issue 1025 >}}, {{< issue 1026 >}}, {{< issue 1027 >}}
 
 **⚙️ Updates**
+- `2025.6.2` - **WEBJS** - update chrome, puppeter
 - `2025.6.1` - **GOWS** - up engine to **2025.06.09** version
 - `2025.6.1` - **WEBJS** - up engine to **2025.06.09** version
 
