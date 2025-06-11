@@ -10,7 +10,7 @@ You can convert any file to the right format using this API if you need to send 
 {{< tab "URL" >}}
 ```json { title="Body" }
 {
-  "url": "https://file-examples.com/storage/fe3e7fc7fe68462a19ac6ae/2018/04/file_example_AVI_1280_1_5MG.avi"
+  "url": "https://github.com/devlikeapro/waha/raw/core/examples/video.avi"
 }
 ```
 {{< /tab >}}
@@ -32,7 +32,7 @@ curl -X 'POST' \
   -H 'Accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "url": "https://file-examples.com/storage/fe3e7fc7fe68462a19ac6ae/2018/04/file_example_AVI_1280_1_5MG.avi",
+  "url": "https://github.com/devlikeapro/waha/raw/core/examples/video.avi",
   "data": null
 }'
 ```
@@ -50,7 +50,7 @@ curl -X POST \
   -H 'Accept: video/mp4' \
   -H 'Content-Type: application/json' \
   -d '{
-  "url": "https://file-examples.com/storage/fe3e7fc7fe68462a19ac6ae/2018/04/file_example_AVI_1280_1_5MG.avi",
+  "url": "https://github.com/devlikeapro/waha/raw/core/examples/video.avi",
   "data": null
 }' \
   --output output.mp4

@@ -10,7 +10,7 @@ You can convert any file to the right format using this API if you need to send 
 {{< tab "URL" >}}
 ```json { title="Body" }
 {
-  "url": "https://file-examples.com/storage/fe3e7fc7fe68462a19ac6ae/2017/11/file_example_MP3_2MG.mp3"
+  "url": "https://github.com/devlikeapro/waha/raw/core/examples/voice.mp3"
 }
 ```
 {{< /tab >}}
@@ -32,7 +32,7 @@ curl -X 'POST' \
   -H 'Accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "url": "https://file-examples.com/storage/fe3e7fc7fe68462a19ac6ae/2017/11/file_example_MP3_2MG.mp3",
+  "url": "https://github.com/devlikeapro/waha/raw/core/examples/voice.mp3",
   "data": null
 }'
 ```
@@ -50,7 +50,7 @@ curl -X POST \
   -H 'Accept: audio/ogg; codecs=opus' \
   -H 'Content-Type: application/json' \
   -d '{
-  "url": "https://file-examples.com/storage/fe3e7fc7fe68462a19ac6ae/2017/11/file_example_MP3_2MG.mp3",
+  "url": "https://github.com/devlikeapro/waha/raw/core/examples/voice.mp3",
   "data": null
 }' \
   --output output.ogg
