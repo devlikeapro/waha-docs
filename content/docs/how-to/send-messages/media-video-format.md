@@ -1,3 +1,4 @@
+<div></div>
 {{< callout context="note" title="Video File Format" icon="outline/file" >}}
 WhatsApp accepts only a file in **mp4 using libx264** format.
 

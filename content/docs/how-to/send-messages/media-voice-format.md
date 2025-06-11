@@ -1,3 +1,4 @@
+<div></div>
 {{< callout context="note" title="Voice File Format" icon="outline/file" >}}
 WhatsApp accept only file with **OPUS** encoding and packed in **OGG** container.
 

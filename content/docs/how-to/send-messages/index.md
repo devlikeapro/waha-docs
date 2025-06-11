@@ -143,6 +143,9 @@ Send seen for **Group Message** you need to provide `participant` field:
 }
 ```
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendSeen-code.md" >}}
+
 ## Send Text
 Use the API to send text messages to the chat.
 
@@ -157,6 +160,9 @@ POST /api/sendText
   "text": "Hi there!"
 }
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendText-code.md" >}}
 
 Here's some additional options:
 - `reply_to: false_1111@c.us_AAA` - to reply on a message
@@ -269,6 +275,9 @@ You can send images in two ways:
 {{< /tab >}}
 {{< /tabs >}}
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendImage-code.md" >}}
+
 ## Send Voice
 Use API to send voice messages to the chat.
 
@@ -321,6 +330,9 @@ You can send voice messages in two ways:
   - Set `convert: true` if you don't have the right format, check the format note below.
 
 {{< include file="content/docs/how-to/send-messages/media-voice-format.md" >}}
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendVoice-code.md" >}}
 
 ### Media - Convert Voice
 {{< include file="content/docs/how-to/send-messages/media-voice-convert.md" >}}
@@ -384,6 +396,9 @@ You can send video messages in two ways:
 
 {{< include file="content/docs/how-to/send-messages/media-video-format.md" >}}
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendVideo-code.md" >}}
+
 ### Media - Convert Video
 
 {{< include file="content/docs/how-to/send-messages/media-video-convert.md" >}}
@@ -434,6 +449,9 @@ You can send files in two ways:
 {{< /tab >}}
 {{< /tabs >}}
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendFile-code.md" >}}
+
 ## Send Poll
 
 We have a dedicated page about [**📶 Polls**]({{< relref "/docs/how-to/polls" >}})!
@@ -462,6 +480,9 @@ The request body is pretty simple:
 }
 ```
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendPoll-code.md" >}}
+
 
 ## Send Event
 You can send Event Message using API
@@ -473,6 +494,9 @@ POST /api/{SESSION}/events
 {{< callout context="note" icon="outline/info-circle" >}}
 👉 Read more about how to send [**📅 Event Message**]({{< relref "/docs/how-to/event-message" >}}) and receive responses.
 {{< /callout >}}
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendEvent-code.md" >}}
 
 
 <div style="width: 500px; max-width: 100%; margin: 0 auto;">
@@ -548,6 +572,9 @@ POST /api/send/link-custom-preview
   - `preview.image.url` - URL of the image to be used in the link preview
   - `preview.image.data` - base64 encoded image data to be used in the link preview
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendLinkCustomPreview-code.md" >}}
+
 ## Forward Message
 
 You can forward a message to another chat (that you chatted before, otherwise it may fail):
@@ -563,6 +590,9 @@ POST /api/forwardMessage
   "session": "default"
 }
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-forwardMessage-code.md" >}}
 
 
 ## Edit message
@@ -590,6 +620,9 @@ PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 
 - `linkPreview: false` - to disable preview generation for links in the message
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-editMessage-code.md" >}}
+
 ## Delete message
 
 You can delete messages from the chat.
@@ -605,6 +638,9 @@ So if you want to delete `true_123@c.us_AAA` message in `123@c.us` chat you need
 ```http request
 DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-deleteMessage-code.md" >}}
 
 
 ## Add a reaction
@@ -636,6 +672,9 @@ To **remove reaction from a message** - send empty string in the reaction reques
   "session": "default"
 }
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-reaction-code.md" >}}
 
 ## Star and unstar message
 Use API to star or unstar a message.
@@ -669,6 +708,9 @@ Star API uses **PUT**, not **POST** request! Please make sure you send right req
   "session": "default"
 }
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-star-code.md" >}}
 
 ## Send contact (vcard)
 Use the API to send contact (vcard)
@@ -734,6 +776,9 @@ You can send contacts in multiple ways:
 
 {{< /tabs >}}
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendContactVcard-code.md" >}}
+
 ## Send location
 
 ```http request
@@ -749,6 +794,9 @@ POST /api/sendLocation
   "session": "default"
 }
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendLocation-code.md" >}}
 
 ## Send Status (aka stories)
 
@@ -779,6 +827,9 @@ POST /api/send/buttons/reply
   "session": "default"
 }
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendButtonsReply-code.md" >}}
 
 {{< details "**How to get fields for the Body**" >}}
 When you get `message` event to the session, you need to get some fields from it.
