@@ -33,7 +33,7 @@ messages
 
 Here's Session Lifecycle State Diagram:
 
-{{< imgo src="/images/waha/waha-session-lifecycle.png" >}}
+{{< imgo src="waha-session-lifecycle.png" >}}
 
 
 ### Session Status
