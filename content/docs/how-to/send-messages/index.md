@@ -907,6 +907,9 @@ POST /api/sendButtons
 👉 `headerImage` is available only in
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendButtons-code.md" >}}
+
 ### Buttons
 Here's available buttons you can use in `buttons`:
 

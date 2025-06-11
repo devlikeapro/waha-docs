@@ -87,6 +87,9 @@ POST /api/sessions
 }
 ```
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/sessions/api-session-create.md" >}}
+
 {{< callout >}}
 **WAHA** uses session `name` more like "id", but we call it `name` for historical and compatibility reasons.
 {{< /callout >}}
@@ -353,6 +356,9 @@ In order to update a session - call `PUT /api/sessions/{session}` with a **full*
 }
 ```
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/sessions/api-session-update.md" >}}
+
 ⚠️ If the session not in `STOPPED` status, it'll be **stopped** and **started** with a new configuration.
 
 ## Start Session
@@ -363,6 +369,9 @@ In order to start a session - call
 POST /api/sessions/{session}/start
 ```
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/sessions/api-session-start.md" >}}
+
 🎯 **Idempotent operation** - you can call it multiple times, and it'll start the session only if it's not running.
 
 ## Stop Session
@@ -372,6 +381,9 @@ In order to stop a session - call
 ```http request
 POST /api/sessions/{session}/stop
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/sessions/api-session-stop.md" >}}
 
 ℹ️ **Stop** doesn't **Log out** or **Delete** anything
 
@@ -385,6 +397,9 @@ In order to start a session - call
 POST /api/sessions/{session}/restart
 ```
 
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/sessions/api-session-restart.md" >}}
+
 ⚠️ If the session is already running (status is not `STOPPED`), it'll be **stopped** and **started**.
 
 ## Logout Session
@@ -394,6 +409,9 @@ In order to log out the session - call
 ```http request
 POST /api/sessions/{session}/logout
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/sessions/api-session-logout.md" >}}
 
 ⚠️ If the session is running (not in `STOPPED` status), it'll be **logged out** and **started** from scratch.
 
@@ -409,6 +427,9 @@ In order to delete a session - call
 ```http request
 DELETE /api/sessions/{session}
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/sessions/api-session-delete.md" >}}
 
 ⚠️ **Delete** also **logs out** the session (removes both session configuration and data).
 
@@ -533,6 +554,8 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 
 {{< imgo src="/images/swagger-media-type.png" alt="swagger" >}}
 
+{{< include file="content/docs/how-to/sessions/api-session-screenshot.md" >}}
+
 ## Get me
 
 ℹ️ You'll get the same info if you request `GET /api/sessions/{session}` in `me` field.
@@ -558,6 +581,8 @@ GET /api/sessions/{session}/me
 null
 ```
 
+{{< include file="content/docs/how-to/sessions/api-session-me.md" >}}
+
 ## Get QR
 
 The simplest way to authenticate a new session - get QR code and scan it on your device.
@@ -565,6 +590,9 @@ The simplest way to authenticate a new session - get QR code and scan it on your
 ```http request
 GET /api/{session}/auth/qr
 ```
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/sessions/api-session-qr.md" >}}
 
 You'll get QR image that you can scan and get authenticated
 
@@ -655,6 +683,9 @@ You'll get code in the need to enter in **WhatsApp app** to authenticate the ses
 
 👉 **Always** add to [**QR code auth flow**](#get-qr) in your application as a fallback, 
 because the pairing code is not always available and works as expected.
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/sessions/api-session-pairing-code.md" >}}
 
 ## Events
 
