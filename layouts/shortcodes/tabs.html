@@ -9,7 +9,7 @@
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
   {{ range $index, $tab := .Scratch.Get $group -}}
-    <button data-toggle-tab="{{ $tab.Name | lower }}" class="nav-link{{ if not $index }} active{{ end }}" id="{{ printf "%s-%d" $group $index }}-tab" data-bs-toggle="tab" data-bs-target="#{{ printf "%s-%d" $group $index }}" type="button" role="tab" aria-controls="{{ printf "%s-%d" $group $index }}" aria-selected="true">
+    <button class="nav-link{{ if not $index }} active{{ end }}" id="{{ printf "%s-%d" $group $index }}-tab" data-bs-toggle="tab" data-bs-target="#{{ printf "%s-%d" $group $index }}" type="button" role="tab" aria-controls="{{ printf "%s-%d" $group $index }}" aria-selected="true">
       {{ $tab.Name -}}
     </button>
   {{ end -}}
@@ -18,7 +18,7 @@
 
 <div class="tab-content" id="nav-tabContent">
   {{ range $index, $tab := .Scratch.Get $group -}}
-    <div data-pane="{{ $tab.Name | lower }}" class="tab-pane fade{{ if not $index }} show active{{ end }}" id="{{ printf "%s-%d" $group $index }}" role="tabpanel" aria-labelledby="{{ printf "%s-%d" $group $index }}-tab" tabindex="0">
+    <div class="tab-pane fade{{ if not $index }} show active{{ end }}" id="{{ printf "%s-%d" $group $index }}" role="tabpanel" aria-labelledby="{{ printf "%s-%d" $group $index }}-tab" tabindex="0">
       {{ .Content | $.Page.RenderString -}}
     </div>
   {{ end -}}
