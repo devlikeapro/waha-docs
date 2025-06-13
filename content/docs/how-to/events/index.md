@@ -551,11 +551,10 @@ The `message.edited` event is message edited
   "event": "message.edited",
   "session": "default",
   "payload": {
-    "message": {
-      "id": "false_1231243123@c.us_BBBBBBBBBBBBBBBBBBBBB[_participant]",
-      ...,
-    },
+    "id": "false_1231243123@c.us_BBBBBBBBBBBBBBBBBBBBB[_participant]",
+    ...,
     "editedMessageId": "AAAAAAAAAAAAAAAA",
+    "body": "New body",
     "_data": ...,
   }
 }
