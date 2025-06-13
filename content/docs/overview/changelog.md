@@ -48,6 +48,11 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.6
 **🆕 NEW**
+- `2025.6.3` - Add `message.edited` to [**🔄 Events**]({{< relref "/docs/how-to/events#messageedited" >}}) - {{< issue 916 >}}, {{< issue 1041 >}}
+  - **WEBJS**, **GOWS**, **NOWEB**
+  - ⚠️ **NOWEB** - removed an edited **protocol message** from `message` and `message.any`, now listen `message.edited` instead
+- `2025.6.3` - **GOWS** Add `message.revoked` to [**🔄 Events**]({{< relref "/docs/how-to/events#messagerevoked" >}}) - {{< issue 917 >}}
+- `2025.6.3` - Add `revokedMessageId` field to `message.revoked` to [**🔄 Events**]({{< relref "/docs/how-to/events#messagerevoked" >}})
 - `2025.6.2` - Add `convert: true` flag (`false` by default) to `/api/sendVoice` and `/api/sendVideo` - {{< issue 724 >}}
 - `2025.6.2` - Add API to convert voice and video files before sending it - {{< issue 724 >}}
   - [**POST /api/{session}/media/convert/voice**]({{< relref "/docs/how-to/send-messages#media---convert-voice" >}})

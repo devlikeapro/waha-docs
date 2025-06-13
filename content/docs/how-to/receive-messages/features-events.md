@@ -8,6 +8,7 @@
 | `message.any`      |  ✔️   |  ✔️   |  ✔️  |
 | `message.ack`      |  ✔️   |  ✔️   |  ✔️  |
 | `message.waiting`  |  ✔️   |       |      |
-| `message.revoked`  |  ✔️   |  ✔️   |      |
+| `message.edited`   |  ✔️   |  ✔️   |  ✔️  |
+| `message.revoked`  |  ✔️   |  ✔️   |  ✔️  |
 
 {{< /details >}}

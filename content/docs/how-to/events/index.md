@@ -543,6 +543,31 @@ on your phone.
 }
 ```
 
+### message.edited
+The `message.edited` event is message edited
+
+```json { title="message.edited" }
+{
+  "event": "message.edited",
+  "session": "default",
+  "payload": {
+    "message": {
+      "id": "false_1231243123@c.us_BBBBBBBBBBBBBBBBBBBBB[_participant]",
+      ...,
+    },
+    "editedMessageId": "AAAAAAAAAAAAAAAA",
+    "_data": ...,
+  }
+}
+```
+
+**Fields**:
+- `message.id` - message if for **edit action**
+  - In format `false_{chatId}_{revokeActionMessageId}[_{participant}]`
+  - It's not the **revoked** message (but it can be the same, for instance, in **WEBJS**)
+- `editedMessageId` - the **edited message id** in format `{messageId}`, without `chatId`
+- `body` - the new body (text) of the message
+
 ### message.revoked
 The `message.revoked` event is triggered when a user, whether it be you or any other participant,
 revokes a previously sent message.
@@ -552,25 +577,23 @@ revokes a previously sent message.
   "event": "message.revoked",
   "session": "default",
   "payload": {
-    "before": {
-      "id": "some-id-here",
-      "timestamp": "some-timestamp-here",
-      "body": "Hi there!"
-    },
     "after": {
-      "id": "some-id-here",
-      "timestamp": "some-timestamp-here",
-      "body": ""
-    }
+      "id": "false_1231243123@c.us_BBBBBBBBBBBBBBBBBBBBB[_participant]",
+      "_data": ...,
+      ...,
+    },
+    "revokedMessageId": "AAAAAAAAAAAAAAAA",
+    "before": null
   }
 }
 ```
 
-**Important notes**:
-1. The above messages' ids don't match any of the ids you'll receive in the `message` event, it's a different id.
-2. In order to find the message that was revoked, you'll need to search for the message with
-   the same timestamp and chat id as the one in the `after` object.
-3. `before` field can be null in some cases.
+**Fields**:
+- `after.id` - message if for **revoke action**
+  - In format `false_{chatId}_{revokeActionMessageId}[_{participant}]`
+  - It's not the **revoked** message (but it can be the same, for instance, in **WEBJS**)
+- `revokedMessageId` - the **revoked message id** in format `{messageId}`, without `chatId` 
+- `before` - is `null` in most cases.
 
 ### chat.archive
 {{< include file="content/docs/how-to/chats/webhooks-chat-archive.md" >}}

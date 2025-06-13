@@ -697,6 +697,7 @@
       "message",
       "messageack",
       "messageany",
+      "messageedited",
       "messagereaction",
       "messagerevoked",
       "messagewaiting",
