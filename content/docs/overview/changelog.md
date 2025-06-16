@@ -60,6 +60,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - No more `ffmpeg` required, just use `convert: true` or convert API!
 
 🛠️ **Fixes**
+- `2025.6.3` - Add `timeout` for `AsyncLock` to prevent long queues
+  - **NOWEB** - has a lot of it
+  - **WEBJS**, **GOWS** - some API for session management
+- `2025.6.3` - **WEBJS** - add `Xvfb` to container {{< issue 1032 >}}
 - `2025.6.2` - **WEBJS** - fix disconnection issues {{< issue 1032 >}}
 - `2025.6.1` - **GOWS** - fix memory leak {{< issue 919 >}}
 - `2025.6.1` - **WEBJS** - fix [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) management issues
