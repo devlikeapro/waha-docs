@@ -60,6 +60,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - No more `ffmpeg` required, just use `convert: true` or convert API!
 
 🛠️ **Fixes**
+- `2025.6.4` - **NOWEB** - fix *continuous loop of state synchronization* - {{< issue 1054 >}}
 - `2025.6.3` - Add `timeout` for `AsyncLock` to prevent long queues
   - **NOWEB** - has a lot of it
   - **WEBJS**, **GOWS** - some API for session management
