@@ -22,7 +22,7 @@ please go to [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 You probably already have run the docker run command during
 [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}) guide:
 ```bash
-docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
+docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha
 ```
 
 ☝️ The above command is good **for testing and development purposes**, but **not for production**.

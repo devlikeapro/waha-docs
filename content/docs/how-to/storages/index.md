@@ -48,7 +48,7 @@ To use local storage with session persistence, you need to mount a volume to the
 
 1. **Using Docker Run** (recommended for development):
 ```bash
-docker run -v `pwd`/.sessions:/app/.sessions -p 3000:3000/tcp devlikeapro/waha-plus
+docker run -v `pwd`/.sessions:/app/.sessions -p 3000:3000 devlikeapro/waha-plus
 ```
 
 2. **Using Docker Compose** (recommended for production):
@@ -64,7 +64,7 @@ services:
 
 3. **Using Custom Directory** (if you need a specific location):
 ```bash
-docker run -v /custom/path/to/sessions:/app/.sessions -p 3000:3000/tcp devlikeapro/waha-plus
+docker run -v /custom/path/to/sessions:/app/.sessions -p 3000:3000 devlikeapro/waha-plus
 ```
 
 #### Configuration Options
@@ -97,7 +97,7 @@ If you want to use the PostgreSQL to store the session data, you need to set `WH
 ```sh
 docker run \
     -e WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable \
-    -p 3000:3000/tcp \
+    -p 3000:3000 \
     devlikeapro/waha-plus
 ```
 
@@ -199,7 +199,7 @@ To persist media files:
 docker run -v /path/to/on/host/.media:/app/.media \
   -e WHATSAPP_FILES_FOLDER=/app/.media \
   -e WHATSAPP_FILES_LIFETIME=0 \
-  -p 3000:3000/tcp \
+  -p 3000:3000 \
   devlikeapro/waha-plus
 ```
 
@@ -229,7 +229,7 @@ It'll create additional `media` table in **each database for session**.
 docker run \
   -e WAHA_MEDIA_STORAGE=POSTGRESQL \
   -e WAHA_MEDIA_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable \
-  -p 3000:3000/tcp \
+  -p 3000:3000 \
   devlikeapro/waha-plus
 ```
 
@@ -271,7 +271,7 @@ docker run \
   -e WAHA_S3_ENDPOINT=http://127.0.0.1:9000 \
   -e WAHA_S3_FORCE_PATH_STYLE=True \
   -e WAHA_S3_PROXY_FILES=False \
-  -p 3000:3000/tcp \
+  -p 3000:3000 \
   devlikeapro/waha-plus
 ```
 

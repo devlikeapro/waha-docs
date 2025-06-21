@@ -71,7 +71,7 @@ Follow the instructions below:
 Run WhatsApp HTTP API:
 
 ```bash
-docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
+docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha
 
 # It prints logs and the last line must be
 # WhatsApp API is running on: http://[::1]:3000

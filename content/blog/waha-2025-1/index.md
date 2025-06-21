@@ -51,13 +51,13 @@ How to connect to your **PostgresSQL** instance?
 
 Connect **🖥️ Session** Storage:
 ```bash
-docker run -p 3000:3000/tcp -it -e WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable devlikeapro/waha-plus
+docker run -p 3000:3000 -it -e WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable devlikeapro/waha-plus
 ```
 - Set `WHATSAPP_SESSIONS_POSTGRESQL_URL` with your credentials and database name.
 
 Connect **🖼️ Media** Storage:
 ```bash
-docker run -p 3000:3000/tcp -it -e WAHA_MEDIA_STORAGE=POSTGRESQL WAHA_MEDIA_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable devlikeapro/waha-plus
+docker run -p 3000:3000 -it -e WAHA_MEDIA_STORAGE=POSTGRESQL WAHA_MEDIA_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable devlikeapro/waha-plus
 ```
 - Set `WAHA_MEDIA_POSTGRESQL_URL` with your credentials and database name.
 - Set `WAHA_MEDIA_STORAGE=POSTGRESQL` to enable **PostgresSQL** as a media storage.

@@ -26,7 +26,7 @@ You can access **Dashboard** by running the project and opening
 ℹ️ **Default username and password**: `admin/admin` (or `waha/waha`)
 
 ```bash
-docker run -it -p 3000:3000/tcp devlikeapro/waha-plus #waha-plus
+docker run -it -p 3000:3000 devlikeapro/waha-plus #waha-plus
 ```
 
 ## Configuration
@@ -39,7 +39,7 @@ When running WAHA you can set the following environment variables to configure t
 - `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, by default `admin` or `waha`
 
 ```bash
-docker run -it -p 3000:3000/tcp -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PASSWORD=waha devlikeapro/waha-plus
+docker run -it -p 3000:3000 -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PASSWORD=waha devlikeapro/waha-plus
 ```
 
 ## Api Key

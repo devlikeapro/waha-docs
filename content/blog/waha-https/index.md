@@ -114,7 +114,7 @@ After you get the certificates, you can run it
 DOMAIN=waha.example.pro # Change it to your domain!
 
 docker run -it \
-  -p 3000:3000/tcp \
+  -p 3000:3000 \
   -v $(pwd)/.sessions:/app/.sessions \
   -v /etc/letsencrypt:/etc/letsencrypt \
   --env WAHA_HTTPS_ENABLED=true \

@@ -54,7 +54,7 @@ Also, Docker makes installation and update processes so simple, just one command
 After you installed Docker - you're ready to run WAHA!
 
 ```bash
-docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
+docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha
 
 # It prints logs and the last line must be
 # WhatsApp API is running on: http://[::1]:3000
@@ -69,7 +69,7 @@ docker pull devlikeapro/waha:arm
 # Rename it, so you can use devlikeapro/waha image in other place
 docker tag devlikeapro/waha:arm devlikeapro/waha
 # Run the same command!
-docker run -it --rm -p 3000:3000/tcp --name waha devlikeapro/waha
+docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha
 
 # It prints logs and the last line must be
 # WhatsApp API is running on: http://[::1]:3000

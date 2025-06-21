@@ -37,9 +37,9 @@ expose it to the internet.
 Run WAHA on local network (like dedicated home server, spare laptop):
 
 ```bash
-docker run -d --name waha -v `pwd`/.sessions:/app/.sessions -p 3000:3000/tcp devlikeapro/waha-plus
+docker run -d --name waha -v `pwd`/.sessions:/app/.sessions -p 3000:3000 devlikeapro/waha-plus
 # Or WAHA Core
-# docker run -p 3000:3000/tcp devlikeapro/waha
+# docker run -p 3000:3000 devlikeapro/waha
 ```
 
 Start and scan the QR code to connect to WhatsApp.
