@@ -553,6 +553,7 @@
       "file",
       "files",
       "files---local",
+      "files---postgresql",
       "files---s3",
       "first-whatsapp-workflow",
       "forward-message",
