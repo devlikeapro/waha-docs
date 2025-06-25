@@ -126,6 +126,8 @@ to send notifications from Kuma to your WhatsApp!&lt;/p></description></item><it
  &lt;img src="/images/go.svg" style="width: 150px">
 &lt;/p>
 &lt;p>
+
+
 &lt;h3 id="install-dependencies">Install Dependencies&lt;/h3>
 
 
@@ -138,6 +140,8 @@ to send notifications from Kuma to your WhatsApp!&lt;/p></description></item><it
  &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">go get -u github.com/gofiber/fiber/v2&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
  &lt;/figure>
 &lt;/div>
+
+
 
 
 
@@ -179,6 +183,8 @@ to send notifications from Kuma to your WhatsApp!&lt;/p></description></item><it
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
  &lt;/figure>
 &lt;/div>
+
+
 
 
 
@@ -227,6 +233,8 @@ to send notifications from Kuma to your WhatsApp!&lt;/p></description></item><it
  &lt;img src="/images/java.svg" style="width: 150px">
 &lt;/p>
 &lt;p>
+
+
 &lt;h3 id="install-dependencies">Install Dependencies&lt;/h3>
 
 
@@ -240,6 +248,8 @@ to send notifications from Kuma to your WhatsApp!&lt;/p></description></item><it
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># No additional dependencies required&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
  &lt;/figure>
 &lt;/div>
+
+
 
 
 
@@ -273,6 +283,8 @@ to send notifications from Kuma to your WhatsApp!&lt;/p></description></item><it
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
  &lt;/figure>
 &lt;/div>
+
+
 
 
 
@@ -321,6 +333,8 @@ to send notifications from Kuma to your WhatsApp!&lt;/p></description></item><it
  &lt;img src="/images/javascript-whatsapp.png" style="width: 150px">
 &lt;/p>
 &lt;p>
+
+
 &lt;h3 id="install-dependencies">Install Dependencies&lt;/h3>
 
 
@@ -333,6 +347,8 @@ to send notifications from Kuma to your WhatsApp!&lt;/p></description></item><it
  &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npm install axios express&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
  &lt;/figure>
 &lt;/div>
+
+
 
 
 
@@ -361,6 +377,8 @@ to send notifications from Kuma to your WhatsApp!&lt;/p></description></item><it
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">));&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
  &lt;/figure>
 &lt;/div>
+
+
 
 
 

@@ -19,7 +19,7 @@
  &lt;div class="callout-content">
  
  &lt;div class="callout-body">
- &lt;p>If you wish to follow a &lt;strong>Step-By-Step guide&lt;/strong> which shows you how to send your first message via HTTP API,
+ &lt;p>If you wish to follow a &lt;strong>Step-By-Step guide&lt;/strong> which shows you &lt;strong>how to send your first message&lt;/strong> via HTTP API,
 please go to &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>📊 Dashboard</title><link>/docs/how-to/dashboard/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/dashboard/</guid><description>&lt;p>&lt;strong>Dashboard&lt;/strong> is a UI to manage your WhatsApp sessions!&lt;/p>
 &lt;video autoplay loop muted playsinline controls='noremoteplayback' width="100%" poster='/images/waha-dashboard.png'>
  &lt;source src="/videos/waha-dashboard-overview.webm" type="video/webm" />
