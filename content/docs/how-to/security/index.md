@@ -26,10 +26,7 @@ Set `WAHA_API_KEY=yoursecretkey` environment variable for that:
 ```bash
 docker run -it -e WAHA_API_KEY=yoursecretkey devlikeapro/waha-plus
 ```
-
-{{< callout context="caution" title="Use long API Key" >}}
-Use at **least 64 symbols random string** as `WAHA_API_KEY` string that contains letters (a-z, A-Z) and numbers (1-9)
-{{< /callout >}}
+{{< include file="content/docs/how-to/security/how-to-set-api-key.md" >}}
 
 > Api Key does not hide your Swagger documentation or Dashboard. Please have a look at the next section to find how to hide Swagger under the password.
 
