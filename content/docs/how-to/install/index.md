@@ -188,20 +188,20 @@ By default you can use:
 
 ### Nginx
 
-👉 Replace **<YOURDOMAIN.COM>** with your domain name in the following steps (use lowercase).
+👉 Replace **<YOUR_DOMAIN_OR_IP>** with your domain name in the following steps (use lowercase).
 
 1. Configure Nginx to serve as a frontend proxy.
 ```bash
 sudo apt-get install nginx
 cd /etc/nginx/sites-enabled
 
-nano <YOURDOMAIN.COM>.conf
+nano <YOUR_DOMAIN_OR_IP>.conf
 ```
 
-2. Use the following Nginx config and **replace** the `<YOURDOMAIN.COM>` in `server_name`.
+2. Use the following Nginx config and **replace** the `<YOUR_DOMAIN_OR_IP>` in `server_name`.
 ```nginx
 server {
-  server_name <YOURDOMAIN.COM>;
+  server_name <YOUR_DOMAIN_OR_IP>;
 
   # Point upstream to WAHA Server
   set $upstream 127.0.0.1:3000;
@@ -308,7 +308,7 @@ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout ip-cert.key -out ip
 4. Update your Nginx configuration to use the self-signed certificate:
 ```bash
 cd /etc/nginx/sites-enabled
-nano ip-ssl.conf
+nano <YOUR_DOMAIN_OR_IP>.conf
 ```
 
 5. Modify your Nginx configuration to include SSL settings:
