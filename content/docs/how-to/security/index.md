@@ -17,14 +17,9 @@ Either protect the API with [**Api Key**](#api-security) or deny access by using
 
 {{< /callout >}}
 
-{{< callout context="note" icon="outline/info-circle" >}}
-👉 Built-in security is available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}})  version.
-{{< /callout >}}
-
 ## API security
 
-You can protect the API by requiring **Api Key** in a request's header - `X-Api-Key`
-
+You can protect the API by requiring `X-Api-Key` header in HTTP request.
 
 Set `WAHA_API_KEY=yoursecretkey` environment variable for that:
 
@@ -119,29 +114,15 @@ Read more about
 
 ## HTTPS
 After you set up the security options - you should set up HTTPS to protect the data in transit and prevent [Man-in-the-middle attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack).
+
 That's fine to run it on the **local network** without HTTPS, but for **the production** environment, HTTPS is a must-have.
 
-{{< callout context="tip" title="Use Reverse Proxy" icon="outline/info-circle" >}}
-We recommend handling HTTPS termination with a reverse proxy like Nginx.
+{{< include file="content/docs/how-to/security/use-nginx-for-https.md" >}}
 
-Follow
-[**🔧 Install & Update - Additional Steps**]({{< relref "/docs/how-to/install" >}}) to set up Nginx with Let's Encrypt (it's free).
-{{< /callout >}}
-
-### Environment variables
-WAHA supports HTTPS out of the box, if you don't want to use a reverse proxy like Nginx.
+WAHA supports HTTPS out of the box if you don't want to use a reverse proxy like Nginx (**using Nginx is recommended**)
 
 You can set up the following environment variables to enable HTTPS:
 - `WAHA_HTTPS_ENABLED=true`: Set this variable to `true` to enable HTTPS. By default, it's `false`.
 - `WAHA_HTTPS_PATH_KEY=/path/to/key.pem`: The path to the key file for HTTPS. By default `./.secrets/privkey.pem`
 - `WAHA_HTTPS_PATH_CERT=/path/to/cert.pem`: The path to the certificate file for HTTPS. By default `./.secrets/cert.pem`
 - `WAHA_HTTPS_PATH_CA=/path/to/ca.pem`: The path to the CA file for HTTPS. By default `./.secrets/chain.pem`
-
-### How to set up HTTPS
-Here's available options how you can set up HTTPS:
-1. **Self-signed certificate** - generate a self-signed certificate and use it for HTTPS.
-2. **Let's Encrypt** - use [Certbot](https://certbot.eff.org/) to get a free certificate from Let's Encrypt.
-3. **Using reverse proxy** - use Nginx or Apache as a reverse proxy and set up HTTPS there.
-
-👉 Here's [**Step-by-step guide on how to set up HTTPS for WAHA**]({{< relref "/blog/waha-https" >}})
-

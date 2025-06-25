@@ -132,28 +132,39 @@ Read more about it on [**Session page** ->]({{< relref "/docs/how-to/sessions#co
 Keep in mind that session's proxy configuration takes precedence over proxy configuration set by environment variables!
 
 ## HTTPS 
-💡 We recommend handling HTTPS termination with a reverse proxy like Nginx. Please follow 
-[**🔧 Install & Update - Additional Steps**]({{< relref "/docs/how-to/install" >}}) to set up Nginx with Let's Encrypt.
+Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}}).
 
-However, you can enable HTTPS directly in WAHA by setting the following environment variables:
+{{< include file="content/docs/how-to/security/use-nginx-for-https.md" >}}
+
+Enable HTTPS directly in WAHA by setting the following environment variables:
 
 - `WAHA_HTTPS_ENABLED=true`: Set this variable to `true` to enable HTTPS. By default, it's `false`.
 - `WAHA_HTTPS_PATH_KEY=/path/to/key.pem`: The path to the key file for HTTPS. By default `./.secrets/privkey.pem`
 - `WAHA_HTTPS_PATH_CERT=/path/to/cert.pem`: The path to the certificate file for HTTPS. By default `./.secrets/cert.pem`
 - `WAHA_HTTPS_PATH_CA=/path/to/ca.pem`: The path to the CA file for HTTPS. By default `./.secrets/chain.pem`
 
-Read more about HTTPS options and how to configure it on [**🔒 Security**]({{< relref "/docs/how-to/security" >}}) page.
 
 ## Security
-<b>Security is available in [WAHA Plus ]({{< relref "/docs/how-to/waha-plus" >}}) only.</b>
 
-- `WAHA_API_KEY=mysecret`: If you set this variable, you must include the `X-Api-Key: mysecret` header in all
-  requests to the API. This will protect the API with a secret code.
-  - `WHATSAPP_API_KEY=mysecret` also works
-- `WHATSAPP_SWAGGER_USERNAME=admin` and `WHATSAPP_SWAGGER_PASSWORD=admin`: These variables can be used to protect the
+Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}}).
+
+**API**
+- `WAHA_API_KEY=sha512:c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec`: require `X-Api-Key: admin` header in all requests to the API.
+  - `WAHA_API_KEY=admin`- also works, but it's better to set SHA512 instead.
+  - `WHATSAPP_API_KEY=admin` - also works, but it's better to set SHA512 instead.
+- `WHATSAPP_API_KEY_EXCLUDE_PATH=ping,health` - exclude URI from key auth [#451](https://github.com/devlikeapro/waha/issues/451)
+
+**Dashboard**
+- `WAHA_DASHBOARD_ENABLED=true`: Toggle to enable or disable the dashboard.
+- `WAHA_DASHBOARD_USERNAME=waha`: Default username for login (default: waha).
+- `WAHA_DASHBOARD_PASSWORD=waha`: Default password for login (default: waha).
+
+**Swagger**
+- `WHATSAPP_SWAGGER_ENABLED=true`: Toggle to enable or disable the Swagger.
+- `WHATSAPP_SWAGGER_USERNAME=admin`
+- `WHATSAPP_SWAGGER_PASSWORD=admin`: These variables can be used to protect the
   Swagger panel with `admin / admin` credentials. This does not affect API access.
 
-Read more about security settings for Swagger and API on [*🔒 Security**]({{< relref "/docs/how-to/security" >}}).
 
 ## Files
 
