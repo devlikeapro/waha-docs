@@ -41,6 +41,10 @@ services:
       - WAHA_WORKER_ID=waha
       - WAHA_PRINT_QR=False
 ```
+
+```bash
+docker compose up -d
+```
 {{< /tab >}}
 
 {{< tab ".env" >}}
@@ -66,12 +70,14 @@ services:
     env_file:
       - .env
 ```
+
+```bash
+docker compose up -d
+```
 {{< /tab >}}
 
 {{< /tabs >}}
 
-
-The following environment variables can be used to configure the WAHA.
 
 ## Common
 - `WHATSAPP_API_PORT=3000`: The port number that the HTTP server will listen on. The default value is `3000`.
