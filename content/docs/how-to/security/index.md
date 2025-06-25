@@ -19,10 +19,14 @@ Either protect the API with [**Api Key**](#api-security) or deny access by using
 
 ## API security
 
-You can protect the API by requiring `X-Api-Key` header in HTTP request.
+You can protect the API by requiring `X-Api-Key` header in HTTP request. 
 
-- `WAHA_API_KEY=sha512:{SHA512_HEX_HASH}`: require `X-Api-Key: {KEY}` header in all requests to the API.
+You can use `WAHA_API_KEY` environment variable. It accepts two formats:
 
+- `WAHA_API_KEY=sha512:{SHA512_HEX_HASH}`: require `X-Api-Key: {PLAIN_KEY}` header in all requests to the API. This is the **recommended** format as it stores only the hash of your key in the environment variables, making it more secure if your environment variables are exposed.
+- `WAHA_API_KEY={PLAIN_KEY}`: require `X-Api-Key: {PLAIN_KEY}` header in all requests to the API. This format stores your key in plain text in the environment variables, which is less secure.
+
+### Generate And Set Api-Key
 {{< include file="content/docs/how-to/security/how-to-set-api-key.md" >}}
 
 ### Use Api-Key in Dashboard
@@ -38,18 +42,8 @@ After you set Api Key - to authorize on swagger, use the **Authorize** button at
 
 To authorize requests - set `X-Api-Key` header to `yoursecretkey` for all requests that go to WAHA.
 
-#### Python
-Example for Python **requests** library:
+{{< include file="content/docs/how-to/security/set-x-api-key-http-header-code.md" >}}
 
-```python
-import requests
-
-headers = {
-  'Content-type': 'application/json',
-  'X-Api-Key': 'yoursecretkey',
-}
-requests.get("http://localhost:3000/api/sessions", headers=headers)
-```
 
 ### Exclude endpoints
 If you need to exclude some endpoints (like `GET /health` or `GET /ping`) from the API Key requirement - you can
@@ -65,11 +59,11 @@ docker run -it \
 
 
 ## Swagger Security
-If you want to hide the project Swagger panel under the password—run the following command to hide under `admin/admin`
+If you want to hide the project Swagger panel under the password - run the following command to hide under `admin/admin`
 login and password.
 
 ```bash
-docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin -eWHATSAPP_SWAGGER_PASSWORD=admin devlikeapro/waha-plus
+docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin -e WHATSAPP_SWAGGER_PASSWORD=admin devlikeapro/waha-plus
 ```
 
 Open http://localhost:3000/ and enter `admin / admin` in the inputs:
