@@ -239,7 +239,11 @@ nginx -t
 systemctl reload nginx
 ```
 
+Here are two scenarios for setting up HTTPS:
+
 ### HTTPS - Let's Encrypt
+
+If you have a domain name (e.g., **yourdomain.com**) that points to your server's IP address, you can use Let's Encrypt to get free, trusted SSL certificates:
 
 1. Run Let's Encrypt to configure SSL certificate. (replace **<YOURDOMAIN.COM>**!)
 ```bash
@@ -259,6 +263,113 @@ nano .env
 docker compose up -d
 docker compose restart
 ```
+
+### HTTPS - Self-Signed Certificate for IP-Based Access
+
+If you don't have **a domain name** or are using a **private IP address**, you can create a self-signed certificate for IP-based access:
+
+1. Create a directory for your SSL certificates:
+```bash
+mkdir -p /etc/nginx/ssl
+cd /etc/nginx/ssl
+```
+
+2. Create a configuration file for the self-signed certificate:
+```bash
+cat > ip-cert.cnf << 'EOL'
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+x509_extensions = v3_ca
+
+[dn]
+C=US
+ST=State
+L=City
+O=Organization
+OU=Department
+CN=<YOUR_IP_ADDRESS>
+
+[v3_ca]
+subjectAltName = @alt_names
+
+[alt_names]
+IP.1 = <YOUR_IP_ADDRESS>
+EOL
+```
+
+3. Generate a self-signed certificate valid for 10 years (3650 days):
+```bash
+openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout ip-cert.key -out ip-cert.crt -config ip-cert.cnf
+```
+
+4. Update your Nginx configuration to use the self-signed certificate:
+```bash
+cd /etc/nginx/sites-enabled
+nano ip-ssl.conf
+```
+
+5. Modify your Nginx configuration to include SSL settings:
+```nginx
+server {
+    listen 80;
+    server_name <YOUR_IP_ADDRESS>;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name <YOUR_IP_ADDRESS>;
+
+    ssl_certificate /etc/nginx/ssl/ip-cert.crt;
+    ssl_certificate_key /etc/nginx/ssl/ip-cert.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_prefer_server_ciphers on;
+
+    # Point upstream to WAHA Server
+    set $upstream 127.0.0.1:3000;
+
+    location / {
+        proxy_pass_header Authorization;
+        proxy_pass http://$upstream;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Ssl on; # Optional
+
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+        proxy_http_version 1.1;
+        proxy_buffering off;
+
+        client_max_body_size 0;
+        proxy_read_timeout 36000s;
+        proxy_redirect off;
+    }
+}
+```
+
+6. Verify and reload your Nginx config:
+```bash
+nginx -t
+systemctl reload nginx
+```
+
+7. Update your WAHA configuration to use HTTPS:
+```bash
+# Change the WAHA_BASE_URL in .env to use https
+nano .env
+# Add or modify: WAHA_BASE_URL=https://<YOUR_IP_ADDRESS>
+# Restart the WAHA service
+docker compose up -d
+docker compose restart
+```
+
+8. When accessing your WAHA instance, you'll need to accept the self-signed certificate warning in your browser.
 
 ## Update
 When there's a new version of WAHA, you can update it with these simple commands:
