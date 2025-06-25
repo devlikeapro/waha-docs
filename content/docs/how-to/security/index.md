@@ -26,14 +26,14 @@ Either protect the API with [**Api Key**](#api-security) or deny access by using
 You can protect the API by requiring **Api Key** in a request's header - `X-Api-Key`
 
 
-Set `WHATSAPP_API_KEY=yoursecretkey` environment variable for that:
+Set `WAHA_API_KEY=yoursecretkey` environment variable for that:
 
 ```bash
-docker run -it -e WHATSAPP_API_KEY=yoursecretkey devlikeapro/waha-plus
+docker run -it -e WAHA_API_KEY=yoursecretkey devlikeapro/waha-plus
 ```
 
 {{< callout context="caution" title="Use long API Key" >}}
-Use at **least 64 symbols random string** as `WHATSAPP_API_KEY` string that contains letters (a-z, A-Z) and numbers (1-9)
+Use at **least 64 symbols random string** as `WAHA_API_KEY` string that contains letters (a-z, A-Z) and numbers (1-9)
 {{< /callout >}}
 
 > Api Key does not hide your Swagger documentation or Dashboard. Please have a look at the next section to find how to hide Swagger under the password.
@@ -62,12 +62,12 @@ requests.get("http://localhost:3000/api/sessions", headers=headers)
 
 ### Exclude endpoints
 If you need to exclude some endpoints (like `GET /health` or `GET /ping`) from the API Key requirement - you can
-set `WHATSAPP_API_KEY_EXCLUDE_PATH` environment variable with a comma-separated list of endpoints (no `/` at the beginning).
+set `WAHA_API_KEY_EXCLUDE_PATH` environment variable with a comma-separated list of endpoints (no `/` at the beginning).
 
 ```bash
 docker run -it \
- -e WHATSAPP_API_KEY_EXCLUDE_PATH="health,ping" \
- -e WHATSAPP_API_KEY=yoursecretkey \
+ -e WAHA_API_KEY_EXCLUDE_PATH="health,ping" \
+ -e WAHA_API_KEY=yoursecretkey \
  devlikeapro/waha-plus
 ```
 

@@ -110,7 +110,7 @@ Refer to the available environment variables in [**⚙️ Configuration**]({{< r
 Some important values you **MUST** change before running it:
 
 - API Key for secure API access. Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
-   - `WHATSAPP_API_KEY=admin`
+   - `WAHA_API_KEY=admin`
 - Username, password for [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}):
    - `WAHA_DASHBOARD_USERNAME=admin`
    - `WAHA_DASHBOARD_PASSWORD=admin`
@@ -119,7 +119,7 @@ Some important values you **MUST** change before running it:
    - `WHATSAPP_SWAGGER_PASSWORD=admin`
 
 {{< callout context="caution" title="Use long API Key" >}}
-Use at **least 64 symbols random string** as `WHATSAPP_API_KEY` string that contains letters (a-z, A-Z) and numbers (1-9)
+Use at **least 64 symbols random string** as `WAHA_API_KEY` string that contains letters (a-z, A-Z) and numbers (1-9)
 {{< /callout >}}
 
 ```bash

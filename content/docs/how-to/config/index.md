@@ -147,10 +147,12 @@ Read more about HTTPS options and how to configure it on [**🔒 Security**]({{<
 ## Security
 <b>Security is available in [WAHA Plus ]({{< relref "/docs/how-to/waha-plus" >}}) only.</b>
 
-- `WHATSAPP_API_KEY=mysecret`: If you set this variable, you must include the `X-Api-Key: mysecret` header in all
+- `WAHA_API_KEY=mysecret`: If you set this variable, you must include the `X-Api-Key: mysecret` header in all
   requests to the API. This will protect the API with a secret code.
+  - `WHATSAPP_API_KEY=mysecret` also works
 - `WHATSAPP_SWAGGER_USERNAME=admin` and `WHATSAPP_SWAGGER_PASSWORD=admin`: These variables can be used to protect the
   Swagger panel with `admin / admin` credentials. This does not affect API access.
+
 Read more about security settings for Swagger and API on [*🔒 Security**]({{< relref "/docs/how-to/security" >}}).
 
 ## Files
