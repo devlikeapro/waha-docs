@@ -9,16 +9,66 @@ weight: 299
 slug: config
 ---
 
-You can configure WhatsApp API behaviour via environment variables, by adding `-e WHATSAPP_VARNAME=value` at the
+You can configure WhatsApp API behavior via environment variables.
+
+{{< tabs "config-methods" >}}
+
+{{< tab "docker run" >}}
+You can add environment variables by adding `-e WHATSAPP_VARNAME=value` at the
 beginning of the command line or by using [other options](https://docs.docker.com/engine/reference/commandline/run/)
 
 ```bash
-docker run -it -e "WAHA_WORKER_ID=waha" -e WAHA_PRINT_QR=False devlikeapro/waha
+docker run -it -e "WAHA_WORKER_ID=waha" -e WAHA_PRINT_QR=False devlikeapro/waha-plus
 ```
+{{< /tab >}}
 
+{{< tab "docker compose" >}}
 It's not necessary to always run such a long command - you can save all data in
 [docker-compose.yaml](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml)
 file as described on [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}).
+
+```yaml { title="docker-compose.yaml" }
+version: '3'
+
+services:
+  waha:
+    image: devlikeapro/waha-plus
+    container_name: waha
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      - WAHA_WORKER_ID=waha
+      - WAHA_PRINT_QR=False
+```
+{{< /tab >}}
+
+{{< tab ".env" >}}
+You can also use a `.env` file to set environment variables. Create a `.env` file in the same directory as your docker-compose.yaml file.
+
+```json { title=".env" }
+WAHA_WORKER_ID=waha
+WAHA_PRINT_QR=False
+```
+
+Then reference it in your docker-compose.yaml file:
+
+```yaml { title="docker-compose.yaml" }
+version: '3'
+
+services:
+  waha:
+    image: devlikeapro/waha-plus
+    container_name: waha
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    env_file:
+      - .env
+```
+{{< /tab >}}
+
+{{< /tabs >}}
 
 
 The following environment variables can be used to configure the WAHA.

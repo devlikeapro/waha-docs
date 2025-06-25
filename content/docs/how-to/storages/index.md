@@ -59,7 +59,7 @@ services:
     volumes:
       - ./.sessions:/app/.sessions
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
 ```
 
 3. **Using Custom Directory** (if you need a specific location):
@@ -107,7 +107,7 @@ services:
   waha:
     image: devlikeapro/waha-plus
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     environment:
       - WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@postgres:5432/postgres?sslmode=disable
     depends_on:
@@ -213,7 +213,7 @@ services:
       - WHATSAPP_FILES_FOLDER=/app/.media
       - WHATSAPP_FILES_LIFETIME=0
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
 ```
 
 ### Media - PostgreSQL
@@ -241,7 +241,7 @@ services:
       - WAHA_MEDIA_STORAGE=POSTGRESQL
       - WAHA_MEDIA_POSTGRESQL_URL=postgres://postgres:postgres@postgres:5432/postgres?sslmode=disable
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     depends_on:
       - postgres
 
@@ -289,7 +289,7 @@ services:
       - WAHA_S3_FORCE_PATH_STYLE=True
       - WAHA_S3_PROXY_FILES=False
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     depends_on:
       - minio
 
@@ -359,7 +359,7 @@ services:
       - WAHA_WORKER_ID=worker-1
       - WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@postgres:5432/postgres?sslmode=disable
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     depends_on:
       - postgres
 
@@ -369,7 +369,7 @@ services:
       - WAHA_WORKER_ID=worker-2
       - WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@postgres:5432/postgres?sslmode=disable
     ports:
-      - "3001:3000"
+      - "127.0.0.1:3001:3000"
     depends_on:
       - postgres
 
