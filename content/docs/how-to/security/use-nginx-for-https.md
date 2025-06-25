@@ -4,5 +4,5 @@
 We **recommend** handling HTTPS termination with **a reverse proxy** like Nginx.
 
 Follow
-[**🔧 Install & Update - Additional Steps**]({{< relref "/docs/how-to/install" >}}) to set up **Nginx with Let's Encrypt**.
+[**🔧 Install & Update - Nginx**]({{< relref "/docs/how-to/install#nginx" >}}) to set up **Nginx with Let's Encrypt**.
 {{< /callout >}}

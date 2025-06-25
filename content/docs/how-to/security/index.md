@@ -26,8 +26,31 @@ You can use `WAHA_API_KEY` environment variable. It accepts two formats:
 - `WAHA_API_KEY=sha512:{SHA512_HEX_HASH}`: require `X-Api-Key: {PLAIN_KEY}` header in all requests to the API. This is the **recommended** format as it stores only the hash of your key in the environment variables, making it more secure if your environment variables are exposed.
 - `WAHA_API_KEY={PLAIN_KEY}`: require `X-Api-Key: {PLAIN_KEY}` header in all requests to the API. This format stores your key in plain text in the environment variables, which is less secure.
 
-### Generate And Set Api-Key
-{{< include file="content/docs/how-to/security/how-to-set-api-key.md" >}}
+### Generate and Hash Api-Key
+{{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
+
+### Set Api-Key Hash
+Set
+`WAHA_API_KEY=sha512:{SHA512_HEX_HASH}` in docker (or in `docker-compose.yaml` or `.env`):
+
+```bash
+docker run -it -e WAHA_API_KEY=sha512:98b6d128682e280b74b324ca82a6bae6e8a3f7174e0605bfd52eb9948fad8984854ec08f7652f32055c4a9f12b69add4850481d9503a7f2225501671d6124648 devlikeapro/waha-plus
+```
+
+Test API works as expected
+```bash
+# No Key
+curl http://localhost:3000/api/sessions
+> {"message":"Unauthorized","statusCode":401}
+
+# Wrong Key
+curl -H 'X-Api-Key: othersecret' http://localhost:3000/api/sessions
+> {"message":"Unauthorized","statusCode":401}
+
+# Right Key
+curl -H 'X-Api-Key: 00000000000000000000000000000000' http://localhost:3000/api/sessions
+> []
+```
 
 ### Use Api-Key in Dashboard
 

@@ -87,6 +87,7 @@ Follow the instructions below:
 {{< include file="content/docs/how-to/install/download-image.md" >}}
 
 ## Install
+### Docker
 
 1. Install Docker on your VM
 ```bash
@@ -98,6 +99,7 @@ sudo sh get-docker.sh
 apt install docker-compose-plugin
 ```
 
+### WAHA
 2. Download the required files
 ```bash
 # Download the env file template
@@ -109,20 +111,25 @@ wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/r
 3. Tweak the `.env` and `docker-compose.yaml` according to your preferences. 
 Refer to the available environment variables in [**⚙️ Configuration**]({{< relref "/docs/how-to/config" >}}).
 
-Some important values you **MUST** change before running it:
+Some important values you **MUST** change before publishing it to the internet:
 
-- API Key for secure API access. Read more [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
-   - `WAHA_API_KEY=admin`
-- Username, password for [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}):
-   - `WAHA_DASHBOARD_USERNAME=admin`
-   - `WAHA_DASHBOARD_PASSWORD=admin`
-- Username, password for [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}):
-   - `WHATSAPP_SWAGGER_USERNAME=admin`
-   - `WHATSAPP_SWAGGER_PASSWORD=admin`
+**Set API Key**
+  - `WAHA_API_KEY=sha512:{SHA512_HEX_OF_YOUR_API_KEY_HERE}`
+  - Default Api Key is `admin`
+  - Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
 
-{{< callout context="caution" title="Use long API Key" >}}
-Use at **least 64 symbols random string** as `WAHA_API_KEY` string that contains letters (a-z, A-Z) and numbers (1-9)
+{{< details "<b>👉 How to Generate and Hash Api-Key</b>" >}}
+{{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
 {{< /callout >}}
+
+<br/>
+
+[**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}) and [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}):
+  - `WAHA_DASHBOARD_USERNAME=admin`
+  - `WAHA_DASHBOARD_PASSWORD=admin`
+  - `WHATSAPP_SWAGGER_USERNAME=admin` - you can set the same as `WAHA_DASHBOARD_USERNAME`
+  - `WHATSAPP_SWAGGER_PASSWORD=admin` - you can set the same as `WAHA_DASHBOARD_PASSWORD`
+
 
 ```bash
 # update .env file with your values
@@ -139,17 +146,48 @@ docker compose up -d
 ```
 
 5. Your WAHA installation is complete. 
-Please note that the **containers are not exposed to the internet**, and they only bind to the localhost. 
-Setup something like Nginx or any other proxy server to proxy the requests to the container.
+Please note that the **containers are not exposed to the internet**, and they only bind to the **localhost**. 
+Set up something like Nginx or any other proxy server to proxy the requests to the container.
+
+{{< callout context="" title="How to export port from remote server?" icon="outline/info-circle" >}}
+If you're using a remote server (like VPS or Virtual Machine on your laptop) you need to allow access for your browser. 
+Use one of the options available.
+
+1. Use **SSH tunneling**
+
+If you're connecting to ssh, you can forward port 3000 on your laptop like
+```bash
+ssh -L 3000:localhost:3000 user@you.address.here
+```
+
+2. **Bind port to all ips**
+
+For **temporary external access**, you can change the port binding from `127.0.0.1:3000:3000` to `3000:3000` in the `docker-compose.yaml` file. 
+```yaml { title="docker-compose.yaml" }
+services:
+  waha:
+    image: devlikeapro/waha-plus
+    ports:
+      - "3000:3000"
+```
+```bash
+docker compose up -d
+```
+
+This makes your instance accessible at `http://<your-external-ip>:3000`.
+{{< /callout >}}
 
 6. Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and login with the credentials you've set
-   (`admin/admin` by default).
 
-For temporary external access, you can change the port binding from `127.0.0.1:3000:3000` to `3000:3000` in the compose file. This will make your instance accessible at `http://<your-external-ip>:3000`.
-However, for production use, we recommend reverting this change and using Nginx or another proxy server as a frontend.
+By default you can use:
+- Dashboard - `admin/admin`
+- Swagger - `admin/admin`
+- Api Key - `admin`
 
-### Additional Steps
-#### Configure Nginx and Let's Encrypt 
+{{< include file="content/docs/how-to/security/use-nginx-for-https.md" >}}
+
+### Nginx
+
 👉 Replace **<YOURDOMAIN.COM>** with your domain name in the following steps (use lowercase).
 
 1. Configure Nginx to serve as a frontend proxy.
@@ -201,7 +239,9 @@ nginx -t
 systemctl reload nginx
 ```
 
-4. Run Let's Encrypt to configure SSL certificate. (replace **<YOURDOMAIN.COM>**!)
+### HTTPS - Let's Encrypt
+
+1. Run Let's Encrypt to configure SSL certificate. (replace **<YOURDOMAIN.COM>**!)
 ```bash
 apt install certbot
 apt-get install python3-certbot-nginx
@@ -210,8 +250,8 @@ mkdir -p /var/www/ssl-proof/waha/.well-known
 certbot --webroot -w /var/www/ssl-proof/waha/ -d <YOURDOMAIN.COM> -i nginx
 ```
 
-5. Your WAHA installation should be accessible from the https://yourdomain.com now.
-6. Change `WAHA_BASE_URL=https://<YOURDOMAIN.COM>` in the `.env` file and restart the WAHA service
+2. Your WAHA installation should be accessible from the https://yourdomain.com now.
+3. Change `WAHA_BASE_URL=https://<YOURDOMAIN.COM>` in the `.env` file and restart the WAHA service
 ```bash
 # Change the WAHA_BASE_URL in .env
 nano .env
