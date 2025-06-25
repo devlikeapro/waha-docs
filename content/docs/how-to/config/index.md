@@ -169,6 +169,8 @@ Swagger panel with `admin / admin` credentials. This does not affect API access.
 
 ## Files
 
+Read more about [**🖼️ Media Storage**]({{< relref "/docs/how-to/storages#media-storage" >}})
+
 ### Files - Local
 The following environment variables can be used to configure the file storage options for the WAHA:
 
@@ -184,7 +186,6 @@ The following environment variables can be used to configure the file storage op
 - `WHATSAPP_FILES_FOLDER`: This variable can be used to set the folder where files from chats (images, voice messages)
   will be stored. The default value is `/tmp/whatsapp-files`.
   - The folder must be mounted to the host machine to keep the files between container restarts. [ Read more about how to persist files ->]({{< relref "/docs/how-to/storages#media" >}})
-- Also read more about [Media Storages on the dedicated page ->]({{< relref "/docs/how-to/storages#media" >}})
 
 💡 When media files are not processed due to `WHATSAPP_FILES_MIMETYPES` or `WHATSAPP_DOWNLOAD_MEDIA` settings,
 you'll still receive a webhook event with `hasMedia: True` field, but without a `media.url`.
