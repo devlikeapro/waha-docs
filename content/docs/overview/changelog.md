@@ -48,6 +48,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.6
 **🆕 NEW**
+- `2025.6.5` - [**🔒 Security**]({{< relref "/docs/how-to/security" >}}) now available in **WAHA Core** - {{< issue 1069 >}}
+- `2025.6.5` - Support hash in Api Key variable `WAHA_API_KEY=sha512:{HASH}` in [**🔒 API Key Security**]({{< relref "/docs/how-to/security" >}}) - {{< issue 1069 >}}
 - `2025.6.3` - Add `message.edited` to [**🔄 Events**]({{< relref "/docs/how-to/events#messageedited" >}}) - {{< issue 916 >}}, {{< issue 1041 >}}
   - **WEBJS**, **GOWS**, **NOWEB**
   - ⚠️ **NOWEB** - removed an edited **protocol message** from `message` and `message.any`, now listen `message.edited` instead
