@@ -14,7 +14,7 @@ aliases:
 
 
 {{< callout context="note" icon="outline/info-circle" >}}
-If you wish to follow a **Step-By-Step guide** which shows you how to send your first message via HTTP API,
+If you wish to follow a **Step-By-Step guide** which shows you **how to send your first message** via HTTP API,
 please go to [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
 {{< /callout >}}
 
@@ -25,7 +25,9 @@ You probably already have run the docker run command during
 docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha
 ```
 
-☝️ The above command is good **for testing and development purposes**, but **not for production**.
+{{< callout context="caution" icon="outline/alert-triangle" >}}
+☝️ The above command is good **for development purposes**, but **not for production**.
+{{< /callout >}}
 
 To make it **production-ready**, you need to configure a few more parameters to make it secure, reliable, and easy to manage.
 
