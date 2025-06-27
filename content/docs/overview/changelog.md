@@ -63,8 +63,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 - `2025.6.6` - **NOWEB** - show poll on the sender device - {{< issue 988 >}}
-- `2025.6.6` - **WEBJS** - return message response - {{< issue 1081 >}}
-- `2025.6.6` - **WEBJS** - fix pin message - {{< issue 1083 >}}
+- `2025.6.6` - **WEBJS** - return message response - {{< issue 1083 >}}
+- `2025.6.6` - **WEBJS** - fix pin message - {{< issue 1081 >}}, {{< issue 1082 >}}
 - `2025.6.6` - **WEBJS** - fix zombie processes - {{< issue 1078 >}}
 - `2025.6.6` - Return `501 Not Implemented` if engine does not support API - {{< issue 1047 >}}
 - `2025.6.4` - **NOWEB** - fix *continuous loop of state synchronization* - {{< issue 1054 >}}
