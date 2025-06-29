@@ -62,6 +62,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - No more `ffmpeg` required, just use `convert: true` or convert API!
 
 🛠️ **Fixes**
+- `2025.6.7` - fix `curl: command not found` in healthcheck - {{< issue 1085 >}}
+  - `:noweb` and `:gows` docker images
 - `2025.6.6` - **NOWEB** - show poll on the sender device - {{< issue 988 >}}
 - `2025.6.6` - **WEBJS** - return message response - {{< issue 1083 >}}
 - `2025.6.6` - **WEBJS** - fix pin message - {{< issue 1081 >}}, {{< issue 1082 >}}
