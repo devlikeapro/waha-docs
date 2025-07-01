@@ -17,7 +17,7 @@ toc: true
 ## WAHA + Geonode Proxy
 
 If you see the below error, you can use
-the <b><a href="https://geonode.com/invite/90920" target="_blank">Geonode proxies</a></b> to solve this issue.
+the <b><a href="https://geonode.com/?ref=90920" target="_blank">Geonode proxies</a></b> to solve this issue.
 
 Read more about [Proxies]({{< relref "/docs/how-to/proxy" >}}).
 
@@ -30,14 +30,14 @@ The Geonode proxy is a solution that allows you to bypass this block and continu
 **The issue has nothing to do with WAHA** itself, but with the WhatsApp server blocking your IP address.
 
 Using
-<b><a href="https://geonode.com/invite/90920" target="_blank">Geonode proxy</a></b>
+<b><a href="https://geonode.com/?ref=90920" target="_blank">Geonode proxy</a></b>
 you can bypass the block and continue using WAHA in Cloud or VPS.
 
 💡 **Alternative** is to run [**WAHA locally and expose it with Ngrok**]({{< relref "waha-ngrok" >}}) to bypass the block.
 
 ## Step 1: Register on Geonode
 
-Go ahead and [Sign Up on Geonode](https://geonode.com/invite/90920)!
+Go ahead and [Sign Up on Geonode](https://geonode.com/?ref=90920)!
 
 ## Step 2: Get Premium Residential Proxy
 

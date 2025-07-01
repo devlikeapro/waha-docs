@@ -17,7 +17,7 @@ toc: true
 ## WAHA + Ngrok
 
 If you see the below error, you can use
-the <b><a href="https://geonode.com/invite/90920" target="_blank">Geonode proxies</a></b> to solve this issue.
+the <b><a href="https://geonode.com/?ref=90920" target="_blank">Geonode proxies</a></b> to solve this issue.
 
 > Could not log in. Check your phone's internet connection and try again.
 > ![Could not login](could-not-login.png)

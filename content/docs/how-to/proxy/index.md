@@ -91,7 +91,7 @@ Read more about it on [**Sessions page** ->]({{< relref "/docs/how-to/sessions#c
 ## Recommended Proxies
 
 ### Geonode
-We recommend using <b><a href="https://geonode.com/invite/90920" target="_blank">Geonode</a></b>.
+We recommend using <b><a href="https://geonode.com/?ref=90920" target="_blank">Geonode</a></b>.
 
 ### Proxy6
 Another option is <b><a href="https://proxy6.net/en/?r=628046" target="_blank">Proxy6</a></b>
