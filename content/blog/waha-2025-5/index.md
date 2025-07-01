@@ -57,6 +57,4 @@ Available in all engines: **WEBJS**, **GOWS**, **NOWEB**!
 ---
 
 ## 🆕 Changelog
-Check out the full list of updates in the
-[**🆕 WAHA 2025.5 Changelog**]({{< relref "/docs/overview/changelog#20255" >}})
-and stay tuned for more!
+Check out the full list of updates in the [**🆕 WAHA 2025.5 Changelog**]({{< relref "/docs/overview/changelog#20255" >}}) and stay tuned for more!
