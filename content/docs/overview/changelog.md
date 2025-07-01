@@ -46,6 +46,10 @@ Latest Version:
 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 {{< /callout >}}
 
+### 2025.7
+🛠️ **Fixes**
+- `2025.7.1` - move `HEALTHCHECK` from Dockerfile to docker-compose - {{< issue 1090 >}}
+
 ### 2025.6
 **🆕 NEW**
 - `2025.6.5` - [**🔒 Security**]({{< relref "/docs/how-to/security" >}}) now available in **WAHA Core** - {{< issue 1069 >}}
