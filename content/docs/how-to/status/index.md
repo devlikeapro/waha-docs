@@ -350,7 +350,7 @@ GET /api/{SESSION}/me
 You can either use your existing contact list from a CRM or database, or fetch all contacts from WhatsApp:
 
 ```http request
-GET /api/{SESSION}/contacts/all
+GET /api/contacts/all?session={NAME}
 ```
 
 ```json {title="Response"}

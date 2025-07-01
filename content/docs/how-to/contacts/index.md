@@ -33,7 +33,7 @@ See the list of engines [**that support the feature ->**]({{< relref "/docs/how-
 Get your contacts 
 
 ```http request
-GET /api/{session}/contacts/all
+GET /api/contacts/all?session={NAME}
 ```
 
 ```json {title="Response"}
@@ -57,7 +57,7 @@ GET /api/{session}/contacts/all
 If you see timeout or the request takes too long - consider using `limit` parameter to get contacts in smaller chunks
 
 ```http request
-GET /api/{session}/contacts/all?limit=100&offset=0&sortBy=id&sortOrder=asc
+GET /api/contacts/all?session={NAME}&limit=100&offset=0&sortBy=id&sortOrder=asc
 ```
 
 - `limit=100` - limit the number of chats to return
