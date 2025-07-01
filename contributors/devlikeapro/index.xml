@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on WAHA</title><link>/contributors/devlikeapro/</link><description>Recent content in devlikeapro on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 29 May 2025 08:48:45 +0000</lastBuildDate><atom:link href="/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.5 - Presence, Polls, Labels and More!</title><link>/blog/waha-2025-5/</link><pubDate>Thu, 29 May 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-5/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on WAHA</title><link>/contributors/devlikeapro/</link><description>Recent content in devlikeapro on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 29 Jun 2025 08:48:45 +0000</lastBuildDate><atom:link href="/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.6 - Security in WAHA Core, Message Edit Event, and Media Conversion</title><link>/blog/waha-2025-6/</link><pubDate>Sun, 29 Jun 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-6/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
+&lt;h3 id="-security-in-waha-core">🔒 Security in WAHA Core&lt;/h3>
+&lt;p>&lt;strong>WAHA Core&lt;/strong> now comes with robust, built-in security features!&lt;br>
+You can protect your API with an &lt;strong>API Key&lt;/strong> - and now, for even greater security, you can store only the hash of your key using &lt;code>WAHA_API_KEY=sha512:{HASH}&lt;/code>.&lt;br>
+This means your API key is never stored in plain text, reducing the risk if your environment variables are exposed.&lt;/p></description></item><item><title>WAHA 2025.5 - Presence, Polls, Labels and More!</title><link>/blog/waha-2025-5/</link><pubDate>Thu, 29 May 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-5/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
 &lt;h3 id="-presence-webjs">✅ Presence (WEBJS)&lt;/h3>
 &lt;p>In &lt;strong>WEBJS&lt;/strong>, you can now use the
 &lt;a href="/docs/how-to/presence/">&lt;strong>✅ Presence&lt;/strong>&lt;/a> API and Events
@@ -66,8 +70,4 @@ happening in your WAHA instance in real-time with the new
 feature!&lt;/p></description></item><item><title>WAHA 2024.10</title><link>/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-10/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202410">&lt;strong>WAHA 2024.10&lt;/strong>&lt;/a> 🎉&lt;/p>
 &lt;h2 id="waha-core---receive-media">WAHA Core - Receive Media&lt;/h2>
 &lt;p>We published &lt;a href="/docs/how-to/receive-messages/#files">&lt;strong>📥 Receive messages&lt;/strong> &lt;/a>
-in free &lt;strong>WAHA Core&lt;/strong> version, so you can receive media files in your WhatsApp API for free!&lt;/p></description></item><item><title>WAHA + n8n: No Code Low Code WhatsApp Automation Step-By-Step Guide</title><link>/blog/waha-n8n/</link><pubDate>Tue, 27 Aug 2024 08:48:45 +0000</pubDate><guid>/blog/waha-n8n/</guid><description>&lt;p align="center">
- &lt;img src="/images/n8n/WAHA+n8n.png" width='200'/>
-&lt;/p>
-&lt;p>Here&amp;rsquo;s how you can start developing your WhatsApp automation with using &lt;strong>n8n&lt;/strong> and &lt;strong>WAHA&lt;/strong> in pair so you can create
-your own no-code or low-code &lt;strong>WhatsApp automation&lt;/strong>:&lt;/p></description></item></channel></rss>
+in free &lt;strong>WAHA Core&lt;/strong> version, so you can receive media files in your WhatsApp API for free!&lt;/p></description></item></channel></rss>
