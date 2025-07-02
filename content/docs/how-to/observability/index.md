@@ -324,7 +324,7 @@ authentication:
 
 ## WAHA Debug Mode
 If you enable `WAHA_DEBUG_MODE=True`, WAHA exposes a few additional features for helping with 
-troubleshooting (usually memory and CPU-related).
+troubleshooting (usually Memory and CPU-related issues).
 
 {{< callout context="caution" icon="outline/info-circle" >}}
 `WAHA_DEBUG_MODE=True` is for **troubleshooting** purposes only
@@ -336,6 +336,36 @@ GET /api/server/debug/heapsnapshot
 ```
 
 Creates and downloads a heap dump from Node.js.
+
+You can execute request in
+[**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}),
+then click on **Download File**:
+
+![Swagger - Download File](swagger-download-file.png)
+
+### Get Browser Trace
+```http request
+GET /api/server/debug/browser/trace/{SESSION}?seconds=30&categories=%2A
+```
+Get **browser's trace** (uses [puppeteer](https://pptr.dev/api/puppeteer.tracing))
+which you can open in Chrome Dev Tool
+([chrome://tracing](chrome://tracing))
+or 
+[https://trace.cafe/](https://trace.cafe/).
+
+**Query Parameters:**
+- `seconds` - how many seconds to trace
+- `categories` - categories to trace
+
+{{< callout context="tip" icon="outline/alert-square-rounded" >}}
+Only one trace can be active at a time per browser.
+{{< /callout >}}
+
+You can execute request in
+[**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}),
+then click on **Download File**:
+
+![Swagger - Download File](swagger-download-file.png)
 
 
 ### GOWS pprof
