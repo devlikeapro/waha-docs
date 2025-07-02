@@ -358,7 +358,8 @@ or
 - `categories` - categories to trace
 
 {{< callout context="tip" icon="outline/alert-square-rounded" >}}
-Only one trace can be active at a time per browser.
+- 👉 Only one trace can be active at a time per browser.
+- ⌛ It takes `SECONDS` seconds to generate the trace file, please be patient 🐢
 {{< /callout >}}
 
 You can execute request in
