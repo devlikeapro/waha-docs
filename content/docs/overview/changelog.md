@@ -53,6 +53,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.2` - **WEBJS** - `--a-waha-session` and `--a-waha-timestamp` to chrome/chromium args - {{< issue 1092 >}}
 
 🛠️ **Fixes**
+- `2025.7.2` - **WEBJS** - limit renderer process to **1** - {{< issue 1092 >}}
 - `2025.7.1` - move `HEALTHCHECK` from Dockerfile to docker-compose - {{< issue 1090 >}}
 
 ### 2025.6
