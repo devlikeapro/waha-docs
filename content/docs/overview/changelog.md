@@ -54,6 +54,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 - `2025.7.2` - **WEBJS** - limit renderer process to **1** - {{< issue 1092 >}}
+- `2025.7.2` - remove healthcheck and `ping-check.sh` script - {{< issue 1085 >}}
 - `2025.7.1` - move `HEALTHCHECK` from Dockerfile to docker-compose - {{< issue 1090 >}}
 
 ### 2025.6
