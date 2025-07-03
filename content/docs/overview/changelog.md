@@ -55,6 +55,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 🛠️ **Fixes**
 - `2025.7.3` - **GOWS** - fix generating preview links youtu.be
 - `2025.7.3` - **GOWS** - fix fetching media for some messages
+- `2025.7.3` - **GOWS** - reconnect on session start if any network error happens
 - `2025.7.3` - **GOWS** - fix stuck in `STARTING` 
   - {{< issue 1043 >}}, {{< issue 1068 >}}, {{< issue 1094 >}}
 - `2025.7.3` - **WEBJS** - disable GPU
