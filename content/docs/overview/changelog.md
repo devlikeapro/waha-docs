@@ -48,14 +48,22 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.7
 **🆕 NEW**
-- `2025.7.2` - **WEBJS** - Add `GET /api/server/debug/browser/trace` API to [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})  
-  - {{< issue 1092 >}}
+
+- `2025.7.2` - **WEBJS** - Add `GET /api/server/debug/browser/trace` API to [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})  - {{< issue 1092 >}}
 - `2025.7.2` - **WEBJS** - `--a-waha-session` and `--a-waha-timestamp` to chrome/chromium args - {{< issue 1092 >}}
 
 🛠️ **Fixes**
+- `2025.7.3` - **GOWS** - fix generating preview links youtu.be
+- `2025.7.3` - **GOWS** - fix fetching media for some messages
+- `2025.7.3` - **GOWS** - fix stuck in `STARTING` 
+  - {{< issue 1043 >}}, {{< issue 1068 >}}, {{< issue 1094 >}}
+- `2025.7.3` - **WEBJS** - disable GPU
 - `2025.7.2` - **WEBJS** - limit renderer process to **1** - {{< issue 1092 >}}
 - `2025.7.2` - remove healthcheck and `ping-check.sh` script - {{< issue 1085 >}}
 - `2025.7.1` - move `HEALTHCHECK` from Dockerfile to docker-compose - {{< issue 1090 >}}
+
+**⚙️ Updates**
+- `2025.7.3` - **GOWS** - up engine to `v1024307498`
 
 ### 2025.6
 **🆕 NEW**
