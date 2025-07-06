@@ -58,6 +58,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.4` - **NOWEB** - fix some connection issues 
   - {{< issue 531 >}}, {{< issue 1098 >}}
 - `2025.7.4` - **WEBJS** - increase `protocolTimeout` to 300s - {{< issue 1103 >}}
+- `2025.7.4` - **WEBJS** - fix some `STARTING => FAILED` sessions - {{< issue 1071 >}}
 - `2025.7.4` - **GOWS** - Fix [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) to 10K contacts - {{< issue 1058 >}}
 - `2025.7.3` - **GOWS** - fix generating preview links youtu.be
 - `2025.7.3` - **GOWS** - fix fetching media for some messages
