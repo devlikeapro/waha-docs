@@ -53,6 +53,11 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.2` - **WEBJS** - `--a-waha-session` and `--a-waha-timestamp` to chrome/chromium args - {{< issue 1092 >}}
 
 🛠️ **Fixes**
+- `2025.7.4` - **NOWEB** - handle [**👤 Lids**]({{< relref "/docs/how-to/contacts/#api---lids" >}}) on first message 
+  - {{< issue 1073 >}}, {{< issue 1097 >}}
+- `2025.7.4` - **NOWEB** - fix some connection issues 
+  - {{< issue 531 >}}, {{< issue 1098 >}}
+- `2025.7.4` - **WEBJS** - increase `protocolTimeout` to 300s - {{< issue 1103 >}}
 - `2025.7.3` - **GOWS** - fix generating preview links youtu.be
 - `2025.7.3` - **GOWS** - fix fetching media for some messages
 - `2025.7.3` - **GOWS** - reconnect on session start if any network error happens
@@ -64,6 +69,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.1` - move `HEALTHCHECK` from Dockerfile to docker-compose - {{< issue 1090 >}}
 
 **⚙️ Updates**
+- `2025.7.4` - **NOWEB** - up engine to `2025-07-04`
 - `2025.7.3` - **GOWS** - up engine to `v1024307498`
 
 ### 2025.6
