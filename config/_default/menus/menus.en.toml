@@ -239,6 +239,11 @@ parent="language"
 url="https://translate.google.com/translate?sl=en&tl=bn&hl=bn&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
+name = "🇩🇪 Deutsch (German)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=de&hl=de&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
 name = "🇬🇧 English (English)"
 parent="language"
 url="https://waha.devlike.pro/"
@@ -292,6 +297,11 @@ url="https://translate.google.com/translate?sl=en&tl=pa&hl=pa&u=https://waha.dev
 name = "🇫🇷 Français (French)"
 parent="language"
 url="https://translate.google.com/translate?sl=en&tl=fr&hl=fr&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
+name = "🇮🇱 עברית (Hebrew)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=he&hl=he&u=https://waha.devlike.pro/&client=webapp"
 
 [[social]]
 name = "GitHub"
