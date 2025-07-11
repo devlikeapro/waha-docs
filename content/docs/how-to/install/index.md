@@ -249,8 +249,8 @@ If you have a domain name (e.g., **yourdomain.com**) that points to your server'
 ```bash
 apt install certbot
 apt-get install python3-certbot-nginx
-mkdir -p /var/www/ssl-proof/waha/.well-known
 
+mkdir -p /var/www/ssl-proof/waha/.well-known
 certbot --webroot -w /var/www/ssl-proof/waha/ -d <YOURDOMAIN.COM> -i nginx
 ```
 
