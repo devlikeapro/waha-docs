@@ -54,7 +54,7 @@ url = "/docs/engines"
 parent = "docs"
 
 [[main]]
-name = "🧩 Integrations"
+name = "🔌 Integrations"
 weight = 16
 identifier = "integrations"
 url = "/docs/integrations"

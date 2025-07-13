@@ -28,7 +28,7 @@
 {{< /card >}}
 {{< card title="Other docs" icon="outline/books" color="red" >}}
 
-- [🧩 Integrations]({{< relref "/docs/integrations" >}})
+- [🔌 Integrations]({{< relref "/docs/integrations" >}})
 - [📚 Swagger]({{< relref "/docs/how-to/swagger" >}})
 - [🏭 Engines]({{< relref "/docs/how-to/engines" >}})
 
