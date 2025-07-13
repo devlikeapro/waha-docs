@@ -1,0 +1,1 @@
+.overlay-link{align-items:center;border-radius:12px;color:var(--text-color);cursor:pointer;display:flex;outline:0 none;padding:.75rem 1rem;position:relative;transition:background-color .2s,box-shadow .2s}.overlay-link:hover{background-color:var(--surface-hover)}

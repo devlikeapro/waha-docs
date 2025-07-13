@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 29 Jun 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.6 - Security in WAHA Core, Message Edit Event, and Media Conversion</title><link>/blog/waha-2025-6/</link><pubDate>Sun, 29 Jun 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-6/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 11 Jul 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA + ChatWoot - Installation Guide</title><link>/blog/apps-chatwoot-install/</link><pubDate>Fri, 11 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-install/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
+
+
+
+&lt;div>&lt;/div>
+&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/article svg-inline callout-icon me-2 mb-3" id="svg-article" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+ &lt;path d="M7 8h10" />
+ &lt;path d="M7 12h10" />
+ &lt;path d="M7 16h10" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WAHA + ChatWoot - Configuration Guide</title><link>/blog/apps-chatwoot-config/</link><pubDate>Thu, 10 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-config/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
+
+
+
+&lt;div>&lt;/div>
+&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/article svg-inline callout-icon me-2 mb-3" id="svg-article" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+ &lt;path d="M7 8h10" />
+ &lt;path d="M7 12h10" />
+ &lt;path d="M7 16h10" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WAHA + ChatWoot - HTTPS Guide</title><link>/blog/apps-chatwoot-3-https/</link><pubDate>Mon, 07 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-3-https/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
+
+
+
+&lt;div>&lt;/div>
+&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/article svg-inline callout-icon me-2 mb-3" id="svg-article" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+ &lt;path d="M7 8h10" />
+ &lt;path d="M7 12h10" />
+ &lt;path d="M7 16h10" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WAHA 2025.6 - Security in WAHA Core, Message Edit Event, and Media Conversion</title><link>/blog/waha-2025-6/</link><pubDate>Sun, 29 Jun 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-6/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
 &lt;h3 id="-security-in-waha-core">🔒 Security in WAHA Core&lt;/h3>
 &lt;p>&lt;strong>WAHA Core&lt;/strong> now comes with robust, built-in security features!&lt;br>
 You can protect your API with an &lt;strong>API Key&lt;/strong> - and now, for even greater security, you can store only the hash of your key using &lt;code>WAHA_API_KEY=sha512:{HASH}&lt;/code>.&lt;br>
@@ -60,14 +141,4 @@ we have fixed them in this release!&lt;/p></description></item><item><title>WAHA
 &lt;h2 id="-profile-api">🆔 Profile API&lt;/h2>
 &lt;p>Managing your WhatsApp profile has never been easier.&lt;/p></description></item><item><title>WAHA 2025.1</title><link>/blog/waha-2025-1/</link><pubDate>Thu, 30 Jan 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-1/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the &lt;a href="/docs/overview/changelog/#20251">&lt;strong>WAHA 2025.1&lt;/strong>&lt;/a> 🎉&lt;/p>
 &lt;h2 id="gows-engine">GOWS engine&lt;/h2>
-&lt;p>Meet &lt;strong>GOWS&lt;/strong> - new, fast, super-reliable and stable &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engine&lt;/strong>&lt;/a> for your WAHA instance!&lt;/p></description></item><item><title>WAHA 2024.12</title><link>/blog/waha-2024-12/</link><pubDate>Mon, 30 Dec 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-12/</guid><description>&lt;p>🎉🎉🎉 First of all, &lt;strong>Happy New Year!&lt;/strong> We wish you all the best in the New 2025 Year! 🎉🎉🎉&lt;/p>
-&lt;p>We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202412">&lt;strong>WAHA 2024.12&lt;/strong>&lt;/a>!&lt;/p></description></item><item><title>WAHA 2024.11</title><link>/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-11/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202411">&lt;strong>WAHA 2024.11&lt;/strong>&lt;/a> 🎉&lt;/p>
-&lt;h2 id="event-monitor">Event Monitor&lt;/h2>
-&lt;p>Now you can observe the
-&lt;a href="/docs/how-to/events/">&lt;strong>Events&lt;/strong>&lt;/a>
-happening in your WAHA instance in real-time with the new
-&lt;a href="/docs/how-to/dashboard/#event-monitor">&lt;strong>Event Monitor&lt;/strong>&lt;/a>
-feature!&lt;/p></description></item><item><title>WAHA 2024.10</title><link>/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-10/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202410">&lt;strong>WAHA 2024.10&lt;/strong>&lt;/a> 🎉&lt;/p>
-&lt;h2 id="waha-core---receive-media">WAHA Core - Receive Media&lt;/h2>
-&lt;p>We published &lt;a href="/docs/how-to/receive-messages/#files">&lt;strong>📥 Receive messages&lt;/strong> &lt;/a>
-in free &lt;strong>WAHA Core&lt;/strong> version, so you can receive media files in your WhatsApp API for free!&lt;/p></description></item></channel></rss>
+&lt;p>Meet &lt;strong>GOWS&lt;/strong> - new, fast, super-reliable and stable &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engine&lt;/strong>&lt;/a> for your WAHA instance!&lt;/p></description></item></channel></rss>

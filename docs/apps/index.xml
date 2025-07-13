@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🧩 Apps on WAHA</title><link>/docs/apps/</link><description>Recent content in 🧩 Apps on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 13 Jul 2024 12:00:00 +0000</lastBuildDate><atom:link href="/docs/apps/index.xml" rel="self" type="application/rss+xml"/><item><title>Apps</title><link>/docs/apps/about/</link><pubDate>Sat, 13 Jul 2024 12:00:00 +0000</pubDate><guid>/docs/apps/about/</guid><description>&lt;p>&lt;strong>🧩 Apps&lt;/strong> are &lt;strong>built-in connections&lt;/strong> that integrate &lt;strong>WAHA&lt;/strong> with &lt;strong>other services&lt;/strong> in a few steps.&lt;/p>
+&lt;p>&lt;strong>WAHA Team&lt;/strong> fully supports &lt;strong>🧩 Apps&lt;/strong>.&lt;/p></description></item><item><title>ChatWoot</title><link>/docs/apps/chatwoot/</link><pubDate>Thu, 10 Jul 2025 08:49:31 +0000</pubDate><guid>/docs/apps/chatwoot/</guid><description>&lt;p align="center">
+ &lt;img src="/images/chatwoot/waha-chatwoot.png" style="width: 150px">
+&lt;/p>
+&lt;p>&lt;strong>WAHA&lt;/strong> provides a built-in &lt;strong>WhatsApp&lt;/strong> integration for
+&lt;a href="https://www.chatwoot.com/">&lt;strong>ChatWoot&lt;/strong>&lt;/a> you can configure in few steps!&lt;/p>
+
+
+
+&lt;div>&lt;/div>
+&lt;div class="callout callout-info d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/gavel svg-inline callout-icon me-2 mb-3" id="svg-gavel" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M13 10l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385" />
+ &lt;path d="M6 9l4 4" />
+ &lt;path d="M13 10l-4 -4" />
+ &lt;path d="M3 21h7" />
+ &lt;path d="M6.793 15.793l-3.586 -3.586a1 1 0 0 1 0 -1.414l2.293 -2.293l.5 .5l3 -3l-.5 -.5l2.293 -2.293a1 1 0 0 1 1.414 0l3.586 3.586a1 1 0 0 1 0 1.414l-2.293 2.293l-.5 -.5l-3 3l.5 .5l-2.293 2.293a1 1 0 0 1 -1.414 0z" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>Disclaimer&lt;/p></description></item></channel></rss>

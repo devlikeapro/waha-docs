@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apps on WAHA</title><link>/categories/apps/</link><description>Recent content in Apps on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 11 Jul 2025 08:48:45 +0000</lastBuildDate><atom:link href="/categories/apps/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA + ChatWoot - Installation Guide</title><link>/blog/apps-chatwoot-install/</link><pubDate>Fri, 11 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-install/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
+
+
+
+&lt;div>&lt;/div>
+&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/article svg-inline callout-icon me-2 mb-3" id="svg-article" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+ &lt;path d="M7 8h10" />
+ &lt;path d="M7 12h10" />
+ &lt;path d="M7 16h10" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WAHA + ChatWoot - Configuration Guide</title><link>/blog/apps-chatwoot-config/</link><pubDate>Thu, 10 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-config/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
+
+
+
+&lt;div>&lt;/div>
+&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/article svg-inline callout-icon me-2 mb-3" id="svg-article" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+ &lt;path d="M7 8h10" />
+ &lt;path d="M7 12h10" />
+ &lt;path d="M7 16h10" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WAHA + ChatWoot - HTTPS Guide</title><link>/blog/apps-chatwoot-3-https/</link><pubDate>Mon, 07 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-3-https/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
+
+
+
+&lt;div>&lt;/div>
+&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/article svg-inline callout-icon me-2 mb-3" id="svg-article" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+ &lt;path d="M7 8h10" />
+ &lt;path d="M7 12h10" />
+ &lt;path d="M7 16h10" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>ChatWoot Articles&lt;/p></description></item></channel></rss>

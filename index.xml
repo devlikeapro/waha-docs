@@ -1,73 +1,76 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhatsApp HTTP API on WAHA</title><link>/</link><description>Recent content in WhatsApp HTTP API on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 29 Jun 2025 08:48:45 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.6 - Security in WAHA Core, Message Edit Event, and Media Conversion</title><link>/blog/waha-2025-6/</link><pubDate>Sun, 29 Jun 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-6/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
-&lt;h3 id="-security-in-waha-core">🔒 Security in WAHA Core&lt;/h3>
-&lt;p>&lt;strong>WAHA Core&lt;/strong> now comes with robust, built-in security features!&lt;br>
-You can protect your API with an &lt;strong>API Key&lt;/strong> - and now, for even greater security, you can store only the hash of your key using &lt;code>WAHA_API_KEY=sha512:{HASH}&lt;/code>.&lt;br>
-This means your API key is never stored in plain text, reducing the risk if your environment variables are exposed.&lt;/p></description></item><item><title>WAHA 2025.5 - Presence, Polls, Labels and More!</title><link>/blog/waha-2025-5/</link><pubDate>Thu, 29 May 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-5/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
-&lt;h3 id="-presence-webjs">✅ Presence (WEBJS)&lt;/h3>
-&lt;p>In &lt;strong>WEBJS&lt;/strong>, you can now use the
-&lt;a href="/docs/how-to/presence/">&lt;strong>✅ Presence&lt;/strong>&lt;/a> API and Events
-to track your customers&amp;rsquo; online status!&lt;/p></description></item><item><title>🚨 WAHA Security Alert</title><link>/blog/security-alert/</link><pubDate>Tue, 29 Apr 2025 08:48:45 +0000</pubDate><guid>/blog/security-alert/</guid><description>&lt;hr>
-&lt;h2 id="-waha-security-alert">🚨 WAHA Security Alert&lt;/h2>
-&lt;p>We’ve recently seen a disturbing trend: users running WAHA with the &lt;strong>API publicly exposed&lt;/strong> and &lt;strong>without any form of protection&lt;/strong>.&lt;/p></description></item><item><title>WAHA 2025.4 - Read Chat Messages, Group Acks, and Engines Stability!</title><link>/blog/waha-2025-4/</link><pubDate>Tue, 29 Apr 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-4/</guid><description>&lt;hr>
-&lt;p>We’re excited to introduce &lt;a href="/docs/overview/changelog/#20254">&lt;strong>WAHA 2025.4&lt;/strong>&lt;/a>, packed with new API capabilities, group handling improvements, and crucial bug fixes across all engines!&lt;/p></description></item><item><title>WAHA 2025.3</title><link>/blog/waha-2025-3/</link><pubDate>Wed, 26 Mar 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-3/</guid><description>&lt;p>We’re excited to roll out &lt;a href="/docs/overview/changelog/#202503">&lt;strong>WAHA 2025.3&lt;/strong>&lt;/a>!&lt;/p>
-&lt;h2 id="gows-10">GOWS 1.0&lt;/h2>
-&lt;p>&lt;a href="/docs/how-to/engines/#gows">&lt;strong>GOWS Engine&lt;/strong>&lt;/a> just got its &lt;strong>1.0&lt;/strong> moment!&lt;/p>
-&lt;p>Here’s what’s new:&lt;/p>
-&lt;ul>
-&lt;li>Enable Link Previews - &lt;a href='https://github.com/devlikeapro/waha/issues/763' target="_blank">
-#763
-&lt;/a>
-&lt;/li>
-&lt;li>Delete Status Message - &lt;a href='https://github.com/devlikeapro/waha/issues/754' target="_blank">
-#754
-&lt;/a>
-&lt;/li>
-&lt;li>Delete Message - &lt;a href='https://github.com/devlikeapro/waha/issues/796' target="_blank">
-#796
-&lt;/a>
-&lt;/li>
-&lt;li>Edit Message - &lt;a href='https://github.com/devlikeapro/waha/issues/797' target="_blank">
-#797
-&lt;/a>
-&lt;/li>
-&lt;li>Reply To Message - &lt;a href='https://github.com/devlikeapro/waha/issues/799' target="_blank">
-#799
-&lt;/a>
-&lt;/li>
-&lt;li>Add &lt;code>filename&lt;/code> on &lt;code>/api/sendFile&lt;/code> - &lt;a href='https://github.com/devlikeapro/waha/issues/853' target="_blank">
-#853
-&lt;/a>
-&lt;/li>
-&lt;li>Extract &lt;code>replyTo&lt;/code> - &lt;a href='https://github.com/devlikeapro/waha/issues/876' target="_blank">
-#876
-&lt;/a>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="noweb-stability">NOWEB Stability&lt;/h2>
-&lt;p>If you faced any issues with the NOWEB engine, like
-&lt;a href='https://github.com/devlikeapro/waha/issues/821' target="_blank">
-#821
-&lt;/a>
-, &lt;a href='https://github.com/devlikeapro/waha/issues/860' target="_blank">
-#860
-&lt;/a>
-, &lt;a href='https://github.com/devlikeapro/waha/issues/869' target="_blank">
-#869
-&lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WhatsApp HTTP API on WAHA</title><link>/</link><description>Recent content in WhatsApp HTTP API on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 16 Nov 2020 13:59:39 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>📖 Introduction</title><link>/docs/overview/introduction/</link><pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate><guid>/docs/overview/introduction/</guid><description>&lt;p>&lt;strong>WAHA&lt;/strong> - &lt;u>W&lt;/u>hats&lt;u>A&lt;/u>pp &lt;u>H&lt;/u>TTP &lt;u>A&lt;/u>PI that you can install on your own server and run in less than 5 minutes!&lt;/p></description></item><item><title>⚡ Quick Start</title><link>/docs/overview/quick-start/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>/docs/overview/quick-start/</guid><description>&lt;div class="mb-2 text-center">
+ &lt;a href="waha-first-message.jpg" target="_blank" style="cursor: pointer;">
+ &lt;img src="waha-first-message.jpg" alt="">
+ &lt;/a>
+ 
+&lt;/div>
 
-we have fixed them in this release!&lt;/p></description></item><item><title>WAHA 2025.2</title><link>/blog/waha-2025-2/</link><pubDate>Thu, 27 Feb 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-2/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the
-&lt;a href="/docs/overview/changelog/#20252">&lt;strong>WAHA 2025.2&lt;/strong>&lt;/a> 🎉&lt;/p>
-&lt;h2 id="-profile-api">🆔 Profile API&lt;/h2>
-&lt;p>Managing your WhatsApp profile has never been easier.&lt;/p></description></item><item><title>WAHA 2025.1</title><link>/blog/waha-2025-1/</link><pubDate>Thu, 30 Jan 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-1/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the &lt;a href="/docs/overview/changelog/#20251">&lt;strong>WAHA 2025.1&lt;/strong>&lt;/a> 🎉&lt;/p>
-&lt;h2 id="gows-engine">GOWS engine&lt;/h2>
-&lt;p>Meet &lt;strong>GOWS&lt;/strong> - new, fast, super-reliable and stable &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engine&lt;/strong>&lt;/a> for your WAHA instance!&lt;/p></description></item><item><title>WAHA 2024.12</title><link>/blog/waha-2024-12/</link><pubDate>Mon, 30 Dec 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-12/</guid><description>&lt;p>🎉🎉🎉 First of all, &lt;strong>Happy New Year!&lt;/strong> We wish you all the best in the New 2025 Year! 🎉🎉🎉&lt;/p>
-&lt;p>We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202412">&lt;strong>WAHA 2024.12&lt;/strong>&lt;/a>!&lt;/p></description></item><item><title>WAHA 2024.11</title><link>/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-11/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202411">&lt;strong>WAHA 2024.11&lt;/strong>&lt;/a> 🎉&lt;/p>
-&lt;h2 id="event-monitor">Event Monitor&lt;/h2>
-&lt;p>Now you can observe the
-&lt;a href="/docs/how-to/events/">&lt;strong>Events&lt;/strong>&lt;/a>
-happening in your WAHA instance in real-time with the new
-&lt;a href="/docs/how-to/dashboard/#event-monitor">&lt;strong>Event Monitor&lt;/strong>&lt;/a>
-feature!&lt;/p></description></item><item><title>WAHA 2024.10</title><link>/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-10/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202410">&lt;strong>WAHA 2024.10&lt;/strong>&lt;/a> 🎉&lt;/p>
-&lt;h2 id="waha-core---receive-media">WAHA Core - Receive Media&lt;/h2>
-&lt;p>We published &lt;a href="/docs/how-to/receive-messages/#files">&lt;strong>📥 Receive messages&lt;/strong> &lt;/a>
-in free &lt;strong>WAHA Core&lt;/strong> version, so you can receive media files in your WhatsApp API for free!&lt;/p></description></item></channel></rss>
+&lt;h2 id="step-by-step-guide">Step-by-Step guide&lt;/h2>
+&lt;p>On this page, you&amp;rsquo;re going to install and run WAHA,
+authenticate the client using a QR code,
+and send &lt;strong>your first message&lt;/strong> to WhatsApp using the API!&lt;/p></description></item><item><title>⚠️ How to Avoid Blocking</title><link>/docs/overview/%EF%B8%8F-how-to-avoid-blocking/</link><pubDate>Thu, 12 Nov 2020 13:26:54 +0100</pubDate><guid>/docs/overview/%EF%B8%8F-how-to-avoid-blocking/</guid><description>&lt;p>How to Avoid Blocking in WhatsApp when developing bots.&lt;/p>
+&lt;p>It&amp;rsquo;s important to keep in mind that WhatsApp has strict policies in place to prevent spamming and abuse of their
+platform.&lt;/p></description></item><item><title>❓ FAQ</title><link>/docs/overview/faq/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/overview/faq/</guid><description>&lt;h2 id="system-requirements">System Requirements&lt;/h2>
+&lt;h3 id="how-much-cpu-and-memory-does-waha-need">How much CPU and Memory does WAHA need?&lt;/h3>
+&lt;p>WAHA has multiple &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engines&lt;/strong>&lt;/a> under the hood, and the CPU and Memory requirements change depending on the engine used.&lt;/p></description></item><item><title>🆕 Changelog</title><link>/docs/overview/changelog/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/overview/changelog/</guid><description>&lt;h2 id="get-notified">Get Notified&lt;/h2>
+&lt;p>If you wish to get &lt;strong>Monthly Summary&lt;/strong> about WAHA changes, subscribe to our channels.&lt;/p>
+&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/rss svg-inline callout-icon me-2 mb-3" id="svg-rss" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+ &lt;path d="M4 4a16 16 0 0 1 16 16" />
+ &lt;path d="M4 11a9 9 0 0 1 9 9" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>You can subscribe on free tier!&lt;/p></description></item><item><title>🔧 Install &amp; Update</title><link>/docs/how-to/install/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/install/</guid><description>&lt;div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/info-circle svg-inline callout-icon me-2 mb-3" id="svg-info-circle" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+ &lt;path d="M12 9h.01" />
+ &lt;path d="M11 12h1v4h1" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ 
+ &lt;div class="callout-body">
+ &lt;p>If you wish to follow a &lt;strong>Step-By-Step guide&lt;/strong> which shows you &lt;strong>how to send your first message&lt;/strong> via HTTP API,
+please go to &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>📊 Dashboard</title><link>/docs/how-to/dashboard/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/dashboard/</guid><description>&lt;p>&lt;strong>Dashboard&lt;/strong> is a UI to manage your WhatsApp sessions!&lt;/p>
+&lt;video autoplay loop muted playsinline controls='noremoteplayback' width="100%" poster='/images/waha-dashboard.png'>
+ &lt;source src="/videos/waha-dashboard-overview.webm" type="video/webm" />
+ Download the &lt;a href="/videos/waha-dashboard-overview.webm">Dashboard Overview video&lt;/a> .
+&lt;/video>
+&lt;p>You can access &lt;strong>Dashboard&lt;/strong> by running the project and opening
+&lt;a href="http://localhost:3000/dashboard" target="_blank">http://localhost:3000/dashboard&lt;/a>
+(or similar, but with &lt;a href="/dashboard" target="_blank">/dashboard&lt;/a> at the end).&lt;/p></description></item><item><title>📚 Swagger (OpenAPI)</title><link>/docs/how-to/swagger/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/swagger/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The project provides HTTP API (REST), which is documented with OpenAPI specification and Swagger UI.&lt;/p>
+&lt;video autoplay loop muted playsinline controls='noremoteplayback' width="100%" poster='/images/swagger.png'>
+ &lt;source src="/videos/swagger-overview.webm" type="video/webm" />
+ Download the &lt;a href="/videos/swagger-overview.webm">Swagger Overview video&lt;/a> .
+&lt;/video>
+&lt;p>You can see all available endpoints, request/response examples, and even execute them directly from the Swagger UI.&lt;/p></description></item><item><title>🖥️ Sessions</title><link>/docs/how-to/sessions/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/sessions/</guid><description>&lt;p>&lt;strong>Session&lt;/strong> represents a &lt;strong>WhatsApp Account (Phone Number)&lt;/strong> connected to &lt;strong>WAHA&lt;/strong>
+that you can use to send and receive messages.&lt;/p>
+&lt;h2 id="features">Features&lt;/h2>
+&lt;p>Here&amp;rsquo;s the list of features that are available by &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engines&lt;/strong>&lt;/a>:&lt;/p></description></item><item><title>📤 Send messages</title><link>/docs/how-to/send-messages/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/send-messages/</guid><description>&lt;p>We assume that you&amp;rsquo;ve already run the Docker container and authenticated the session with a QR code.&lt;/p>
+&lt;p>If you haven&amp;rsquo;t yet - please follow the steps from &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a>.&lt;/p></description></item></channel></rss>
