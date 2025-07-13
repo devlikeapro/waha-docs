@@ -4,7 +4,6 @@ description: "Introducing WAHA 2024.8 - WhatsApp Business Labels API, Chat Archi
 excerpt: "Introducing WAHA 2024.8 - WhatsApp Business Labels API, Chat Archive and more!"
 date: 2024-08-01T08:48:45+00:00
 draft: false
-weight: 50
 images: ["WAHA 2024.8.png"]
 categories: ["Releases"]
 tags: []

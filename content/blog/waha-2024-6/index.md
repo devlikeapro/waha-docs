@@ -4,7 +4,6 @@ description: "Introducing NOWEB store for contacts, chats, and messages, Dashboa
 excerpt: "Introducing NOWEB store for contacts, chats, and messages, Dashboard available in Core version, and built-in HTTPS support!"
 date: 2024-06-30T08:48:45+00:00
 draft: false
-weight: 50
 images: ["WAHA 2024.6.png"]
 categories: ["Releases"]
 tags: []

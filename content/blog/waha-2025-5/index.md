@@ -4,7 +4,6 @@ description: "WAHA 2025.5 - Presence, Polls, Labels and More!"
 excerpt: "WAHA 2025.5 - Presence, Polls, Labels and More!"
 date: 2025-05-29T08:48:45+00:00
 draft: false
-weight: 50
 images: [ "waha-2025-5.png" ]
 categories: [ "Releases" ]
 tags: [ ]

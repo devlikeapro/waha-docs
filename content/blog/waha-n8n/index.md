@@ -4,7 +4,6 @@ description: "Start developing your WhatsApp automation with using n8n and WAHA 
 excerpt: "Start developing your WhatsApp automation with using n8n and WAHA in pair!"
 date: 2024-08-27T08:48:45+00:00
 draft: false
-weight: 50
 images: ["waha-n8n.png"]
 categories: ["Tips"]
 tags: []
@@ -130,7 +129,7 @@ for workflow templates!
 ## Troubleshooting
 If you're experiencing any issues or have a feature request, please check the below resources:
 **WAHA**:
-- [**🧩 n8n Integration**]({{< relref "/docs/integrations/n8n" >}})
+- [**🔌 n8n Integration**]({{< relref "/docs/integrations/n8n" >}})
 - [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}})
 - [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}})
   

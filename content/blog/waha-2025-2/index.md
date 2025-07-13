@@ -4,7 +4,6 @@ description: "WAHA 2025.2 - Search Channels API, Profile API and more! 🎉"
 excerpt: "WAHA 2025.2 - Search Channels API, Profile API and more! 🎉"
 date: 2025-02-27T08:48:45+00:00
 draft: false
-weight: 50
 images: [ "waha-2025-2.png" ]
 categories: [ "Releases" ]
 tags: [ ]

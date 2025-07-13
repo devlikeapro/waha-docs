@@ -4,7 +4,6 @@ description: "WAHA Scaling - how to scale WAHA for >500 sessions with Vertical a
 excerpt: "WAHA Scaling - how to scale WAHA for >500 sessions with Vertical and Horizontal scaling"
 date: 2024-08-14T08:48:45+00:00
 draft: false
-weight: 50
 images: [ "horizontal-vs-vertical-scaling.png" ]
 categories: [ "Tips" ]
 tags: [ ]

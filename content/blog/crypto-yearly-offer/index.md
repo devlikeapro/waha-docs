@@ -4,7 +4,6 @@ description: "⚡50% OFF Yearly Crypto Offer!⚡"
 excerpt: "⚡50% OFF Yearly Crypto Offer!⚡"
 date: 2024-06-05T08:48:45+00:00
 draft: false
-weight: 50
 images: ["50-off.png"]
 categories: ["Donations"]
 tags: []

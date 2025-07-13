@@ -4,7 +4,6 @@ description: "WAHA 2025.1 - PostgreSQL support, GOWS engine and more! 🎉"
 excerpt: "WAHA 2025.1 - PostgreSQL support, GOWS engine and more! 🎉"
 date: 2025-01-30T08:48:45+00:00
 draft: false
-weight: 50
 images: ["WAHA 2025.1.png"]
 categories: ["Releases"]
 tags: []

@@ -4,7 +4,6 @@ description: "Step-by-step guide on how to run WAHA on local network using Ngrok
 excerpt: "Step-by-step guide on how to run WAHA on local network using Ngrok (so you can use it on Cloud or VPS)"
 date: 2024-06-11T08:48:45+00:00
 draft: false
-weight: 50
 images: [ "ngrok.png" ]
 categories: [ "Tips" ]
 tags: [ ]

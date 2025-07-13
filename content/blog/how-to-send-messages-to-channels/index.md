@@ -4,7 +4,6 @@ description: "How to send a post to WhatsApp Channel via API - Step By Step Guid
 excerpt: "How to send a post to WhatsApp Channel via API - Step By Step Guide"
 date: 2024-07-16T08:48:45+00:00
 draft: false
-weight: 50
 images: [ "whatsapp-channels.png" ]
 categories: [ "Tips" ]
 tags: [ ]

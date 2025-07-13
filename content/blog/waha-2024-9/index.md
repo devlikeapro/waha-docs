@@ -4,7 +4,6 @@ description: "We are thrilled to announce the release of WAHA 2024.9"
 excerpt: "We are thrilled to announce the release of WAHA 2024.9 🎉"
 date: 2024-08-27T08:48:45+00:00
 draft: false
-weight: 50
 images: ["WAHA 2024.9.png"]
 categories: ["Releases"]
 tags: []

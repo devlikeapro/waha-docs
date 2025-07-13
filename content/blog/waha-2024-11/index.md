@@ -4,7 +4,6 @@ description: "WAHA 2024.11 - What Have We Done 😱"
 excerpt: "WAHA 2024.11 - What Have We Done 😱"
 date: 2024-11-30T08:48:45+00:00
 draft: false
-weight: 50
 images: ["WAHA 2024.11.png"]
 categories: ["Releases"]
 tags: []

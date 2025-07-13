@@ -10,5 +10,6 @@ slug: integrations
 sidebar:
   collapsed: true
 ---
+
 Different ways to integrate WAHA with other services.
 

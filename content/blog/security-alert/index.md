@@ -4,7 +4,6 @@ description: "🚨 WAHA Security Alert - check your API Key if your API is publi
 excerpt: "🚨 WAHA Security Alert - check your API Key if your API is public!"
 date: 2025-04-29T08:48:45+00:00
 draft: false
-weight: 50
 images: ["security-alert.png"]
 categories: ["Releases"]
 tags: []

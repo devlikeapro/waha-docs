@@ -4,7 +4,6 @@ description: "WAHA 2024.10 - WAHA Core - Receive Media, n8n Low Code Integration
 excerpt: "WAHA 2024.10 - WAHA Core - Receive Media, n8n Low Code Integration, TypeBot Integration, ChatWoot Integration, Workflow Templates, Stability fixes"
 date: 2024-09-30T08:48:45+00:00
 draft: false
-weight: 50
 images: ["WAHA 2024.10.png"]
 categories: ["Releases"]
 tags: []
@@ -63,7 +62,7 @@ Install it on your n8n instance and start building your first workflow:
 ```
 
 Read more about 
-[**🧩 n8n Integration**]({{< relref "/docs/integrations/n8n" >}})
+[**🔌 n8n Integration**]({{< relref "/docs/integrations/n8n" >}})
 
 ### TypeBot Integration
 <p align="center">
@@ -72,7 +71,7 @@ Read more about
 
 Using the n8n workflow you can integrate **TypeBot** with **WAHA**!
 
-👉 Checkout out [**🧩 TypeBot Integration**]({{< relref "/docs/integrations/typebot" >}})
+👉 Checkout out [**🔌 TypeBot Integration**]({{< relref "/docs/integrations/typebot" >}})
 
 ### ChatWoot Integration
 <p align="center">
@@ -81,7 +80,7 @@ Using the n8n workflow you can integrate **TypeBot** with **WAHA**!
 
 Using the n8n workflow you can integrate **ChatWoot** with **WAHA**!
 
-👉 Checkout out [**🧩 ChatWoot Integration**]({{< relref "/docs/integrations/chatwoot" >}})
+👉 Checkout out [**🔌 ChatWoot Integration**]({{< relref "/docs/integrations/chatwoot" >}})
 
 ### Workflow Templates
 👉 Check out

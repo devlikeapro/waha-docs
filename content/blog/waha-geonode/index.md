@@ -4,7 +4,6 @@ description: "Step-by-step guide on how to use Geonode proxy with WAHA"
 excerpt: "Step-by-step guide on how to use Geonode proxy with WAHA"
 date: 2024-06-11T08:48:45+00:00
 draft: false
-weight: 50
 images: [ "proxy.png" ]
 categories: [ "Tips" ]
 tags: [ ]

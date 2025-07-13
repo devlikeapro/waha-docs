@@ -4,7 +4,11 @@
     </a>
     {{ if ne (.Get "full") "false" }}
     <div class="text-center small" style="color: #6c757d">
+        {{ with .Get "fulltext" }}
+        {{ . }}
+        {{ else }}
         Click to open full size.
+        {{ end }}
     </div>
     {{ end }}
 </div>

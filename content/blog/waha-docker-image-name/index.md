@@ -4,7 +4,6 @@ description: "We have renamed docker image to <b>devlikeapro/waha</b>! 🎉"
 excerpt: "We have renamed docker image to <b>devlikeapro/waha</b>! 🎉"
 date: 2024-05-30T08:48:45+00:00
 draft: false
-weight: 50
 images: ["new-name.jpg"]
 categories: ["News"]
 tags: []

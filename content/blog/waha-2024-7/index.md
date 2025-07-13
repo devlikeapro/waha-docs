@@ -4,7 +4,6 @@ description: "Introducing WAHA 2024.7 - WhatsApp Channels API, JSON logs"
 excerpt: "Introducing WAHA 2024.7 - WhatsApp Channels API, JSON logs"
 date: 2024-07-20T08:48:45+00:00
 draft: false
-weight: 50
 images: ["WAHA 2024.7.png"]
 categories: ["Releases"]
 tags: []

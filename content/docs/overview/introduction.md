@@ -28,12 +28,13 @@ will guide you through the necessary steps to successfully send your first text 
 {{< /callout >}}
 
 
-## Disclaimer
+{{< callout context="info" title="Disclaimer" icon="outline/gavel" >}}
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or its affiliates. The official WhatsApp website can be found at [whatsapp.com](https://whatsapp.com).
 
 "WhatsApp" as well as related names, marks, emblems and images are registered trademarks of their respective owners. Also, it is not guaranteed that you will not be blocked by using this method. WhatsApp does not allow bots or unofficial clients on their platform, so this shouldn't be considered totally safe.
 
 For any businesses looking to integrate with WhatsApp for critical applications, we highly recommend using officially supported methods, such as Twilio's solution or other alternatives. You might also consider [the official API ->](https://developers.facebook.com/docs/whatsapp/).
+{{< /callout >}}
 
 ## Quick Links
 

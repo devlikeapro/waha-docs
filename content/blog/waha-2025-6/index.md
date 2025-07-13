@@ -4,7 +4,6 @@ description: "Enhanced security, message edit tracking, and simplified media con
 excerpt: "Secure API keys, message edit events, and built-in media conversion without manual setup."
 date: 2025-06-29T08:48:45+00:00
 draft: false
-weight: 50
 images: [ "waha-2025-6.png" ]
 categories: [ "Releases" ]
 tags: [ ]

@@ -4,7 +4,6 @@ description: "WAHA 2025.3 - GOWS 1.0, NOWEB stability, and More!"
 excerpt: "WAHA 2025.3 - GOWS 1.0, NOWEB stability, and More!"
 date: 2025-03-26T08:48:45+00:00
 draft: false
-weight: 50
 images: [ "waha-2025-3.png" ]
 categories: [ "Releases" ]
 tags: [ ]

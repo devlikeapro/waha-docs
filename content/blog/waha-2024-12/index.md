@@ -4,7 +4,6 @@ description: "WAHA 2024.12 - Chat UI API, Join Group, And More! 🎉"
 excerpt: "WAHA 2024.12 - Chat UI API, Join Group, And More! 🎉"
 date: 2024-12-30T08:48:45+00:00
 draft: false
-weight: 50
 images: ["WAHA 2024.12.png"]
 categories: ["Releases"]
 tags: []

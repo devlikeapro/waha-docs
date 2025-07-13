@@ -4,7 +4,6 @@ description: "WAHA 2025.4 - Mark messages as read, track receipts in groups, sta
 excerpt: "WAHA 2025.4 - Mark messages as read, track receipts in groups, stability fixes and more!"
 date: 2025-04-29T08:48:45+00:00
 draft: false
-weight: 50
 images: ["waha-2025-4.png"]
 categories: ["Releases"]
 tags: []
