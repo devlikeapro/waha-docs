@@ -71,7 +71,7 @@ server {
     proxy_pass_header Authorization;
     proxy_pass http://$upstream;
     proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection "upgrade";
+    proxy_set_header Connection "Upgrade";
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-Proto $scheme;
     proxy_set_header X-Forwarded-Ssl on; # Optional
@@ -197,7 +197,7 @@ certbot --webroot -w /var/www/ssl-proof/waha/ -d waha.<yourdomain.com> -i nginx
 ```
 
 ### 5. Update env variables
-Update `FRONTEND_URL` in `.chatwoot.env`
+Update `WAHA_BASE_URL` in `.waha.env`
 ```bash
 nano .waha.env
 ``` 
@@ -216,7 +216,7 @@ docker compose up -d
 - Make sure it's working
 
 ### 7. Update Webhook URL in ChatWoot
-- Open **ChatWoot** `http://localhost:3009`
+- Open **ChatWoot** `https://chatwoot.<yourdomain.com>`
 - Go to **Settings → Inboxes → {Inbox}**
 - Update **Webhook URL** from `http://waha:3000/{WEBHOOKURL}` to `https://waha.<yourdomain.com>/{WEBHOOKURL}`
 - Click **Save**

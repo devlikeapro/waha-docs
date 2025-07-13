@@ -93,7 +93,7 @@ wget -O .chatwoot.env https://raw.githubusercontent.com/devlikeapro/waha/refs/he
 wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/docker-compose/chatwoot/docker-compose.yaml
 ```
 
-### 4. Configure environment variables
+### 3. Configure environment variables
 Now you can tweak `.waha.env`, `.chatwoot.env` and `docker-compose.yaml`  according to your preferences.
 
 Here are a few environment variables we suggest that you change before going forward (in this guide we'll use **the default values**):

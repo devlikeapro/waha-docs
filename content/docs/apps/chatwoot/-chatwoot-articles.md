@@ -5,7 +5,7 @@ There's a series of articles about WhatsApp and ChatWoot integrations:
 2. [**WAHA + ChatWoot - Configuration Guide**]({{< relref "/blog/apps-chatwoot-2-config" >}})
 3. [**WAHA + ChatWoot - HTTPS Guide**]({{< relref "/blog/apps-chatwoot-3-https" >}})
 
-You can follow it **one by one** or skip some parts if you don't need it.
+You can follow them **one by one** or skip some parts if you don't need them.
 
 
 Go to

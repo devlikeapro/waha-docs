@@ -1,7 +1,7 @@
 ---
 title: "ChatWoot"
 description: "ChatWoot App"
-lead: "ChatWoot Apps"
+lead: "ChatWoot App"
 date: 2025-07-10T08:49:31+00:00
 lastmod: 2024-07-10T08:49:31+00:00
 draft: false
@@ -17,7 +17,7 @@ toc: true
 </p>
 
 **WAHA** provides a built-in **WhatsApp** integration for
-[**ChatWoot**](https://www.chatwoot.com/) you can configure in few steps!
+[**ChatWoot**](https://www.chatwoot.com/) you can configure in a few steps!
 
 {{< include file="content/docs/apps/chatwoot/-disclaimer.md" >}}
 
