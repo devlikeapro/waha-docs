@@ -40,16 +40,30 @@ Now you're ready to setup **WhatsApp** to **ChatWoot** connection using
 **WAHA** [**🧩 ChatWoot App**]({{< relref "/docs/apps/chatwoot" >}})!
 
 ### 1. WAHA: Create Session
+{{< tabs "waha-create-session" >}}
+{{< tab "➕ WAHA Plus" >}}
 - Open [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
 - Create a new **default** session
   - ⚠️ Hit **Create**, not **Create & Start**
 
 ![](waha-create-default-session.png)
+{{< /tab >}}
 
-### 2. WAHA: Add ChatWoot App
+{{< tab "WAHA Core" >}}
 - Open [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
-- Click **Apps**, **+ Add App**
+- Make sure there's **default** session
+
+![](waha-core-default-session.png)
+{{< /tab >}}
+
+{{< /tabs >}}
+
+### 2. WAHA: Copy Webhook URL
+- Open [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
+- Click **Apps**
+- Click **Add App**
 - Copy **Webhook URL**
+- Keep the tab open, we'll fill the fields
 
 ![](waha-add-chatwoot-app.png)
 
