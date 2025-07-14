@@ -1,7 +1,7 @@
 ---
-title: "WAHA + ChatWoot - Configuration Guide"
-description: "WAHA + ChatWoot - Configuration Guide"
-excerpt: "WAHA + ChatWoot - Configuration Guide"
+title: "WhatsApp + ChatWoot - Configuration Guide"
+description: "WhatsApp + ChatWoot - Configuration Guide"
+excerpt: "WhatsApp + ChatWoot - Configuration Guide"
 date: 2025-07-10T08:48:45+00:00
 draft: false
 images: [ "waha-chatwoot.png" ]
@@ -31,7 +31,7 @@ At this point you should have:
 - **ChatWoot** on [**http://localhost:3009**](http://localhost:3009) 
 
 If you don't have it - kindly follow
-[**WAHA + ChatWoot - Installation Guide**]({{< relref "/blog/apps-chatwoot-1-install" >}})
+[**WhatsApp + ChatWoot - Installation Guide**]({{< relref "/blog/apps-chatwoot-1-install" >}})
 
 {{< include file="content/blog/apps-chatwoot-1-install/-ssh-port-forwarding.md" >}}
 
@@ -39,7 +39,7 @@ If you don't have it - kindly follow
 Now you're ready to setup **WhatsApp** to **ChatWoot** connection using
 **WAHA** [**🧩 ChatWoot App**]({{< relref "/docs/apps/chatwoot" >}})!
 
-### 1. WAHA: Create Session
+### Step 1: Create Session in WAHA
 {{< tabs "waha-create-session" >}}
 {{< tab "➕ WAHA Plus" >}}
 - Open [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
@@ -58,7 +58,7 @@ Now you're ready to setup **WhatsApp** to **ChatWoot** connection using
 
 {{< /tabs >}}
 
-### 2. WAHA: Copy Webhook URL
+### Step 2: Copy Webhook URL in WAHA
 - Open [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
 - Click **Apps**
 - Click **Add App**
@@ -67,7 +67,7 @@ Now you're ready to setup **WhatsApp** to **ChatWoot** connection using
 
 ![](waha-add-chatwoot-app.png)
 
-### 3. ChatWoot: Create API Inbox
+### Step 3: Create API Inbox in ChatWoot
 - Go to **ChatWoot** [http://localhost:3009](http://localhost:3009)
 - Open **Settings → Inboxes**
 - Click **Add Inbox**, choose **API**
@@ -79,7 +79,7 @@ Now you're ready to setup **WhatsApp** to **ChatWoot** connection using
 ![](chatwoot-create-inbox.png)
 
 
-### 4. WAHA: Get Required Fields from ChatWoot
+### Step 4: Collect ChatWoot Fields for WAHA
 Now we'll need to find those fields in **ChatWoot**
 
 ![](waha-chatwoot-fields.png)
@@ -101,12 +101,12 @@ Check the screenshots below, but here's the path how you can find the values:
 ![](chatwoot-inbox-fields.png)
 {{< img-sign text="Inbox ID, Inbox Identifier: Settings → Inboxes → {Inbox} → Configuration" >}}
 
-### 5. WAHA: Save App
+### Step 5: Save App Configuration in WAHA
 Click **Save** after you finish all fields.
 
 ![](waha-chatwoot-fields.png)
 
-### 6. ChatWoot: Check Integration
+### Step 6: Test Integration in ChatWoot
 Now you can open a new conversation created by WAHA and send `status` or `help` to check that integration is working.
 
 - Go to **ChatWoot** [http://localhost:3009](http://localhost:3009)
@@ -115,7 +115,7 @@ Now you can open a new conversation created by WAHA and send `status` or `help` 
 
 ![](chatwoot-send-status.png)
 
-### 7. ChatWoot: Start Session, Scan QR
+### Step 7: Start Session and Scan QR in ChatWoot
 {{< callout context="caution" title="Get your phone with WhatsApp App" icon="outline/shield-check" >}}
 Now we're ready to connect your phone with WAHA and ChatWoot.
 
@@ -131,7 +131,7 @@ Open **WhatsApp** on the phone and click on three dots at the right and **Linked
 
 ![](chatwoot-start-session.png)
 
-### 8. ChatWoot: Test WhatsApp
+### Step 8: Test WhatsApp Integration in ChatWoot
 Now let's see how ChatWoot WhatsApp integration works!
 
 - Send a message from **another** phone to **a connected** account using **WhatsApp**
@@ -141,6 +141,6 @@ Now let's see how ChatWoot WhatsApp integration works!
 ## What is next?
 
 👉 Setup **HTTPS** for **ChatWoot** in 
-[**WAHA + ChatWoot - HTTPS Guide**]({{< relref "/blog/apps-chatwoot-3-https" >}})
+[**WhatsApp + ChatWoot - HTTPS Guide**]({{< relref "/blog/apps-chatwoot-3-https" >}})
 
 {{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}

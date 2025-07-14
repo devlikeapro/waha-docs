@@ -1,7 +1,7 @@
 ---
-title: "WAHA + ChatWoot - Installation Guide"
-description: "WAHA + ChatWoot - Installation Guide"
-excerpt: "WAHA + ChatWoot - Installation Guide"
+title: "WhatsApp + ChatWoot - Installation Guide"
+description: "WhatsApp + ChatWoot - Installation Guide"
+excerpt: "WhatsApp + ChatWoot - Installation Guide"
 date: 2025-07-11T08:48:45+00:00
 draft: false
 images: [ "waha-chatwoot.png" ]
@@ -31,7 +31,7 @@ After completing the installation guide, you'll have:
 {{< include file="content/blog/apps-chatwoot-1-install/-ssh-port-forwarding.md" >}}
 
 ## Steps to Deploy
-### 0. Add DNS Aliases
+### Step 0: Add DNS Aliases
 First, we need to add **DNS Aliases** so everything works as inside docker containers.
 
 👉 **Run the below commands on YOUR LAPTOP/PC**, NOT on the **VPS or VM**:
@@ -74,7 +74,7 @@ ping waha
 {{< /tab >}}
 {{< /tabs >}}
 
-### 1. Install Docker
+### Step 1: Install Docker
 ```bash { title="Install Docker" }
 # example in ubuntu
 apt-get update
@@ -84,7 +84,7 @@ sudo sh get-docker.sh
 apt install docker-compose-plugin
 ```
 
-### 2. Download the required files
+### Step 2: Download the Required Files
 ```bash { title="Download files" }
 # Download the env files
 wget -O .waha.env https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/docker-compose/chatwoot/.waha.env
@@ -93,7 +93,7 @@ wget -O .chatwoot.env https://raw.githubusercontent.com/devlikeapro/waha/refs/he
 wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/docker-compose/chatwoot/docker-compose.yaml
 ```
 
-### 3. Configure environment variables
+### Step 3: Configure Environment Variables
 Now you can tweak `.waha.env`, `.chatwoot.env` and `docker-compose.yaml`  according to your preferences.
 
 Here are a few environment variables we suggest that you change before going forward (in this guide we'll use **the default values**):
@@ -106,7 +106,7 @@ WHATSAPP_SWAGGER_USERNAME=admin
 WHATSAPP_SWAGGER_PASSWORD=11111111111111111111111111111111
 ```
 
-### 5. Pull docker images
+### Step 5: Pull Docker Images
 {{< tabs "download-docker-image" >}}
 
 {{< tab "➕ WAHA Plus" >}}
@@ -164,17 +164,17 @@ docker compose pull
 
 {{< /tabs >}}
 
-### 6. Prepare ChatWoot database
+### Step 6: Prepare ChatWoot Database
 ```bash { title="Prepare ChatWoot Database" }
 docker compose run --rm chatwoot bundle exec rails db:chatwoot_prepare
 ```
 
-### 7. Start the services
+### Step 7: Start the Services
 ```bash { title="Start Services" }
 docker compose up -d
 ```
 
-### 8. Access your WAHA
+### Step 8: Access Your WAHA
 **Open** [**http://localhost:3000/dashboard**](http://localhost:3000/dashboard) with credentials:
 - User: `admin`
 - Password: `11111111111111111111111111111111`
@@ -185,7 +185,7 @@ docker compose up -d
 ![](waha-dashboard-key.png)
 
 
-### 9. Access your ChatWoot
+### Step 9: Access Your ChatWoot
 **Open** and **finish** the onboarding guide on [**http://localhost:3009/**](http://localhost:3009/)
 
 ![](chatwoot-onboarding.png)
@@ -194,6 +194,6 @@ docker compose up -d
 ## What is next?
 
 👉 Connect **WhatsApp** to **ChatWoot** in
-[**WAHA + ChatWoot - Configuration Guide**]({{< relref "/blog/apps-chatwoot-2-config" >}})
+[**WhatsApp + ChatWoot - Configuration Guide**]({{< relref "/blog/apps-chatwoot-2-config" >}})
 
 {{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}

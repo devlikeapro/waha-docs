@@ -17,6 +17,9 @@ slug: "about"
 
 {{< include file="content/docs/apps/about/apps-vs-integrations.md" >}}
 
+## Apps
+- [**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}) - use your **WhatsApp** in **ChatWoot CRM**
+
 ## Apps SDK
 
 WIP

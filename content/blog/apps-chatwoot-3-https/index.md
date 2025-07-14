@@ -1,7 +1,7 @@
 ---
-title: "WAHA + ChatWoot - HTTPS Guide"
-description: "WAHA + ChatWoot - HTTPS Guide"
-excerpt: "WAHA + ChatWoot - HTTPS Guide"
+title: "WhatsApp + ChatWoot - HTTPS Guide"
+description: "WhatsApp + ChatWoot - HTTPS Guide"
+excerpt: "WhatsApp + ChatWoot - HTTPS Guide"
 date: 2025-07-07T08:48:45+00:00
 draft: false
 images: [ "waha-chatwoot.png" ]
@@ -36,17 +36,17 @@ If you don't have it - kindly follow **the previous guides in the series above �
 
 Now you're ready to publish your **ChatWoot** and **WAHA** instances on the internet!
 
-### Configure DNS 
+## Configure DNS
 If you have VPS with a Public IP address, you need to configure DNS - add **A** records to point those domains:
 1. `waha.<yourdomain.com>` => `YOUR_VPS_IP_ADDRESS`
 2. `chatwoot.<yourdomain.com>` => `YOUR_VPS_IP_ADDRESS`
 
 ## Configure HTTPS for ChatWoot
-### 1. Install Nginx
+### Step 1: Install Nginx
 ```bash { title="Install Nginx" }
 sudo apt-get install nginx
 ```
-### 2. Add Nginx config
+### Step 2: Add Nginx Config
 ```bash { title="Add Nginx config" }
 cd /etc/nginx/sites-enabled
 nano chatwoot.<yourdomain.com>.conf
@@ -89,21 +89,21 @@ server {
   listen 80;
 }
 ```
-### 3. Verify and reload Nginx config
+### Step 3: Verify and Reload Nginx Config
 ```bash { title="Verify and reload Nginx config" }
 nginx -t
 systemctl reload nginx
 ```
 
-### 4. Run Let’s Encrypt to configure SSL certificate
-```bash { title="Run Let’s Encrypt to configure SSL certificate" }
+### Step 4: Run Let's Encrypt to configure SSL certificate
+```bash { title="Run Let's Encrypt to configure SSL certificate" }
 apt install certbot
 apt-get install python3-certbot-nginx
 mkdir -p /var/www/ssl-proof/chatwoot/.well-known
 certbot --webroot -w /var/www/ssl-proof/chatwoot/ -d chatwoot.<yourdomain.com> -i nginx
 ```
 
-### 5. Update env variables
+### Step 5: Update env variables
 Update `FRONTEND_URL` in `.chatwoot.env`
 ```bash
 nano .chatwoot.env
@@ -118,11 +118,11 @@ Apply the changes:
 docker compose up -d
 ``` 
 
-### 6. Access your installation
+### Step 6: Access your installation
 - Open `https://chatwoot.<yourdomain.com>`
 - Make sure it's working
 
-### 7. Update ChatWoot URL in WAHA
+### Step 7: Update ChatWoot URL in WAHA
 - Open **WAHA** [http://localhost:3000](http://localhost:3000)
 - Open **Apps** and **Edit App**
 - Update **ChatWoot URL** from `http://chatwoot:3009` to `https://chatwoot.<yourdomain.com>`
@@ -138,12 +138,12 @@ Otherwise - use ssh port forwarding to manage WAHA, it's usually enough.
 
 {{< include file="content/blog/apps-chatwoot-1-install/-ssh-port-forwarding.md" >}}
 
-### 1. Install Nginx
+### Step 1: Install Nginx
 ```bash { title="Install Nginx" }
 sudo apt-get install nginx
 ```
 
-### 2. Add Nginx config
+### Step 2: Add Nginx config
 ```bash { title="Add Nginx config" }
 cd /etc/nginx/sites-enabled
 nano waha.<yourdomain.com>.conf
@@ -182,21 +182,21 @@ server {
   listen 80;
 }
 ```
-### 3. Verify and reload Nginx config
+### Step 3: Verify and reload Nginx config
 ```bash { title="Verify and reload Nginx config" }
 nginx -t
 systemctl reload nginx
 ```
 
-### 4. Run Let’s Encrypt to configure SSL certificate
-```bash { title="Run Let’s Encrypt to configure SSL certificate" }
+### Step 4: Run Let's Encrypt to configure SSL certificate
+```bash { title="Run Let's Encrypt to configure SSL certificate" }
 apt install certbot
 apt-get install python3-certbot-nginx
 mkdir -p /var/www/ssl-proof/waha/.well-known
 certbot --webroot -w /var/www/ssl-proof/waha/ -d waha.<yourdomain.com> -i nginx
 ```
 
-### 5. Update env variables
+### Step 5: Update env variables
 Update `WAHA_BASE_URL` in `.waha.env`
 ```bash
 nano .waha.env
@@ -211,11 +211,11 @@ Apply the changes:
 docker compose up -d
 ``` 
 
-### 6. Access your installation
+### Step 6: Access your installation
 - Open `https://waha.<yourdomain.com>`
 - Make sure it's working
 
-### 7. Update Webhook URL in ChatWoot
+### Step 7: Update Webhook URL in ChatWoot
 - Open **ChatWoot** `https://chatwoot.<yourdomain.com>`
 - Go to **Settings → Inboxes → {Inbox}**
 - Update **Webhook URL** from `http://waha:3000/{WEBHOOKURL}` to `https://waha.<yourdomain.com>/{WEBHOOKURL}`
