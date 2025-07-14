@@ -19,7 +19,10 @@ toc: true
 **WAHA** provides a built-in **WhatsApp** integration for
 [**ChatWoot**](https://www.chatwoot.com/) you can configure in a few steps!
 
+![](chatwoot-test-whatsapp.png)
+
 {{< include file="content/docs/apps/chatwoot/-disclaimer.md" >}}
+
 
 ## Install
 We cover all installation and configuration aspects in the series of articles
