@@ -31,29 +31,6 @@ We cover all installation and configuration aspects in the following series of a
 
 ## Features
 
-### Languages
-
-You can set your language when creating a **Chatwoot App** in the **WAHA Dashboard**:
-
-![WAHA Languages](screenshots/dashboard/cw-languages-waha.png)
-
-You'll receive notification messages in the selected language in **Chatwoot**:
-
-![Chatwoot Languages](screenshots/dashboard/cw-languages-chatwoot.png)
-
-### Commands
-Use the `help` command to see available commands in **WhatsApp Integration (WAHA)** conversation:
-
-![Help Command](screenshots/commands/help.png)
-
-**Scan QR code** to connect WhatsApp:
-
-![Scan QR Command](screenshots/commands/scan-qr.png)
-
-Get session status updates in Chatwoot:
-
-![Status Updates Command](screenshots/commands/status-updates.png)
-
 ### Contacts
 **Contact information** is displayed in Chatwoot from **WhatsApp**:
 
@@ -105,6 +82,29 @@ Delete messages in Chatwoot:
 Add private notes visible only to agents:
 
 ![Private Notes](screenshots/messages/private-note.png)
+
+### Languages
+
+You can set your language when creating a **Chatwoot App** in the **WAHA Dashboard**:
+
+![WAHA Languages](screenshots/dashboard/cw-languages-waha.png)
+
+You'll receive notification messages in the selected language in **Chatwoot**:
+
+![Chatwoot Languages](screenshots/dashboard/cw-languages-chatwoot.png)
+
+### Commands
+Use the `help` command to see available commands in **WhatsApp Integration (WAHA)** conversation:
+
+![Help Command](screenshots/commands/help.png)
+
+**Scan QR code** to connect WhatsApp:
+
+![Scan QR Command](screenshots/commands/scan-qr.png)
+
+Get session status updates in Chatwoot:
+
+![Status Updates Command](screenshots/commands/status-updates.png)
 
 
 ### Error Handling
