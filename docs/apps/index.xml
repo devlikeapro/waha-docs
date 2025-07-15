@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🧩 Apps on WAHA</title><link>/docs/apps/</link><description>Recent content in 🧩 Apps on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 13 Jul 2024 12:00:00 +0000</lastBuildDate><atom:link href="/docs/apps/index.xml" rel="self" type="application/rss+xml"/><item><title>Apps</title><link>/docs/apps/about/</link><pubDate>Sat, 13 Jul 2024 12:00:00 +0000</pubDate><guid>/docs/apps/about/</guid><description>&lt;p>&lt;strong>🧩 Apps&lt;/strong> are &lt;strong>built-in connections&lt;/strong> that integrate &lt;strong>WAHA&lt;/strong> with &lt;strong>other services&lt;/strong> in a few steps.&lt;/p>
-&lt;p>&lt;strong>WAHA Team&lt;/strong> fully supports &lt;strong>🧩 Apps&lt;/strong>.&lt;/p></description></item><item><title>ChatWoot</title><link>/docs/apps/chatwoot/</link><pubDate>Thu, 10 Jul 2025 08:49:31 +0000</pubDate><guid>/docs/apps/chatwoot/</guid><description>&lt;p align="center">
+&lt;p>&lt;strong>WAHA Team&lt;/strong> fully supports &lt;strong>🧩 Apps&lt;/strong>.&lt;/p></description></item><item><title>Chatwoot</title><link>/docs/apps/chatwoot/</link><pubDate>Thu, 10 Jul 2025 08:49:31 +0000</pubDate><guid>/docs/apps/chatwoot/</guid><description>&lt;p align="center">
  &lt;img src="/images/chatwoot/waha-chatwoot.png" style="width: 150px">
 &lt;/p>
 &lt;p>&lt;strong>WAHA&lt;/strong> provides a built-in &lt;strong>WhatsApp&lt;/strong> integration for
-&lt;a href="https://www.chatwoot.com/">&lt;strong>ChatWoot&lt;/strong>&lt;/a> you can configure in a few steps!&lt;/p>
+&lt;a href="https://www.chatwoot.com/">&lt;strong>Chatwoot&lt;/strong>&lt;/a> that you can configure in a few steps!&lt;/p>
 &lt;p>
 
 &lt;img
- src="/docs/apps/chatwoot/chatwoot-test-whatsapp_hu_c063bd3fd1b7b320.webp"
- width="1845"
- height="960"
+ src="/docs/apps/chatwoot/screenshots/overview_hu_a1e672381434639a.webp"
+ width="1835"
+ height="929"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt=""id="h-rh-i-0"
-/>&lt;/p>
+ alt="Chatwoot Overview"id="h-rh-i-0"
+/>
+&lt;br/>&lt;br/>&lt;/p>
 
 
 
