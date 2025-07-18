@@ -6,16 +6,21 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 
-weight: 319
+weight: 419
 ---
 
 ## Overview
-⚠️ ⚠️ ⚠️
-**DEPRECATED** - use
-[WEBJS]({{< relref "/docs/engines/webjs" >}}) or
-[NOWEB]({{< relref "/docs/engines/noweb" >}})
+
+{{< callout context="caution" title="VENOM engine is DEPRECATED" icon="outline/alert-triangle" >}}
+
+Use
+[**GOWS**]({{< relref "/docs/engines/gows" >}}),
+[**WEBJS**]({{< relref "/docs/engines/webjs" >}}),
+or
+[**NOWEB**]({{< relref "/docs/engines/noweb" >}})
 instead.
-⚠️ ⚠️ ⚠️
+{{< /callout >}}
+
 
 It's a high-performance system developed with JavaScript to create a bot for WhatsApp.
 It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.

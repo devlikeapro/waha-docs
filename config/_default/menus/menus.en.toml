@@ -48,15 +48,15 @@ url = "/docs/how-to"
 parent = "docs"
 
 [[main]]
-name = "🏭 Engines"
+name = "🧩 Apps"
 weight = 15
-url = "/docs/engines"
+url = "/docs/apps"
 parent = "docs"
 
 [[main]]
-name = "🧩 Apps"
+name = "🏭 Engines"
 weight = 16
-url = "/docs/apps"
+url = "/docs/engines"
 parent = "docs"
 
 [[main]]
