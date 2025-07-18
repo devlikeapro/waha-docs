@@ -146,6 +146,9 @@ Rarely used:
 ### Sessions - MongoDB
 - `WHATSAPP_SESSIONS_MONGO_URL=mongodb://user:password@host:port/` - MongoDB connection URL for storing session data
 
+## Apps
+
+{{< include file="content/docs/apps/about/-config.md" >}}
 
 ## Webhooks
 

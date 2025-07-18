@@ -20,6 +20,11 @@ slug: "about"
 ## Apps
 - [**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}) - use your **WhatsApp** in **ChatWoot CRM**
 
+## Configuration
+
+{{< include file="content/docs/apps/about/-config.md" >}}
+
 ## Apps SDK
 
-WIP
+> This section is currently under development. Check back soon for detailed information about the integration architecture and workflow.
+

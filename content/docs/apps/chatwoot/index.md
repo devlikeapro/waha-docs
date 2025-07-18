@@ -17,7 +17,8 @@ toc: true
 </p>
 
 **WAHA** provides a built-in **WhatsApp** integration for
-[**Chatwoot**](https://www.chatwoot.com/) that you can configure in a few steps!
+[**Chatwoot**](https://www.chatwoot.com/) that you can configure in a few steps using
+[**🧩 Apps**]({{< relref "/docs/apps/about" >}})!
 
 ![Chatwoot Overview](screenshots/overview.png)
 <br/><br/>
@@ -28,6 +29,10 @@ toc: true
 ## Installation
 We cover all installation and configuration aspects in the following series of articles:
 {{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}
+
+## Configuration
+
+{{< include file="content/docs/apps/about/-config.md" >}}
 
 ## Features
 
@@ -118,4 +123,5 @@ You can use the **WAHA Jobs Dashboard** at [http://localhost:3000/jobs](http://l
 
 ## How it works
 
-This section is currently under development. Check back soon for detailed information about the integration architecture and workflow.
+> This section is currently under development. Check back soon for detailed information about the integration architecture and workflow.
+
