@@ -5,11 +5,24 @@ It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocke
 Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!&lt;/p></description></item><item><title>NOWEB</title><link>/docs/engines/noweb/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/engines/noweb/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>NOWEB&lt;/strong> engine &lt;strong>does not require a browser&lt;/strong> to work with WhatsApp Web, it does so directly using a WebSocket.
 Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!&lt;/p></description></item><item><title>VENOM</title><link>/docs/engines/venom/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/engines/venom/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>⚠️ ⚠️ ⚠️
-&lt;strong>DEPRECATED&lt;/strong> - use
-&lt;a href="/docs/engines/webjs/">WEBJS&lt;/a> or
-&lt;a href="/docs/engines/noweb/">NOWEB&lt;/a>
-instead.
-⚠️ ⚠️ ⚠️&lt;/p>
-&lt;p>It&amp;rsquo;s a high-performance system developed with JavaScript to create a bot for WhatsApp.
-It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.&lt;/p></description></item></channel></rss>
+&lt;div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/alert-triangle svg-inline callout-icon me-2 mb-3" id="svg-alert-triangle" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M12 9v4" />
+ &lt;path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+ &lt;path d="M12 16h.01" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>VENOM engine is DEPRECATED&lt;/p></description></item></channel></rss>
