@@ -54,6 +54,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.2` - **WEBJS** - `--a-waha-session` and `--a-waha-timestamp` to chrome/chromium args - {{< issue 1092 >}}
 
 🛠️ **Fixes**
+- `2025.7.6` - **WEBJS** - fix **send seen** and **send read messages** - {{< issue 1117 >}}
 - `2025.7.5` - **WEBJS** - ignore old reactions on connection - {{< issue 494 >}}
 - `2025.7.5` - **WEBJS** - increase rendering processes to 2
 - `2025.7.4` - **NOWEB** - handle [**👤 Lids**]({{< relref "/docs/how-to/contacts/#api---lids" >}}) on first message 
