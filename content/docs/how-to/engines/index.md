@@ -62,11 +62,6 @@ WHATSAPP_DEFAULT_ENGINE=GOWS
 **NOWEB** engine **does not require a browser** to work with WhatsApp Web, it does so directly using a WebSocket.
 Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!
 
-Quotes from the users:
-> The server has **2 CPU and 8GB** of memory. Today we have **85 sessions** in this instance.
->
-> **400** sessions with **4CPU and 32RAM**. It's working fine.
->
 ```bash
 WHATSAPP_DEFAULT_ENGINE=NOWEB
 ```
