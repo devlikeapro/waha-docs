@@ -45,6 +45,18 @@ WHATSAPP_DEFAULT_ENGINE=WEBJS
 
 {{< link-card title="👉 Read more about WEBJS" href="/docs/engines/webjs/" >}}
 
+### GOWS
+
+**GOWS** engine **does not require a browser** to work with WhatsApp Web, it does so directly using a WebSocket.
+
+🚀 It's a new generation engine written in **Golang**, a future replacement for **NOWEB** engine.
+
+```bash
+WHATSAPP_DEFAULT_ENGINE=GOWS
+```
+
+{{< link-card title="👉 Read more about GOWS" href="/docs/engines/gows/" >}}
+
 ### NOWEB
 
 **NOWEB** engine **does not require a browser** to work with WhatsApp Web, it does so directly using a WebSocket.
@@ -54,24 +66,13 @@ Quotes from the users:
 > The server has **2 CPU and 8GB** of memory. Today we have **85 sessions** in this instance.
 >
 > **400** sessions with **4CPU and 32RAM**. It's working fine.
-> 
+>
 ```bash
 WHATSAPP_DEFAULT_ENGINE=NOWEB
 ```
 
 {{< link-card title="👉 Read more about NOWEB" href="/docs/engines/noweb/" >}}
 
-### GOWS
-
-**GOWS** engine **does not require a browser** to work with WhatsApp Web, it does so directly using a WebSocket.
-
-🚀 It's new generation engine written in **Golang**, future replacement for **NOWEB** engine.
-
-```bash
-WHATSAPP_DEFAULT_ENGINE=GOWS
-```
-
-{{< link-card title="👉 Read more about GOWS" href="/docs/engines/gows/" >}}
 
 ## Docker images
 WAHA provides few docker images with different setup.
