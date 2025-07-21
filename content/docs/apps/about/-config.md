@@ -10,6 +10,8 @@ To use
 - `WAHA_APPS_ENABLED=True` - Enables the [**🧩 Apps**]({{< relref "/docs/apps/about" >}}) functionality
 - `REDIS_URL=redis://:redis@redis:6379` - Specifies the Redis URL required for processing background jobs
 - `WHATSAPP_DEFAULT_ENGINE=GOWS` - Sets the recommended engine for reliable **WhatsApp** automation
+- `WAHA_API_KEY_PLAIN=0000000000000000` - plain password **required** for Apps in environment variables
+  - It's a quick solution, we're working on removing it so you can use `sha512` version as in `WAHA_API_KEY`
 
 **Jobs**: 
 

@@ -119,9 +119,9 @@ In case of any errors, WAHA retries a few times and then gives detailed informat
 
 You can use the **WAHA Jobs Dashboard** at [http://localhost:3000/jobs](http://localhost:3000/jobs) for monitoring:
 
-![WAHA Jobs Dashboard](screenshots/dashboard/cw-waha-jobs-dashboard.png)
+![WAHA Jobs Dashboard](screenshots/dashboard/waha-jobs-dashboard.png)
 
 ## How it works
 
-> This section is currently under development. Check back soon for detailed information about the integration architecture and workflow.
+{{< include file="content/docs/apps/about/-how-it-works.md" >}}
 

@@ -25,6 +25,14 @@ Apps available to connect:
 
 {{< include file="content/docs/apps/about/-config.md" >}}
 
+## How it works
+
+{{< include file="content/docs/apps/about/-how-it-works.md" >}}
+
+You can use the **WAHA Jobs Dashboard** at [http://localhost:3000/jobs](http://localhost:3000/jobs) for monitoring **Worker** and it's jobs:
+
+![WAHA Jobs Dashboard](screenshots/waha-jobs-dashboard.png)
+
 ## Apps SDK
 
 > This section is currently under development. Check back soon for detailed information about the integration architecture and workflow.
