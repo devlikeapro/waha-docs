@@ -106,7 +106,11 @@ WHATSAPP_SWAGGER_USERNAME=admin
 WHATSAPP_SWAGGER_PASSWORD=11111111111111111111111111111111
 ```
 
-### Step 5: Pull Docker Images
+{{< details "<b>👉 How to Generate and Hash Api-Key</b>" >}}
+{{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
+{{< /details >}}
+
+### Step 4: Pull Docker Images
 {{< tabs "download-docker-image" >}}
 
 {{< tab "➕ WAHA Plus" >}}
@@ -164,17 +168,17 @@ docker compose pull
 
 {{< /tabs >}}
 
-### Step 6: Prepare ChatWoot Database
+### Step 5: Prepare ChatWoot Database
 ```bash { title="Prepare ChatWoot Database" }
 docker compose run --rm chatwoot bundle exec rails db:chatwoot_prepare
 ```
 
-### Step 7: Start the Services
+### Step 6: Start the Services
 ```bash { title="Start Services" }
 docker compose up -d
 ```
 
-### Step 8: Access Your WAHA
+### Step 7: Access Your WAHA
 **Open** [**http://localhost:3000/dashboard**](http://localhost:3000/dashboard) with credentials:
 - User: `admin`
 - Password: `11111111111111111111111111111111`
@@ -185,7 +189,7 @@ docker compose up -d
 ![](waha-dashboard-key.png)
 
 
-### Step 9: Access Your ChatWoot
+### Step 8: Access Your ChatWoot
 **Open** and **finish** the onboarding guide on [**http://localhost:3009/**](http://localhost:3009/)
 
 ![](chatwoot-onboarding.png)

@@ -130,7 +130,7 @@ Some important values you **MUST** change before publishing it to the internet:
 
 {{< details "<b>👉 How to Generate and Hash Api-Key</b>" >}}
 {{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
-{{< /callout >}}
+{{< /details >}}
 
 <br/>
 
