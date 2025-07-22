@@ -27,7 +27,7 @@ architecture-beta
 ```
 
 **WhatsApp to External Service Flow**:
-- When a new message arrives in **WhatsApp**, **Session** captures it and publishes a **message event** to **Redis**. 
+- When a new message arrives in **WhatsApp**, **WAHA** captures it and publishes a **message event** to **Redis**. 
 - The **Worker** then picks up this event, processes it, and forwards the message to **ChatWoot** via its **API**. 
 - After successful delivery, the job is marked as processed in **Redis**.
 
@@ -38,7 +38,8 @@ sequenceDiagram
     participant Worker as Worker
     participant ChatWoot as ChatWoot API
 
-    WA_Session ->> Redis: message.any event
+    WA_Session ->> WA_Session: Receive a new message
+    WA_Session ->> Redis: 'message.any' event
     Redis ->> Worker: Fire Job
     Worker ->> ChatWoot: Send message via ChatWoot API
     ChatWoot -->> Worker: 200 OK
@@ -61,11 +62,12 @@ sequenceDiagram
 
     ChatWoot ->> ChatWoot: New message created
     ChatWoot ->> WA_API: Call Webhook
-    WA_API ->> Redis: Save job to queue
+    WA_API -->> ChatWoot: 200 OK
+    WA_API ->> Redis: 'message_created' event
     Redis ->> Worker: Fire Job
     Worker ->> WA_API: /api/sendText
     WA_API ->> WA_Session: Send message to WhatsApp
-    WA_Session -->> WA_API: 200 OK (Message sent)
-    WA_API -->> Worker: Acknowledge
+    WA_Session -->> WA_API: ACK: Server
+    WA_API -->> Worker: 200 OK
     Worker -->> Redis: Mark job as processed
 ```
