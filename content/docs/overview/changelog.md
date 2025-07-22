@@ -54,6 +54,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.2` - **WEBJS** - `--a-waha-session` and `--a-waha-timestamp` to chrome/chromium args - {{< issue 1092 >}}
 
 🛠️ **Fixes**
+- `2025.7.7` - **WEBJS** - add browser cache - {{< issue 1131 >}}, {{< issue 1140 >}}
 - `2025.7.6` - **WEBJS** - fix **send seen** and **send read messages** - {{< issue 1117 >}}
 - `2025.7.5` - **WEBJS** - ignore old reactions on connection - {{< issue 494 >}}
 - `2025.7.5` - **WEBJS** - increase rendering processes to 2
