@@ -87,6 +87,16 @@ Follow the instructions below:
 {{< include file="content/docs/how-to/install/download-image.md" >}}
 
 ## Install
+{{< callout context="note" icon="outline/info-circle" title="WAHA Apps">}}
+
+If you want to use
+[**🧩 Apps**]({{< relref "/docs/apps/about" >}}), such as
+[**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}),
+please follow the specific installation and configuration guides provided for each app.
+
+{{< /callout >}}
+
+
 ### Docker
 
 1. Install Docker on your VM
