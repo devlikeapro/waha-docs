@@ -49,6 +49,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 ### 2025.7
 **🆕 NEW**
 
+- `2025.7.8` - Add [**👤 Update Contact API**]({{< relref "/docs/how-to/contacts#update-contact" >}}) - {{< issue 1124 >}}
+  - **WEBJS**, **GOWS**, **NOWEB**
 - `2025.7.5` - Add [**🧩 ChatWoot App**]({{< relref "/docs/apps/chatwoot" >}}) - {{< issue 441 >}}
 - `2025.7.2` - **WEBJS** - Add `GET /api/server/debug/browser/trace` API to [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})  - {{< issue 1092 >}}
 - `2025.7.2` - **WEBJS** - `--a-waha-session` and `--a-waha-timestamp` to chrome/chromium args - {{< issue 1092 >}}

@@ -93,6 +93,29 @@ GET /api/contacts?contactId={ID}&session={SESSION}
 }
 ```
 
+### Update contact
+**Update contact** on **your phone address book** (and in WhatsApp):
+
+```http request
+PUT /api/{session}/contacts/{chatId}
+```
+
+```json { title="Body" }
+{
+  "firstName": "John",
+  "lastName": "Doe"
+}
+```
+
+**Path Parameters**:
+- `{session}` - session name - `default`
+- `{chatId}` - chat ID can end with "@c.us" or can be just a phone number - `12132132130`
+
+{{< callout context="note" icon="outline/address-book" title="Phone Address Book Update Note" >}}
+- If you have multiple **WhatsApp** apps installed on your phone, the API might only work with one account.
+- You may need to make **a few API requests** with the same parameters and wait **a few seconds** between requests to update your **phone address book**.
+{{< /callout >}}
+
 ### Check phone number exists
 
 If you want to check if phone number is registered in WhatsApp (even if the number is not in your contact list) - use
