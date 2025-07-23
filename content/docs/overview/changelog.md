@@ -55,6 +55,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.2` - **WEBJS** - Add `GET /api/server/debug/browser/trace` API to [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})  - {{< issue 1092 >}}
 - `2025.7.2` - **WEBJS** - `--a-waha-session` and `--a-waha-timestamp` to chrome/chromium args - {{< issue 1092 >}}
 
+**🧩 Apps**:
+- `2025.7.8` - **ChatWoot** - send `png` as image, not as attachment
+- `2025.7.5` - Add [**🧩 ChatWoot App**]({{< relref "/docs/apps/chatwoot" >}}) - {{< issue 441 >}}
+
 🛠️ **Fixes**
 - `2025.7.7` - **WEBJS** - add browser cache - {{< issue 1131 >}}, {{< issue 1140 >}}
 - `2025.7.6` - **WEBJS** - fix **send seen** and **send read messages** - {{< issue 1117 >}}
