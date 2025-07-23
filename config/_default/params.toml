@@ -37,7 +37,7 @@ mainSections = ["docs"]
   searchLimit = 99 # 0 (no limit, default) or natural number
 
   # Global alert
-  alert = false # false (default) or true
+  alert = true # false (default) or true
   alertDismissable = true # true (default) or false
 
   # Bootstrap
