@@ -60,6 +60,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.5` - Add [**🧩 ChatWoot App**]({{< relref "/docs/apps/chatwoot" >}}) - {{< issue 441 >}}
 
 🛠️ **Fixes**
+- `2025.7.8` - **WEBJS** - add `WAHA_RUN_XVFB=False` parameter - {{< issue 1151 >}}
+- `2025.7.8` - adjust `UV_THREADPOOL_SIZE` values (`cpu*2` or min is `4`)
 - `2025.7.7` - **WEBJS** - add browser cache - {{< issue 1131 >}}, {{< issue 1140 >}}
 - `2025.7.6` - **WEBJS** - fix **send seen** and **send read messages** - {{< issue 1117 >}}
 - `2025.7.5` - **WEBJS** - ignore old reactions on connection - {{< issue 494 >}}
@@ -82,8 +84,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.1` - move `HEALTHCHECK` from Dockerfile to docker-compose - {{< issue 1090 >}}
 
 **⚙️ Updates**
+- `2025.7.8` - **NOWEB** - up proto to `v1025126393`
 - `2025.7.4` - **NOWEB** - up engine to `2025-07-04`
-- `2025.7.3` - **GOWS** - up engine to `v1024307498`
+- `2025.7.3` - **GOWS** - up engine and proto to `v1024307498`
 
 ### 2025.6
 **🆕 NEW**
