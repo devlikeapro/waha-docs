@@ -34,7 +34,20 @@ platform.&lt;/p></description></item><item><title>❓ FAQ</title><link>/docs/ove
 &lt;/svg>
  &lt;div class="callout-content">
  &lt;div class="callout-title">
- &lt;p>You can subscribe on free tier!&lt;/p></description></item><item><title>🔧 Install &amp; Update</title><link>/docs/how-to/install/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/install/</guid><description>&lt;div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;p>You can subscribe on free tier!&lt;/p></description></item><item><title>🔧 Install &amp; Update</title><link>/docs/how-to/install/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/install/</guid><description>&lt;p>You probably already have run the docker run command during
+&lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a> guide:&lt;/p>
+
+
+
+&lt;div class="expressive-code">
+ &lt;figure class="frame is-terminal not-content">
+ &lt;figcaption class="header">
+ &lt;span class="title">&lt;/span>
+ &lt;/figcaption>
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/figure>
+&lt;/div>
+&lt;div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
  &lt;svg
  xmlns="http://www.w3.org/2000/svg"
  width="24"
@@ -46,17 +59,16 @@ platform.&lt;/p></description></item><item><title>❓ FAQ</title><link>/docs/ove
  stroke-linecap="round"
  stroke-linejoin="round"
  
- class="outline/info-circle svg-inline callout-icon me-2 mb-3" id="svg-info-circle" role="img">
+ class="outline/alert-triangle svg-inline callout-icon me-2 mb-3" id="svg-alert-triangle" role="img">
  &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
- &lt;path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
- &lt;path d="M12 9h.01" />
- &lt;path d="M11 12h1v4h1" />
+ &lt;path d="M12 9v4" />
+ &lt;path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+ &lt;path d="M12 16h.01" />
 &lt;/svg>
  &lt;div class="callout-content">
  
  &lt;div class="callout-body">
- &lt;p>If you wish to follow a &lt;strong>Step-By-Step guide&lt;/strong> which shows you &lt;strong>how to send your first message&lt;/strong> via HTTP API,
-please go to &lt;a href="/docs/overview/quick-start/">&lt;strong>⚡ Quick Start&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>📊 Dashboard</title><link>/docs/how-to/dashboard/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/dashboard/</guid><description>&lt;p>&lt;strong>Dashboard&lt;/strong> is a UI to manage your WhatsApp sessions!&lt;/p>
+ &lt;p>☝️ The above command is good &lt;strong>for development purposes&lt;/strong>, but &lt;strong>not for production&lt;/strong>.&lt;/p></description></item><item><title>📊 Dashboard</title><link>/docs/how-to/dashboard/</link><pubDate>Tue, 06 Oct 2020 08:48:45 +0000</pubDate><guid>/docs/how-to/dashboard/</guid><description>&lt;p>&lt;strong>Dashboard&lt;/strong> is a UI to manage your WhatsApp sessions!&lt;/p>
 &lt;video autoplay loop muted playsinline controls='noremoteplayback' width="100%" poster='/images/waha-dashboard.png'>
  &lt;source src="/videos/waha-dashboard-overview.webm" type="video/webm" />
  Download the &lt;a href="/videos/waha-dashboard-overview.webm">Dashboard Overview video&lt;/a> .
