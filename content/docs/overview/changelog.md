@@ -60,6 +60,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.5` - Add [**🧩 ChatWoot App**]({{< relref "/docs/apps/chatwoot" >}}) - {{< issue 441 >}}
 
 🛠️ **Fixes**
+- `2025.7.10` - **GOWS** - speed up sending a message to groups - {{< issue 1100 >}}
+- `2025.7.10` - **NOWEB** - do not freeze server in a lot of sessions case (use regular `sqlite3`)
 - `2025.7.9` - **WEBJS** - add `WAHA_RUN_XVFB=False` parameter - {{< issue 1151 >}}
 - `2025.7.9` - adjust `UV_THREADPOOL_SIZE` values (`cpu*2` or min is `4`)
 - `2025.7.7` - **WEBJS** - add browser cache - {{< issue 1131 >}}, {{< issue 1140 >}}
