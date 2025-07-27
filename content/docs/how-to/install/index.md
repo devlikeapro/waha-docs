@@ -12,13 +12,6 @@ aliases:
   - /docs/how-to/install-update
 ---
 
-
-{{< callout context="note" icon="outline/info-circle" >}}
-If you wish to follow a **Step-By-Step guide** which shows you **how to send your first message** via HTTP API,
-please go to [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
-{{< /callout >}}
-
-
 You probably already have run the docker run command during
 [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}) guide:
 ```bash
@@ -31,6 +24,22 @@ docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha
 
 To make it **production-ready**, you need to configure a few more parameters to make it secure, reliable, and easy to manage.
 
+
+{{< callout context="note" icon="outline/info-circle" >}}
+If you wish to follow a **Step-By-Step guide** which shows you **how to send your first message** via HTTP API,
+please go to [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
+{{< /callout >}}
+
+{{< callout context="tip" icon="outline/info-circle" title="WAHA Apps">}}
+
+If you want to use
+[**🧩 Apps**]({{< relref "/docs/apps/about" >}}), such as
+[**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}),
+please follow the specific installation and configuration guides provided for each app:
+
+- [**WhatsApp + ChatWoot - Installation Guide**]({{< relref "/blog/apps-chatwoot-1-install" >}})
+
+{{< /callout >}}
 
 
 ## Requirements
@@ -81,21 +90,7 @@ With Compose, you use a YAML file to configure your application's services.
 Then, with a single command, you create and start all the services from your configuration.
 {{< /details >}}
 
-### Get docker image
-
-Follow the instructions below:
-{{< include file="content/docs/how-to/install/download-image.md" >}}
-
 ## Install
-{{< callout context="note" icon="outline/info-circle" title="WAHA Apps">}}
-
-If you want to use
-[**🧩 Apps**]({{< relref "/docs/apps/about" >}}), such as
-[**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}),
-please follow the specific installation and configuration guides provided for each app.
-
-{{< /callout >}}
-
 
 ### Docker
 
@@ -108,6 +103,11 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 apt install docker-compose-plugin
 ```
+
+### Pull Image
+
+Follow the instructions below:
+{{< include file="content/docs/how-to/install/download-image.md" >}}
 
 ### WAHA
 2. Download the required files
@@ -194,8 +194,6 @@ By default you can use:
 - Swagger - `admin/admin`
 - Api Key - `admin`
 
-{{< include file="content/docs/how-to/security/use-nginx-for-https.md" >}}
-
 ### Nginx
 
 👉 Replace **<YOUR_DOMAIN_OR_IP>** with your domain name in the following steps (use lowercase).
@@ -274,9 +272,15 @@ docker compose up -d
 docker compose restart
 ```
 
-### HTTPS - Self-Signed Certificate for IP-Based Access
+### HTTPS - Self-Signed Certificate
 
-If you don't have **a domain name** or are using a **private IP address**, you can create a self-signed certificate for IP-based access:
+We recommend using **Let's Encrypt** free certificate if you have public IP and DNS name.
+
+However, if you don't have **a domain name** or 
+are using a **private IP address**, you can create a self-signed certificate for IP-based access,
+expand the details below:
+
+{{< details "**HTTPS - Setup Self-Signed Certificate**" >}}
 
 1. Create a directory for your SSL certificates:
 ```bash
@@ -380,6 +384,8 @@ docker compose restart
 ```
 
 8. When accessing your WAHA instance, you'll need to accept the self-signed certificate warning in your browser.
+
+{{< /details >}}
 
 ## Update
 When there's a new version of WAHA, you can update it with these simple commands:
