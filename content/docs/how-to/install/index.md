@@ -121,25 +121,14 @@ wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/r
 3. Tweak the `.env` and `docker-compose.yaml` according to your preferences. 
 Refer to the available environment variables in [**⚙️ Configuration**]({{< relref "/docs/how-to/config" >}}).
 
-Some important values you **MUST** change before publishing it to the internet:
-
-**Set API Key**
-  - `WAHA_API_KEY=sha512:{SHA512_HEX_OF_YOUR_API_KEY_HERE}`
+Some important environment variables you **MUST** change:
+- `WAHA_API_KEY=sha512:{SHA512_HEX_OF_YOUR_API_KEY_HERE}`
   - Default Api Key is `admin`
   - Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
-
-{{< details "<b>👉 How to Generate and Hash Api-Key</b>" >}}
-{{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
-{{< /details >}}
-
-<br/>
-
-[**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}) and [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}):
-  - `WAHA_DASHBOARD_USERNAME=admin`
-  - `WAHA_DASHBOARD_PASSWORD=admin`
-  - `WHATSAPP_SWAGGER_USERNAME=admin` - you can set the same as `WAHA_DASHBOARD_USERNAME`
-  - `WHATSAPP_SWAGGER_PASSWORD=admin` - you can set the same as `WAHA_DASHBOARD_PASSWORD`
-
+- `WAHA_DASHBOARD_USERNAME=admin` - [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
+- `WAHA_DASHBOARD_PASSWORD=admin`
+- `WHATSAPP_SWAGGER_USERNAME=admin` - you can set the same as `WAHA_DASHBOARD_USERNAME`
+- `WHATSAPP_SWAGGER_PASSWORD=admin` - you can set the same as `WAHA_DASHBOARD_PASSWORD`
 
 ```bash
 # update .env file with your values
@@ -149,6 +138,22 @@ nano .env
 # Leave "waha" service as it is
 nano docker-compose.yaml
 ```
+
+{{< callout context="danger" title="Do Not Use Default API Keys or Passwords!" icon="outline/shield-check" >}}
+
+Even if you're running WAHA on a private server and think the IP is unknown - it's
+straightforward for attackers to find and exploit it to send spam or abuse your WhatsApp sessions.
+
+Always set strong, random values (see a guide below) for:
+- `WAHA_API_KEY`
+- `WAHA_DASHBOARD_PASSWORD`
+- `WHATSAPP_SWAGGER_PASSWORD` - you can the same as for `WAHA_DASHBOARD_PASSWORD`
+
+**👉 How to Generate and Hash Api-Key**
+{{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
+
+{{< /callout >}}
+
 
 4. Get the service up and running.
 ```bash

@@ -106,6 +106,19 @@ WHATSAPP_SWAGGER_USERNAME=admin
 WHATSAPP_SWAGGER_PASSWORD=11111111111111111111111111111111
 ```
 
+{{< callout context="danger" title="Do Not Use Default API Keys or Passwords!" icon="outline/shield-check" >}}
+Even if you're running WAHA on a private server and think the IP is unknown - it's
+straightforward for attackers to find and exploit it to send spam or abuse your WhatsApp sessions.
+
+Always set strong, random values (see a guide below) for:
+- `WAHA_API_KEY`
+- `WAHA_DASHBOARD_PASSWORD`
+- `WHATSAPP_SWAGGER_PASSWORD` - you can the same as for `WAHA_DASHBOARD_PASSWORD`
+
+**👉 How to Generate and Hash Api-Key**
+{{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
+{{< /callout >}}
+
 {{< details "<b>👉 How to Generate and Hash Api-Key</b>" >}}
 {{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
 {{< /details >}}

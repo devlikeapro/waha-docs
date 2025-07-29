@@ -13,7 +13,7 @@ slug: security
 {{< callout context="caution" title="Do not expose WhatsApp API on public networks!" icon="outline/shield-check" >}}
 We do not recommend exposing the API on any public networks!
 
-Either protect the API with [**Api Key**](#api-security) or deny access by using firewalls.
+Always protect the API with [**Api Key**](#api-security) and deny access by using firewalls.
 
 {{< /callout >}}
 
