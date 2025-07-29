@@ -71,11 +71,19 @@ Follow the instructions below:
 Run WhatsApp HTTP API:
 
 ```bash
-docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha
+docker run -it -v $(pwd)/sessions:/app/.sessions --rm -p 3000:3000 --name waha devlikeapro/waha
 
 # It prints logs and the last line must be
 # WhatsApp API is running on: http://[::1]:3000
 ```
+
+{{< callout context="danger" title="Not a Production-Ready Installation!" icon="outline/shield-check" >}}
+☝️ The above command is meant only for **initial testing**, not for production use.
+
+Please follow the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) guide to set up a secure WAHA instance
+after you finish the quick start guide.
+
+{{< /callout >}}
 
 👉 Now, open the [📊 Dashboard]({{< relref "/docs/how-to/dashboard" >}}) at
 <a href="http://localhost:3000/dashboard" target="_blank">
