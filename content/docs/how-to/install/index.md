@@ -65,6 +65,9 @@ If you want to host more sessions - please check the numbers in
 It might not work with **WSL2** backend properly.
 {{< /details >}}
 
+{{< include file="content/docs/how-to/install/-the-hosting.md" >}}
+
+
 ### Pre-requisites
 Before proceeding, make sure you have the latest version of `docker` and `docker compose` installed.
 

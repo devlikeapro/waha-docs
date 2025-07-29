@@ -203,6 +203,8 @@ Open Swagger at
 
 ## What's next?
 
+{{< include file="content/docs/how-to/install/-the-hosting.md" >}}
+
 {{< callout context="tip" icon="outline/robot" title="Build Fast" >}}
 Ask [**🤖 WAHA GPT**]({{< relref "/gpt" >}}) to help you build **{python|js|php}** code!
 {{< /callout >}}

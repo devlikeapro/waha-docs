@@ -18,8 +18,8 @@ toc: true
 
 WAHA has multiple [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}) under the hood, and the CPU and Memory requirements change depending on the engine used.
 
-{{< callout icon="outline/server" >}}
-We **strongly recommend** using a VPS or server with a minimum **2CPU** and **2GB RAM** configuration for the project **even for a single session**.
+{{< callout context="tip" icon="outline/server" >}}
+We **strongly recommend** using a VPS or server with a minimum **2CPU** and **4GB RAM** configuration for the project **even for a single session**.
 
 If you want to host **more sessions** - please check the numbers below
 {{< /callout >}}
@@ -33,10 +33,7 @@ If you want to host **more sessions** - please check the numbers below
 | 100                                  |        -        |   4CPU / 8GB    |  3-5 CPU / 5GB  | 
 | 500                                  |        -        |        -        | 5-8 CPU / 25GB  |     
 
-{{< callout context="note" title="Real feedback from the users" >}}
-- The server has **2 CPU and 8GB** of memory. Today we have **85 sessions** in this instance.
-- **NOWEB** and **400** sessions with **4CPU and 32RAM**. It's working fine.
-{{< /callout >}}
+{{< include file="content/docs/how-to/install/-the-hosting.md" >}}
 
 ### How to horizontally scale WAHA?
 You can scale WAHA horizontally by **running multiple instances of WAHA** on **different servers**
