@@ -295,6 +295,11 @@ parent="language"
 url="https://translate.google.com/translate?sl=en&tl=uk&hl=uk&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
+name = "🇵🇰 اردو (Urdu)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=ur&hl=ur&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
 name = "🇵🇰 ਪੰਜਾਬੀ (Punjabi)"
 parent="language"
 url="https://translate.google.com/translate?sl=en&tl=pa&hl=pa&u=https://waha.devlike.pro/&client=webapp"
