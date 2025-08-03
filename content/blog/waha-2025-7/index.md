@@ -49,6 +49,6 @@ See details: {{< issue 1124 >}}
 
 ![](dashboard-languages.png)
 
-## 🆕 Changelog
+## 🆕 And More!
 
 Check out the full list of updates in the [**🆕 WAHA 2025.7 Changelog**]({{< relref "/docs/overview/changelog#20257" >}}) and stay tuned for more!
