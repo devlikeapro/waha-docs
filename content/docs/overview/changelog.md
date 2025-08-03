@@ -49,6 +49,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 ### 2025.7
 **🆕 NEW**
 
+- `2025.7.11` - Add languages (i18n) on [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
 - `2025.7.8` - Add [**👤 Update Contact API**]({{< relref "/docs/how-to/contacts#update-contact" >}}) - {{< issue 1124 >}}
   - **WEBJS**, **GOWS**, **NOWEB**
 - `2025.7.5` - Add [**🧩 ChatWoot App**]({{< relref "/docs/apps/chatwoot" >}}) - {{< issue 441 >}}
@@ -56,10 +57,13 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.7.2` - **WEBJS** - `--a-waha-session` and `--a-waha-timestamp` to chrome/chromium args - {{< issue 1092 >}}
 
 **🧩 Apps**:
+- `2025.7.11` - **ChatWoot** - fix @lid issue - find first by chat id
+- `2025.7.11` - **ChatWoot** - add **Udru** language
 - `2025.7.8` - **ChatWoot** - send `png` as image, not as attachment
 - `2025.7.5` - Add [**🧩 ChatWoot App**]({{< relref "/docs/apps/chatwoot" >}}) - {{< issue 441 >}}
 
 🛠️ **Fixes**
+- `2025.7.11` - **WEBJS** - Fix "You provided 'null' where a stream was expected" - {{< issue 1178 >}}
 - `2025.7.10` - **GOWS** - speed up sending a message to groups - {{< issue 1100 >}}
 - `2025.7.10` - **NOWEB** - do not freeze server in a lot of sessions case (use regular `sqlite3`)
 - `2025.7.9` - **WEBJS** - add `WAHA_RUN_XVFB=False` parameter - {{< issue 1151 >}}
