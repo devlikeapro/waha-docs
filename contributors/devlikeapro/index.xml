@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on WAHA</title><link>/contributors/devlikeapro/</link><description>Recent content in devlikeapro on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 12 Jul 2025 08:48:45 +0000</lastBuildDate><atom:link href="/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WhatsApp + ChatWoot - Overview</title><link>/blog/apps-chatwoot-overview/</link><pubDate>Sat, 12 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-overview/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on WAHA</title><link>/contributors/devlikeapro/</link><description>Recent content in devlikeapro on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 29 Jul 2025 08:48:45 +0000</lastBuildDate><atom:link href="/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.7 - ChatWoot App, Dashboard i18n, and more!</title><link>/blog/waha-2025-7/</link><pubDate>Tue, 29 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-7/</guid><description>&lt;h2 id="-chatwoot-app">🧩 ChatWoot App&lt;/h2>
+&lt;p>Meet the first built-in app in WAHA - &lt;a href="/docs/apps/chatwoot/">&lt;strong>🧩 ChatWoot App&lt;/strong>&lt;/a>!&lt;/p>
+&lt;p>
+
+&lt;img
+ src="/blog/waha-2025-7/chatwoot-overview_hu_a1e672381434639a.webp"
+ width="1835"
+ height="929"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt=""id="h-rh-i-0"
+/>&lt;/p>
+&lt;p>WAHA now provides a built-in app to integrate your &lt;strong>WhatsApp&lt;/strong> account with &lt;strong>ChatWoot&lt;/strong>,
+eliminating the need to run n8n or use other third-party products!&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Overview</title><link>/blog/apps-chatwoot-overview/</link><pubDate>Sat, 12 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-overview/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>WAHA&lt;/strong> provides a seamless integration with &lt;strong>Chatwoot&lt;/strong>, allowing you to manage your WhatsApp communications through a powerful customer service platform. This overview highlights the key features and capabilities of the integration.&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Installation Guide</title><link>/blog/apps-chatwoot-install/</link><pubDate>Fri, 11 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-install/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
 
@@ -118,50 +132,4 @@ This means your API key is never stored in plain text, reducing the risk if your
 to track your customers&amp;rsquo; online status!&lt;/p></description></item><item><title>🚨 WAHA Security Alert</title><link>/blog/security-alert/</link><pubDate>Tue, 29 Apr 2025 08:48:45 +0000</pubDate><guid>/blog/security-alert/</guid><description>&lt;hr>
 &lt;h2 id="-waha-security-alert">🚨 WAHA Security Alert&lt;/h2>
 &lt;p>We’ve recently seen a disturbing trend: users running WAHA with the &lt;strong>API publicly exposed&lt;/strong> and &lt;strong>without any form of protection&lt;/strong>.&lt;/p></description></item><item><title>WAHA 2025.4 - Read Chat Messages, Group Acks, and Engines Stability!</title><link>/blog/waha-2025-4/</link><pubDate>Tue, 29 Apr 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-4/</guid><description>&lt;hr>
-&lt;p>We’re excited to introduce &lt;a href="/docs/overview/changelog/#20254">&lt;strong>WAHA 2025.4&lt;/strong>&lt;/a>, packed with new API capabilities, group handling improvements, and crucial bug fixes across all engines!&lt;/p></description></item><item><title>WAHA 2025.3</title><link>/blog/waha-2025-3/</link><pubDate>Wed, 26 Mar 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-3/</guid><description>&lt;p>We’re excited to roll out &lt;a href="/docs/overview/changelog/#202503">&lt;strong>WAHA 2025.3&lt;/strong>&lt;/a>!&lt;/p>
-&lt;h2 id="gows-10">GOWS 1.0&lt;/h2>
-&lt;p>&lt;a href="/docs/how-to/engines/#gows">&lt;strong>GOWS Engine&lt;/strong>&lt;/a> just got its &lt;strong>1.0&lt;/strong> moment!&lt;/p>
-&lt;p>Here’s what’s new:&lt;/p>
-&lt;ul>
-&lt;li>Enable Link Previews - &lt;a href='https://github.com/devlikeapro/waha/issues/763' target="_blank">
-#763
-&lt;/a>
-&lt;/li>
-&lt;li>Delete Status Message - &lt;a href='https://github.com/devlikeapro/waha/issues/754' target="_blank">
-#754
-&lt;/a>
-&lt;/li>
-&lt;li>Delete Message - &lt;a href='https://github.com/devlikeapro/waha/issues/796' target="_blank">
-#796
-&lt;/a>
-&lt;/li>
-&lt;li>Edit Message - &lt;a href='https://github.com/devlikeapro/waha/issues/797' target="_blank">
-#797
-&lt;/a>
-&lt;/li>
-&lt;li>Reply To Message - &lt;a href='https://github.com/devlikeapro/waha/issues/799' target="_blank">
-#799
-&lt;/a>
-&lt;/li>
-&lt;li>Add &lt;code>filename&lt;/code> on &lt;code>/api/sendFile&lt;/code> - &lt;a href='https://github.com/devlikeapro/waha/issues/853' target="_blank">
-#853
-&lt;/a>
-&lt;/li>
-&lt;li>Extract &lt;code>replyTo&lt;/code> - &lt;a href='https://github.com/devlikeapro/waha/issues/876' target="_blank">
-#876
-&lt;/a>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="noweb-stability">NOWEB Stability&lt;/h2>
-&lt;p>If you faced any issues with the NOWEB engine, like
-&lt;a href='https://github.com/devlikeapro/waha/issues/821' target="_blank">
-#821
-&lt;/a>
-, &lt;a href='https://github.com/devlikeapro/waha/issues/860' target="_blank">
-#860
-&lt;/a>
-, &lt;a href='https://github.com/devlikeapro/waha/issues/869' target="_blank">
-#869
-&lt;/a>
-
-we have fixed them in this release!&lt;/p></description></item></channel></rss>
+&lt;p>We’re excited to introduce &lt;a href="/docs/overview/changelog/#20254">&lt;strong>WAHA 2025.4&lt;/strong>&lt;/a>, packed with new API capabilities, group handling improvements, and crucial bug fixes across all engines!&lt;/p></description></item></channel></rss>

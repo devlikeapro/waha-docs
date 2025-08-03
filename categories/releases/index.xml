@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on WAHA</title><link>/categories/releases/</link><description>Recent content in Releases on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 29 Jun 2025 08:48:45 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.6 - Security in WAHA Core, Message Edit Event, and Media Conversion</title><link>/blog/waha-2025-6/</link><pubDate>Sun, 29 Jun 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-6/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on WAHA</title><link>/categories/releases/</link><description>Recent content in Releases on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 29 Jul 2025 08:48:45 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.7 - ChatWoot App, Dashboard i18n, and more!</title><link>/blog/waha-2025-7/</link><pubDate>Tue, 29 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-7/</guid><description>&lt;h2 id="-chatwoot-app">🧩 ChatWoot App&lt;/h2>
+&lt;p>Meet the first built-in app in WAHA - &lt;a href="/docs/apps/chatwoot/">&lt;strong>🧩 ChatWoot App&lt;/strong>&lt;/a>!&lt;/p>
+&lt;p>
+
+&lt;img
+ src="/blog/waha-2025-7/chatwoot-overview_hu_a1e672381434639a.webp"
+ width="1835"
+ height="929"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt=""id="h-rh-i-0"
+/>&lt;/p>
+&lt;p>WAHA now provides a built-in app to integrate your &lt;strong>WhatsApp&lt;/strong> account with &lt;strong>ChatWoot&lt;/strong>,
+eliminating the need to run n8n or use other third-party products!&lt;/p></description></item><item><title>WAHA 2025.6 - Security in WAHA Core, Message Edit Event, and Media Conversion</title><link>/blog/waha-2025-6/</link><pubDate>Sun, 29 Jun 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-6/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
 &lt;h3 id="-security-in-waha-core">🔒 Security in WAHA Core&lt;/h3>
 &lt;p>&lt;strong>WAHA Core&lt;/strong> now comes with robust, built-in security features!&lt;br>
 You can protect your API with an &lt;strong>API Key&lt;/strong> - and now, for even greater security, you can store only the hash of your key using &lt;code>WAHA_API_KEY=sha512:{HASH}&lt;/code>.&lt;br>
@@ -67,7 +81,4 @@ we have fixed them in this release!&lt;/p></description></item><item><title>WAHA
 &lt;a href="/docs/how-to/events/">&lt;strong>Events&lt;/strong>&lt;/a>
 happening in your WAHA instance in real-time with the new
 &lt;a href="/docs/how-to/dashboard/#event-monitor">&lt;strong>Event Monitor&lt;/strong>&lt;/a>
-feature!&lt;/p></description></item><item><title>WAHA 2024.10</title><link>/blog/waha-2024-10/</link><pubDate>Mon, 30 Sep 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-10/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202410">&lt;strong>WAHA 2024.10&lt;/strong>&lt;/a> 🎉&lt;/p>
-&lt;h2 id="waha-core---receive-media">WAHA Core - Receive Media&lt;/h2>
-&lt;p>We published &lt;a href="/docs/how-to/receive-messages/#files">&lt;strong>📥 Receive messages&lt;/strong> &lt;/a>
-in free &lt;strong>WAHA Core&lt;/strong> version, so you can receive media files in your WhatsApp API for free!&lt;/p></description></item></channel></rss>
+feature!&lt;/p></description></item></channel></rss>
