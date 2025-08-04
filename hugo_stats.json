@@ -385,6 +385,7 @@
     ],
     "ids": [
       "--filter-chats-by-ids",
+      "-and-more",
       "-breaking-changes",
       "-breaking-changes-1",
       "-bulk-read-support",
@@ -674,7 +675,6 @@
       "h-rh-i-8",
       "h-rh-i-9",
       "headers",
-      "heading",
       "health-check",
       "health-check-1",
       "health-check-indicators",

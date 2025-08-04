@@ -24,7 +24,7 @@ Users receive push notifications from the channel, similar to a private message.
 In this article, we give you a **Step-By-Step guide how to send messages to WhatsApp Channels** using
 [**WAHA**](/) - free, self-hosted WhatsApp API!
 
-We'll install it on **your own laptop or server**, so no suspicious services have access to your WhatsApp account.
+We'll install it on **your own server**, so no suspicious services have access to your WhatsApp account.
 
 <div class="text-center">
    <img src='/images/logo.svg' title='WhatsApp API' alt='logo' style='border-radius: 50%; width: 8rem'/>
