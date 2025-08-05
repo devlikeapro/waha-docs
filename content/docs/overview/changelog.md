@@ -46,6 +46,14 @@ Latest Version:
 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 {{< /callout >}}
 
+### 2025.8
+
+🛠️ **Fixes**
+
+- `2025.8.1` - **WEBJS** - fix create group - {{< issue 1145 >}}
+- `2025.8.1` - **NOWEB** - fix channel list - {{< issue 1177 >}}
+- `2025.8.1` - limited characters in the session name - {{< issue 1163 >}}
+
 ### 2025.7
 **🆕 NEW**
 
