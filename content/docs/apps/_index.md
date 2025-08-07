@@ -10,5 +10,4 @@ sidebar:
   collapsed: true
 ---
 
-
 Here you can find detailed information about apps.

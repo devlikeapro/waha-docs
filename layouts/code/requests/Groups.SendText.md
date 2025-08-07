@@ -1,6 +1,7 @@
 ```http request
 POST /api/sendText
 ```
+
 ```json { title="Body" }
 {
   "session": "default",

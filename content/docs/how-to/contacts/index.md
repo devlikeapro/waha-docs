@@ -1,5 +1,5 @@
 ---
-title : "👤 Contacts"
+title: "👤 Contacts"
 description: "Contacts"
 lead: ""
 date: 2020-10-06T08:48:45+00:00
@@ -17,6 +17,7 @@ Methods for contacts.
 </div>
 
 ## Features
+
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
 {{< include file="content/docs/how-to/contacts/features.md" >}}
@@ -26,11 +27,12 @@ WhatsApp Web does not support adding contacts, so the API doesn't support it too
 {{< /callout >}}
 
 ## API - Contacts
+
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
 
 ### Get all contacts
 
-Get your contacts 
+Get your contacts
 
 ```http request
 GET /api/contacts/all?session={NAME}
@@ -54,6 +56,7 @@ GET /api/contacts/all?session={NAME}
 ```
 
 #### Contacts Pagination
+
 If you see timeout or the request takes too long - consider using `limit` parameter to get contacts in smaller chunks
 
 ```http request
@@ -63,15 +66,16 @@ GET /api/contacts/all?session={NAME}&limit=100&offset=0&sortBy=id&sortOrder=asc
 - `limit=100` - limit the number of chats to return
 - `offset=0` - skip the number of chats from the start
 - `sortBy={field}` - sort by field
-    - `sortBy=id` - sort by contact id
-    - `sortBy=name` - sort by contact name
+  - `sortBy=id` - sort by contact id
+  - `sortBy=name` - sort by contact name
 - `sortOrder=desc|asc` - sort order
-    - `desc` - descending order (A-Z)
-    - `asc` - ascending order (Z-A)
+  - `desc` - descending order (A-Z)
+  - `asc` - ascending order (Z-A)
 
 ### Get contact
 
 Get contact
+
 ```http request
 GET /api/contacts?contactId={ID}&session={SESSION}
 ```
@@ -94,6 +98,7 @@ GET /api/contacts?contactId={ID}&session={SESSION}
 ```
 
 ### Update contact
+
 **Update contact** on **your phone address book** (and in WhatsApp):
 
 ```http request
@@ -108,18 +113,21 @@ PUT /api/{session}/contacts/{chatId}
 ```
 
 **Path Parameters**:
+
 - `{session}` - session name - `default`
 - `{chatId}` - chat ID can end with "@c.us" or can be just a phone number - `12132132130`
 
 {{< callout context="note" icon="outline/address-book" title="Phone Address Book Update Note" >}}
+
 - If you have multiple **WhatsApp** apps installed on your phone, the API might only work with one account.
 - You may need to make **a few API requests** with the same parameters and wait **a few seconds** between requests to update your **phone address book**.
-{{< /callout >}}
+  {{< /callout >}}
 
 ### Check phone number exists
 
 If you want to check if phone number is registered in WhatsApp (even if the number is not in your contact list) - use
 this endpoint for that.
+
 ```http request
 GET /api/contacts/check-exists?phone=11231231231&session=default
 ```
@@ -132,6 +140,7 @@ It returns `numberExists` field with `true` or `false` value and `chatId` field 
   "chatId": "123123123@c.us"
 }
 ```
+
 **Note for 🇧🇷 Brazilian Phone Numbers**
 
 You should use the `GET /api/contacts/check-exists` endpoint **before sending a message to a new phone number**
@@ -157,11 +166,13 @@ GET /api/contacts/about?contactId={ID}&session={SESSION}
 ```
 
 ### Get contact profile picture
+
 ```http request
 GET /api/contacts/profile-picture?contactId=11231231231&session=default`
 ```
 
 **Query**:
+
 - `contactId` - contact ID
 - `session` - session name
 - `refresh=True` - force refresh the picture. By default, we cache it 24 hours. Do not frequently refresh the picture to avoid `rate-overlimit` error.
@@ -173,12 +184,15 @@ GET /api/contacts/profile-picture?contactId=11231231231&session=default`
 ```
 
 ### Block (unblock) contact
+
 Block contact
+
 ```http request
 POST /api/contacts/block
 ```
 
 Unblock contact
+
 ```http request
 POST /api/contacts/unblock
 ```
@@ -206,8 +220,8 @@ Query all known LID-to-phone number mappings for a session.
 
 **Query Parameters:**
 
-* `limit`: (optional, default: 100) Number of records to return
-* `offset`: (optional, default: 0) Pagination offset
+- `limit`: (optional, default: 100) Number of records to return
+- `offset`: (optional, default: 0) Pagination offset
 
 **Response:**
 
@@ -255,20 +269,24 @@ Retrieve the associated phone number for a specific LID.
 
 {{< tabs "lids-get-pn-response" >}}
 {{< tab "Response (Found)" >}}
+
 ```json
 {
   "lid": "123123123@lid",
   "pn": "123456789@c.us"
 }
 ```
+
 {{< /tab >}}
 {{< tab "Response (Not Found)" >}}
+
 ```json
 {
   "lid": "123123123@lid",
   "pn": null
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -284,29 +302,34 @@ Fetch the LID for a given phone number (chat ID).
 
 {{< tabs "lids-get-lid-response" >}}
 {{< tab "Response (Found)" >}}
+
 ```json
 {
   "lid": "123123123@lid",
   "pn": "123456789@c.us"
 }
 ```
+
 {{< /tab >}}
 {{< tab "Response (Not Found)" >}}
+
 ```json
 {
   "lid": null,
   "pn": "123456789@c.us"
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Lids FAQ
+
 - If you **don't find a phone number by lid** - you don't have the phone number in your contact list or you're not **admin** in the group.
 - For [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) - try [**Refresh groups**]({{< relref "/docs/how-to/groups" >}}) if you don't find the `lid` but you're **admin** in the group.
 
 {{< callout context="tip" icon="outline/hand-finger-right" >}}
-👉 If nothing helped, and **you see phone number for participant on your phone app** - please 
+👉 If nothing helped, and **you see phone number for participant on your phone app** - please
 [**open an issue**](https://github.com/devlikeapro/waha)
 and tell what
 [**🏭 Engine**]({{< relref "/docs/how-to/engines" >}})

@@ -3,6 +3,7 @@
 {{< tabs "send-event-api" "language" >}}
 
 {{< tab "cURL" >}}
+
 ```sh
 curl -X 'POST' \
   'http://localhost:3000/api/default/events' \
@@ -20,9 +21,11 @@ curl -X 'POST' \
   }
 }'
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -45,35 +48,40 @@ data = {
 response = requests.post(url, json=data, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
 const url = "http://localhost:3000/api/default/events";
 const data = {
-    chatId: "12132132130@c.us",
-    event: {
-        title: "Team Meeting",
-        description: "Monthly team sync-up",
-        location: "Conference Room A",
-        startTime: "2023-12-15T10:00:00Z",
-        endTime: "2023-12-15T11:00:00Z"
-    }
+  chatId: "12132132130@c.us",
+  event: {
+    title: "Team Meeting",
+    description: "Monthly team sync-up",
+    location: "Conference Room A",
+    startTime: "2023-12-15T10:00:00Z",
+    endTime: "2023-12-15T11:00:00Z"
+  }
 };
 const headers = {
-    'Content-Type': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
+  "Content-Type": "application/json",
+  "X-Api-Key": "yoursecretkey"
 };
 
-axios.post(url, data, { headers })
-    .then(response => console.log(response.data))
-    .catch(error => console.error(error));
+axios
+  .post(url, data, { headers })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
 ```
+
 {{< /tab >}}
 
 {{< tab "PHP" >}}
+
 ```php
 <?php
 $url = "http://localhost:3000/api/default/events";
@@ -102,6 +110,7 @@ curl_close($ch);
 echo $response;
 ?>
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

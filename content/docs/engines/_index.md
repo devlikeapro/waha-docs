@@ -10,7 +10,6 @@ sidebar:
   collapsed: true
 ---
 
-
 Here you can find detailed information about engines.
 
 👉 Read overview on [**🏭 Engines page**]({{< relref "/docs/how-to/engines" >}}).

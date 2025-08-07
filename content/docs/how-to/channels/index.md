@@ -6,7 +6,7 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 231
-images: [ "channels.png" ]
+images: ["channels.png"]
 slug: channels
 ---
 
@@ -33,14 +33,17 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 You can get list of **subscribed or owned** channels:
 
 Get all (your and subscribed) channels:
+
 ```http request
 GET /api/{session}/channels
 ```
 
 Filter channels by your role:
+
 ```http request
 GET /api/{session}/channels?role=OWNER
 ```
+
 - `role` can be `OWNER`, `ADMIN`, `SUBSCRIBER`
 
 ```json
@@ -91,6 +94,7 @@ POST /api/{session}/channels
 ### Delete a channel
 
 You can delete a channel `DELETE /api/{session}/channels/123123%40newsletter`
+
 ```http request
 DELETE /api/{session}/channels/{ID}
 ```
@@ -160,13 +164,10 @@ You can search **public** (not subscribed yet) channels **by view**:
 POST /api/{session}/channels/search/by-view
 ```
 
-
 ```json { title="Body" }
 {
   "view": "RECOMMENDED",
-  "countries": [
-    "US"
-  ],
+  "countries": ["US"],
   "categories": [],
   "limit": 50,
   "startCursor": ""
@@ -203,9 +204,11 @@ POST /api/{session}/channels/search/by-view
 ```
 
 ### Search channels by text
+
 {{< imgo src="/images/whatsapp/channels/channels-text.png" full="false" >}}
 
 You can search **public** (not subscribed yet) channels **by text**:
+
 ```http request
 POST /api/{session}/channels/search/by-text
 ```
@@ -218,12 +221,14 @@ POST /api/{session}/channels/search/by-text
   "startCursor": ""
 }
 ```
+
 - `text` - search text
 - `categories` - use `id` from [get available categories](#get-search-categories)
 - `limit` - we recommend using default `50` value, it's the way official clients work
 - `startCursor` - use `endCursor` from the previous response (if any data available on the next page)
 
 ### Get Search Views
+
 List of available views for search:
 
 ```http request
@@ -240,6 +245,7 @@ GET /api/{session}/channels/search/views
 ```
 
 ### Get Search Countries
+
 List of available countries for search (not full one, you can try different `code` values if you don't see your country):
 
 ```http request
@@ -256,6 +262,7 @@ GET /api/{session}/channels/search/countries
 ```
 
 ### Get Search Categories
+
 List of available categories for search:
 
 ```http request
@@ -276,6 +283,7 @@ GET /api/{session}/channels/search/categories
 ```
 
 ### Get Messages (Preview) for Channel
+
 You can get latest messages from **public** channels (not subscribed yet) by invite code (or channel id).
 Returns only **preview** messages (one that you'll see on channel preview).
 
@@ -284,6 +292,7 @@ GET /api/{SESSION}/channels/{INVITE}/messages/preview?downloadMedia=false&limit=
 ```
 
 **Query parameters**:
+
 - `{SESSION}` - your session
 - `{INVITE}` - invite code (123123123) or channel id (123132123@newsletter). **Invite code is recommended**.
 - `downloadMedia` - whether to download media or not
@@ -308,6 +317,7 @@ GET /api/{SESSION}/channels/{INVITE}/messages/preview?downloadMedia=false&limit=
   }
 ]
 ```
+
 - `reactions` - reactions for the message
 - `viewCount` - views count for the message
 - `message` - message object - the same as in `payload` field [**message**]({{< relref "/docs/how-to/events#message" >}}) event
@@ -380,6 +390,7 @@ PUT /api/reaction
 ```
 
 `messageId` can be in 2 format:
+
 1. `false_11111111111@newsletter_AAAAAAAAAAAAAAAAAAAA` - using characters. Works if you're subscribed to the channel.
 2. `false_11111111111@newsltter_123` - using `server_id`. If you're not subscribed to the channel, you can use this format.
 
@@ -387,6 +398,7 @@ You can find `server_id` in message:
 {{< tabs "channel-message-id-for-reaction" >}}
 {{< tab "NOWEB" >}}
 Find `_data.key.server_id` value:
+
 ```json
 {
   "event": "message.any",
@@ -404,10 +416,12 @@ Find `_data.key.server_id` value:
   ...
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "GOWS" >}}
 Find `_data.Info.ServerID` value:
+
 ```json
 {
   "event": "message.any",
@@ -425,14 +439,13 @@ Find `_data.Info.ServerID` value:
   }
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "WEBJS" >}}
 Not supported
 {{< /tab >}}
 {{< /tabs >}}
-
-
 
 ### Get messages from the channel
 

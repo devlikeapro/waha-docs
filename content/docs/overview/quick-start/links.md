@@ -15,7 +15,6 @@
 - [🗄️ Storages]({{< relref "/docs/how-to/sessions" >}})
 - [➕ WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}})
 
-
 {{< /card >}}
 {{< /card-grid >}}
 
@@ -35,4 +34,3 @@
 
 {{< /card >}}
 {{< /card-grid >}}
-

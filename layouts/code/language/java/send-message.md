@@ -1,4 +1,3 @@
-### Send Message
 ```java
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
@@ -16,5 +15,5 @@ public class WhatsAppClient {
         System.out.println(response.getBody());
     }
 }
-            
+
 ```

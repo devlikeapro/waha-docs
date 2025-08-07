@@ -3,6 +3,7 @@
 {{< tabs "screenshot-api" "language" >}}
 
 {{< tab "cURL" >}}
+
 ```sh
 # Get binary image
 curl -X 'GET' \
@@ -17,9 +18,11 @@ curl -X 'GET' \
   -H 'accept: application/json' \
   -H 'X-Api-Key: yoursecretkey'
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -44,48 +47,52 @@ headers = {
 response = requests.get(url, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```javascript
-const axios = require('axios');
-const fs = require('fs');
+const axios = require("axios");
+const fs = require("fs");
 
 // Get binary image
 const getBinaryImage = async () => {
-    const url = "http://localhost:3000/api/screenshot?session=default";
-    const headers = {
-        'accept': 'image/png',
-        'X-Api-Key': 'yoursecretkey'
-    };
-    
-    const response = await axios.get(url, { 
-        headers, 
-        responseType: 'arraybuffer' 
-    });
-    
-    fs.writeFileSync('screenshot.png', response.data);
+  const url = "http://localhost:3000/api/screenshot?session=default";
+  const headers = {
+    "accept": "image/png",
+    "X-Api-Key": "yoursecretkey"
+  };
+
+  const response = await axios.get(url, {
+    headers,
+    responseType: "arraybuffer"
+  });
+
+  fs.writeFileSync("screenshot.png", response.data);
 };
 
 // Get base64 image
 const getBase64Image = async () => {
-    const url = "http://localhost:3000/api/screenshot?session=default";
-    const headers = {
-        'accept': 'application/json',
-        'X-Api-Key': 'yoursecretkey'
-    };
-    
-    const response = await axios.get(url, { headers });
-    console.log(response.data);
+  const url = "http://localhost:3000/api/screenshot?session=default";
+  const headers = {
+    "accept": "application/json",
+    "X-Api-Key": "yoursecretkey"
+  };
+
+  const response = await axios.get(url, { headers });
+  console.log(response.data);
 };
 
 // Call the functions
 getBinaryImage().catch(console.error);
 getBase64Image().catch(console.error);
 ```
+
 {{< /tab >}}
 
 {{< tab "PHP" >}}
+
 ```php
 <?php
 // Get binary image
@@ -117,6 +124,7 @@ curl_close($ch);
 echo $response;
 ?>
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

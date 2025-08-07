@@ -35,7 +35,6 @@ Here's Session Lifecycle State Diagram:
 
 {{< imgo src="waha-session-lifecycle.png" >}}
 
-
 ### Session Status
 
 Here's the list of possible `session.status` values:
@@ -43,15 +42,14 @@ Here's the list of possible `session.status` values:
 - `STOPPED` - session is stopped
 - `STARTING` - session is starting
 - `SCAN_QR_CODE` - session is required to scan QR code or login via phone number.
-    - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
-    - Every time you receive the `session.status` event with `SCAN_QR_CODE` status,
-      you need to [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}}), because it's changed.
+  - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
+  - Every time you receive the `session.status` event with `SCAN_QR_CODE` status,
+    you need to [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}}), because it's changed.
 - `WORKING` - session is working and ready to use
 - `FAILED` - session is failed due to some error. It's likely either authorization is required again or device has been
   disconnected from that account.
-  Try to [**Restart**](#restart-session) the session and if it doesn't help - [**Logout**](#logout-session) and 
-[**Start **](#start-session) the session again.
-
+  Try to [**Restart**](#restart-session) the session and if it doesn't help - [**Logout**](#logout-session) and
+  [**Start **](#start-session) the session again.
 
 ## Create Session
 
@@ -105,10 +103,10 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
   "name": "default",
   "start": false
 }
-
 ```
 
 ## Session Config
+
 **Full possible config** for a session:
 
 ```json
@@ -131,9 +129,7 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
     "webhooks": [
       {
         "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message"
-        ],
+        "events": ["message"],
         // Optional
         "hmac": {
           "key": "your-secret-key"
@@ -185,16 +181,17 @@ You need to add `config.noweb` field to activate the store:
 ```
 
 ### Metadata
+
 `metadata` is an attribute on Session objects that lets you store more information,
 structured as key-value pairs,
-to sessions for your own use and reference. 
+to sessions for your own use and reference.
 For example, you can store your user’s unique identifier from your system.
 
 Associated `metadata` field is available in:
-1. [List Sessions](#list-sessions) and [Get Session](#get-session)  responses
+
+1. [List Sessions](#list-sessions) and [Get Session](#get-session) responses
 2. [**🔄 Events**]({{< relref "events#metadata" >}}) events
 3. [**📊 Dashboard**]({{< relref "dashboard" >}}) for view, and search sessions by metadata
-
 
 ```json
 {
@@ -209,14 +206,15 @@ Associated `metadata` field is available in:
 ```
 
 Sample `metadata` use cases:
+
 - **Link IDs**: Attach your system’s unique IDs to a Session object to simplify lookups. For example, add your user or tenant id.
-- **Customer details**: Annotate a customer by storing an internal information (email, customer name) for your future 
-use, so you don't have to look into two systems.
+- **Customer details**: Annotate a customer by storing an internal information (email, customer name) for your future
+  use, so you don't have to look into two systems.
 
 WAHA does not use metadata for any internal purposes, it's up to you how to use it.
 
-
 ### Webhooks
+
 Read more about
 [**🔄 Events - Webhooks**]({{< relref "/docs/how-to/events#webhooks" >}}).
 
@@ -229,9 +227,7 @@ You can configure webhooks for a session:
     "webhooks": [
       {
         "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message"
-        ]
+        "events": ["message"]
       }
     ]
   }
@@ -239,6 +235,7 @@ You can configure webhooks for a session:
 ```
 
 **Full possible webhook config**:
+
 ```json
 {
   "name": "default",
@@ -246,9 +243,7 @@ You can configure webhooks for a session:
     "webhooks": [
       {
         "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message"
-        ],
+        "events": ["message"],
         // Optional
         "hmac": {
           "key": "your-secret-key"
@@ -270,13 +265,10 @@ You can configure webhooks for a session:
     ]
   }
 }
-
 ```
 
 👉 Read more about available options on
 [**🔄 Webhooks**]({{< relref "/docs/how-to/events#webhooks-advanced-imagesversionspluspng" >}}) page.
-
-
 
 ### Proxy
 
@@ -334,7 +326,6 @@ Can be useful for debugging purposes when you're experiencing some issues.
 }
 ```
 
-
 ## Update Session
 
 In order to update a session - call `PUT /api/sessions/{session}` with a **full** new configuration
@@ -347,9 +338,7 @@ In order to update a session - call `PUT /api/sessions/{session}` with a **full*
     "webhooks": [
       {
         "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message"
-        ]
+        "events": ["message"]
       }
     ]
   }
@@ -376,7 +365,7 @@ Here's how you can call it from various languages:
 
 ## Stop Session
 
-In order to stop a session - call 
+In order to stop a session - call
 
 ```http request
 POST /api/sessions/{session}/stop
@@ -404,7 +393,7 @@ Here's how you can call it from various languages:
 
 ## Logout Session
 
-In order to log out the session - call 
+In order to log out the session - call
 
 ```http request
 POST /api/sessions/{session}/logout
@@ -422,7 +411,7 @@ but keeps the **session's configuration**, so you can start a new session with t
 
 ## Delete Session
 
-In order to delete a session - call 
+In order to delete a session - call
 
 ```http request
 DELETE /api/sessions/{session}
@@ -435,11 +424,11 @@ Here's how you can call it from various languages:
 
 ⚠️ **Delete** also **stops** the session if it's running (session status is not `STOPPED`)
 
-🎯 **Idempotent operation**  - you can call it multiple times, and it'll stop the session only if it exists.
+🎯 **Idempotent operation** - you can call it multiple times, and it'll stop the session only if it exists.
 
 ## List Sessions
 
-To get session list - call 
+To get session list - call
 
 ```http request
 GET /api/sessions
@@ -455,10 +444,7 @@ GET /api/sessions
       "webhooks": [
         {
           "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-          "events": [
-            "message",
-            "session.status"
-          ],
+          "events": ["message", "session.status"],
           "hmac": null,
           "retries": null,
           "customHeaders": null
@@ -500,10 +486,7 @@ GET /api/sessions/{session}
     "webhooks": [
       {
         "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message",
-          "session.status"
-        ],
+        "events": ["message", "session.status"],
         "hmac": null,
         "retries": null,
         "customHeaders": null
@@ -681,7 +664,7 @@ You'll get code in the need to enter in **WhatsApp app** to authenticate the ses
 }
 ```
 
-👉 **Always** add to [**QR code auth flow**](#get-qr) in your application as a fallback, 
+👉 **Always** add to [**QR code auth flow**](#get-qr) in your application as a fallback,
 because the pairing code is not always available and works as expected.
 
 Here's how you can call it from various languages:
@@ -717,6 +700,7 @@ The `session.status` event is triggered when the session status changes.
 ```
 
 ## engine.event
+
 Internal event that is triggered when the engine emits an event.
 
 ```json { title="engine.event" }
@@ -742,7 +726,7 @@ Internal event that is triggered when the engine emits an event.
 }
 ```
 
-## Advanced sessions 
+## Advanced sessions
 
 With [WAHA Plus version]({{< relref "waha-plus" >}}) you can save session state to avoid scanning QR code everytime,
 configure autostart options so when the docker container restarts - it restores all previously run sessions!
@@ -754,8 +738,8 @@ If you want to save your session and do not scan QR code everytime when you laun
 
 ### Autostart
 
-By default, WAHA track which session have been run on which worker and restart it when 
-worker got restarted. If you want to disable it - set `WAHA_WORKER_RESTART_SESSIONS=False` in 
+By default, WAHA track which session have been run on which worker and restart it when
+worker got restarted. If you want to disable it - set `WAHA_WORKER_RESTART_SESSIONS=False` in
 environment variable.
 
 ### Multiple sessions
@@ -770,6 +754,7 @@ Before new granular API we have a simple API to control the session.
 **Kindly switch to new API** that allows you to control the session **in a more flexible way**.
 
 ### Start
+
 The endpoint **Create** (if not exists),
 **Update** (if existed before) and **Start** a new session.
 
@@ -787,9 +772,7 @@ Accepts the same configuration as
     "webhooks": [
       {
         "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
-        "events": [
-          "message"
-        ]
+        "events": ["message"]
       }
     ]
   }

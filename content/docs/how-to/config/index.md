@@ -20,6 +20,7 @@ beginning of the command line or by using [other options](https://docs.docker.co
 ```bash
 docker run -it -e "WAHA_WORKER_ID=waha" -e WAHA_PRINT_QR=False devlikeapro/waha-plus
 ```
+
 {{< /tab >}}
 
 {{< tab "docker compose" >}}
@@ -28,7 +29,7 @@ It's not necessary to always run such a long command - you can save all data in
 file as described on [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}).
 
 ```yaml { title="docker-compose.yaml" }
-version: '3'
+version: "3"
 
 services:
   waha:
@@ -45,6 +46,7 @@ services:
 ```bash
 docker compose up -d
 ```
+
 {{< /tab >}}
 
 {{< tab ".env" >}}
@@ -58,7 +60,7 @@ WAHA_PRINT_QR=False
 Then reference it in your docker-compose.yaml file:
 
 ```yaml { title="docker-compose.yaml" }
-version: '3'
+version: "3"
 
 services:
   waha:
@@ -74,45 +76,48 @@ services:
 ```bash
 docker compose up -d
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}
 
-
 ## Common
+
 - `WHATSAPP_API_PORT=3000`: The port number that the HTTP server will listen on. The default value is `3000`.
   - `PORT=3000` is also supported (for Heroku compatibility)
 - `WHATSAPP_API_HOSTNAME=localhost`: The hostname for the HTTP server. The default value is `localhost`.
 - `WHATSAPP_API_SCHEMA=https` - it just changes `media.url` schema when you receive media (with files) messages.
-- `WAHA_BASE_URL` - will be used to construct the `media.url` field in the webhook events. 
+- `WAHA_BASE_URL` - will be used to construct the `media.url` field in the webhook events.
   - By default, it's `{WHATSAPP_API_SCHEMA}://{WHATSAPP_API_HOSTNAME}:{WHATSAPP_API_PORT}`.
 - `TZ=Europe/Warsaw` - set the timezone for the container. The default value is `UTC`. Find [your timezone in the list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 - `WAHA_DEBUG_MODE=false` - enables some API only for development or troubleshooting purposes. Disabled by default.
   - Read more on [**🔍 Observability**]({{< relref "/docs/how-to/observability#waha-debug-mode" >}}) page.
-
 
 ## Logging
 
 Read more about [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
 
 Options you can use to control how WAHA outputs logs:
+
 - `WAHA_LOG_FORMAT` - supports formats:
   - `WAHA_LOG_FORMAT=PRETTY` - good for local development, **default** format
   - `WAHA_LOG_FORMAT=JSON` - can be useful if you're using a central logging management system
 - `WAHA_LOG_LEVEL` - how much information to log `error | warn | info | debug | trace`.
   - 👉 Do not set `debug` and `trace` in production, as these levels generate excessive log output.
 - `WAHA_HTTP_LOG_LEVEL=info` - controls the level of `request completed` log (HTTP access). You can set it to `error | warn | info | debug | trace`.
-- `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides the `WAHA_LOG_LEVEL` to `debug` if both defined. 
-👉 Learn more about logging configuration on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page.
-
+- `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides the `WAHA_LOG_LEVEL` to `debug` if both defined.
+  👉 Learn more about logging configuration on [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}}) page.
 
 ## Engines
+
 Read more about [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}})
 
 - `WHATSAPP_DEFAULT_ENGINE=WEBJS` - set the default engine for all sessions. Available options: `WEBJS`, `NOWEB`, `GOWS`. By default, it's `WEBJS`.
 
 ### WEBJS
+
 You can use some of the following environment variables to configure the [**WEBJS**]({{< relref "/docs/how-to/engines#webjs" >}}) session:
+
 - `WAHA_WEBJS_CACHE_TYPE=local` - enable cache (aka use the latest version) for the **web page** in the browser. By default, it's `none` (no cache)
 - `WAHA_WEBJS_WEB_VERSION=2.3000.XXXX` - set the version of the WhatsApp Web to use. By default, we're using the latest compatible version. Only works with `local` cache type.
 
@@ -125,12 +130,13 @@ Read more about [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}}) a
   - **WEBJS** - consider setting it to `5` if you have many sessions
   - **NOWEB** - it's fine to leave to `0` or you can increase to `1` if you experience issues with starting sessions.
 - `WAHA_PRINT_QR=True` - set this variable to `False` to disable printing QR codes to the console. By default, `True`.
-- `WAHA_WORKER_ID=waha1` - set the worker ID for the session. 
+- `WAHA_WORKER_ID=waha1` - set the worker ID for the session.
   - Workers restore sessions if worker got restarted. If you have multiple workers, each worker will restore its own sessions.
 - `WHATSAPP_RESTART_ALL_SESSIONS=True`: Set this variable to `True` to start all **STOPPED** sessions after container
   restarts. By default, this variable is set to `False`.
 
 Rarely used:
+
 - `WAHA_WORKER_RESTART_SESSIONS=True` - restart all sessions when the worker is restarted. By default, `True`.
 - `WHATSAPP_START_SESSION=session1,session2`: This variable can be used to start sessions with the specified names right
   after launching the API. Separate session names with a comma.
@@ -138,12 +144,15 @@ Rarely used:
   - It's relevant if you're using **WEBJS + MongoDB**. Install `zip` and `unzip` if you don't use our official docker image and set the variable
 
 ### Sessions - Local
+
 - `WAHA_LOCAL_STORE_BASE_DIR=/app/.sessions` - Override the base directory for local storage of session data
 
 ### Sessions - PostgreSQL
+
 - `WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable` - PostgreSQL connection URL for storing session data
 
 ### Sessions - MongoDB
+
 - `WHATSAPP_SESSIONS_MONGO_URL=mongodb://user:password@host:port/` - MongoDB connection URL for storing session data
 
 ## Apps
@@ -158,9 +167,10 @@ Read more about [**🔄 Events & Webhooks**]({{< relref "/docs/how-to/events" >}
 and you'll see all requests immediately in your browser to intercept the webhook's payload.
 
 ### Global webhooks
+
 You can configure webhooks for **all sessions** at once by setting these environment variables:
 
-- `WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111`  - to set up a URL for the webhook
+- `WHATSAPP_HOOK_URL=https://webhook.site/11111111-1111-1111-1111-11111111` - to set up a URL for the webhook
 - `WHATSAPP_HOOK_EVENTS=message,message.any,state.change` - specify events.
   - `WHATSAPP_HOOK_EVENTS=*` - subscribe to all events.
   - We don't suggest using `*` or all events for production, it can generate a lot of requests.
@@ -177,6 +187,7 @@ That webhook configuration **does not appear** in `session.config` field in `GET
 and you'll see all requests immediately in your browser to intercept the webhook's payload.
 
 ### Session webhooks
+
 You can configure webhook when you start session by setting `config.webhook` fields.
 
 Read more about it on [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions#configure-webhook" >}}).
@@ -202,6 +213,7 @@ Read more about [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}})
 Read more about [**🔌 Proxy**]({{< relref "/docs/how-to/proxy" >}})
 
 ### Global proxy
+
 If you need to use a proxy, you can set the following environment variables:
 
 - `WHATSAPP_PROXY_SERVER=localhost:3128`: Use this variable to set the proxy server in the format `host:port`, without http or https.
@@ -212,12 +224,13 @@ If you need to use a proxy, you can set the following environment variables:
   This is a way to select a proxy from while you start session.
 
 ### Session proxy
+
 You can configure proxy when you start session by setting `config.proxy` fields.
 Read more about it on [**Session page** ->]({{< relref "/docs/how-to/sessions#configure-proxy" >}}).
 
 Keep in mind that session's proxy configuration takes precedence over proxy configuration set by environment variables!
 
-## HTTPS 
+## HTTPS
 
 Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
 
@@ -230,12 +243,12 @@ Enable HTTPS directly in WAHA by setting the following environment variables:
 - `WAHA_HTTPS_PATH_CERT=/path/to/cert.pem`: The path to the certificate file for HTTPS. By default `./.secrets/cert.pem`
 - `WAHA_HTTPS_PATH_CA=/path/to/ca.pem`: The path to the CA file for HTTPS. By default `./.secrets/chain.pem`
 
-
 ## Security
 
 Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
 
 **API**
+
 - `WAHA_API_KEY=sha512:{SHA512_HEX_HASH}`: require `X-Api-Key: {KEY}` header in all requests to the API.
   - `WAHA_API_KEY=sha512:c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec`: require `X-Api-Key: admin` header in all requests to the API.
   - `WAHA_API_KEY=admin`- plain key works, but it's better to set **SHA512** instead.
@@ -243,23 +256,24 @@ Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
 - `WHATSAPP_API_KEY_EXCLUDE_PATH=ping,health` - exclude URI from key auth [#451](https://github.com/devlikeapro/waha/issues/451)
 
 **Dashboard**
+
 - `WAHA_DASHBOARD_ENABLED=true`: Toggle to enable or disable the dashboard.
 - `WAHA_DASHBOARD_USERNAME=waha`: Default username for login (default: waha).
 - `WAHA_DASHBOARD_PASSWORD=waha`: Default password for login (default: waha).
 
 **Swagger**
+
 - `WHATSAPP_SWAGGER_ENABLED=true`: Toggle to enable or disable the Swagger.
 - `WHATSAPP_SWAGGER_USERNAME=admin`
 - `WHATSAPP_SWAGGER_PASSWORD=admin`
-Swagger panel with `admin / admin` credentials. This does not affect API access.
-
+  Swagger panel with `admin / admin` credentials. This does not affect API access.
 
 ## Files
 
 Read more about [**🖼️ Media Storage**]({{< relref "/docs/how-to/storages#media-storage" >}}) and [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}})
 
-
 ### Files - Local
+
 The following environment variables can be used to configure the file storage options for the WAHA:
 
 - `WHATSAPP_FILES_MIMETYPES`: This variable can be used to download only specific mimetypes from messages.
@@ -277,6 +291,7 @@ The following environment variables can be used to configure the file storage op
 
 💡 When media files are not processed due to `WHATSAPP_FILES_MIMETYPES` or `WHATSAPP_DOWNLOAD_MEDIA` settings,
 you'll still receive a webhook event with `hasMedia: True` field, but without a `media.url`.
+
 ```json { title="message" }
 {
   "event": "message",
@@ -294,6 +309,7 @@ you'll still receive a webhook event with `hasMedia: True` field, but without a 
 ```
 
 ### Files - S3
+
 - `WAHA_MEDIA_STORAGE=S3` - enable the S3 storage
 - `WAHA_S3_REGION=eu-west-1` - the region of the S3 bucket
 - `WAHA_S3_BUCKET=waha` - the name of the S3 bucket
@@ -306,6 +322,7 @@ you'll still receive a webhook event with `hasMedia: True` field, but without a 
   - `WAHA_S3_PROXY_FILES=True` - WAHA will proxy media files through itself in `media.url`
 
 ### Files - PostgreSQL
+
 - `WAHA_MEDIA_STORAGE=POSTGRESQL` - enable the PostgreSQL storage for media files
 - `WAHA_MEDIA_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable` - PostgreSQL connection URL for storing media files
 
@@ -316,6 +333,7 @@ Read more about [**🔍 Observability**]({{< relref "/docs/how-to/observability"
 <b>Health check is available in [WAHA Plus ]({{< relref "/docs/how-to/waha-plus" >}}) only.</b>
 
 The following environment variables can be used to configure the Health Check:
+
 - `WHATSAPP_HEALTH_MEDIA_FILES_THRESHOLD_MB` - the threshold in MB for the media files storage. The default value is `100`.
 - `WHATSAPP_HEALTH_SESSIONS_FILES_THRESHOLD_MB` - the threshold in MB for the sessions files storage. The default value is `100`.
 - `WHATSAPP_HEALTH_MONGODB_TIMEOUT` - the timeout in milliseconds for the MongoDB health check. The default value is `5000`.

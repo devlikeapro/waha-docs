@@ -54,7 +54,7 @@ docker run -it --rm --network=host -e WHATSAPP_HOOK_URL=http://localhost:5000/bo
 If you're using ARM (like Apple Silicon, Apple M1, etc.) - use following
 commands to download the image
 
- For Core version the command is
+For Core version the command is
 
 ```bash
 # Download the image
@@ -150,6 +150,7 @@ Open http://127.0.0.1:5000/bot - if you see **WhatsApp Download Files Bot!**
 then the bot is ready to receive message with files!
 
 ## Using Built-in HTTP API
+
 {{< include file="/layouts/code/language/python/install-dependencies.md" >}}
 {{< include file="/layouts/code/language/python/send-message.md" >}}
 {{< include file="/layouts/code/language/python/receive-message.md" >}}

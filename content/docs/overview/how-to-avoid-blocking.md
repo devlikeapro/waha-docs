@@ -88,5 +88,3 @@ WhatsApp knows that it's uncommon for someone to send so many messages or bulk m
 As an API, we say all that's left to do right now is to agree with WhatsApp's policy, not send spam messages, and always wait for the other person to contact you first.
 
 You could do this by sending an SMS to the person with a link to start a chat on WhatsApp with you by link [https://wa.me/12132132131?text=Hi](https://wa.me/12132132131?text=Hi).
-
-

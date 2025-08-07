@@ -18,7 +18,9 @@ slug: "about"
 {{< include file="content/docs/apps/about/apps-vs-integrations.md" >}}
 
 ## Available Apps
+
 Apps available to connect:
+
 - [**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}) - use your **WhatsApp** in **ChatWoot CRM**
 
 ## Configuration
@@ -36,4 +38,3 @@ You can use the **WAHA Jobs Dashboard** at [http://localhost:3000/jobs](http://l
 ## Apps SDK
 
 > This section is currently under development. Check back soon for detailed information about the integration architecture and workflow.
-

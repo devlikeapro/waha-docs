@@ -25,8 +25,8 @@ toc: true
 
 {{< include file="content/docs/apps/chatwoot/-disclaimer.md" >}}
 
-
 ## Installation
+
 We cover all installation and configuration aspects in the following series of articles:
 {{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}
 
@@ -39,6 +39,7 @@ We cover all installation and configuration aspects in the following series of a
 {{< include file="content/docs/apps/about/-how-it-works.md" >}}
 
 ### Error Handling
+
 In case of any errors, WAHA retries a few times and then gives detailed information about the error:
 
 ![Error Reports and Retries](screenshots/error-reports-and-retries.png)
@@ -46,4 +47,3 @@ In case of any errors, WAHA retries a few times and then gives detailed informat
 You can use the **WAHA Jobs Dashboard** at [http://localhost:3000/jobs](http://localhost:3000/jobs) for monitoring:
 
 ![WAHA Jobs Dashboard](screenshots/waha-jobs-dashboard.png)
-

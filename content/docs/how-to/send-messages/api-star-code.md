@@ -3,6 +3,7 @@
 {{< tabs "star-api" "language" >}}
 
 {{< tab "cURL" >}}
+
 ```sh
 curl -X 'PUT' \
   'http://localhost:3000/api/star' \
@@ -16,9 +17,11 @@ curl -X 'PUT' \
   "star": true
 }'
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -37,31 +40,36 @@ data = {
 response = requests.put(url, json=data, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
 const url = "http://localhost:3000/api/star";
 const data = {
-    session: "default",
-    messageId: "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
-    chatId: "12132132130@c.us",
-    star: true
+  session: "default",
+  messageId: "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
+  chatId: "12132132130@c.us",
+  star: true
 };
 const headers = {
-    'Content-Type': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
+  "Content-Type": "application/json",
+  "X-Api-Key": "yoursecretkey"
 };
 
-axios.put(url, data, { headers })
-    .then(response => console.log(response.data))
-    .catch(error => console.error(error));
+axios
+  .put(url, data, { headers })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
 ```
+
 {{< /tab >}}
 
 {{< tab "PHP" >}}
+
 ```php
 <?php
 $url = "http://localhost:3000/api/star";
@@ -86,6 +94,7 @@ curl_close($ch);
 echo $response;
 ?>
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

@@ -30,6 +30,6 @@ In that case you'll get `event.response.failed` event with `eventResponse: null`
 }
 ```
 
-
 **Payload**:
+
 - the same as for `event.response` payload, but with `eventResponse: null`

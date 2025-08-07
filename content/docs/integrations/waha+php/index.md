@@ -21,4 +21,3 @@ slug: PHP
 {{< include file="/layouts/code/language/php/install-dependencies.md" >}}
 {{< include file="/layouts/code/language/php/send-message.md" >}}
 {{< include file="/layouts/code/language/php/receive-message.md" >}}
-

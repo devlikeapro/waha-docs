@@ -21,4 +21,3 @@ slug: go
 {{< include file="/layouts/code/language/go/install-dependencies.md" >}}
 {{< include file="/layouts/code/language/go/send-message.md" >}}
 {{< include file="/layouts/code/language/go/receive-message.md" >}}
-

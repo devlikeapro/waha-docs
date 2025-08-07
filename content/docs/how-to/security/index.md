@@ -1,5 +1,5 @@
 ---
-title : "🔒 Security"
+title: "🔒 Security"
 description: "Security"
 lead: ""
 date: 2020-10-06T08:48:45+00:00
@@ -19,7 +19,7 @@ Always protect the API with [**Api Key**](#api-security) and deny access by usin
 
 ## API security
 
-You can protect the API by requiring `X-Api-Key` header in HTTP request. 
+You can protect the API by requiring `X-Api-Key` header in HTTP request.
 
 You can use `WAHA_API_KEY` environment variable. It accepts two formats:
 
@@ -27,9 +27,11 @@ You can use `WAHA_API_KEY` environment variable. It accepts two formats:
 - `WAHA_API_KEY={PLAIN_KEY}`: require `X-Api-Key: {PLAIN_KEY}` header in all requests to the API. This format stores your key in plain text in the environment variables, which is less secure.
 
 ### Generate and Hash Api-Key
+
 {{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
 
 ### Set Api-Key Hash
+
 Set
 `WAHA_API_KEY=sha512:{SHA512_HEX_HASH}` in docker (or in `docker-compose.yaml` or `.env`):
 
@@ -38,6 +40,7 @@ docker run -it -e WAHA_API_KEY=sha512:98b6d128682e280b74b324ca82a6bae6e8a3f7174e
 ```
 
 Test API works as expected
+
 ```bash
 # No Key
 curl http://localhost:3000/api/sessions
@@ -67,8 +70,8 @@ To authorize requests - set `X-Api-Key` header to `yoursecretkey` for all reques
 
 {{< include file="content/docs/how-to/security/set-x-api-key-http-header-code.md" >}}
 
-
 ### Exclude endpoints
+
 If you need to exclude some endpoints (like `GET /health` or `GET /ping`) from the API Key requirement - you can
 set `WAHA_API_KEY_EXCLUDE_PATH` environment variable with a comma-separated list of endpoints (no `/` at the beginning).
 
@@ -79,9 +82,8 @@ docker run -it \
  devlikeapro/waha-plus
 ```
 
-
-
 ## Swagger Security
+
 If you want to hide the project Swagger panel under the password - run the following command to hide under `admin/admin`
 login and password.
 
@@ -98,6 +100,7 @@ Protecting Swagger under the password does not protect your API from other reque
 {{< /callout >}}
 
 Environment variables:
+
 - `WHATSAPP_SWAGGER_ENABLED=true`: Toggle to enable or disable the Swagger.
 - `WHATSAPP_SWAGGER_USERNAME=admin`
 - `WHATSAPP_SWAGGER_PASSWORD=admin`
@@ -108,23 +111,25 @@ You can also set [**Swagger White Label**]({{< relref "/docs/how-to/swagger#whit
 options instead of hiding the Swagger panel.
 {{< /callout >}}
 
-
 ## Dashboard Security
+
 Read more about [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
 
 When running WAHA you can set the following environment variables to configure the dashboard:
+
 - `WAHA_DASHBOARD_ENABLED=true` - enable or disable the dashboard, by default `true`. Set to `false` to disable the dashboard.
-- `WAHA_DASHBOARD_USERNAME=waha` - username used to log in, by default `admin` or `waha` 
+- `WAHA_DASHBOARD_USERNAME=waha` - username used to log in, by default `admin` or `waha`
 - `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, by default `admin` or `waha`.
 
-
 ## Webhook security
+
 To make sure that you get a webhook from your WAHA instance - you can use **HMAC authentication**.
 
 Read more about
 [**🔄 Events**]({{< relref "/docs/how-to/events#hmac-authentication" >}}).
 
 ## HTTPS
+
 After you set up the security options - you should set up HTTPS to protect the data in transit and prevent [Man-in-the-middle attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack).
 
 That's fine to run it on the **local network** without HTTPS, but for **the production** environment, HTTPS is a must-have.
@@ -134,6 +139,7 @@ That's fine to run it on the **local network** without HTTPS, but for **the prod
 WAHA supports HTTPS out of the box if you don't want to use a reverse proxy like Nginx (**using Nginx is recommended**)
 
 You can set up the following environment variables to enable HTTPS:
+
 - `WAHA_HTTPS_ENABLED=true`: Set this variable to `true` to enable HTTPS. By default, it's `false`.
 - `WAHA_HTTPS_PATH_KEY=/path/to/key.pem`: The path to the key file for HTTPS. By default `./.secrets/privkey.pem`
 - `WAHA_HTTPS_PATH_CERT=/path/to/cert.pem`: The path to the certificate file for HTTPS. By default `./.secrets/cert.pem`

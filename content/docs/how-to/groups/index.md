@@ -1,5 +1,5 @@
 ---
-title : "👥 Groups"
+title: "👥 Groups"
 description: "Groups"
 lead: ""
 date: 2020-10-06T08:48:45+00:00
@@ -24,6 +24,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 {{< include file="content/docs/how-to/groups/features-events.md" >}}
 
 ## API
+
 - `{session}` - use the session name for Whatsapp instance that you created with `POST /api/session` endpoint
 - `{groupId}` - group id in format `123123123123@g.us`. You can get the id in a few ways:
   - By [handling incoming message webhook]({{< relref "/docs/how-to/receive-messages" >}}).
@@ -31,7 +32,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
   - By creating a new group and saving the id.
 
 {{< callout context="tip" icon="outline/hand-finger-right" >}}
-Check [**👤 Contacts - Lids**]({{< relref "/docs/how-to/contacts/#api---lids" >}}) if you see `@lid` 
+Check [**👤 Contacts - Lids**]({{< relref "/docs/how-to/contacts/#api---lids" >}}) if you see `@lid`
 in participants list for a group
 {{< /callout >}}
 
@@ -58,7 +59,6 @@ POST /api/{session}/groups
 GET /api/{session}/groups
 ```
 
-
 **Response**:
 depends on [**🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) you use.
 
@@ -81,10 +81,11 @@ If you see timeout or the request takes too long - consider using `limit` parame
 - `exclude=participants` - you can exclude participants data from the response
 
 {{< details "I see rate-overlimit in NOWEB" >}}
-  👉 If you see `rate-overlimit` error with **NOWEB** engine - try enabling [**🏭 NOWEB Store before using the endpoint**]({{< relref "/docs/engines/NOWEB#store" >}})!
+👉 If you see `rate-overlimit` error with **NOWEB** engine - try enabling [**🏭 NOWEB Store before using the endpoint**]({{< relref "/docs/engines/NOWEB#store" >}})!
 {{< /details >}}
 
 ### Get groups count
+
 Get the total number of groups
 
 ```http request
@@ -98,7 +99,8 @@ GET /api/{session}/groups/count
 ```
 
 ### Join group
-If you have invite URL for a group (like `https://chat.whatsapp.com/invitecode`), you can 
+
+If you have invite URL for a group (like `https://chat.whatsapp.com/invitecode`), you can
 
 ```http request
 POST /api/{session}/groups/join
@@ -111,6 +113,7 @@ POST /api/{session}/groups/join
 ```
 
 or using full link:
+
 ```json { title="Body" }
 {
   "code": "https://chat.whatsapp.com/invitecode"
@@ -124,6 +127,7 @@ or using full link:
 ```
 
 ### Get join info for group
+
 If you have invite URL for a group (like `https://chat.whatsapp.com/invitecode`), you can get group info:
 
 ```http request
@@ -139,7 +143,9 @@ GET /api/{session}/groups/join-info?code=https%3A%2F%2Fchat.whatsapp.com%2Finvit
 Response depends on engine you're using
 
 ### Refresh groups
+
 If you see any inconsistency in groups list or in participants list, you can refresh the groups from the WhatsApp server:
+
 ```http request
 POST /api/{session}/groups/refresh
 ```
@@ -165,6 +171,7 @@ POST /api/{session}/groups/{groupId}/leave
 ```
 
 ### Group Picture
+
 You can get, set and remove group picture
 
 #### Get Group Picture
@@ -186,6 +193,7 @@ GET /api/{SESSION}/groups/{ID}/picture?refresh=false
 - `url` can be `null` if there's no picture for the group
 
 #### Set Group Picture
+
 👉 Available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 
 ```http request
@@ -197,6 +205,7 @@ PUT /api/{SESSION}/groups/{ID}/picture
 
 {{< tabs "groups-set-picture" >}}
 {{< tab "URL" >}}
+
 ```json { title="Body" }
 {
   "file": {
@@ -208,6 +217,7 @@ PUT /api/{SESSION}/groups/{ID}/picture
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
+
 ```json { title="Body" }
 {
   "file": {
@@ -215,6 +225,7 @@ PUT /api/{SESSION}/groups/{ID}/picture
   }
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -225,11 +236,13 @@ PUT /api/{SESSION}/groups/{ID}/picture
 ```
 
 #### Delete Group Picture
+
 👉 Available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 
 ```http request
 DELETE /api/{SESSION}/groups/{ID}/picture
 ```
+
 - `{SESSION}` - session name
 - `{ID}` - group id. Remember to encode `@` symbol - `123123123123%40g.us`
 
@@ -274,6 +287,7 @@ PUT /api/{session}/groups/{groupId}/description
 ```
 
 ### Security - update group info
+
 Updates the group settings to only allow admins to edit group info (title, description, photo).
 
 ```http request
@@ -301,6 +315,7 @@ GET /api/{session}/groups/{groupId}/settings/security/info-admin-only
 Returns `true` if the setting was properly updated. This can return false if the user does not have the necessary permissions.
 
 ### Security - who can send messages
+
 Updates the group settings to only allow admins to send messages.
 
 ```http request
@@ -424,25 +439,32 @@ POST /api/{session}/groups/{groupId}/invite-code/revoke
 ```
 
 ## Events
+
 Read more about
 [**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
 {{< include file="content/docs/how-to/groups/features-events.md" >}}
 
 ### group.v2.join
+
 {{< include file="content/docs/how-to/groups/events-group.v2.join.md" >}}
 
 ### group.v2.leave
+
 {{< include file="content/docs/how-to/groups/events-group.v2.leave.md" >}}
 
 ### group.v2.participants
+
 {{< include file="content/docs/how-to/groups/events-group.v2.participants.md" >}}
 
 ### group.v2.update
+
 {{< include file="content/docs/how-to/groups/events-group.v2.update.md" >}}
 
 ### group.join
+
 {{< include file="content/docs/how-to/groups/events-group.join.md" >}}
 
 ### group.leave
+
 {{< include file="content/docs/how-to/groups/events-group.leave.md" >}}

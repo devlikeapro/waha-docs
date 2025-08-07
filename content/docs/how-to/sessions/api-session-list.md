@@ -3,6 +3,7 @@
 {{< tabs "list-sessions-api" "language" >}}
 
 {{< tab "cURL" >}}
+
 ```sh
 # List active sessions
 curl -X 'GET' \
@@ -16,9 +17,11 @@ curl -X 'GET' \
   -H 'accept: application/json' \
   -H 'X-Api-Key: yoursecretkey'
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -42,43 +45,47 @@ headers = {
 response = requests.get(url, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
 // List active sessions
 const getActiveSessions = async () => {
-    const url = "http://localhost:3000/api/sessions";
-    const headers = {
-        'accept': 'application/json',
-        'X-Api-Key': 'yoursecretkey'
-    };
-    
-    const response = await axios.get(url, { headers });
-    console.log(response.data);
+  const url = "http://localhost:3000/api/sessions";
+  const headers = {
+    "accept": "application/json",
+    "X-Api-Key": "yoursecretkey"
+  };
+
+  const response = await axios.get(url, { headers });
+  console.log(response.data);
 };
 
 // List all sessions (including stopped)
 const getAllSessions = async () => {
-    const url = "http://localhost:3000/api/sessions?all=true";
-    const headers = {
-        'accept': 'application/json',
-        'X-Api-Key': 'yoursecretkey'
-    };
-    
-    const response = await axios.get(url, { headers });
-    console.log(response.data);
+  const url = "http://localhost:3000/api/sessions?all=true";
+  const headers = {
+    "accept": "application/json",
+    "X-Api-Key": "yoursecretkey"
+  };
+
+  const response = await axios.get(url, { headers });
+  console.log(response.data);
 };
 
 // Call the functions
 getActiveSessions().catch(console.error);
 getAllSessions().catch(console.error);
 ```
+
 {{< /tab >}}
 
 {{< tab "PHP" >}}
+
 ```php
 <?php
 // List active sessions
@@ -112,6 +119,7 @@ echo "\nAll sessions (including stopped):\n";
 echo $response;
 ?>
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

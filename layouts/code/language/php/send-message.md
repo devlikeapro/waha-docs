@@ -1,5 +1,3 @@
-### Send Message
-
 ```php
 <?php
 $url = "http://localhost:3000/api/sendText";

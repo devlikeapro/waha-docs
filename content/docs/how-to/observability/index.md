@@ -14,10 +14,10 @@ slug: observability
 Options you can use to control how WAHA outputs logs:
 
 - `WAHA_LOG_FORMAT` - supports formats:
-    - `WAHA_LOG_FORMAT=PRETTY` - good for local development, **default** format
-    - `WAHA_LOG_FORMAT=JSON` - can be useful if you're using a central logging management system
+  - `WAHA_LOG_FORMAT=PRETTY` - good for local development, **default** format
+  - `WAHA_LOG_FORMAT=JSON` - can be useful if you're using a central logging management system
 - `WAHA_LOG_LEVEL` - how much information to log `error | warn | info | debug | trace`.
-    - 👉 Do not set `debug` and `trace` in production, as these levels generate excessive log output.
+  - 👉 Do not set `debug` and `trace` in production, as these levels generate excessive log output.
 - `WAHA_HTTP_LOG_LEVEL=info` - controls the level of `request completed` log (HTTP access). You can set it
   to `error | warn | info | debug | trace`.
 - `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides
@@ -25,7 +25,7 @@ Options you can use to control how WAHA outputs logs:
 
 ### Session logging
 
-You can enable debug mode for a session by setting the `config.debug` field to `true` when 
+You can enable debug mode for a session by setting the `config.debug` field to `true` when
 [Starting a session]({{< relref "/docs/how-to/sessions#debug" >}})
 
 This can be useful for debugging purposes when you're experiencing issues.
@@ -137,9 +137,9 @@ POST /api/server/stop
   "force": false
 }
 ```
+
 👉 If you're using Docker and followed the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) guide,
 Docker will **automatically restart** the server, so you can use this endpoint to **reboot** the service.
-
 
 ## Health Check
 
@@ -323,7 +323,8 @@ authentication:
 ```
 
 ## WAHA Debug Mode
-If you enable `WAHA_DEBUG_MODE=True`, WAHA exposes a few additional features for helping with 
+
+If you enable `WAHA_DEBUG_MODE=True`, WAHA exposes a few additional features for helping with
 troubleshooting (usually Memory and CPU-related issues).
 
 {{< callout context="caution" icon="outline/info-circle" >}}
@@ -331,6 +332,7 @@ troubleshooting (usually Memory and CPU-related issues).
 {{< /callout >}}
 
 ### Get Node.js heapsnapshot
+
 ```http request
 GET /api/server/debug/heapsnapshot
 ```
@@ -344,30 +346,33 @@ then click on **Download File**:
 ![Swagger - Download File](swagger-download-file.png)
 
 ### Get Browser Trace
+
 ```http request
 GET /api/server/debug/browser/trace/{SESSION}?seconds=30&categories=%2A
 ```
+
 Get **browser's trace** (uses [puppeteer](https://pptr.dev/api/puppeteer.tracing))
 which you can open in Chrome Dev Tool
 ([chrome://tracing](chrome://tracing))
-or 
+or
 [https://trace.cafe/](https://trace.cafe/).
 
 **Query Parameters:**
+
 - `seconds` - how many seconds to trace
 - `categories` - categories to trace
 
 {{< callout context="tip" icon="outline/alert-square-rounded" >}}
+
 - 👉 Only one trace can be active at a time per browser.
 - ⌛ It takes `SECONDS` seconds to generate the trace file, please be patient 🐢
-{{< /callout >}}
+  {{< /callout >}}
 
 You can execute request in
 [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}),
 then click on **Download File**:
 
 ![Swagger - Download File](swagger-download-file.png)
-
 
 ### GOWS pprof
 
@@ -378,6 +383,7 @@ go tool pprof -http=:8081 http://localhost:6060/debug/pprof/heap
 ```
 
 Make sure to add it to docker-compose:
+
 ```yaml
 services:
   waha:

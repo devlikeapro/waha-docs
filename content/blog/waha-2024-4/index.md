@@ -17,9 +17,9 @@ homepage: false
   Download the <a href="/videos/waha-dashboard-overview.webm">Dashboard Overview video</a> .
 </video>
 
-We are thrilled to introduce the latest addition to WAHA - 
+We are thrilled to introduce the latest addition to WAHA -
 [the brand new **Dashboard**]({{< relref "/docs/how-to/dashboard" >}}),
-exclusively available in 
+exclusively available in
 [**WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) version!
 
 🌟 Dashboard allows you to do:
@@ -40,17 +40,16 @@ If you’re using API Key, remember to set up the key in the dashboard:
 
 - `WAHA_DASHBOARD_ENABLED=true`: Toggle to enable or disable the dashboard (default is true; set to false to disable).
 - `WAHA_DASHBOARD_USERNAME=waha`: Default username for login (default: waha).
-- `WAHA_DASHBOARD_PASSWORD=waha`: Default password for login (default: waha). 
+- `WAHA_DASHBOARD_PASSWORD=waha`: Default password for login (default: waha).
 
-ℹ️ If you encounter any issues or wish to request a new feature, please head over to our GitHub repository and create an issue at: 
+ℹ️ If you encounter any issues or wish to request a new feature, please head over to our GitHub repository and create an issue at:
 🔗 [WAHA GitHub Issues](https://github.com/devlikeapro/waha/issues)
-
 
 Thank you for your continued support and enthusiasm for the project! We appreciate each and every one of our patrons! 🙏
 
-If you don't have access to 
+If you don't have access to
 [WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}}) - subscribe to one of our tiers on
-the platforms  and get the key to get WAHA Plus on
+the platforms and get the key to get WAHA Plus on
 our portal! [https://portal.devlike.pro/](https://portal.devlike.pro/)
 
 You can find all changes for the WAHA 2024.4 in [🆕 Changelog]({{< relref "/docs/overview/changelog" >}})

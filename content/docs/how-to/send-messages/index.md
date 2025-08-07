@@ -40,8 +40,8 @@ There are common fields that you can find in almost all requests:
 
 `session` - a session name from which account you're sending the message. We use `default` in the examples.
 
-- Core  version supports only `default` session.
-- Plus  allows you to run multiple sessions inside one container to save your memory and
+- Core version supports only `default` session.
+- Plus allows you to run multiple sessions inside one container to save your memory and
   CPU resources!
 
 Read more about [multiple sessions →]({{< relref "/docs/how-to/sessions" >}})
@@ -50,9 +50,9 @@ Read more about [multiple sessions →]({{< relref "/docs/how-to/sessions" >}})
 
 `chatId` - this is a phone number or Group identifier where you're sending the message.
 
-- `123123123@c.us`  **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at
+- `123123123@c.us` **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at
   the end.
-  For phone number `12132132131` the `chatId` is  `12132132131@c.us`
+  For phone number `12132132131` the `chatId` is `12132132131@c.us`
 - `123123123@s.whatsapp.net` can also appear in **internal data for NOWEB**, just convert it to `@c.us` to work
   with that properly. Kindly don't use it in `chatId` when sending messages
 - `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
@@ -97,7 +97,7 @@ and want to reply to that message, you need to first send that you've seen the m
 (double green tick) - read [**⚠️ How to Avoid Blocking**]({{< relref "docs/overview/how-to-avoid-blocking" >}})
 
 {{< callout context="note" title="Read all unread messages in the chat" >}}
-Check 
+Check
 [**💬 Chats - Read messages**]({{< relref "/docs/how-to/chats#read-messages" >}}) API
 to read messages without providing message id.
 {{< /callout >}}
@@ -107,6 +107,7 @@ POST /api/sendSeen
 ```
 
 Send seen (read a message) for **all unread** messages **older than 7 days** (30 max for DM, 100 max for groups)
+
 ```json { title="Body" }
 {
   "session": "default",
@@ -114,7 +115,7 @@ Send seen (read a message) for **all unread** messages **older than 7 days** (30
 }
 ```
 
-In **NOWEB** and **GOWS** 
+In **NOWEB** and **GOWS**
 [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}})
 you can control what messages to read by using `messagesIds` (or deprecated `messageId`) field:
 
@@ -124,9 +125,7 @@ Send seen for **direct message**:
 {
   "session": "default",
   "chatId": "11111111111@c.us",
-  "messageIds": [
-    "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
-  ]
+  "messageIds": ["false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"]
 }
 ```
 
@@ -136,9 +135,7 @@ Send seen for **Group Message** you need to provide `participant` field:
 {
   "session": "default",
   "chatId": "11111111111@g.us",
-  "messageIds": [
-    "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA_33333333333@c.us"
-  ],
+  "messageIds": ["false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA_33333333333@c.us"],
   "participant": "33333333333@c.us"
 }
 ```
@@ -147,6 +144,7 @@ Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendSeen-code.md" >}}
 
 ## Send Text
+
 Use the API to send text messages to the chat.
 
 ```http request
@@ -165,6 +163,7 @@ Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendText-code.md" >}}
 
 Here's some additional options:
+
 - `reply_to: false_1111@c.us_AAA` - to reply on a message
 - `mentions` - to mention a contact in a group
 - `linkPreview: false` - to disable preview generation for links in the message
@@ -186,6 +185,7 @@ POST /api/sendText
 ```
 
 If the text has a link - it generates a preview for that link. You adjust the behaviour by setting
+
 - `linkPreview: true` - to enable link preview
 - `linkPreviewHighQuality: true` - to enable high-quality link preview (requires additional upload to WA servers)
 
@@ -197,7 +197,6 @@ If the text has a link - it generates a preview for that link. You adjust the be
 If link preview generation process fails or site protects it with captcha - you can generate your own preview and
 [**Send Custom Link Preview**](#send-link-custom-preview)
 {{< /callout >}}
-
 
 ### Reply on message
 
@@ -225,13 +224,12 @@ also mention it in `mentions` in format `2132132130@c.us`
   "session": "default",
   "chatId": "12132132130@c.us",
   "text": "Hi there! @2132132130",
-  "mentions": [
-    "2132132130@c.us"
-  ]
+  "mentions": ["2132132130@c.us"]
 }
 ```
 
 ## Send Image
+
 Use API to send images to the chat.
 
 ```http request
@@ -245,6 +243,7 @@ You can send images in two ways:
 
 {{< tabs "send-image-body" >}}
 {{< tab "URL" >}}
+
 ```json { title="Body" }
 {
   "session": "default",
@@ -257,9 +256,11 @@ You can send images in two ways:
   "caption": "string"
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
+
 ```json { title="Body" }
 {
   "session": "default",
@@ -272,6 +273,7 @@ You can send images in two ways:
   "caption": "string"
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -279,6 +281,7 @@ Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendImage-code.md" >}}
 
 ## Send Voice
+
 Use API to send voice messages to the chat.
 
 ```http request
@@ -290,9 +293,9 @@ You can send voice messages in two ways:
 1. Provide a **URL** for the voice.
 2. Encode the whole file content into **BASE64** and send it in the request body.
 
-
 {{< tabs "send-voice-body" >}}
 {{< tab "URL" >}}
+
 ```json { title="Body" }
 {
   "session": "default",
@@ -304,9 +307,11 @@ You can send voice messages in two ways:
   "convert": false
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
+
 ```json { title="Body" }
 {
   "chatId": "11111111111@c.us",
@@ -319,10 +324,12 @@ You can send voice messages in two ways:
   "convert": false
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
 **Fields**:
+
 - `file` - provide **one of** the fields:
   - `url` - URL to the file
   - `data` - Base 64 encoded binary content of the file
@@ -335,13 +342,15 @@ Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendVoice-code.md" >}}
 
 ### Media - Convert Voice
+
 {{< include file="content/docs/how-to/send-messages/media-voice-convert.md" >}}
 
-
 ## Send Video
+
 ```http request
 POST /api/sendVideo
 ```
+
 Use API to send a video to a chat.
 
 You can send video messages in two ways:
@@ -351,6 +360,7 @@ You can send video messages in two ways:
 
 {{< tabs "send-video-body" >}}
 {{< tab "URL" >}}
+
 ```json { title="Body" }
 {
   "session": "default",
@@ -366,9 +376,11 @@ You can send video messages in two ways:
   "convert": false
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
+
 ```json { title="Body" }
 {
   "chatId": "11111111111@c.us",
@@ -384,10 +396,12 @@ You can send video messages in two ways:
   "convert": false
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
 **Fields**:
+
 - `file` - provide **one of** the fields:
   - `url` - URL to the file
   - `data` - Base 64 encoded binary content of the file
@@ -402,7 +416,6 @@ Here's how you can call it from various languages:
 ### Media - Convert Video
 
 {{< include file="content/docs/how-to/send-messages/media-video-convert.md" >}}
-
 
 ## Send File
 
@@ -419,6 +432,7 @@ You can send files in two ways:
 
 {{< tabs "send-file-body" >}}
 {{< tab "URL" >}}
+
 ```json { title="Body" }
 {
   "session": "default",
@@ -431,9 +445,11 @@ You can send files in two ways:
   }
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
+
 ```json { title="Body" }
 {
   "session": "default",
@@ -446,6 +462,7 @@ You can send files in two ways:
   "caption": "string"
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -470,11 +487,7 @@ The request body is pretty simple:
   "chatId": "123123123@c.us",
   "poll": {
     "name": "How are you?",
-    "options": [
-      "Awesome!",
-      "Good!",
-      "Not bad!"
-    ],
+    "options": ["Awesome!", "Good!", "Not bad!"],
     "multipleAnswers": false
   }
 }
@@ -483,8 +496,8 @@ The request body is pretty simple:
 Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendPoll-code.md" >}}
 
-
 ## Send Event
+
 You can send Event Message using API
 
 ```http request
@@ -498,29 +511,29 @@ POST /api/{SESSION}/events
 Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendEvent-code.md" >}}
 
-
 <div style="width: 500px; max-width: 100%; margin: 0 auto;">
 {{< img lqip="21x webp q20" src="whatsapp-event-message.jpg" alt="WhatsApp Event Message" >}}
 </div>
 
-
-
 ## Send Link Custom Preview
+
 {{< callout context="tip" icon="outline/hand-finger-right" >}}
 Available in [**➕ WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 {{< /callout >}}
 
-Using [/api/sendText](#send-text) 
+Using [/api/sendText](#send-text)
 you can send **auto-generated link previews**.
 
-If you want to send a **custom link preview** in case of any errors or captcha during the link preview generation 
+If you want to send a **custom link preview** in case of any errors or captcha during the link preview generation
 (like for Amazon: {{< issue 596 >}},{{< issue 880 >}} ), you can use the following API.
 
 ```http request
 POST /api/send/link-custom-preview
 ```
+
 {{< tabs "send-link-custom-preview-body" >}}
 {{< tab "URL" >}}
+
 ```json { title="Body" }
 {
   "session": "default",
@@ -537,9 +550,11 @@ POST /api/send/link-custom-preview
   }
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
+
 ```json { title="Body" }
 {
   "session": "default",
@@ -556,6 +571,7 @@ POST /api/send/link-custom-preview
   }
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -564,6 +580,7 @@ POST /api/send/link-custom-preview
 {{< /details-html >}}
 
 **Fields**:
+
 - `text` - must contain `preview.url` somewhere in the text
 - `preview.url` - must be a valid URL
 - `preview.title` - title of the link preview
@@ -593,7 +610,6 @@ POST /api/forwardMessage
 
 Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-forwardMessage-code.md" >}}
-
 
 ## Edit message
 
@@ -642,8 +658,8 @@ DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-deleteMessage-code.md" >}}
 
-
 ## Add a reaction
+
 Use API to add a reaction to a message.
 
 ```http request
@@ -653,7 +669,6 @@ PUT /api/reaction
 {{< callout context="note" title="Use PUT method" icon="outline/alert-octagon" >}}
 Reaction API uses **PUT**, not **POST** request! Please make sure you send right request.
 {{< /callout >}}
-
 
 ```json { title="Body" }
 {
@@ -677,6 +692,7 @@ Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-reaction-code.md" >}}
 
 ## Star and unstar message
+
 Use API to star or unstar a message.
 
 ```http request
@@ -713,6 +729,7 @@ Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-star-code.md" >}}
 
 ## Send contact (vcard)
+
 Use the API to send contact (vcard)
 
 ```http request
@@ -723,6 +740,7 @@ You can send contacts in multiple ways:
 
 {{< tabs "send-vcard-body" >}}
 {{< tab "Fields" >}}
+
 ```json { title="Body" }
 {
   "session": "default",
@@ -737,6 +755,7 @@ You can send contacts in multiple ways:
   ]
 }
 ```
+
 {{</ tab >}}
 
 {{< tab "vCard" >}}
@@ -752,11 +771,13 @@ You can send contacts in multiple ways:
   ]
 }
 ```
+
 {{</ tab >}}
 
 {{< tab "Combined" >}}
+
 ```json { title="Body" }
-  {
+{
   "chatId": "79111111@c.us",
   "contacts": [
     {
@@ -772,6 +793,7 @@ You can send contacts in multiple ways:
   "session": "default"
 }
 ```
+
 {{</ tab >}}
 
 {{< /tabs >}}
@@ -811,7 +833,8 @@ You can send messages to channels!
 Check out [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) page.
 
 ## Send Buttons Reply
-If you're using **Official Business API** to send buttons and wanna "click" on the buttons 
+
+If you're using **Official Business API** to send buttons and wanna "click" on the buttons
 (for testing or other purposes) you can do it using the API
 
 ```http request
@@ -838,27 +861,29 @@ For testing purpose you can use [**📊 Dashboard - Event Monitor**]({{< relref 
 
 {{< tabs "send-buttons-reply-message" >}}
 {{< tab "WEBJS" >}}
+
 - **Message ID** - `payload.id` in format `false_11111111111@c.us_AAAAAAAAAA666`
 - **Button ID** - `payload._data.dynamicReplyButtons.[1].buttonId` - like `button:id`
 - **Button Display Text** - `payload._data.dynamicReplyButtons.[1].buttonText.displayText` - like `No`
-{{< /tab >}}
+  {{< /tab >}}
 
 {{< tab "NOWEB" >}}
+
 - **Not implemented yet**
-{{< /tab >}}
-{{< tab "GOWS" >}}
+  {{< /tab >}}
+  {{< tab "GOWS" >}}
 - **Not implemented yet**
-{{< /tab >}}
-{{< /tabs >}}
+  {{< /tab >}}
+  {{< /tabs >}}
 
 {{< /details >}}
 
 ## Send Buttons
+
 {{< callout context="danger" title="Buttons do not work at the moment!" icon="outline/alert-octagon" >}}
 Buttons are fragile creatures and may not work as expected.
 Please consider adding fallback logic using text/poll messages.
 {{< /callout >}}
-
 
 ![alt](send-buttons.jpg)
 
@@ -911,10 +936,12 @@ Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendButtons-code.md" >}}
 
 ### Buttons
+
 Here's available buttons you can use in `buttons`:
 
 {{< tabs "send-buttons-types" >}}
 {{< tab "Quick Reply" >}}
+
 ```json
 {
   // Optional id
@@ -923,10 +950,11 @@ Here's available buttons you can use in `buttons`:
   "text": "I am good!"
 }
 ```
+
 {{< /tab >}}
 
-
 {{< tab "URL" >}}
+
 ```json
 {
   "type": "url",
@@ -934,9 +962,11 @@ Here's available buttons you can use in `buttons`:
   "url": "https://waha.devlike.pro"
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "Call" >}}
+
 ```json
 {
   "type": "call",
@@ -944,9 +974,11 @@ Here's available buttons you can use in `buttons`:
   "phoneNumber": "+1234567890"
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "Copy" >}}
+
 ```json
 {
   "type": "copy",
@@ -954,5 +986,6 @@ Here's available buttons you can use in `buttons`:
   "copyCode": "4321"
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}

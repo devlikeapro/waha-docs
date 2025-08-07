@@ -9,7 +9,7 @@ menu:
 docs:
 parent: "help"
 weight: 990
-images: [ 'csharp.svg' ]
+images: ["csharp.svg"]
 toc: true
 slug: csharp
 ---
@@ -45,4 +45,3 @@ target="_blank" >}}
 {{< include file="layouts/code/language/csharp/send-message.md" >}}
 
 {{< include file="layouts/code/language/csharp/receive-message.md" >}}
-

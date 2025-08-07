@@ -1,5 +1,3 @@
-### Install Dependencies
-
 ```kotlin {title="build.gradle.kts"}
 dependencies {
     implementation("io.ktor:ktor-server-core:2.3.5")

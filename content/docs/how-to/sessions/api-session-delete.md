@@ -3,15 +3,18 @@
 {{< tabs "delete-session-api" "language" >}}
 
 {{< tab "cURL" >}}
+
 ```sh
 curl -X 'DELETE' \
   'http://localhost:3000/api/sessions/default' \
   -H 'accept: application/json' \
   -H 'X-Api-Key: yoursecretkey'
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -24,25 +27,30 @@ headers = {
 response = requests.delete(url, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
 const url = "http://localhost:3000/api/sessions/default";
 const headers = {
-    'accept': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
+  "accept": "application/json",
+  "X-Api-Key": "yoursecretkey"
 };
 
-axios.delete(url, { headers })
-    .then(response => console.log(response.data))
-    .catch(error => console.error(error));
+axios
+  .delete(url, { headers })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
 ```
+
 {{< /tab >}}
 
 {{< tab "PHP" >}}
+
 ```php
 <?php
 $url = "http://localhost:3000/api/sessions/default";
@@ -60,6 +68,7 @@ curl_close($ch);
 echo $response;
 ?>
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

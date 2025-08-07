@@ -27,4 +27,3 @@ docker run -it -e "WHATSAPP_DEFAULT_ENGINE=GOWS" devlikeapro/waha
 ## Links
 
 - [https://github.com/devlikeapro/gows](https://github.com/devlikeapro/gows)
-

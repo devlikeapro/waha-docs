@@ -1,4 +1,3 @@
-### Receive Message
 ```java
 import io.javalin.Javalin;
 import io.javalin.http.Context;
@@ -23,5 +22,5 @@ public class WhatsAppWebhook {
         System.out.println("Received message: " + payload.toString());
     }
 }
-            
+
 ```

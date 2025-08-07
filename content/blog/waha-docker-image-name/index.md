@@ -15,8 +15,8 @@ homepage: false
 We have renamed docker image from `devlikeapro/whatsapp-http-api` to `devlikeapro/waha`! 🎉
 
 You can find the image on Docker Hub by the new name.
+
 - Read more about [WAHA Docker images]({{< relref "/docs/how-to/engines#docker-images" >}})
 - `devlikeapro/waha` - for the Core version
 - `devlikeapro/waha-plus` - for the Plus version
 - Build: `2024.6.2`
-

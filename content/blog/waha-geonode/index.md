@@ -4,10 +4,10 @@ description: "Step-by-step guide on how to use Geonode proxy with WAHA"
 excerpt: "Step-by-step guide on how to use Geonode proxy with WAHA"
 date: 2024-06-11T08:48:45+00:00
 draft: false
-images: [ "proxy.png" ]
-categories: [ "Tips" ]
-tags: [ ]
-contributors: [ "devlikeapro" ]
+images: ["proxy.png"]
+categories: ["Tips"]
+tags: []
+contributors: ["devlikeapro"]
 pinned: false
 homepage: false
 toc: true
@@ -108,15 +108,15 @@ Or you can use swagger or `curl` to send `POST /api/sessions/` request with payl
 
 ```json
 {
-   "name": "default",
-   "start": true,
-   "config": {
-      "proxy": {
-         "server": "premium-residential.geonode.com:10000",
-         "username": "geonode_1111111111",
-         "password": "11111111-1111-1111-1111-111111111111"
-      }
-   }
+  "name": "default",
+  "start": true,
+  "config": {
+    "proxy": {
+      "server": "premium-residential.geonode.com:10000",
+      "username": "geonode_1111111111",
+      "password": "11111111-1111-1111-1111-111111111111"
+    }
+  }
 }
 ```
 
@@ -126,7 +126,7 @@ After that - scan a QR code and it should work!
 
 ## Step 5 (optional): Disable proxy for a session
 
-After you got the session working and **waited for 2 minutes** - you can **stop** a session and **start** it again 
+After you got the session working and **waited for 2 minutes** - you can **stop** a session and **start** it again
 **without a proxy**.
 
 ```json
@@ -145,5 +145,4 @@ After you got the session working and **waited for 2 minutes** - you can **stop*
 ## Alternative
 
 If that doesn't work for you - you can run [WAHA on your local network and use Ngrok to expose it to the internet]({{<
-relref "waha-ngrok" >}}). 
-
+relref "waha-ngrok" >}}).

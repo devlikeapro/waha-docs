@@ -21,7 +21,6 @@ or
 instead.
 {{< /callout >}}
 
-
 It's a high-performance system developed with JavaScript to create a bot for WhatsApp.
 It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
 
@@ -38,4 +37,3 @@ docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=VENOM" 
 ## Links
 
 - [https://github.com/devlikeapro/venom](https://github.com/devlikeapro/venom)
-

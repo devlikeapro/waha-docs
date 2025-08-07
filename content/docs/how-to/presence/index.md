@@ -17,12 +17,13 @@ presence information.
 {{< img lqip="21x webp q20" src="typing.jpg" alt="WhatsApp Typing" >}}
 </div>
 
-
 ## FAQ
+
 👉 **I don't get notifications on my phone when WAHA session is connected**
+
 - You need to send `offline` after all presence you send (WhatsApp doesn't send notifications to the device if a web client is active).
-- For [**🏭 NOWEB Engine**]({{< relref "/docs/engines/NOWEB" >}}) also mark sure to send `markOnline: false` 
-when you create a new session.
+- For [**🏭 NOWEB Engine**]({{< relref "/docs/engines/NOWEB" >}}) also mark sure to send `markOnline: false`
+  when you create a new session.
 
 ## Features
 
@@ -35,6 +36,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 ## API
 
 ### Set presence
+
 You can set your global or chat-related presence with endpoint
 
 ```http request
@@ -49,6 +51,7 @@ POST /api/{session}/presence
 ```
 
 Possible presence statuses that you can set or get for chats:
+
 - `online` - send the status with no `chatId`
 - `offline` - send the status with no `chatId`
 - `typing` - `chatId` required
@@ -115,6 +118,7 @@ Get presence information for a single chat. For a group, you'll get participants
 ### Subscribe to presence
 
 You can subscribe to presence information by calling
+
 ```http request
 POST /api/{session}/presence/{chatId}/subscribe
 ```
@@ -135,6 +139,7 @@ GET /api/{session}/presence
 It returns both groups' and personal chats' presence information.
 
 Here's few notes about fields:
+
 - `chatId` - either contact id (`213213213@c.us`) or group chat id (`1111111111111@g.us`).
 - `lastSeen` - contains Unix timestamps indicating when a participant was last online
 - `lastKnownPresence` - contains the last known presence status, which can be
@@ -170,8 +175,8 @@ Here's few notes about fields:
 ]
 ```
 
-
 ## Events
+
 Read more about
 [**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
@@ -181,18 +186,18 @@ You can subscribe to `presence.update` webhook event to get the most recent pres
 
 ```json { title="presence.update" }
 {
-    "event": "presence.update",
-    "session": "default",
-    "payload": {
-        "id": "111111111111111111@g.us",
-        "presences": [
-            {
-                "participant": "11111111111@c.us",
-                "lastKnownPresence": "typing",
-                "lastSeen": null
-            }
-        ]
-    },
-    "engine": "NOWEB"
+  "event": "presence.update",
+  "session": "default",
+  "payload": {
+    "id": "111111111111111111@g.us",
+    "presences": [
+      {
+        "participant": "11111111111@c.us",
+        "lastKnownPresence": "typing",
+        "lastSeen": null
+      }
+    ]
+  },
+  "engine": "NOWEB"
 }
 ```

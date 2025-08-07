@@ -16,33 +16,34 @@ aliases:
   - /blog/waha-2024.9-s3-session-api-metadata-dashboard-and-more/
 ---
 
-🎉 We are thrilled to announce the release of [**WAHA 2024.9**]({{< relref "/docs/overview/changelog#20249" >}}) 🎉 
+🎉 We are thrilled to announce the release of [**WAHA 2024.9**]({{< relref "/docs/overview/changelog#20249" >}}) 🎉
 
-The release has a lot of changes, but we'll cover only few of them in this blog post, 
-kindly check the [**🆕 Changelog**]({{< relref "/docs/overview/changelog#20249" >}}) 
+The release has a lot of changes, but we'll cover only few of them in this blog post,
+kindly check the [**🆕 Changelog**]({{< relref "/docs/overview/changelog#20249" >}})
 for the full list of changes.
 
 ## Session API
+
 {{< imgo src="/images/waha/waha-session-lifecycle.png" >}}
 
-We've added a new [**🖥️ Sessions API**]({{< relref "/docs/how-to/sessions" >}}) 
+We've added a new [**🖥️ Sessions API**]({{< relref "/docs/how-to/sessions" >}})
 to manage the session lifecycle.
 
 Now you can change configuration after the session is created,
 you can log out the session without removing it, and more!
 
-
 ## Session Metadata
+
 `metadata` is an attribute on Session objects that lets you store more information,
 structured as key-value pairs,
 to sessions for your own use and reference.
 For example, you can store your user’s unique identifier from your system.
 
 Associated `metadata` field is available in:
-1. [List Sessions](#list-sessions) and [Get Session](#get-session)  responses
+
+1. [List Sessions](#list-sessions) and [Get Session](#get-session) responses
 2. [**🔄 Webhooks**]({{< relref "events#metadata" >}}) events
 3. [**📊 Dashboard**]({{< relref "dashboard" >}}) for view, and search sessions by metadata
-
 
 ```json
 {
@@ -57,6 +58,7 @@ Associated `metadata` field is available in:
 ```
 
 Sample `metadata` use cases:
+
 - **Link IDs**: Attach your system’s unique IDs to a Session object to simplify lookups. For example, add your user or tenant id.
 - **Customer details**: Annotate a customer by storing an internal information (email, customer name) for your future
   use, so you don't have to look into two systems.
@@ -64,9 +66,10 @@ Sample `metadata` use cases:
 WAHA does not use metadata for any internal purposes, it's up to you how to use it.
 
 👉 Read more
-[**🖥️ Sessions - Metadata**]({{< relref "/docs/how-to/sessions#metadata" >}}) 
+[**🖥️ Sessions - Metadata**]({{< relref "/docs/how-to/sessions#metadata" >}})
 
 ## Media S3 Storage
+
 You can use the S3 storage to store the media files.
 
 {{< imgo src="/images/waha/storages/waha-storages.drawio.png" >}}
@@ -78,6 +81,7 @@ Any **S3 Compatible** storage can be used, such as AWS S3, MinIO, DigitalOcean S
 <br>
 
 After you enabled S3 here's example for [**message**]({{< relref "/docs/how-to/events#message" >}}) webhook payload:
+
 ```json { title="message" }
 {
   "event": "message",
@@ -103,30 +107,33 @@ After you enabled S3 here's example for [**message**]({{< relref "/docs/how-to/e
 
 in addition to `media.*` field it will have `media.s3.*` field with the S3 bucket information.
 
-
 👉 Read more [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}})
 
-
 ## Dashboard
+
 Here's a quick overview of new features available in Dashboard:
 
 {{< imgo src="/images/blog/waha-2024-9/dashboard-overview.png" >}}
+
 - **Server Uptime** - see how long your server is running
 - **Server Restart** - restart the server
 - **Session Metadata** - see the metadata of the session
 - **Session Actions** - see the actions available for the session
 - **Session Bulk Actions** - see the bulk actions available for the session
 
-
 {{< imgo src="/images/blog/waha-2024-9/dashboard-server.png" >}}
+
 - **Server Environment Variables** - see the environment variables of the server
 - **Server Uptime**
 
 {{< imgo src="/images/blog/waha-2024-9/dashboard-session.png" >}}
+
 - **Session Metadata** - add metadata to the session
 
 ## Reply on Message
+
 You can reply on a message with any type of message now by adding `reply_to` in the request!
+
 ```http request
 POST /api/sendText
 ```
@@ -138,12 +145,12 @@ POST /api/sendText
   "reply_to": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
   "text": "Reply text"
 }
-
 ```
 
 Read more about [**📤 Send messages - reply_to**]({{< relref "/docs/how-to/send-messages#reply_to" >}})
 
 ## Server API
+
 ### Get server status
 
 Returns the server status, start timestamp, and uptime.
@@ -174,12 +181,12 @@ POST /api/server/stop
   "force": false
 }
 ```
+
 👉 If you're using Docker and followed [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) guide,
 Docker will **automatically restart** the server, so you can use this endpoint to **restart** the server.
 
-
-
 ## Thank you all for your support! 🙏
+
 All these changes were made possible by the amazing community of supporters!
 
 We are grateful for your contributions and feedback. 🚀
@@ -187,4 +194,3 @@ We are grateful for your contributions and feedback. 🚀
 <p style="font-size: 8rem" class="text-center">
 🫶
 </p>
-

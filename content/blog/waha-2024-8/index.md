@@ -12,10 +12,10 @@ pinned: false
 homepage: false
 ---
 
-🎉 We are thrilled to announce the release of [**WAHA 2024.8**]({{< relref "/docs/overview/changelog#20248" >}}) 🎉 
-
+🎉 We are thrilled to announce the release of [**WAHA 2024.8**]({{< relref "/docs/overview/changelog#20248" >}}) 🎉
 
 ## WhatsApp Business Labels API
+
 You can now work with **WhatsApp Labels** available in WhatsApp Business using the API!
 
 ![alt](whatsapp-labels.png)
@@ -45,6 +45,7 @@ Response:
 👉 Read more about the WhatsApp Business Labels API on [**🏷️ Labels**]({{< relref "docs/how-to/labels" >}}) page!
 
 ### Labels Events
+
 You can now receive information about label creation, update, and deletion using webhooks!
 
 ```json { title="label.upsert" }
@@ -62,16 +63,20 @@ You can now receive information about label creation, update, and deletion using
 }
 
 ```
+
 👉 Read more about the Labels Events on [**🏷️ Labels**]({{< relref "docs/how-to/labels#webhooks" >}}) page!
 
 ## Chat archive/unarchive
-You can now **archive and unarchive** WhatsApp Chats using API and 
+
+You can now **archive and unarchive** WhatsApp Chats using API and
 receive events about chat archive in WhatsApp using webhooks!
 
 ![alt](whatsapp-archive.jpeg)
+
 ### Chat archive API
 
 Use the method to **archive** chat
+
 ```http request
 POST /api/{session}/chats/{chatId}/archive
 ```
@@ -82,11 +87,11 @@ Use the method to **unarchive** chat
 POST /api/{session}/chats/{chatId}/unarchive
 ```
 
-
 👉 Read more about the endpoints on [**💬 Chats**]({{< relref "docs/how-to/chats#archive-chat" >}}) page!
 
 ### Chat archive Events
-Enable `chat.archive` event when starting a new session 
+
+Enable `chat.archive` event when starting a new session
 and receive information about chat archive in WhatsApp using events:
 
 ```json { title="chat.archive" }
@@ -104,9 +109,9 @@ and receive information about chat archive in WhatsApp using events:
 
 👉 Read more about the events on [**🔄 Webhooks**]({{< relref "docs/how-to/events#chatarchive" >}}) page!
 
-
 ## Calls Events
-Now when the WhatsApp account receives (rejects and accepts) a new call - you can receive information about 
+
+Now when the WhatsApp account receives (rejects and accepts) a new call - you can receive information about
 that using new `call.*` webhooks!
 
 ![alt](whatsapp-phone-call.png)

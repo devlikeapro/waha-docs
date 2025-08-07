@@ -18,7 +18,8 @@
                 <div>
                     <p class="lead">
                         <a href="/">WAHA</a> provides a private, self-hosted,
-                        and free HTTP API to seamlessly integrate and automate <b>WhatsApp</b> using <b>JavaScript</b> or <b>TypeScript</b>.
+                        and free HTTP API to seamlessly integrate and automate <b>WhatsApp</b> using <b>JavaScript</b>
+                        or <b>TypeScript</b>.
                         <br><br>
                         Send messages, manage chats, and streamline workflows effortlessly with a simple API!
                     </p>
@@ -26,19 +27,17 @@
                 <div class='text-center flex-grow-1 d-flex flex-column justify-content-center'>
                     <div class='mb-4'>
                         <img src='/images/logo.svg' title='WhatsApp API' alt='logo'
-                             style='border-radius: 50%; width: 7rem'/>
+                            style='border-radius: 50%; width: 7rem' />
                     </div>
                     <div>
-                        <a class='btn btn-primary btn-lg px-4 mb-2'
-                           href='#how-to-start'
-                           role='button'>Get Started</a>
+                        <a class='btn btn-primary btn-lg px-4 mb-2' href='#how-to-start' role='button'>Get Started</a>
                     </div>
                 </div>
             </div>
             <div class='col-lg-6 order-first order-lg-last d-flex justify-content-center mb-4' data-aos="fade-up">
                 <div>
                     <img src='/images/javascript-whatsapp.png' title='WhatsApp + JavaScript'
-                         alt='WhatsApp + JavaScript'/>
+                        alt='WhatsApp + JavaScript' />
                 </div>
             </div>
         </div>
@@ -61,17 +60,22 @@
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="100">
-                <img src='/images/icons/whatsapp-channels.svg' alt='WhatsApp Channel Logo' style='width: 5rem' >
-                {{ .Page.RenderString (readFile "/layouts/code/language/javascript/install-dependencies.md") | safeHTML }}
+                <img src='/images/icons/whatsapp-channels.svg' alt='WhatsApp Channel Logo' style='width: 5rem'>
+                <h4 class="color-accent">Install Dependencies</h4>
+                {{ .Page.RenderString (readFile "/layouts/code/language/javascript/install-dependencies.md") | safeHTML
+                }}
             </div>
 
-            <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="50">
+            <div class='col-12 col-lg-4 pros-card-wide color-accent' data-aos="fade-up" data-aos-delay="50">
                 <img src='/images/icons/message-green.png' alt='Free' style='width: 5rem'>
+                <h4 class="color-accent">Send Message</h4>
+
                 {{ .Page.RenderString (readFile "/layouts/code/language/javascript/send-message.md") | safeHTML }}
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="150">
                 <img src='/images/icons/button-green.png' alt='API' style='width: 5rem'>
+                <h4 class="color-accent">Receive Message</h4>
                 {{ .Page.RenderString (readFile "/layouts/code/language/javascript/receive-message.md") | safeHTML }}
             </div>
         </div>

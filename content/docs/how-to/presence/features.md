@@ -2,7 +2,7 @@
 {{< details "**✅ Presence - API**" >}}
 
 | **API**                                           | WEBJS | NOWEB | GOWS |
-|---------------------------------------------------|:-----:|:-----:|:-----|
+| ------------------------------------------------- | :---: | :---: | :--- |
 | `POST /api/{session}/presence`                    |  ✔️   |  ✔️   | ✔️   |
 | `GET /api/{session}/presence/{chatId}`            |  ✔️   |  ✔️   | ✔️   |
 | `POST /api/{session}/presence/{chatId}/subscribe` |  ✔️   |  ✔️   | ✔️   |
