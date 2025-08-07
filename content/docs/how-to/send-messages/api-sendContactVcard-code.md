@@ -3,6 +3,7 @@
 {{< tabs "send-contact-vcard-api" "language" >}}
 
 {{< tab "cURL" >}}
+
 ```sh
 curl -X 'POST' \
   'http://localhost:3000/api/sendContactVcard' \
@@ -22,9 +23,11 @@ curl -X 'POST' \
   ]
 }'
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -49,37 +52,42 @@ data = {
 response = requests.post(url, json=data, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
 const url = "http://localhost:3000/api/sendContactVcard";
 const data = {
-    session: "default",
-    chatId: "12132132130@c.us",
-    contacts: [
-        {
-            fullName: "John Doe",
-            organization: "Company Name",
-            phoneNumber: "+91 11111 11111",
-            whatsappId: "911111111111"
-        }
-    ]
+  session: "default",
+  chatId: "12132132130@c.us",
+  contacts: [
+    {
+      fullName: "John Doe",
+      organization: "Company Name",
+      phoneNumber: "+91 11111 11111",
+      whatsappId: "911111111111"
+    }
+  ]
 };
 const headers = {
-    'Content-Type': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
+  "Content-Type": "application/json",
+  "X-Api-Key": "yoursecretkey"
 };
 
-axios.post(url, data, { headers })
-    .then(response => console.log(response.data))
-    .catch(error => console.error(error));
+axios
+  .post(url, data, { headers })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
 ```
+
 {{< /tab >}}
 
 {{< tab "PHP" >}}
+
 ```php
 <?php
 $url = "http://localhost:3000/api/sendContactVcard";
@@ -110,6 +118,7 @@ curl_close($ch);
 echo $response;
 ?>
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

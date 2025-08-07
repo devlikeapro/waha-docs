@@ -3,6 +3,7 @@
 {{< tabs "update-session-api" "language" >}}
 
 {{< tab "cURL" >}}
+
 ```sh
 curl -X 'PUT' \
   'http://localhost:3000/api/sessions/default' \
@@ -23,9 +24,11 @@ curl -X 'PUT' \
   }
 }'
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -51,38 +54,41 @@ data = {
 response = requests.put(url, json=data, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
 const url = "http://localhost:3000/api/sessions/default";
 const data = {
-    name: "default",
-    config: {
-        webhooks: [
-            {
-                url: "https://webhook.site/11111111-1111-1111-1111-11111111",
-                events: [
-                    "message"
-                ]
-            }
-        ]
-    }
+  name: "default",
+  config: {
+    webhooks: [
+      {
+        url: "https://webhook.site/11111111-1111-1111-1111-11111111",
+        events: ["message"]
+      }
+    ]
+  }
 };
 const headers = {
-    'Content-Type': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
+  "Content-Type": "application/json",
+  "X-Api-Key": "yoursecretkey"
 };
 
-axios.put(url, data, { headers })
-    .then(response => console.log(response.data))
-    .catch(error => console.error(error));
+axios
+  .put(url, data, { headers })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
 ```
+
 {{< /tab >}}
 
 {{< tab "PHP" >}}
+
 ```php
 <?php
 $url = "http://localhost:3000/api/sessions/default";
@@ -114,6 +120,7 @@ curl_close($ch);
 echo $response;
 ?>
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

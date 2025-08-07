@@ -6,7 +6,7 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 292
-images: [ "whatsapp-labels.png" ]
+images: ["whatsapp-labels.png"]
 slug: labels
 ---
 
@@ -26,15 +26,17 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 {{< include file="content/docs/how-to/labels/features-events.md" >}}
 
 ## Label color
+
 You'll see two color-related fields in the body and response:
+
 - `color: 1` - internal color number, `0-19` values.
 - `colorHex: #64c4ff` - is the **latest known** hex color for the label
-
 
 ⚠️ It's possible that `color` - `colorHex` map will be changed, so consider using `color` value instead
 when creating or updating labels.
 
 Here's the **current** color map (`color` - `colorHex` - **preview**):
+
 - `0` - `#ff9485` - <span style="display:inline-block;width:15px;height:15px;background-color:#ff9485;"></span>
 - `1` - `#64c4ff` - <span style="display:inline-block;width:15px;height:15px;background-color:#64c4ff;"></span>
 - `2` - `#ffd429` - <span style="display:inline-block;width:15px;height:15px;background-color:#ffd429;"></span>
@@ -55,7 +57,6 @@ Here's the **current** color map (`color` - `colorHex` - **preview**):
 - `17` - `#b5ebff` - <span style="display:inline-block;width:15px;height:15px;background-color:#b5ebff;"></span>
 - `18` - `#9ba6ff` - <span style="display:inline-block;width:15px;height:15px;background-color:#9ba6ff;"></span>
 - `19` - `#9368cf` - <span style="display:inline-block;width:15px;height:15px;background-color:#9368cf;"></span>
-
 
 ## API
 
@@ -86,6 +87,7 @@ POST /api/{session}/labels
 ```
 
 Using `color`
+
 ```json { title="Body" }
 {
   "name": "New Client",
@@ -94,19 +96,22 @@ Using `color`
 ```
 
 Using `colorHex`
+
 ```json { title="Body" }
 {
   "name": "New Client",
-  "colorHex" : "#64c4ff"
+  "colorHex": "#64c4ff"
 }
 ```
 
 ### Update label
+
 ```http request
 PUT /api/{session}/labels/{labelId}
 ```
 
 Using `color`
+
 ```json { title="Body" }
 {
   "name": "New Client",
@@ -115,14 +120,16 @@ Using `color`
 ```
 
 Using `colorHex`
+
 ```json { title="Body" }
 {
   "name": "New Client",
-  "colorHex" : "#64c4ff"
+  "colorHex": "#64c4ff"
 }
 ```
 
 ### Delete label
+
 ```http request
 DELETE /api/{session}/labels/{labelId}
 ```
@@ -187,10 +194,10 @@ PUT /api/{session}/labels/chats/{chatId}/
 {
   "labels": []
 }
-
 ```
 
 ## Events
+
 Read more about
 [**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 

@@ -7,13 +7,13 @@ lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 226
 slug: polls
-images: [ "poll-example.jpg" ]
+images: ["poll-example.jpg"]
 ---
 
 [**📶 Polls**]({{< relref "/docs/how-to/polls" >}})
 in WhatsApp is a good alternative for buttons and other interactive messages.
 
-You can ask a question and provide a few options for the user to choose from. 
+You can ask a question and provide a few options for the user to choose from.
 The user can select only one option or multiple options, depending on the poll configuration.
 
 <div style="width: 400px; max-width: 100%; margin: 0 auto;">
@@ -29,6 +29,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 {{< include file="content/docs/how-to/polls/features-events.md" >}}
 
 ## API
+
 ### Send poll
 
 Use the endpoint to send a poll!
@@ -43,11 +44,7 @@ POST /api/sendPoll
   "chatId": "123123123@c.us",
   "poll": {
     "name": "How are you?",
-    "options": [
-      "Awesome!",
-      "Good!",
-      "Not bad!"
-    ],
+    "options": ["Awesome!", "Good!", "Not bad!"],
     "multipleAnswers": false
   }
 }
@@ -66,6 +63,7 @@ a vote (see webhook events below).
 {{< /callout >}}
 
 ## Events
+
 Read more about
 [**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
@@ -85,9 +83,7 @@ With this event, you receive new votes for the poll sent.
       "to": "me",
       "from": "1111111@c.us",
       "fromMe": false,
-      "selectedOptions": [
-        "Awesome!"
-      ],
+      "selectedOptions": ["Awesome!"],
       "timestamp": 1692861427
     },
     "poll": {
@@ -141,9 +137,7 @@ the future.
       "to": "3333333333333@g.us",
       "from": "1111111111@c.us",
       "fromMe": false,
-      "selectedOptions": [
-        "Awesome!"
-      ],
+      "selectedOptions": ["Awesome!"],
       "timestamp": 1692861427
     },
     "poll": {

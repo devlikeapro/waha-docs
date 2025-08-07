@@ -1,5 +1,5 @@
 ---
-title : "🔧 Install & Update"
+title: "🔧 Install & Update"
 description: "How to install and update WAHA"
 lead: "How to install and update WAHA"
 date: 2020-10-06T08:48:45+00:00
@@ -14,6 +14,7 @@ aliases:
 
 You probably already have run the docker run command during
 [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}) guide:
+
 ```bash
 docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha
 ```
@@ -23,7 +24,6 @@ docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha
 {{< /callout >}}
 
 To make it **production-ready**, you need to configure a few more parameters to make it secure, reliable, and easy to manage.
-
 
 {{< callout context="note" icon="outline/info-circle" >}}
 If you wish to follow a **Step-By-Step guide** which shows you **how to send your first message** via HTTP API,
@@ -41,17 +41,18 @@ please follow the specific installation and configuration guides provided for ea
 
 {{< /callout >}}
 
-
 ## Requirements
+
 ### System Requirements
+
 You can use any operating system for host system (**Linux**, **Windows** or **macOS**)
 as long as you have Docker installed, and it can run **Linux** containers.
 
 💡 We recommend using **Linux** with **Debian** or **Ubuntu** based distributions.
 
-We strongly recommend using VPS or servers with minimum **2CPU and 2GB RAM** configuration for the project 
+We strongly recommend using VPS or servers with minimum **2CPU and 2GB RAM** configuration for the project
 even for a single session.
-If you want to host more sessions - please check the numbers in 
+If you want to host more sessions - please check the numbers in
 [**FAQ**]({{< relref "/docs/overview/faq#system-requirements" >}}).
 
 {{< details "<b>Linux</b>" >}}
@@ -67,8 +68,8 @@ It might not work with **WSL2** backend properly.
 
 {{< include file="content/docs/how-to/install/-the-hosting.md" >}}
 
-
 ### Pre-requisites
+
 Before proceeding, make sure you have the latest version of `docker` and `docker compose` installed.
 
 We recommend using Docker version equal to or higher than the following:
@@ -98,6 +99,7 @@ Then, with a single command, you create and start all the services from your con
 ### Docker
 
 1. Install Docker on your VM
+
 ```bash
 # example in ubuntu
 apt-get update
@@ -113,7 +115,9 @@ Follow the instructions below:
 {{< include file="content/docs/how-to/install/download-image.md" >}}
 
 ### WAHA
+
 2. Download the required files
+
 ```bash
 # Download the env file template
 wget -O .env https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/.env.example
@@ -121,10 +125,11 @@ wget -O .env https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/
 wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/docker-compose.yaml
 ```
 
-3. Tweak the `.env` and `docker-compose.yaml` according to your preferences. 
-Refer to the available environment variables in [**⚙️ Configuration**]({{< relref "/docs/how-to/config" >}}).
+3. Tweak the `.env` and `docker-compose.yaml` according to your preferences.
+   Refer to the available environment variables in [**⚙️ Configuration**]({{< relref "/docs/how-to/config" >}}).
 
 Some important environment variables you **MUST** change:
+
 - `WAHA_API_KEY=sha512:{SHA512_HEX_OF_YOUR_API_KEY_HERE}`
   - Default Api Key is `admin`
   - Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
@@ -148,6 +153,7 @@ Even if you're running WAHA on a private server and think the IP is unknown - it
 straightforward for attackers to find and exploit it to send spam or abuse your WhatsApp sessions.
 
 Always set strong, random values (see a guide below) for:
+
 - `WAHA_API_KEY`
 - `WAHA_DASHBOARD_PASSWORD`
 - `WHATSAPP_SWAGGER_PASSWORD` - you can the same as for `WAHA_DASHBOARD_PASSWORD`
@@ -157,30 +163,32 @@ Always set strong, random values (see a guide below) for:
 
 {{< /callout >}}
 
-
 4. Get the service up and running.
+
 ```bash
 docker compose up -d
 ```
 
-5. Your WAHA installation is complete. 
-Please note that the **containers are not exposed to the internet**, and they only bind to the **localhost**. 
-Set up something like Nginx or any other proxy server to proxy the requests to the container.
+5. Your WAHA installation is complete.
+   Please note that the **containers are not exposed to the internet**, and they only bind to the **localhost**.
+   Set up something like Nginx or any other proxy server to proxy the requests to the container.
 
 {{< callout context="" title="How to export port from remote server?" icon="outline/info-circle" >}}
-If you're using a remote server (like VPS or Virtual Machine on your laptop) you need to allow access for your browser. 
+If you're using a remote server (like VPS or Virtual Machine on your laptop) you need to allow access for your browser.
 Use one of the options available.
 
 1. Use **SSH tunneling**
 
 If you're connecting to ssh, you can forward port 3000 on your laptop like
+
 ```bash
 ssh -L 3000:localhost:3000 user@you.address.here
 ```
 
 2. **Bind port to all ips**
 
-For **temporary external access**, you can change the port binding from `127.0.0.1:3000:3000` to `3000:3000` in the `docker-compose.yaml` file. 
+For **temporary external access**, you can change the port binding from `127.0.0.1:3000:3000` to `3000:3000` in the `docker-compose.yaml` file.
+
 ```yaml { title="docker-compose.yaml" }
 services:
   waha:
@@ -188,6 +196,7 @@ services:
     ports:
       - "3000:3000"
 ```
+
 ```bash
 docker compose up -d
 ```
@@ -198,6 +207,7 @@ This makes your instance accessible at `http://<your-external-ip>:3000`.
 6. Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and login with the credentials you've set
 
 By default you can use:
+
 - Dashboard - `admin/admin`
 - Swagger - `admin/admin`
 - Api Key - `admin`
@@ -207,6 +217,7 @@ By default you can use:
 👉 Replace **<YOUR_DOMAIN_OR_IP>** with your domain name in the following steps (use lowercase).
 
 1. Configure Nginx to serve as a frontend proxy.
+
 ```bash
 sudo apt-get install nginx
 cd /etc/nginx/sites-enabled
@@ -215,6 +226,7 @@ nano <YOUR_DOMAIN_OR_IP>.conf
 ```
 
 2. Use the following Nginx config and **replace** the `<YOUR_DOMAIN_OR_IP>` in `server_name`.
+
 ```nginx
 server {
   server_name <YOUR_DOMAIN_OR_IP>;
@@ -250,6 +262,7 @@ server {
 ```
 
 3. Verify and reload your Nginx config by running the following command.
+
 ```bash
 nginx -t
 systemctl reload nginx
@@ -262,6 +275,7 @@ Here are two scenarios for setting up HTTPS:
 If you have a domain name (e.g., **yourdomain.com**) that points to your server's IP address, you can use Let's Encrypt to get free, trusted SSL certificates:
 
 1. Run Let's Encrypt to configure SSL certificate. (replace **<YOURDOMAIN.COM>**!)
+
 ```bash
 apt install certbot
 apt-get install python3-certbot-nginx
@@ -272,6 +286,7 @@ certbot --webroot -w /var/www/ssl-proof/waha/ -d <YOURDOMAIN.COM> -i nginx
 
 2. Your WAHA installation should be accessible from the https://yourdomain.com now.
 3. Change `WAHA_BASE_URL=https://<YOURDOMAIN.COM>` in the `.env` file and restart the WAHA service
+
 ```bash
 # Change the WAHA_BASE_URL in .env
 nano .env
@@ -284,19 +299,21 @@ docker compose restart
 
 We recommend using **Let's Encrypt** free certificate if you have public IP and DNS name.
 
-However, if you don't have **a domain name** or 
+However, if you don't have **a domain name** or
 are using a **private IP address**, you can create a self-signed certificate for IP-based access,
 expand the details below:
 
 {{< details "**HTTPS - Setup Self-Signed Certificate**" >}}
 
 1. Create a directory for your SSL certificates:
+
 ```bash
 mkdir -p /etc/nginx/ssl
 cd /etc/nginx/ssl
 ```
 
 2. Create a configuration file for the self-signed certificate:
+
 ```bash
 cat > ip-cert.cnf << 'EOL'
 [req]
@@ -323,17 +340,20 @@ EOL
 ```
 
 3. Generate a self-signed certificate valid for 10 years (3650 days):
+
 ```bash
 openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout ip-cert.key -out ip-cert.crt -config ip-cert.cnf
 ```
 
 4. Update your Nginx configuration to use the self-signed certificate:
+
 ```bash
 cd /etc/nginx/sites-enabled
 nano <YOUR_DOMAIN_OR_IP>.conf
 ```
 
 5. Modify your Nginx configuration to include SSL settings:
+
 ```nginx
 server {
     listen 80;
@@ -376,12 +396,14 @@ server {
 ```
 
 6. Verify and reload your Nginx config:
+
 ```bash
 nginx -t
 systemctl reload nginx
 ```
 
 7. Update your WAHA configuration to use HTTPS:
+
 ```bash
 # Change the WAHA_BASE_URL in .env to use https
 nano .env
@@ -396,9 +418,11 @@ docker compose restart
 {{< /details >}}
 
 ## Update
+
 When there's a new version of WAHA, you can update it with these simple commands:
 
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) image:
+
 ```bash
 # Login if you're using WAHA Plus
 docker login -u devlikeapro -p {KEY}
@@ -409,20 +433,22 @@ docker compose up -d
 ```
 
 👉 If you specified exact version in `docker-compose.yml`, like
+
 ```yaml
 image: devlikeapro/waha-plus:latest-2024.7.8
 ```
 
 remember to change it to `latest-{YEAR}.{MONTH}.{BUILD}` to get the latest version.
 
-
 **WAHA Core** image:
+
 ```bash
 docker compose pull
 docker compose up -d
 ```
 
 ## Get logs, restart, stop
+
 ```bash
 # Stop all containers
 docker compose down
@@ -433,7 +459,7 @@ docker compose restart
 # Show logs in real time
 docker compose logs -f
 # Show logs - since interval
-docker compose logs --since 1h  
+docker compose logs --since 1h
 ```
 
 ## What's next?

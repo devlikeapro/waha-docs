@@ -3,15 +3,18 @@
 {{< tabs "delete-message-api" "language" >}}
 
 {{< tab "cURL" >}}
+
 ```sh
 curl -X 'DELETE' \
   'http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA' \
   -H 'accept: application/json' \
   -H 'X-Api-Key: yoursecretkey'
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -23,24 +26,29 @@ headers = {
 response = requests.delete(url, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
 const url = "http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA";
 const headers = {
-    'X-Api-Key': 'yoursecretkey'
+  "X-Api-Key": "yoursecretkey"
 };
 
-axios.delete(url, { headers })
-    .then(response => console.log(response.data))
-    .catch(error => console.error(error));
+axios
+  .delete(url, { headers })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
 ```
+
 {{< /tab >}}
 
 {{< tab "PHP" >}}
+
 ```php
 <?php
 $url = "http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA";
@@ -57,6 +65,7 @@ curl_close($ch);
 echo $response;
 ?>
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

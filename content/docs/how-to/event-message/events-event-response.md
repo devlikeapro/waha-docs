@@ -30,9 +30,10 @@
 ```
 
 **Payload**:
+
 - **Most of the fields** are the same as for `message` and `message.any` events
 - `eventCreationKey`: Information about the original event message
-  - `id`: Unique identifier of the original event message 
+  - `id`: Unique identifier of the original event message
     - Format `{fromMe}_{chatId}_{messageId}[_{participant}]`)
     - You need to parse it to get `messageId` and find event that you sent previously, `fromMe` and `chatId` is **from participant**, not yours.
   - `to`: Recipient of the original event message (usually "me")

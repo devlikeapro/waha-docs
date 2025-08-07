@@ -10,13 +10,12 @@ docs:
 parent: "help"
 weight: 909
 toc: true
-images: ['logo.png']
+images: ["logo.png"]
 ---
-
 
 <div class="text-center">
 
-  ![Logo](logo.png)
+![Logo](logo.png)
 
 </div>
 
@@ -29,7 +28,6 @@ system with mobile app, Bot, AI, Voice & Video & ScreenShare.
 ![Screenshot](screenshot.png)
 
 </div>
-
 
 👉 Please checkout
 <a href="https://doc.livehelperchat.com/docs/integrating/waha" target="_blank" rel="noopener noreferrer">

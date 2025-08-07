@@ -4,20 +4,20 @@ description: "WAHA 2025.7 - ChatWoot App, Dashboard i18n, and more!"
 excerpt: "WAHA 2025.7 - ChatWoot App, Dashboard i18n, and more!"
 date: 2025-07-29T08:48:45+00:00
 draft: false
-images: [ "waha-2025-7.png" ]
-categories: [ "Releases" ]
-tags: [ ]
-contributors: [ "devlikeapro" ]
+images: ["waha-2025-7.png"]
+categories: ["Releases"]
+tags: []
+contributors: ["devlikeapro"]
 pinned: false
 homepage: false
 slug: waha-2025-7
 ---
 
 ## 🧩 ChatWoot App
+
 Meet the first built-in app in WAHA - [**🧩 ChatWoot App**]({{< relref "/docs/apps/chatwoot" >}})!
 
 ![](chatwoot-overview.png)
-
 
 WAHA now provides a built-in app to integrate your **WhatsApp** account with **ChatWoot**,
 eliminating the need to run n8n or use other third-party products!
@@ -26,7 +26,8 @@ We cover all installation and configuration aspects in the following series of a
 {{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}
 
 ## 👤 Update Contact on Phone
-You can now use the 
+
+You can now use the
 [**👤 Update Contact API**]({{< relref "/docs/how-to/contacts#update-contact" >}})
 to **update contacts** in **your phone address book** (and in WhatsApp)!
 

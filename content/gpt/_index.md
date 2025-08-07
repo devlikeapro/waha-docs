@@ -5,10 +5,10 @@ summary: "WAHA GPT  to help you with development"
 date: 2024-10-26T15:50:07+02:00
 lastmod: 2024-10-26T15:50:07+02:00
 draft: false
-images: ['wahagpt.png']
+images: ["wahagpt.png"]
 ---
 
-Ask anything, 
+Ask anything,
 **WAHA GPT**
 will help you with development!
 
@@ -20,10 +20,8 @@ will help you with development!
   </a>
 </p>
 
-
-
-
 ---
+
 <br>
 <br>
 <br>

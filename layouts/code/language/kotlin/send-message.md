@@ -1,5 +1,3 @@
-### Send Message
-
 ```kotlin
 import io.ktor.client.*
 import io.ktor.client.request.*

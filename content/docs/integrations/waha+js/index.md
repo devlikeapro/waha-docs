@@ -13,6 +13,7 @@ weight: 990
 toc: true
 slug: javascript
 ---
+
 WhatsApp API + JavaScript/TypeScript
 
 <p align="center">
@@ -22,4 +23,3 @@ WhatsApp API + JavaScript/TypeScript
 {{< include file="/layouts/code/language/javascript/install-dependencies.md" >}}
 {{< include file="/layouts/code/language/javascript/send-message.md" >}}
 {{< include file="/layouts/code/language/javascript/receive-message.md" >}}
-

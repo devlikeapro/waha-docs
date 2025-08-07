@@ -14,6 +14,7 @@ toc: true
 {{< imgo src="waha-first-message.jpg" full="false" >}}
 
 ## Step-by-Step guide
+
 On this page, you're going to install and run WAHA,
 authenticate the client using a QR code,
 and send **your first message** to WhatsApp using the API!
@@ -39,21 +40,21 @@ Watch the video tutorial below to see how to send your first message using <b>WA
   </div>
 </div>
 
-
 ## Step 0. Requirements
 
 WAHA works on top of **Docker**, that's the only thing you'll need!
+
 <div class="text-center">
    <img src='/logos/docker.svg' title='WhatsApp API' alt='logo' style='border-radius: 50%; width: 8rem'/>
 </div>
 
 👉 Please follow the
 <a href="https://docs.docker.com/engine/install/" target="_blank">
-    <b>Docker official guides to install it on Linux, Windows, and macOS</b>
+<b>Docker official guides to install it on Linux, Windows, and macOS</b>
 </a>
 
 {{< details "Why Docker?" >}}
-Docker makes it easy to ship an **all-in-one solution** with the runtime and dependencies. 
+Docker makes it easy to ship an **all-in-one solution** with the runtime and dependencies.
 You don't have to worry about language-specific libraries or Chrome installation.
 
 Also, Docker makes installation and update processes so simple, just one command!
@@ -98,7 +99,7 @@ You'll see the WAHA Dashboard:
 
 To start a new session, you should have your mobile phone with the **WhatsApp application** installed close to you.
 
-Here is the 
+Here is the
 <a href="https://faq.whatsapp.com/381777293328336/?helpref=hc_fnav" target="_blank">
 official instruction on WhatsApp site
 </a>
@@ -132,6 +133,7 @@ Replace `123123` with **your phone number without +**, but keep the `@c.us` part
 {{< tabs "send-text-message" >}}
 
 {{< tab "curl" >}}
+
 ```sh
 curl -X 'POST' \
   'http://localhost:3000/api/sendText' \
@@ -143,15 +145,17 @@ curl -X 'POST' \
   "session": "default"
 }'
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```js
-fetch('http://localhost:3000/api/sendText', {
-  method: 'POST',
+fetch("http://localhost:3000/api/sendText", {
+  method: "POST",
   headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    "Accept": "application/json",
+    "Content-Type": "application/json"
   },
   body: JSON.stringify({
     chatId: "123123@c.us",
@@ -159,13 +163,15 @@ fetch('http://localhost:3000/api/sendText', {
     session: "default"
   })
 })
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error("Error:", error));
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -183,6 +189,7 @@ data = {
 response = requests.post(url, json=data, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

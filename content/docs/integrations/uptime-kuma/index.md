@@ -17,20 +17,22 @@ toc: true
 {{< img lqip="21x webp q20" src="uptime-kuma.jpg" alt="Uptime Kuma + WhatsApp" >}}
 </div>
 
-If you're using **self-hosted** 
-[**Uptime Kuma**](https://github.com/louislam/uptime-kuma) 
-you can use **self-hosted** 
+If you're using **self-hosted**
+[**Uptime Kuma**](https://github.com/louislam/uptime-kuma)
+you can use **self-hosted**
 [**WAHA**](/)
 to send notifications from Kuma to your WhatsApp!
 
 ## Overview
+
 Here's what you'll get:
+
 <div style="width:350px; max-width: 100%; margin: 0 auto;">
 {{< img lqip="21x webp q20" src="kuma-whatsapp-notifications.png" alt="Uptime Kuma + WhatsApp" >}}
 </div>
 
-
 ## Setup
+
 Go to **Kuma** -> **Settings** -> **Notifications** and find **WhatsApp (WAHA)** notification type.
 
 {{< callout context="note" icon="outline/info-circle" >}}

@@ -2,7 +2,7 @@
 {{< details "**👥 Groups - API**" >}}
 
 | **API**                                                                | WEBJS | NOWEB | GOWS |
-|------------------------------------------------------------------------|:-----:|:-----:|:----:|
+| ---------------------------------------------------------------------- | :---: | :---: | :--: |
 | `POST /api/{session}/groups`                                           |  ✔️   |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups`                                            |  ✔️   |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/count`                                      |  ✔️   |  ✔️   |  ✔️  |
@@ -12,8 +12,8 @@
 | `DELETE /api/{session}/groups/{id}`                                    |  ✔️   |       |      |
 | `POST /api/{session}/groups/{id}/leave`                                |  ✔️   |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/picture`                               |  ✔️   |  ✔️   |  ✔️  |
-| `PUT /api/{session}/groups/{id}/picture`                               |   ➕   |   ➕   |  ➕   |
-| `DELETE /api/{session}/groups/{id}/picture`                            |   ➕   |   ➕   |  ➕   |
+| `PUT /api/{session}/groups/{id}/picture`                               |  ➕   |  ➕   |  ➕  |
+| `DELETE /api/{session}/groups/{id}/picture`                            |  ➕   |  ➕   |  ➕  |
 | `PUT /api/{session}/groups/{id}/description`                           |  ✔️   |  ✔️   |  ✔️  |
 | `PUT /api/{session}/groups/{id}/subject`                               |  ✔️   |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/invite-code`                           |  ✔️   |  ✔️   |  ✔️  |

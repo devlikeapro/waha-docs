@@ -2,16 +2,16 @@
 {{< details "**📤 Messages - API**" >}}
 
 | **API**                                                     |                            WEBJS                             | NOWEB | GOWS |
-|-------------------------------------------------------------|:------------------------------------------------------------:|:-----:|:----:|
+| ----------------------------------------------------------- | :----------------------------------------------------------: | :---: | :--: |
 | `POST /api/sendText`                                        |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/sendSeen`                                        |                              ✔️                              |  ✔️   |  ✔️  |
 | `PUT /api/{session}/chats/{chatId}/messages/{messageId}`    |                              ✔️                              |  ✔️   |  ✔️  |
 | `DELETE /api/{session}/chats/{chatId}/messages/{messageId}` |                              ✔️                              |  ✔️   |  ✔️  |
-| `POST /api/sendImage`                                       |                              ➕                               |   ➕   | ➕ ️  |
-| `POST /api/sendFile`                                        |                              ➕                               |   ➕   | ➕ ️  |
-| `POST /api/sendVoice`                                       |                              ➕                               |   ➕   | ➕ ️  |
-| `POST /api/sendVideo`                                       |                              ➕                               |   ➕   | ➕ ️  |
-| `POST /api/send/link-custom-preview`                        |                                                              |   ➕   | ➕ ️  |
+| `POST /api/sendImage`                                       |                              ➕                              |  ➕   | ➕ ️ |
+| `POST /api/sendFile`                                        |                              ➕                              |  ➕   | ➕ ️ |
+| `POST /api/sendVoice`                                       |                              ➕                              |  ➕   | ➕ ️ |
+| `POST /api/sendVideo`                                       |                              ➕                              |  ➕   | ➕ ️ |
+| `POST /api/send/link-custom-preview`                        |                                                              |  ➕   | ➕ ️ |
 | `POST /api/forwardMessage`                                  | ✔️<br>[#588](https://github.com/devlikeapro/waha/issues/588) |  ✔️   |      |
 | `POST /api/sendLocation`                                    |                              ✔️                              |  ✔️   |      |
 | `POST /api/startTyping`                                     |                              ✔️                              |  ✔️   |  ✔️  |
@@ -22,10 +22,10 @@
 | `POST /api/sendContactVcard`                                |                                                              |  ✔️   |  ✔️  |
 | `GET /api/messages`                                         |                              ✔️                              |  ✔️¹  |      |
 | `GET /api/checkNumberStatus`                                |                              ✔️                              |  ✔️   |  ✔️  |
-| `POST /api/send/buttons/reply`                              |                              ➕                               |       |      |
+| `POST /api/send/buttons/reply`                              |                              ➕                              |       |      |
 | `POST /api/sendButtons`                                     |                                                              |       |      |
-| `POST /api/{session}/media/convert/voice`                   |                              ➕                               |   ➕   |  ➕   |
-| `POST /api/{session}/media/convert/video`                   |                              ➕                               |   ➕   |  ➕   |
+| `POST /api/{session}/media/convert/voice`                   |                              ➕                              |  ➕   |  ➕  |
+| `POST /api/{session}/media/convert/video`                   |                              ➕                              |  ➕   |  ➕  |
 
 1. **NOWEB** - you need to [**Enable Store**]({{< relref "/docs/engines/noweb#store" >}}) to get **chats, contacts and messages**
 

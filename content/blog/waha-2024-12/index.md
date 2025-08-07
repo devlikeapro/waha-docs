@@ -18,6 +18,7 @@ slug: waha-2024-12
 We are thrilled to announce the release of [**WAHA 2024.12**]({{< relref "/docs/overview/changelog#202412" >}})!
 
 ## Chat Overview API
+
 We've added [**💬 Chats Overview API**]({{< relref "/docs/how-to/chats#get-chats-overview" >}})
 to help you build your custom UI clients!
 
@@ -32,6 +33,7 @@ GET /api/{session}/chats/overview?limit=20&offset=0
 ```
 
 **Response** contains the main info you need to show in the chat list:
+
 1. `id` - chat id
 2. `name` - chat name (if any)
 3. `picture` - chat picture (if any)
@@ -39,10 +41,11 @@ GET /api/{session}/chats/overview?limit=20&offset=0
 5. `_chat` - the structure depends on engine you're using
 
 ## Join Groups API
-Now you can 
-[**👥 Join Group**]({{< relref "/docs/how-to/groups#join-group" >}}) 
-by link 
-and get 
+
+Now you can
+[**👥 Join Group**]({{< relref "/docs/how-to/groups#join-group" >}})
+by link
+and get
 [**👥 Group Info**]({{< relref "/docs/how-to/groups#get-join-info-for-group" >}})
 before joining!
 
@@ -53,6 +56,7 @@ POST /api/{session}/groups/join
 ```
 
 **Body**
+
 ```json
 {
   "code": "invitecode"
@@ -60,6 +64,7 @@ POST /api/{session}/groups/join
 ```
 
 or using full link:
+
 ```json
 {
   "code": "https://chat.whatsapp.com/invitecode"
@@ -73,15 +78,15 @@ or using full link:
 ```
 
 ## Profile Picture API improvements
-We've added optimizations in 
+
+We've added optimizations in
 [**💬 Get Chat Picture**]({{< relref "/docs/how-to/chats#get-chat-picture" >}})
-and 
+and
 [**👤 Get Contact Profile Picture**]({{< relref "/docs/how-to/contacts#get-contact-profile-picture" >}})
 API!
 
 Before it could give rate-overlimit error, now it's optimized and faster!
 
 ## And More!
+
 Check out the full [**WAHA 2024.12 🆕 Changelog**]({{< relref "/docs/overview/changelog#202412" >}}) for more details!
-
-

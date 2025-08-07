@@ -4,10 +4,10 @@ description: "WAHA 2025.5 - Presence, Polls, Labels and More!"
 excerpt: "WAHA 2025.5 - Presence, Polls, Labels and More!"
 date: 2025-05-29T08:48:45+00:00
 draft: false
-images: [ "waha-2025-5.png" ]
-categories: [ "Releases" ]
-tags: [ ]
-contributors: [ "devlikeapro" ]
+images: ["waha-2025-5.png"]
+categories: ["Releases"]
+tags: []
+contributors: ["devlikeapro"]
 pinned: false
 homepage: false
 slug: waha-2025-5
@@ -38,9 +38,9 @@ to convert `@lid` format to phone numbers (`@c.us`).
 
 Available in all engines: **WEBJS**, **GOWS**, **NOWEB**!
 
-### 💬  Filter Chats by IDs
+### 💬 Filter Chats by IDs
 
-You can now filter chats by `ids` in the 
+You can now filter chats by `ids` in the
 [**💬 Chats - Get Chats Overview**]({{< relref "/docs/how-to/chats#get-chats-overview" >}}) API.
 
 Available in all engines: **WEBJS**, **GOWS**, **NOWEB**!
@@ -56,4 +56,5 @@ Available in all engines: **WEBJS**, **GOWS**, **NOWEB**!
 ---
 
 ## 🆕 Changelog
+
 Check out the full list of updates in the [**🆕 WAHA 2025.5 Changelog**]({{< relref "/docs/overview/changelog#20255" >}}) and stay tuned for more!

@@ -4,10 +4,10 @@ description: "WAHA Scaling - how to scale WAHA for >500 sessions with Vertical a
 excerpt: "WAHA Scaling - how to scale WAHA for >500 sessions with Vertical and Horizontal scaling"
 date: 2024-08-14T08:48:45+00:00
 draft: false
-images: [ "horizontal-vs-vertical-scaling.png" ]
-categories: [ "Tips" ]
-tags: [ ]
-contributors: [ "devlikeapro" ]
+images: ["horizontal-vs-vertical-scaling.png"]
+categories: ["Tips"]
+tags: []
+contributors: ["devlikeapro"]
 pinned: false
 homepage: false
 ---
@@ -47,7 +47,7 @@ Here's an
 using the **Vertical Scaling** approach:
 
 | [**🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) | Sessions | CPU   | Memory |
-|:-------------------------------------------------------|----------|-------|--------|
+| :----------------------------------------------------- | -------- | ----- | ------ |
 | **WEBJS**                                              | 10       | 270%  | 2.5GB  |
 | **WEBJS**                                              | 50       | 1500% | 20GB   |
 | **NOWEB**                                              | 50       | 150%  | 4GB    |
@@ -76,11 +76,11 @@ Right now, the only way to do it is to run multiple WAHA instances and distribut
 
 Here are the key points for setting up **Horizontal Scaling** using the **Sharding** technique:
 
-1. You run **multiple WAHA** instances listening on different **hostnames** 
-(`http://waha1.example.com`, `http://waha2.example.com`, etc.) or **ports**
-(`http://waha.example.com:3001`, `http://waha.example.com:3002`, etc.).
-2. You save the list of `url`, `api-key`, `capacity` to **Your Application Database** - 
-[**Entities Schema**](#entities-schema)
+1. You run **multiple WAHA** instances listening on different **hostnames**
+   (`http://waha1.example.com`, `http://waha2.example.com`, etc.) or **ports**
+   (`http://waha.example.com:3001`, `http://waha.example.com:3002`, etc.).
+2. You save the list of `url`, `api-key`, `capacity` to **Your Application Database** -
+   [**Entities Schema**](#entities-schema)
 3. When a new user asks to run a new session - you follow the [**Where to run a new session?**](#where-to-run-a-new-session)
    logic to find a suitable WAHA instance and save the `user <-> session <-> server` association to **Your Application Database**.
 4. When you need to send a request to WhatsApp API - you follow the
@@ -91,7 +91,7 @@ We'll guide you through the process of setting up **Horizontal Scaling**
 using the **Sharding** technique in the next sections.
 
 👉 Please note that each **WAHA Worker** must have its own database or `WAHA_WORKER_ID=waha{N}` environment variable set
-for either **File Storage** or **MongoDB** URL (not a database). 
+for either **File Storage** or **MongoDB** URL (not a database).
 
 ### Entities Schema
 
@@ -150,10 +150,10 @@ the `url` and `api_key`.
 ### Why this way?
 
 **WAHA** is not a stateless application, it has **a runtime state** (not technically a state as in database, but still a
-state) - **the connection to WhatsApp** (either browser or websocket connection) which cannot be moved automatically, 
+state) - **the connection to WhatsApp** (either browser or websocket connection) which cannot be moved automatically,
 so all HTTP requests MUST be **"sticky"**, meaning they **MUST** go only to the certain "worker" - **one with a "running" session**.
 
-This is why we cannot simply run more containers using Kubernetes Deployment/AWS ECS 
+This is why we cannot simply run more containers using Kubernetes Deployment/AWS ECS
 (though you can use [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) for k8s).
 We need to care about WHERE we run the session and WHERE we send the request.
 
@@ -167,6 +167,7 @@ And a few more reasons:
   and you can focus on building the best application. 😊
 
 ### Single Dashboard - Multiple Servers
+
 If you're running multiple servers,
 you can run a dedicated WAHA [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}) just to have a single place from which you can manage all servers:
 
@@ -192,6 +193,6 @@ It'll also control (using underlying k8s or docker infrastructure) the number of
 Kindly [**support the project**]({{< relref "/support-us" >}}) on the **PRO** tier if you wish to
 use this feature in the future! 🙏
 
-For now, [**Vertical Scaling**](#vertical-scaling) and 
+For now, [**Vertical Scaling**](#vertical-scaling) and
 [**Horizontal Scaling - Sharding**](#horizontal-scaling---sharding)
 are the ways to go.

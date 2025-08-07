@@ -1,6 +1,7 @@
 ```http request
 POST /api/{session}/status/image
 ```
+
 ```json { title="Body" }
 {
   "file": {

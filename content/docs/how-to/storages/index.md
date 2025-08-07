@@ -22,7 +22,8 @@ WAHA uses several **Storage** types. Below you can find a list of these storage 
 {{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
 ## Sessions Storage
-**🖥️ Session Storage** is used to store **session data**, 
+
+**🖥️ Session Storage** is used to store **session data**,
 such as authentication information, configuration,
 and other data that is required to keep the session alive and connected to WhatsApp.
 
@@ -30,6 +31,7 @@ If you want to save your session and avoid scanning the QR code every time you l
 you **MUST** connect the session storage to the container.
 
 For the session storage, you can use the following options:
+
 1. [**Local**](#sessions---local) - the default option, stores the session data in the local storage using files.
 2. [**PostgreSQL**](#sessions---postgresql) - stores the session data in the PostgreSQL database.
 3. [**MongoDB**](#sessions---mongodb) - stores the session data in the MongoDB database.
@@ -37,6 +39,7 @@ For the session storage, you can use the following options:
 {{< include file="content/docs/how-to/storages/docker-compose.md" >}}
 
 ### Sessions - Local
+
 By default, the WAHA uses the **local storage (files)** to store the session data.
 
 {{< callout context="note" icon="outline/info-circle" >}}
@@ -44,14 +47,17 @@ It's a **well-tested solution** even for **production** with multiple sessions
 {{< /callout >}}
 
 #### Quick Start
+
 To use local storage with session persistence, you need to mount a volume to the `/app/.sessions` directory. Here are the common ways to do this:
 
 1. **Using Docker Run** (recommended for development):
+
 ```bash
 docker run -v `pwd`/.sessions:/app/.sessions -p 3000:3000 devlikeapro/waha-plus
 ```
 
 2. **Using Docker Compose** (recommended for production):
+
 ```yaml
 services:
   waha:
@@ -63,17 +69,21 @@ services:
 ```
 
 3. **Using Custom Directory** (if you need a specific location):
+
 ```bash
 docker run -v /custom/path/to/sessions:/app/.sessions -p 3000:3000 devlikeapro/waha-plus
 ```
 
 #### Configuration Options
+
 - `WAHA_LOCAL_STORE_BASE_DIR=/app/.sessions` - Override the base directory for local storage
   - Useful for handling Azure "dot" restrictions {{< issue 597 >}}
   - Default: `/app/.sessions`
 
 #### Directory Structure
+
 The session data is organized in the following structure:
+
 ```sh
 sessions/
 ├── webjs/                    # Engine-specific directory
@@ -88,12 +98,15 @@ sessions/
 ```
 
 #### Health Check
+
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) provides [health check endpoints]({{< relref "/docs/how-to/observability" >}}).
 
 ### Sessions - PostgreSQL
+
 If you want to use the PostgreSQL to store the session data, you need to set `WHATSAPP_SESSIONS_POSTGRESQL_URL` environment variable
 
 **Using Docker Run**
+
 ```sh
 docker run \
     -e WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable \
@@ -102,6 +115,7 @@ docker run \
 ```
 
 **Using Docker Compose**
+
 ```yaml { title="docker-compose.yaml" }
 services:
   waha:
@@ -132,12 +146,15 @@ volumes:
 
 {{< details "<b>❓ I want to run >100 sessions on PostgreSQL | pg sorry, too many clients already</b>" >}}
 If you see the error:
+
 > pg sorry, too many clients already
 
 Make sure to increase the `max_connections` in the `postgresql.conf` file or start it with the flag:
+
 ```bash
 postgres -c max_connections=3000
 ```
+
 {{< /details >}}
 
 {{< callout title="WAHA uses Multiple Databases schema" context="note" icon="outline/database" >}}
@@ -145,6 +162,7 @@ postgres -c max_connections=3000
 {{< /callout >}}
 
 ### Sessions - MongoDB
+
 {{< callout context="danger" title="Deprecated" icon="outline/alert-square-rounded" >}}
 **MongoDB** storage is **deprecated** and no new features will be added to it.
 
@@ -153,6 +171,7 @@ instead for new installations.
 {{< /callout >}}
 
 If you want to use the MongoDB to store the session data, you need to:
+
 1. Start the MongoDB server (using docker or any other way). You can either start your own MongoDB server or use the one of cloud providers, like [MongoDB Atlas](https://www.mongodb.com/atlas/database).
 2. Set `WHATSAPP_SESSIONS_MONGO_URL=mongodb://user:password@host:port/` environment variable to connect to the MongoDB server.
 
@@ -163,11 +182,13 @@ If you want to use the MongoDB to store the session data, you need to:
 {{< /callout >}}
 
 First, you need to start MongoDB server:
+
 ```bash
 docker run -d -p 27017:27017 --name mongodb -v mongo-data:/data/db mongo
 ```
 
 Then, you need to run the WAHA with the `WHATSAPP_SESSIONS_MONGO_URL` environment variable (please note using `--network host` option as well)
+
 ```bash
 docker run -e WHATSAPP_SESSIONS_MONGO_URL=mongodb://localhost:27017/ --network host devlikeapro/waha-plus
 ```
@@ -180,18 +201,22 @@ For managing and troubleshooting MongoDB, we recommend using [MongoDB Compass](h
 ![alt](waha-mongodb.png)
 
 #### Health Check
+
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) provides [health check endpoints]({{< relref "/docs/how-to/observability" >}}).
 
 ## Media Storage
+
 When your WhatsApp instance receives **media files**, it stores them in the **🖼️ Media Storage**.
 
 You can use the following options to store the media files:
+
 1. [**Local**](#media---local) - stores the media files in the local storage using files.
 2. [**PostgreSQL**](#media---postgresql) - stores the media files in the PostgreSQL database.
 3. [**S3**](#media---s3) - stores the media files in the S3 storage.
 
 ### Media - Local
-By default, WAHA stores media files in local storage with a **180-second lifetime**. 
+
+By default, WAHA stores media files in local storage with a **180-second lifetime**.
 
 To persist media files:
 
@@ -217,7 +242,8 @@ services:
 ```
 
 ### Media - PostgreSQL
-You can store media files in PostgreSQL. 
+
+You can store media files in PostgreSQL.
 
 It'll create additional `media` table in **each database for session**.
 
@@ -259,6 +285,7 @@ volumes:
 ```
 
 ### Media - S3
+
 To store media files in S3-compatible storage:
 
 ```bash
@@ -310,31 +337,31 @@ volumes:
 ```
 
 **S3 metadata** for each file:
+
 - `X-Amz-Meta-Waha-Session=default` - session name
 - `X-Amz-Meta-Waha-Message-Id=true_111...` - message ID
 - `X-Amz-Meta-Waha-Media-File-Name=media.jpg` - media file name
 
 ## FAQ
+
 ### Database Schema
+
 {{< callout context="caution" icon="outline/database" >}}
-When using **PostgreSQL** or **MongoDB** storage, 
+When using **PostgreSQL** or **MongoDB** storage,
 WAHA creates **multiple databases** using the credentials provided in the connection URL:
 
 1. `waha_{engine}` - A **single database** with
-    - session configuration 
-    - common parameters that persist until you remove a session
-2. `waha_{engine}_{sessionname}` - A **separate database** for **each session** that contains:
-    - Credentials
-    - Messages
-    - Contacts
-    - Other session-specific data
-{{< /callout >}}
+   - session configuration
+   - common parameters that persist until you remove a session
+2. `waha_{engine}_{sessionname}` - A **separate database** for **each session** that contains: - Credentials - Messages - Contacts - Other session-specific data
+   {{< /callout >}}
 
 {{< callout context="note" title="Database Schemas" icon="outline/database" >}}
 ![PostgreSQL Databases](psql-databases.png) ![MongoDB Databases](mongodb-databases.png)
 {{< /callout >}}
 
 This approach provides **several benefits**:
+
 1. Easy monitoring of storage usage per session
 2. Better stability when running multiple sessions
 3. Isolation between sessions - if one session's database has issues, it won't affect other sessions
@@ -345,6 +372,7 @@ Make sure that the user that connects to the database has **create/drop** permis
 {{< /callout >}}
 
 ### Multiple Workers - Single Database Server
+
 {{< callout context="warning" icon="outline/alert-triangle" >}}
 When running **multiple WAHA workers** with **the same database**, you **MUST** set a unique `WAHA_WORKER_ID` for each worker to prevent conflicts and ensure proper operation.
 {{< /callout >}}

@@ -5,7 +5,7 @@ lead: ""
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
-images: [ "whatsapp-profile.jpg" ]
+images: ["whatsapp-profile.jpg"]
 weight: 225
 slug: profile
 ---
@@ -88,6 +88,7 @@ PUT /api/{SESSSION}/profile/picture
 
 {{< tabs "set-profile-picture" >}}
 {{< tab "URL" >}}
+
 ```json {title="Body"}
 {
   "file": {
@@ -95,9 +96,11 @@ PUT /api/{SESSSION}/profile/picture
   }
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
+
 ```json {title="Body"}
 {
   "file": {
@@ -105,6 +108,7 @@ PUT /api/{SESSSION}/profile/picture
   }
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 

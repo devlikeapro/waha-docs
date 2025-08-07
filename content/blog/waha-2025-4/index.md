@@ -11,7 +11,9 @@ contributors: ["devlikeapro"]
 pinned: false
 homepage: false
 slug: waha-2025-4
----------------
+---
+
+---
 
 We’re excited to introduce [**WAHA 2025.4**]({{< relref "/docs/overview/changelog#20254" >}}), packed with new API capabilities, group handling improvements, and crucial bug fixes across all engines!
 
@@ -32,8 +34,8 @@ Works across **WEBJS**, **NOWEB**, and **GOWS**!
 
 **WEBJS** now includes:
 
-* `message.ack` events for group & status messages
-* `message._data.receipts` in [**Get Message by ID**]({{< relref "/docs/how-to/chats/#get-message-by-id" >}})
+- `message.ack` events for group & status messages
+- `message._data.receipts` in [**Get Message by ID**]({{< relref "/docs/how-to/chats/#get-message-by-id" >}})
 
 You can now **track delivery for each participant**!
 [#495](https://github.com/devlikeapro/waha/issues/495), [#900](https://github.com/devlikeapro/waha/issues/900)
@@ -68,31 +70,33 @@ New `filter.ack` option in [**Get Messages API**]({{< relref "/docs/how-to/chats
 
 ## 🛠️ Fixes & Stability
 
-* **NOWEB**:
+- **NOWEB**:
 
-    * Fix for `protocolMessage` crash [#932](https://github.com/devlikeapro/waha/issues/932)
-    * Message status updated on `/api/sendSeen` [#635](https://github.com/devlikeapro/waha/issues/635)
-    * Correct `ack` for new messages (`DEVICE` instead of `UNKNOWN`)
-    * Fix sending/receiving in **anonymous groups** and **status**
-* **WEBJS**:
+  - Fix for `protocolMessage` crash [#932](https://github.com/devlikeapro/waha/issues/932)
+  - Message status updated on `/api/sendSeen` [#635](https://github.com/devlikeapro/waha/issues/635)
+  - Correct `ack` for new messages (`DEVICE` instead of `UNKNOWN`)
+  - Fix sending/receiving in **anonymous groups** and **status**
 
-    * Auto-restart browser on `ProtocolError` & other errors
-      [#244](https://github.com/devlikeapro/waha/issues/244), [#936](https://github.com/devlikeapro/waha/issues/936)
-* **GOWS**:
+- **WEBJS**:
 
-    * Group `message.ack` now sent for **all participants**
-    * Stability improvements for group/status messages
-    * Fix sending reactions to other users' messages [#894](https://github.com/devlikeapro/waha/issues/894)
+  - Auto-restart browser on `ProtocolError` & other errors
+    [#244](https://github.com/devlikeapro/waha/issues/244), [#936](https://github.com/devlikeapro/waha/issues/936)
+
+- **GOWS**:
+
+  - Group `message.ack` now sent for **all participants**
+  - Stability improvements for group/status messages
+  - Fix sending reactions to other users' messages [#894](https://github.com/devlikeapro/waha/issues/894)
 
 ---
 
 ## ⚙️ Engine Updates
 
-* Updated engines:
+- Updated engines:
 
-    * **NOWEB** - latest version
-    * **GOWS** - latest version
-    * **WEBJS** - updated **puppeteer** and **chrome** images
+  - **NOWEB** - latest version
+  - **GOWS** - latest version
+  - **WEBJS** - updated **puppeteer** and **chrome** images
 
 ---
 

@@ -1,8 +1,8 @@
 <div></div>
 
-To use 
+To use
 [**🧩 Apps**]({{< relref "/docs/apps/about" >}})
-, you need to configure the following environment variables in addition to the standard 
+, you need to configure the following environment variables in addition to the standard
 [**⚙️ Configuration**]({{< relref "/docs/how-to/config" >}}):
 
 **Apps**:
@@ -13,7 +13,7 @@ To use
 - `WAHA_API_KEY_PLAIN=0000000000000000` - plain password **required** for Apps in environment variables
   - It's a quick solution, we're working on removing it so you can use `sha512` version as in `WAHA_API_KEY`
 
-**Jobs**: 
+**Jobs**:
 
 You can configure a background worker [http://localhost:3000/jobs](http://localhost:3000/jobs)
 

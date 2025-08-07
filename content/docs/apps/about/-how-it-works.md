@@ -1,8 +1,9 @@
 <div></div>
 
-**Apps** connect **WhatsApp** with **external services** using **Redis** as a message broker. 
+**Apps** connect **WhatsApp** with **external services** using **Redis** as a message broker.
 
 **Apps** architecture consists of:
+
 - **HTTP API**, **Worker**, and **Session** on **WAHA** side
 - **Redis** acts as the central message broker.
 - **External Services**, like **ChatWoot**
@@ -15,7 +16,7 @@ architecture-beta
         service session(internet)[Session] in waha
     service redis(database)[Redis]
 
-    group app(cloud)[ChatWoot] 
+    group app(cloud)[ChatWoot]
         service 3api(internet)[HTTP API] in app
 
     api:L --> R:session
@@ -27,8 +28,9 @@ architecture-beta
 ```
 
 **WhatsApp to External Service Flow**:
-- When a new message arrives in **WhatsApp**, **WAHA** captures it and publishes a **message event** to **Redis**. 
-- The **Worker** then picks up this event, processes it, and forwards the message to **ChatWoot** via its **API**. 
+
+- When a new message arrives in **WhatsApp**, **WAHA** captures it and publishes a **message event** to **Redis**.
+- The **Worker** then picks up this event, processes it, and forwards the message to **ChatWoot** via its **API**.
 - After successful delivery, the job is marked as processed in **Redis**.
 
 ```kroki {type=mermaid}
@@ -47,9 +49,10 @@ sequenceDiagram
 ```
 
 **External Service to WhatsApp Flow**:
-- When a new message is created in **ChatWoot**, it calls the **WAHA API** webhook. 
-- The **API** saves this job to the **Redis** queue, from which the **Worker** retrieves it. 
-- The **Worker** then requests the **WAHA API** to send the message to **WhatsApp**. 
+
+- When a new message is created in **ChatWoot**, it calls the **WAHA API** webhook.
+- The **API** saves this job to the **Redis** queue, from which the **Worker** retrieves it.
+- The **Worker** then requests the **WAHA API** to send the message to **WhatsApp**.
 - After **WhatsApp** confirms delivery, the **API** acknowledges the **Worker**, which then marks the job as processed in **Redis**.
 
 ```kroki {type=mermaid}

@@ -1,4 +1,3 @@
-### Receive Message
 ```go
 package main
 

@@ -4,16 +4,17 @@ description: "WhatsApp + ChatWoot - Overview"
 excerpt: "WhatsApp + ChatWoot - Overview"
 date: 2025-07-12T08:48:45+00:00
 draft: false
-images: [ "waha-chatwoot.png" ]
-categories: [ "Apps", "ChatWoot" ]
-tags: [ ]
-contributors: [ "devlikeapro" ]
+images: ["waha-chatwoot.png"]
+categories: ["Apps", "ChatWoot"]
+tags: []
+contributors: ["devlikeapro"]
 pinned: false
 homepage: false
 slug: apps-chatwoot-overview
 ---
 
 ## Overview
+
 **WAHA** provides a seamless integration with **Chatwoot**, allowing you to manage your WhatsApp communications through a powerful customer service platform. This overview highlights the key features and capabilities of the integration.
 
 {{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}
@@ -22,8 +23,8 @@ slug: apps-chatwoot-overview
   <img src="/images/chatwoot/waha-chatwoot.png" style="width: 150px">
 </p>
 
-
 ## Contacts Sync
+
 **Contact information** is displayed in **Chatwoot** from **WhatsApp**:
 
 ![](screenshots/contact-info.png)
@@ -45,7 +46,7 @@ Send and receive **text messages**:
 ![Receive Media](screenshots/messages/receive-media.png)
 <br/><br/>
 
-**Send media files** through **Chatwoot** 
+**Send media files** through **Chatwoot**
 (available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}))
 
 ![Send Media](screenshots/messages/send-media.png)
@@ -75,7 +76,6 @@ Add **private notes** visible only to agents:
 
 ![Private Notes](screenshots/messages/private-note.png)
 
-
 ## Languages
 
 You can set your language when creating a **Chatwoot App** in the **WAHA Dashboard**:
@@ -87,6 +87,7 @@ You'll receive notification messages in the selected language in **Chatwoot**:
 ![Chatwoot Languages](screenshots/dashboard/cw-languages-chatwoot.png)
 
 ## Commands
+
 Use the `help` command to see available commands in **WhatsApp Integration (WAHA)** conversation:
 
 ![Help Command](screenshots/commands/help.png)
@@ -99,8 +100,8 @@ Get session status updates in Chatwoot:
 
 ![Status Updates Command](screenshots/commands/status-updates.png)
 
-
 ## Error Handling
+
 In case of any errors, WAHA retries a few times and then gives detailed information about the error:
 
 ![Error Reports and Retries](screenshots/messages/error-reports-and-retries.png)

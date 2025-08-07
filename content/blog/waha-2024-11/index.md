@@ -13,13 +13,13 @@ homepage: false
 slug: waha-2024-11
 ---
 
-🎉 We are thrilled to announce the release of [**WAHA 2024.11**]({{< relref "/docs/overview/changelog#202411" >}}) 🎉 
+🎉 We are thrilled to announce the release of [**WAHA 2024.11**]({{< relref "/docs/overview/changelog#202411" >}}) 🎉
 
 ## Event Monitor
 
-Now you can observe the 
+Now you can observe the
 [**Events**]({{< relref "/docs/how-to/events" >}})
-happening in your WAHA instance in real-time with the new 
+happening in your WAHA instance in real-time with the new
 [**Event Monitor**]({{< relref "/docs/how-to/dashboard#event-monitor" >}})
 feature!
 
@@ -28,7 +28,6 @@ feature!
 Open
 [dashboard/event-monitor](/dashboard/event-monitor) or at your local instance
 [http://localhost:3000/dashboard/event-monitor](http://localhost:3000/dashboard/event-monitor)
-
 
 ## Websockets
 
@@ -45,18 +44,19 @@ websocat -E ws://localhost:3000/ws
 ```
 
 {{< details "Or JavaScript" >}}
+
 ```js
 // Configuration
-const apiKey = '123'; // Replace with your API key
-const baseUrl = 'ws://localhost:3000/ws';
-const session = '*'; // Use '*' to listen to all sessions
-const events = ['session.status', 'message']; // List of events to listen to
+const apiKey = "123"; // Replace with your API key
+const baseUrl = "ws://localhost:3000/ws";
+const session = "*"; // Use '*' to listen to all sessions
+const events = ["session.status", "message"]; // List of events to listen to
 
 // Construct the WebSocket URL with query parameters
 const queryParams = new URLSearchParams({
-    'x-api-key': apiKey,
-    session,
-    ...events.reduce((acc, event) => ({ ...acc, events: event }), {}) // Add multiple 'events' params
+  "x-api-key": apiKey,
+  session,
+  ...events.reduce((acc, event) => ({ ...acc, events: event }), {}) // Add multiple 'events' params
 });
 const wsUrl = `${baseUrl}?${queryParams.toString()}`;
 
@@ -65,26 +65,26 @@ const socket = new WebSocket(wsUrl);
 
 // Handle incoming messages
 socket.onmessage = (event) => {
-    console.log('Received:', event.data);
+  console.log("Received:", event.data);
 };
 
 // Handle errors
 socket.onerror = (error) => {
-    console.error('WebSocket Error:', error);
+  console.error("WebSocket Error:", error);
 };
 
 // Handle connection open
 socket.onopen = () => {
-    console.log('WebSocket connection established:', wsUrl);
+  console.log("WebSocket connection established:", wsUrl);
 };
 
 // Handle connection close
 socket.onclose = () => {
-    console.log('WebSocket connection closed');
+  console.log("WebSocket connection closed");
 };
 ```
-{{< /details >}}
 
+{{< /details >}}
 
 ## Manage Labels
 
@@ -99,6 +99,7 @@ POST /api/{session}/labels
 ```
 
 Using `color`
+
 ```json
 {
   "name": "New Client",
@@ -107,10 +108,11 @@ Using `color`
 ```
 
 Using `colorHex`
+
 ```json
 {
   "name": "New Client",
-  "colorHex" : "#64c4ff"
+  "colorHex": "#64c4ff"
 }
 ```
 
@@ -123,6 +125,7 @@ PUT /api/{session}/labels/{labelId}
 ```
 
 Using `color`
+
 ```json
 {
   "name": "New Client",
@@ -131,13 +134,14 @@ Using `color`
 ```
 
 Using `colorHex`
+
 ```json
 {
   "name": "New Client",
-  "colorHex" : "#64c4ff"
+  "colorHex": "#64c4ff"
 }
 ```
-    
+
 {{< /details >}}
 
 {{< details "Delete Label" >}}
@@ -161,6 +165,7 @@ POST /api/{session}/chats/{chatId}/messages/{messageId}/pin
 ```
 
 Payload:
+
 ```json
 {
   "duration": 86400
@@ -172,12 +177,12 @@ Payload:
 - 30 days - `duration=2592000`
 
 Response:
+
 ```json
 {
   "success": true
 }
 ```
-
 
 {{< /details >}}
 
@@ -188,12 +193,15 @@ POST /api/{session}/chats/{chatId}/messages/{messageId}/unpin
 ```
 
 Response:
+
 ```json
 {
   "success": true
 }
 ```
+
 {{< /details >}}
 
 ## And More!
+
 Check out the full [**WAHA 2024.11 🆕 Changelog**]({{< relref "/docs/overview/changelog#202411" >}}) for more details!

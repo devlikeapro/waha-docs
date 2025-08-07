@@ -4,10 +4,10 @@ description: "Step-by-step guide on how to run WAHA on local network using Ngrok
 excerpt: "Step-by-step guide on how to run WAHA on local network using Ngrok (so you can use it on Cloud or VPS)"
 date: 2024-06-11T08:48:45+00:00
 draft: false
-images: [ "ngrok.png" ]
-categories: [ "Tips" ]
-tags: [ ]
-contributors: [ "devlikeapro" ]
+images: ["ngrok.png"]
+categories: ["Tips"]
+tags: []
+contributors: ["devlikeapro"]
 pinned: false
 homepage: false
 toc: true
@@ -47,7 +47,7 @@ Start and scan the QR code to connect to WhatsApp.
 
 Download and install [Ngrok](https://ngrok.com/).
 
-{{< callout context="note" icon="outline/info-circle" >}} 
+{{< callout context="note" icon="outline/info-circle" >}}
 You can test it with a free account, but you'll need a paid account to use a static name.
 {{< /callout >}}
 

@@ -11,7 +11,6 @@ sidebar:
   collapsed: true
 ---
 
-How-to guides for **WAHA** - WhatsApp API. 
+How-to guides for **WAHA** - WhatsApp API.
 
-Discover how to use the WAHA, what you can do with it, and how to configure it right for your needs. 
-
+Discover how to use the WAHA, what you can do with it, and how to configure it right for your needs.

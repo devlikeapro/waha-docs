@@ -3,6 +3,7 @@
 {{< tabs "send-poll-api" "language" >}}
 
 {{< tab "cURL" >}}
+
 ```sh
 curl -X 'POST' \
   'http://localhost:3000/api/sendPoll' \
@@ -23,9 +24,11 @@ curl -X 'POST' \
   }
 }'
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -51,38 +54,39 @@ data = {
 response = requests.post(url, json=data, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
 const url = "http://localhost:3000/api/sendPoll";
 const data = {
-    session: "default",
-    chatId: "12132132130@c.us",
-    poll: {
-        name: "How are you?",
-        options: [
-            "Awesome!",
-            "Good!",
-            "Not bad!"
-        ],
-        multipleAnswers: false
-    }
+  session: "default",
+  chatId: "12132132130@c.us",
+  poll: {
+    name: "How are you?",
+    options: ["Awesome!", "Good!", "Not bad!"],
+    multipleAnswers: false
+  }
 };
 const headers = {
-    'Content-Type': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
+  "Content-Type": "application/json",
+  "X-Api-Key": "yoursecretkey"
 };
 
-axios.post(url, data, { headers })
-    .then(response => console.log(response.data))
-    .catch(error => console.error(error));
+axios
+  .post(url, data, { headers })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
 ```
+
 {{< /tab >}}
 
 {{< tab "PHP" >}}
+
 ```php
 <?php
 $url = "http://localhost:3000/api/sendPoll";
@@ -114,6 +118,7 @@ curl_close($ch);
 echo $response;
 ?>
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

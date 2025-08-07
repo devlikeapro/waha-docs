@@ -27,22 +27,16 @@
                 <div class='text-center flex-grow-1 d-flex flex-column justify-content-center'>
                     <div class='mb-4'>
                         <img src='/images/logo.svg' title='WhatsApp API' alt='logo'
-                             style='border-radius: 50%; width: 7rem'/>
+                            style='border-radius: 50%; width: 7rem' />
                     </div>
                     <div>
-                        <a class='btn btn-primary btn-lg px-4 mb-2'
-                           href='#how-to-start'
-                           role='button'>Get Started</a>
+                        <a class='btn btn-primary btn-lg px-4 mb-2' href='#how-to-start' role='button'>Get Started</a>
                     </div>
                 </div>
             </div>
             <div class='col-lg-6 order-first order-lg-last d-flex justify-content-center mb-4' data-aos="fade-up">
                 <div>
-                    <img
-                            src='/images/java.svg' title='WhatsApp + Java'
-                            alt='WhatsApp + Java'
-                            height="180"
-                    />
+                    <img src='/images/java.svg' title='WhatsApp + Java' alt='WhatsApp + Java' height="180" />
                 </div>
             </div>
         </div>
@@ -65,17 +59,23 @@
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="100">
-                <img src='/images/icons/whatsapp-channels.svg' alt='WhatsApp Channel Logo' style='width: 5rem' >
+                <img src='/images/icons/whatsapp-channels.svg' alt='WhatsApp Channel Logo' style='width: 5rem'>
+                <h4 class="color-accent">Install Dependencies</h4>
+
                 {{ .Page.RenderString (readFile "/layouts/code/language/java/install-dependencies.md") | safeHTML }}
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="50">
                 <img src='/images/icons/message-green.png' alt='Free' style='width: 5rem'>
+                <h4 class="color-accent">Send Message</h4>
+
                 {{ .Page.RenderString (readFile "/layouts/code/language/java/send-message.md") | safeHTML }}
             </div>
 
             <div class='col-12 col-lg-4 pros-card-wide' data-aos="fade-up" data-aos-delay="150">
                 <img src='/images/icons/button-green.png' alt='API' style='width: 5rem'>
+                <h4 class="color-accent">Receive Message</h4>
+
                 {{ .Page.RenderString (readFile "/layouts/code/language/java/receive-message.md") | safeHTML }}
             </div>
         </div>

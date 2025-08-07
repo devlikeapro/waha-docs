@@ -7,17 +7,19 @@ lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 293
 slug: event-message
-images: [ "whatsapp-event-message.jpg"]
+images: ["whatsapp-event-message.jpg"]
 ---
+
 You can **send Event Message** and **receive responses** in WhatsApp using API .
 
 Remind clients about their appointments natively:
+
 <div style="width: 500px; max-width: 100%; margin: 0 auto;">
 {{< img lqip="21x webp q20" src="whatsapp-event-message.jpg" alt="WhatsApp Event Message" >}}
 </div>
 
-
 ## Features
+
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
 {{< include file="content/docs/how-to/event-message/features.md" >}}
@@ -26,6 +28,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 ## API
 
 ### Send Event Message
+
 ```http request
 POST /api/{SESSION}/events
 ```
@@ -48,19 +51,20 @@ POST /api/{SESSION}/events
 ```
 
 Fields:
+
 - `chatId` - The WhatsApp ID of the chat where you want to send the event message (e.g., "123123@c.us")
 - `event` - Object containing event details:
   - `name` - The title of the event
-  - `description` - Detailed description of the event (supports formatting with \n for newlines and * for bold text)
+  - `description` - Detailed description of the event (supports formatting with \n for newlines and \* for bold text)
   - `startTime` - Event start time in Unix timestamp format (**seconds** since epoch)
   - `endTime` - Event end time in Unix timestamp format (optional, can be null)
-  - `location` - (Optional) Object containing location details 
+  - `location` - (Optional) Object containing location details
     - `name` - Name of the location
   - `extraGuestsAllowed` - indicating whether additional guests are allowed (true/false)
 - `reply_to` - Message ID to reply to (optional, can be null)
 
-
 ## Events
+
 Receive responses for your event using events!
 
 {{< include file="content/docs/how-to/event-message/features-events.md" >}}
@@ -68,7 +72,6 @@ Receive responses for your event using events!
 <div style="width: 500px; max-width: 100%; margin: 0 auto;">
 {{< img lqip="21x webp q20" src="whatsapp-event-response.jpg" alt="WhatsApp Event Message" >}}
 </div>
-
 
 ### event.response
 

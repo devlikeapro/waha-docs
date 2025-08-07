@@ -11,8 +11,8 @@ toc: true
 slug: about
 ---
 
-[**🔌 Integrations**]({{< relref "/docs/integrations/about" >}}) 
-are **external ecosystem tools** that connect WAHA with other services. 
+[**🔌 Integrations**]({{< relref "/docs/integrations/about" >}})
+are **external ecosystem tools** that connect WAHA with other services.
 
 They include both WAHA Team-supported and community-created solutions.
 

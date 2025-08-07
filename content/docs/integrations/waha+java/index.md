@@ -21,4 +21,3 @@ slug: java
 {{< include file="/layouts/code/language/java/install-dependencies.md" >}}
 {{< include file="/layouts/code/language/java/send-message.md" >}}
 {{< include file="/layouts/code/language/java/receive-message.md" >}}
-

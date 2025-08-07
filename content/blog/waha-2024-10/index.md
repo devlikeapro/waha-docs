@@ -13,15 +13,15 @@ homepage: false
 slug: waha-2024-10
 ---
 
-🎉 We are thrilled to announce the release of [**WAHA 2024.10**]({{< relref "/docs/overview/changelog#202410" >}}) 🎉 
+🎉 We are thrilled to announce the release of [**WAHA 2024.10**]({{< relref "/docs/overview/changelog#202410" >}}) 🎉
 
 ## WAHA Core - Receive Media
 
 We published [**📥 Receive messages** ]({{<relref "/docs/how-to/receive-messages#files" >}})
 in free **WAHA Core** version, so you can receive media files in your WhatsApp API for free!
 
-We'll continue to publish features from 
-[**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) 
+We'll continue to publish features from
+[**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 to WAHA Core, so you can use them for free!
 
 ```json { title="message" }
@@ -57,14 +57,16 @@ For that we've built [@devlikeapro/n8n-nodes-waha](https://github.com/devlikeapr
 directly from our [Swagger](/swagger) specification, so all available API calls are available in n8n.
 
 Install it on your n8n instance and start building your first workflow:
+
 ```
 @devlikeapro/n8n-nodes-waha
 ```
 
-Read more about 
+Read more about
 [**🔌 n8n Integration**]({{< relref "/docs/integrations/n8n" >}})
 
 ### TypeBot Integration
+
 <p align="center">
   <img src="/images/typebot/waha+typebot.png" width='200'/>
 </p>
@@ -74,6 +76,7 @@ Using the n8n workflow you can integrate **TypeBot** with **WAHA**!
 👉 Checkout out [**🔌 TypeBot Integration**]({{< relref "/docs/integrations/typebot" >}})
 
 ### ChatWoot Integration
+
 <p align="center">
   <img src="/images/chatwoot/waha-chatwoot.png" width='200'/>
 </p>
@@ -83,14 +86,15 @@ Using the n8n workflow you can integrate **ChatWoot** with **WAHA**!
 👉 Checkout out [**🔌 ChatWoot Integration**]({{< relref "/docs/integrations/chatwoot" >}})
 
 ### Workflow Templates
+
 👉 Check out
 [**https://waha-n8n-workflows.devlike.pro**](http://waha-n8n-templates.devlike.pro/)
 for workflow templates!
 
 {{< imgo src="/images/n8n/waha-n8n.png" >}}
 
-
 ## Stability fixes
+
 We're working on internal things to stabilize the product, to avoid any issues with the API.
 
 Check the full [**🆕 Changelog**]({{< relref "/docs/overview/changelog#202410" >}})

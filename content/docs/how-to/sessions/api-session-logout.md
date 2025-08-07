@@ -3,6 +3,7 @@
 {{< tabs "logout-session-api" "language" >}}
 
 {{< tab "cURL" >}}
+
 ```sh
 curl -X 'POST' \
   'http://localhost:3000/api/sessions/default/logout' \
@@ -10,9 +11,11 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -H 'X-Api-Key: yoursecretkey'
 ```
+
 {{< /tab >}}
 
 {{< tab "Python" >}}
+
 ```python
 import requests
 
@@ -25,25 +28,30 @@ headers = {
 response = requests.post(url, headers=headers)
 print(response.json())
 ```
+
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
+
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
 const url = "http://localhost:3000/api/sessions/default/logout";
 const headers = {
-    'Content-Type': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
+  "Content-Type": "application/json",
+  "X-Api-Key": "yoursecretkey"
 };
 
-axios.post(url, {}, { headers })
-    .then(response => console.log(response.data))
-    .catch(error => console.error(error));
+axios
+  .post(url, {}, { headers })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
 ```
+
 {{< /tab >}}
 
 {{< tab "PHP" >}}
+
 ```php
 <?php
 $url = "http://localhost:3000/api/sessions/default/logout";
@@ -61,6 +69,7 @@ curl_close($ch);
 echo $response;
 ?>
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}

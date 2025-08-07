@@ -28,6 +28,7 @@ to generate the command with the right version.
 
 {{< tab "WAHA (ARM)" >}}
 If you're using ARM (like Apple M1/M2, Raspberry Pi etc.) - use following commands to download the image:
+
 ```bash
 # Download the image
 docker pull devlikeapro/waha:arm

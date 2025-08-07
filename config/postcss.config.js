@@ -17,7 +17,7 @@ module.exports = {
                 }
             ],
             dynamicAttributes: [
-                "aria-selected",
+                'aria-selected',
                 'aria-expanded',
                 'data-bs-popper',
                 'data-bs-target',
@@ -33,8 +33,9 @@ module.exports = {
                 'type'
             ],
             safelist: [
-                ...whitelister(["./node_modules/@docsearch/css/dist/modal.css"]),
+                ...whitelister(['./node_modules/@docsearch/css/dist/modal.css']),
                 'active',
+                'color-accent',
                 'btn-clipboard', // clipboards.js
                 'clipboard', // clipboards.js
                 'disabled',

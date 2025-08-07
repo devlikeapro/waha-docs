@@ -12,6 +12,7 @@ parent: "overview"
 weight: 101
 toc: true
 ---
+
 **WAHA** - <u>W</u>hats<u>A</u>pp <u>H</u>TTP <u>A</u>PI that you can install on your own server and run in less than 5 minutes!
 
 <div class="d-flex justify-content-center my-4">
@@ -26,7 +27,6 @@ Run **WhatsApp API** in less than 5 minutes!
 [**⚡ Quick Start**]({{< relref "quick-start" >}})
 will guide you through the necessary steps to successfully send your first text message using WhatsApp API.
 {{< /callout >}}
-
 
 {{< callout context="info" title="Disclaimer" icon="outline/gavel" >}}
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or its affiliates. The official WhatsApp website can be found at [whatsapp.com](https://whatsapp.com).

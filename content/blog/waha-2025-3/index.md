@@ -4,10 +4,10 @@ description: "WAHA 2025.3 - GOWS 1.0, NOWEB stability, and More!"
 excerpt: "WAHA 2025.3 - GOWS 1.0, NOWEB stability, and More!"
 date: 2025-03-26T08:48:45+00:00
 draft: false
-images: [ "waha-2025-3.png" ]
-categories: [ "Releases" ]
-tags: [ ]
-contributors: [ "devlikeapro" ]
+images: ["waha-2025-3.png"]
+categories: ["Releases"]
+tags: []
+contributors: ["devlikeapro"]
 pinned: false
 homepage: false
 slug: waha-2025-3
@@ -15,11 +15,12 @@ slug: waha-2025-3
 
 We’re excited to roll out [**WAHA 2025.3**]({{< relref "/docs/overview/changelog#202503" >}})!
 
-## GOWS 1.0 
+## GOWS 1.0
 
 [**GOWS Engine**]({{< relref "/docs/how-to/engines#gows" >}}) just got its **1.0** moment!
 
 Here’s what’s new:
+
 - Enable Link Previews - {{< issue 763 >}}
 - Delete Status Message - {{< issue 754  >}}
 - Delete Message - {{< issue 796  >}}
@@ -29,6 +30,7 @@ Here’s what’s new:
 - Extract `replyTo` - {{< issue 876 >}}
 
 ## NOWEB Stability
+
 If you faced any issues with the NOWEB engine, like
 {{< issue 821 >}}, {{< issue 860 >}}, {{< issue 869 >}}
 we have fixed them in this release!
@@ -46,7 +48,6 @@ Need more control?
 ## Disappearing Messages
 
 Under the hood, WAHA now supports for WhatsApp! {{< issue 736 >}}
-
 
 ## Full Changelog
 

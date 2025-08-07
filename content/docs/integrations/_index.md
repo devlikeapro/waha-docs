@@ -12,4 +12,3 @@ sidebar:
 ---
 
 Different ways to integrate WAHA with other services.
-

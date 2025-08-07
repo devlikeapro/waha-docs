@@ -4,10 +4,10 @@ description: "Step-by-step guide on how to set up HTTPS for WAHA"
 excerpt: "Step-by-step guide on how to set up HTTPS for WAHA"
 date: 2024-06-17T08:48:45+00:00
 draft: false
-images: [ "https_icon.png" ]
-categories: [ "Tips" ]
-tags: [ ]
-contributors: [ "devlikeapro" ]
+images: ["https_icon.png"]
+categories: ["Tips"]
+tags: []
+contributors: ["devlikeapro"]
 pinned: false
 homepage: false
 toc: true
@@ -32,7 +32,6 @@ You can set up the following environment variables to enable HTTPS:
 4. [**Using Ngrok**](#using-ngrok) - expose your WAHA safely on internet, even without Public IP or DNS name.
 
 ## Configuration
-
 
 WAHA supports HTTPS out of the box if you don't want to use a reverse proxy like Nginx.
 
@@ -98,6 +97,7 @@ sudo certbot certonly --webroot
 After you get the certificates, you can run it
 
 👇 Few notes:
+
 - Change `waha.example.pro` to your domain
 - We're running it with `-it` flag to see the logs, in production you need to run it with `docker run -d` instead.
 - We map the whole `/etc/letsencrypt` folder because of the way how letsencrypt works with "live" keys (it's symlinks to "archive" directory files)
@@ -113,8 +113,8 @@ docker run -it \
   --env WAHA_HTTPS_PATH_KEY=/etc/letsencrypt/live/$DOMAIN/privkey.pem \
   --env WAHA_HTTPS_PATH_CERT=/etc/letsencrypt/live/$DOMAIN/cert.pem \
   --env WAHA_HTTPS_PATH_CA=/etc/letsencrypt/live/$DOMAIN/chain.pem \
-  --env WHATSAPP_API_SCHEMA=https, 
-  --env WHATSAPP_API_PORT=3000, 
+  --env WHATSAPP_API_SCHEMA=https,
+  --env WHATSAPP_API_PORT=3000,
   --env WHATSAPP_API_HOSTNAME=$DOMAIN \
   --restart always \
   devlikeapro/waha-plus
@@ -123,7 +123,7 @@ docker run -it \
 Now open [https://waha.example.com:3000](https://waha.example.com:3000)
 and check the HTTPS connection.
 
-If it works - consider using [docker-compose](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml) 
+If it works - consider using [docker-compose](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml)
 file for running the project, it can be hard to write such long command or using sh scripts for that.
 
 ### Step 4: Test auto renewal
@@ -138,11 +138,12 @@ sudo certbot renew --dry-run
 
 As an alternative, you can issue self-signed certificate (for instance, to test the connection on localhost).
 
-It'll show you an error on browser, so you need to accept it before accessing the site, 
+It'll show you an error on browser, so you need to accept it before accessing the site,
 but it won't show expose the API key during network communication even in public networks.
 ![alt](self-signed-certificate-warning.png)
 
 ### Step 1: Generate certificates
+
 ```bash
 mkdir .secrets
 openssl genpkey -algorithm RSA -out .secrets/privkey.pem -pkeyopt rsa_keygen_bits:2048
@@ -153,7 +154,9 @@ echo "DONE!"
 ```
 
 ### Step 2: Run WAHA
+
 👇 Few notes:
+
 - We're running it with `-it` flag to see the logs, in production you need to run it with `docker run -d` instead.
 
 ```bash
@@ -183,9 +186,11 @@ It distributes the load and make it easier to manage the HTTPS part.
 Unfortunately, it's a bit more complicated than the previous options, so we don't cover it in the guide.
 
 Here's some articles that can help you set up HTTPS with Nginx and docker-compose:
+
 1. [**Certbot + Nginx + Docker**](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04)
 
 ## Using Ngrok
+
 WAHA + Ngrok - Running WAHA on local network
-You also can set up [**WAHA to use Ngrok**]({{< relref "/blog/waha-ngrok" >}}) 
+You also can set up [**WAHA to use Ngrok**]({{< relref "/blog/waha-ngrok" >}})
 so it handles HTTPS for you, even if you're running it NOT on local server!

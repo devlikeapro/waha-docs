@@ -1,5 +1,5 @@
 ---
-title : "🟢 Status"
+title: "🟢 Status"
 description: "Status (aka Stories)"
 lead: ""
 date: 2020-10-06T08:48:45+00:00
@@ -7,7 +7,7 @@ lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 232
 slug: status
-images: [ "status.png" ]
+images: ["status.png"]
 ---
 
 You can send statuses (aka stories) using HTTP API!
@@ -16,8 +16,8 @@ You can send statuses (aka stories) using HTTP API!
 {{< img lqip="21x webp q20" src="status.png" alt="WhatsApp Status" >}}
 </div>
 
-
 ## Features
+
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
 {{< include file="content/docs/how-to/status/features.md" >}}
@@ -44,9 +44,10 @@ You can fetch your contacts using [**👤 Contacts API**]({{< relref "/docs/how-
 
 {{< /callout >}}
 
-
 ### Send Text Status
+
 Send status to **all** your contacts:
+
 ```http request
 POST /api/{session}/status/text
 ```
@@ -58,31 +59,32 @@ POST /api/{session}/status/text
   "font": 1
 }
 ```
+
 - `text` - text to send as status.
 - `font` - font type, experiment with values here to get different fonts.
 - `backgroundColor` - background color of the status.
 - `contacts` - array of contacts to send status to.
 
 Send status to specific contacts:
+
 ```json { title="Body" }
 {
   "text": "Have a look! https://waha.devlike.pro/",
   "backgroundColor": "#38b42f",
   "font": 1,
-  "contacts": [
-    "55xxxxxxxxxxx@c.us",
-    "55xxxxxxxxxxx@c.us"
-  ]
+  "contacts": ["55xxxxxxxxxxx@c.us", "55xxxxxxxxxxx@c.us"]
 }
 ```
 
-### Send Image Status 
+### Send Image Status
+
 ```http request
 POST /api/{session}/status/image
 ```
 
 {{< tabs "send-image-status-body" >}}
 {{< tab "URL" >}}
+
 ```json { title="Body" }
 {
   "file": {
@@ -92,6 +94,7 @@ POST /api/{session}/status/image
   "caption": "string"
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
@@ -105,16 +108,19 @@ POST /api/{session}/status/image
   "caption": "string"
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
-### Send Video Status 
+### Send Video Status
+
 ```http request
 POST /api/{session}/status/video
 ```
 
 {{< tabs "send-video-status-body" >}}
 {{< tab "URL" >}}
+
 ```json { title="Body" }
 {
   "file": {
@@ -124,9 +130,11 @@ POST /api/{session}/status/video
   "backgroundColor": "#38b42f"
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
+
 ```json { title="Body" }
 {
   "file": {
@@ -137,10 +145,12 @@ POST /api/{session}/status/video
   "backgroundColor": "#38b42f"
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
 **Fields**:
+
 - `file` - provide **one of** the fields:
   - `url` - URL to the file
   - `data` - Base 64 encoded binary content of the file
@@ -153,7 +163,7 @@ POST /api/{session}/status/video
 
 {{< include file="content/docs/how-to/send-messages/media-video-convert.md" >}}
 
-### Send Voice Status 
+### Send Voice Status
 
 ```http request
 POST /api/{session}/status/voice
@@ -161,6 +171,7 @@ POST /api/{session}/status/voice
 
 {{< tabs "send-voice-status-body" >}}
 {{< tab "URL" >}}
+
 ```json { title="Body" }
 {
   "file": {
@@ -171,9 +182,11 @@ POST /api/{session}/status/voice
   "convert": false
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
+
 ```json { title="Body" }
 {
   "file": {
@@ -183,10 +196,12 @@ POST /api/{session}/status/voice
   "backgroundColor": "#38b42f"
 }
 ```
+
 {{< /tab >}}
 {{< /tabs >}}
 
 **Fields**:
+
 - `file` - provide **one of** the fields:
   - `url` - URL to the file
   - `data` - Base 64 encoded binary content of the file
@@ -196,9 +211,11 @@ POST /api/{session}/status/voice
 {{< include file="content/docs/how-to/send-messages/media-voice-format.md" >}}
 
 #### Media - Convert Voice
+
 {{< include file="content/docs/how-to/send-messages/media-voice-convert.md" >}}
 
 ### Delete Status
+
 Here's how you can delete status message you previously sent.
 
 ```http request
@@ -206,6 +223,7 @@ POST /api/{session}/status/delete
 ```
 
 When you send status - you'll get the response like below, save `key.id` (it's message id).
+
 ```json { title="Response" }
 {
   "key": {
@@ -228,8 +246,9 @@ When you send status - you'll get the response like below, save `key.id` (it's m
 It removes status from all contacts in the list.
 
 ### Get New Status Message ID
+
 Generates new message ID for status message.
-You can use it in 
+You can use it in
 [Send Status to 10K contacts](#send-status-to-10k-contacts-manually)
 flow for manually sending status messages to big amount of contacts.
 
@@ -244,6 +263,7 @@ GET /api/{session}/status/new-message-id
 ```
 
 After that you can set it when you send status messages:
+
 ```json { title="Body" }
 
 {
@@ -255,6 +275,7 @@ After that you can set it when you send status messages:
 ```
 
 ## How-to
+
 ### Get status messages
 
 You can use regular
@@ -267,7 +288,7 @@ GET /api/default/chats/status%40broadcast/messages?downloadMedia=true&limit=100
 
 ### Receive status messages
 
-If you wish to receive status messages in real-time - you can subscribe to the following 
+If you wish to receive status messages in real-time - you can subscribe to the following
 [**🔄 Events**]({{< relref "/docs/how-to/events" >}})
 :
 
@@ -292,7 +313,6 @@ If you wish to receive status messages in real-time - you can subscribe to the f
 }
 ```
 
-
 ### Send Status to 10K Contacts Manually
 
 If you have a large contact list (e.g., **10,000 contacts or more**), different engines handle status messages differently.
@@ -301,9 +321,9 @@ If you have a large contact list (e.g., **10,000 contacts or more**), different 
 
 - **WEBJS**: Handles the process internally, following the official WhatsApp Web behavior. It automatically chunks the contact list.
 - **NOWEB**: Splits the contact list into chunks of **5,000 contacts** and sends status messages sequentially.
-    - When sending **image, voice, or video** status messages, **NOWEB re-uploads** the media for each chunk.
+  - When sending **image, voice, or video** status messages, **NOWEB re-uploads** the media for each chunk.
 - **GOWS**: Also splits the contact list into chunks of **5,000 contacts**, sending them sequentially.
-    - For **image, voice, or video** status messages, **GOWS reuses** the uploaded media for each chunk (no re-uploads).
+  - For **image, voice, or video** status messages, **GOWS reuses** the uploaded media for each chunk (no re-uploads).
 
 Both **NOWEB** and **GOWS** use the same `message.id` for each chunk, allowing you to track "views" for status messages just like regular messages.
 
@@ -312,7 +332,6 @@ Both **NOWEB** and **GOWS** use the same `message.id` for each chunk, allowing y
 You might encounter errors when sending status messages to 10K contacts.
 
 If that happens, or if you'd like more control over the process, you can use the following manual flow to send the status message to your contacts in smaller chunks.
-
 
 #### 1. Generate a New Message ID
 
@@ -328,7 +347,6 @@ GET /api/{SESSION}/status/new-message-id
 }
 ```
 
-
 #### 2. Get Your Own ID
 
 To view your own status message on your device, retrieve your user ID:
@@ -343,7 +361,6 @@ GET /api/{SESSION}/me
   ...
 }
 ```
-
 
 #### 3. Get Your Contacts List
 
@@ -366,7 +383,6 @@ GET /api/contacts/all?session={NAME}
 ]
 ```
 
-
 #### 4. Send the Status Message to Contacts
 
 Once you have your **Message ID**, **your own ID**, and the **contacts list**, you can start sending status messages in chunks.
@@ -376,6 +392,7 @@ We recommend using smaller chunks (**256–512 contacts**) to make retries and e
 If you set `contacts: null`, the system uses the default chunk size of **5,000 contacts**, which works well for most cases.
 
 {{< callout context="caution" icon="outline/alert-triangle" >}}
+
 - Always use the same **Message ID** for all chunks. This allows you to track views consistently across all recipients.
 - Include **your own ID** in the **first chunk**, so you can immediately view the status and receive the `message.ack` event.
   {{< /callout >}}
@@ -395,4 +412,3 @@ POST /api/{session}/status/text
 Continue sending the status message to the next chunk until you’ve sent it to all contacts.
 
 If you encounter any errors, you can retry sending the message to the same chunk.
-
