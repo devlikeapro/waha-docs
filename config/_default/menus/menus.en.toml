@@ -169,6 +169,12 @@ url = "/whatsapp-groups/"
 weight = 93
 
 [[main]]
+name = "WhatsApp Script"
+parent = "more"
+url = "/whatsapp-script/"
+weight = 93.5
+
+[[main]]
 name = "WhatsApp Low-Code (n8n)"
 parent = "more"
 url = "/whatsapp-low-code/"
