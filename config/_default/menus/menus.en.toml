@@ -181,6 +181,12 @@ url = "/whatsapp-n8n/"
 weight = 94
 
 [[main]]
+name = "WhatsApp n8n Templates  →"
+parent = "more"
+url = "https://waha-n8n-templates.devlike.pro/"
+weight = 94.5
+
+[[main]]
 name = "WhatsApp Typebot Integration"
 parent = "more"
 url = "/whatsapp-typebot/"
