@@ -34,6 +34,12 @@ Alternatively, check the installation guides for **n8n** and **WAHA**:
 **n8n**:
    - [**Installation guide**](https://docs.n8n.io/hosting/installation/docker/#starting-n8n)
 
+
+{{< callout context="note" icon="outline/info-circle" title="WhatsApp n8n Templates" >}}
+Check out [**WAHA n8n Workflow Templates**](https://waha-n8n-templates.devlike.pro/)
+to get a head start on building **WhatsApp** automations with **n8n** and **WAHA**!
+{{< /callout >}}
+
 ## Install WAHA n8n node
 Go to your **n8n** => **Settings** => **Community nodes** and install:
 

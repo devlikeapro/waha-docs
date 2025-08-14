@@ -175,9 +175,9 @@ url = "/whatsapp-script/"
 weight = 93.5
 
 [[main]]
-name = "WhatsApp Low-Code (n8n)"
+name = "WhatsApp n8n Low-Code"
 parent = "more"
-url = "/whatsapp-low-code/"
+url = "/whatsapp-n8n/"
 weight = 94
 
 [[main]]
