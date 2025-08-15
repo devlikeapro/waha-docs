@@ -267,6 +267,11 @@ parent="language"
 url="https://waha.devlike.pro/"
 
 [[main]]
+name = "🇨🇳 简体中文 (Chinese)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=zh-CN&hl=zh-CN&u=https://waha.devlike.pro/&client=webapp"
+
+[[main]]
 name = "🇮🇷 فارسی (Persian)"
 parent="language"
 url="https://translate.google.com/translate?sl=en&tl=fa&hl=fa&u=https://waha.devlike.pro/&client=webapp"
