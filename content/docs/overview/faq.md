@@ -79,27 +79,23 @@ You can find the full tier comparison table on [**🎁 Support Us**]({{< relref 
 {{< /callout >}}
 
 
-### Is it one time donation?
+Got it — here’s the cleaned-up version without the “Subscription options” list or Boosty-specific mention:
 
-According to [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page:
-> It doesn't require monthly subscriptions, once installed on your server - it always works!
-> **(until WhatsApp made backward-incompatible changes, and you have to update the image, or you need to reinstall it on new server )**
+---
 
-Meaning that the installed WAHA will continue to work even after you subscription got expired. 
-Unfortunately, WhatsApp makes backward incompatible changes and when it happens we need to keep up and update the docker image, 
-which means that you need to update your WAHA as well, otherwise it won't work 😔
-It happens like every **3-6 months** or so and depends on your country as well.
+### Is it a one-time donation?
 
-In order to update WAHA you need to have **active docker key** 
-(which you get on WAHA [Patron Portal](https://portal.devlike.pro)), meaning at this time you need to be active subscriber.
+**No**. WAHA Plus is **not** a one-time purchase - but the version you install **keeps running after your subscription ends**, until WhatsApp makes backward incompatible change, or you need to install or update WAHA.
 
-In summary, it's not one time purchase, it's rather **"every 3-6 months" purchase** to get the latest update.
+**An active subscription is needed to:**
 
+* Pull any update (compatibility fixes, new features, security patches)
+* Reinstall or move WAHA Plus to another server
 
-{{< callout >}}
-💡 We recommend staying subscribing, so we can keep developing awesome product for you!
-Your support the only reason why we're able to publish and maintain the project 🫶
+ℹ️ WhatsApp typically makes changes every 3–6 months (timing can vary by region). So it's more like "every 3-6 month donation"
 
-You can find the full comparison table on [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page.
+{{< callout icon="filled/heart" title="Keep WAHA Alive" >}}
+Please consider **staying subscribed** so we can continue developing and maintaining WAHA - both **Core** and **Plus** versions 🫶  
+
+See the full comparison on the [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page.
 {{< /callout >}}
-
