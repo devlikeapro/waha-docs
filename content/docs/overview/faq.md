@@ -79,10 +79,6 @@ You can find the full tier comparison table on [**🎁 Support Us**]({{< relref 
 {{< /callout >}}
 
 
-Got it — here’s the cleaned-up version without the “Subscription options” list or Boosty-specific mention:
-
----
-
 ### Is it a one-time donation?
 
 **No**. WAHA Plus is **not** a one-time purchase - but the version you install **keeps running after your subscription ends**, until WhatsApp makes backward incompatible change, or you need to install or update WAHA.
