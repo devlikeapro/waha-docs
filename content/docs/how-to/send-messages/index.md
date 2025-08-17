@@ -484,6 +484,72 @@ Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendPoll-code.md" >}}
 
 
+## Send List
+{{< callout context="caution" icon="outline/alert-octagon" title="List Messages May Stop Working Anytime" >}}
+**List Messages** are fragile creatures and may stop working at any time.
+
+We recommend adding fallback logic using
+[**Send Text**](#send-text)
+or 
+[**📶 Polls**]({{< relref "/docs/how-to/polls" >}}).
+
+{{< /callout >}}
+
+
+{{< callout context="note" icon="outline/info-circle" title="Only Direct Message Chats" >}}
+**List Messages** can only be sent to **direct chats (1:1)**. 
+
+The `chatId` must be one of the following formats:  `phone`, `phone@c.us`, `{number}@lid`.
+{{< /callout >}}
+
+<p align="center" >
+  <img style="max-height: 30rem" src="whatsapp-list-message-phone.webp" alt="WhatsApp List Message" />
+</p>
+
+
+Send a **list message** using API:
+
+```http request
+POST /api/sendList
+```
+
+```json { title="Body" }
+{
+  "session": "default",
+  "chatId": "11111111111@c.us",
+  "reply_to": null,
+  "message": {
+    "title": "Simple Menu",
+    "description": "Please choose an option",
+    "footer": "Thank you!",
+    "button": "Choose",
+    "sections": [
+      {
+        "title": "Main",
+        "rows": [
+          {
+            "title": "Option 1",
+            "rowId": "option1",
+            "description": null
+          },
+          {
+            "title": "Option 2",
+            "rowId": "option2",
+            "description": null
+          },
+          {
+            "title": "Option 3",
+            "rowId": "option3",
+            "description": null
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+
 ## Send Event
 You can send Event Message using API
 
@@ -854,9 +920,13 @@ For testing purpose you can use [**📊 Dashboard - Event Monitor**]({{< relref 
 {{< /details >}}
 
 ## Send Buttons
-{{< callout context="danger" title="Buttons do not work at the moment!" icon="outline/alert-octagon" >}}
+{{< callout context="danger" title="DEPRECATED - Buttons do not work at the moment!" icon="outline/alert-octagon" >}}
 Buttons are fragile creatures and may not work as expected.
-Please consider adding fallback logic using text/poll messages.
+
+We recommend adding fallback logic using
+[**Send Text**](#send-text)
+or
+[**📶 Polls**]({{< relref "/docs/how-to/polls" >}}).
 {{< /callout >}}
 
 
@@ -910,7 +980,6 @@ POST /api/sendButtons
 Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendButtons-code.md" >}}
 
-### Buttons
 Here's available buttons you can use in `buttons`:
 
 {{< tabs "send-buttons-types" >}}
@@ -956,3 +1025,47 @@ Here's available buttons you can use in `buttons`:
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+
+## Send List
+
+You can send an interactive List message.
+
+Supported engines: NOWEB, GOWS.
+
+```http request
+POST /api/sendList
+```
+
+```json
+{
+  "chatId": "11111111111@c.us",
+  "header": "Choose an option",
+  "body": "Please pick one from the list below",
+  "footer": "You can contact support if unsure",
+  "buttonText": "Open list",
+  "sections": [
+    {
+      "title": "Fruits",
+      "rows": [
+        { "id": "apple", "title": "Apple", "description": "Red or green" },
+        { "id": "banana", "title": "Banana", "description": "Ripe and sweet" }
+      ]
+    },
+    {
+      "title": "Vegetables",
+      "rows": [
+        { "id": "carrot", "title": "Carrot" },
+        { "id": "broccoli", "title": "Broccoli" }
+      ]
+    }
+  ],
+  "session": "default"
+}
+```
+
+Notes:
+- Each row must have a unique "id" string within the list; "description" is optional.
+- Group options using "sections"; each section has a "title" and an array of "rows".
+- Works with NOWEB and GOWS engines.
+- Related issues: {{< issue 393 >}}, {{< issue 482 >}}, {{< issue 715 >}}, {{< issue 938 >}}

@@ -11,6 +11,7 @@
 | `POST /api/sendFile`                                        |                              ➕                               |   ➕   | ➕ ️  |
 | `POST /api/sendVoice`                                       |                              ➕                               |   ➕   | ➕ ️  |
 | `POST /api/sendVideo`                                       |                              ➕                               |   ➕   | ➕ ️  |
+| `POST /api/sendList`                                        |                                                              |  ✔️   |      |
 | `POST /api/send/link-custom-preview`                        |                                                              |   ➕   | ➕ ️  |
 | `POST /api/forwardMessage`                                  | ✔️<br>[#588](https://github.com/devlikeapro/waha/issues/588) |  ✔️   |      |
 | `POST /api/sendLocation`                                    |                              ✔️                              |  ✔️   |      |
@@ -23,7 +24,6 @@
 | `GET /api/messages`                                         |                              ✔️                              |  ✔️¹  |      |
 | `GET /api/checkNumberStatus`                                |                              ✔️                              |  ✔️   |  ✔️  |
 | `POST /api/send/buttons/reply`                              |                              ➕                               |       |      |
-| `POST /api/sendButtons`                                     |                                                              |       |      |
 | `POST /api/{session}/media/convert/voice`                   |                              ➕                               |   ➕   |  ➕   |
 | `POST /api/{session}/media/convert/video`                   |                              ➕                               |   ➕   |  ➕   |
 

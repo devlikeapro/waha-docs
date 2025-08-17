@@ -64,6 +64,7 @@
       "video"
     ],
     "classes": [
+      "200px",
       "active",
       "alert",
       "alert-dismissible",
@@ -197,6 +198,7 @@
       "h4",
       "has-title",
       "header",
+      "height:",
       "highlight",
       "home",
       "hr",
@@ -505,7 +507,6 @@
       "binary-1",
       "block-unblock-contact",
       "built-in-https-support",
-      "buttons",
       "callaccepted",
       "callreceived",
       "callrejected",
@@ -825,6 +826,8 @@
       "send-image-status",
       "send-image-to-the-channel",
       "send-link-custom-preview",
+      "send-list",
+      "send-list-1",
       "send-location",
       "send-message",
       "send-messages-to-channels",

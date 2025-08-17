@@ -49,6 +49,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 ### 2025.8
 
 **🆕 NEW**
+- `2025.8.2` - Add [**Send List Message API**]({{< relref "/docs/how-to/send-messages#send-list" >}})  
+  - **NOWEB**
+  - {{< issue 393 >}}, {{< issue 482 >}}, {{< issue 715 >}}, {{< issue 938 >}}
 - `2025.8.2` - **Dashboard** - add **Simplified Chinese** - {{< issue 1193 >}}
 
 **🧩 Apps**:
