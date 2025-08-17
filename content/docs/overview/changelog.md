@@ -48,6 +48,12 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.8
 
+**🆕 NEW**
+- `2025.8.2` - **Dashboard** - add **Simplified Chinese** - {{< issue 1193 >}}
+
+**🧩 Apps**:
+- `2025.8.2` - **ChatWoot** - add **Simplified Chinese** - {{< issue 1193 >}}
+
 🛠️ **Fixes**
 
 - `2025.8.1` - **WEBJS** - fix create group - {{< issue 1145 >}}
