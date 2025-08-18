@@ -51,20 +51,31 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 **🆕 NEW**
 - `2025.8.2` - Add [**Send List Message API**]({{< relref "/docs/how-to/send-messages#send-list" >}})  
   - **NOWEB**, **GOWS**
+  - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
   - {{< issue 393 >}}, {{< issue 482 >}}, {{< issue 715 >}}, {{< issue 938 >}}
+- `2025.8.2` - **GOWS** - add `/api/sendLocation` - {{< issue 1250 >}}
 - `2025.8.2` - **Dashboard** - add **Simplified Chinese** - {{< issue 1193 >}}
 
-**🧩 Apps**:
+**🧩 Apps**
+
 - `2025.8.2` - **ChatWoot** - add **Simplified Chinese** - {{< issue 1193 >}}
+- `2025.8.2` - **ChatWoot** - fix link preview for big files - {{< issue 1162 >}}
 
 🛠️ **Fixes**
 
-- `2025.8.2` - **GOWS** - fix sending to status (filter out right contacts) - {{< issue 1002 >}}, {{< issue 1204 >}}
+- `2025.8.2` - **GOWS** - fix sending [**📶 Polls**]({{< relref "docs/how-to/polls" >}}) to [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) - {{< issue 1114 >}}
+- `2025.8.2` - **GOWS** - fix sending to [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) (filter out right contacts) 
+  - {{< issue 1002 >}}, {{< issue 1204 >}}, {{< issue 413 >}}
+- `2025.8.2` - **GOWS** - fix poll `poll.fromMe` detection - {{< issue 1028 >}}
+- `2025.8.2` - **GOWS** - fix set group description - {{< issue 1014 >}}
+- `2025.8.2` - **GOWS** - debug "Error getting message" if not found - {{< issue 1174 >}}
+- `2025.8.2` - add `me.lid` - **GOWS**, **NOWEB**
 - `2025.8.1` - **WEBJS** - fix create group - {{< issue 1145 >}}
 - `2025.8.1` - **NOWEB** - fix channel list - {{< issue 1177 >}}
 - `2025.8.1` - limited characters in the session name - {{< issue 1163 >}}
 
 **⚙️ Updates**
+
 - `2025.7.3` - **GOWS** - up engine and proto to `v1025985905`
 
 ### 2025.7
