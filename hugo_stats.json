@@ -64,7 +64,6 @@
       "video"
     ],
     "classes": [
-      "200px",
       "active",
       "alert",
       "alert-dismissible",
@@ -198,7 +197,6 @@
       "h4",
       "has-title",
       "header",
-      "height:",
       "highlight",
       "home",
       "hr",
