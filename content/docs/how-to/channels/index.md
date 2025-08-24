@@ -301,9 +301,7 @@ GET /api/{SESSION}/channels/{INVITE}/messages/preview?downloadMedia=false&limit=
       "id": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
       "timestamp": 1666943582,
       "body": "string",
-      "media": {
-        ...
-      }
+      "media": {}
     }
   }
 ]
@@ -383,55 +381,28 @@ PUT /api/reaction
 1. `false_11111111111@newsletter_AAAAAAAAAAAAAAAAAAAA` - using characters. Works if you're subscribed to the channel.
 2. `false_11111111111@newsltter_123` - using `server_id`. If you're not subscribed to the channel, you can use this format.
 
-You can find `server_id` in message:
-{{< tabs "channel-message-id-for-reaction" >}}
-{{< tab "NOWEB" >}}
-Find `_data.key.server_id` value:
-```json
+{{< include file="content/docs/how-to/channels/-how-to-find-message-id.md" >}}
+
+
+### Send Poll Vote to the channel
+
+```http request
+POST /api/sendPollVote
+```
+
+```json { title="Body" }
 {
-  "event": "message.any",
-  "payload": {
-    ...
-    "_data": {
-      "key": {
-        "remoteJid": "120363417343416222@newsletter",
-        ...
-        "server_id": "101" # <=== this one
-      },
-      ...
-    }
-  },
-  ...
+  "chatId": "11111111111@newsletter",
+  "pollMessageId": "false_11111111111@newsletter_AAAAAAAAAAAAAAAAAAAA",
+  "pollServerId": 123,
+  "votes": [
+    "Awesome!"
+  ],
+  "session": "default"
 }
 ```
-{{< /tab >}}
 
-{{< tab "GOWS" >}}
-Find `_data.Info.ServerID` value:
-```json
-{
-  "event": "message.any",
-  "payload": {
-    ...
-    "_data": {
-      "Info": {
-        "Chat": "111111111111111111@newsletter",
-        ...
-        "ServerID": 105, # <=== this one
-        ...
-      },
-      ...
-    }
-  }
-}
-```
-{{< /tab >}}
-
-{{< tab "WEBJS" >}}
-Not supported
-{{< /tab >}}
-{{< /tabs >}}
-
+{{< include file="content/docs/how-to/channels/-how-to-find-message-id.md" >}}
 
 
 ### Get messages from the channel
@@ -457,14 +428,12 @@ GET /api/default/chats/123%40newsletter/messages?downloadMedia=true&limit=100
       "mimetype": "image/jpeg",
       "filename": null,
       "url": "http://localhost:3000/api/files/1111111111111111111111.jpeg",
-      "error": null // if there was an error during file download
+      "error": null
     },
     "mediaUrl": "http://localhost:3000/api/files/1111111111111111111111.jpeg",
     "ack": 0,
     "ackName": "PENDING",
-    "_data": {
-      ...
-    }
+    "_data": {}
   }
 ]
 
@@ -496,9 +465,7 @@ For all incoming messages in your own and subscribed channels you'll receive
     "hasMedia": false,
     "ack": null,
     "ackName": "UNKNOWN",
-    "_data": {
-      ...
-    }
+    "_data": {}
   },
   "engine": "NOWEB",
   "environment": {

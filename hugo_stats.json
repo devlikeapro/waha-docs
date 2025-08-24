@@ -830,6 +830,8 @@
       "send-message",
       "send-messages-to-channels",
       "send-poll",
+      "send-poll-vote",
+      "send-poll-vote-to-the-channel",
       "send-reaction-to-the-channel",
       "send-seen",
       "send-status-aka-stories",

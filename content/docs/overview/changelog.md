@@ -53,6 +53,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - **NOWEB**, **GOWS**
   - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
   - {{< issue 393 >}}, {{< issue 482 >}}, {{< issue 715 >}}, {{< issue 938 >}}
+- `2025.8.2` - **GOWS** - [**📶 Send Poll Vote API**]({{< relref "docs/how-to/polls#send-poll-vote" >}}) - {{< issue 1077 >}}
+  - Works with **DM**, **👥 Groups**, and [**📢 Channels**]({{< relref "/docs/how-to/channels#send-poll-vote-to-the-channel" >}})
 - `2025.8.2` - **GOWS** - add `/api/sendLocation` - {{< issue 1250 >}}
 - `2025.8.2` - **Dashboard** - add **Simplified Chinese** - {{< issue 1193 >}}
 

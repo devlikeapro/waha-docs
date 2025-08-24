@@ -483,6 +483,13 @@ The request body is pretty simple:
 Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendPoll-code.md" >}}
 
+## Send Poll Vote
+
+We have a dedicated page about [**📶 Polls**]({{< relref "/docs/how-to/polls" >}})!
+
+```http request
+POST /api/sendPollVote
+```
 
 ## Send List
 {{< callout context="caution" icon="outline/alert-octagon" title="List Messages May Stop Working Anytime" >}}

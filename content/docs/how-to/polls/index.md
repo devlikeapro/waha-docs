@@ -1,7 +1,7 @@
 ---
 title: "📶 Polls"
 description: "How to send polls and receive votes"
-lead: ""
+lead: "Create polls via API and receive votes in WhatsApp chats."
 date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
@@ -64,6 +64,36 @@ POST /api/sendPoll
 Save the `id` field from the response in your database so that you can identify the poll for which you receive
 a vote (see webhook events below).
 {{< /callout >}}
+
+### Send Poll Vote
+
+Cast a vote for an existing poll by specifying the poll message ID and the options you choose.
+
+```http request
+POST /api/sendPollVote
+```
+
+```json { title="Body" }
+{
+  "chatId": "11111111111@c.us",
+  "pollMessageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA", 
+  "pollServerId": null,
+  "votes": [
+    "Awesome!"
+  ],
+  "session": "default"
+}
+```
+
+Fields:
+- `chatId` - The WhatsApp ID of the chat where the poll was sent (e.g., "11111111111@c.us").
+- `pollMessageId` - The ID of the poll message. Format: `{fromMe}_{chatID}_{messageId}[_{participant}]` or just `{ID}` (`AA...AA`) for **GOWS**. 
+    - Example: `false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA`.
+- `pollServerId` - Only for Channels — server message id (number, if known). Optional; if omitted, the API may look it up in the storage.
+- `votes` - Poll options you are voting for. Array of strings, e.g., `["Awesome!"]`.
+- `session` - WAHA session name (e.g., `default`).
+
+{{< include file="content/docs/how-to/channels/-how-to-find-message-id.md" >}}
 
 ## Events
 Read more about
