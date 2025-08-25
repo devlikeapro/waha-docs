@@ -113,9 +113,9 @@
             "name": "all",
             "required": false,
             "in": "query",
-            "example": false,
             "description": "Return all sessions, including those that are in the STOPPED state.",
             "schema": {
+              "example": false,
               "type": "boolean"
             }
           }
@@ -1073,8 +1073,9 @@
     "/api/sendButtons": {
       "post": {
         "operationId": "ChattingController_sendButtons",
-        "summary": "Send buttons (interactive message)",
+        "summary": "Send buttons message (interactive)",
         "description": "Send Buttons",
+        "deprecated": true,
         "parameters": [],
         "requestBody": {
           "required": true,
@@ -1089,6 +1090,44 @@
         "responses": {
           "201": {
             "description": ""
+          }
+        },
+        "tags": [
+          "📤 Chatting"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/sendList": {
+      "post": {
+        "operationId": "ChattingController_sendList",
+        "summary": "Send a list message (interactive)",
+        "description": "Send a List message with sections and rows",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendListRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
           }
         },
         "tags": [
@@ -1329,6 +1368,37 @@
         ]
       }
     },
+    "/api/sendPollVote": {
+      "post": {
+        "operationId": "ChattingController_sendPollVote",
+        "summary": "Vote on a poll",
+        "description": "Cast vote(s) on an existing poll message",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessagePollVoteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "📤 Chatting"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/sendLocation": {
       "post": {
         "operationId": "ChattingController_sendLocation",
@@ -1435,10 +1505,10 @@
             "name": "downloadMedia",
             "required": false,
             "in": "query",
-            "example": false,
             "description": "Download media for messages",
             "schema": {
               "default": true,
+              "example": false,
               "type": "boolean"
             }
           },
@@ -1446,8 +1516,8 @@
             "name": "chatId",
             "required": true,
             "in": "query",
-            "example": "11111111111@c.us",
             "schema": {
+              "example": "11111111111@c.us",
               "type": "string"
             }
           },
@@ -1559,8 +1629,8 @@
             "required": true,
             "in": "query",
             "description": "The phone number to check",
-            "example": "1213213213",
             "schema": {
+              "example": "1213213213",
               "type": "string"
             }
           },
@@ -1774,10 +1844,10 @@
             "required": false,
             "in": "query",
             "description": "Filter by chat ids",
-            "example": [
-              "111111111@c.us"
-            ],
             "schema": {
+              "example": [
+                "111111111@c.us"
+              ],
               "type": "array",
               "items": {
                 "type": "string"
@@ -1877,8 +1947,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -1924,10 +1994,10 @@
             "name": "refresh",
             "required": false,
             "in": "query",
-            "example": false,
             "description": "Refresh the picture from the server (24h cache by default). Do not refresh if not needed, you can get rate limit error",
             "schema": {
               "default": false,
+              "example": false,
               "type": "boolean"
             }
           }
@@ -1963,10 +2033,10 @@
             "name": "downloadMedia",
             "required": false,
             "in": "query",
-            "example": false,
             "description": "Download media for messages",
             "schema": {
               "default": true,
+              "example": false,
               "type": "boolean"
             }
           },
@@ -2045,8 +2115,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -2093,8 +2163,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -2123,9 +2193,9 @@
             "name": "messages",
             "required": false,
             "in": "query",
-            "example": 30,
             "description": "How much messages to read (latest first)",
             "schema": {
+              "example": 30,
               "type": "number"
             }
           },
@@ -2153,8 +2223,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -2190,10 +2260,10 @@
             "name": "downloadMedia",
             "required": false,
             "in": "query",
-            "example": true,
             "description": "Download media for messages",
             "schema": {
               "default": true,
+              "example": true,
               "type": "boolean"
             }
           },
@@ -2211,8 +2281,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           },
@@ -2264,8 +2334,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           },
@@ -2274,8 +2344,8 @@
             "required": true,
             "in": "path",
             "description": "Message ID in format <code>{fromMe}_{chat}_{message_id}[_{participant}]</code>",
-            "example": "true_123456789@c.us_BAE6A33293978B16",
             "schema": {
+              "example": "true_123456789@c.us_BAE6A33293978B16",
               "type": "string"
             }
           }
@@ -2312,8 +2382,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           },
@@ -2322,8 +2392,8 @@
             "required": true,
             "in": "path",
             "description": "Message ID in format <code>{fromMe}_{chat}_{message_id}[_{participant}]</code>",
-            "example": "true_123456789@c.us_BAE6A33293978B16",
             "schema": {
+              "example": "true_123456789@c.us_BAE6A33293978B16",
               "type": "string"
             }
           }
@@ -2372,8 +2442,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           },
@@ -2430,8 +2500,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           },
@@ -2478,8 +2548,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -2525,8 +2595,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -2572,8 +2642,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -3659,8 +3729,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -3707,8 +3777,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -3858,8 +3928,8 @@
             "name": "contactId",
             "required": true,
             "in": "query",
-            "example": "11111111111@c.us",
             "schema": {
+              "example": "11111111111@c.us",
               "type": "string"
             }
           },
@@ -3898,8 +3968,8 @@
             "required": true,
             "in": "query",
             "description": "The phone number to check",
-            "example": "1213213213",
             "schema": {
+              "example": "1213213213",
               "type": "string"
             }
           },
@@ -3945,8 +4015,8 @@
             "name": "contactId",
             "required": true,
             "in": "query",
-            "example": "11111111111@c.us",
             "schema": {
+              "example": "11111111111@c.us",
               "type": "string"
             }
           },
@@ -3985,8 +4055,8 @@
             "name": "contactId",
             "required": true,
             "in": "query",
-            "example": "11111111111@c.us",
             "schema": {
+              "example": "11111111111@c.us",
               "type": "string"
             }
           },
@@ -3994,10 +4064,10 @@
             "name": "refresh",
             "required": false,
             "in": "query",
-            "example": false,
             "description": "Refresh the picture from the server (24h cache by default). Do not refresh if not needed, you can get rate limit error",
             "schema": {
               "default": false,
+              "example": false,
               "type": "boolean"
             }
           },
@@ -4074,6 +4144,64 @@
         "responses": {
           "201": {
             "description": ""
+          }
+        },
+        "tags": [
+          "👤 Contacts"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/contacts/{chatId}": {
+      "put": {
+        "operationId": "ContactsSessionController_put",
+        "summary": "Create or update contact",
+        "description": "Create or update contact on the phone address book. May not work if you have installed many WhatsApp apps on the same phone",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "chatId",
+            "required": true,
+            "in": "path",
+            "description": "Chat ID",
+            "schema": {
+              "example": "123456789@c.us",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactUpdateBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
           }
         },
         "tags": [
@@ -4423,8 +4551,8 @@
             "required": true,
             "in": "query",
             "description": "Group code (123) or url (https://chat.whatsapp.com/123)",
-            "example": "https://chat.whatsapp.com/1234567890abcdef",
             "schema": {
+              "example": "https://chat.whatsapp.com/1234567890abcdef",
               "type": "string"
             }
           }
@@ -4584,8 +4712,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -4622,8 +4750,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -4662,8 +4790,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -4702,8 +4830,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           },
@@ -4711,10 +4839,10 @@
             "name": "refresh",
             "required": false,
             "in": "query",
-            "example": false,
             "description": "Refresh the picture from the server (24h cache by default). Do not refresh if not needed, you can get rate limit error",
             "schema": {
               "default": false,
+              "example": false,
               "type": "boolean"
             }
           }
@@ -4749,8 +4877,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           },
@@ -4804,8 +4932,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           },
@@ -4861,8 +4989,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -4912,8 +5040,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -4963,8 +5091,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5012,8 +5140,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5060,8 +5188,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5109,8 +5237,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5156,8 +5284,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5203,8 +5331,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5250,8 +5378,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5290,8 +5418,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5340,8 +5468,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5390,8 +5518,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5440,8 +5568,8 @@
             "required": true,
             "in": "path",
             "description": "Group ID",
-            "example": "123123123@g.us",
             "schema": {
+              "example": "123123123@g.us",
               "type": "string"
             }
           }
@@ -5568,8 +5696,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -5615,8 +5743,8 @@
             "required": true,
             "in": "path",
             "description": "Chat ID",
-            "example": "123456789@c.us",
             "schema": {
+              "example": "123456789@c.us",
               "type": "string"
             }
           }
@@ -5653,7 +5781,7 @@
         "responses": {
           "200": {
             "content": {
-              "image/png": {
+              "image/jpeg": {
                 "schema": {
                   "type": "string",
                   "format": "binary"
@@ -5968,10 +6096,10 @@
             "name": "all",
             "required": false,
             "in": "query",
-            "example": false,
             "description": "Include all environment variables",
             "schema": {
               "default": false,
+              "example": false,
               "type": "boolean"
             }
           }
@@ -6066,9 +6194,69 @@
     "/api/server/debug/heapsnapshot": {
       "get": {
         "operationId": "ServerDebugController_heapsnapshot",
-        "summary": "Return a heapsnapshot",
+        "summary": "Return a heapsnapshot for the current nodejs process",
         "description": "Return a heapsnapshot of the server's memory",
         "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🔍 Observability"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/server/debug/browser/trace/{session}": {
+      "get": {
+        "operationId": "ServerDebugController_browserTrace",
+        "summary": "Collect and get a trace.json for Chrome DevTools ",
+        "description": "Uses https://pptr.dev/api/puppeteer.tracing",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "seconds",
+            "required": true,
+            "in": "query",
+            "description": "How many seconds to trace",
+            "schema": {
+              "default": 30,
+              "example": 30,
+              "type": "number"
+            }
+          },
+          {
+            "name": "categories",
+            "required": true,
+            "in": "query",
+            "description": "Categories to trace (all by default)",
+            "schema": {
+              "default": [
+                "*"
+              ],
+              "example": [
+                "*"
+              ],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": ""
@@ -6112,18 +6300,312 @@
           }
         ]
       }
+    },
+    "/api/{session}/media/convert/voice": {
+      "post": {
+        "operationId": "MediaController_convertVoice",
+        "summary": "Convert voice to WhatsApp format (opus)",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceFileDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "audio/ogg; codecs=opus": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Base64File"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": ""
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🖼️ Media"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/media/convert/video": {
+      "post": {
+        "operationId": "MediaController_convertVideo",
+        "summary": "Convert video to WhatsApp format (mp4)",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VideoFileDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "video/mp4": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Base64File"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": ""
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🖼️ Media"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps": {
+      "get": {
+        "operationId": "AppsController_list",
+        "summary": "List all apps for a session",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "query",
+            "description": "Session name to list apps for",
+            "schema": {
+              "example": "default",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "AppsController_create",
+        "summary": "Create a new app",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/App"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/{id}": {
+      "put": {
+        "operationId": "AppsController_update",
+        "summary": "Update an existing app",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/App"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "AppsController_delete",
+        "summary": "Delete an app",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/chatwoot/locales": {
+      "get": {
+        "operationId": "ChatwootLocalesController_getLanguages",
+        "summary": "Get available languages for Chatwoot app",
+        "description": "Get available languages for Chatwoot app",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
     }
   },
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2025.5.5",
+    "version": "2025.8.2",
     "contact": {}
   },
   "tags": [
     {
       "name": "🖥️ Sessions",
       "description": "Control WhatsApp sessions (accounts)"
+    },
+    {
+      "name": "🧩 Apps",
+      "description": "Applications (built-in integrations)"
     },
     {
       "name": "🔑 Auth",
@@ -6172,6 +6654,10 @@
     {
       "name": "🏷️ Labels",
       "description": "Labels - available only for WhatsApp Business accounts"
+    },
+    {
+      "name": "🖼️ Media",
+      "description": "Media methods"
     },
     {
       "name": "🔍 Observability",
@@ -6270,6 +6756,10 @@
           "id": {
             "type": "string",
             "example": "11111111111@c.us"
+          },
+          "lid": {
+            "type": "string",
+            "example": "123123@lid"
           },
           "pushName": {
             "type": "string"
@@ -6522,6 +7012,7 @@
           "name": {
             "type": "string",
             "maxLength": 54,
+            "pattern": "/^[a-zA-Z0-9_-]*$/",
             "example": "default",
             "description": "Session name (id)"
           },
@@ -7129,6 +7620,11 @@
             "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
+          "convert": {
+            "type": "boolean",
+            "description": "Convert the input file to the required format using ffmpeg before sending",
+            "example": true
+          },
           "session": {
             "type": "string",
             "default": "default"
@@ -7137,6 +7633,7 @@
         "required": [
           "chatId",
           "file",
+          "convert",
           "session"
         ]
       },
@@ -7216,6 +7713,11 @@
             "description": "Send as video note (aka instant or round video).",
             "example": false
           },
+          "convert": {
+            "type": "boolean",
+            "description": "Convert the input file to the required format using ffmpeg before sending",
+            "example": true
+          },
           "caption": {
             "type": "string",
             "default": "Just watch at this!"
@@ -7228,6 +7730,7 @@
         "required": [
           "chatId",
           "file",
+          "convert",
           "session"
         ]
       },
@@ -7430,6 +7933,165 @@
           "session"
         ]
       },
+      "Row": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Option 1"
+          },
+          "description": {
+            "type": "string",
+            "example": "Description of option 1"
+          },
+          "rowId": {
+            "type": "string",
+            "example": "option1"
+          }
+        },
+        "required": [
+          "title",
+          "rowId"
+        ]
+      },
+      "Section": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Menu"
+          },
+          "rows": {
+            "example": [
+              {
+                "title": "Option 1",
+                "rowId": "option1",
+                "description": "First option"
+              },
+              {
+                "title": "Option 2",
+                "rowId": "option2",
+                "description": "Second option"
+              }
+            ],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Row"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "rows"
+        ]
+      },
+      "SendListMessage": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Example List"
+          },
+          "description": {
+            "type": "string",
+            "example": "Choose one of the options"
+          },
+          "footer": {
+            "type": "string",
+            "example": "Footer note"
+          },
+          "button": {
+            "type": "string",
+            "example": "Select"
+          },
+          "sections": {
+            "example": [
+              {
+                "title": "Section 1",
+                "rows": [
+                  {
+                    "title": "Option 1",
+                    "rowId": "option1",
+                    "description": "Description 1"
+                  },
+                  {
+                    "title": "Option 2",
+                    "rowId": "option2",
+                    "description": "Description 2"
+                  }
+                ]
+              }
+            ],
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Section"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "button",
+          "sections"
+        ]
+      },
+      "SendListRequest": {
+        "type": "object",
+        "properties": {
+          "chatId": {
+            "type": "string",
+            "example": "11111111111@c.us"
+          },
+          "message": {
+            "example": {
+              "title": "Simple Menu",
+              "description": "Please choose an option",
+              "footer": "Thank you!",
+              "button": "Choose",
+              "sections": [
+                {
+                  "title": "Main",
+                  "rows": [
+                    {
+                      "title": "Option 1",
+                      "rowId": "option1",
+                      "description": null
+                    },
+                    {
+                      "title": "Option 2",
+                      "rowId": "option2",
+                      "description": null
+                    },
+                    {
+                      "title": "Option 3",
+                      "rowId": "option3",
+                      "description": null
+                    }
+                  ]
+                }
+              ]
+            },
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SendListMessage"
+              }
+            ]
+          },
+          "reply_to": {
+            "type": "string",
+            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "example": null
+          },
+          "session": {
+            "type": "string",
+            "default": "default"
+          }
+        },
+        "required": [
+          "chatId",
+          "message",
+          "session"
+        ]
+      },
       "MessageForwardRequest": {
         "type": "object",
         "properties": {
@@ -7607,6 +8269,47 @@
         "required": [
           "chatId",
           "poll",
+          "session"
+        ]
+      },
+      "MessagePollVoteRequest": {
+        "type": "object",
+        "properties": {
+          "chatId": {
+            "type": "string",
+            "example": "11111111111@c.us"
+          },
+          "pollMessageId": {
+            "type": "string",
+            "description": "The ID of the poll message. Format: {fromMe}_{chatID}_{messageId}[_{participant}] or just ID for GOWS",
+            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+          },
+          "pollServerId": {
+            "type": "number",
+            "description": "Only for Channels - server message id (if known); if omitted, API may look it up in the storage",
+            "example": null
+          },
+          "votes": {
+            "type": "array",
+            "items": {
+              "required": true,
+              "description": "Poll options you are voting for",
+              "example": "Awesome!",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "session": {
+            "type": "string",
+            "default": "default"
+          }
+        },
+        "required": [
+          "chatId",
+          "pollMessageId",
+          "votes",
           "session"
         ]
       },
@@ -8380,6 +9083,11 @@
               }
             ]
           },
+          "convert": {
+            "type": "boolean",
+            "description": "Convert the input file to the required format using ffmpeg before sending",
+            "example": true
+          },
           "backgroundColor": {
             "type": "string",
             "default": "#38b42f"
@@ -8387,6 +9095,7 @@
         },
         "required": [
           "file",
+          "convert",
           "backgroundColor"
         ]
       },
@@ -8417,12 +9126,18 @@
               }
             ]
           },
+          "convert": {
+            "type": "boolean",
+            "description": "Convert the input file to the required format using ffmpeg before sending",
+            "example": true
+          },
           "caption": {
             "type": "string"
           }
         },
         "required": [
-          "file"
+          "file",
+          "convert"
         ]
       },
       "DeleteStatusRequest": {
@@ -8553,6 +9268,27 @@
         "required": [
           "contactId",
           "session"
+        ]
+      },
+      "ContactUpdateBody": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "default": "John",
+            "description": "Contact First Name",
+            "example": "John"
+          },
+          "lastName": {
+            "type": "string",
+            "default": "Doe",
+            "description": "Contact Last Name",
+            "example": "Doe"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName"
         ]
       },
       "LidToPhoneNumber": {
@@ -8934,6 +9670,62 @@
           "stopping"
         ]
       },
+      "VoiceFileDTO": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The URL for the voice file",
+            "example": "https://github.com/devlikeapro/waha/raw/core/examples/voice.mp3"
+          },
+          "data": {
+            "type": "string",
+            "description": "Base64 content of the file",
+            "example": null
+          }
+        }
+      },
+      "VideoFileDTO": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The URL for the video file",
+            "example": "https://github.com/devlikeapro/waha/raw/core/examples/video.mp4"
+          },
+          "data": {
+            "type": "string",
+            "description": "Base64 content of the file",
+            "example": null
+          }
+        }
+      },
+      "App": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "session": {
+            "type": "string"
+          },
+          "app": {
+            "type": "string",
+            "enum": [
+              "chatwoot"
+            ]
+          },
+          "config": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "session",
+          "app",
+          "config"
+        ]
+      },
       "WASessionStatusBody": {
         "type": "object",
         "properties": {
@@ -9004,6 +9796,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -9097,6 +9890,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -9268,6 +10062,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -9361,6 +10156,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -9505,6 +10301,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -9554,6 +10351,11 @@
       "WAMessageRevokedBody": {
         "type": "object",
         "properties": {
+          "revokedMessageId": {
+            "type": "string",
+            "description": "ID of the message that was revoked",
+            "example": "A06CA7BB5DD8C8F705628CDB7E3A33C9"
+          },
           "after": {
             "$ref": "#/components/schemas/WAMessage"
           },
@@ -9612,6 +10414,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -9640,6 +10443,225 @@
           },
           "payload": {
             "$ref": "#/components/schemas/WAMessageRevokedBody"
+          },
+          "me": {
+            "$ref": "#/components/schemas/MeInfo"
+          },
+          "environment": {
+            "$ref": "#/components/schemas/WAHAEnvironment"
+          }
+        },
+        "required": [
+          "id",
+          "timestamp",
+          "session",
+          "engine",
+          "event",
+          "payload",
+          "environment"
+        ]
+      },
+      "WAMessageEditedBody": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Message ID",
+            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+          },
+          "timestamp": {
+            "type": "number",
+            "description": "Unix timestamp for when the message was created",
+            "example": 1666943582
+          },
+          "from": {
+            "type": "string",
+            "description": "ID for the Chat that this message was sent to, except if the message was sent by the current user ",
+            "example": "11111111111@c.us"
+          },
+          "fromMe": {
+            "type": "boolean",
+            "description": "Indicates if the message was sent by the current user"
+          },
+          "source": {
+            "enum": [
+              "api",
+              "app"
+            ],
+            "type": "string",
+            "description": "The device that sent the message - either API or APP. Available in events (webhooks/websockets) only and only \"fromMe: true\" messages.",
+            "example": "api"
+          },
+          "to": {
+            "type": "string",
+            "description": "\n* ID for who this message is for.\n* If the message is sent by the current user, it will be the Chat to which the message is being sent.\n* If the message is sent by another user, it will be the ID for the current user.\n",
+            "example": "11111111111@c.us"
+          },
+          "participant": {
+            "type": "string",
+            "description": "For groups - participant who sent the message"
+          },
+          "body": {
+            "type": "string",
+            "description": "Message content"
+          },
+          "hasMedia": {
+            "type": "boolean",
+            "description": "Indicates if the message has media available for download"
+          },
+          "media": {
+            "description": "Media object for the message if any and downloaded",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WAMedia"
+              }
+            ]
+          },
+          "mediaUrl": {
+            "type": "string",
+            "description": "Use `media.url` instead! The URL for the media in the message if any",
+            "deprecated": true,
+            "example": "http://localhost:3000/api/files/false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA.oga"
+          },
+          "ack": {
+            "enum": [
+              -1,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number",
+            "description": "ACK status for the message"
+          },
+          "ackName": {
+            "type": "string",
+            "description": "ACK status name for the message"
+          },
+          "author": {
+            "type": "string",
+            "description": "If the message was sent to a group, this field will contain the user that sent the message."
+          },
+          "location": {
+            "description": "Location information contained in the message, if the message is type \"location\"",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WALocation"
+              }
+            ]
+          },
+          "vCards": {
+            "description": "List of vCards contained in the message.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "_data": {
+            "type": "object",
+            "description": "Message in a raw format that we get from WhatsApp. May be changed anytime, use it with caution! It depends a lot on the underlying backend."
+          },
+          "editedMessageId": {
+            "type": "string",
+            "description": "ID of the original message that was edited",
+            "example": "A06CA7BB5DD8C8F705628CDB7E3A33C9"
+          },
+          "replyTo": {
+            "$ref": "#/components/schemas/ReplyToMessage"
+          }
+        },
+        "required": [
+          "id",
+          "timestamp",
+          "from",
+          "fromMe",
+          "source",
+          "to",
+          "participant",
+          "body",
+          "hasMedia",
+          "mediaUrl",
+          "ack",
+          "ackName"
+        ]
+      },
+      "WAHAWebhookMessageEdited": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "evt_01aaaaaaaaaaaaaaaaaaaaaaaa",
+            "description": "Unique identifier for the event - lower case ULID format. https://github.com/ulid/spec"
+          },
+          "timestamp": {
+            "type": "number",
+            "example": 1634567890123,
+            "description": "Unix timestamp (ms) for when the event was created."
+          },
+          "session": {
+            "type": "string",
+            "example": "default"
+          },
+          "metadata": {
+            "example": {
+              "user.id": "123",
+              "user.email": "email@example.com"
+            },
+            "description": "Metadata for the session.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Map"
+              }
+            ]
+          },
+          "engine": {
+            "enum": [
+              "WEBJS",
+              "NOWEB",
+              "GOWS"
+            ],
+            "type": "string",
+            "example": "WEBJS"
+          },
+          "event": {
+            "enum": [
+              "session.status",
+              "message",
+              "message.reaction",
+              "message.any",
+              "message.ack",
+              "message.waiting",
+              "message.revoked",
+              "message.edited",
+              "state.change",
+              "group.join",
+              "group.leave",
+              "group.v2.join",
+              "group.v2.leave",
+              "group.v2.update",
+              "group.v2.participants",
+              "presence.update",
+              "poll.vote",
+              "poll.vote.failed",
+              "chat.archive",
+              "call.received",
+              "call.accepted",
+              "call.rejected",
+              "label.upsert",
+              "label.deleted",
+              "label.chat.added",
+              "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
+              "engine.event"
+            ],
+            "type": "object",
+            "default": "message.edited",
+            "description": "The event is triggered when a user edits a previously sent message."
+          },
+          "payload": {
+            "$ref": "#/components/schemas/WAMessageEditedBody"
           },
           "me": {
             "$ref": "#/components/schemas/MeInfo"
@@ -9798,6 +10820,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -9924,6 +10947,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -10038,6 +11062,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -10170,6 +11195,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -10263,6 +11289,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -10447,6 +11474,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -10540,6 +11568,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -10653,6 +11682,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -10775,6 +11805,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -10868,6 +11899,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -10961,6 +11993,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -11054,6 +12087,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -11147,6 +12181,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -11268,6 +12303,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -11361,6 +12397,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -11541,6 +12578,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -11634,6 +12672,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -11742,6 +12781,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -11835,6 +12875,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -11929,6 +12970,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -12023,6 +13065,7 @@
               "message.ack",
               "message.waiting",
               "message.revoked",
+              "message.edited",
               "state.change",
               "group.join",
               "group.leave",
@@ -12186,6 +13229,26 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/WAHAWebhookMessageRevoked"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Return a 200 status to indicate that the data was received successfully"
+          }
+        }
+      }
+    },
+    "message.edited": {
+      "post": {
+        "summary": "The event is triggered when a user edits a previously sent message.",
+        "deprecated": false,
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WAHAWebhookMessageEdited"
               }
             }
           }
