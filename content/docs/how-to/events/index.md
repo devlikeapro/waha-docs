@@ -686,6 +686,19 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 }
 ```
 
+### event.response
+Read more about
+[**📅 Event Message**]({{< relref "/docs/how-to/event-message" >}})
+
+{{< include file="content/docs/how-to/event-message/events-event-response.md" >}}
+
+### event.response.failed
+
+Read more about
+[**📅 Event Message**]({{< relref "/docs/how-to/event-message" >}})
+
+{{< include file="content/docs/how-to/event-message/events-event-response-failed.md" >}}
+
 ### label.upsert
 
 ```json { title="label.upsert" }
