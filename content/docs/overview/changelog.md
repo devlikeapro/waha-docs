@@ -49,6 +49,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 ### 2025.8
 
 **🆕 NEW**
+- `2025.8.3` - **Dashboard** - Add copy session name button - {{< issue 1004 >}}
 - `2025.8.2` - Add [**Send List Message API**]({{< relref "/docs/how-to/send-messages#send-list" >}})  
   - **NOWEB**, **GOWS**
   - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
@@ -65,6 +66,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.8.3` - **Dashboard** - Fix execute request problem - {{< issue 1004 >}}
 - `2025.8.2` - **GOWS** - fix sending [**📶 Polls**]({{< relref "docs/how-to/polls" >}}) to [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) - {{< issue 1114 >}}
 - `2025.8.2` - **GOWS** - fix sending to [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) (filter out right contacts) 
   - {{< issue 1002 >}}, {{< issue 1204 >}}, {{< issue 413 >}}
@@ -75,6 +77,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.8.1` - **WEBJS** - fix create group - {{< issue 1145 >}}
 - `2025.8.1` - **NOWEB** - fix channel list - {{< issue 1177 >}}
 - `2025.8.1` - limited characters in the session name - {{< issue 1163 >}}
+
 
 **⚙️ Updates**
 
