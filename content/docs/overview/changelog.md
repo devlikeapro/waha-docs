@@ -49,6 +49,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 ### 2025.8
 
 **🆕 NEW**
+- `2025.8.3` - [**🖥️ Sessions - Ignore**]({{< relref "/docs/how-to/sessions#ignore" >}}) chats - [**🟢 Status**]({{< relref "/docs/how-to/status" >}}), [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}), [**📢 Channels**]({{< relref "/docs/how-to/channels" >}})
+  - {{< issue 1142 >}}, {{< issue 1190 >}}, {{< issue 1259 >}}
 - `2025.8.3` - **Dashboard** - Add copy session name button - {{< issue 1004 >}}
 - `2025.8.2` - Add [**Send List Message API**]({{< relref "/docs/how-to/send-messages#send-list" >}})  
   - **NOWEB**, **GOWS**
@@ -61,6 +63,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🧩 Apps**
 
+- `2025.8.3` - **ChatWoot** - [**🖥️ Sessions - Ignore**]({{< relref "/docs/how-to/sessions#ignore" >}}) chats [**🟢 Status**]({{< relref "/docs/how-to/status" >}}), [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}), [**📢 Channels**]({{< relref "/docs/how-to/channels" >}})
+    - {{< issue 1142 >}}, {{< issue 1190 >}}, {{< issue 1259 >}}
 - `2025.8.2` - **ChatWoot** - add **Simplified Chinese** - {{< issue 1193 >}}
 - `2025.8.2` - **ChatWoot** - fix link preview for big files - {{< issue 1162 >}}
 

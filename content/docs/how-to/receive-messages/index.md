@@ -49,12 +49,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 ## Fields
 ### chatId, from, to, participant
 You may notice various identifiers in the `from`, `to`, and `participant` fields. Here's what they mean:
-- `123123123@c.us`  **Phone numbers** accounts - international phone number without + at the start and add `@c.us` at the end.
-  For phone number `12132132131` the `chatId` is  `12132132131@c.us`
-- `123123123@s.whatsapp.net` can also appear in **internal data for NOWEB**. Just convert it to `@c.us` to work with that properly. Kindly don't use it in `chatId` when sending messages
-- `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
-- `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that type of ID along with communities functionality.
-- `123123123@newsletter` - for [**📰 WhatsApp Channels**]({{< relref "/docs/how-to/channels" >}}).
+{{< include file="content/docs/how-to/receive-messages/-chat-ids.md" >}}
 
 ### replyTo
 If you get a message as a reply to another message, you'll see `replyTo` field with the message ID that was replied to.

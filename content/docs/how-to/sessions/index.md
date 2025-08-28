@@ -128,6 +128,11 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
       "user.id": "123",
       "user.email": "email@example.com"
     },
+    "ignore": {
+      "status": false,
+      "groups": false,
+      "channels": false
+    },
     "webhooks": [
       {
         "url": "https://webhook.site/11111111-1111-1111-1111-11111111",
@@ -214,6 +219,40 @@ Sample `metadata` use cases:
 use, so you don't have to look into two systems.
 
 WAHA does not use metadata for any internal purposes, it's up to you how to use it.
+
+### Ignore
+You can ignore events from certain chat types for a session by adding `config.ignore`.
+This helps save resources and avoids unnecessary HTTP requests over
+[**🔄 Webhooks**]({{< relref "docs/how-to/events#webhooks" >}})
+by filtering at the source.
+
+What is **filtered**:
+- [**🔄 Events**]({{< relref "docs/how-to/events" >}}) for the ignored chat types (no webhooks for them)
+- [**🗄️ Storage**]({{< relref "/docs/how-to/storages" >}}) do not save messages to database (GOWS/NOWEB engines)
+
+What is **NOT filtered**:
+- [**📤 Sending messages**]({{< relref "/docs/how-to/send-messages" >}}) to these chats — sending is not limited.
+- Low-level [**engine.event**]({{< relref "/docs/how-to/events#engineevent" >}}) (you still receive them)
+
+
+```json
+{
+  "name": "default",
+  "config": {
+    "ignore": {
+      "status": true,
+      "groups": false,
+      "channels": false
+    }
+  }
+}
+```
+
+- `config.ignore.status=true` - ignore [**🟢 Status**]({{< relref "/docs/how-to/status" >}})
+- `config.ignore.groups=true` - ignore [**👥 Groups**]({{< relref "/docs/how-to/groups" >}})
+- `config.ignore.channels=true` - ignore [**📢 Channels**]({{< relref "/docs/how-to/channels" >}})
+
+If you don't provide `config.ignore` - it'll use configuration from environment variables [**⚙️ Configuration**]({{< relref "/docs/how-to/config#sessions---ignore-chats" >}}).
 
 
 ### Webhooks

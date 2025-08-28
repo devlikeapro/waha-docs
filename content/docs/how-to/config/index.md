@@ -50,7 +50,7 @@ docker compose up -d
 {{< tab ".env" >}}
 You can also use a `.env` file to set environment variables. Create a `.env` file in the same directory as your docker-compose.yaml file.
 
-```json { title=".env" }
+```ini { title=".env" }
 WAHA_WORKER_ID=waha
 WAHA_PRINT_QR=False
 ```
@@ -145,6 +145,15 @@ Rarely used:
 
 ### Sessions - MongoDB
 - `WHATSAPP_SESSIONS_MONGO_URL=mongodb://user:password@host:port/` - MongoDB connection URL for storing session data
+
+### Sessions - Ignore Chats
+You can configure default ignore rules for all sessions via environment variables (applied unless a session provides its own `config.ignore`). This helps save resources and reduces HTTP requests sent over webhooks by filtering out events at the source.
+
+- `WAHA_SESSION_CONFIG_IGNORE_STATUS=false` – ignore [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) events where chat id is `status@broadcast`
+- `WAHA_SESSION_CONFIG_IGNORE_GROUPS=false` – ignore [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) events where chat id is `.*@g.us`
+- `WAHA_SESSION_CONFIG_IGNORE_CHANNELS=false` – ignore [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) events where chat id is `.*@newsletter`
+
+Read more about `config.ignore` on [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions#ignore" >}}) page.
 
 ## Apps
 
