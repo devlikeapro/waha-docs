@@ -370,9 +370,9 @@ You need to add `config.noweb` field to activate the store:
 
 ### Debug
 
-You can enable debug mode for a session by setting `config.debug` field to `true`.
-It'll show you more logs in the console.
-Can be useful for debugging purposes when you're experiencing some issues.
+You can enable debug mode for a session by setting `config.debug` to `true`.
+This enables more verbose logs for that session (equivalent to using a `WAHA_LOG_LEVEL=debug` for that session).
+Useful when you’re troubleshooting a specific session.
 
 ```json
 {
@@ -382,6 +382,9 @@ Can be useful for debugging purposes when you're experiencing some issues.
   }
 }
 ```
+
+For system‑wide logging controls, see [**⚙️ Configuration → Logging**]({{< relref "/docs/how-to/config#logging" >}})
+- You can increase verbosity even more by setting `WAHA_LOG_LEVEL=trace` (use with care in production).
 
 
 ## Update Session
