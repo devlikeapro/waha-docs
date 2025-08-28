@@ -266,6 +266,7 @@ You can send images in two ways:
 ```
 {{< /tab >}}
 {{< /tabs >}}
+{{< include file="content/docs/how-to/send-messages/media-image-format.md" >}}
 
 Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendImage-code.md" >}}
