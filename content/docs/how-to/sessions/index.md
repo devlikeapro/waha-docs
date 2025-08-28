@@ -169,26 +169,6 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
 }
 ```
 
-### NOWEB
-![Dashboard - NOWEB](session-config-noweb.png)
-
-[NOWEB **🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) has a specific store that allows you to save session data.
-
-You need to add `config.noweb` field to activate the store:
-
-```json
-{
-  "name": "default",
-  "config": {
-    "noweb": {
-      "store": {
-        "enabled": true,
-        "fullSync": false
-      }
-    }
-  }
-}
-```
 
 ### Metadata
 ![Dashboard - Metadata](session-config-metadata.png)
@@ -222,43 +202,6 @@ Sample `metadata` use cases:
 use, so you don't have to look into two systems.
 
 WAHA does not use metadata for any internal purposes, it's up to you how to use it.
-
-### Ignore
-![Dashboard - Ignore Chats](session-config-ignore.png)
-
-You can ignore events from certain chat types for a session by adding `config.ignore`.
-This helps save resources and avoids unnecessary HTTP requests over
-[**🔄 Webhooks**]({{< relref "docs/how-to/events#webhooks" >}})
-by filtering at the source.
-
-What is **filtered**:
-- [**🔄 Events**]({{< relref "docs/how-to/events" >}}) for the ignored chat types (no webhooks for them)
-- [**🗄️ Storage**]({{< relref "/docs/how-to/storages" >}}) do not save messages to database (GOWS/NOWEB engines)
-
-What is **NOT filtered**:
-- [**📤 Sending messages**]({{< relref "/docs/how-to/send-messages" >}}) to these chats — sending is not limited.
-- Low-level [**engine.event**]({{< relref "/docs/how-to/events#engineevent" >}}) (you still receive them)
-
-
-```json
-{
-  "name": "default",
-  "config": {
-    "ignore": {
-      "status": true,
-      "groups": false,
-      "channels": false
-    }
-  }
-}
-```
-
-- `config.ignore.status=true` - ignore [**🟢 Status**]({{< relref "/docs/how-to/status" >}})
-- `config.ignore.groups=true` - ignore [**👥 Groups**]({{< relref "/docs/how-to/groups" >}})
-- `config.ignore.channels=true` - ignore [**📢 Channels**]({{< relref "/docs/how-to/channels" >}})
-
-If you don't provide `config.ignore` - it'll use configuration from environment variables [**⚙️ Configuration**]({{< relref "/docs/how-to/config#sessions---ignore-chats" >}}).
-
 
 ### Webhooks
 ![Dashboard - Webhooks](session-config-webhooks.png)
@@ -323,6 +266,43 @@ You can configure webhooks for a session:
 [**🔄 Webhooks**]({{< relref "/docs/how-to/events#webhooks-advanced-imagesversionspluspng" >}}) page.
 
 
+### Ignore
+![Dashboard - Ignore Chats](session-config-ignore.png)
+
+You can ignore events from certain chat types for a session by adding `config.ignore`.
+This helps save resources and avoids unnecessary HTTP requests over
+[**🔄 Webhooks**]({{< relref "docs/how-to/events#webhooks" >}})
+by filtering at the source.
+
+What is **filtered**:
+- [**🔄 Events**]({{< relref "docs/how-to/events" >}}) for the ignored chat types (no webhooks for them)
+- [**🗄️ Storage**]({{< relref "/docs/how-to/storages" >}}) do not save messages to database (GOWS/NOWEB engines)
+
+What is **NOT filtered**:
+- [**📤 Sending messages**]({{< relref "/docs/how-to/send-messages" >}}) to these chats — sending is not limited.
+- Low-level [**engine.event**]({{< relref "/docs/how-to/events#engineevent" >}}) (you still receive them)
+
+
+```json
+{
+  "name": "default",
+  "config": {
+    "ignore": {
+      "status": true,
+      "groups": false,
+      "channels": true
+    }
+  }
+}
+```
+
+- `config.ignore.status=true` - ignore [**🟢 Status**]({{< relref "/docs/how-to/status" >}})
+- `config.ignore.groups=true` - ignore [**👥 Groups**]({{< relref "/docs/how-to/groups" >}})
+- `config.ignore.channels=true` - ignore [**📢 Channels**]({{< relref "/docs/how-to/channels" >}})
+
+If you don't provide `config.ignore` - it'll use configuration from environment variables [**⚙️ Configuration**]({{< relref "/docs/how-to/config#sessions---ignore-chats" >}}).
+
+
 
 ### Proxy
 
@@ -364,6 +344,27 @@ You can configure proxy for a session by setting `config.proxy` fields when you 
 You can configure proxy when for all sessions by set up environment variables.
 Read more about it on [**Proxy page** ->]({{< relref "/docs/how-to/proxy" >}}) or [**Configuration page** ->]({{<
 relref "/docs/how-to/config#proxy" >}}).
+
+### NOWEB
+![Dashboard - NOWEB](session-config-noweb.png)
+
+[NOWEB **🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) has a specific store that allows you to save session data.
+
+You need to add `config.noweb` field to activate the store:
+
+```json
+{
+  "name": "default",
+  "config": {
+    "noweb": {
+      "store": {
+        "enabled": true,
+        "fullSync": false
+      }
+    }
+  }
+}
+```
 
 👉 Read more about [**NOWEB Store Configuration**]({{< relref "/docs/engines/noweb#store" >}}).
 
