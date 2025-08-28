@@ -36,7 +36,7 @@ Get your contacts
 GET /api/contacts/all?session={NAME}
 ```
 
-```json {title="Response"}
+```jsonc {title="Response"}
 [
   {
     "id": "11231231231@c.us",
@@ -78,7 +78,7 @@ GET /api/contacts?contactId={ID}&session={SESSION}
 
 - `ID` - either phone number (`123123123`) or chat id (`123123@c.us`)
 
-```json {title="Response"}
+```jsonc {title="Response"}
 {
   "id": "11231231231@c.us",
   "number": "11231231231",
@@ -100,7 +100,7 @@ GET /api/contacts?contactId={ID}&session={SESSION}
 PUT /api/{session}/contacts/{chatId}
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "firstName": "John",
   "lastName": "Doe"
@@ -126,7 +126,7 @@ GET /api/contacts/check-exists?phone=11231231231&session=default
 
 It returns `numberExists` field with `true` or `false` value and `chatId` field with chat ID of the number (if exists).
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "numberExists": true,
   "chatId": "123123123@c.us"
@@ -150,7 +150,7 @@ GET /api/contacts/about?contactId={ID}&session={SESSION}
 
 - `ID` - either phone number (`123123123`) or chat id (`123123@c.us`)
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "about": "Hi, I use WhatsApp!"
 }
@@ -166,7 +166,7 @@ GET /api/contacts/profile-picture?contactId=11231231231&session=default`
 - `session` - session name
 - `refresh=True` - force refresh the picture. By default, we cache it 24 hours. Do not frequently refresh the picture to avoid `rate-overlimit` error.
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "profilePictureURL": "https://example.com/profile.jpg"
 }
@@ -183,7 +183,7 @@ Unblock contact
 POST /api/contacts/unblock
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "contactId": "11231231231",
   "session": "default"

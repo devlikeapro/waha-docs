@@ -1,4 +1,4 @@
-```json { title="event.response" }
+```jsonc { title="event.response" }
 {
   "id": "evt_00000000000000000000001",
   "session": "default",

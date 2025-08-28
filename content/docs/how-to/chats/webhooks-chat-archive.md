@@ -1,6 +1,6 @@
 The `chat.archive` event is triggered when a chat is archived or unarchived.
 
-```json { title="chat.archive" }
+```jsonc { title="chat.archive" }
 {
   "event": "chat.archive",
   "session": "default",

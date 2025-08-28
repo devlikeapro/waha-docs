@@ -66,7 +66,7 @@ or using full link:
 }
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "id": "123123123@g.us"
 }

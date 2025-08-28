@@ -74,7 +74,7 @@ Use `POST` request if you have a lot of chats (>400) in `ids` filter
 POST /api/{session}/chats/overview
 ```
 
-```json { title="Request (POST)" }
+```jsonc { title="Request (POST)" }
 {
   "pagination": {
     "limit": 20,
@@ -95,7 +95,7 @@ POST /api/{session}/chats/overview
 
 ⚠️ `lastMessage` doesn't have media attachments, you need to [get message by id]({{< relref "#get-message-by-id" >}}) to get media attachments.
 
-```json { title="Response" }
+```jsonc { title="Response" }
 [
   {
     "id": "12312l123@c.us",
@@ -128,7 +128,7 @@ GET /api/{session}/chats/{chatId}/picture[?refresh=True]
 **Query**
 - `refresh=True` - force refresh the picture. By default, we cache it 24 hours. Do not frequently refresh the picture to avoid `rate-overlimit` error.
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "url": "https://example.com/picture.jpg"
 }
@@ -173,11 +173,11 @@ It'll find all unread messages in the chat and mark them as read.
 POST /api/{SESSION}/chats/{chatId}/messages/read
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {}
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "ids": [
     "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
@@ -193,7 +193,7 @@ POST /api/{SESSION}/chats/{chatId}/messages/read
 
 Optionally, you can control how many messages you need to read:
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "messages": 30,
   "days": 7
@@ -276,7 +276,7 @@ Get message by id
 GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
     "id": "false_123123@c.us_AAAAAA",
     "timestamp": 1727745026,
@@ -303,7 +303,7 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 POST /api/{session}/chats/{chatId}/messages/{messageId}/pin
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "duration": 86400
 }
@@ -313,7 +313,7 @@ POST /api/{session}/chats/{chatId}/messages/{messageId}/pin
 - 7 days - `duration=604800`
 - 30 days - `duration=2592000`
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "success": true
 }
@@ -325,7 +325,7 @@ POST /api/{session}/chats/{chatId}/messages/{messageId}/pin
 POST /api/{session}/chats/{chatId}/messages/{messageId}/unpin
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "success": true
 }
@@ -344,7 +344,7 @@ So if you want to edit `true_123@c.us_AAA` message in `123@c.us` chat you need t
 PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "text": "Hello, world!"
 }

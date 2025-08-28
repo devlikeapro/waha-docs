@@ -1,4 +1,4 @@
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",

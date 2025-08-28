@@ -3,7 +3,7 @@ In that case you'll get `event.response.failed` event with `eventResponse: null`
 
 **Resend the Event Message** one more time if you get this event to get a new response
 
-```json { title="event.response.failed" }
+```jsonc { title="event.response.failed" }
 {
   "id": "evt_00000000000000000000001",
   "session": "default",

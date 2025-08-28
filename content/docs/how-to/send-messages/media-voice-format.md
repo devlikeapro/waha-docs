@@ -5,7 +5,7 @@ WhatsApp accept only file with **OPUS** encoding and packed in **OGG** container
 If you have a file in a different format (like **mp3**) you can use one of the options:
 
 1. **Set convert: true** in the body when calling API:
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   ...,
   "convert": true

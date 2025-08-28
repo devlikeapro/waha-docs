@@ -1,4 +1,4 @@
-```json { title="call.received" }
+```jsonc { title="call.received" }
 {
   "event": "call.received",
   "session": "default",

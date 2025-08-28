@@ -67,7 +67,7 @@ You can get a list of labels for the session using the endpoint:
 GET /api/{session}/labels
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 [
   {
     "id": "1",
@@ -86,7 +86,7 @@ POST /api/{session}/labels
 ```
 
 Using `color`
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "name": "New Client",
   "color": 1
@@ -94,7 +94,7 @@ Using `color`
 ```
 
 Using `colorHex`
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "name": "New Client",
   "colorHex" : "#64c4ff"
@@ -107,7 +107,7 @@ PUT /api/{session}/labels/{labelId}
 ```
 
 Using `color`
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "name": "New Client",
   "color": 1
@@ -115,7 +115,7 @@ Using `color`
 ```
 
 Using `colorHex`
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "name": "New Client",
   "colorHex" : "#64c4ff"
@@ -149,7 +149,7 @@ You can get a list of labels by chat id using the endpoint:
 GET /api/{session}/labels/chats/{chatId}/
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 [
   {
     "id": "1",
@@ -171,7 +171,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 👉 You need to provide **the full list of labels** you want to set to the chat. All other labels will be removed.
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "labels": [
     {
@@ -183,7 +183,7 @@ PUT /api/{session}/labels/chats/{chatId}/
 
 **Remove labels**:
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "labels": []
 }
@@ -196,7 +196,7 @@ Read more about
 
 ### label.upsert
 
-```json { title="label.upsert" }
+```jsonc { title="label.upsert" }
 {
   "event": "label.upsert",
   "session": "default",
@@ -214,7 +214,7 @@ Read more about
 
 ### label.deleted
 
-```json { title="label.deleted" }
+```jsonc { title="label.deleted" }
 {
   "event": "label.deleted",
   "session": "default",
@@ -232,7 +232,7 @@ Read more about
 
 ### label.chat.added
 
-```json { title="label.chat.added" }
+```jsonc { title="label.chat.added" }
 {
   "event": "label.chat.added",
   "session": "default",
@@ -248,7 +248,7 @@ Read more about
 
 ### label.chat.deleted
 
-```json { title="label.chat.deleted" }
+```jsonc { title="label.chat.deleted" }
 {
   "event": "label.chat.deleted",
   "session": "default",

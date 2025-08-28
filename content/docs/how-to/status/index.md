@@ -33,7 +33,7 @@ When you send status you can provide optional `contacts` field - list of contact
 
 You can fetch your contacts using [**👤 Contacts API**]({{< relref "/docs/how-to/contacts#get-all-contacts" >}}).
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "text": "Have a look! https://waha.devlike.pro/",
   "contacts": ["123123@c.us", "3333@c.us"],
@@ -51,7 +51,7 @@ Send status to **all** your contacts:
 POST /api/{session}/status/text
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "text": "Have a look! https://waha.devlike.pro/",
   "backgroundColor": "#38b42f",
@@ -64,7 +64,7 @@ POST /api/{session}/status/text
 - `contacts` - array of contacts to send status to.
 
 Send status to specific contacts:
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "text": "Have a look! https://waha.devlike.pro/",
   "backgroundColor": "#38b42f",
@@ -83,7 +83,7 @@ POST /api/{session}/status/image
 
 {{< tabs "send-image-status-body" >}}
 {{< tab "URL" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "file": {
     "mimetype": "image/jpeg",
@@ -96,7 +96,7 @@ POST /api/{session}/status/image
 
 {{< tab "BASE64" >}}
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "file": {
     "mimetype": "image/jpeg",
@@ -115,7 +115,7 @@ POST /api/{session}/status/video
 
 {{< tabs "send-video-status-body" >}}
 {{< tab "URL" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "file": {
     "mimetype": "video/mp4",
@@ -127,7 +127,7 @@ POST /api/{session}/status/video
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "file": {
     "mimetype": "video/mp4",
@@ -161,7 +161,7 @@ POST /api/{session}/status/voice
 
 {{< tabs "send-voice-status-body" >}}
 {{< tab "URL" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "file": {
     "mimetype": "audio/ogg; codecs=opus",
@@ -174,7 +174,7 @@ POST /api/{session}/status/voice
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "file": {
     "mimetype": "audio/ogg; codecs=opus",
@@ -206,7 +206,7 @@ POST /api/{session}/status/delete
 ```
 
 When you send status - you'll get the response like below, save `key.id` (it's message id).
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "key": {
     "remoteJid": "status@broadcast",
@@ -219,7 +219,7 @@ When you send status - you'll get the response like below, save `key.id` (it's m
 }
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "id": "AAAAAAAAAAAAAAAAAAAAAA"
 }
@@ -237,14 +237,14 @@ flow for manually sending status messages to big amount of contacts.
 GET /api/{session}/status/new-message-id
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "id": "AAAAAAAAAAAAAAAAAAAAAA"
 }
 ```
 
 After that you can set it when you send status messages:
-```json { title="Body" }
+```jsonc { title="Body" }
 
 {
   "id": "AAAAAAAAAAAAAAAAAAAAAA",
@@ -274,7 +274,7 @@ If you wish to receive status messages in real-time - you can subscribe to the f
 - [`message`]({{< relref "/docs/how-to/receive-messages#message" >}}) event for a message (send by someone else)
 - [`message.any`]({{< relref "/docs/how-to/receive-messages#messageany" >}}) event for a message (including your messages)
 
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -322,7 +322,7 @@ First, generate a new message ID. You’ll use this ID for all status messages i
 GET /api/{SESSION}/status/new-message-id
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "id": "AAAAAAAAAAAAAAAAAAAAAA"
 }
@@ -337,7 +337,7 @@ To view your own status message on your device, retrieve your user ID:
 GET /api/{SESSION}/me
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "id": "11111111111@c.us",
   ...
@@ -353,7 +353,7 @@ You can either use your existing contact list from a CRM or database, or fetch a
 GET /api/contacts/all?session={NAME}
 ```
 
-```json {title="Response"}
+```jsonc {title="Response"}
 [
   {
     "id": "88888888888@c.us",
@@ -384,7 +384,7 @@ If you set `contacts: null`, the system uses the default chunk size of **5,000 c
 POST /api/{session}/status/text
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "id": "AAAAAAAAA",
   "contacts": ["11111111111@c.us", "88888888888@c.us", "..."],

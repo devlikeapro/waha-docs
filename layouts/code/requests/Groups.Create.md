@@ -1,7 +1,7 @@
 ```http request
 POST /api/{session}/groups
 ```
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "name": "Group name",
   "participants": [

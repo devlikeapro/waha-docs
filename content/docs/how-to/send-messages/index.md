@@ -99,7 +99,7 @@ POST /api/sendSeen
 ```
 
 Send seen (read a message) for **all unread** messages **older than 7 days** (30 max for DM, 100 max for groups)
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us"
@@ -112,7 +112,7 @@ you can control what messages to read by using `messagesIds` (or deprecated `mes
 
 Send seen for **direct message**:
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -124,7 +124,7 @@ Send seen for **direct message**:
 
 Send seen for **Group Message** you need to provide `participant` field:
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@g.us",
@@ -145,7 +145,7 @@ Use the API to send text messages to the chat.
 POST /api/sendText
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "12132132130@c.us",
@@ -167,7 +167,7 @@ Here's some additional options:
 POST /api/sendText
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "12132132130@c.us",
@@ -195,7 +195,7 @@ If link preview generation process fails or site protects it with captcha - you 
 
 To reply on a message - add `reply_to` field:
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -212,7 +212,7 @@ use `mentions` field for that in `POST /api/sendText` request.
 Please note that you MUST mention a number in the text as well in the format `@2132132130` and
 also mention it in `mentions` in format `2132132130@c.us`
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "12132132130@c.us",
@@ -237,7 +237,7 @@ You can send images in two ways:
 
 {{< tabs "send-image-body" >}}
 {{< tab "URL" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -252,7 +252,7 @@ You can send images in two ways:
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -285,7 +285,7 @@ You can send voice messages in two ways:
 
 {{< tabs "send-voice-body" >}}
 {{< tab "URL" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -299,7 +299,7 @@ You can send voice messages in two ways:
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "11111111111@c.us",
   "file": {
@@ -343,7 +343,7 @@ You can send video messages in two ways:
 
 {{< tabs "send-video-body" >}}
 {{< tab "URL" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -361,7 +361,7 @@ You can send video messages in two ways:
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "11111111111@c.us",
   "caption": "Watch this video!",
@@ -411,7 +411,7 @@ You can send files in two ways:
 
 {{< tabs "send-file-body" >}}
 {{< tab "URL" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "caption": "Check this out!",
@@ -426,7 +426,7 @@ You can send files in two ways:
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -456,7 +456,7 @@ POST /api/sendPoll
 
 The request body is pretty simple:
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "123123123@c.us",
@@ -512,7 +512,7 @@ Send a **list message** using API:
 POST /api/sendList
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -586,7 +586,7 @@ POST /api/send/link-custom-preview
 ```
 {{< tabs "send-link-custom-preview-body" >}}
 {{< tab "URL" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -605,7 +605,7 @@ POST /api/send/link-custom-preview
 {{< /tab >}}
 
 {{< tab "BASE64" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@c.us",
@@ -648,7 +648,7 @@ You can forward a message to another chat (that you chatted before, otherwise it
 POST /api/forwardMessage
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "11111111111@c.us",
   "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
@@ -676,7 +676,7 @@ So if you want to edit `true_123@c.us_AAA` message in `123@c.us` chat you need t
 PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "text": "Hello, world!",
   "linkPreview": true
@@ -720,7 +720,7 @@ Reaction API uses **PUT**, not **POST** request! Please make sure you send right
 {{< /callout >}}
 
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
   "reaction": "👍",
@@ -730,7 +730,7 @@ Reaction API uses **PUT**, not **POST** request! Please make sure you send right
 
 To **remove reaction from a message** - send empty string in the reaction request:
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
   "reaction": "",
@@ -754,7 +754,7 @@ Star API uses **PUT**, not **POST** request! Please make sure you send right req
 
 **Star:**
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "messageId": "false_71111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
   "chatId": "71111111111@c.us",
@@ -765,7 +765,7 @@ Star API uses **PUT**, not **POST** request! Please make sure you send right req
 
 **Unstar:**
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "messageId": "false_71111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
   "chatId": "71111111111@c.us",
@@ -788,7 +788,7 @@ You can send contacts in multiple ways:
 
 {{< tabs "send-vcard-body" >}}
 {{< tab "Fields" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "79111111@c.us",
@@ -806,7 +806,7 @@ You can send contacts in multiple ways:
 
 {{< tab "vCard" >}}
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "79111111@c.us",
@@ -820,7 +820,7 @@ You can send contacts in multiple ways:
 {{</ tab >}}
 
 {{< tab "Combined" >}}
-```json { title="Body" }
+```jsonc { title="Body" }
   {
   "chatId": "79111111@c.us",
   "contacts": [
@@ -883,7 +883,7 @@ If you're using **Official Business API** to send buttons and wanna "click" on t
 POST /api/send/buttons/reply
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "11111111111@c.us",
   "replyTo": "false_11111111111@c.us_AAAAAAAAAAAAAAAAA",

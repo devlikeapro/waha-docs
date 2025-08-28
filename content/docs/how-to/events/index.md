@@ -342,7 +342,7 @@ You can provide additional `metadata` when you start the session with
 [**Start Session**]({{< relref "/docs/how-to/sessions#start-session" >}})
 request data.
 
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -375,7 +375,7 @@ The `session.status` event is triggered when the session status changes.
 - `FAILED` - session is failed due to some error. It's likely that authorization is required again or device has been disconnected from that account.
   Try to restart the session and if it doesn't help - logout and start the session again.
 
-```json { title="session.status" }
+```jsonc { title="session.status" }
 {
     "event": "session.status",
     "session": "default",
@@ -399,7 +399,7 @@ The `session.status` event is triggered when the session status changes.
 
 Incoming message (text/audio/files)
 
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -434,7 +434,7 @@ It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't
 
 Fired on all message creations, including your own. The payload is the same as for [message](#message) event.
 
-```json { title="message.any" }
+```jsonc { title="message.any" }
   "event": "message.any",
   "session": "default",
   "engine": "WEBJS",
@@ -452,7 +452,7 @@ Receive events when a message is reacted to by a user (or **yourself** reacting 
 - `payload.reaction.text` - emoji that was used to react to the message. It'll be an empty string if the reaction was removed.
 - `payload.reaction.messageId` - id of the message that was reacted to.
 
-```json { title="message.reaction" }
+```jsonc { title="message.reaction" }
 {
     "event": "message.reaction",
     "session": "default",
@@ -501,7 +501,7 @@ Possible message ack statuses:
 
 
 The payload may have more fields, it depends on the engine you use, but here's a minimum amount that all engines send:
-```json { title="message.ack" }
+```jsonc { title="message.ack" }
 {
   "event": "message.ack",
   "session": "default",
@@ -524,7 +524,7 @@ on your phone.
 
 ![waiting for this message](waiting-for-this-message.jpg)
 
-```json { title="message.waiting" }
+```jsonc { title="message.waiting" }
 {
   "event": "message.waiting",
   "session": "default",
@@ -546,7 +546,7 @@ on your phone.
 ### message.edited
 The `message.edited` event is message edited
 
-```json { title="message.edited" }
+```jsonc { title="message.edited" }
 {
   "event": "message.edited",
   "session": "default",
@@ -571,7 +571,7 @@ The `message.edited` event is message edited
 The `message.revoked` event is triggered when a user, whether it be you or any other participant,
 revokes a previously sent message.
 
-```json { title="message.revoked" }
+```jsonc { title="message.revoked" }
 {
   "event": "message.revoked",
   "session": "default",
@@ -614,7 +614,7 @@ revokes a previously sent message.
 - `payload.id` indicates the chat - either direct chat with a contact or a group chat.
 - `payload.id.[].participant` - certain participant presence status. For a direct chat there's only one participant.
 
-```json { title="presence.update" }
+```jsonc { title="presence.update" }
 {
     "event": "presence.update",
     "session": "default",
@@ -635,7 +635,7 @@ revokes a previously sent message.
 ### poll.vote
 We have a dedicated page [how to send polls and receive votes]({{< relref "/docs/how-to/polls" >}})!
 
-```json { title="poll.vote" }
+```jsonc { title="poll.vote" }
 {
   "event": "poll.vote",
   "session": "default",
@@ -662,7 +662,7 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
 ### poll.vote.failed
 We have a dedicated page [how to send polls and receive votes]({{< relref "/docs/how-to/polls" >}})!
 
-```json { title="poll.vote.failed" }
+```jsonc { title="poll.vote.failed" }
 {
   "event": "poll.vote.failed",
   "session": "default",
@@ -701,7 +701,7 @@ Read more about
 
 ### label.upsert
 
-```json { title="label.upsert" }
+```jsonc { title="label.upsert" }
 {
   "event": "label.upsert",
   "session": "default",
@@ -719,7 +719,7 @@ Read more about
 
 ### label.deleted
 
-```json { title="label.deleted" }
+```jsonc { title="label.deleted" }
 {
   "event": "label.deleted",
   "session": "default",
@@ -737,7 +737,7 @@ Read more about
 
 ### label.chat.added
 
-```json { title="label.chat.added" }
+```jsonc { title="label.chat.added" }
 {
   "event": "label.chat.added",
   "session": "default",
@@ -753,7 +753,7 @@ Read more about
 
 ### label.chat.deleted
 
-```json { title="label.chat.deleted" }
+```jsonc { title="label.chat.deleted" }
 {
   "event": "label.chat.deleted",
   "session": "default",
@@ -782,7 +782,7 @@ Read more about
 ### engine.event
 Low-level engine event, for **debug** and **troubleshooting** purposes.
 
-```json { title="engine.event" }
+```jsonc { title="engine.event" }
 {
   "event": "engine.event",
   "session": "default",
@@ -808,7 +808,7 @@ Low-level engine event, for **debug** and **troubleshooting** purposes.
 
 It's an internal engine's state, not **session** `status`.
 
-```json { title="state.change" }
+```jsonc { title="state.change" }
 {
   "event": "state.change",
   "session": "default",

@@ -1009,7 +1009,7 @@ November 2023
   2. **base64 image** - `GET /api/{session}/screenshot` and set `Accept: application/json` header
 - Add `WHATSAPP_SWAGGER_ENABLED=false` so you can hide Swagger documentation (available only in Plus version). [#185](https://github.com/devlikeapro/waha/issues/185)
 - Add dedicated `media` field in webhook payload - now you can know which media is attached to the message.
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -1100,7 +1100,7 @@ Improvements on session management, restarting sessions and more:
   the same time.
 - Added `engine` field in webhook payload
 
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -1181,7 +1181,7 @@ Instead of setting each webhook via environment variables - we use two environme
 The data for webhooks are wrapped inside a new `WAWebhook` object with `event` and `payload` fields to help you identify
 which handler you should call based on `event`.
 
-```json { title="message.any" }
+```jsonc { title="message.any" }
 {
   "event": "message.any",
   "payload": {

@@ -97,7 +97,7 @@ PUT /api/{SESSION}/groups/{ID}/picture
 - `{SESSION}` - session name
 - `{ID}` - group id. Remember to encode `@` symbol - `123123123123%40g.us`
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "file": {
     "url": "https://github.com/devlikeapro/waha/raw/core/examples/waha.jpg"

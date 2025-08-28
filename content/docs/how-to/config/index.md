@@ -286,7 +286,7 @@ The following environment variables can be used to configure the file storage op
 
 💡 When media files are not processed due to `WHATSAPP_FILES_MIMETYPES` or `WHATSAPP_DOWNLOAD_MEDIA` settings,
 you'll still receive a webhook event with `hasMedia: True` field, but without a `media.url`.
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",

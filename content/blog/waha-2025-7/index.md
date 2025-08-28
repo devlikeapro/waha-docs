@@ -34,7 +34,7 @@ to **update contacts** in **your phone address book** (and in WhatsApp)!
 PUT /api/{session}/contacts/{chatId}
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "firstName": "John",
   "lastName": "Doe"

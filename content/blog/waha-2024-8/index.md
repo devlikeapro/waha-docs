@@ -47,7 +47,7 @@ Response:
 ### Labels Events
 You can now receive information about label creation, update, and deletion using webhooks!
 
-```json { title="label.upsert" }
+```jsonc { title="label.upsert" }
 {
   "event": "label.upsert",
   "session": "default",
@@ -89,7 +89,7 @@ POST /api/{session}/chats/{chatId}/unarchive
 Enable `chat.archive` event when starting a new session 
 and receive information about chat archive in WhatsApp using events:
 
-```json { title="chat.archive" }
+```jsonc { title="chat.archive" }
 {
   "event": "chat.archive",
   "session": "default",
@@ -114,7 +114,7 @@ that using new `call.*` webhooks!
 Enable `call.*` events when starting a new session
 and receive information about calls in WhatsApp using events:
 
-```json { title="call.received" }
+```jsonc { title="call.received" }
 {
   "event": "call.received",
   "session": "default",

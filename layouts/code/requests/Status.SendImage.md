@@ -1,7 +1,7 @@
 ```http request
 POST /api/{session}/status/image
 ```
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "file": {
     "mimetype": "image/jpeg",

@@ -30,7 +30,7 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 POST /api/{SESSION}/events
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "123123@c.us",
   "reply_to": null,

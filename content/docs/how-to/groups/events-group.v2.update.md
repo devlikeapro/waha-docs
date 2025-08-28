@@ -1,6 +1,6 @@
 `group.v2.update` happens when the group information is updated.
 
-```json { title="group.v2.update" }
+```jsonc { title="group.v2.update" }
 {
   "event": "group.v2.update",
   "session": "default",

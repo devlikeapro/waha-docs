@@ -37,7 +37,7 @@ Use the endpoint to send a poll!
 POST /api/sendPoll
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "123123123@c.us",
@@ -53,7 +53,7 @@ POST /api/sendPoll
 }
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "id": "true_321321321@c.us_83ACBAAAAAAAAAAAAAAAAAAAA",
   "other-fields-here": "value"
@@ -73,7 +73,7 @@ Cast a vote for an existing poll by specifying the poll message ID and the optio
 POST /api/sendPollVote
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "11111111111@c.us",
   "pollMessageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA", 
@@ -105,7 +105,7 @@ With this event, you receive new votes for the poll sent.
 
 #### Vote from a user in direct messages.
 
-```json { title="poll.vote" }
+```jsonc { title="poll.vote" }
 {
   "event": "poll.vote",
   "session": "default",
@@ -161,7 +161,7 @@ the future.
 
 #### Vote from a user in a group
 
-```json { title="poll.vote" }
+```jsonc { title="poll.vote" }
 {
   "event": "poll.vote",
   "session": "default",
@@ -194,7 +194,7 @@ a `poll.vote.failed` event on your webhook.
 
 The payload for `poll.vote.failed` is the same as for `poll.vote`, but with an empty list in `selectedOptions`.
 
-```json { title="poll.vote.failed" }
+```jsonc { title="poll.vote.failed" }
 {
   "event": "poll.vote.failed",
   "session": "default",

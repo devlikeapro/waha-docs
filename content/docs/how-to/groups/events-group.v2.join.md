@@ -1,6 +1,6 @@
 `group.v2.join` happens when **you** join or are added to a group.
 
-```json { title="group.v2.join" }
+```jsonc { title="group.v2.join" }
 {
   "event": "group.v2.join",
   "session": "default",

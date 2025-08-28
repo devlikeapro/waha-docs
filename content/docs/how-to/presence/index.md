@@ -41,7 +41,7 @@ You can set your global or chat-related presence with endpoint
 POST /api/{session}/presence
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "111111111@c.us",
   "presence": "typing"
@@ -57,7 +57,7 @@ Possible presence statuses that you can set or get for chats:
 
 **Start typing** to a chat (you can use `POST /startTyping` instead)
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "111111111@c.us",
   "presence": "typing"
@@ -66,7 +66,7 @@ Possible presence statuses that you can set or get for chats:
 
 **Clear "typing" state** (you can use `POST /stopTyping` instead)
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "111111111@c.us",
   "presence": "paused"
@@ -75,7 +75,7 @@ Possible presence statuses that you can set or get for chats:
 
 **Set global "online"**, all contacts will see it
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "presence": "online"
 }
@@ -85,7 +85,7 @@ Possible presence statuses that you can set or get for chats:
 to the device.
 If you would like to receive said notifications - you need to mark a session's presence as `offline`.
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "presence": "offline"
 }
@@ -99,7 +99,7 @@ GET /api/{session}/presence/{chatId}
 
 Get presence information for a single chat. For a group, you'll get participants' statuses.
 
-```json {title="Response"}
+```jsonc {title="Response"}
 {
   "id": "2132132130@c.us",
   "presences": [
@@ -140,7 +140,7 @@ Here's few notes about fields:
 - `lastKnownPresence` - contains the last known presence status, which can be
   `offline`, `online`, `typing`, `recording`, or `paused`
 
-```json {title="Response"}
+```jsonc {title="Response"}
 [
   {
     "id": "2132132130@c.us",
@@ -179,7 +179,7 @@ Read more about
 
 You can subscribe to `presence.update` webhook event to get the most recent presence information.
 
-```json { title="presence.update" }
+```jsonc { title="presence.update" }
 {
     "event": "presence.update",
     "session": "default",

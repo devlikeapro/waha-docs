@@ -5,7 +5,7 @@ WhatsApp accepts only a file in **mp4 using libx264** format.
 If you have a file in a different format (like **avi**) you can use one of the options:
 
 1. **Set convert: true** in the body when calling API:
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   ...,
   "convert": true

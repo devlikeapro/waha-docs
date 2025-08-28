@@ -76,7 +76,7 @@ You can create a new channel:
 POST /api/{session}/channels
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "name": "Channel Name",
   "description": "Channel Description",
@@ -108,7 +108,7 @@ GET /api/{SESSION}/channels/{ID}
 
 - 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
 
-```json {title="Response"}
+```jsonc {title="Response"}
 {
   "id": "111111111111111111@newsletter",
   "name": "Channel - Owner - Picture",
@@ -135,7 +135,7 @@ GET /api/{session}/channels/{inviteCode}
 
 💡 To get full `picture` you need to get channel by ID after you get the invite code.
 
-```json {title="Response"}
+```jsonc {title="Response"}
 {
   "id": "111111111111111111@newsletter",
   "name": "Channel - Owner - Picture",
@@ -161,7 +161,7 @@ POST /api/{session}/channels/search/by-view
 ```
 
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "view": "RECOMMENDED",
   "countries": [
@@ -179,7 +179,7 @@ POST /api/{session}/channels/search/by-view
 - `limit` - we recommend using default `50` value, it's the way official clients work
 - `startCursor` - use `endCursor` from the previous response (if any data available on the next page)
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "page": {
     "startCursor": null,
@@ -210,7 +210,7 @@ You can search **public** (not subscribed yet) channels **by text**:
 POST /api/{session}/channels/search/by-text
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "text": "Donald Trump",
   "categories": [],
@@ -230,7 +230,7 @@ List of available views for search:
 GET /api/{session}/channels/search/views
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 [
   {
     "value": "RECOMMENDED",
@@ -246,7 +246,7 @@ List of available countries for search (not full one, you can try different `cod
 GET /api/{session}/channels/search/countries
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 [
   {
     "code": "US",
@@ -262,7 +262,7 @@ List of available categories for search:
 GET /api/{session}/channels/search/categories
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 [
   {
     "value": "BUSINESS",
@@ -319,7 +319,7 @@ text message into the channel
 
 👉 Make sure you're `OWNER` or `ADMIN` for the channel
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "12132132130@newsletter",
@@ -332,7 +332,7 @@ text message into the channel
 You can use regular [`POST /api/sendImage`]({{< relref "/docs/how-to/send-messages#send-image" >}}) endpoint
 to send an image into the channel
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "session": "default",
   "chatId": "11111111111@newsletter",
@@ -350,7 +350,7 @@ to send an image into the channel
 You can use regular [`POST /api/sendVideo`]({{< relref "/docs/how-to/send-messages#send-video" >}}) endpoint
 to send a video message into the channel
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "111111111111111111@newsletter",
   "file": {
@@ -369,7 +369,7 @@ to send a video message into the channel
 PUT /api/reaction
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "messageId": "false_11111111111@newsletter_AAAAAAAAAAAAAAAAAAAA",
   "reaction": "👍",
@@ -390,7 +390,7 @@ PUT /api/reaction
 POST /api/sendPollVote
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "chatId": "11111111111@newsletter",
   "pollMessageId": "false_11111111111@newsletter_AAAAAAAAAAAAAAAAAAAA",
@@ -448,7 +448,7 @@ For all incoming messages in your own and subscribed channels you'll receive
 - [`message.any`]({{< relref "/docs/how-to/receive-messages#message.any" >}}) event for a message from the channel (
   including your messages)
 
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",

@@ -54,7 +54,7 @@ You may notice various identifiers in the `from`, `to`, and `participant` fields
 ### replyTo
 If you get a message as a reply to another message, you'll see `replyTo` field with the message ID that was replied to.
 
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -81,7 +81,7 @@ Here's examples of message-related events:
 
 Incoming message (text/audio/files)
 
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -113,7 +113,7 @@ It's possible to have `hasMedia: true`, but `media: null` - this means that WAHA
 
 Fired on all message creations, including your own. The payload is the same as for [message](#message) event.
 
-```json { title="message.any" }
+```jsonc { title="message.any" }
 {
   "event": "message.any",
   "session": "default",
@@ -126,7 +126,7 @@ This event is triggered when a message is reacted to by a user (or when **you** 
 - `payload.reaction.text` - emoji that was used to react to the message. It'll be an empty string if the reaction was removed.
 - `payload.reaction.messageId` - id of the message that was reacted to.
 
-```json { title="message.reaction" }
+```jsonc { title="message.reaction" }
 {
     "event": "message.reaction",
     "session": "default",
@@ -159,7 +159,7 @@ This event is triggered when a message is reacted to by a user (or when **you** 
 ### message.ack
 This event is triggered when the server or recipient gets the message, reads it, or plays it.
 
-```json { title="message.ack" }
+```jsonc { title="message.ack" }
 {
   "event": "message.ack",
   "session": "default",
@@ -174,7 +174,7 @@ on your phone.
 
 ![waiting for this message](waiting-for-this-message.jpg)
 
-```json { title="message.waiting" }
+```jsonc { title="message.waiting" }
 {
   "event": "message.waiting",
   "session": "default",
@@ -198,7 +198,7 @@ on your phone.
 Read more about
 [**🔄 Events**]({{< relref "/docs/how-to/events#messagerevoked" >}}).
 
-```json { title="message.revoked" }
+```jsonc { title="message.revoked" }
 {
   "event": "message.revoked",
   "session": "default",
@@ -225,7 +225,7 @@ In your application, you must download these files and use them as needed. You c
 
 For example, you can get the webhook like this with `media` value (we've skipped other fields):
 
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",
@@ -254,7 +254,7 @@ Note: If you see `hasMedia: true` but no `media.url`, this indicates that WAHA d
 Then you can use the link to download the file `http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg`.
 
 For documents (file attachments) there's also `filename` field with the original file name.
-```json { title="message" }
+```jsonc { title="message" }
 {
   "event": "message",
   "session": "default",

@@ -61,7 +61,7 @@ In order to create (and start) a new session - with [**Session Config**](#sessio
 POST /api/sessions
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   // "name" is Optional - it'll be generated automatically
   "name": "default",
@@ -72,7 +72,7 @@ POST /api/sessions
 }
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "name": "session_123123123",
   // if name is not provided - it'll be generated automatically
@@ -100,7 +100,7 @@ By default, the session starts right after creation.
 You can create a session and postpone its start by setting `start` field to `false`.
 It'll create a session in `STOPPED` status, and you can start it later by calling `POST /api/sessions/{session}/start`.
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "name": "default",
   "start": false
@@ -494,7 +494,7 @@ To get session list - call
 GET /api/sessions
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 [
   {
     "name": "default",
@@ -540,7 +540,7 @@ To get information about a specific session - call
 GET /api/sessions/{session}
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "name": "default",
   "status": "WORKING",
@@ -592,7 +592,7 @@ GET /api/screenshot?session=default
 Accept: application/json
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "mimetype": "image/png",
   "data": "base64-encoded-data"
@@ -617,7 +617,7 @@ GET /api/sessions/{session}/me
 
 **Authenticated and working** session's response:
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "id": "11111111111@c.us",
   "pushName": "string"
@@ -626,7 +626,7 @@ GET /api/sessions/{session}/me
 
 **Stopped** or **not authenticated** session returns `null`:
 
-```json { title="Response" }
+```jsonc { title="Response" }
 null
 ```
 
@@ -679,7 +679,7 @@ GET /api/{session}/auth/qr?format=image
 Accept: application/json
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "mimetype": "image/png",
   "data": "base64-encoded-data"
@@ -698,7 +698,7 @@ You can change it in Swagger by clicking on **Media Type** dropdown and selectin
 GET /api/{session}/auth/qr?format=raw
 ```
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "value": "value-that-you-need-to-use-to-generate-qr-code"
 }
@@ -724,7 +724,7 @@ Body example:
 
 You'll get code in the need to enter in **WhatsApp app** to authenticate the session:
 
-```json { title="Response" }
+```jsonc { title="Response" }
 {
   "code": "ABCD-ABCD"
 }
@@ -745,7 +745,7 @@ Read more about
 
 The `session.status` event is triggered when the session status changes.
 
-```json { title="session.status" }
+```jsonc { title="session.status" }
 {
   "event": "session.status",
   "session": "default",
@@ -768,7 +768,7 @@ The `session.status` event is triggered when the session status changes.
 ## engine.event
 Internal event that is triggered when the engine emits an event.
 
-```json { title="engine.event" }
+```jsonc { title="engine.event" }
 {
   "id": "evt_11111111111111111111111111",
   "session": "default",
@@ -829,7 +829,7 @@ POST /api/sessions/start
 Accepts the same configuration as
 [Create](#create-session) and [Update](#update-session) API.
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "name": "default",
   "config": {
@@ -854,7 +854,7 @@ POST /api/sessions/stop
 - **Stop** if `logout: false`
 - **Stop**, **Logout** and **Delete** session if `logout: true`
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "name": "default",
   "logout": true
@@ -869,7 +869,7 @@ POST /api/sessions/stop
 POST /api/sessions/logout
 ```
 
-```json { title="Body" }
+```jsonc { title="Body" }
 {
   "name": "default"
 }
