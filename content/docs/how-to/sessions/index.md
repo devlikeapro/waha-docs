@@ -170,6 +170,7 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
 ```
 
 ### NOWEB
+![Dashboard - NOWEB](session-config-noweb.png)
 
 [NOWEB **🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) has a specific store that allows you to save session data.
 
@@ -190,6 +191,8 @@ You need to add `config.noweb` field to activate the store:
 ```
 
 ### Metadata
+![Dashboard - Metadata](session-config-metadata.png)
+
 `metadata` is an attribute on Session objects that lets you store more information,
 structured as key-value pairs,
 to sessions for your own use and reference. 
@@ -221,6 +224,8 @@ use, so you don't have to look into two systems.
 WAHA does not use metadata for any internal purposes, it's up to you how to use it.
 
 ### Ignore
+![Dashboard - Ignore Chats](session-config-ignore.png)
+
 You can ignore events from certain chat types for a session by adding `config.ignore`.
 This helps save resources and avoids unnecessary HTTP requests over
 [**🔄 Webhooks**]({{< relref "docs/how-to/events#webhooks" >}})
@@ -256,6 +261,8 @@ If you don't provide `config.ignore` - it'll use configuration from environment 
 
 
 ### Webhooks
+![Dashboard - Webhooks](session-config-webhooks.png)
+
 Read more about
 [**🔄 Events - Webhooks**]({{< relref "/docs/how-to/events#webhooks" >}}).
 
@@ -318,6 +325,8 @@ You can configure webhooks for a session:
 
 
 ### Proxy
+
+![Dashboard - Proxy](session-config-proxy.png)
 
 You can configure proxy for a session by setting `config.proxy` fields when you create or update a session.
 
