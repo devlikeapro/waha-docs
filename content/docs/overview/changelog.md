@@ -53,6 +53,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - {{< issue 1142 >}}, {{< issue 1190 >}}, {{< issue 1259 >}}
 - `2025.8.3` - **Dashboard** - Add copy session name button - {{< issue 1004 >}}
 - `2025.8.3` - [**WEBJS**]({{< relref "/docs/engines/webjs" >}}) - add `config.webjs.tagsEventsOn` 
+- `2025.8.3` - **GOWS** - add [**💬 Chats** - Unread Chat]({{< relref "/docs/how-to/chats#unread-chat" >}})
 - `2025.8.2` - Add [**Send List Message API**]({{< relref "/docs/how-to/send-messages#send-list" >}})  
   - **NOWEB**, **GOWS**
   - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
