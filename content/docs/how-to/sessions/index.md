@@ -111,7 +111,7 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
 ## Session Config
 **Full possible config** for a session:
 
-```json
+```jsonc
 {
   "name": "default",
   "config": {
@@ -122,6 +122,10 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
         "enabled": true,
         "fullSync": false
       }
+    },
+    // Only for WEBJS engine
+    "webjs": {
+      "tagsEventsOn": false
     },
     // Use "metadata" to save additional information.
     "metadata": {
@@ -228,7 +232,7 @@ You can configure webhooks for a session:
 ```
 
 **Full possible webhook config**:
-```json
+```jsonc
 {
   "name": "default",
   "config": {
@@ -345,10 +349,36 @@ You can configure proxy when for all sessions by set up environment variables.
 Read more about it on [**Proxy page** ->]({{< relref "/docs/how-to/proxy" >}}) or [**Configuration page** ->]({{<
 relref "/docs/how-to/config#proxy" >}}).
 
+### WEBJS
+
+![Dashboard - WEBJS](session-config-webjs.png)
+
+You can configure
+[**WEBJS Engine**]({{< relref "/docs/how-to/engines" >}}) 
+-specific options per session via `config.webjs`.
+
+- `tagsEventsOn` — Enable emission of special `tag:*` engine
+  [**🔄 Events**]({{< relref "/docs/how-to/events" >}}) -
+  **required** for `presence.update` and `message.ack`.
+
+**WARNING**: Enabling `tagsEventsOn` this may have a performance and stability impact. Disabled by default.
+
+```json
+{
+  "name": "default",
+  "config": {
+    "webjs": {
+      "tagsEventsOn": false
+    }
+  }
+}
+```
+
 ### NOWEB
 ![Dashboard - NOWEB](session-config-noweb.png)
 
-[NOWEB **🏭 Engine**]({{< relref "/docs/how-to/engines" >}}) has a specific store that allows you to save session data.
+[**NOWEB Engine**]({{< relref "/docs/how-to/engines" >}}) 
+has a specific store that allows you to save session data.
 
 You need to add `config.noweb` field to activate the store:
 

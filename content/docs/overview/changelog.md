@@ -52,6 +52,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.8.3` - [**🖥️ Sessions - Ignore**]({{< relref "/docs/how-to/sessions#ignore" >}}) chats - [**🟢 Status**]({{< relref "/docs/how-to/status" >}}), [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}), [**📢 Channels**]({{< relref "/docs/how-to/channels" >}})
   - {{< issue 1142 >}}, {{< issue 1190 >}}, {{< issue 1259 >}}
 - `2025.8.3` - **Dashboard** - Add copy session name button - {{< issue 1004 >}}
+- `2025.8.3` - [**WEBJS**]({{< relref "/docs/engines/webjs" >}}) - add `config.webjs.tagsEventsOn` 
 - `2025.8.2` - Add [**Send List Message API**]({{< relref "/docs/how-to/send-messages#send-list" >}})  
   - **NOWEB**, **GOWS**
   - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
@@ -70,6 +71,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.8.3` - **WEBJS** - fix stability issues
 - `2025.8.3` - **Dashboard** - Fix execute request problem - {{< issue 1004 >}}
 - `2025.8.2` - **GOWS** - fix sending [**📶 Polls**]({{< relref "docs/how-to/polls" >}}) to [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) - {{< issue 1114 >}}
 - `2025.8.2` - **GOWS** - fix sending to [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) (filter out right contacts) 
