@@ -72,6 +72,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.8.3` - **GOWS** - Create Channel with no picture - {{< issue 1293 >}}
 - `2025.8.3` - **WEBJS** - fix stability issues
 - `2025.8.3` - **Dashboard** - Fix execute request problem - {{< issue 1004 >}}
 - `2025.8.2` - **GOWS** - fix sending [**📶 Polls**]({{< relref "docs/how-to/polls" >}}) to [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) - {{< issue 1114 >}}
