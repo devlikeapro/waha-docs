@@ -93,7 +93,7 @@ Read more about it on [**Sessions page** ->]({{< relref "/docs/how-to/sessions#c
 ### Proxy6
 👉 <b><a href="https://proxy6.net/en/?r=628046" target="_blank">Proxy6</a></b>
 
-Apply the promo code to get a **5% Discount** on your purchase.
+Apply the promo code to get a **5% OFF Discount** on your purchase.
 
 ```yaml
 9W9oVxx3UX
@@ -101,6 +101,12 @@ Apply the promo code to get a **5% Discount** on your purchase.
 
 ### Geonode
 👉 <b><a href="https://geonode.com/?ref=90920" target="_blank">Geonode</a></b>
+
+Apply the promo code to get a **5% OFF Discount** on your purchase.
+
+```yaml
+GEONODEAFF
+```
 
 It might reconnect the session due to its internal **geonode** issues - {{< issue 751 >}}
 
