@@ -91,7 +91,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **⚙️ Updates**
 
-- `2025.7.3` - **GOWS** - up engine and proto to `v1025985905`
+- `2025.8.3` - **GOWS** - up engine and proto to `v1025985905`
 
 ### 2025.7
 **🆕 NEW**
