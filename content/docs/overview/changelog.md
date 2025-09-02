@@ -46,6 +46,13 @@ Latest Version:
 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 {{< /callout >}}
 
+### 2025.9
+
+🛠️ **Fixes**
+
+- `2025.9.1` - **WEBJS** - fix STARTING session issue 
+  - {{< issue 1301 >}}, {{< issue 1315 >}}, {{< issue 1314 >}}, {{< issue 1312 >}}
+
 ### 2025.8
 
 **🆕 NEW**
