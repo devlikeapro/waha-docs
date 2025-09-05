@@ -48,6 +48,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ### 2025.9
 
+**🆕 NEW**
+
+- `2025.9.2` - **Dashboard** - Show WAHA_API_KEY warning
+
 🛠️ **Fixes**
 
 - `2025.9.1` - **WEBJS** - fix STARTING session issue 
