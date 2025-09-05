@@ -54,6 +54,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.9.2` - **NOWEB** - Fix `message.any` with `fromMe: 1`
+  - {{< issue 1318 >}}, {{< issue 1338 >}}
 - `2025.9.1` - **WEBJS** - fix STARTING session issue 
   - {{< issue 1301 >}}, {{< issue 1315 >}}, {{< issue 1314 >}}, {{< issue 1312 >}}
 
