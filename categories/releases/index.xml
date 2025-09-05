@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on WAHA</title><link>/categories/releases/</link><description>Recent content in Releases on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 29 Jul 2025 08:48:45 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.7 - ChatWoot App, Dashboard i18n, and more!</title><link>/blog/waha-2025-7/</link><pubDate>Tue, 29 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-7/</guid><description>&lt;h2 id="-chatwoot-app">🧩 ChatWoot App&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on WAHA</title><link>/categories/releases/</link><description>Recent content in Releases on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 29 Aug 2025 08:48:45 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.8 - Ignore Chats, Send Poll Vote, and more!</title><link>/blog/waha-2025-8/</link><pubDate>Fri, 29 Aug 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-8/</guid><description>&lt;p>
+
+&lt;img
+ src="/blog/waha-2025-8/waha-2025-8_hu_b13a1b8ee62c81fc.webp"
+ width="1200"
+ height="600"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="WAHA 2025.8"id="h-rh-i-0"
+/>&lt;/p>
+&lt;h2 id="-sessions---ignore-chats">🖥️ Sessions - Ignore Chats&lt;/h2>
+&lt;p>You can now ignore incoming chats at the engine level — Status, Groups, and Channels — to keep your processing focused and clean.&lt;/p></description></item><item><title>WAHA 2025.7 - ChatWoot App, Dashboard i18n, and more!</title><link>/blog/waha-2025-7/</link><pubDate>Tue, 29 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-7/</guid><description>&lt;h2 id="-chatwoot-app">🧩 ChatWoot App&lt;/h2>
 &lt;p>Meet the first built-in app in WAHA - &lt;a href="/docs/apps/chatwoot/">&lt;strong>🧩 ChatWoot App&lt;/strong>&lt;/a>!&lt;/p>
 &lt;p>
 
@@ -75,10 +87,4 @@ we have fixed them in this release!&lt;/p></description></item><item><title>WAHA
 &lt;p>Managing your WhatsApp profile has never been easier.&lt;/p></description></item><item><title>WAHA 2025.1</title><link>/blog/waha-2025-1/</link><pubDate>Thu, 30 Jan 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-1/</guid><description>&lt;p>🎉 We are thrilled to announce the changes we made during the &lt;a href="/docs/overview/changelog/#20251">&lt;strong>WAHA 2025.1&lt;/strong>&lt;/a> 🎉&lt;/p>
 &lt;h2 id="gows-engine">GOWS engine&lt;/h2>
 &lt;p>Meet &lt;strong>GOWS&lt;/strong> - new, fast, super-reliable and stable &lt;a href="/docs/how-to/engines/">&lt;strong>🏭 Engine&lt;/strong>&lt;/a> for your WAHA instance!&lt;/p></description></item><item><title>WAHA 2024.12</title><link>/blog/waha-2024-12/</link><pubDate>Mon, 30 Dec 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-12/</guid><description>&lt;p>🎉🎉🎉 First of all, &lt;strong>Happy New Year!&lt;/strong> We wish you all the best in the New 2025 Year! 🎉🎉🎉&lt;/p>
-&lt;p>We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202412">&lt;strong>WAHA 2024.12&lt;/strong>&lt;/a>!&lt;/p></description></item><item><title>WAHA 2024.11</title><link>/blog/waha-2024-11/</link><pubDate>Sat, 30 Nov 2024 08:48:45 +0000</pubDate><guid>/blog/waha-2024-11/</guid><description>&lt;p>🎉 We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202411">&lt;strong>WAHA 2024.11&lt;/strong>&lt;/a> 🎉&lt;/p>
-&lt;h2 id="event-monitor">Event Monitor&lt;/h2>
-&lt;p>Now you can observe the
-&lt;a href="/docs/how-to/events/">&lt;strong>Events&lt;/strong>&lt;/a>
-happening in your WAHA instance in real-time with the new
-&lt;a href="/docs/how-to/dashboard/#event-monitor">&lt;strong>Event Monitor&lt;/strong>&lt;/a>
-feature!&lt;/p></description></item></channel></rss>
+&lt;p>We are thrilled to announce the release of &lt;a href="/docs/overview/changelog/#202412">&lt;strong>WAHA 2024.12&lt;/strong>&lt;/a>!&lt;/p></description></item></channel></rss>

@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on WAHA</title><link>/contributors/devlikeapro/</link><description>Recent content in devlikeapro on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 29 Jul 2025 08:48:45 +0000</lastBuildDate><atom:link href="/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.7 - ChatWoot App, Dashboard i18n, and more!</title><link>/blog/waha-2025-7/</link><pubDate>Tue, 29 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-7/</guid><description>&lt;h2 id="-chatwoot-app">🧩 ChatWoot App&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on WAHA</title><link>/contributors/devlikeapro/</link><description>Recent content in devlikeapro on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 29 Aug 2025 08:48:45 +0000</lastBuildDate><atom:link href="/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.8 - Ignore Chats, Send Poll Vote, and more!</title><link>/blog/waha-2025-8/</link><pubDate>Fri, 29 Aug 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-8/</guid><description>&lt;p>
+
+&lt;img
+ src="/blog/waha-2025-8/waha-2025-8_hu_b13a1b8ee62c81fc.webp"
+ width="1200"
+ height="600"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="WAHA 2025.8"id="h-rh-i-0"
+/>&lt;/p>
+&lt;h2 id="-sessions---ignore-chats">🖥️ Sessions - Ignore Chats&lt;/h2>
+&lt;p>You can now ignore incoming chats at the engine level — Status, Groups, and Channels — to keep your processing focused and clean.&lt;/p></description></item><item><title>WAHA 2025.7 - ChatWoot App, Dashboard i18n, and more!</title><link>/blog/waha-2025-7/</link><pubDate>Tue, 29 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-7/</guid><description>&lt;h2 id="-chatwoot-app">🧩 ChatWoot App&lt;/h2>
 &lt;p>Meet the first built-in app in WAHA - &lt;a href="/docs/apps/chatwoot/">&lt;strong>🧩 ChatWoot App&lt;/strong>&lt;/a>!&lt;/p>
 &lt;p>
 
@@ -131,5 +143,4 @@ This means your API key is never stored in plain text, reducing the risk if your
 &lt;a href="/docs/how-to/presence/">&lt;strong>✅ Presence&lt;/strong>&lt;/a> API and Events
 to track your customers&amp;rsquo; online status!&lt;/p></description></item><item><title>🚨 WAHA Security Alert</title><link>/blog/security-alert/</link><pubDate>Tue, 29 Apr 2025 08:48:45 +0000</pubDate><guid>/blog/security-alert/</guid><description>&lt;hr>
 &lt;h2 id="-waha-security-alert">🚨 WAHA Security Alert&lt;/h2>
-&lt;p>We’ve recently seen a disturbing trend: users running WAHA with the &lt;strong>API publicly exposed&lt;/strong> and &lt;strong>without any form of protection&lt;/strong>.&lt;/p></description></item><item><title>WAHA 2025.4 - Read Chat Messages, Group Acks, and Engines Stability!</title><link>/blog/waha-2025-4/</link><pubDate>Tue, 29 Apr 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-4/</guid><description>&lt;hr>
-&lt;p>We’re excited to introduce &lt;a href="/docs/overview/changelog/#20254">&lt;strong>WAHA 2025.4&lt;/strong>&lt;/a>, packed with new API capabilities, group handling improvements, and crucial bug fixes across all engines!&lt;/p></description></item></channel></rss>
+&lt;p>We’ve recently seen a disturbing trend: users running WAHA with the &lt;strong>API publicly exposed&lt;/strong> and &lt;strong>without any form of protection&lt;/strong>.&lt;/p></description></item></channel></rss>
