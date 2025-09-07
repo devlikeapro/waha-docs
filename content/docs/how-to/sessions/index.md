@@ -294,7 +294,8 @@ What is **NOT filtered**:
     "ignore": {
       "status": true,
       "groups": false,
-      "channels": true
+      "channels": true,
+      "broadcast": true
     }
   }
 }
@@ -303,6 +304,7 @@ What is **NOT filtered**:
 - `config.ignore.status=true` - ignore [**🟢 Status**]({{< relref "/docs/how-to/status" >}})
 - `config.ignore.groups=true` - ignore [**👥 Groups**]({{< relref "/docs/how-to/groups" >}})
 - `config.ignore.channels=true` - ignore [**📢 Channels**]({{< relref "/docs/how-to/channels" >}})
+- `config.ignore.broadcast=true` - ignore 📡 Broadcast (`*@broadcast`), excluding `status@broadcast` (use `config.ignore.status` for Status)
 
 If you don't provide `config.ignore` - it'll use configuration from environment variables [**⚙️ Configuration**]({{< relref "/docs/how-to/config#sessions---ignore-chats" >}}).
 

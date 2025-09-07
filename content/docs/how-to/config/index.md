@@ -152,6 +152,7 @@ You can configure default ignore rules for all sessions via environment variable
 - `WAHA_SESSION_CONFIG_IGNORE_STATUS=false` – ignore [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) events where chat id is `status@broadcast`
 - `WAHA_SESSION_CONFIG_IGNORE_GROUPS=false` – ignore [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) events where chat id is `.*@g.us`
 - `WAHA_SESSION_CONFIG_IGNORE_CHANNELS=false` – ignore [**📢 Channels**]({{< relref "/docs/how-to/channels" >}}) events where chat id is `.*@newsletter`
+- `WAHA_SESSION_CONFIG_IGNORE_BROADCAST=false` – ignore 📡 Broadcast events where chat id is `.*@broadcast` (excludes `status@broadcast`; use `WAHA_SESSION_CONFIG_IGNORE_STATUS` for Status)
 
 Read more about `config.ignore` on [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions#ignore" >}}) page.
 

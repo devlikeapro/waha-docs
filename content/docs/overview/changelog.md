@@ -50,7 +50,15 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🆕 NEW**
 
+- `2025.9.3` - [**🖥️ Sessions - Ignore**]({{< relref "/docs/how-to/sessions#ignore" >}}) 📡 Broadcast support, `WAHA_SESSION_CONFIG_IGNORE_BROADCAST` env variable - {{< issue 1346 >}}
 - `2025.9.2` - **Dashboard** - Show WAHA_API_KEY warning
+
+**🧩 Apps**
+
+- `2025.9.3` - **ChatWoot** - disable "server" commands - {{< issue 1182 >}}
+- `2025.9.3` - **ChatWoot** - temporally disable app - {{< issue 1260 >}}
+- `2025.9.3` - **ChatWoot** - link preview config: no, low, high quality 
+  - {{< issue 1162 >}}, {{< issue 1274 >}}
 
 🛠️ **Fixes**
 
