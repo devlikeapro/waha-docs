@@ -1,8 +1,8 @@
-[[main]]
-name = "🤖 GPT"
-identifier = "gpt"
-weight = 1
-url = "/gpt"
+#[[main]]
+#name = "🤖 GPT"
+#identifier = "gpt"
+#weight = 1
+#url = "/gpt"
 
 [[docs]]
 name = "Overview"
