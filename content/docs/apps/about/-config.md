@@ -13,6 +13,10 @@ To use
 - `WAHA_API_KEY_PLAIN=0000000000000000` - plain password **required** for Apps in environment variables
   - It's a quick solution, we're working on removing it so you can use `sha512` version as in `WAHA_API_KEY`
 
+**ChatWoot App**:
+
+- `WAHA_APPS_CHATWOOT_LANGUAGES_FOLDER=/app/.languages` - folder for additional languages (if language exists it'll override templates in the original templates)
+
 **Jobs**: 
 
 You can configure a background worker [http://localhost:3000/jobs](http://localhost:3000/jobs)
