@@ -61,9 +61,15 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.9.3` - **ChatWoot** - temporally disable app - {{< issue 1260 >}}
 - `2025.9.3` - **ChatWoot** - link preview config: no, low, high quality 
   - {{< issue 1162 >}}, {{< issue 1274 >}}
+- `2025.9.3` - **ChatWoot** - Share Contact message - {{< issue 1175 >}}
+- `2025.9.3` - **ChatWoot** - Location message - {{< issue 1205 >}}
+- `2025.9.3` - **ChatWoot** - Unsupported messages - {{< issue 1267 >}}
+- `2025.9.3` - **ChatWoot** - Receive Broadcast List message - {{< issue 1321 >}}
 
 🛠️ **Fixes**
 
+- `2025.9.3` - **ChatWoot** - Fix blank card PDF message - {{< issue 1330 >}}
+- `2025.9.3` - **ChatWoot** - Fix blank card on receiving Audio message - {{< issue 1340 >}}
 - `2025.9.2` - **NOWEB** - Fix `message.any` with `fromMe: 1`
   - {{< issue 1318 >}}, {{< issue 1338 >}}
 - `2025.9.1` - **WEBJS** - fix STARTING session issue 
