@@ -112,9 +112,7 @@ Read more about [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}})
 - `WHATSAPP_DEFAULT_ENGINE=WEBJS` - set the default engine for all sessions. Available options: `WEBJS`, `NOWEB`, `GOWS`. By default, it's `WEBJS`.
 
 ### WEBJS
-You can use some of the following environment variables to configure the [**WEBJS**]({{< relref "/docs/how-to/engines#webjs" >}}) session:
-- `WAHA_WEBJS_CACHE_TYPE=local` - enable cache (aka use the latest version) for the **web page** in the browser. By default, it's `none` (no cache)
-- `WAHA_WEBJS_WEB_VERSION=2.3000.XXXX` - set the version of the WhatsApp Web to use. By default, we're using the latest compatible version. Only works with `local` cache type.
+{{< include file="content/docs/engines/webjs/-env-config.md" >}}
 
 ## Sessions
 

@@ -69,7 +69,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 🛠️ **Fixes**
 
 - `2025.9.3` - **WEBJS** - add `--disable-blink-features=AutomationControlled` - {{< issue 1348 >}}
-- `2025.9.3` - **WEBJS** - add `WAHA_WEBJS_PUPPETER_ARGS` to add custom puppeter args (for testing primarily) - {{< issue 1348 >}}
+- `2025.9.3` - **WEBJS** - add `WAHA_WEBJS_PUPPETER_ARGS` to add custom puppeter args (for testing primarily)
+  - `WAHA_WEBJS_PUPPETER_ARGS=--single-process` - {{< issue 1348 >}}
 - `2025.9.3` - **ChatWoot** - Fix blank card PDF message - {{< issue 1330 >}}
 - `2025.9.3` - **ChatWoot** - Fix blank card on receiving Audio message - {{< issue 1340 >}}
 - `2025.9.2` - **NOWEB** - Fix `message.any` with `fromMe: 1`
