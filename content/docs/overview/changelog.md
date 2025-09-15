@@ -56,7 +56,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🧩 Apps**
 
-- `2025.9.3` - **ChatWoot** -  [**Language Template - Agent Name**]({{< relref "/docs/apps/chatwoot#language" >}}) - {{< issue 1161 >}}
+- `2025.9.4` - **ChatWoot** - skip `STARTING => WORKING` messages if the session recovers fast (10 seconds) - {{< issue 1342 >}}
+- `2025.9.3` - **ChatWoot** - [**Language Template - Agent Name**]({{< relref "/docs/apps/chatwoot#language" >}}) - {{< issue 1161 >}}
 - `2025.9.3` - **ChatWoot** - [**Language Template - Integration Contact Name**]({{< relref "/docs/apps/chatwoot#language" >}}) - {{< issue 1160 >}}
 - `2025.9.3` - **ChatWoot** - disable "server" commands - {{< issue 1182 >}}
 - `2025.9.3` - **ChatWoot** - temporally disable app - {{< issue 1260 >}}
