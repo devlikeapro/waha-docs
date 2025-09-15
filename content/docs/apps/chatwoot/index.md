@@ -281,11 +281,11 @@ Prefix all **Chatwoot to WhatsApp** messages with the **agent name**.
 </div>
 
 ```yaml
-chatwoot.to.whatsapp.message.text: |
+chatwoot.to.whatsapp.message.text: |-
   *{{{chatwoot.sender.name}}}*:
   {{{ content }}}
 
-chatwoot.to.whatsapp.message.media.caption: |
+chatwoot.to.whatsapp.message.media.caption: |-
   {{#singleAttachment}}
   {{#content}}
   *{{{chatwoot.sender.name}}}*:
