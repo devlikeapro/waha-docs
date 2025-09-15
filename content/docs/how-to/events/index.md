@@ -384,7 +384,21 @@ The `session.status` event is triggered when the session status changes.
         "pushName": "~"
     },
     "payload": {
-        "status": "WORKING"
+        "status": "WORKING",
+        "statuses": [ 
+            {
+                "status": "STOPPED",
+                "timestamp": 1700000001000,
+            },
+            {
+                "status": "STARTING",
+                "timestamp": 1700000002000,
+            },
+            {
+                "status": "WORKING",
+                "timestamp": 1700000003000,
+            },
+        ],
     },
     "engine": "WEBJS",
     "environment": {
@@ -394,6 +408,8 @@ The `session.status` event is triggered when the session status changes.
     }
 }
 ```
+- `status` - current session status
+- `statuses` - recent 3 statuses
 
 ### message
 
