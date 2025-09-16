@@ -317,6 +317,20 @@ app.inbox.contact.avatar.url: |-
   https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png
 ```
 
+### Group Participant At The Bottom
+You can move the "participant" part to the bottom in group chat messages
+
+<div class="text-center mb-2">
+  <img src="./screenshots/templates-participant-at-the-bottom.png" alt="Participant At The Bottom" style="max-width: 500px"/>
+</div>
+
+```yaml
+whatsapp.group.message: |-
+  {{{text}}}
+  
+  👥 *{{{participant}}}*
+```
+
 ## How it works
 
 {{< include file="content/docs/apps/about/-how-it-works.md" >}}

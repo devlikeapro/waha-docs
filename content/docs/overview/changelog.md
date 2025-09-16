@@ -56,6 +56,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🧩 Apps**
 
+- `2025.9.5` - **ChatWoot** - group participant at the top by default or [**Language Template - Group Participant At The Bottom**]({{< relref "/docs/apps/chatwoot#language" >}}) - {{< issue 1369 >}}
 - `2025.9.4` - **ChatWoot** - skip `STARTING => WORKING` messages if the session recovers fast (10 seconds) - {{< issue 1342 >}}
 - `2025.9.3` - **ChatWoot** - [**Language Template - Agent Name**]({{< relref "/docs/apps/chatwoot#language" >}}) - {{< issue 1161 >}}
 - `2025.9.3` - **ChatWoot** - [**Language Template - Integration Contact Name**]({{< relref "/docs/apps/chatwoot#language" >}}) - {{< issue 1160 >}}
