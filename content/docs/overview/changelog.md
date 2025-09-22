@@ -85,6 +85,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **⚙️ Updates**
 
+- `2025.9.4` - **NOWEB** - update engine to `7.0.0` with ESM support
+- `2025.9.4` - **NOWEB** - proto to `v1027393660`
 - `2025.9.4` - **GOWS** - update to `v1027043088`
 - `2025.9.3` - **WEBJS** - up chrome (140.0.7339.80-1) and puppeter (24.19.0)
 - `2025.9.3` - **NOWEB** - update proto to `v1025985905`
