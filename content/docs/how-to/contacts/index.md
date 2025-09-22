@@ -25,8 +25,22 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 WhatsApp Web does not support adding contacts, so the API doesn't support it too.
 {{< /callout >}}
 
-## API - Contacts
-See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).
+## @lid and @c.us
+WhatsApp finalized its **LID** (Local Identifier) update (which it started in 2023).
+
+This **LID** system assures the anonymity of users in large groups,
+allowing the WhatsApp client to show a masked value (for example `+43.......21`) instead of a full phone number.
+This is done to ensure the privacy of users.
+
+WhatsApp is also adding a username system (@username); relying solely on a phone number to identify a user can be
+cumbersome or even impossible in some contexts. Thus, WhatsApp now assigns a **LID** to each user on its platform.
+
+This **LID** is unique to each user, similar to a JID (phone number–based). 
+You can message anyone using either their **LID** or their **PN**.
+
+👉 Use the [**API - Lids**]({{< relref "/docs/how-to/contacts/#api---lids" >}}) to map between a **Phone Number** (`@c.us`)
+and a **LID** (`@lid`) in both directions.
+
 
 ### Get all contacts
 
@@ -76,7 +90,7 @@ Get contact
 GET /api/contacts?contactId={ID}&session={SESSION}
 ```
 
-- `ID` - either phone number (`123123123`) or chat id (`123123@c.us`)
+- `ID` - either phone number (`123123123`) or chat id (`123123@c.us` or `123123@lid`)
 
 ```jsonc {title="Response"}
 {
@@ -109,7 +123,7 @@ PUT /api/{session}/contacts/{chatId}
 
 **Path Parameters**:
 - `{session}` - session name - `default`
-- `{chatId}` - chat ID can end with "@c.us" or can be just a phone number - `12132132130`
+- `{chatId}` - chat ID can end with "@c.us" or "@lid", or can be just a phone number - `12132132130`
 
 {{< callout context="note" icon="outline/address-book" title="Phone Address Book Update Note" >}}
 - If you have multiple **WhatsApp** apps installed on your phone, the API might only work with one account.
@@ -148,7 +162,7 @@ It's fine to send the response to `chatId` for incoming messages, though - the p
 GET /api/contacts/about?contactId={ID}&session={SESSION}
 ```
 
-- `ID` - either phone number (`123123123`) or chat id (`123123@c.us`)
+- `ID` - either phone number (`123123123`) or chat id (`123123@c.us` or `123123@lid`)
 
 ```jsonc { title="Response" }
 {
@@ -281,6 +295,7 @@ GET /api/{session}/lids/pn/{phoneNumber}
 Fetch the LID for a given phone number (chat ID).
 
 👉 Remember to escape `@` in `phoneNumber` with `%40` (`123123%40lid`) or use just a number (`123123`)
+👉 Remember to escape `@` in `phoneNumber` with `%40` (e.g. `123123%40c.us`) or use just a number (`123123`)
 
 {{< tabs "lids-get-lid-response" >}}
 {{< tab "Response (Found)" >}}
