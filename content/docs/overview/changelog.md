@@ -71,6 +71,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.9.5` - **NOWEB** - Fix `fromMe` in group messages - {{< issue 1350 >}}
 - `2025.9.4` - **ChatWoot** - Fix blank card PDF message - {{< issue 1330 >}}
 - `2025.9.4` - **ChatWoot** - Fix blank card on receiving Audio message - {{< issue 1340 >}}
 - `2025.9.3` - **WEBJS** - add `--disable-blink-features=AutomationControlled` - {{< issue 1348 >}}
@@ -85,10 +86,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **⚙️ Updates**
 
-- `2025.9.4` - **WEBJS** - up engine to `2025.09.10`
-- `2025.9.4` - **NOWEB** - update engine to `7.0.0` with ESM support
-- `2025.9.4` - **NOWEB** - proto to `v1027393660`
-- `2025.9.4` - **GOWS** - update to `v1027043088`
+- `2025.9.5` - **WEBJS** - up engine to `2025.09.10`
+- `2025.9.5` - **NOWEB** - update engine to `7.0.0` with ESM support
+- `2025.9.5` - **NOWEB** - proto to `v1027393660`
+- `2025.9.5` - **GOWS** - update to `v1027043088`
 - `2025.9.3` - **WEBJS** - up chrome (140.0.7339.80-1) and puppeter (24.19.0)
 - `2025.9.3` - **NOWEB** - update proto to `v1025985905`
 
