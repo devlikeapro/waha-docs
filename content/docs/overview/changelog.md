@@ -85,6 +85,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **⚙️ Updates**
 
+- `2025.9.4` - **WEBJS** - up engine to `2025.09.10`
 - `2025.9.4` - **NOWEB** - update engine to `7.0.0` with ESM support
 - `2025.9.4` - **NOWEB** - proto to `v1027393660`
 - `2025.9.4` - **GOWS** - update to `v1027043088`
