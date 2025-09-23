@@ -177,22 +177,4 @@ Read more about
 
 ### presence.update
 
-You can subscribe to `presence.update` webhook event to get the most recent presence information.
-
-```jsonc { title="presence.update" }
-{
-    "event": "presence.update",
-    "session": "default",
-    "payload": {
-        "id": "111111111111111111@g.us",
-        "presences": [
-            {
-                "participant": "11111111111@c.us",
-                "lastKnownPresence": "typing",
-                "lastSeen": null
-            }
-        ]
-    },
-    "engine": "NOWEB"
-}
-```
+{{< include file="content/docs/how-to/presence/-events-presence.update.md" >}}

@@ -627,26 +627,8 @@ revokes a previously sent message.
 
 ### presence.update
 
-- `payload.id` indicates the chat - either direct chat with a contact or a group chat.
-- `payload.id.[].participant` - certain participant presence status. For a direct chat there's only one participant.
+{{< include file="content/docs/how-to/presence/-events-presence.update.md" >}}
 
-```jsonc { title="presence.update" }
-{
-    "event": "presence.update",
-    "session": "default",
-    "engine": "NOWEB",
-    "payload": {
-        "id": "111111111111111111@g.us",
-        "presences": [
-            {
-                "participant": "11111111111@c.us",
-                "lastKnownPresence": "typing",
-                "lastSeen": null
-            }
-        ]
-    }
-}
-```
 
 ### poll.vote
 We have a dedicated page [how to send polls and receive votes]({{< relref "/docs/how-to/polls" >}})!
