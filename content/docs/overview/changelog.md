@@ -72,6 +72,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.9.5` - **GOWS** - Fix "typing" after message sent - {{< issue 1364 >}}
 - `2025.9.5` - **NOWEB** - Fix login via phone - {{< issue 1385 >}}
 - `2025.9.5` - **NOWEB** - Fix `fromMe` in group messages - {{< issue 1350 >}}
 - `2025.9.4` - **ChatWoot** - Fix blank card PDF message - {{< issue 1330 >}}
