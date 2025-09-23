@@ -50,6 +50,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🆕 NEW**
 
+- `2025.9.5` - **WEBJS** - `POST /api/sendContactVcard` - {{< issue 1341 >}}
 - `2025.9.4` - add `statuses` to `session.status` [**🔄 Events**]({{< relref "/docs/how-to/events#sessionstatus" >}}) - 3 recent statuses with timestamp
 - `2025.9.3` - [**🖥️ Sessions - Ignore**]({{< relref "/docs/how-to/sessions#ignore" >}}) 📡 Broadcast support, `WAHA_SESSION_CONFIG_IGNORE_BROADCAST` env variable - {{< issue 1346 >}}
 - `2025.9.2` - **Dashboard** - Show WAHA_API_KEY warning

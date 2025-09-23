@@ -20,7 +20,7 @@
 | `POST /api/{session}/presence`                              |                              ✔️                              |  ✔️  |  ✔️   |
 | `POST /api/reaction`                                        |                              ✔️                              |  ✔️  |  ✔️   |
 | `POST /api/star`                                            |                              ✔️                              |      |  ✔️   |
-| `POST /api/sendContactVcard`                                |                                                              |  ✔️  |  ✔️   |
+| `POST /api/sendContactVcard`                                |                              ✔️                              |  ✔️  |  ✔️   |
 | `GET /api/messages`                                         |                              ✔️                              |      |  ✔️¹  |
 | `GET /api/checkNumberStatus`                                |                              ✔️                              |  ✔️  |  ✔️   |
 | `POST /api/send/buttons/reply`                              |                              ➕                               |      |       |
