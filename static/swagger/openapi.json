@@ -6348,14 +6348,7 @@
             "description": ""
           },
           "201": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
+            "description": ""
           }
         },
         "tags": [
@@ -6415,14 +6408,7 @@
             "description": ""
           },
           "201": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
+            "description": ""
           }
         },
         "tags": [
@@ -6495,6 +6481,33 @@
       }
     },
     "/api/apps/{id}": {
+      "get": {
+        "operationId": "AppsController_get",
+        "summary": "Get app by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      },
       "put": {
         "operationId": "AppsController_update",
         "summary": "Update an existing app",
@@ -6595,7 +6608,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2025.8.2",
+    "version": "2025.9.5",
     "contact": {}
   },
   "tags": [
@@ -6794,6 +6807,27 @@
           "server"
         ]
       },
+      "IgnoreConfig": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "boolean",
+            "description": "Ignore a status@broadcast (stories) events"
+          },
+          "groups": {
+            "type": "boolean",
+            "description": "Ignore groups events"
+          },
+          "channels": {
+            "type": "boolean",
+            "description": "Ignore channels events"
+          },
+          "broadcast": {
+            "type": "boolean",
+            "description": "Ignore broadcast events (broadcast list and status)"
+          }
+        }
+      },
       "NowebStoreConfig": {
         "type": "object",
         "properties": {
@@ -6829,6 +6863,16 @@
         "required": [
           "markOnline"
         ]
+      },
+      "WebjsConfig": {
+        "type": "object",
+        "properties": {
+          "tagsEventsOn": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable emission of special 'tag:*' engine events required for presence.update and message.ack.\nWARNING: Enabling this may have performance and stability impact. Disabled by default."
+          }
+        }
       },
       "HmacConfiguration": {
         "type": "object",
@@ -6952,6 +6996,19 @@
             "type": "boolean",
             "default": false
           },
+          "ignore": {
+            "example": {
+              "status": null,
+              "groups": null,
+              "channels": null
+            },
+            "description": "Ignore some events related to specific chats",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/IgnoreConfig"
+              }
+            ]
+          },
           "noweb": {
             "example": {
               "store": {
@@ -6962,6 +7019,14 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/NowebConfig"
+              }
+            ]
+          },
+          "webjs": {
+            "description": "WebJS-specific settings.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WebjsConfig"
               }
             ]
           },
@@ -9703,6 +9768,11 @@
       "App": {
         "type": "object",
         "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable or disable this app without deleting it. If omitted, treated as enabled (true)."
+          },
           "id": {
             "type": "string"
           },
@@ -9726,6 +9796,28 @@
           "config"
         ]
       },
+      "SessionStatusPoint": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "STOPPED",
+              "STARTING",
+              "SCAN_QR_CODE",
+              "WORKING",
+              "FAILED"
+            ]
+          },
+          "timestamp": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "status",
+          "timestamp"
+        ]
+      },
       "WASessionStatusBody": {
         "type": "object",
         "properties": {
@@ -9742,11 +9834,18 @@
               "WORKING",
               "FAILED"
             ]
+          },
+          "statuses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SessionStatusPoint"
+            }
           }
         },
         "required": [
           "name",
-          "status"
+          "status",
+          "statuses"
         ]
       },
       "WAHAWebhookSessionStatus": {
