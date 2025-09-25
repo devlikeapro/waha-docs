@@ -325,5 +325,5 @@ Fetch the LID for a given phone number (chat ID).
 [**open an issue**](https://github.com/devlikeapro/waha)
 and tell what
 [**🏭 Engine**]({{< relref "/docs/how-to/engines" >}})
-you're using and what behaviour you see.
+you're using and what behavior you see.
 {{< /callout >}}

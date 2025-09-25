@@ -8,6 +8,7 @@ To use
 **Apps**:
 
 - `WAHA_APPS_ENABLED=True` - Enables the [**🧩 Apps**]({{< relref "/docs/apps/about" >}}) functionality
+- `WAHA_PUBLIC_URL=https://w.example.com` — the publicly available link to the dashboard (use this if `WAHA_BASE_URL` is set to an internal address for Docker).
 - `REDIS_URL=redis://:redis@redis:6379` - Specifies the Redis URL required for processing background jobs
 - `WHATSAPP_DEFAULT_ENGINE=GOWS` - Sets the recommended engine for reliable **WhatsApp** automation
 - `WAHA_API_KEY_PLAIN=0000000000000000` - plain password **required** for Apps in environment variables
@@ -16,6 +17,8 @@ To use
 **ChatWoot App**:
 
 - `WAHA_APPS_CHATWOOT_LANGUAGES_FOLDER=/app/.languages` - folder for additional languages (if language exists it'll override templates in the original templates)
+- `RACK_TIMEOUT_SERVICE_TIMEOUT=60` — increases the default Rack timeout to 60s (default is 15s).
+
 
 **Jobs**: 
 

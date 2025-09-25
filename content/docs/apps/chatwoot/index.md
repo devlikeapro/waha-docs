@@ -34,6 +34,48 @@ We cover all installation and configuration aspects in the following series of a
 
 {{< include file="content/docs/apps/about/-config.md" >}}
 
+## Conversations
+You can map **WhatsApp** chats to **Chatwoot** conversations in two ways.
+Your **Chatwoot** and **WAHA** settings **must be kept in sync**.
+
+### Single Conversation
+**One conversation** per WhatsApp chat (WhatsApp-like **behavior**). Each message goes
+to a **single** conversation. Every contact in **Chatwoot** has only **one** open (or
+resolved) conversation, and incoming WhatsApp messages are added to that
+conversation (and **reopen** it if it’s closed).
+
+Set in **Chatwoot**:
+- **Inbox** - **Lock to single conversation** - **Enabled**
+
+![](screenshots/single-chatwoot.png)
+
+Set in **WAHA**:
+- **Select conversation behavior** - **Created: Newest**
+- **Use Conversation with Status** - **Use Any Status**
+
+![](screenshots/single-waha.png)
+
+### Multiple Conversations
+**Multiple conversations** per WhatsApp chat (Chatwoot’s **philosophy**).
+
+A conversation remains active until an agent **resolves** it. After resolution,
+a new incoming **message creates a new conversation**.
+
+Set in **Chatwoot**:
+- **Inbox** - **Lock to single conversation** - **Disabled**
+
+![](screenshots/multiple-chatwoot.png)
+
+Set in **WAHA**:
+- **Select conversation behavior** - **Activity: Newest**
+- **Use Conversation with Status** - **Use Only: Open, Pending, Snoozed**
+
+{{< callout context="caution" title="Activity Includes Conversation Status Changes">}}
+If you set **Select conversation behavior** to **Activity: Newest**, **Chatwoot** treats conversation **status changes** as **activity**.
+{{< /callout >}}
+
+![](screenshots/multiple-waha.png)
+
 ## Language
 You can adjust **messages, templates, and branding** in the content WAHA sends to Chatwoot and WhatsApp
 by providing key-value overrides in **YAML**.

@@ -86,6 +86,7 @@ docker compose up -d
 - `WHATSAPP_API_SCHEMA=https` - it just changes `media.url` schema when you receive media (with files) messages.
 - `WAHA_BASE_URL` - will be used to construct the `media.url` field in the webhook events. 
   - By default, it's `{WHATSAPP_API_SCHEMA}://{WHATSAPP_API_HOSTNAME}:{WHATSAPP_API_PORT}`.
+- `WAHA_PUBLIC_URL=https://w.example.com` — the publicly available link to the dashboard (use this if `WAHA_BASE_URL` is set to an internal address for Docker).
 - `TZ=Europe/Warsaw` - set the timezone for the container. The default value is `UTC`. Find [your timezone in the list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 - `WAHA_DEBUG_MODE=false` - enables some API only for development or troubleshooting purposes. Disabled by default.
   - Read more on [**🔍 Observability**]({{< relref "/docs/how-to/observability#waha-debug-mode" >}}) page.

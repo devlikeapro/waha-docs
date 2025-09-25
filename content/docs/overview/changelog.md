@@ -57,6 +57,13 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🧩 Apps**
 
+- `2025.9.6` - **ChatWoot** - [**Conversation Control**]({{< relref "/docs/apps/chatwoot#conversations" >}})
+  - {{< issue 1216 >}}, {{< issue 1357 >}}, {{< issue 1237 >}}, {{< issue 1343 >}}, {{< issue 1213 >}}
+- `2025.9.6` - **ChatWoot** - fix Duplicating Audio Message When Automatically transcribe audio enabled - {{< issue 1371 >}}
+- `2025.9.6` - **ChatWoot** - add `ChatWootAppConfig` to OpenAPI - {{< issue 1416 >}}
+- `2025.9.6` - **ChatWoot** - add additional **9** in Brazil phone numbers - {{< issue 1261 >}}
+- `2025.9.6` - **ChatWoot** - check contact attributes before updating - {{< issue 1173 >}}
+- `2025.9.6` - **ChatWoot** - Use group name for contact - {{< issue 1245 >}}
 - `2025.9.5` - **ChatWoot** - group participant at the top by default or [**Language Template - Group Participant At The Bottom**]({{< relref "/docs/apps/chatwoot#language" >}}) - {{< issue 1369 >}}
 - `2025.9.4` - **ChatWoot** - skip `STARTING => WORKING` messages if the session recovers fast (10 seconds) - {{< issue 1342 >}}
 - `2025.9.3` - **ChatWoot** - [**Language Template - Agent Name**]({{< relref "/docs/apps/chatwoot#language" >}}) - {{< issue 1161 >}}
@@ -72,6 +79,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.9.5` - **ChatWoot** - fix `/jobs` auth - {{< issue 1398 >}}
+- `2025.9.5` - **ChatWoot** - fix 500 API Error `GET /public/conversations - timeout` - {{< issue 1389 >}}
 - `2025.9.5` - **GOWS** - Fix "typing" after message sent - {{< issue 1364 >}}
 - `2025.9.5` - **NOWEB** - Fix login via phone - {{< issue 1385 >}}
 - `2025.9.5` - **NOWEB** - Fix `fromMe` in group messages - {{< issue 1350 >}}
@@ -397,7 +406,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 `2025.2.3`
 - Add [**🆔 Profile API**]({{< relref "/docs/how-to/profile" >}} ) to get and update profile information {{< issue 529 >}} 
   - **WEBJS**, **NOWEB**, **GOWS** engines
-- Fix `hasMedia` behaviour - now when you request messages with `downloadMedia=False`, `hasMedia: true` if message has media
+- Fix `hasMedia` behavior - now when you request messages with `downloadMedia=False`, `hasMedia: true` if message has media
   - **WEBJS**, **NOWEB**, **GOWS** engines
 
 `2025.2.2`

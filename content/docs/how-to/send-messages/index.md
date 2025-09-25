@@ -177,7 +177,7 @@ POST /api/sendText
 }
 ```
 
-If the text has a link - it generates a preview for that link. You adjust the behaviour by setting
+If the text has a link - it generates a preview for that link. You adjust the behavior by setting
 - `linkPreview: true` - to enable link preview
 - `linkPreviewHighQuality: true` - to enable high-quality link preview (requires additional upload to WA servers)
 
