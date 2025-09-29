@@ -38,6 +38,9 @@ We cover all installation and configuration aspects in the following series of a
 You can map **WhatsApp** chats to **Chatwoot** conversations in two ways.
 Your **Chatwoot** and **WAHA** settings **must be kept in sync**.
 
+- **Single Conversation** — one ongoing thread per WhatsApp chat; new messages append to the same conversation (reopens if resolved).
+- **Multiple Conversations** — agents resolve threads; the next incoming message creates a new conversation, allowing several per contact.
+
 ### Single Conversation
 **One conversation** per WhatsApp chat (WhatsApp-like **behavior**). Each message goes
 to a **single** conversation. Every contact in **Chatwoot** has only **one** open (or
