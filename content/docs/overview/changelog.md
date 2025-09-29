@@ -57,6 +57,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🧩 Apps**
 
+- `2025.9.8` - **ChatWoot** - Send CSAT {{< issue 1228 >}}
 - `2025.9.7` - **ChatWoot** - fix Brazil phone if **9** at the start - {{< issue 1261 >}}
 - `2025.9.6` - **ChatWoot** - [**Conversation Control**]({{< relref "/docs/apps/chatwoot#conversations" >}})
   - {{< issue 1216 >}}, {{< issue 1357 >}}, {{< issue 1237 >}}, {{< issue 1343 >}}, {{< issue 1213 >}}
@@ -80,6 +81,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.9.8` - **NOWEB** - fix freeze when apps enabled - {{< issue 1397 >}}
+- `2025.9.8` - **GOWS** - fix panic - {{< issue 1421 >}}, {{< issue 1430 >}}
+- `2025.9.8` - **NOWEB** - fix send poll to channels - {{< issue 1270 >}}, {{< issue 1415 >}}
+- `2025.9.8` - **NOWEB** - fix failed poll votes - {{< issue 1396 >}}
 - `2025.9.6` - **ChatWoot** - fix `/jobs` auth - {{< issue 1398 >}}
 - `2025.9.6` - **ChatWoot** - fix 500 API Error `GET /public/conversations - timeout` - {{< issue 1389 >}}
 - `2025.9.5` - **GOWS** - Fix "typing" after message sent - {{< issue 1364 >}}
@@ -99,7 +104,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **⚙️ Updates**
 
-- `2025.9.5` - **WEBJS** - up engine to `2025.09.10`
+- `2025.9.8` - **GOWS** - update to `v1027949008` - {{< issue 1293 >}}, {{< issue 1412 >}}, {{< issue 1406 >}}
+- `2025.9.5` - **WEBJS** - up engine - {{< issue #1276 >}}, {{< issue #1407 >}}
+- `2025.9.8` - **NOWEB** - up engine to `2025-10-03` - {{< issue 1442 >}}
+- `2025.9.5` - **WEBJS** - up engine to `2025-09-10`
 - `2025.9.5` - **NOWEB** - update engine to `7.0.0` with ESM support
 - `2025.9.5` - **NOWEB** - proto to `v1027393660`
 - `2025.9.5` - **GOWS** - update to `v1027043088`
