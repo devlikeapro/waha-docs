@@ -57,6 +57,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🧩 Apps**
 
+- `2025.9.7` - **ChatWoot** - fix Brazil phone if **9** at the start - {{< issue 1261 >}}
 - `2025.9.6` - **ChatWoot** - [**Conversation Control**]({{< relref "/docs/apps/chatwoot#conversations" >}})
   - {{< issue 1216 >}}, {{< issue 1357 >}}, {{< issue 1237 >}}, {{< issue 1343 >}}, {{< issue 1213 >}}
 - `2025.9.6` - **ChatWoot** - fix Duplicating Audio Message When Automatically transcribe audio enabled - {{< issue 1371 >}}
