@@ -6608,7 +6608,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2025.9.5",
+    "version": "2025.9.6",
     "contact": {}
   },
   "tags": [
@@ -9764,6 +9764,99 @@
             "example": null
           }
         }
+      },
+      "ChatWootCommandsConfig": {
+        "type": "object",
+        "properties": {
+          "server": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "required": [
+          "server"
+        ]
+      },
+      "ChatWootConversationsConfig": {
+        "type": "object",
+        "properties": {
+          "sort": {
+            "type": "string",
+            "enum": [
+              "activity_newest",
+              "created_newest",
+              "created_oldest",
+              "activity_oldest"
+            ]
+          },
+          "status": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "open",
+                "pending",
+                "snoozed",
+                "resolved"
+              ]
+            }
+          }
+        },
+        "required": [
+          "sort",
+          "status"
+        ]
+      },
+      "ChatWootAppConfig": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "number"
+          },
+          "accountToken": {
+            "type": "string"
+          },
+          "inboxId": {
+            "type": "number"
+          },
+          "inboxIdentifier": {
+            "type": "string"
+          },
+          "linkPreview": {
+            "default": "OFF",
+            "enum": [
+              "OFF",
+              "LG",
+              "HG"
+            ],
+            "type": "string"
+          },
+          "locale": {
+            "type": "string",
+            "default": "en-US"
+          },
+          "templates": {
+            "type": "object"
+          },
+          "commands": {
+            "$ref": "#/components/schemas/ChatWootCommandsConfig"
+          },
+          "conversations": {
+            "$ref": "#/components/schemas/ChatWootConversationsConfig"
+          }
+        },
+        "required": [
+          "url",
+          "accountId",
+          "accountToken",
+          "inboxId",
+          "inboxIdentifier",
+          "locale"
+        ]
       },
       "App": {
         "type": "object",
