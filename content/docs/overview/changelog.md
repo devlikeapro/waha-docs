@@ -79,8 +79,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
-- `2025.9.5` - **ChatWoot** - fix `/jobs` auth - {{< issue 1398 >}}
-- `2025.9.5` - **ChatWoot** - fix 500 API Error `GET /public/conversations - timeout` - {{< issue 1389 >}}
+- `2025.9.6` - **ChatWoot** - fix `/jobs` auth - {{< issue 1398 >}}
+- `2025.9.6` - **ChatWoot** - fix 500 API Error `GET /public/conversations - timeout` - {{< issue 1389 >}}
 - `2025.9.5` - **GOWS** - Fix "typing" after message sent - {{< issue 1364 >}}
 - `2025.9.5` - **NOWEB** - Fix login via phone - {{< issue 1385 >}}
 - `2025.9.5` - **NOWEB** - Fix `fromMe` in group messages - {{< issue 1350 >}}
