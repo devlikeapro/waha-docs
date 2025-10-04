@@ -371,13 +371,14 @@ PUT /api/reaction
 
 ```jsonc { title="Body" }
 {
-  "messageId": "false_11111111111@newsletter_AAAAAAAAAAAAAAAAAAAA",
+  "messageId": "false_11111111111@newsletter_100_AAAAAAAAAAAAAAAAAAAA",
   "reaction": "👍",
   "session": "default"
 }
 ```
 
-`messageId` can be in 2 format:
+`messageId` can be in formats:
+1. `{fromMe}_{id}@newsletter_{serverID}_{clientID}` - `false_11111111111@newsletter_100_AAAAAAAAAAAAAAAAAAAA`
 1. `false_11111111111@newsletter_AAAAAAAAAAAAAAAAAAAA` - using characters. Works if you're subscribed to the channel.
 2. `false_11111111111@newsltter_123` - using `server_id`. If you're not subscribed to the channel, you can use this format.
 
