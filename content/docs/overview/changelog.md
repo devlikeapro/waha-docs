@@ -105,7 +105,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 **⚙️ Updates**
 
 - `2025.9.8` - **GOWS** - update to `v1027949008` - {{< issue 1293 >}}, {{< issue 1412 >}}, {{< issue 1406 >}}
-- `2025.9.5` - **WEBJS** - up engine - {{< issue 1276 >}}, {{< issue 1407 >}}
+- `2025.9.8` - **WEBJS** - up engine - {{< issue 1276 >}}, {{< issue 1407 >}}
 - `2025.9.8` - **NOWEB** - up engine to `2025-10-03` - {{< issue 1442 >}}
 - `2025.9.5` - **WEBJS** - up engine to `2025-09-10`
 - `2025.9.5` - **NOWEB** - update engine to `7.0.0` with ESM support
