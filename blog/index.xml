@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 29 Aug 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.8 - Ignore Chats, Send Poll Vote, and more!</title><link>/blog/waha-2025-8/</link><pubDate>Fri, 29 Aug 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-8/</guid><description>&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 30 Sep 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.9 - ChatWoot 1.1, NOWEB 7.0-rc, Sessions Filters</title><link>/blog/waha-2025-9/</link><pubDate>Tue, 30 Sep 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-9/</guid><description>&lt;p>
+
+&lt;img
+ src="/blog/waha-2025-9/waha-2025-9_hu_2d5669770a55ab65.webp"
+ width="1200"
+ height="600"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="WAHA 2025.9"id="h-rh-i-0"
+/>&lt;/p>
+&lt;h2 id="-chatwoot-11">🧩 ChatWoot 1.1&lt;/h2>
+&lt;p>ChatWoot integration graduates to &lt;strong>v1.1&lt;/strong>, adding conversation control, CSAT surveys, richer language templates, and safer contact handling.&lt;/p></description></item><item><title>WAHA 2025.8 - Ignore Chats, Send Poll Vote, and more!</title><link>/blog/waha-2025-8/</link><pubDate>Fri, 29 Aug 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-8/</guid><description>&lt;p>
 
 &lt;img
  src="/blog/waha-2025-8/waha-2025-8_hu_b13a1b8ee62c81fc.webp"
@@ -141,6 +153,4 @@ This means your API key is never stored in plain text, reducing the risk if your
 &lt;h3 id="-presence-webjs">✅ Presence (WEBJS)&lt;/h3>
 &lt;p>In &lt;strong>WEBJS&lt;/strong>, you can now use the
 &lt;a href="/docs/how-to/presence/">&lt;strong>✅ Presence&lt;/strong>&lt;/a> API and Events
-to track your customers&amp;rsquo; online status!&lt;/p></description></item><item><title>🚨 WAHA Security Alert</title><link>/blog/security-alert/</link><pubDate>Tue, 29 Apr 2025 08:48:45 +0000</pubDate><guid>/blog/security-alert/</guid><description>&lt;hr>
-&lt;h2 id="-waha-security-alert">🚨 WAHA Security Alert&lt;/h2>
-&lt;p>We’ve recently seen a disturbing trend: users running WAHA with the &lt;strong>API publicly exposed&lt;/strong> and &lt;strong>without any form of protection&lt;/strong>.&lt;/p></description></item></channel></rss>
+to track your customers&amp;rsquo; online status!&lt;/p></description></item></channel></rss>
