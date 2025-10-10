@@ -27,8 +27,7 @@ Run **WhatsApp API** in less than 5 minutes!
 will guide you through the necessary steps to successfully send your first text message using WhatsApp API.
 {{< /callout >}}
 
-
-{{< callout context="info" title="Disclaimer" icon="outline/gavel" >}}
+{{< callout context="caution" title="Disclaimer" icon="outline/gavel" >}}
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or its affiliates. The official WhatsApp website can be found at [whatsapp.com](https://whatsapp.com).
 
 "WhatsApp" as well as related names, marks, emblems and images are registered trademarks of their respective owners. Also, it is not guaranteed that you will not be blocked by using this method. WhatsApp does not allow bots or unofficial clients on their platform, so this shouldn't be considered totally safe.

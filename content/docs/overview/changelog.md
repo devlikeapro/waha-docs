@@ -46,6 +46,26 @@ Latest Version:
 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 {{< /callout >}}
 
+### 2025.10
+
+🛠️ **Fixes**
+
+- `2025.10.1` - **GOWS** - fix no webhooks - {{< issue 1456 >}}
+- `2025.10.1` - **WEBJS** - fix /about - {{< issue 1469 >}}
+- `2025.10.1` - **NOWEB** - fix empty body - {{< issue 1459 >}}
+- `2025.10.1` - **NOWEB** - fix ssl on media - {{< issue 1474 >}}
+
+**🧩 ChatWoot**
+
+- `2025.10.1` - Mark messages as Read in ChatWoot - {{< issue 1319 >}}, {{< issue 1436 >}}
+- `2025.10.1` - Event, Poll, PIX messages - {{< issue 1460 >}}
+- `2025.10.1` - Add Facebook Ads message - {{< issue 1461 >}}
+- `2025.10.1` - **WEBJS** - fix + in phone - {{< issue 1475 >}}
+
+**⚙️ Updates**
+
+- `2025.10.1` - **NOWEB** - up engine
+
 ### 2025.9
 
 **🆕 NEW**
