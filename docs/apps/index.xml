@@ -21,7 +21,7 @@
 
 
 &lt;div>&lt;/div>
-&lt;div class="callout callout-info d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+&lt;div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
  &lt;svg
  xmlns="http://www.w3.org/2000/svg"
  width="24"
