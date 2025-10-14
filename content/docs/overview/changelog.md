@@ -50,6 +50,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.10.2` - **NOWEB** - connection issues - {{< issue 1499 >}}, {{< issue 1495 >}}
 - `2025.10.1` - **GOWS** - fix no webhooks - {{< issue 1456 >}}
 - `2025.10.1` - **WEBJS** - fix /about - {{< issue 1469 >}}
 - `2025.10.1` - **NOWEB** - fix empty body - {{< issue 1459 >}}
@@ -57,6 +58,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🧩 ChatWoot**
 
+- `2025.10.2` - supress chat read errors for now - temp fix - {{< issue 1492 >}}
+- `2025.10.2` - No retries/success messages - temp fix - {{< issue 1395 >}}
+- `2025.10.2` - ignore `fromMe` in `message.ack` handler - {{< issue 1492 >}}
 - `2025.10.1` - Mark messages as Read in ChatWoot - {{< issue 1319 >}}, {{< issue 1436 >}}
 - `2025.10.1` - Event, Poll, PIX messages - {{< issue 1460 >}}
 - `2025.10.1` - Add Facebook Ads message - {{< issue 1461 >}}
