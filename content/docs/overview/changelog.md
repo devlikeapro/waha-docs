@@ -47,9 +47,21 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< /callout >}}
 
 ### 2025.10
+📢 **BREAKING CHANGE** 📢
+
+> `2025.10.3`
+> 
+> - Requires `WAHA_API_KEY`, `WAHA_DASHBOARD_PASSWORD`, `WHATSAPP_SWAGGER_PASSWORD` and generate one if no provided.
+> - Treats "00..00", "123", "admin", "waha" as not secure
+> - Check [**🔒 How To Disable Security?**]({{< relref "/docs/how-to/security/#how-to-disable-security" >}}) if you 100% knows you don't need one of this.
+> - {{< issue 1501 >}}
+
+---
 
 🛠️ **Fixes**
 
+- `2025.10.3` - **NOWEB** - fix `/api/sendImage` when using proxy - {{< issue 1449 >}}
+- `2025.10.3` - **GOWS** - fix `sql: database is locked` - {{< issue 1503 >}}
 - `2025.10.2` - **NOWEB** - connection issues - {{< issue 1499 >}}, {{< issue 1495 >}}
 - `2025.10.1` - **GOWS** - fix no webhooks - {{< issue 1456 >}}
 - `2025.10.1` - **WEBJS** - fix /about - {{< issue 1469 >}}
@@ -58,9 +70,11 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🧩 ChatWoot**
 
-- `2025.10.2` - supress chat read errors for now - temp fix - {{< issue 1492 >}}
+- `2025.10.3` - Render List Message
+- `2025.10.3` - Handle `{device}@lid` in groups - {{< issue 1493 >}}
+- `2025.10.2` - Supress chat read errors for now - temp fix - {{< issue 1492 >}}
 - `2025.10.2` - No retries/success messages - temp fix - {{< issue 1395 >}}
-- `2025.10.2` - ignore `fromMe` in `message.ack` handler - {{< issue 1492 >}}
+- `2025.10.2` - Ignore `fromMe` in `message.ack` handler - {{< issue 1492 >}}
 - `2025.10.1` - Mark messages as Read in ChatWoot - {{< issue 1319 >}}, {{< issue 1436 >}}
 - `2025.10.1` - Event, Poll, PIX messages - {{< issue 1460 >}}
 - `2025.10.1` - Add Facebook Ads message - {{< issue 1461 >}}

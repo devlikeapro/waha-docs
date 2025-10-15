@@ -66,18 +66,31 @@ Follow the instructions below:
 
 {{< include file="content/docs/how-to/install/download-image.md" >}}
 
-## Step 2. Run WAHA
+## Step 2. Init WAHA
+
+Generate a `.env` file that we'll use in the next step for credentials:
+
+```bash {title="Init WAHA"}
+docker run --rm -v "$(pwd)":/app/env devlikeapro/waha init-waha /app/env
+```
+
+{{< include file="content/docs/how-to/install/-init-waha-output.md" >}}
+
+Remember these values (you can always check the `.env` file if you forget them):
+- **Username / Password**: `admin / 11...11` - use them to access the Dashboard and Swagger UI
+- **Api Key**: `00...00` - use it to connect to your server
+
+👉 You can change variables to any values, but use **long strings** (like **UUIDv4**) 
+
+## Step 3. Run WAHA
 
 Run WhatsApp HTTP API:
 
 ```bash
-docker run -it -v $(pwd)/sessions:/app/.sessions --rm -p 3000:3000 --name waha devlikeapro/waha
-
-# It prints logs and the last line must be
-# WhatsApp API is running on: http://[::1]:3000
+docker run -it --env-file "$(pwd)/.env" -v "$(pwd)/sessions:/app/.sessions" --rm -p 3000:3000 --name waha devlikeapro/waha
 ```
 
-{{< callout context="danger" title="Not a Production-Ready Installation!" icon="outline/shield-check" >}}
+{{< callout context="caution" title="Not a Production-Ready Installation!" icon="outline/shield-check" >}}
 ☝️ The above command is meant only for **initial testing**, not for production use.
 
 Please follow the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) guide to set up a secure WAHA instance
@@ -85,16 +98,21 @@ after you finish the quick start guide.
 
 {{< /callout >}}
 
-👉 Now, open the [📊 Dashboard]({{< relref "/docs/how-to/dashboard" >}}) at
+ Now, open the [📊 Dashboard]({{< relref "/docs/how-to/dashboard" >}}) at
 <a href="http://localhost:3000/dashboard" target="_blank">
 <b>http://localhost:3000/dashboard</b>
 </a>
 
-You'll see the WAHA Dashboard:
+Use **username/password** from the previous step (`.env` file - `WAHA_DASHBOARD_USERNAME / WAHA_DASHBOARD_PASSWORD`):
 
 ![Dashboard](dashboard.png)
 
-## Step 3. Start a new session
+Next, connect to the server using **api key** from the previous step (`.env` file - `WAHA_API_KEY`):
+
+![Dashboard with API Key](waha-dashboard-key.png)
+
+
+## Step 4. Start a new session
 
 To start a new session, you should have your mobile phone with the **WhatsApp application** installed close to you.
 
@@ -109,7 +127,7 @@ Now you can start the **default** session (current status should be `STOPPED`).
 You can leave all configuration parameters as default:
 ![alt](dashboard-start-session.png)
 
-## Step 4. Get and scan QR
+## Step 5. Get and scan QR
 
 Wait until the session status is `SCAN_QR` and click on the "camera" icon:
 <br>
@@ -124,11 +142,14 @@ You'll see the QR code from the WhatsApp Web app. Now get **your phone** with th
 The session status will move to `WORKING` status:
 ![alt](dashboard-working.png)
 
-## Step 5. Send a text message
+## Step 6. Send a text message
 
 Now we're ready to send the first messages to WhatsApp via the API!
 
-Replace `123123` with **your phone number without +**, but keep the `@c.us` part:
+- Replace `123123` with **your phone number without +**, but keep the `@c.us` part. 
+- Use the API key from your `.env` file (`WAHA_API_KEY`). 
+
+The examples below use a placeholder `00000000000000000000000000000000` - swap it with your real value:
 {{< tabs "send-text-message" >}}
 
 {{< tab "curl" >}}
@@ -137,6 +158,7 @@ curl -X 'POST' \
   'http://localhost:3000/api/sendText' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
+  -H "X-Api-Key: 00000000000000000000000000000000" \
   -d '{
   "chatId": "123123@c.us",
   "text": "Hi there!",
@@ -151,7 +173,8 @@ fetch('http://localhost:3000/api/sendText', {
   method: 'POST',
   headers: {
     'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'X-Api-Key': '00000000000000000000000000000000'
   },
   body: JSON.stringify({
     chatId: "123123@c.us",
@@ -172,7 +195,8 @@ import requests
 url = "http://localhost:3000/api/sendText"
 headers = {
     "Accept": "application/json",
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
+    "X-Api-Key": "00000000000000000000000000000000"
 }
 data = {
     "chatId": "123123@c.us",
@@ -192,14 +216,19 @@ As alternative to `curl`, you can use [**📚 Swagger**]({{< relref "/docs/how-t
 Open Swagger at
 <a href="http://localhost:3000/#/chatting" target="_blank">
 <b>http://localhost:3000/#/chatting</b>
-</a>, scroll down to **chatting** section.
+</a>. 
 
+**Authorize** using the **Api Key** (`.env` file - `WAHA_API_KEY`):
+
+![swagger auth](swagger-auth.png)
+
+- Scroll down to **chatting** section.
 - Find `POST /api/sendText` endpoint and expand it
 - Click **Try it out**
 - Replace `123123@c.us` with **your phone number without +**, but keep `@c.us` part
 - Click **Execute**
 
-![alt](swagger-send-text.png)
+![swagger send text](swagger-send-text.png)
 
 ## What's next?
 

@@ -93,20 +93,28 @@ wget -O .chatwoot.env https://raw.githubusercontent.com/devlikeapro/waha/refs/he
 wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/docker-compose/chatwoot/docker-compose.yaml
 ```
 
+### Step 6: Init WAHA
+
+Generate a `.waha.env` file that we'll use in the next step for credentials:
+
+```bash {title="Init WAHA"}
+docker compose run --no-deps -v "$(pwd)":/app/env waha init-waha /app/env .waha.env .waha.env --force
+```
+
+{{< include file="content/docs/how-to/install/-init-waha-output.md" >}}
+
+
+Remember these values (you can always check the `.env` file if you forget them):
+- **Username / Password**: `admin / 11...11` - use them to access the Dashboard and Swagger UI
+- **Api Key**: `00...00` - use it to connect to your server
+
+👉 You can change variables to any values, but use **long random strings** (like **UUIDv4**)
+
 ### Step 3: Configure Environment Variables
 Now you can tweak `.waha.env`, `.chatwoot.env` and `docker-compose.yaml`  according to your preferences.
 
-Here are a few environment variables we suggest that you change before going forward (in this guide we'll use **the default values**):
-```env { title=".waha.env" }
-WAHA_API_KEY_PLAIN=00000000000000000000000000000000
-WAHA_API_KEY=sha512:98b6d128682e280b74b324ca82a6bae6e8a3f7174e0605bfd52eb9948fad8984854ec08f7652f32055c4a9f12b69add4850481d9503a7f2225501671d6124648
-WAHA_DASHBOARD_USERNAME=admin
-WAHA_DASHBOARD_PASSWORD=11111111111111111111111111111111
-WHATSAPP_SWAGGER_USERNAME=admin
-WHATSAPP_SWAGGER_PASSWORD=11111111111111111111111111111111
-```
+{{< callout context="danger" title="Do Not Use Weak API Keys or Passwords!" icon="outline/shield-check" >}}
 
-{{< callout context="danger" title="Do Not Use Default API Keys or Passwords!" icon="outline/shield-check" >}}
 Even if you're running WAHA on a private server and think the IP is unknown - it's
 straightforward for attackers to find and exploit it to send spam or abuse your WhatsApp sessions.
 
@@ -115,13 +123,12 @@ Always set strong, random values (see a guide below) for:
 - `WAHA_DASHBOARD_PASSWORD`
 - `WHATSAPP_SWAGGER_PASSWORD` - you can the same as for `WAHA_DASHBOARD_PASSWORD`
 
-**👉 How to Generate and Hash Api-Key**
-{{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
-{{< /callout >}}
+```bash
+uuidgen | tr -d '-'
+> 2e1005a40ef74edda01ffb1ade877fd3
+```
 
-{{< details "<b>👉 How to Generate and Hash Api-Key</b>" >}}
-{{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
-{{< /details >}}
+{{< /callout >}}
 
 ### Step 4: Pull Docker Images
 {{< tabs "download-docker-image" >}}
@@ -185,6 +192,7 @@ docker compose pull
 ```bash { title="Prepare ChatWoot Database" }
 docker compose run --rm chatwoot bundle exec rails db:chatwoot_prepare
 ```
+
 
 ### Step 6: Start the Services
 ```bash { title="Start Services" }

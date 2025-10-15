@@ -245,22 +245,24 @@ Enable HTTPS directly in WAHA by setting the following environment variables:
 Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
 
 **API**
-- `WAHA_API_KEY=sha512:{SHA512_HEX_HASH}`: require `X-Api-Key: {KEY}` header in all requests to the API.
-  - `WAHA_API_KEY=sha512:c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec`: require `X-Api-Key: admin` header in all requests to the API.
-  - `WAHA_API_KEY=admin`- plain key works, but it's better to set **SHA512** instead.
-  - `WHATSAPP_API_KEY=admin` - also works, but it's better to set **SHA512** instead.
+- `WAHA_API_KEY={RANDOMLONGSTRING}`: require `X-Api-Key: {KEY}` header in all requests to the API.
+  - `WAHA_API_KEY={RANDOMLONGSTRING}`- plain key works, but it's better to set **SHA512** instead.
+  - `WHATSAPP_API_KEY={RANDOMLONGSTRING}` - also works, but it's better to set **SHA512** instead.
+  - `WAHA_API_KEY=sha512:{SHA515_FROM_RANDOMLONGSTRING}`: require `X-Api-Key: {RANDOMLONGSTRING}` header in all requests to the API.
 - `WHATSAPP_API_KEY_EXCLUDE_PATH=ping,health` - exclude URI from key auth [#451](https://github.com/devlikeapro/waha/issues/451)
+- `WAHA_NO_API_KEY=True`: Disable Api Key so you can set `WAHA_API_KEY` to empty value. By default, it'd generate the value anyway
 
 **Dashboard**
 - `WAHA_DASHBOARD_ENABLED=true`: Toggle to enable or disable the dashboard.
 - `WAHA_DASHBOARD_USERNAME=waha`: Default username for login (default: waha).
 - `WAHA_DASHBOARD_PASSWORD=waha`: Default password for login (default: waha).
+- `WAHA_DASHBOARD_NO_PASSWORD=True`: Disable dashboard password so you can set `WAHA_DASHBOARD_PASSWORD` to empty value. By default, it'd generate the value anyway
 
 **Swagger**
 - `WHATSAPP_SWAGGER_ENABLED=true`: Toggle to enable or disable the Swagger.
-- `WHATSAPP_SWAGGER_USERNAME=admin`
-- `WHATSAPP_SWAGGER_PASSWORD=admin`
-Swagger panel with `admin / admin` credentials. This does not affect API access.
+- `WHATSAPP_SWAGGER_USERNAME={randomlongstring}`
+- `WHATSAPP_SWAGGER_PASSWORD={randomlongstring}`
+- `WHATSAPP_SWAGGER_NO_PASSWORD=True`: Disable swagger password so you can set `WHATSAPP_SWAGGER_NO_PASSWORD` to empty value. By default, it'd generate the value anyway
 
 
 ## Files

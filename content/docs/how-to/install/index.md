@@ -15,7 +15,7 @@ aliases:
 You probably already have run the docker run command during
 [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}) guide:
 ```bash
-docker run -it --rm -p 3000:3000 --name waha devlikeapro/waha
+docker run ... devlikeapro/waha
 ```
 
 {{< callout context="caution" icon="outline/alert-triangle" >}}
@@ -115,34 +115,36 @@ Follow the instructions below:
 ### WAHA
 2. Download the required files
 ```bash
-# Download the env file template
-wget -O .env https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/.env.example
 # Download the Docker compose template
 wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/docker-compose.yaml
+# Create empty .env file
+touch .env
 ```
 
-3. Tweak the `.env` and `docker-compose.yaml` according to your preferences. 
+3. Generate a `.env` file that we'll use in the next step for credentials:
+
+```bash {title="Init WAHA"}
+docker compose run --no-deps -v "$(pwd)":/app/env waha init-waha /app/env
+```
+
+{{< include file="content/docs/how-to/install/-init-waha-output.md" >}}
+
+Remember these values (you can always check the `.env` file if you forget them):
+- **Username / Password**: `admin / 11...11` - use them to access the Dashboard and Swagger UI
+- **Api Key**: `00...00` - use it to connect to your server
+
+👉 You can change variables to any values, but use **long random strings** (like **UUIDv4**)
+
+4. Tweak the `.env` and `docker-compose.yaml` according to your preferences. 
 Refer to the available environment variables in [**⚙️ Configuration**]({{< relref "/docs/how-to/config" >}}).
 
-Some important environment variables you **MUST** change:
-- `WAHA_API_KEY=sha512:{SHA512_HEX_OF_YOUR_API_KEY_HERE}`
-  - Default Api Key is `admin`
-  - Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
-- `WAHA_DASHBOARD_USERNAME=admin` - [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
-- `WAHA_DASHBOARD_PASSWORD=admin`
-- `WHATSAPP_SWAGGER_USERNAME=admin` - you can set the same as `WAHA_DASHBOARD_USERNAME`
-- `WHATSAPP_SWAGGER_PASSWORD=admin` - you can set the same as `WAHA_DASHBOARD_PASSWORD`
-
 ```bash
-# update .env file with your values
-nano .env
-# update docker-compose.yaml - like image
-# Remove "mongodb" and "minio" services if you don't need them
-# Leave "waha" service as it is
+# update docker-compose.yaml if required
+# set "image: devlikeapro/waha" if you don't have waha-plus access
 nano docker-compose.yaml
 ```
 
-{{< callout context="danger" title="Do Not Use Default API Keys or Passwords!" icon="outline/shield-check" >}}
+{{< callout context="danger" title="Do Not Use Weak API Keys or Passwords!" icon="outline/shield-check" >}}
 
 Even if you're running WAHA on a private server and think the IP is unknown - it's
 straightforward for attackers to find and exploit it to send spam or abuse your WhatsApp sessions.
@@ -152,8 +154,10 @@ Always set strong, random values (see a guide below) for:
 - `WAHA_DASHBOARD_PASSWORD`
 - `WHATSAPP_SWAGGER_PASSWORD` - you can the same as for `WAHA_DASHBOARD_PASSWORD`
 
-**👉 How to Generate and Hash Api-Key**
-{{< include file="content/docs/how-to/security/how-to-generate-api-key.md" >}}
+```bash
+uuidgen | tr -d '-'
+> 2e1005a40ef74edda01ffb1ade877fd3
+```
 
 {{< /callout >}}
 
@@ -171,14 +175,14 @@ Set up something like Nginx or any other proxy server to proxy the requests to t
 If you're using a remote server (like VPS or Virtual Machine on your laptop) you need to allow access for your browser. 
 Use one of the options available.
 
-1. Use **SSH tunneling**
+6. **SSH tunneling**
 
 If you're connecting to ssh, you can forward port 3000 on your laptop like
 ```bash
 ssh -L 3000:localhost:3000 user@you.address.here
 ```
 
-2. **Bind port to all ips**
+7. **Bind port to all ips**
 
 For **temporary external access**, you can change the port binding from `127.0.0.1:3000:3000` to `3000:3000` in the `docker-compose.yaml` file. 
 ```yaml { title="docker-compose.yaml" }
@@ -195,12 +199,13 @@ docker compose up -d
 This makes your instance accessible at `http://<your-external-ip>:3000`.
 {{< /callout >}}
 
-6. Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and login with the credentials you've set
+8. Now, open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) and log in with the credentials you have in `.env` file:
 
-By default you can use:
-- Dashboard - `admin/admin`
-- Swagger - `admin/admin`
-- Api Key - `admin`
+- **Dashboard** - `WAHA_DASHBOARD_USERNAME / WAHA_DASHBOARD_PASSWORD`
+- **Swagger**: `WHATSAPP_SWAGGER_USERNAME / WHATSAPP_SWAGGER_PASSWORD`
+- **Api Key**: `WAHA_API_KEY`
+
+![Dashboard Api Key](waha-dashboard-key.png)
 
 ### Nginx
 

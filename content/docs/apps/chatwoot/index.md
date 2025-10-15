@@ -17,8 +17,7 @@ toc: true
 </p>
 
 **WAHA** includes a built-in **WhatsApp** integration for
-[**Chatwoot**](https://www.chatwoot.com/). Configure it in a few steps via
-[**🧩 Apps**]({{< relref "/docs/apps/about" >}}).
+[**Chatwoot**](https://www.chatwoot.com/). 
 
 ![Chatwoot Overview](screenshots/overview.png)
 <br/><br/>

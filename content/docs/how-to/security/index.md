@@ -86,10 +86,10 @@ If you want to hide the project Swagger panel under the password - run the follo
 login and password.
 
 ```bash
-docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin -e WHATSAPP_SWAGGER_PASSWORD=admin devlikeapro/waha-plus
+docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin123 -e WHATSAPP_SWAGGER_PASSWORD=admin123 devlikeapro/waha-plus
 ```
 
-Open http://localhost:3000/ and enter `admin / admin` in the inputs:
+Open http://localhost:3000/ and enter `admin123 / admin123` in the inputs:
 
 ![alt](swagger-basic-auth.png)
 
@@ -115,7 +115,7 @@ Read more about [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
 When running WAHA you can set the following environment variables to configure the dashboard:
 - `WAHA_DASHBOARD_ENABLED=true` - enable or disable the dashboard, by default `true`. Set to `false` to disable the dashboard.
 - `WAHA_DASHBOARD_USERNAME=waha` - username used to log in, by default `admin` or `waha` 
-- `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, by default `admin` or `waha`.
+- `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, generated random.
 
 
 ## Webhook security
@@ -138,3 +138,26 @@ You can set up the following environment variables to enable HTTPS:
 - `WAHA_HTTPS_PATH_KEY=/path/to/key.pem`: The path to the key file for HTTPS. By default `./.secrets/privkey.pem`
 - `WAHA_HTTPS_PATH_CERT=/path/to/cert.pem`: The path to the certificate file for HTTPS. By default `./.secrets/cert.pem`
 - `WAHA_HTTPS_PATH_CA=/path/to/ca.pem`: The path to the CA file for HTTPS. By default `./.secrets/chain.pem`
+
+## FAQ
+### How To Disable Security?
+By default, WAHA checks those variables and if it's not set - generates a random one (check your console/logs output):
+- `WAHA_API_KEY`
+- `WAHA_DASHBOARD_PASSWORD`
+- `WHATSAPP_SWAGGER_PASSWORD`
+
+Even if you set this to "" (empty string) or "admin/waha/123"  - WAHA generates a new value.
+
+If you **100% know what you are doing** - you can disable this explicilty and set to `.env` file:
+```dotenv
+# Api Key - Off
+WAHA_API_KEY=
+WAHA_NO_API_KEY=True
+# Dashboard - Auth Off
+WAHA_DASHBOARD_PASSWORD=
+WAHA_DASHBOARD_NO_PASSWORD=True
+# Swagger - Auth Off
+WHATSAPP_SWAGGER_PASSWORD=
+WHATSAPP_SWAGGER_NO_PASSWORD=True
+
+```
