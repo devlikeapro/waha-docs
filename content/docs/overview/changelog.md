@@ -49,12 +49,12 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 ### 2025.10
 📢 **BREAKING CHANGE** 📢
 
-> `2025.10.3`
-> 
-> - Requires `WAHA_API_KEY`, `WAHA_DASHBOARD_PASSWORD`, `WHATSAPP_SWAGGER_PASSWORD` and generate one if no provided.
-> - Treats "00..00", "123", "admin", "waha" as not secure
-> - Check [**🔒 How To Disable Security?**]({{< relref "/docs/how-to/security/#how-to-disable-security" >}}) if you 100% knows you don't need one of this.
-> - {{< issue 1501 >}}
+`2025.10.3`
+
+- Requires `WAHA_API_KEY`, `WAHA_DASHBOARD_PASSWORD`, `WHATSAPP_SWAGGER_PASSWORD` and generate one if no provided.
+- Treats "00..00", "123", "admin", "waha" as not secure
+- Check [**🔒 How To Disable Security?**]({{< relref "/docs/how-to/security/#how-to-disable-security" >}}) if you 100% knows you don't need one of this.
+- {{< issue 1501 >}}
 
 ---
 
