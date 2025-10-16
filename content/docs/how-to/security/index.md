@@ -149,7 +149,7 @@ By default, WAHA checks those variables and if it's not set - generates a random
 Even if you set this to "" (empty string) or "admin/waha/123"  - WAHA generates a new value.
 
 If you **100% know what you are doing** - you can disable this explicilty and set to `.env` file:
-```dotenv
+```bash
 # Api Key - Off
 WAHA_API_KEY=
 WAHA_NO_API_KEY=True
@@ -159,5 +159,4 @@ WAHA_DASHBOARD_NO_PASSWORD=True
 # Swagger - Auth Off
 WHATSAPP_SWAGGER_PASSWORD=
 WHATSAPP_SWAGGER_NO_PASSWORD=True
-
 ```
