@@ -60,6 +60,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.10.4` - fix ffmpeg voice converter to `mp3` - {{< issue 1393 >}}, {{< issue 1453 >}}
+- `2025.10.4` - **NOWEB**, **GOWS** - better handle `message.edited` events - {{< issue 1394 >}}
+- `2025.10.4` - **NOWEB** - fix sending media to channels - {{< issue 1523 >}}
+- `2025.10.4` - **WEBJS** - handle `convert: true` voice conversions - {{< issue 1453 >}}, {{< issue 1524 >}}
 - `2025.10.3` - **NOWEB** - fix `/api/sendImage` when using proxy - {{< issue 1449 >}}
 - `2025.10.3` - **GOWS** - fix `sql: database is locked` - {{< issue 1503 >}}
 - `2025.10.2` - **NOWEB** - connection issues - {{< issue 1499 >}}, {{< issue 1495 >}}
@@ -70,6 +74,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🧩 ChatWoot**
 
+- `2025.10.4` - Fix inverted logic of messages read in ChatWoot (closes devlikeapro/waha-plus#20)
+- `2025.10.4` - Preserve underscores inside URLs so markdown stays intact - {{< issue 1522 >}}
 - `2025.10.3` - Render List Message
 - `2025.10.3` - Handle `{device}@lid` in groups - {{< issue 1493 >}}
 - `2025.10.2` - Supress chat read errors for now - temp fix - {{< issue 1492 >}}
@@ -82,6 +88,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **⚙️ Updates**
 
+- `2025.10.4` - **NOWEB** - up engine - {{< issue 1538 >}}
+- `2025.10.4` - **Dashboard** - refreshed headers and agent name display
 - `2025.10.1` - **NOWEB** - up engine
 
 ### 2025.9
