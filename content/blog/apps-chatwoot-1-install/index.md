@@ -93,7 +93,7 @@ wget -O .chatwoot.env https://raw.githubusercontent.com/devlikeapro/waha/refs/he
 wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/refs/heads/core/docker-compose/chatwoot/docker-compose.yaml
 ```
 
-### Step 6: Init WAHA
+### Step 3: Init WAHA
 
 Generate a `.waha.env` file that we'll use in the next step for credentials:
 
@@ -110,7 +110,7 @@ Remember these values (you can always check the `.env` file if you forget them):
 
 👉 You can change variables to any values, but use **long random strings** (like **UUIDv4**)
 
-### Step 3: Configure Environment Variables
+### Step 4: Configure Environment Variables
 Now you can tweak `.waha.env`, `.chatwoot.env` and `docker-compose.yaml`  according to your preferences.
 
 {{< callout context="danger" title="Do Not Use Weak API Keys or Passwords!" icon="outline/shield-check" >}}
@@ -130,7 +130,7 @@ uuidgen | tr -d '-'
 
 {{< /callout >}}
 
-### Step 4: Pull Docker Images
+### Step 5: Pull Docker Images
 {{< tabs "download-docker-image" >}}
 
 {{< tab "➕ WAHA Plus" >}}
@@ -188,18 +188,18 @@ docker compose pull
 
 {{< /tabs >}}
 
-### Step 5: Prepare ChatWoot Database
+### Step 6: Prepare ChatWoot Database
 ```bash { title="Prepare ChatWoot Database" }
 docker compose run --rm chatwoot bundle exec rails db:chatwoot_prepare
 ```
 
 
-### Step 6: Start the Services
+### Step 7: Start the Services
 ```bash { title="Start Services" }
 docker compose up -d
 ```
 
-### Step 7: Access Your WAHA
+### Step 8: Access Your WAHA
 **Open** [**http://localhost:3000/dashboard**](http://localhost:3000/dashboard) with credentials:
 - User: `admin`
 - Password: `11111111111111111111111111111111`
@@ -210,7 +210,7 @@ docker compose up -d
 ![](waha-dashboard-key.png)
 
 
-### Step 8: Access Your ChatWoot
+### Step 9: Access Your ChatWoot
 **Open** and **finish** the onboarding guide on [**http://localhost:3009/**](http://localhost:3009/)
 
 ![](chatwoot-onboarding.png)
