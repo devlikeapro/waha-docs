@@ -110,3 +110,14 @@
 // DocSearch
 @import "./variables-docsearch";
 @import "@docsearch/css/dist/modal";
+
+// Footer background adapts to theme
+.footer {
+  background-color: #e9f7e3;
+}
+
+@include color-mode(dark) {
+  .footer {
+    background-color: #162417;
+  }
+}
