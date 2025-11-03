@@ -1,7 +1,7 @@
 ---
 title: "WhatsApp + ChatWoot - Overview"
-description: "WhatsApp + ChatWoot - Overview"
-excerpt: "WhatsApp + ChatWoot - Overview"
+description: "See how WAHA connects WhatsApp to ChatWoot so teams reply from one place. A quick tour of the main features before the longer guides."
+excerpt: "See how WAHA connects WhatsApp to ChatWoot so teams reply from one place. A quick tour of the main features before the longer guides."
 date: 2025-07-12T08:48:45+00:00
 draft: false
 images: [ "waha-chatwoot.png" ]

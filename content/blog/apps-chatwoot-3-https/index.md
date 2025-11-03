@@ -1,7 +1,7 @@
 ---
 title: "WhatsApp + ChatWoot - HTTPS Guide"
-description: "WhatsApp + ChatWoot - HTTPS Guide"
-excerpt: "WhatsApp + ChatWoot - HTTPS Guide"
+description: "Put WAHA and ChatWoot online with HTTPS for safe access. Covers DNS records, Nginx setup, Let's Encrypt, and final env changes."
+excerpt: "Put WAHA and ChatWoot online with HTTPS for safe access. Covers DNS records, Nginx setup, Let's Encrypt, and final env changes."
 date: 2025-07-07T08:48:45+00:00
 draft: false
 images: [ "waha-chatwoot.png" ]
