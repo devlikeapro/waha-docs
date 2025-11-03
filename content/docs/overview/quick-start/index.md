@@ -5,7 +5,7 @@ lead: "Step-by-Step guide to send your first message via WhatsApp API."
 date: 2020-11-16T13:59:39+01:00
 lastmod: 2020-11-16T13:59:39+01:00
 draft: false
-images: ["waha-first-message.jpg"]
+images: ["cover.png"]
 
 parent: "overview"
 weight: 102
