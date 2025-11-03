@@ -14,7 +14,6 @@ slug: apps-chatwoot-4-how-it-works
 ---
 
 ## Overview
-Complete guide to install and set up production-ready **WAHA** and **Chatwoot** instances on your own infrastructure!
 
 {{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}
 
