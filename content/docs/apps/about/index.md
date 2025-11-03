@@ -6,7 +6,7 @@ date: 2024-07-13T12:00:00+00:00
 lastmod: 2024-07-13T12:00:00+00:00
 draft: false
 weight: 301
-images: []
+images: ["cover.png"]
 toc: true
 slug: "about"
 ---
@@ -36,4 +36,3 @@ You can use the **WAHA Jobs Dashboard** at [http://localhost:3000/jobs](http://l
 ## Apps SDK
 
 > This section is currently under development. Check back soon for detailed information about the integration architecture and workflow.
-

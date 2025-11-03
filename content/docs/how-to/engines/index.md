@@ -6,7 +6,7 @@ date: 2020-10-06T08:48:45+00:00
 lastmod: 2020-10-06T08:48:45+00:00
 draft: false
 weight: 295
-images: []
+images: ["cover.png"]
 slug: engines
 ---
 
@@ -240,4 +240,3 @@ Read more about
 [**🔄 Events**]({{< relref "/docs/how-to/events" >}}).
 
 {{< include file="content/docs/how-to/events/features-events.md" >}}
-
