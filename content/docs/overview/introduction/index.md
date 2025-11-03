@@ -5,17 +5,18 @@ lead: ""
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
+images: ["logo.png"]
 
 menu:
-docs:
-parent: "overview"
+  docs:
+    parent: "overview"
 weight: 101
 toc: true
 ---
 **WAHA** - <u>W</u>hats<u>A</u>pp <u>H</u>TTP <u>A</u>PI that you can install on your own server and run in less than 5 minutes!
 
 <div class="d-flex justify-content-center my-4">
-  <img src="/images/logo.svg" style='border-radius: 50%; width: 150px'/>
+  <img src="logo.png" style='width: 150px'/>
 </div>
 
 ## Get started
