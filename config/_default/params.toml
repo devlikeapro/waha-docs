@@ -13,7 +13,7 @@ mainSections = ["docs"]
 [doks]
   # Color mode
   colorMode = "auto" # auto (default), light or dark
-  colorModeToggler = false # true (default) or false (this setting is only relevant when colorMode = auto)
+  colorModeToggler = true # true (default) or false (this setting is only relevant when colorMode = auto)
 
   # Navbar
   navbarSticky = true # true (default) or false
