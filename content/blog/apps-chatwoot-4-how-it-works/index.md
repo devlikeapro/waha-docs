@@ -2,10 +2,10 @@
 title: "WhatsApp + ChatWoot - How It Works"
 description: "Learn how WAHA and ChatWoot work together behind the scenes. Explains message flow, retry logic, and dashboards for watching jobs."
 excerpt: "Learn how WAHA and ChatWoot work together behind the scenes. Explains message flow, retry logic, and dashboards for watching jobs."
-date: 2025-07-06T08:48:45+00:00
+date: 2025-07-10T08:48:45+00:00
 draft: false
-images: [ "waha-chatwoot.png" ]
-categories: [ "Apps", "ChatWoot" ]
+images: [ "cover.png" ]
+categories: [ "ChatWoot", "Apps" ]
 tags: [ ]
 contributors: [ "devlikeapro" ]
 pinned: false

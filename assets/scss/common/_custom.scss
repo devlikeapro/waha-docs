@@ -111,6 +111,37 @@
 @import "./variables-docsearch";
 @import "@docsearch/css/dist/modal";
 
+
+// Term card image background
+.term-card-image-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+}
+
+.blog-cover-wrapper {
+  display: block;
+  width: 100%;
+  margin: 0 auto 2rem;
+  background-color: #f0f0f0;
+}
+
+.blog-cover-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@include color-mode(dark) {
+  .term-card-image-wrapper,
+  .blog-cover-wrapper {
+    background-color: #f0f0f0;
+  }
+}
+
 // Footer background adapts to theme
 .footer {
   background-color: #e9f7e3;

@@ -13,8 +13,6 @@ homepage: false
 slug: waha-2025-9
 ---
 
-![WAHA 2025.9](waha-2025-9.png)
-
 ## 🧩 ChatWoot 1.1
 ChatWoot integration graduates to **v1.1**, adding conversation control, CSAT surveys, richer language templates, and safer contact handling.
 

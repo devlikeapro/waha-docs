@@ -2,10 +2,10 @@
 title: "WhatsApp + ChatWoot - Overview"
 description: "See how WAHA connects WhatsApp to ChatWoot so teams reply from one place. A quick tour of the main features before the longer guides."
 excerpt: "See how WAHA connects WhatsApp to ChatWoot so teams reply from one place. A quick tour of the main features before the longer guides."
-date: 2025-07-12T08:48:45+00:00
+date: 2025-07-06T08:48:45+00:00
 draft: false
-images: [ "waha-chatwoot.png" ]
-categories: [ "Apps", "ChatWoot" ]
+images: [ "cover.png" ]
+categories: [ "ChatWoot", "Apps" ]
 tags: [ ]
 contributors: [ "devlikeapro" ]
 pinned: false
@@ -18,12 +18,7 @@ slug: apps-chatwoot-overview
 
 {{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}
 
-<p align="center">
-  <img src="/images/chatwoot/waha-chatwoot.png" style="width: 150px">
-</p>
-
-
-## Contacts Sync
+## Contacts
 **Contact information** is displayed in **Chatwoot** from **WhatsApp**:
 
 ![](screenshots/contact-info.png)

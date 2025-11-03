@@ -1,5 +1,26 @@
 # Agent Playbook
 
+## 🧩 Image Tools
+
+Agents can use local CLI tools for image manipulation:
+
+- **ImageMagick** (`magick`, `convert`, `mogrify`, `composite`, `montage`)
+- **GraphicsMagick** (`gm`)
+- **libvips** (`vips`)
+- **ffmpeg** (`ffmpeg`)
+
+If none are available, Agent will request installation on the host system.
+
+
+
+## Emoji Asset Library
+
+- All emojis referenced in `content/` now have Twemoji SVG+PNG pairs stored under `images/emoji/` using the `<emoji> - <slug>.svg|png` naming convention.
+- The manifest at `scripts/emoji-manifest.json` (generated from `scripts/emoji-codes.txt`) lists every emoji currently in use.
+- Run `node scripts/download-emoji.js` to refresh the cached SVGs in bulk; the script handles variation selectors and writes files into `images/emoji/` automatically.
+- If you need a new emoji, add its code to `scripts/emoji-codes.txt` and rerun the script, or `curl` the Twemoji SVG straight into `images/emoji/<emoji> - <slug>.svg` and generate a matching PNG with the ImageMagick recipe below.
+- Cached assets let you composite covers without repeatedly downloading the same glyphs.
+
 ## How to Generate an Emoji Cover Image
 
 Follow this checklist whenever you need to create a square PNG cover that features a single emoji on a transparent background.
@@ -42,3 +63,27 @@ Follow this checklist whenever you need to create a square PNG cover that featur
    - Run `hugo serve` and confirm the listing card shows the expected emoji cover without clipping or halos.
 
 > Tip: Keep the output filename lowercase (`cover.png`) so section listings can use a simple `{{ index .Params.images 0 }}` lookup.
+
+
+## ChatWoot Covers (logos + emoji)
+
+The ChatWoot overview and app articles share the same WAHA + ChatWoot logo strip. Pair it with the page emoji while keeping the 3000×1024 canvas so listing cards align.
+
+1. Restore the clean logos: `cp images/waha-chatwoot-original.png /tmp/waha-chatwoot.png`
+2. Trim padding so we can position it consistently: `convert /tmp/waha-chatwoot.png -trim /tmp/logos.png`
+3. Render the page emoji with the recipe above so you have `/tmp/emoji.png`, then resize it to 250px tall so it stays proportional on the 3000×1024 canvas.
+   ```bash
+   convert /tmp/emoji.png -resize x250 /tmp/emoji.png
+   ```
+   Pick the matching code point, e.g. `1f527` for 🔧.
+4. Composite everything onto a 3000×1024 transparent canvas:
+   ```bash
+   convert -size 3000x1024 xc:none \
+     /tmp/logos.png -gravity center -geometry -450+0 -composite \
+     /tmp/emoji.png -gravity center -geometry +450+0 -composite \
+     content/blog/apps-chatwoot-<slug>/cover.png
+   ```
+   Replace `<slug>` with the bundle directory (e.g. `apps-chatwoot-2-config`).
+5. Remove `/tmp/logos.png`, `/tmp/waha-chatwoot.png`, and the emoji assets when you're done.
+
+This keeps the branding centred with a comfortable gap and ensures every ChatWoot cover reuses the original artwork.

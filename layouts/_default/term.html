@@ -24,25 +24,45 @@
 </div>
 <div class="row justify-content-center">
   <div class="col-lg-9">
-    {{ $paginator := .Paginate (.Data.Pages) -}}
+    {{- $pages := .Data.Pages -}}
+    {{- $ordering := site.Params.taxonomies.ordering | default dict -}}
+    {{- $defaultOrder := $ordering.default | default "desc" -}}
+    {{- $order := $defaultOrder -}}
+    {{- if eq .Data.Singular "category" -}}
+      {{- $categoryConfig := $ordering.category | default dict -}}
+      {{- $term := lower .Data.Term -}}
+      {{- with index $categoryConfig $term -}}
+        {{- $order = . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if eq (lower $order) "asc" -}}
+      {{- $pages = $pages.ByDate -}}
+    {{- else if eq (lower $order) "desc" -}}
+      {{- $pages = $pages.ByDate.Reverse -}}
+    {{- end -}}
+    {{ $paginator := .Paginate $pages -}}
     {{ range $paginator.Pages -}}
+      {{- $page := . -}}
       <div class="card">
-        {{ if site.Params.doks.imageList -}}
-          {{- $images := .Resources.ByType "image" -}}
-          {{- $featured := $images.GetMatch "*feature*" -}}
-          {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
-          {{- if $featured -}}
-            {{ partial "img" (dict
-            "page" .
-            "src" $featured
-            "alt" .Title
-            "class" "rounded-top-1"
-            )}}
-          {{ end -}}
-        {{ end -}}
         <div class="card-body">
           <article>
             <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+            {{- with $page.Params.images -}}
+              {{- $img := index . 0 -}}
+              {{- if $img -}}
+                <div class="text-center my-3">
+                  <div class="term-card-image-wrapper">
+                    {{ partial "picture" (dict
+                      "page" $page
+                      "src" $img
+                      "alt" $page.Title
+                      "width" 320
+                      "class" "rounded-3 term-card-image"
+                    ) }}
+                  </div>
+                </div>
+              {{- end -}}
+            {{- end -}}
             {{- $blurb := "" -}}
             {{- with .Params.summary -}}
               {{- $blurb = . -}}
@@ -60,7 +80,7 @@
             {{- if $blurb -}}
               <p>{{ $blurb | safeHTML }}</p>
             {{- end -}}
-            {{ partial "main/blog-meta.html" . -}}
+            {{ partial "main/blog-meta.html" $page -}}
           </article>
         </div>
       </div>

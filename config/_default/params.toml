@@ -139,3 +139,11 @@ mainSections = ["docs"]
 
 [add_ons]
   docSearch = true # false (default) or true
+
+[taxonomies]
+  [taxonomies.ordering]
+    # Control taxonomy list ordering: use "asc" for oldest-first, "desc" for newest-first.
+    default = "desc"
+
+    [taxonomies.ordering.category]
+      chatwoot = "asc"

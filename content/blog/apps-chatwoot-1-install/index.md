@@ -2,10 +2,10 @@
 title: "WhatsApp + ChatWoot - Installation Guide"
 description: "Install WAHA and ChatWoot on your own server with Docker. Step-by-step tasks for requirements, env files, and downloading images."
 excerpt: "Install WAHA and ChatWoot on your own server with Docker. Step-by-step tasks for requirements, env files, and downloading images."
-date: 2025-07-11T08:48:45+00:00
+date: 2025-07-07T08:48:45+00:00
 draft: false
-images: [ "waha-chatwoot.png" ]
-categories: [ "Apps", "ChatWoot" ]
+images: [ "cover.png" ]
+categories: [ "ChatWoot", "Apps" ]
 tags: [ ]
 contributors: [ "devlikeapro" ]
 pinned: false

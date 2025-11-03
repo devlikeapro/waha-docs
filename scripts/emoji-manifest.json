@@ -1,0 +1,392 @@
+[
+  {
+    "code": "1f310",
+    "emoji": "🌐",
+    "slug": "globe-with-meridians"
+  },
+  {
+    "code": "1f31f",
+    "emoji": "🌟",
+    "slug": "glowing-star"
+  },
+  {
+    "code": "1f381",
+    "emoji": "🎁",
+    "slug": "wrapped-present"
+  },
+  {
+    "code": "1f389",
+    "emoji": "🎉",
+    "slug": "party-popper"
+  },
+  {
+    "code": "1f3af",
+    "emoji": "🎯",
+    "slug": "direct-hit"
+  },
+  {
+    "code": "1f3ed",
+    "emoji": "🏭",
+    "slug": "factory"
+  },
+  {
+    "code": "1f3f7-fe0f",
+    "emoji": "🏷️",
+    "slug": "label"
+  },
+  {
+    "code": "1f419",
+    "emoji": "🐙",
+    "slug": "octopus"
+  },
+  {
+    "code": "1f41b",
+    "emoji": "🐛",
+    "slug": "bug"
+  },
+  {
+    "code": "1f422",
+    "emoji": "🐢",
+    "slug": "turtle"
+  },
+  {
+    "code": "1f441-fe0f-200d-1f5e8-fe0f",
+    "emoji": "👁️‍🗨️",
+    "slug": "eye-left-speech-bubble"
+  },
+  {
+    "code": "1f447",
+    "emoji": "👇",
+    "slug": "white-down-pointing-backhand-index"
+  },
+  {
+    "code": "1f448",
+    "emoji": "👈",
+    "slug": "white-left-pointing-backhand-index"
+  },
+  {
+    "code": "1f449",
+    "emoji": "👉",
+    "slug": "white-right-pointing-backhand-index"
+  },
+  {
+    "code": "1f44d",
+    "emoji": "👍",
+    "slug": "thumbs-up-sign"
+  },
+  {
+    "code": "1f464",
+    "emoji": "👤",
+    "slug": "bust-in-silhouette"
+  },
+  {
+    "code": "1f465",
+    "emoji": "👥",
+    "slug": "busts-in-silhouette"
+  },
+  {
+    "code": "1f485",
+    "emoji": "💅",
+    "slug": "nail-polish"
+  },
+  {
+    "code": "1f496",
+    "emoji": "💖",
+    "slug": "sparkling-heart"
+  },
+  {
+    "code": "1f4a1",
+    "emoji": "💡",
+    "slug": "electric-light-bulb"
+  },
+  {
+    "code": "1f4ac",
+    "emoji": "💬",
+    "slug": "speech-balloon"
+  },
+  {
+    "code": "1f4c4",
+    "emoji": "📄",
+    "slug": "page-facing-up"
+  },
+  {
+    "code": "1f4c5",
+    "emoji": "📅",
+    "slug": "calendar"
+  },
+  {
+    "code": "1f4ca",
+    "emoji": "📊",
+    "slug": "bar-chart"
+  },
+  {
+    "code": "1f4cd",
+    "emoji": "📍",
+    "slug": "round-pushpin"
+  },
+  {
+    "code": "1f4d6",
+    "emoji": "📖",
+    "slug": "open-book"
+  },
+  {
+    "code": "1f4da",
+    "emoji": "📚",
+    "slug": "books"
+  },
+  {
+    "code": "1f4de",
+    "emoji": "📞",
+    "slug": "telephone-receiver"
+  },
+  {
+    "code": "1f4e1",
+    "emoji": "📡",
+    "slug": "satellite-antenna"
+  },
+  {
+    "code": "1f4e2",
+    "emoji": "📢",
+    "slug": "public-address-loudspeaker"
+  },
+  {
+    "code": "1f4e3",
+    "emoji": "📣",
+    "slug": "cheering-megaphone"
+  },
+  {
+    "code": "1f4e4",
+    "emoji": "📤",
+    "slug": "outbox-tray"
+  },
+  {
+    "code": "1f4e5",
+    "emoji": "📥",
+    "slug": "inbox-tray"
+  },
+  {
+    "code": "1f4f0",
+    "emoji": "📰",
+    "slug": "newspaper"
+  },
+  {
+    "code": "1f4f6",
+    "emoji": "📶",
+    "slug": "antenna-with-bars"
+  },
+  {
+    "code": "1f504",
+    "emoji": "🔄",
+    "slug": "anticlockwise-downwards-and-upwards-open-circle-arrows"
+  },
+  {
+    "code": "1f50c",
+    "emoji": "🔌",
+    "slug": "electric-plug"
+  },
+  {
+    "code": "1f50d",
+    "emoji": "🔍",
+    "slug": "left-pointing-magnifying-glass"
+  },
+  {
+    "code": "1f50e",
+    "emoji": "🔎",
+    "slug": "right-pointing-magnifying-glass"
+  },
+  {
+    "code": "1f511",
+    "emoji": "🔑",
+    "slug": "key"
+  },
+  {
+    "code": "1f512",
+    "emoji": "🔒",
+    "slug": "lock"
+  },
+  {
+    "code": "1f517",
+    "emoji": "🔗",
+    "slug": "link-symbol"
+  },
+  {
+    "code": "1f527",
+    "emoji": "🔧",
+    "slug": "wrench"
+  },
+  {
+    "code": "1f528",
+    "emoji": "🔨",
+    "slug": "hammer"
+  },
+  {
+    "code": "1f5a5-fe0f",
+    "emoji": "🖥️",
+    "slug": "desktop-computer"
+  },
+  {
+    "code": "1f5bc-fe0f",
+    "emoji": "🖼️",
+    "slug": "frame-with-picture"
+  },
+  {
+    "code": "1f5c4-fe0f",
+    "emoji": "🗄️",
+    "slug": "file-cabinet"
+  },
+  {
+    "code": "1f60a",
+    "emoji": "😊",
+    "slug": "smiling-face-with-smiling-eyes"
+  },
+  {
+    "code": "1f61e",
+    "emoji": "😞",
+    "slug": "disappointed-face"
+  },
+  {
+    "code": "1f631",
+    "emoji": "😱",
+    "slug": "face-screaming-in-fear"
+  },
+  {
+    "code": "1f64c",
+    "emoji": "🙌",
+    "slug": "person-raising-both-hands-in-celebration"
+  },
+  {
+    "code": "1f64f",
+    "emoji": "🙏",
+    "slug": "person-with-folded-hands"
+  },
+  {
+    "code": "1f680",
+    "emoji": "🚀",
+    "slug": "rocket"
+  },
+  {
+    "code": "1f6a7",
+    "emoji": "🚧",
+    "slug": "construction-sign"
+  },
+  {
+    "code": "1f6a8",
+    "emoji": "🚨",
+    "slug": "police-cars-revolving-light"
+  },
+  {
+    "code": "1f6e0-fe0f",
+    "emoji": "🛠️",
+    "slug": "hammer-and-wrench"
+  },
+  {
+    "code": "1f6e1-fe0f",
+    "emoji": "🛡️",
+    "slug": "shield"
+  },
+  {
+    "code": "1f7e2",
+    "emoji": "🟢",
+    "slug": "large-green-circle"
+  },
+  {
+    "code": "1f914",
+    "emoji": "🤔",
+    "slug": "thinking-face"
+  },
+  {
+    "code": "1f916",
+    "emoji": "🤖",
+    "slug": "robot-face"
+  },
+  {
+    "code": "1f9e9",
+    "emoji": "🧩",
+    "slug": "jigsaw-puzzle-piece"
+  },
+  {
+    "code": "1f9f0",
+    "emoji": "🧰",
+    "slug": "toolbox"
+  },
+  {
+    "code": "1f9f1",
+    "emoji": "🧱",
+    "slug": "brick"
+  },
+  {
+    "code": "1faf6",
+    "emoji": "🫶",
+    "slug": "u-1faf6"
+  },
+  {
+    "code": "261d-fe0f",
+    "emoji": "☝️",
+    "slug": "white-up-pointing-index"
+  },
+  {
+    "code": "2699-fe0f",
+    "emoji": "⚙️",
+    "slug": "gear"
+  },
+  {
+    "code": "26a0",
+    "emoji": "⚠",
+    "slug": "warning-sign"
+  },
+  {
+    "code": "26a0-fe0f",
+    "emoji": "⚠️",
+    "slug": "warning-sign"
+  },
+  {
+    "code": "26a1",
+    "emoji": "⚡",
+    "slug": "high-voltage-sign"
+  },
+  {
+    "code": "2705",
+    "emoji": "✅",
+    "slug": "white-heavy-check-mark"
+  },
+  {
+    "code": "270f-fe0f",
+    "emoji": "✏️",
+    "slug": "pencil"
+  },
+  {
+    "code": "2714-fe0f",
+    "emoji": "✔️",
+    "slug": "heavy-check-mark"
+  },
+  {
+    "code": "274c",
+    "emoji": "❌",
+    "slug": "cross-mark"
+  },
+  {
+    "code": "2753",
+    "emoji": "❓",
+    "slug": "black-question-mark-ornament"
+  },
+  {
+    "code": "2757",
+    "emoji": "❗",
+    "slug": "heavy-exclamation-mark-symbol"
+  },
+  {
+    "code": "2764-fe0f",
+    "emoji": "❤️",
+    "slug": "heavy-black-heart"
+  },
+  {
+    "code": "2795",
+    "emoji": "➕",
+    "slug": "heavy-plus-sign"
+  },
+  {
+    "code": "2796",
+    "emoji": "➖",
+    "slug": "heavy-minus-sign"
+  }
+]

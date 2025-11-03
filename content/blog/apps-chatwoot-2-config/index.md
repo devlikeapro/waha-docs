@@ -2,10 +2,10 @@
 title: "WhatsApp + ChatWoot - Configuration Guide"
 description: "Connect a WAHA session to a ChatWoot inbox for WhatsApp chats. Shows each field to fill, webhook setup, and how to test messages."
 excerpt: "Connect a WAHA session to a ChatWoot inbox for WhatsApp chats. Shows each field to fill, webhook setup, and how to test messages."
-date: 2025-07-10T08:48:45+00:00
+date: 2025-07-08T08:48:45+00:00
 draft: false
-images: [ "waha-chatwoot.png" ]
-categories: [ "Apps", "ChatWoot" ]
+images: [ "cover.png" ]
+categories: [ "ChatWoot", "Apps" ]
 tags: [ ]
 contributors: [ "devlikeapro" ]
 pinned: false
