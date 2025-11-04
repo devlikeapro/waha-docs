@@ -19,11 +19,17 @@ slug: apps-chatwoot-overview
 {{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}
 
 ## Contacts
+{{< callout context="tip" title="Sync Contacts" icon="outline/sparkles" >}}
+Read how to sync your WhatsApp address book with `wa/contacts pull` in the **[WhatsApp + ChatWoot - Contacts Guide]({{< relref "/blog/apps-chatwoot-6-contacts" >}})**.
+{{< /callout >}}
 **Contact information** is displayed in **Chatwoot** from **WhatsApp**:
 
 ![](screenshots/contact-info.png)
 
 ## Messages
+{{< callout context="tip" title="Sync Message History" icon="outline/sparkles" >}}
+Need to backfill chats? See `wa/messages pull` examples in the **[WhatsApp + ChatWoot - Messages Guide]({{< relref "/blog/apps-chatwoot-5-messages" >}})**.
+{{< /callout >}}
 
 Send and receive **text messages**:
 
