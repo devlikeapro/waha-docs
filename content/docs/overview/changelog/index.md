@@ -50,7 +50,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 ### 2025.10
 📢 **BREAKING CHANGE** 📢
 
-`2025.10.3`
+In `2025.10.3`:
 
 - Requires `WAHA_API_KEY`, `WAHA_DASHBOARD_PASSWORD`, `WHATSAPP_SWAGGER_PASSWORD` and generate one if no provided.
 - Treats "00..00", "123", "admin", "waha" as not secure
@@ -61,6 +61,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 🛠️ **Fixes**
 
+- `2025.10.5` - **WEBJS** - normalize message reaction senders so ChatWoot gets correct actor - {{< issue 1545 >}}
+- `2025.10.5` - **WEBJS** - fix `/messages` pagination offset
+- `2025.10.5` - **NOWEB** - ignore history sync notifications to cut noise in logs
+- `2025.10.5` - **NOWEB** - increase sqlite timeouts to avoid lock errors
 - `2025.10.4` - fix ffmpeg voice converter to `mp3` - {{< issue 1393 >}}, {{< issue 1453 >}}
 - `2025.10.4` - **NOWEB**, **GOWS** - better handle `message.edited` events - {{< issue 1394 >}}
 - `2025.10.4` - **NOWEB** - fix sending media to channels - {{< issue 1523 >}}
@@ -75,6 +79,12 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **🧩 ChatWoot**
 
+- `2025.10.5`  - `wa/messages pull` - {{< issue 1231 >}}
+  - [**💬 ChatWoot - Messages Guide**]({{< relref "/blog/apps-chatwoot-5-messages" >}})
+- `2025.10.5` -  - `wa/contacts pull` - {{< issue 1231 >}}
+  - [**👤 ChatWoot - Contacts Guide**]({{< relref "/blog/apps-chatwoot-6-contacts" >}})
+- `2025.10.5` - Album Message - {{< issue 1405 >}}
+- `2025.10.5` - ChatWoot queues via dashboard commands, smarter limits, and duplicate guards
 - `2025.10.4` - Fix inverted logic of messages read in ChatWoot (closes devlikeapro/waha-plus#20)
 - `2025.10.4` - Preserve underscores inside URLs so markdown stays intact - {{< issue 1522 >}}
 - `2025.10.3` - Render List Message
@@ -89,6 +99,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 **⚙️ Updates**
 
+- `2025.10.5` - Add `sortOrder` and `sortBy` to `/messages` API for custom sorting
+- `2025.10.5` - **GOWS** - update engine, use context
+- `2025.10.5` - **ChatWoot** - upgrade bundled app to `4.7.0` 
+- `2025.10.5` - **NOWEB** **MongoDB** - message lookups by chat id
 - `2025.10.4` - **NOWEB** - up engine - {{< issue 1538 >}}
 - `2025.10.4` - **Dashboard** - refreshed headers and agent name display
 - `2025.10.1` - **NOWEB** - up engine
