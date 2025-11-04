@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 30 Oct 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WhatsApp + ChatWoot - Messages</title><link>/blog/apps-chatwoot-messages/</link><pubDate>Thu, 30 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-messages/</guid><description>&lt;div>&lt;/div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 31 Oct 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.10 - ChatWoot Pull Commands, Secure Defaults</title><link>/blog/waha-2025-10/</link><pubDate>Fri, 31 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-10/</guid><description>&lt;h2 id="-chatwoot--messages-sync">💬 ChatWoot – Messages Sync&lt;/h2>
+&lt;p>Need old conversations inside ChatWoot? Run &lt;code>wa/messages pull&lt;/code> to replay WhatsApp chat history, pick the time range, fetch media, and even close conversations during the import. Every switch is explained in the &lt;a href="/blog/apps-chatwoot-messages/">&lt;strong>💬 ChatWoot – Messages Guide&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Messages</title><link>/blog/apps-chatwoot-messages/</link><pubDate>Thu, 30 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-messages/</guid><description>&lt;div>&lt;/div>
 &lt;div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
  &lt;svg
  xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +49,7 @@
 &lt;p>ChatWoot integration graduates to &lt;strong>v1.1&lt;/strong>, adding conversation control, CSAT surveys, richer language templates, and safer contact handling.&lt;/p></description></item><item><title>WAHA 2025.8 - Ignore Chats, Send Poll Vote, and more!</title><link>/blog/waha-2025-8/</link><pubDate>Fri, 29 Aug 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-8/</guid><description>&lt;p>
 
 &lt;img
- src="/blog/waha-2025-8/waha-2025-8_hu_b13a1b8ee62c81fc.webp"
+ src="/blog/waha-2025-8/waha-2025-8_hu_95f6e09de9892002.webp"
  width="1200"
  height="600"
  decoding="async"
@@ -178,5 +179,4 @@ eliminating the need to run n8n or use other third-party products!&lt;/p></descr
 &lt;/svg>
  &lt;div class="callout-content">
  &lt;div class="callout-title">
- &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Overview</title><link>/blog/apps-chatwoot-overview/</link><pubDate>Sun, 06 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-overview/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>&lt;strong>WAHA&lt;/strong> provides a seamless integration with &lt;strong>Chatwoot&lt;/strong>, allowing you to manage your WhatsApp communications through a powerful customer service platform. This overview highlights the key features and capabilities of the integration.&lt;/p></description></item></channel></rss>
+ &lt;p>ChatWoot Articles&lt;/p></description></item></channel></rss>
