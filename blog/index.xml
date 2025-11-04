@@ -1,15 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 30 Sep 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.9 - ChatWoot 1.1, NOWEB 7.0-rc, Sessions Filters</title><link>/blog/waha-2025-9/</link><pubDate>Tue, 30 Sep 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-9/</guid><description>&lt;p>
-
-&lt;img
- src="/blog/waha-2025-9/waha-2025-9_hu_2d5669770a55ab65.webp"
- width="1200"
- height="600"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="WAHA 2025.9"id="h-rh-i-0"
-/>&lt;/p>
-&lt;h2 id="-chatwoot-11">🧩 ChatWoot 1.1&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 30 Oct 2025 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WhatsApp + ChatWoot - Messages</title><link>/blog/apps-chatwoot-messages/</link><pubDate>Thu, 30 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-messages/</guid><description>&lt;div>&lt;/div>
+&lt;div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/gavel svg-inline callout-icon me-2 mb-3" id="svg-gavel" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M13 10l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385" />
+ &lt;path d="M6 9l4 4" />
+ &lt;path d="M13 10l-4 -4" />
+ &lt;path d="M3 21h7" />
+ &lt;path d="M6.793 15.793l-3.586 -3.586a1 1 0 0 1 0 -1.414l2.293 -2.293l.5 .5l3 -3l-.5 -.5l2.293 -2.293a1 1 0 0 1 1.414 0l3.586 3.586a1 1 0 0 1 0 1.414l-2.293 2.293l-.5 -.5l-3 3l.5 .5l-2.293 2.293a1 1 0 0 1 -1.414 0z" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>Disclaimer&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Contacts</title><link>/blog/apps-chatwoot-contacts/</link><pubDate>Wed, 29 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-contacts/</guid><description>&lt;div>&lt;/div>
+&lt;div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/gavel svg-inline callout-icon me-2 mb-3" id="svg-gavel" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M13 10l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385" />
+ &lt;path d="M6 9l4 4" />
+ &lt;path d="M13 10l-4 -4" />
+ &lt;path d="M3 21h7" />
+ &lt;path d="M6.793 15.793l-3.586 -3.586a1 1 0 0 1 0 -1.414l2.293 -2.293l.5 .5l3 -3l-.5 -.5l2.293 -2.293a1 1 0 0 1 1.414 0l3.586 3.586a1 1 0 0 1 0 1.414l-2.293 2.293l-.5 -.5l-3 3l.5 .5l-2.293 2.293a1 1 0 0 1 -1.414 0z" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>Disclaimer&lt;/p></description></item><item><title>WAHA 2025.9 - ChatWoot 1.1, NOWEB 7.0-rc, Sessions Filters</title><link>/blog/waha-2025-9/</link><pubDate>Tue, 30 Sep 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-9/</guid><description>&lt;h2 id="-chatwoot-11">🧩 ChatWoot 1.1&lt;/h2>
 &lt;p>ChatWoot integration graduates to &lt;strong>v1.1&lt;/strong>, adding conversation control, CSAT surveys, richer language templates, and safer contact handling.&lt;/p></description></item><item><title>WAHA 2025.8 - Ignore Chats, Send Poll Vote, and more!</title><link>/blog/waha-2025-8/</link><pubDate>Fri, 29 Aug 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-8/</guid><description>&lt;p>
 
 &lt;img
@@ -36,8 +71,33 @@
  alt=""id="h-rh-i-0"
 />&lt;/p>
 &lt;p>WAHA now provides a built-in app to integrate your &lt;strong>WhatsApp&lt;/strong> account with &lt;strong>ChatWoot&lt;/strong>,
-eliminating the need to run n8n or use other third-party products!&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Overview</title><link>/blog/apps-chatwoot-overview/</link><pubDate>Sat, 12 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-overview/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>&lt;strong>WAHA&lt;/strong> provides a seamless integration with &lt;strong>Chatwoot&lt;/strong>, allowing you to manage your WhatsApp communications through a powerful customer service platform. This overview highlights the key features and capabilities of the integration.&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Installation Guide</title><link>/blog/apps-chatwoot-install/</link><pubDate>Fri, 11 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-install/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+eliminating the need to run n8n or use other third-party products!&lt;/p></description></item><item><title>WhatsApp + ChatWoot - How It Works</title><link>/blog/apps-chatwoot-4-how-it-works/</link><pubDate>Thu, 10 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-4-how-it-works/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+
+
+
+&lt;div>&lt;/div>
+&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/article svg-inline callout-icon me-2 mb-3" id="svg-article" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+ &lt;path d="M7 8h10" />
+ &lt;path d="M7 12h10" />
+ &lt;path d="M7 16h10" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WhatsApp + ChatWoot - HTTPS Guide</title><link>/blog/apps-chatwoot-3-https/</link><pubDate>Wed, 09 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-3-https/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
 
 
@@ -64,7 +124,7 @@ eliminating the need to run n8n or use other third-party products!&lt;/p></descr
 &lt;/svg>
  &lt;div class="callout-content">
  &lt;div class="callout-title">
- &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Configuration Guide</title><link>/blog/apps-chatwoot-config/</link><pubDate>Thu, 10 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-config/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+ &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Configuration Guide</title><link>/blog/apps-chatwoot-config/</link><pubDate>Tue, 08 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-config/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
 
 
@@ -91,7 +151,7 @@ eliminating the need to run n8n or use other third-party products!&lt;/p></descr
 &lt;/svg>
  &lt;div class="callout-content">
  &lt;div class="callout-title">
- &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WhatsApp + ChatWoot - HTTPS Guide</title><link>/blog/apps-chatwoot-3-https/</link><pubDate>Mon, 07 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-3-https/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+ &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Installation Guide</title><link>/blog/apps-chatwoot-install/</link><pubDate>Mon, 07 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-install/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
 
 
@@ -118,39 +178,5 @@ eliminating the need to run n8n or use other third-party products!&lt;/p></descr
 &lt;/svg>
  &lt;div class="callout-content">
  &lt;div class="callout-title">
- &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WhatsApp + ChatWoot - How It Works</title><link>/blog/apps-chatwoot-4-how-it-works/</link><pubDate>Sun, 06 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-4-how-it-works/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
-
-
-
-&lt;div>&lt;/div>
-&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
- &lt;svg
- xmlns="http://www.w3.org/2000/svg"
- width="24"
- height="24"
- viewBox="0 0 24 24"
- fill="none"
- stroke="currentColor"
- stroke-width="2"
- stroke-linecap="round"
- stroke-linejoin="round"
- 
- class="outline/article svg-inline callout-icon me-2 mb-3" id="svg-article" role="img">
- &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
- &lt;path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
- &lt;path d="M7 8h10" />
- &lt;path d="M7 12h10" />
- &lt;path d="M7 16h10" />
-&lt;/svg>
- &lt;div class="callout-content">
- &lt;div class="callout-title">
- &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WAHA 2025.6 - Security in WAHA Core, Message Edit Event, and Media Conversion</title><link>/blog/waha-2025-6/</link><pubDate>Sun, 29 Jun 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-6/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
-&lt;h3 id="-security-in-waha-core">🔒 Security in WAHA Core&lt;/h3>
-&lt;p>&lt;strong>WAHA Core&lt;/strong> now comes with robust, built-in security features!&lt;br>
-You can protect your API with an &lt;strong>API Key&lt;/strong> - and now, for even greater security, you can store only the hash of your key using &lt;code>WAHA_API_KEY=sha512:{HASH}&lt;/code>.&lt;br>
-This means your API key is never stored in plain text, reducing the risk if your environment variables are exposed.&lt;/p></description></item><item><title>WAHA 2025.5 - Presence, Polls, Labels and More!</title><link>/blog/waha-2025-5/</link><pubDate>Thu, 29 May 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-5/</guid><description>&lt;h2 id="-whats-new">🆕 What&amp;rsquo;s New?&lt;/h2>
-&lt;h3 id="-presence-webjs">✅ Presence (WEBJS)&lt;/h3>
-&lt;p>In &lt;strong>WEBJS&lt;/strong>, you can now use the
-&lt;a href="/docs/how-to/presence/">&lt;strong>✅ Presence&lt;/strong>&lt;/a> API and Events
-to track your customers&amp;rsquo; online status!&lt;/p></description></item></channel></rss>
+ &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Overview</title><link>/blog/apps-chatwoot-overview/</link><pubDate>Sun, 06 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-overview/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>&lt;strong>WAHA&lt;/strong> provides a seamless integration with &lt;strong>Chatwoot&lt;/strong>, allowing you to manage your WhatsApp communications through a powerful customer service platform. This overview highlights the key features and capabilities of the integration.&lt;/p></description></item></channel></rss>
