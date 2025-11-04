@@ -113,6 +113,10 @@ wa/messages pull 10d 0d
 wa/messages pull 30d 20d
 wa/messages pull 20d 10d
 wa/messages pull 10d 0d # You can omit the last 0d
+# The same as 
+wa/messages pull 30d 
+# The same as
+wa/messages pull 30d 0d
 ```
 
 You can mix units (`7d`, `6h`, `15m`) and WAHA converts them to milliseconds automatically.
@@ -133,7 +137,7 @@ Keep the defaults to backfill the recent timeline:
 wa/messages pull
 ```
 
-if you wanna rebuild the whole 1 days conversation **in the chat** you can do:
+if you want to rebuild the whole 1-day conversation **in the chat** you can do:
 
 ```bash {title="Force 1 Day"}
 wa/messages pull 1d --force
@@ -153,7 +157,41 @@ Grab a broader range while still ending at the current moment:
 wa/messages pull 10d # --force
 ```
 
-### Import an older slice only
+### Include Media
+By default, WAHA only pulls text messages to speed up the process.
+
+You can include media attachments with `--media` flag:
+
+```bash {title="Include Media"}
+wa/messages pull --media
+```
+
+### Pull Other Chats
+By default, WAHA only pulls messages from **direct chats (1:1)**.
+
+You can include groups, channels, status replies, and broadcast lists with these flags:
+
+```bash {title="Include Other Chats"}
+wa/messages pull --groups --channels --status --broadcast
+```
+
+You can also exclude direct messages with `--no-dm` flag:
+
+```bash {title="Groups Only"}
+wa/messages pull --no-dm --groups
+```
+
+### Resolve conversations after import
+
+Close conversations once their history is restored so agents can focus on new tickets:
+
+```bash {title="Auto Resolve"}
+wa/messages pull --resolve-conversations
+```
+
+`--rc` is a shorthand for the same option.
+
+### Import an older in batch
 
 Backfill past interactions without rewriting newer chats:
 
@@ -205,43 +243,13 @@ wa/messages pull 1y --rc --pause
 `--pause` adds the pull to the queue in a paused state and resumes the queues automatically after it completes.
 
 
-### Resolve conversations after import
-
-Close conversations once their history is restored so agents can focus on new tickets:
-
-```bash {title="Auto Resolve"}
-wa/messages pull --resolve-conversations
-```
-
-`--rc` is a shorthand for the same option.
-
-### Include Media
-By default, WAHA only pulls text messages to speed up the process.
-
-You can include media attachments with `--media` flag:
-
-```bash {title="Include Media"}
-wa/messages pull --media
-```
-
-### Pull Other Chats
-By default, WAHA only pulls messages from **direct chats (1:1)**.
-
-You can include groups, channels, status replies, and broadcast lists with these flags:
-
-```bash {title="Include Other Chats"}
-wa/messages pull --groups --channels --status --broadcast
-```
-
-You can also exclude direct messages with `--no-dm` flag:
-
-```bash {title="Groups Only"}
-wa/messages pull --no-dm --groups
-```
-
 ### Full options
 
-Adjust the values to fit your environment and run `wa/messages help` to see current defaults from your build:
+Adjust the values to fit your environment and run `wa/messages help` to see current defaults from your build.
+
+```bash
+wa/messages help
+```
 
 ```bash {title="Full Options"}
 wa/messages pull
