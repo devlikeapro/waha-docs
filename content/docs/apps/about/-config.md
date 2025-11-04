@@ -14,10 +14,16 @@ To use
 - `WAHA_API_KEY_PLAIN=0000000000000000` - plain password **required** for Apps in environment variables
   - It's a quick solution, we're working on removing it so you can use `sha512` version as in `WAHA_API_KEY`
 
-**ChatWoot App**:
-
+**ChatWoot App (WAHA)**:
 - `WAHA_APPS_CHATWOOT_LANGUAGES_FOLDER=/app/.languages` - folder for additional languages (if language exists it'll override templates in the original templates)
+- `WAHA_CHATWOOT_COMMAND_PREFIX` - `wa/{command}` - prefix for commands sent from ChatWoot to WAHA (default: `wa/`)
+- `WAHA_CHATWOOT_MESSAGE_CALENDAR_THRESHOLD_SECONDS=600` - threshold in seconds to show the calendar icon
+
+  **ChatWoot App (ChatWoot)**:
 - `RACK_TIMEOUT_SERVICE_TIMEOUT=60` — increases the default Rack timeout to 60s (default is 15s).
+- `CONVERSATION_MESSAGE_PER_MINUTE_LIMIT=3000` - **important** to increase if you're using `wa/messages pull`
+- `RACK_ATTACK_LIMIT=30000` - **important** to increase if you're using `wa/messages pull`
+- **or** `RACK_ATTACK_ALLOWED_IPS={your.waha.ip.address1}` 
 
 
 **Jobs**: 
