@@ -87,3 +87,27 @@ The ChatWoot overview and app articles share the same WAHA + ChatWoot logo strip
 5. Remove `/tmp/logos.png`, `/tmp/waha-chatwoot.png`, and the emoji assets when you're done.
 
 This keeps the branding centred with a comfortable gap and ensures every ChatWoot cover reuses the original artwork.
+
+## WAHA Release Covers (logo + version)
+
+Use this recipe for the monthly WAHA release blog covers. It keeps the "WAHA" headline centred, then places the version label and WAHA logo inside a rounded white pill underneath.
+
+```bash
+./scripts/generate-waha-cover.sh \
+  --version 2025.10 \
+  --gradient '#0b1120-#0f766e' \
+  --output content/blog/waha-2025-10/waha-2025-10.png
+```
+
+Parameters:
+
+- `--version` sets the label inside the pill; text renders in WAHA green `#10991e`.
+- `--gradient` accepts any ImageMagick gradient string (e.g. `'#0f172a-#6d28d9'` for purple). Pick a fresh palette per release.
+- `--output` is the target PNG path. The script overwrites the file if it exists.
+- `--logo` is optional if you ever need to point at a different mark (defaults to `images/logo.png`).
+
+Tweaks:
+
+- Move the pill closer/further from the headline by editing the `-geometry +0+130` value in the script.
+- Shift the version text or logo inside the pill by changing the `-annotate` and `-geometry` offsets in the script.
+- Update the font by changing the `FONT` variable if DejaVu Sans is unavailable in a new environment.
