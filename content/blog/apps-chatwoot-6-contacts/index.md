@@ -13,11 +13,11 @@ homepage: false
 slug: apps-chatwoot-contacts
 ---
 
-## Overview
-{{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}
-
 {{< include file="content/docs/apps/chatwoot/-disclaimer.md" >}}
 
+{{< include file="content/docs/apps/chatwoot/-chatwoot-articles.md" >}}
+
+## Overview
 By default, when a new message comes from **WhatsApp** to **ChatWoot**, it creates a new contact if there isn't one yet.
 
 ![**ChatWoot** contact](contact-info.png)
@@ -115,7 +115,7 @@ Bring in **WhatsApp** groups and LID contacts (users who hide their phone number
 wa/contacts pull --groups --lids --avatar
 ```
 
-### Full options run
+### Full options
 This command shows every available flag, but use `wa/contacts help` to explore all latest options.
 
 Adjust the numbers to match your environment:
