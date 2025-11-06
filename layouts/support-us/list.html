@@ -6,6 +6,148 @@
 {{ $content := readFile "/layouts/include/bubbles.html" | safeHTML }}
 {{ $content }}
 
+<style>
+    .tiers-compare-wrapper .tiers-compare-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.96);
+    }
+
+    .tiers-compare-table caption {
+        caption-side: top;
+        text-align: center;
+        font-size: 0.95rem;
+        color: rgba(15, 17, 30, 0.6);
+        padding-bottom: 1rem;
+    }
+
+    .tiers-compare-table thead th {
+        border-bottom: none;
+        text-align: center;
+        padding: 1.5rem 1rem 1rem;
+        background: rgba(15, 17, 30, 0.04);
+    }
+
+    .tiers-compare-table .tier-column--core {
+        background: rgba(15, 17, 30, 0.02);
+    }
+
+    .tiers-compare-table .tier-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    .tiers-compare-table .tier-price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 0.25rem;
+    }
+
+    .tiers-compare-table .tier-note {
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-top: 0.35rem;
+    }
+
+    .tiers-compare-table .tier-column--plus {
+        background: rgba(16, 153, 30, 0.08);
+    }
+
+    .tiers-compare-table .tier-column--pro {
+        background: rgba(13, 110, 253, 0.08);
+    }
+
+    .tiers-compare-table tbody th,
+    .tiers-compare-table tbody td {
+        padding: 0.85rem 1rem;
+        border-color: rgba(15, 17, 30, 0.08);
+        vertical-align: middle;
+    }
+
+    .tiers-compare-table tbody th {
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .tiers-compare-table tbody td {
+        text-align: center;
+    }
+
+    .tiers-compare-table .tier-cell {
+        text-align: center;
+    }
+
+    .tiers-compare-table .tier-cell--core {
+        background: rgba(15, 17, 30, 0.02);
+    }
+
+    .tiers-compare-table .tier-cell--plus {
+        background: rgba(16, 153, 30, 0.08);
+    }
+
+    .tiers-compare-table .tier-cell--pro {
+        background: rgba(13, 110, 253, 0.08);
+    }
+    .tiers-compare-table tfoot td {
+        text-align: center;
+    }
+
+    .tiers-compare-table tbody tr.tiers-group th {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: rgba(15, 17, 30, 0.6);
+        background: rgba(15, 17, 30, 0.05);
+        padding-top: 1.1rem;
+        padding-bottom: 0.6rem;
+        text-align: center;
+    }
+
+    .tiers-compare-table tbody tr.tiers-feature th {
+        font-size: 1rem;
+        text-transform: none;
+        letter-spacing: 0;
+        background: rgba(15, 17, 30, 0.02);
+        text-align: center;
+    }
+
+    .tiers-compare-table .tier-check {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #10991e;
+    }
+
+    .tiers-compare-table .tier-check.tier-check--pro {
+        color: #0d6efd;
+    }
+
+    .tiers-compare-table .tier-perk {
+        font-weight: 700;
+        color: #10991e;
+    }
+
+    .tiers-compare-table .text-muted {
+        color: rgba(15, 17, 30, 0.45) !important;
+    }
+
+    .tiers-compare-table tfoot th,
+    .tiers-compare-table tfoot td {
+        border-top: 2px solid rgba(15, 17, 30, 0.12);
+        padding: 1rem;
+    }
+
+    @media (max-width: 991.98px) {
+        .tiers-compare-table thead th:first-child,
+        .tiers-compare-table tbody th {
+        }
+    }
+</style>
+
 <section class='section section-md pb-0'>
     <div class='container'>
         <div class='row justify-content-center'>
@@ -89,7 +231,8 @@
                         🏭 <a href='{{ relref . "/docs/how-to/engines#webjs" }}'>Web based engine (WEBJS)</a>
                     </div>
                     <div>
-                        🏭 <a href='{{ relref . "/docs/how-to/engines#noweb" }}'>Light non-chrome engines (NOWEB, GOWS)</a>
+                        🏭 <a href='{{ relref . "/docs/how-to/engines#noweb" }}'>Light non-chrome engines (NOWEB,
+                        GOWS)</a>
                     </div>
                     <div>
                         🗄️ <a href='{{ relref . "/docs/how-to/storages" }}'>File storage</a>
@@ -143,10 +286,12 @@
                         🖥️ <a href='{{ relref . "/docs/how-to/sessions"}}'><b>Unlimited</b> Sessions</a>¹
                     </div>
                     <div>
-                        📤 <a href='{{ relref . "/docs/how-to/send-messages" }}'><b>Send media</b> - files, voices, video</a>
+                        📤 <a href='{{ relref . "/docs/how-to/send-messages" }}'><b>Send media</b> - images, voices,
+                        video</a>
                     </div>
                     <div>
-                        💾 <a href='{{ relref . "/docs/how-to/storages" }}'><b>PostgreSQL</b>, <b>MongoDB</b> storages</a>
+                        💾 <a href='{{ relref . "/docs/how-to/storages" }}'><b>PostgreSQL</b>, <b>MongoDB</b>
+                        storages</a>
                     </div>
                     <div>
                         🔑 <a href='{{ relref . "/docs/how-to/waha-plus" }}'><b>WAHA Plus</b> docker image</a>
@@ -198,7 +343,7 @@
             <div>
                 <h2 class='h4 color-accent mt-0 display-4'>PRO</h2>
                 <p class='fw-bold'>
-                    Source code, priority support, direct communication with developers!
+                    Source code, priority support!
                 </p>
                 <div class='mb-4'>
                     <span class='display-4 fw-bold'>$99</span>
@@ -254,237 +399,185 @@
 
 <section class='section section-md pb-0' id='tiers-compare'>
     <div class='text-center' data-aos="fade-up">
-        <h1 class='display-5 fw-normal mt-1'>Compare Features</h1>
+        <h1 class='display-5 fw-normal mt-1'>Compare</h1>
     </div>
-    <div class='row justify-content-center' data-aos="fade-up">
-        <table class='table-highlight-first-column'>
+    <div class='row justify-content-center' data-aos="zoom-in">
+        <table class='table tiers-compare-table align-middle text-start'>
+            <thead>
             <tr>
-                <th></th>
-                <th>
-                    Core
+                <th scope='col' class='tier-column tier-column--core'>
+                    <div class='tier-title'>Core</div>
+                    <div class='tier-price'>$0</div>
+                    <div class='tier-note text-muted'>Start building</div>
                 </th>
-                <th>Plus</th>
-                <th>PRO</th>
-            </tr>
-            <tr>
-                <th></th>
-                <th> <b>$0</b> </th>
-                <th> <b>$19/mo</b> </th>
-                <th> <b>$99/mo</b> </th>
-            </tr>
-            <tr>
-                <td>
-                    🖥️ <a href='{{ relref . "/docs/how-to/sessions"}}'>Sessions</a>
-                </td>
-                <td>
-                    &nbsp;1&nbsp;
-                </td>
-                <td>
-                    Unlimited¹
-                </td>
-                <td>
-                    Unlimited
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    💬 Messages
-                </td>
-                <td>∞</td>
-                <td>∞</td>
-                <td>∞</td>
-            </tr>
-            <tr>
-                <td>
-                    🏠 <a href='{{ relref . "/docs/how-to/install" }}'>Self-Hosted</a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    📤 <a href='{{ relref . "/docs/how-to/send-messages" }}'> Send text messages </a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    📥 <a href='{{ relref . "/docs/how-to/receive-messages" }}'> Receive text and media messages </a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    📤 <a href='{{ relref . "/docs/how-to/send-messages" }}'> Send files, voices, video </a>
-                </td>
-                <td></td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    🌐 <a href='{{ relref . "/docs/how-to/proxy" }}'>Proxies</a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    🔄 <a href='{{ relref . "/docs/how-to/events" }}'>Webhooks</a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    🗄️ <a href='{{ relref . "/docs/how-to/storages" }}'>File storage</a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    💾 <a href='{{ relref . "/docs/how-to/storages" }}'>PostgreSQL, MongoDB</a>
-                </td>
-                <td></td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                     📊 <a href='{{ relref . "/docs/how-to/dashboard" }}'>Built-in Dashboard</a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    🔒 <a href='{{ relref . "/docs/how-to/security" }}'>Built-in Security</a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    🏭 <a href='{{ relref . "/docs/how-to/engines#webjs" }}'>Web based engine (WEBJS)</a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    🏭 <a href='{{ relref . "/docs/how-to/engines#noweb" }}'>Light non-chrome engine (NOWEB, GOWS)</a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    🐙 <a href='https://github.com/devlikeapro/waha' target='_blank'>WAHA Core Source Code
-                    -></a>
-                </td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    🔑 <a href='{{ relref . "/docs/how-to/waha-plus" }}'>Personal Docker Key to <b>WAHA Plus</b></a>
-                </td>
-                <td></td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    💬 <b>Discord Community</b>
-                </td>
-                <td></td>
-                <td>✔️</td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    🐙➕ <a href='https://github.com/devlikeapro/waha-plus' target='_blank'>WAHA Plus Source
-                        Code -></a>
-                </td>
-                <td></td>
-                <td></td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    ⭐ Priority Support
-                </td>
-                <td></td>
-                <td></td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    👥
-                    <a href="/docs/how-to/waha-plus/#invite-team">
-                        Invite Your Team
-                    </a>
-                    - <b>5 additional seats</b>
-                </td>
-                <td></td>
-                <td></td>
-                <td>✔️</td>
-            </tr>
-            <tr>
-                <td>
-                    🏅 Special Badge on GitHub
-                </td>
-                <td></td>
-                <td>
-                    <img src='https://img.shields.io/badge/patron-PLUS-a0e6ba'>
-                </td>
-                <td>
-                    <img src='https://img.shields.io/badge/patron-PRO-188a42'>
-                </td>
-            </tr>
-            <tr>
-                <th></th>
-                <th> <b>$0</b> </th>
-                <th> <b>$19/mo</b> </th>
-                <th> <b>$99/mo</b> </th>
-            </tr>
-            <tr>
-                <th></th>
-                <th>
-                    <a
-                            href='/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}overview/introduction/'
-                    >Get Started -></a>
+                <th scope='col' class='tier-column tier-column--plus'>
+                    <div class='tier-title'>Plus</div>
+                    <div class='tier-price'>$19<span class='text-muted'>/mo*</span></div>
+                    <div class='tier-note text-success'>Most popular</div>
                 </th>
-                <th>
-                    <a href='#donations'>Support project -></a>
-                </th>
-                <th>
-                    <a href='#donations'>Support project -></a>
+                <th scope='col' class='tier-column tier-column--pro'>
+                    <div class='tier-title'>PRO</div>
+                    <div class='tier-price'>$99<span class='text-muted'>/mo*</span></div>
+                    <div class='tier-note text-primary'>Full access</div>
                 </th>
             </tr>
+            </thead>
+            <tbody>
+            <tr class='tiers-group'>
+                <th scope='colgroup' colspan='3'>Messaging</th>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>Sessions</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'>1</td>
+                <td class='tier-cell tier-cell--plus'><span class='tier-perk'>Unlimited</span><span class='text-muted ms-1'>¹</span></td>
+                <td class='tier-cell tier-cell--pro'><span class='tier-perk'>Unlimited</span></td>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>Unlimited messages</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'>✔</td>
+                <td class='tier-cell tier-cell--plus'>✔</td>
+                <td class='tier-cell tier-cell--pro'>✔</td>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>Send text</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'><span class='tier-check'>✔</span></td>
+                <td class='tier-cell tier-cell--plus'><span class='tier-check'>✔</span></td>
+                <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>Send image, voice, video</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--plus'><span class='tier-check'>✔</span></td>
+                <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
+            </tr>
+            <tr class='tiers-group'>
+                <th scope='colgroup' colspan='3'>Data &amp; Infrastructure</th>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>Self-hosted</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'>✔</td>
+                <td class='tier-cell tier-cell--plus'>✔</td>
+                <td class='tier-cell tier-cell--pro'>✔</td>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>PostgreSQL &amp; MongoDB</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--plus'><span class='tier-check'>✔</span></td>
+                <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>WAHA Plus Docker image</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--plus'><span class='tier-check'>✔</span></td>
+                <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
+            </tr>
+            <tr class='tiers-group'>
+                <th scope='colgroup' colspan='3'>Team &amp; Support</th>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>Discord community</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--plus'><span class='tier-check'>✔</span></td>
+                <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>Priority support</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--plus'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>Invite your team (5 seats)</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--plus'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>WAHA Plus source code</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--plus'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
+            </tr>
+            <tr class='tiers-group'>
+                <th scope='colgroup' colspan='3'>Recognition</th>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>GitHub supporter badge</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
+                <td class='tier-cell tier-cell--plus'>
+                    <img src='https://img.shields.io/badge/patron-PLUS-a0e6ba' alt='GitHub PLUS patron badge'>
+                </td>
+                <td class='tier-cell tier-cell--pro'>
+                    <img src='https://img.shields.io/badge/patron-PRO-188a42' alt='GitHub PRO patron badge'>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>Donation</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'><span class='fw-semibold'>$0</span></td>
+                <td class='tier-cell tier-cell--plus'><span class='fw-semibold'>$19</span><span class='text-muted'>/mo*</span></td>
+                <td class='tier-cell tier-cell--pro'><span class='fw-semibold'>$99</span><span class='text-muted'>/mo*</span></td>
+            </tr>
+            <tr class='tiers-feature'>
+                <th scope='rowgroup' colspan='3'>Action</th>
+            </tr>
+            <tr>
+                <td class='tier-cell tier-cell--core'>
+                    <a class='fw-semibold'
+                       href='/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}overview/introduction/'>Get
+                        started →</a>
+                </td>
+                <td class='tier-cell tier-cell--plus'>
+                    <a class='fw-semibold' href='#donations'>Support Us →</a>
+                </td>
+                <td class='tier-cell tier-cell--pro'>
+                    <a class='fw-semibold' href='#donations'>Support Us →</a>
+                </td>
+            </tr>
+            </tfoot>
         </table>
-        <div data-aos="fade-up">
-            <small>
-                ¹ If you're planning to host 100+ sessions (accounts, phone numbers),
-                consider <b><a href='#tier-pro'>PRO</a></b> tier.
-                You can still use <b>Plus</b> tier, there's no technical limit,
-                but we can not provide the same level of support for 100+ sessions on <b>Plus</b> tier 🥲
-            </small>
-        </div>
+    </div>
+    <div>
+        <p class='small text-muted mt-3 mb-0'>
+            * FAQ:
+            <a
+                    href='{{ relref . "/docs/overview/faq#is-it-one-time-donation" }}'
+                    target="_blank"
+            >
+                <b>Is it a one-time donation?</b>
+            </a>
+        </p>
+        <p class='small text-muted mt-3 mb-0'>
+            ¹ Hosting 100+ sessions? Upgrade to <a href='#tier-pro'><b>PRO</b></a> for priority support while you
+            scale.
+        </p>
     </div>
 </section>
 
@@ -590,7 +683,8 @@
 
             <p>
                 👉 We
-                <a href="https://github.com/devlikepro?tab=sponsoring" target="_blank"><b>donate big portion of your donations down to the stream</b></a>
+                <a href="https://github.com/devlikepro?tab=sponsoring" target="_blank"><b>donate big portion of your
+                    donations down to the stream</b></a>
                 to the underlying libraries and tools - JS-community, Node,
                 other libraries authors, personal contributors.<br>
                 By donating to the <strong>WAHA</strong> you donate to the <b>Open Source</b> world!</p>
@@ -680,7 +774,8 @@
                 </p>
                 <div>
                     <p>
-                        Go to <a href="https://portal.devlike.pro/donate" target="_blank"><b>Patron Portal</b></a>, click <b>Upgrade/Renew</b>
+                        Go to <a href="https://portal.devlike.pro/donate" target="_blank"><b>Patron Portal</b></a>,
+                        click <b>Upgrade/Renew</b>
                         and choose <b>Crypto</b> in the options!
                     </p>
                     <div class='text-center pt-2'>
