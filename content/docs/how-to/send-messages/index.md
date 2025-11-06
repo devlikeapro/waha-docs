@@ -223,6 +223,18 @@ also mention it in `mentions` in format `2132132130@c.us`
 }
 ```
 
+{{< callout context="tip" icon="outline/hand-finger-right" title="Mention Everyone in a Group" >}}
+In **groups**, you can mention all participants at once by using the `"all"` keyword in the `mentions` field:
+```jsonc { title="Body (Mention All)" }
+{
+  "session": "default",
+  "chatId": "12132132130@c.us",
+  "text": "Hi there, check this out!",
+  "mentions": [ "all" ]
+}
+```
+{{< /callout >}}
+
 ## Send Image
 Use API to send images to the chat.
 

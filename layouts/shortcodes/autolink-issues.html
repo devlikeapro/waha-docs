@@ -1,0 +1,27 @@
+{{/*
+Shortcode: autolink-issues
+Required param: repo (e.g. "devlikepro/waha-plus")
+
+Usage:
+{{< autolink-issues repo="devlikepro/waha-plus" >}}
+- fix #123
+- issue devlikepro/other-repo#45
+{{< /autolink-issues >}}
+*/}}
+
+{{- $repo := .Get "repo" -}}
+{{- if not $repo -}}
+{{- errorf "autolink-issues: missing required param 'repo'" -}}
+{{- end -}}
+
+{{- $patternExplicit := `(?i)(?:fix|issue|pr|pull)\s+([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)#([0-9]+)` -}}
+{{- $replaceExplicit := `<a href="https://github.com/${1}/issues/${2}">${1}#${2}</a>` -}}
+
+{{- $patternDefault := `(?i)(?:fix|issue|pr|pull)\s*#([0-9]+)` -}}
+{{- $replaceDefault := printf `<a href="https://github.com/%s/issues/${1}">#${1}</a>` $repo -}}
+
+{{- $text := .Inner -}}
+{{- $text = replaceRE $patternExplicit $replaceExplicit $text -}}
+{{- $text = replaceRE $patternDefault $replaceDefault $text -}}
+
+{{- $text | markdownify | safeHTML -}}

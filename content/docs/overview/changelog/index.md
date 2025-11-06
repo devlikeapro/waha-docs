@@ -47,6 +47,33 @@ Latest Version:
 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 {{< /callout >}}
 
+{{< autolink-issues repo=devlikeapro/waha >}}
+### 2025.11
+
+🆕 **New**
+- `2025.11.1` - **API** - mention everyone in groups with `mentions: ["all"]` - fix #1377
+    - **WEBJS, GOWS, NOWEB**
+- `2025.11.1` - **API** - `/api/:session/groups/:id/participants/v2`
+  - **WEBJS, GOWS, NOWEB**
+
+🛠️ **Fixes**
+- `2025.11.1` - **WEBJS** - forward messages - fix #1546
+- `2025.11.1` - **WEBJS** - update contact name - fix #1583
+- `2025.11.1` - **API** - Exclude `/ping` (and `/health` using `WAHA_API_KEY_EXCLUDE_PATH`) from Swagger auth - fix #1562
+- `2025.11.1` - **Dashboard** - fix Chat UI - fix #1602
+- `2025.11.1` - **GOWS** - mention support - fix #1372
+- `2025.11.1` - **GOWS** - raise gRPC payload limit to 512MB - fix #1365
+- `2025.11.1` - **GOWS** - Ignore status@broadcast for ack updates - fix #1557
+- `2025.11.1` - **GOWS** - Fix `poll.vote.failed` - fix #1561, fix #1570
+
+
+⚙️ **Updates**
+- `2025.11.1` - **GOWS** - engine update
+- `2025.11.1` - **WEBJS** - engine update
+- `2025.11.1` - **NOWEB** - engine update
+
+{{< /autolink-issues >}}
+
 ### 2025.10
 📢 **BREAKING CHANGE** 📢
 

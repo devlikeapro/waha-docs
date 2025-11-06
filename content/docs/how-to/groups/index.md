@@ -329,6 +329,35 @@ GET /api/{session}/groups/{groupId}/settings/security/messages-admin-only
 
 ### Participants
 
+#### Get participants v2
+
+Get list of participants with the "almost" the same response across engines
+
+```http request
+GET /api/{session}/groups/{groupId}/participants/v2
+```
+```json
+[
+  {
+    "id": "111111111111@c.us",
+    "role": "participant"
+  },
+  {
+    "id": "222222222222@c.us",
+    "role": "superadmin"
+  },
+  {
+    "id": "33333333333@c.us",
+    "role": "participant"
+  }
+]
+```
+Role:
+- `left`
+- `participant`
+- `admin`
+- `superadmin` 
+
 #### Get participants
 
 ```http request
