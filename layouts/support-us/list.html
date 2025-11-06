@@ -16,6 +16,22 @@
         background: rgba(255, 255, 255, 0.96);
     }
 
+    .table-width-limiter {
+        width: 100%;
+    }
+
+    .table-width-limiter table {
+        width: 100%;
+    }
+
+    @media (min-width: 1200px) {
+        .table-width-limiter {
+            max-width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
     .tiers-compare-table caption {
         caption-side: top;
         text-align: center;
@@ -33,6 +49,12 @@
 
     .tiers-compare-table .tier-column--core {
         background: rgba(15, 17, 30, 0.02);
+    }
+
+    .tiers-compare-table .tier-column--label {
+        background: rgba(15, 17, 30, 0.02);
+        text-align: left;
+        width: 22%;
     }
 
     .tiers-compare-table .tier-title {
@@ -78,6 +100,15 @@
         text-align: center;
     }
 
+    .tiers-compare-table .tiers-row {
+        background: rgba(255, 255, 255, 0.96);
+    }
+
+    .tiers-compare-table .tiers-feature-heading {
+        background: rgba(15, 17, 30, 0.02);
+        width: 22%;
+    }
+
     .tiers-compare-table .tier-cell {
         text-align: center;
     }
@@ -105,15 +136,60 @@
         background: rgba(15, 17, 30, 0.05);
         padding-top: 1.1rem;
         padding-bottom: 0.6rem;
-        text-align: center;
+        text-align: left;
     }
 
-    .tiers-compare-table tbody tr.tiers-feature th {
-        font-size: 1rem;
-        text-transform: none;
-        letter-spacing: 0;
-        background: rgba(15, 17, 30, 0.02);
-        text-align: center;
+    @media (max-width: 991.98px) {
+        .tiers-compare-table thead {
+            display: none;
+        }
+
+        .tiers-compare-table tbody,
+        .tiers-compare-table tfoot {
+            display: block;
+        }
+
+        .tiers-compare-table tbody tr,
+        .tiers-compare-table tfoot tr {
+            display: block;
+            width: 100%;
+        }
+
+        .tiers-compare-table tbody tr.tiers-group th {
+            display: block;
+            text-align: center;
+        }
+
+        .tiers-compare-table .tiers-row {
+            margin-top: 1rem;
+            border-top: 1px solid rgba(15, 17, 30, 0.08);
+            padding-top: 1rem;
+        }
+
+        .tiers-compare-table .tiers-feature-heading {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .tiers-compare-table .tiers-row td {
+            display: inline-block;
+            width: calc(33.333% - 0.5rem);
+            padding: 0.75rem 0.5rem;
+            border-radius: 0.75rem;
+        }
+
+        .tiers-compare-table .tiers-row--actions td,
+        .tiers-compare-table .tiers-row--donation td {
+            width: 100%;
+            display: block;
+            margin: 0.35rem 0;
+        }
+
+        .tiers-compare-table .tiers-row--actions td a {
+            display: inline-block;
+        }
     }
 
     .tiers-compare-table .tier-check {
@@ -401,132 +477,107 @@
     <div class='text-center' data-aos="fade-up">
         <h1 class='display-5 fw-normal mt-1'>Compare</h1>
     </div>
-    <div class='row justify-content-center' data-aos="zoom-in">
+    <div class='justify-content-center tiers-compare-wrapper table-width-limiter' data-aos="zoom-in">
         <table class='table tiers-compare-table align-middle text-start'>
-            <thead>
+            <tbody>
             <tr>
-                <th scope='col' class='tier-column tier-column--core'>
+                <th scope='col' class='tier-column tiers-feature-heading' style="background-color: transparent"></th>
+                <th scope='col' class='tier-column tier-column--core' style="text-align: center">
                     <div class='tier-title'>Core</div>
                     <div class='tier-price'>$0</div>
                     <div class='tier-note text-muted'>Start building</div>
                 </th>
-                <th scope='col' class='tier-column tier-column--plus'>
+                <th scope='col' class='tier-column tier-column--plus' style="text-align: center">
                     <div class='tier-title'>Plus</div>
                     <div class='tier-price'>$19<span class='text-muted'>/mo*</span></div>
                     <div class='tier-note text-success'>Most popular</div>
                 </th>
-                <th scope='col' class='tier-column tier-column--pro'>
+                <th scope='col' class='tier-column tier-column--pro' style="text-align: center">
                     <div class='tier-title'>PRO</div>
                     <div class='tier-price'>$99<span class='text-muted'>/mo*</span></div>
                     <div class='tier-note text-primary'>Full access</div>
                 </th>
             </tr>
-            </thead>
-            <tbody>
             <tr class='tiers-group'>
-                <th scope='colgroup' colspan='3'>Messaging</th>
+                <th scope='colgroup' colspan='4'>Messaging</th>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>Sessions</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>Sessions</th>
                 <td class='tier-cell tier-cell--core'>1</td>
                 <td class='tier-cell tier-cell--plus'><span class='tier-perk'>Unlimited</span><span class='text-muted ms-1'>¹</span></td>
                 <td class='tier-cell tier-cell--pro'><span class='tier-perk'>Unlimited</span></td>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>Unlimited messages</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>Unlimited messages</th>
                 <td class='tier-cell tier-cell--core'>✔</td>
                 <td class='tier-cell tier-cell--plus'>✔</td>
                 <td class='tier-cell tier-cell--pro'>✔</td>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>Send text</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>Send text</th>
                 <td class='tier-cell tier-cell--core'><span class='tier-check'>✔</span></td>
                 <td class='tier-cell tier-cell--plus'><span class='tier-check'>✔</span></td>
                 <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>Send image, voice, video</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>Send image, voice, video</th>
                 <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--plus'><span class='tier-check'>✔</span></td>
                 <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
             </tr>
             <tr class='tiers-group'>
-                <th scope='colgroup' colspan='3'>Data &amp; Infrastructure</th>
+                <th scope='colgroup' colspan='4'>Data &amp; Infrastructure</th>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>Self-hosted</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>Self-hosted</th>
                 <td class='tier-cell tier-cell--core'>✔</td>
                 <td class='tier-cell tier-cell--plus'>✔</td>
                 <td class='tier-cell tier-cell--pro'>✔</td>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>PostgreSQL &amp; MongoDB</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>PostgreSQL &amp; MongoDB</th>
                 <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--plus'><span class='tier-check'>✔</span></td>
                 <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>WAHA Plus Docker image</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>WAHA Plus Docker image</th>
                 <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--plus'><span class='tier-check'>✔</span></td>
                 <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
             </tr>
             <tr class='tiers-group'>
-                <th scope='colgroup' colspan='3'>Team &amp; Support</th>
+                <th scope='colgroup' colspan='4'>Team &amp; Support</th>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>Discord community</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>Discord community</th>
                 <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--plus'><span class='tier-check'>✔</span></td>
                 <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>Priority support</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>Priority support</th>
                 <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--plus'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>Invite your team (5 seats)</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>Invite your team (5 seats)</th>
                 <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--plus'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>WAHA Plus source code</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>WAHA Plus source code</th>
                 <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--plus'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--pro'><span class='tier-check tier-check--pro'>✔</span></td>
             </tr>
             <tr class='tiers-group'>
-                <th scope='colgroup' colspan='3'>Recognition</th>
+                <th scope='colgroup' colspan='4'>Recognition</th>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>GitHub supporter badge</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>GitHub supporter badge</th>
                 <td class='tier-cell tier-cell--core'><span class='text-muted'>—</span></td>
                 <td class='tier-cell tier-cell--plus'>
                     <img src='https://img.shields.io/badge/patron-PLUS-a0e6ba' alt='GitHub PLUS patron badge'>
@@ -535,36 +586,36 @@
                     <img src='https://img.shields.io/badge/patron-PRO-188a42' alt='GitHub PRO patron badge'>
                 </td>
             </tr>
-            </tbody>
-            <tfoot>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>Donation</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>Donation</th>
                 <td class='tier-cell tier-cell--core'><span class='fw-semibold'>$0</span></td>
                 <td class='tier-cell tier-cell--plus'><span class='fw-semibold'>$19</span><span class='text-muted'>/mo*</span></td>
                 <td class='tier-cell tier-cell--pro'><span class='fw-semibold'>$99</span><span class='text-muted'>/mo*</span></td>
             </tr>
-            <tr class='tiers-feature'>
-                <th scope='rowgroup' colspan='3'>Action</th>
-            </tr>
-            <tr>
+            <tr class='tiers-row'>
+                <th scope='row' class='tiers-feature-heading'>Action</th>
                 <td class='tier-cell tier-cell--core'>
                     <a class='fw-semibold'
+                       style="white-space: nowrap;"
                        href='/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}overview/introduction/'>Get
                         started →</a>
                 </td>
                 <td class='tier-cell tier-cell--plus'>
-                    <a class='fw-semibold' href='#donations'>Support Us →</a>
+                    <a class='fw-semibold'
+
+                       style="white-space: nowrap;"
+                       href='#donations'>Support Us →</a>
                 </td>
                 <td class='tier-cell tier-cell--pro'>
-                    <a class='fw-semibold' href='#donations'>Support Us →</a>
+                    <a class='fw-semibold'
+                       style="white-space: nowrap;"
+                       href='#donations'>Support Us →</a>
                 </td>
             </tr>
-            </tfoot>
+            </tbody>
         </table>
     </div>
-    <div>
+    <div class='table-width-limiter'>
         <p class='small text-muted mt-3 mb-0'>
             * FAQ:
             <a
@@ -586,9 +637,10 @@
         <h1 class='display-5 fw-normal mt-1'>Why WAHA?</h1>
     </div>
     <div class='row justify-content-center' data-aos="zoom-in">
-        <table class='table-highlight-first-column'>
+        <div class='table-width-limiter'>
+            <table class='table-highlight-first-column'>
             <tr>
-                <th>Features</th>
+                <th></th>
                 <th>
                     <img src='/images/logo-robot.svg' title='WhatsApp API' alt='logo'
                          style='height: 2rem; transform: translateY(-0.3rem)'/>
@@ -646,6 +698,7 @@
                 <td>➖ Monthly payment starts from $50</td>
             </tr>
         </table>
+        </div>
     </div>
 </section>
 
