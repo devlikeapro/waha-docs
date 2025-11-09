@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on WAHA</title><link>/contributors/devlikeapro/</link><description>Recent content in devlikeapro on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 31 Oct 2025 08:48:45 +0000</lastBuildDate><atom:link href="/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2025.10 - ChatWoot Pull Commands, Secure Defaults</title><link>/blog/waha-2025-10/</link><pubDate>Fri, 31 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-10/</guid><description>&lt;h2 id="-chatwoot--messages-sync">💬 ChatWoot – Messages Sync&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on WAHA</title><link>/contributors/devlikeapro/</link><description>Recent content in devlikeapro on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 08 Nov 2025 08:48:45 +0000</lastBuildDate><atom:link href="/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>Discord Community</title><link>/blog/discord-community/</link><pubDate>Sat, 08 Nov 2025 08:48:45 +0000</pubDate><guid>/blog/discord-community/</guid><description>&lt;p>For months the community has been asking for a single place to talk, debug, and share ideas between releases.&lt;/p>
+&lt;p>&lt;strong>WAHA Discord&lt;/strong> is finally open to the community (for &lt;a href="/support-us/">Plus and PRO supporters&lt;/a>) so you can keep the momentum going. 🎉&lt;/p></description></item><item><title>WAHA 2025.10 - ChatWoot Pull Commands, Secure Defaults</title><link>/blog/waha-2025-10/</link><pubDate>Fri, 31 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-10/</guid><description>&lt;h2 id="-chatwoot--messages-sync">💬 ChatWoot – Messages Sync&lt;/h2>
 &lt;p>Need old conversations inside ChatWoot? Run &lt;code>wa/messages pull&lt;/code> to replay WhatsApp chat history, pick the time range, fetch media, and even close conversations during the import. Every switch is explained in the &lt;a href="/blog/apps-chatwoot-messages/">&lt;strong>💬 ChatWoot – Messages Guide&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Messages</title><link>/blog/apps-chatwoot-messages/</link><pubDate>Thu, 30 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-messages/</guid><description>&lt;div>&lt;/div>
 &lt;div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
  &lt;svg
@@ -126,33 +127,6 @@ eliminating the need to run n8n or use other third-party products!&lt;/p></descr
  &lt;div class="callout-content">
  &lt;div class="callout-title">
  &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Configuration Guide</title><link>/blog/apps-chatwoot-config/</link><pubDate>Tue, 08 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-config/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
-
-
-
-&lt;div>&lt;/div>
-&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
- &lt;svg
- xmlns="http://www.w3.org/2000/svg"
- width="24"
- height="24"
- viewBox="0 0 24 24"
- fill="none"
- stroke="currentColor"
- stroke-width="2"
- stroke-linecap="round"
- stroke-linejoin="round"
- 
- class="outline/article svg-inline callout-icon me-2 mb-3" id="svg-article" role="img">
- &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
- &lt;path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
- &lt;path d="M7 8h10" />
- &lt;path d="M7 12h10" />
- &lt;path d="M7 16h10" />
-&lt;/svg>
- &lt;div class="callout-content">
- &lt;div class="callout-title">
- &lt;p>ChatWoot Articles&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Installation Guide</title><link>/blog/apps-chatwoot-install/</link><pubDate>Mon, 07 Jul 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-install/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>Complete guide to install and set up production-ready &lt;strong>WAHA&lt;/strong> and &lt;strong>Chatwoot&lt;/strong> instances on your own infrastructure!&lt;/p>
 
 
