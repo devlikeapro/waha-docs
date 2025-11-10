@@ -139,6 +139,9 @@ Rarely used:
 
 ### Sessions - Local
 - `WAHA_LOCAL_STORE_BASE_DIR=/app/.sessions` - Override the base directory for local storage of session data
+- `WAHA_SQLITE_ENGINE=sqlite3` - Pick which SQLite driver [Knex](https://github.com/knex/knex) loads for local data. Supported values:
+  - `sqlite3` (default) - [node-sqlite3](https://github.com/TryGhost/node-sqlite3)
+  - `better-sqlite3` - [better-sqlite3](https://github.com/WiseLibs/better-sqlite3)
 
 ### Sessions - PostgreSQL
 - `WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable` - PostgreSQL connection URL for storing session data
@@ -155,6 +158,10 @@ You can configure default ignore rules for all sessions via environment variable
 - `WAHA_SESSION_CONFIG_IGNORE_BROADCAST=false` – ignore 📡 Broadcast events where chat id is `.*@broadcast` (excludes `status@broadcast`; use `WAHA_SESSION_CONFIG_IGNORE_STATUS` for Status)
 
 Read more about `config.ignore` on [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions#ignore" >}}) page.
+
+### Sessions - Presence
+
+{{< include file="content/docs/how-to/presence/-config.md" >}}
 
 ## Apps
 

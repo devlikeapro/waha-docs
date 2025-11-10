@@ -18,12 +18,6 @@ presence information.
 </div>
 
 
-## FAQ
-👉 **I don't get notifications on my phone when WAHA session is connected**
-- You need to send `offline` after all presence you send (WhatsApp doesn't send notifications to the device if a web client is active).
-- For [**🏭 NOWEB Engine**]({{< relref "/docs/engines/NOWEB" >}}) also mark sure to send `markOnline: false` 
-when you create a new session.
-
 ## Features
 
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
@@ -31,6 +25,16 @@ Here's the list of features that are available by [**🏭 Engines**]({{< relref 
 {{< include file="content/docs/how-to/presence/features.md" >}}
 
 {{< include file="content/docs/how-to/presence/features-events.md" >}}
+
+## FAQ
+👉 **I don't get notifications on my phone when WAHA session is connected**
+- You need to send `offline` after all presence you send (WhatsApp doesn't send notifications to the device if a web client is active).
+- For [**🏭 NOWEB Engine**]({{< relref "/docs/engines/NOWEB" >}}) also mark sure to send `markOnline: false`
+  when you create a new session.
+
+## Config
+
+{{< include file="content/docs/how-to/presence/-config.md" >}}
 
 ## API
 

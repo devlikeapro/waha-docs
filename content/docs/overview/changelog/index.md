@@ -48,15 +48,22 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< /callout >}}
 
 {{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
 ### 2025.11
 
 🆕 **New**
+- `2025.11.2` - Auto `online` [**✅ Presence**]({{<relref "docs/how-to/presence" >}}) - fix #1584 closes #1586
+- `2025.11.2` - **Config** - `WAHA_SQLITE_ENGINE` lets Knex pick [`sqlite3`](https://github.com/TryGhost/node-sqlite3) or [`better-sqlite3`](https://github.com/WiseLibs/better-sqlite3) for local data 
+    - [**⚙️ Configuration**]({{< relref "/docs/how-to/config#sessions-local" >}})
 - `2025.11.1` - **API** - mention everyone in groups with `mentions: ["all"]` - fix #1377
     - **WEBJS, GOWS, NOWEB**
 - `2025.11.1` - **API** - `/api/:session/groups/:id/participants/v2`
   - **WEBJS, GOWS, NOWEB**
 
 🛠️ **Fixes**
+- `2025.11.2` - **GOWS, NOWEB** - location and vcards in `message` event - fix #1609
+- `2025.11.2` - **ALL** - voice convertor - fix #1549
+  - `opustags` required for metadata cleanup (if you don't use official docker image, check [Dockerfile](https://github.com/devlikeapro/waha-plus/blob/dev/Dockerfile)
 - `2025.11.1` - **WEBJS** - forward messages - fix #1546
 - `2025.11.1` - **WEBJS** - update contact name - fix #1583
 - `2025.11.1` - **API** - Exclude `/ping` (and `/health` using `WAHA_API_KEY_EXCLUDE_PATH`) from Swagger auth - fix #1562
@@ -72,6 +79,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.11.1` - **WEBJS** - engine update
 - `2025.11.1` - **NOWEB** - engine update
 
+{{< /autolink-prs >}}
 {{< /autolink-issues >}}
 
 ### 2025.10

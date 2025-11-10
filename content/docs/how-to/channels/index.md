@@ -363,6 +363,23 @@ to send a video message into the channel
 }
 ```
 
+### Send Voice to the channel
+
+You can use regular [`POST /api/sendVoice`]({{< relref "/docs/how-to/send-messages#send-voice" >}}) endpoint
+to send a voice message into the channel
+
+```jsonc { title="Body" }
+{
+  "chatId": "111111111111111111@newsletter",
+  "file": {
+    "mimetype": "audio/ogg; codecs=opus",
+    "url": "https://github.com/devlikeapro/waha/raw/core/examples/dev.likeapro.opus"
+  },
+  "session": "default",
+  "convert": true
+}
+```
+
 ### Send Reaction to the channel
 
 ```http request

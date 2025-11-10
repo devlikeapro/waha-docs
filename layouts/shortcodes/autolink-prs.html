@@ -1,0 +1,27 @@
+{{/*
+Shortcode: autolink-prs
+Required param: repo (e.g. "devlikepro/waha-plus")
+
+Usage:
+{{< autolink-prs repo="devlikepro/waha-plus" >}}
+- closes #123
+- pr devlikepro/other-repo#45
+{{< /autolink-prs >}}
+*/}}
+
+{{- $repo := .Get "repo" -}}
+{{- if not $repo -}}
+  {{- errorf "autolink-prs: missing required param 'repo'" -}}
+{{- end -}}
+
+{{- $patternExplicit := `(?i)(?:close[sd]?|closing|pr|pull)\s+([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)#([0-9]+)` -}}
+{{- $replaceExplicit := `<a href="https://github.com/${1}/pull/${2}">${1}#${2}</a>` -}}
+
+{{- $patternDefault := `(?i)(?:close[sd]?|closing|pr|pull)\s*#([0-9]+)` -}}
+{{- $replaceDefault := printf `<a href="https://github.com/%s/pull/${1}">#${1}</a>` $repo -}}
+
+{{- $text := .Inner -}}
+{{- $text = replaceRE $patternExplicit $replaceExplicit $text -}}
+{{- $text = replaceRE $patternDefault $replaceDefault $text -}}
+
+{{- $text | markdownify | safeHTML -}}
