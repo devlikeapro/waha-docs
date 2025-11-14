@@ -1502,6 +1502,33 @@
         "deprecated": true,
         "parameters": [
           {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "Sort by field",
+            "schema": {
+              "default": "timestamp",
+              "enum": [
+                "timestamp",
+                "messageTimestamp"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "required": false,
+            "in": "query",
+            "description": "Sort order - <b>desc</b>ending (Z => A, New first) or <b>asc</b>ending (A => Z, Old first)",
+            "schema": {
+              "enum": [
+                "desc",
+                "asc"
+              ],
+              "type": "string"
+            }
+          },
+          {
             "name": "downloadMedia",
             "required": false,
             "in": "query",
@@ -2029,6 +2056,33 @@
         "operationId": "ChatsController_getChatMessages",
         "summary": "Gets messages in the chat",
         "parameters": [
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "Sort by field",
+            "schema": {
+              "default": "timestamp",
+              "enum": [
+                "timestamp",
+                "messageTimestamp"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "required": false,
+            "in": "query",
+            "description": "Sort order - <b>desc</b>ending (Z => A, New first) or <b>asc</b>ending (A => Z, Old first)",
+            "schema": {
+              "enum": [
+                "desc",
+                "asc"
+              ],
+              "type": "string"
+            }
+          },
           {
             "name": "downloadMedia",
             "required": false,
@@ -5399,6 +5453,56 @@
         ]
       }
     },
+    "/api/{session}/groups/{id}/participants/v2": {
+      "get": {
+        "operationId": "GroupsController_getGroupParticipants",
+        "summary": "Get group participants.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Group ID",
+            "schema": {
+              "example": "123123123@g.us",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GroupParticipant"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👥 Groups"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/{session}/groups/{id}/participants/add": {
       "post": {
         "operationId": "GroupsController_addParticipants",
@@ -5877,11 +5981,6 @@
         },
         "tags": [
           "🔍 Observability"
-        ],
-        "security": [
-          {
-            "api_key": []
-          }
         ]
       }
     },
@@ -6608,7 +6707,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2025.9.6",
+    "version": "2025.11.2",
     "contact": {}
   },
   "tags": [
@@ -6774,6 +6873,11 @@
             "type": "string",
             "example": "123123@lid"
           },
+          "jid": {
+            "type": "string",
+            "example": "123123:123@s.whatsapp.net",
+            "description": "Your id with device number"
+          },
           "pushName": {
             "type": "string"
           }
@@ -6782,10 +6886,6 @@
           "id",
           "pushName"
         ]
-      },
-      "Map": {
-        "type": "object",
-        "properties": {}
       },
       "ProxyConfig": {
         "type": "object",
@@ -6973,16 +7073,12 @@
         "type": "object",
         "properties": {
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session. You'll get 'metadata' in all webhooks.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session. You'll get 'metadata' in all webhooks."
           },
           "proxy": {
             "example": null,
@@ -7052,6 +7148,19 @@
           "assignedWorker": {
             "type": "string"
           },
+          "presence": {
+            "type": "object"
+          },
+          "timestamps": {
+            "type": "object",
+            "properties": {
+              "activity": {
+                "required": true,
+                "type": "number",
+                "nullable": true
+              }
+            }
+          },
           "status": {
             "enum": [
               "STOPPED",
@@ -7068,6 +7177,8 @@
         },
         "required": [
           "name",
+          "presence",
+          "timestamps",
           "status"
         ]
       },
@@ -7388,19 +7499,35 @@
       "WALocation": {
         "type": "object",
         "properties": {
-          "description": {
-            "type": "string"
-          },
           "latitude": {
             "type": "string"
           },
           "longitude": {
             "type": "string"
+          },
+          "live": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "thumbnail": {
+            "type": "string"
           }
         },
         "required": [
           "latitude",
-          "longitude"
+          "longitude",
+          "live"
         ]
       },
       "ReplyToMessage": {
@@ -9473,6 +9600,35 @@
           "adminsOnly"
         ]
       },
+      "GroupParticipant": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Member ID in @c.us or @lid format",
+            "example": "123456789@lid"
+          },
+          "pn": {
+            "type": "string",
+            "description": "Member ID in @c.us format",
+            "example": "123456789@c.us"
+          },
+          "role": {
+            "enum": [
+              "left",
+              "participant",
+              "admin",
+              "superadmin"
+            ],
+            "type": "string",
+            "example": "participant"
+          }
+        },
+        "required": [
+          "id",
+          "role"
+        ]
+      },
       "ParticipantsRequest": {
         "type": "object",
         "properties": {
@@ -9771,6 +9927,10 @@
           "server": {
             "type": "boolean",
             "default": true
+          },
+          "queue": {
+            "type": "boolean",
+            "default": false
           }
         },
         "required": [
@@ -9959,16 +10119,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -10053,16 +10209,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -10225,16 +10377,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -10319,16 +10467,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -10464,16 +10608,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -10577,16 +10717,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -10796,16 +10932,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -10870,29 +11002,6 @@
           "event",
           "payload",
           "environment"
-        ]
-      },
-      "GroupParticipant": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "example": "123456789@c.us"
-          },
-          "role": {
-            "enum": [
-              "left",
-              "participant",
-              "admin",
-              "superadmin"
-            ],
-            "type": "string",
-            "example": "participant"
-          }
-        },
-        "required": [
-          "id",
-          "role"
         ]
       },
       "GroupInfo": {
@@ -10983,16 +11092,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -11110,16 +11215,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -11225,16 +11326,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -11358,16 +11455,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -11452,16 +11545,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -11637,16 +11726,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -11731,16 +11816,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -11845,16 +11926,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -11968,16 +12045,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -12062,16 +12135,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -12156,16 +12225,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -12250,16 +12315,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -12344,16 +12405,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -12466,16 +12523,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -12560,16 +12613,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -12741,16 +12790,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -12835,16 +12880,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -12944,16 +12985,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -13038,16 +13075,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -13133,16 +13166,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
@@ -13228,16 +13257,12 @@
             "example": "default"
           },
           "metadata": {
+            "type": "object",
             "example": {
               "user.id": "123",
               "user.email": "email@example.com"
             },
-            "description": "Metadata for the session.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Map"
-              }
-            ]
+            "description": "Metadata for the session."
           },
           "engine": {
             "enum": [
