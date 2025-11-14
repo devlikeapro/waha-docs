@@ -77,6 +77,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 ⚙️ **Updates**
 - `2025.11.2` - **GOWS** - stability update
+- `2025.11.2` - **NOWEB** - stability update for local storage
 - `2025.11.1` - **GOWS** - engine update
 - `2025.11.1` - **WEBJS** - engine update
 - `2025.11.1` - **NOWEB** - engine update
