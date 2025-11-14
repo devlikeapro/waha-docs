@@ -61,6 +61,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - **WEBJS, GOWS, NOWEB**
 
 🛠️ **Fixes**
+- `2025.11.2` - **API** - `mentions: ["all"]` for media - image, video, files
 - `2025.11.2` - **GOWS, NOWEB** - location and vcards in `message` event - fix #1609
 - `2025.11.2` - **ALL** - voice convertor - fix #1549
   - `opustags` required for metadata cleanup (if you don't use official docker image, check [Dockerfile](https://github.com/devlikeapro/waha-plus/blob/dev/Dockerfile)
@@ -75,6 +76,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 
 ⚙️ **Updates**
+- `2025.11.2` - **GOWS** - stability update
 - `2025.11.1` - **GOWS** - engine update
 - `2025.11.1` - **WEBJS** - engine update
 - `2025.11.1` - **NOWEB** - engine update
