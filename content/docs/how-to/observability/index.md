@@ -335,7 +335,7 @@ Enable it by adding `WAHA_DEBUG_MODE` environment variable:
 WAHA_DEBUG_MODE=True
 ```
 
-### ALL - Get Node.js heapsnapshot
+### ALL - node heapsnapshot
 {{< callout context="note" icon="outline/info-circle" >}}
 Works with all engines: **WEBJS**, **GOWS**, **NOWEB**
 {{< /callout >}}
@@ -348,13 +348,28 @@ Works with all engines: **WEBJS**, **GOWS**, **NOWEB**
 GET /api/server/debug/heapsnapshot
 ```
 
-Creates and downloads a heap dump from Node.js.
+- Send the file to the developers or open `about://inspect` in Chrome to analyze the heap
 
 You can execute request in
 [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}),
 then click on **Download File**:
 
 ![Swagger - Download File](swagger-download-file.png)
+
+### ALL - node cpu profiling
+{{< callout context="note" icon="outline/info-circle" >}}
+Works with all engines: **WEBJS**, **GOWS**, **NOWEB**
+{{< /callout >}}
+
+- Add `WAHA_DEBUG_MODE=True` env variable
+- Restart container
+- Execute request (only when the issue's happening to collect the most recent information)
+
+```http request
+GET /api/server/debug/cpu?seconds=30
+```
+
+- Send the file to the developers or open `about://inspect` in Chrome to analyze the profile
 
 ### WEBJS - Get Browser Trace
 {{< callout context="note" icon="outline/info-circle" >}}
@@ -412,7 +427,11 @@ services:
 ```bash {title="Download heap"}
 curl -s http://localhost:6060/debug/pprof/heap > heap.pb.gz
 ```
-- Send `heap.pb.gz` to developers
+- Send `heap.pb.gz` to developers or analyze it using
+
+```bash {title="Check your heap"}
+go tool pprof -http=:8081 ./heap.pb.gz
+```
 
 - **OR** you can connect and debug it online using built-in http server:
 

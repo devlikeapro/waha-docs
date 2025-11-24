@@ -61,6 +61,12 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - **WEBJS, GOWS, NOWEB**
 
 🛠️ **Fixes**
+- `2025.11.3` - **GOWS** - fix memory leak - fix #1639
+- `2025.11.3` - **GOWS** - fix DNS resolving `127.0.0.11:53: i/o timeout` - fix #1649
+  - You can switch between dns resolver using [**⚙️ Configuration**]({{< relref "/docs/how-to/config#gows" >}})
+- `2025.11.3` - **WEBJS** - fix pairing code - fix #1651
+- `2025.11.3` - **GOWS** - reuse one gRPC client for all sessions (per-session streams) for stability
+- `2025.11.3` - **GOWS** - 10-minute deadline for media fetch to avoid stuck downloads
 - `2025.11.2` - **API** - `mentions: ["all"]` for media - image, video, files
 - `2025.11.2` - **GOWS, NOWEB** - location and vcards in `message` event - fix #1609
 - `2025.11.2` - **ALL** - voice convertor - fix #1549
@@ -74,8 +80,13 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.11.1` - **GOWS** - Ignore status@broadcast for ack updates - fix #1557
 - `2025.11.1` - **GOWS** - Fix `poll.vote.failed` - fix #1561, fix #1570
 
+**🧩 ChatWoot**
+- `2025.11.3`  - fix empty conversations - fix #1525 fix #1646
+- `2025.11.3`  - fix contact name with 255 symbols - fix #1556
 
 ⚙️ **Updates**
+- `2025.11.3` - **WEBJS** - engine update - fix #1662
+- `2025.11.3` - **Dashboard** - app id is UUID now
 - `2025.11.2` - **GOWS** - stability update
 - `2025.11.2` - **NOWEB** - stability update for local storage
 - `2025.11.1` - **GOWS** - engine update
