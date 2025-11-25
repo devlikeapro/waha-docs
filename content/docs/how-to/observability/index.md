@@ -323,15 +323,27 @@ authentication:
 }
 ```
 
-## WAHA Debug Mode
-If you enable `WAHA_DEBUG_MODE=True`, WAHA exposes a few additional features for helping with 
-troubleshooting (usually Memory and CPU-related issues).
+## Troubleshooting
+There's few internal tools to help us (as developers) understand what it's going on under the hood.
+The below section you can use if you have any problem, and we asked to collect additional information.
 
-{{< callout context="caution" icon="outline/info-circle" >}}
-`WAHA_DEBUG_MODE=True` is for **troubleshooting** purposes only
+### Enable Debug Mode
+By default, debug mode is off. 
+
+Enable it by adding `WAHA_DEBUG_MODE` environment variable:
+```bash
+WAHA_DEBUG_MODE=True
+```
+
+### ALL - Get Node.js heapsnapshot
+{{< callout context="note" icon="outline/info-circle" >}}
+Works with all engines: **WEBJS**, **GOWS**, **NOWEB**
 {{< /callout >}}
 
-### Get Node.js heapsnapshot
+- Add `WAHA_DEBUG_MODE=True` env variable
+- Restart container
+- Execute request (only when the issue's happening to collect the most recent information)
+
 ```http request
 GET /api/server/debug/heapsnapshot
 ```
@@ -344,7 +356,15 @@ then click on **Download File**:
 
 ![Swagger - Download File](swagger-download-file.png)
 
-### Get Browser Trace
+### WEBJS - Get Browser Trace
+{{< callout context="note" icon="outline/info-circle" >}}
+Works only with **WEBJS** engine
+{{< /callout >}}
+
+- Add `WAHA_DEBUG_MODE=True` env variable
+- Restart container
+- Execute request (only when the issue's happening to collect the most recent information)
+
 ```http request
 GET /api/server/debug/browser/trace/{SESSION}?seconds=30&categories=%2A
 ```
@@ -370,19 +390,33 @@ then click on **Download File**:
 ![Swagger - Download File](swagger-download-file.png)
 
 
-### GOWS pprof
+### GOWS - pprof
+{{< callout context="note" icon="outline/info-circle" >}}
+Works only with **GOWS** engine
+{{< /callout >}}
 
-You can expose the `6060` port and connect using pprof for the **GOWS** engine:
+- Add `WAHA_DEBUG_MODE=True` env variable
+- Expose `6060` port from the docker (see yaml below)
 
-```bash
-go tool pprof -http=:8081 http://localhost:6060/debug/pprof/heap
-```
-
-Make sure to add it to docker-compose:
-```yaml
+```yaml {title="docker-compose.yaml"}
 services:
   waha:
     image: devlikeapro/waha-plus
     ports:
       - "127.0.0.1:6060:6060"
 ```
+
+- Restart container
+- Use `curl` to collect heap when issue is happening
+
+```bash {title="Download heap"}
+curl -s http://localhost:6060/debug/pprof/heap > heap.pb.gz
+```
+- Send `heap.pb.gz` to developers
+
+- **OR** you can connect and debug it online using built-in http server:
+
+```bash {title="Connect to pprof"}
+go tool pprof -http=:8081 http://localhost:6060/debug/pprof/heap
+```
+
