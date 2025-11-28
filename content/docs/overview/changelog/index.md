@@ -61,6 +61,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - **WEBJS, GOWS, NOWEB**
 
 🛠️ **Fixes**
+- `2025.11.3` - **GOWS** - fix file sent by me - fix #1630
 - `2025.11.3` - **GOWS** - fix memory leak - fix #1639
 - `2025.11.3` - **GOWS** - fix DNS resolving `127.0.0.11:53: i/o timeout` - fix #1649
   - You can switch between dns resolver using [**⚙️ Configuration**]({{< relref "/docs/how-to/config#gows" >}})
