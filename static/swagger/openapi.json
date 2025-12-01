@@ -6290,6 +6290,40 @@
         ]
       }
     },
+    "/api/server/debug/cpu": {
+      "get": {
+        "operationId": "ServerDebugController_cpuProfile",
+        "summary": "Collect and return a CPU profile for the current nodejs process",
+        "description": "Uses the Node.js inspector profiler to capture a .cpuprofile",
+        "parameters": [
+          {
+            "name": "seconds",
+            "required": false,
+            "in": "query",
+            "description": "How many seconds to sample CPU",
+            "schema": {
+              "minimum": 1,
+              "default": 30,
+              "example": 30,
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🔍 Observability"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/server/debug/heapsnapshot": {
       "get": {
         "operationId": "ServerDebugController_heapsnapshot",
@@ -6707,7 +6741,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2025.11.2",
+    "version": "2025.11.4",
     "contact": {}
   },
   "tags": [

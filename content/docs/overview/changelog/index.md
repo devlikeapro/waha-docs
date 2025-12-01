@@ -61,6 +61,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
   - **WEBJS, GOWS, NOWEB**
 
 🛠️ **Fixes**
+- `2025.11.4` - **GOWS** - cap gRPC responses at 128MB to avoid oversized payloads
+- `2025.11.4` - **GOWS** - webhook `requestId` uses `uniqid` and logs the event
+- `2025.11.4` - **ALL** - Disable CPU profiling when `WAHA_DEBUG_MODE=true` - fix #1681
+- `2025.11.4` - **GOWS** - send and send media via file (core & PLUS) - fix #1639
 - `2025.11.3` - **GOWS** - fix file sent by me - fix #1630
 - `2025.11.3` - **GOWS** - fix memory leak - fix #1639
 - `2025.11.3` - **GOWS** - fix DNS resolving `127.0.0.11:53: i/o timeout` - fix #1649
@@ -86,6 +90,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.11.3`  - fix contact name with 255 symbols - fix #1556
 
 ⚙️ **Updates**
+- `2025.11.4` - **WEBJS** - engine update - fix #1678
+- `2025.11.4` - **Node.js** `24.11` - fix #1639
 - `2025.11.3` - **WEBJS** - engine update - fix #1662
 - `2025.11.3` - **Dashboard** - app id is UUID now
 - `2025.11.2` - **GOWS** - stability update
