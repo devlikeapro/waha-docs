@@ -1,10 +1,12 @@
 <div></div>
 {{< details "**📞 Calls - Events**" >}}
 
-| **Events**      | WEBJS | NOWEB | GOWS |
-|-----------------|:-----:|:-----:|:-----|
-| `call.received` |  ✔️   |  ✔️   |      |
-| `call.accepted` |       |  ✔️   |      |
-| `call.rejected` |       |  ✔️   |      |
+| **Events**      | WEBJS | GOWS | NOWEB |
+|-----------------|:-----:|:----:|:-----:|
+| `call.received` |  ✔️   |  ✔️  |  ✔️   |
+| `call.accepted` |       |  ✔️  |  ✔️   |
+| `call.rejected` |  ✔️¹  |  ✔️  |  ✔️   |
+
+1. **WEBJS** - `call.rejected` works only when you rejected the call via API
 
 {{< /details >}}

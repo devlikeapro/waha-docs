@@ -219,6 +219,8 @@ Read more about
 Read more about 
 [**📞 Calls**]({{< relref "/docs/how-to/calls" >}})
 
+{{< include file="content/docs/how-to/calls/features-api.md" >}}
+
 {{< include file="content/docs/how-to/calls/features-events.md" >}}
 
 ### 🗄️ Storages

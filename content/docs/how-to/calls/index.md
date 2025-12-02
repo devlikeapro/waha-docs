@@ -18,7 +18,29 @@ You can receive events about calls in WhatsApp using API!
 ## Features
 Here's the list of features that are available by [**🏭 Engines**]({{< relref "/docs/how-to/engines" >}}):
 
+{{< include file="content/docs/how-to/calls/features-api.md" >}}
+
 {{< include file="content/docs/how-to/calls/features-events.md" >}}
+
+## API
+
+### Reject Call
+Decline an incoming call using its **call id** and **chat id** from the [`call.received`](#callreceived) event.
+
+```http request
+POST /api/{session}/calls/reject
+```
+
+```jsonc { title="Body" }
+{
+  "from": "22222222222@c.us",
+  "id": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+}
+```
+
+👉 Available on **WEBJS, GOWS, NOWEB**
+
+WAHA emits [`call.rejected`](#callrejected) after the call is declined.
 
 ## Events
 Read more about 
@@ -35,6 +57,3 @@ Read more about
 ### call.rejected
 
 {{< include file="content/docs/how-to/calls/webhooks-call-rejected.md" >}}
-
-
-

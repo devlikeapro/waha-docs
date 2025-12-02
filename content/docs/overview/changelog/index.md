@@ -49,6 +49,24 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
+### 2025.12
+
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🆕 **New**
+- `2025.12.1` - **API** - [**📞 Reject Call API**]({{< relref "/docs/how-to/calls#reject-call" >}}) - fix #608 fix #1258
+  - **WEBJS, GOWS, NOWEB**
+- `2025.12.1` - **WEBJS** - Add `call.rejected` event when rejected via API
+- `2025.12.1` - **GOWS** - Add `call` events - fix #1673
+
+**🧩 ChatWoot**
+- `2025.12.1`  - add [**📞 Calls**]({{< relref "/docs/how-to/calls" >}}) messages
+- `2025.12.1`  - fix symbols in the middle of text - fix #1643
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2025.11
 
 🆕 **New**

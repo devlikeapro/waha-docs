@@ -1,3 +1,5 @@
+Call has been rejected or terminated.
+
 ```jsonc { title="call.rejected" }
 {
   "event": "call.rejected",
@@ -7,7 +9,8 @@
     "from": "22222222222@c.us",
     "timestamp": 1721374000,
     "isVideo": false,
-    "isGroup": false
+    "isGroup": false,
+    "_data": {}
   },
   ...
 }
