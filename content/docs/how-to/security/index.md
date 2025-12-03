@@ -18,6 +18,9 @@ Always protect the API with [**Api Key**](#api-security) and deny access by usin
 {{< /callout >}}
 
 ## TLDR
+
+Set those or WAHA generates **random secrets** on startup (check logs):
+
 ```bash {title="Setup Security Environment Variables"}
 # Generate random long secrets using
 $ uuidgen | tr -d '-'
