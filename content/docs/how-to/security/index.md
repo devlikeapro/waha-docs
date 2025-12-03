@@ -17,6 +17,26 @@ Always protect the API with [**Api Key**](#api-security) and deny access by usin
 
 {{< /callout >}}
 
+## TLDR
+```bash {title="Setup Security Environment Variables"}
+# Generate random long secrets using
+$ uuidgen | tr -d '-'
+
+# Enable Api Key protection 
+# Send "X-Api-Key" in all HTTP requests
+WAHA_API_KEY=yoursecretkey
+WAHA_API_KEY_PLAIN=yoursecretkey
+
+# Enable Dashboard protection
+WAHA_DASHBOARD_USERNAME=admin
+WAHA_DASHBOARD_PASSWORD=yoursecretpassword
+
+# Enable Swagger protection
+# Use the same as for Dashboard 
+WHATSAPP_SWAGGER_USERNAME=admin
+WHATSAPP_SWAGGER_PASSWORD=yoursecretpassword
+```
+
 ## API security
 
 You can protect the API by requiring `X-Api-Key` header in HTTP request. 
@@ -78,8 +98,6 @@ docker run -it \
  -e WAHA_API_KEY=yoursecretkey \
  devlikeapro/waha-plus
 ```
-
-
 
 ## Swagger Security
 If you want to hide the project Swagger panel under the password - run the following command to hide under `admin/admin`
