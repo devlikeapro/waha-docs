@@ -24,6 +24,7 @@ Set those or WAHA generates **random secrets** on startup (check logs):
 ```bash {title="Setup Security Environment Variables"}
 # Generate random long secrets using
 $ uuidgen | tr -d '-'
+> 6c35dcbf31914c65a90f29e2ca1840d2
 
 # Enable Api Key protection 
 # Send "X-Api-Key" in all HTTP requests
