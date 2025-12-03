@@ -19,26 +19,35 @@ Always protect the API with [**Api Key**](#api-security) and deny access by usin
 
 ## TLDR
 
-Set those or WAHA generates **random secrets** on startup (check logs):
+{{< callout context="note" icon="outline/info-circle" >}}
+WAHA generates **random secrets** on startup (check logs)!
 
-```bash {title="Setup Security Environment Variables"}
-# Generate random long secrets using
+- If you want to set **your own secrets** - generate them and set as environment variables (see below).
+- If you want to **disable security** (not recommended) - read the [FAQ](#how-to-disable-security).
+{{< /callout >}}
+
+```bash {title="Generate Secrets"}
 $ uuidgen | tr -d '-'
 > 6c35dcbf31914c65a90f29e2ca1840d2
+```
 
-# Enable Api Key protection 
-# Send "X-Api-Key" in all HTTP requests
+Add those env variables to your `.env` or `docker-compose.yaml`:
+
+```bash {title=".env"}
 WAHA_API_KEY=yoursecretkey
 WAHA_API_KEY_PLAIN=yoursecretkey
-
-# Enable Dashboard protection
 WAHA_DASHBOARD_USERNAME=admin
 WAHA_DASHBOARD_PASSWORD=yoursecretpassword
-
-# Enable Swagger protection
-# Use the same as for Dashboard 
 WHATSAPP_SWAGGER_USERNAME=admin
 WHATSAPP_SWAGGER_PASSWORD=yoursecretpassword
+```
+
+Send `X-Api-Key: yoursecretkey` header in all API requests (including file downloads).
+
+```bash {title="cURL Example"}
+curl -H 'X-Api-Key: yoursecretkey' http://localhost:3000/api/sessions
+
+wget --header='X-Api-Key: yoursecretkey' http://localhost:3000/api/files/MESSAGEID.jpg
 ```
 
 ## API security
@@ -163,22 +172,16 @@ You can set up the following environment variables to enable HTTPS:
 
 ## FAQ
 ### How To Disable Security?
-By default, WAHA checks those variables and if it's not set - generates a random one (check your console/logs output):
-- `WAHA_API_KEY`
-- `WAHA_DASHBOARD_PASSWORD`
-- `WHATSAPP_SWAGGER_PASSWORD`
-
-Even if you set this to "" (empty string) or "admin/waha/123"  - WAHA generates a new value.
 
 If you **100% know what you are doing** - you can disable this explicilty and set to `.env` file:
 ```bash
 # Api Key - Off
 WAHA_API_KEY=
 WAHA_NO_API_KEY=True
-# Dashboard - Auth Off
+# Dashboard - Auth Off (_PASSWORD MUST be empty string)
 WAHA_DASHBOARD_PASSWORD=
 WAHA_DASHBOARD_NO_PASSWORD=True
-# Swagger - Auth Off
+# Swagger - Auth Off (_PASSWORD MUST be empty string)
 WHATSAPP_SWAGGER_PASSWORD=
 WHATSAPP_SWAGGER_NO_PASSWORD=True
 ```
