@@ -20,10 +20,52 @@ slug: "about"
 ## Available Apps
 Apps available to connect:
 - [**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}) - use your **WhatsApp** in **ChatWoot CRM**
+- [**Calls**]({{< relref "/docs/apps/calls" >}}) - automatically **reject calls** and **auto-reply with a message**
 
 ## Configuration
 
 {{< include file="content/docs/apps/about/-config.md" >}}
+
+## API
+
+{{< callout context="tip" title="Session API" icon="outline/article" >}}
+You can fetch and update apps using [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions#apps" >}}) API endpoints.
+{{< /callout >}}
+
+### List apps for a session
+```http request
+GET /api/apps?session={session}
+```
+
+### Create a new app
+```http request
+POST /api/apps
+```
+
+```json {title="Body"}
+{
+  "enabled": true,
+  "id": "app_{id}",
+  "session": "string",
+  "app": "chatwoot", 
+  "config": {}
+}
+```
+
+- `id` - use **random long string** for `app: chatwoot` or **session name** for `app: calls`
+- `config` - check the latest app config in [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}).
+  - `ChatWootAppConfig` 
+  - `CallsAppConfig`
+
+### Update an app
+```http request
+PUT /api/apps/{appId}
+```
+
+### Delete an app
+```http request
+DELETE /api/apps/{appId}
+```
 
 ## How it works
 

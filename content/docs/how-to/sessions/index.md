@@ -351,6 +351,91 @@ You can configure proxy when for all sessions by set up environment variables.
 Read more about it on [**Proxy page** ->]({{< relref "/docs/how-to/proxy" >}}) or [**Configuration page** ->]({{<
 relref "/docs/how-to/config#proxy" >}}).
 
+### Apps
+You can fetch [**🧩 Apps**]({{< relref "/docs/apps/about" >}}) associated with a session using `expand=apps` query parameter.
+
+{{< callout context="tip" title="Apps API" icon="outline/article" >}}
+We'd recommend using [**🧩 Apps API**]({{< relref "/docs/apps/about#api" >}}) to manage apps.
+{{< /callout >}}
+
+For **single session**:
+```http request
+GET /api/sessions/{session}?expand=apps
+```
+
+For **all sessions**:
+```http request
+GET /api/sessions/?expand=apps
+```
+
+```json { title="Response" }
+{
+  "name": "default",
+  "apps": [
+    {
+      "id": "app_default",
+      "session": "default",
+      "app": "calls",
+      "config": {
+        "dm": {
+          "reject": true,
+          "message": "📞❌ We don't take calls right now.\n🎤 Please send a voice message or 📝 text — we'll reply ASAP!"
+        },
+        "group": {
+          "reject": true,
+          "message": "📞❌ We don't take calls right now.\n🎤 Please send a voice message or 📝 text — we'll reply ASAP!"
+        }
+      },
+      "enabled": true
+    }
+  ]
+}
+```
+
+You can **create a session** or **update** a session with associated apps using `apps` field in the body.
+
+```http request
+POST /api/sessions
+```
+```http request
+PUT /api/sessions/{session}
+```
+
+```jsonc { title="" }
+{
+  "name": "default",
+  "apps": [
+    {
+      "app": "calls",
+      "id": "app_default",
+      "session": "",
+      "config": {
+        "dm": {
+          "reject": true,
+          "message": "📞❌ We don't take calls right now.\n🎤 Please send a voice message or 📝 text — we'll reply ASAP!"
+        },
+        "group": {
+          "reject": true,
+          "message": "📞❌ We don't take calls right now.\n🎤 Please send a voice message or 📝 text — we'll reply ASAP!"
+        }
+      }
+    }
+  ]
+}
+```
+
+{{< callout context="danger" title="Use Long Random Id for ChatWoot App" icon="outline/shield-check" >}}
+
+Use long, random string for `app: chatwoot` `id` field!
+
+```bash {title="Generate Random App ID"}
+uuidgen | tr -d '-'
+> 2e1005a40ef74edda01ffb1ade877fd3
+app_2e1005a40ef74edda01ffb1ade877fd3
+```
+
+{{< /callout >}}
+
 ### WEBJS
 
 ![Dashboard - WEBJS](session-config-webjs.png)

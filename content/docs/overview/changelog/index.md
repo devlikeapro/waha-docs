@@ -60,9 +60,20 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.12.1` - **WEBJS** - Add `call.rejected` event when rejected via API
 - `2025.12.1` - **GOWS** - Add `call` events - fix #1673
 
+**🧩 Apps**
+- `2025.12.1` - [**🧩 Calls App**]({{< relref "/docs/apps/calls" >}}) to reject calls and send reply messages - fix #1694
+- `2025.12.1` - [**🧩 Apps API**]({{< relref "/docs/apps/about#api" >}}) and [**🖥️ Sessions - Apps**]({{< relref "/docs/how-to/sessions#apps" >}}) to manage apps via API
+- `2025.12.1` - `WAHA_APPS_ON` and `WAHA_APPS_OFF` to control which apps to enable (so it doesn't require redis for chatwoot)
+
+
 **🧩 ChatWoot**
-- `2025.12.1`  - add [**📞 Calls**]({{< relref "/docs/how-to/calls" >}}) messages
-- `2025.12.1`  - fix symbols in the middle of text - fix #1643
+- `2025.12.1` - add [**📞 Calls**]({{< relref "/docs/how-to/calls" >}}) messages
+- `2025.12.1` - fix symbols in the middle of text - fix #1643
+- `2025.12.1` - `config.conversations.markAsRead` - fix #1650
+
+🛠️ **Fixes**
+- `2025.12.1` - **WEBJS** - fix stuck in `SCAN_QR_CODE` - fix #1690 closes #1695
+- `2025.12.1` - **NOWEB** - fix `poll.vote` for `@lid` - fix #1688
 
 {{< /autolink-prs >}}
 {{< /autolink-issues >}}

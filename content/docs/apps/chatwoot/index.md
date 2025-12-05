@@ -33,6 +33,49 @@ We cover all installation and configuration aspects in the following series of a
 
 {{< include file="content/docs/apps/about/-config.md" >}}
 
+## API
+You can use [**🧩 Apps API**]({{< relref "/docs/apps/about#api" >}}) or [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions#apps" >}}) API endpoints.
+
+```http request
+POST /api/apps
+```
+
+
+{{< callout context="tip" title="Latest Config in Swagger" icon="outline/article" >}}
+You can find latest `ChatWootAppConfig` in [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}).
+{{< /callout >}}
+
+```json
+{
+    "id": "app_RANDOMLOINGSTRING_LIKE_UUID",
+    "session": "default",
+    "app": "chatwoot",
+    "config": {
+        "linkPreview": "OFF",
+        "locale": "en-US",
+        "url": "http://localhost:3009",
+        "accountId": 1,
+        "accountToken": "CHATWOOT_ACCOUNT_OTKEN",
+        "inboxId": 1,
+        "inboxIdentifier": "CHATWOOT_INBOX_IDENTIFIER",
+        "templates": {},
+        "commands": {
+            "server": true,
+            "queue": true
+        },
+        "conversations": {
+            "sort": "created_newest",
+            "status": [
+                "open",
+                "pending",
+                "snoozed"
+            ]
+        }
+    },
+    "enabled": true
+}
+```
+
 ## Conversations
 You can map **WhatsApp** chats to **Chatwoot** conversations in two ways.
 Your **Chatwoot** and **WAHA** settings **must be kept in sync**.
