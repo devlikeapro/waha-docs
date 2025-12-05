@@ -110,6 +110,21 @@
         "summary": "List all sessions",
         "parameters": [
           {
+            "name": "expand",
+            "required": false,
+            "in": "query",
+            "description": "Expand additional session details.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "apps"
+                ]
+              }
+            }
+          },
+          {
             "name": "all",
             "required": false,
             "in": "query",
@@ -155,6 +170,109 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/SessionCreateRequest"
+              },
+              "examples": {
+                "basic": {
+                  "summary": "Basic Session",
+                  "value": {
+                    "name": "default"
+                  }
+                },
+                "withWebhooks": {
+                  "summary": "Session Webhooks",
+                  "value": {
+                    "name": "default",
+                    "config": {
+                      "webhooks": [
+                        {
+                          "url": "https://example.com/webhooks/waha",
+                          "events": [
+                            "message",
+                            "session.status"
+                          ],
+                          "hmac": {
+                            "key": "super-secret"
+                          },
+                          "retries": {
+                            "delaySeconds": 2,
+                            "attempts": 5,
+                            "policy": "linear"
+                          },
+                          "customHeaders": [
+                            {
+                              "name": "X-Request-ID",
+                              "value": "123"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "withApps": {
+                  "summary": "Session Apps",
+                  "value": {
+                    "name": "default",
+                    "apps": [
+                      {
+                        "app": "calls",
+                        "id": "app_unique_id",
+                        "session": "",
+                        "config": {
+                          "dm": {
+                            "reject": true,
+                            "message": "📞❌ We don't take calls right now.\n🎤 Please send a voice message or 📝 text — we'll reply ASAP!"
+                          },
+                          "group": {
+                            "reject": true,
+                            "message": "📞❌ We don't take calls right now.\n🎤 Please send a voice message or 📝 text — we'll reply ASAP!"
+                          }
+                        }
+                      }
+                    ],
+                    "start": true
+                  }
+                },
+                "full": {
+                  "summary": "Full Session Example",
+                  "value": {
+                    "name": "default",
+                    "start": true,
+                    "config": {
+                      "metadata": {
+                        "user.id": "123"
+                      },
+                      "debug": true,
+                      "webhooks": [
+                        {
+                          "url": "https://example.com/webhooks/waha",
+                          "events": [
+                            "message",
+                            "session.status"
+                          ],
+                          "hmac": {
+                            "key": "super-secret"
+                          }
+                        }
+                      ]
+                    },
+                    "apps": [
+                      {
+                        "app": "calls",
+                        "enabled": true,
+                        "config": {
+                          "dm": {
+                            "reject": true,
+                            "message": "📞❌ We don't take calls right now.\n🎤 Please send a voice message or 📝 text — we'll reply ASAP!"
+                          },
+                          "group": {
+                            "reject": true
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -194,6 +312,21 @@
               "default": "default"
             },
             "description": "Session name"
+          },
+          {
+            "name": "expand",
+            "required": false,
+            "in": "query",
+            "description": "Expand additional session details.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "apps"
+                ]
+              }
+            }
           }
         ],
         "responses": {
@@ -238,6 +371,109 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/SessionUpdateRequest"
+              },
+              "examples": {
+                "basic": {
+                  "summary": "Basic Session",
+                  "value": {
+                    "name": "default"
+                  }
+                },
+                "withWebhooks": {
+                  "summary": "Session Webhooks",
+                  "value": {
+                    "name": "default",
+                    "config": {
+                      "webhooks": [
+                        {
+                          "url": "https://example.com/webhooks/waha",
+                          "events": [
+                            "message",
+                            "session.status"
+                          ],
+                          "hmac": {
+                            "key": "super-secret"
+                          },
+                          "retries": {
+                            "delaySeconds": 2,
+                            "attempts": 5,
+                            "policy": "linear"
+                          },
+                          "customHeaders": [
+                            {
+                              "name": "X-Request-ID",
+                              "value": "123"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "withApps": {
+                  "summary": "Session Apps",
+                  "value": {
+                    "name": "default",
+                    "apps": [
+                      {
+                        "app": "calls",
+                        "id": "app_unique_id",
+                        "session": "",
+                        "config": {
+                          "dm": {
+                            "reject": true,
+                            "message": "📞❌ We don't take calls right now.\n🎤 Please send a voice message or 📝 text — we'll reply ASAP!"
+                          },
+                          "group": {
+                            "reject": true,
+                            "message": "📞❌ We don't take calls right now.\n🎤 Please send a voice message or 📝 text — we'll reply ASAP!"
+                          }
+                        }
+                      }
+                    ],
+                    "start": true
+                  }
+                },
+                "full": {
+                  "summary": "Full Session Example",
+                  "value": {
+                    "name": "default",
+                    "start": true,
+                    "config": {
+                      "metadata": {
+                        "user.id": "123"
+                      },
+                      "debug": true,
+                      "webhooks": [
+                        {
+                          "url": "https://example.com/webhooks/waha",
+                          "events": [
+                            "message",
+                            "session.status"
+                          ],
+                          "hmac": {
+                            "key": "super-secret"
+                          }
+                        }
+                      ]
+                    },
+                    "apps": [
+                      {
+                        "app": "calls",
+                        "enabled": true,
+                        "config": {
+                          "dm": {
+                            "reject": true,
+                            "message": "📞❌ We don't take calls right now.\n🎤 Please send a voice message or 📝 text — we'll reply ASAP!"
+                          },
+                          "group": {
+                            "reject": true
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
@@ -2716,6 +2952,46 @@
         },
         "tags": [
           "💬 Chats"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/calls/reject": {
+      "post": {
+        "operationId": "CallsController_rejectCall",
+        "summary": "Reject incoming call",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectCallRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "📞 Calls"
         ],
         "security": [
           {
@@ -6741,7 +7017,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2025.11.4",
+    "version": "2025.12.1",
     "contact": {}
   },
   "tags": [
@@ -6768,6 +7044,10 @@
     {
       "name": "📤 Chatting",
       "description": "Chatting methods"
+    },
+    {
+      "name": "📞 Calls",
+      "description": "Call handling methods"
     },
     {
       "name": "📢 Channels",
@@ -6894,6 +7174,188 @@
         },
         "required": [
           "phoneNumber"
+        ]
+      },
+      "ChatWootCommandsConfig": {
+        "type": "object",
+        "properties": {
+          "server": {
+            "type": "boolean",
+            "default": true
+          },
+          "queue": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "server"
+        ]
+      },
+      "ChatWootConversationsConfig": {
+        "type": "object",
+        "properties": {
+          "markAsRead": {
+            "type": "boolean",
+            "default": true,
+            "description": "Process message.ack events to mark ChatWoot conversations as read. Enabled by default."
+          },
+          "sort": {
+            "type": "string",
+            "enum": [
+              "activity_newest",
+              "created_newest",
+              "created_oldest",
+              "activity_oldest"
+            ]
+          },
+          "status": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "open",
+                "pending",
+                "snoozed",
+                "resolved"
+              ]
+            }
+          }
+        },
+        "required": [
+          "sort",
+          "status"
+        ]
+      },
+      "ChatWootAppConfig": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "number"
+          },
+          "accountToken": {
+            "type": "string"
+          },
+          "inboxId": {
+            "type": "number"
+          },
+          "inboxIdentifier": {
+            "type": "string"
+          },
+          "linkPreview": {
+            "default": "OFF",
+            "enum": [
+              "OFF",
+              "LG",
+              "HG"
+            ],
+            "type": "string"
+          },
+          "locale": {
+            "type": "string",
+            "default": "en-US"
+          },
+          "templates": {
+            "type": "object"
+          },
+          "commands": {
+            "$ref": "#/components/schemas/ChatWootCommandsConfig"
+          },
+          "conversations": {
+            "$ref": "#/components/schemas/ChatWootConversationsConfig"
+          }
+        },
+        "required": [
+          "url",
+          "accountId",
+          "accountToken",
+          "inboxId",
+          "inboxIdentifier",
+          "locale"
+        ]
+      },
+      "CallsAppChannelConfig": {
+        "type": "object",
+        "properties": {
+          "reject": {
+            "type": "boolean",
+            "default": true,
+            "description": "Reject incoming calls for this chat type"
+          },
+          "message": {
+            "type": "string",
+            "description": "Optional auto-reply message sent after the call is rejected. If empty, no message is sent."
+          }
+        },
+        "required": [
+          "reject"
+        ]
+      },
+      "CallsAppConfig": {
+        "type": "object",
+        "properties": {
+          "dm": {
+            "default": {
+              "reject": true
+            },
+            "description": "Rules applied to direct messages (non-group calls)",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallsAppChannelConfig"
+              }
+            ]
+          },
+          "group": {
+            "default": {
+              "reject": true
+            },
+            "description": "Rules applied to group calls",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallsAppChannelConfig"
+              }
+            ]
+          }
+        },
+        "required": [
+          "dm",
+          "group"
+        ]
+      },
+      "App": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable or disable this app without deleting it. If omitted, treated as enabled (true)."
+          },
+          "id": {
+            "type": "string"
+          },
+          "session": {
+            "type": "string"
+          },
+          "app": {
+            "enum": [
+              "chatwoot",
+              "calls"
+            ],
+            "type": "string"
+          },
+          "config": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "session",
+          "app",
+          "config"
         ]
       },
       "MeInfo": {
@@ -7176,6 +7638,14 @@
             "example": "default",
             "description": "Session name (id)"
           },
+          "apps": {
+            "description": "Apps configured for the session.",
+            "nullable": true,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/App"
+            }
+          },
           "me": {
             "$ref": "#/components/schemas/MeInfo"
           },
@@ -7226,6 +7696,14 @@
             "example": "default",
             "description": "Session name (id)"
           },
+          "apps": {
+            "nullable": true,
+            "description": "Apps to be synchronized for this session.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/App"
+            }
+          },
           "start": {
             "type": "boolean",
             "description": "Start session after creation",
@@ -7267,6 +7745,14 @@
       "SessionUpdateRequest": {
         "type": "object",
         "properties": {
+          "apps": {
+            "nullable": true,
+            "description": "Apps to be synchronized for this session.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/App"
+            }
+          },
           "config": {
             "$ref": "#/components/schemas/SessionConfig"
           }
@@ -8891,6 +9377,24 @@
           "text"
         ]
       },
+      "RejectCallRequest": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "example": "11111111111@c.us"
+          },
+          "id": {
+            "type": "string",
+            "description": "Call ID",
+            "example": "ABCDEFGABCDEFGABCDEFGABCDEFG"
+          }
+        },
+        "required": [
+          "from",
+          "id"
+        ]
+      },
       "Channel": {
         "type": "object",
         "properties": {
@@ -9954,134 +10458,6 @@
             "example": null
           }
         }
-      },
-      "ChatWootCommandsConfig": {
-        "type": "object",
-        "properties": {
-          "server": {
-            "type": "boolean",
-            "default": true
-          },
-          "queue": {
-            "type": "boolean",
-            "default": false
-          }
-        },
-        "required": [
-          "server"
-        ]
-      },
-      "ChatWootConversationsConfig": {
-        "type": "object",
-        "properties": {
-          "sort": {
-            "type": "string",
-            "enum": [
-              "activity_newest",
-              "created_newest",
-              "created_oldest",
-              "activity_oldest"
-            ]
-          },
-          "status": {
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "type": "string",
-              "enum": [
-                "open",
-                "pending",
-                "snoozed",
-                "resolved"
-              ]
-            }
-          }
-        },
-        "required": [
-          "sort",
-          "status"
-        ]
-      },
-      "ChatWootAppConfig": {
-        "type": "object",
-        "properties": {
-          "url": {
-            "type": "string"
-          },
-          "accountId": {
-            "type": "number"
-          },
-          "accountToken": {
-            "type": "string"
-          },
-          "inboxId": {
-            "type": "number"
-          },
-          "inboxIdentifier": {
-            "type": "string"
-          },
-          "linkPreview": {
-            "default": "OFF",
-            "enum": [
-              "OFF",
-              "LG",
-              "HG"
-            ],
-            "type": "string"
-          },
-          "locale": {
-            "type": "string",
-            "default": "en-US"
-          },
-          "templates": {
-            "type": "object"
-          },
-          "commands": {
-            "$ref": "#/components/schemas/ChatWootCommandsConfig"
-          },
-          "conversations": {
-            "$ref": "#/components/schemas/ChatWootConversationsConfig"
-          }
-        },
-        "required": [
-          "url",
-          "accountId",
-          "accountToken",
-          "inboxId",
-          "inboxIdentifier",
-          "locale"
-        ]
-      },
-      "App": {
-        "type": "object",
-        "properties": {
-          "enabled": {
-            "type": "boolean",
-            "default": true,
-            "description": "Enable or disable this app without deleting it. If omitted, treated as enabled (true)."
-          },
-          "id": {
-            "type": "string"
-          },
-          "session": {
-            "type": "string"
-          },
-          "app": {
-            "type": "string",
-            "enum": [
-              "chatwoot"
-            ]
-          },
-          "config": {
-            "type": "object"
-          }
-        },
-        "required": [
-          "id",
-          "session",
-          "app",
-          "config"
-        ]
       },
       "SessionStatusPoint": {
         "type": "object",
@@ -12052,13 +12428,17 @@
           },
           "isGroup": {
             "type": "boolean"
+          },
+          "_data": {
+            "type": "object"
           }
         },
         "required": [
           "id",
           "timestamp",
           "isVideo",
-          "isGroup"
+          "isGroup",
+          "_data"
         ]
       },
       "WAHAWebhookCallReceived": {

@@ -42,4 +42,40 @@
 &lt;/svg>
  &lt;div class="callout-content">
  &lt;div class="callout-title">
- &lt;p>Disclaimer&lt;/p></description></item></channel></rss>
+ &lt;p>Disclaimer&lt;/p></description></item><item><title>Calls</title><link>/docs/apps/calls/</link><pubDate>Thu, 10 Jul 2025 08:49:31 +0000</pubDate><guid>/docs/apps/calls/</guid><description>&lt;p>You can &lt;strong>automatically reject calls&lt;/strong> and &lt;strong>auto-reply with a message&lt;/strong> using this app.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;ul>
+&lt;li>Configure env variables&lt;/li>
+&lt;/ul>
+
+
+
+&lt;div class="expressive-code">
+ &lt;figure class="frame is-terminal has-title not-content">
+ &lt;figcaption class="header">
+ &lt;span class="title">.env&lt;/span>
+ &lt;/figcaption>
+ &lt;div class="highlight" title=".env">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">WAHA_APPS_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>True
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># If you don&amp;#39;t need &amp;#34;chatwoot&amp;#34; app - explicity specify apps to enable&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">WAHA_APPS_ON&lt;/span>&lt;span class="o">=&lt;/span>calls&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/figure>
+&lt;/div>
+&lt;ul>
+&lt;li>Restart WAHA server&lt;/li>
+&lt;/ul>
+
+
+
+&lt;div class="expressive-code">
+ &lt;figure class="frame is-terminal not-content">
+ &lt;figcaption class="header">
+ &lt;span class="title">&lt;/span>
+ &lt;/figcaption>
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker compose up -d&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/figure>
+&lt;/div>
+&lt;ul>
+&lt;li>Create an app using &lt;a href="/docs/how-to/dashboard/">&lt;strong>📊 Dashboard&lt;/strong>&lt;/a> or API below&lt;/li>
+&lt;/ul>
+&lt;h2 id="api">API&lt;/h2>
+&lt;p>You can use &lt;a href="/docs/apps/about/#api">&lt;strong>🧩 Apps API&lt;/strong>&lt;/a> or &lt;a href="/docs/how-to/sessions/#apps">&lt;strong>🖥️ Sessions&lt;/strong>&lt;/a> API endpoints.&lt;/p></description></item></channel></rss>
