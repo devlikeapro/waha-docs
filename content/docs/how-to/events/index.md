@@ -533,6 +533,25 @@ The payload may have more fields, it depends on the engine you use, but here's a
 }
 ```
 
+### message.ack.group
+The `message.ack.group` event is triggered when a message in a group chat is acknowledged by a participant.
+
+```jsonc { title="message.ack.group" }
+{
+  "event": "message.ack",
+  "session": "default",
+  "engine": "WEBJS",
+  "payload": {
+    "id":"true_11111111111@g.us_4CC5EDD64BC22EBA6D639F2AF571346C_9999@lid",
+    "from":"11111111111@g.us",
+    "participant": "9999@lid",
+    "fromMe":true,
+    "ack":3,
+    "ackName":"READ"
+  }
+}
+```
+
 ### message.waiting
 Happens when you see
 [Waiting for this message. This may take a while.](https://faq.whatsapp.com/3398056720476987)
