@@ -87,9 +87,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.12.2` - add Italian translations
 
 ⚙️ **Updates**
-- `2025.12.2`- up **WEBJS**
-- `2025.12.2`- up **GOWS**
-- `2025.12.2`- up **NOWEB**
+- `2025.12.2` - up **WEBJS**
+- `2025.12.2` - up **GOWS**
+- `2025.12.2` - up **NOWEB**
 
 {{< /autolink-prs >}}
 {{< /autolink-issues >}}
