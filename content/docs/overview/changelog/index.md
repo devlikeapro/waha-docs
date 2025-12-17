@@ -55,7 +55,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
-- `2025.12.1` - **WEBJS** - Add [**📶 Polls**]({{< relref "docs/how-to/polls" >}}) API and events - fix #189
+- `2025.12.2` - **WEBJS** - Add [**📶 Polls**]({{< relref "docs/how-to/polls" >}}) API and events - fix #189
 - `2025.12.2` - add dedicated `message.ack.group` event for [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) message ack
 - `2025.12.1` - **API** - [**📞 Reject Call API**]({{< relref "/docs/how-to/calls#reject-call" >}}) - fix #608 fix #1258
   - **WEBJS, GOWS, NOWEB**
