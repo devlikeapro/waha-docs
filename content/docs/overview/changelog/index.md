@@ -55,6 +55,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2025.12.3` - **WEBJS, GOWS, NOWEB** - add device and browser config - fix #1109
 - `2025.12.2` - **WEBJS** - Add [**📶 Polls**]({{< relref "docs/how-to/polls" >}}) API and events - fix #189
 - `2025.12.2` - add dedicated `message.ack.group` event for [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) message ack
 - `2025.12.1` - **API** - [**📞 Reject Call API**]({{< relref "/docs/how-to/calls#reject-call" >}}) - fix #608 fix #1258
@@ -74,6 +75,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.12.1` - `config.conversations.markAsRead` - fix #1650
 
 🛠️ **Fixes**
+- `2025.12.3` - **GOWS, NOWEB** - motion_video (WhatsApp Live Photo / Motion Photo) messages are not supported - fix #175
+- `2025.12.3` - **WEBJS** - fix empty `/me` when `WORKING` session - fix #1735
 - `2025.12.2` - **GOWS** - gRPC client per session and pool for clients - fix #1715
 - `2025.12.2` - **NOWEB** - MongoDB - use separate keys for each key - fix #1713
 - `2025.12.2` - **NOWEB** - fix `poll.vote` for `@lid` - fix #1688
@@ -87,6 +90,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.12.2` - add Italian translations
 
 ⚙️ **Updates**
+- `2025.12.3` - **GOWS** - up engine - fix #1746
 - `2025.12.2` - up **WEBJS**
 - `2025.12.2` - up **GOWS**
 - `2025.12.2` - up **NOWEB**
