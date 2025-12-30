@@ -63,8 +63,12 @@ to help you with developing the project!
 
 The members inherit **PRO** tier and will have their own docker key and GitHub access to the project.
 
+<div class="text-center">
+
 
 ![Portal - Your Team](portal-your-team.png)
+
+</div>
 
 #### Invite Member
 1. **Login** to [**Patron Portal**](https://portal.devlike.pro) 
@@ -76,6 +80,10 @@ The members inherit **PRO** tier and will have their own docker key and GitHub a
 2. **Login** to [**Patron Portal**](https://portal.devlike.pro) 
 3. **Join** the team 
 
+<div class="text-center">
+
 ![alt](portal-join-team.png)
+
+</div>
 
 _If **The Member** doesn't see **PRO** tier - kindly refresh the page after waiting 10-30 seconds (sync tiers takes a bit of time)_

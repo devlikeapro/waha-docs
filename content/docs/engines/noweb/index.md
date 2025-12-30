@@ -85,7 +85,11 @@ in `config` at [POST /api/sessions/]({{< relref "/docs/how-to/sessions#create-se
   - `fullSync=true` you'll get about 1 year of message history (max 100K messages per chat).
   - 
 Or enable it on [WAHA Dashboard]({{< relref "/docs/how-to/dashboard" >}}) when **starting a new session**:
+<div class="text-center">
+
 ![alt](dashboard-noweb-store.png)
+
+</div>
 
 
 
@@ -222,4 +226,3 @@ Under the hood, the **NOWEB** stores the session data in database based on [**ðŸ
 ## Links
 
 - [https://github.com/devlikeapro/Baileys](https://github.com/devlikeapro/Baileys)
-

@@ -73,7 +73,11 @@ DELETE /api/apps/{appId}
 
 You can use the **WAHA Jobs Dashboard** at [http://localhost:3000/jobs](http://localhost:3000/jobs) for monitoring **Worker** and it's jobs:
 
+<div class="text-center">
+
 ![WAHA Jobs Dashboard](screenshots/waha-jobs-dashboard.png)
+
+</div>
 
 ## Apps SDK
 

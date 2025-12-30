@@ -461,7 +461,11 @@ Here's how you can call it from various languages:
 
 We have a dedicated page about [**📶 Polls**]({{< relref "/docs/how-to/polls" >}})!
 
+<div class="text-center">
+
 ![alt](poll-example.jpg)
+
+</div>
 
 ```http request
 POST /api/sendPoll
@@ -941,8 +945,12 @@ or
 [**📶 Polls**]({{< relref "/docs/how-to/polls" >}}).
 {{< /callout >}}
 
+<div class="text-center">
+
 
 ![alt](send-buttons.jpg)
+
+</div>
 
 You can send **interactive message** (aka **buttons**) using
 

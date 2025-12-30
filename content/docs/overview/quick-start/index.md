@@ -106,11 +106,19 @@ after you finish the quick start guide.
 
 Use **username/password** from the previous step (`.env` file - `WAHA_DASHBOARD_USERNAME / WAHA_DASHBOARD_PASSWORD`):
 
+<div class="text-center">
+
 ![Dashboard](dashboard.png)
+
+</div>
 
 Next, connect to the server using **api key** from the previous step (`.env` file - `WAHA_API_KEY`):
 
+<div class="text-center">
+
 ![Dashboard with API Key](waha-dashboard-key.png)
+
+</div>
 
 
 ## Step 4. Start a new session
@@ -126,22 +134,40 @@ on how to log in.
 Now you can start the **default** session (current status should be `STOPPED`).
 
 You can leave all configuration parameters as default:
+
+<div class="text-center">
+
 ![alt](dashboard-start-session.png)
+
+</div>
 
 ## Step 5. Get and scan QR
 
 Wait until the session status is `SCAN_QR` and click on the "camera" icon:
 <br>
+<div class="text-center">
+
 ![alt](dashboard-qr.png)
+
+</div>
+
 👉 If instead of the QR you see **Click to reload QR** - **stop** the session and **start** it again.
 
 <br>
 
 You'll see the QR code from the WhatsApp Web app. Now get **your phone** with the WhatsApp application installed and **scan the QR**:
+<div class="text-center">
+
 ![alt](whatsapp-link-devices.jpeg)
 
+</div>
+
 The session status will move to `WORKING` status:
+<div class="text-center">
+
 ![alt](dashboard-working.png)
+
+</div>
 
 ## Step 6. Send a text message
 
@@ -221,7 +247,11 @@ Open Swagger at
 
 **Authorize** using the **Api Key** (`.env` file - `WAHA_API_KEY`):
 
+<div class="text-center">
+
 ![swagger auth](swagger-auth.png)
+
+</div>
 
 - Scroll down to **chatting** section.
 - Find `POST /api/sendText` endpoint and expand it
@@ -229,7 +259,11 @@ Open Swagger at
 - Replace `123123@c.us` with **your phone number without +**, but keep `@c.us` part
 - Click **Execute**
 
+<div class="text-center">
+
 ![swagger send text](swagger-send-text.png)
+
+</div>
 
 ## What's next?
 

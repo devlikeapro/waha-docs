@@ -177,7 +177,11 @@ All session authentication data will be automatically stored in the MongoDB data
 
 For managing and troubleshooting MongoDB, we recommend using [MongoDB Compass](https://www.mongodb.com/products/tools/compass).
 
+<div class="text-center">
+
 ![alt](waha-mongodb.png)
+
+</div>
 
 #### Health Check
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) provides [health check endpoints]({{< relref "/docs/how-to/observability" >}}).
@@ -331,7 +335,11 @@ WAHA creates **multiple databases** using the credentials provided in the connec
 {{< /callout >}}
 
 {{< callout context="note" title="Database Schemas" icon="outline/database" >}}
+<div class="text-center">
+
 ![PostgreSQL Databases](psql-databases.png) ![MongoDB Databases](mongodb-databases.png)
+
+</div>
 {{< /callout >}}
 
 This approach provides **several benefits**:

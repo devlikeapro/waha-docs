@@ -354,7 +354,11 @@ You can execute request in
 [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}),
 then click on **Download File**:
 
+<div class="text-center">
+
 ![Swagger - Download File](swagger-download-file.png)
+
+</div>
 
 ### ALL - node cpu profiling
 {{< callout context="note" icon="outline/info-circle" >}}
@@ -402,8 +406,11 @@ You can execute request in
 [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}),
 then click on **Download File**:
 
+<div class="text-center">
+
 ![Swagger - Download File](swagger-download-file.png)
 
+</div>
 
 ### GOWS - pprof
 {{< callout context="note" icon="outline/info-circle" >}}
@@ -438,4 +445,3 @@ go tool pprof -http=:8081 ./heap.pb.gz
 ```bash {title="Connect to pprof"}
 go tool pprof -http=:8081 http://localhost:6060/debug/pprof/heap
 ```
-

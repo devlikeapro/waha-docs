@@ -557,7 +557,11 @@ Happens when you see
 [Waiting for this message. This may take a while.](https://faq.whatsapp.com/3398056720476987)
 on your phone.
 
+<div class="text-center">
+
 ![waiting for this message](waiting-for-this-message.jpg)
+
+</div>
 
 ```jsonc { title="message.waiting" }
 {

@@ -233,7 +233,11 @@ For example, you can say:
 
 After the user clicks on the poll again, you will receive a `poll.vote` event with their choice.
 
+<div class="text-center">
+
 ![handle-poll-vote-failed.jpg](handle-poll-vote-failed.jpg)
+
+</div>
 
 #### How to test poll.vote.failed events?
 

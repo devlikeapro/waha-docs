@@ -45,14 +45,22 @@ docker run -it -p 3000:3000 -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PA
 ## Api Key
 If you're using [API Key]({{< relref "security" >}}), remember to set up the key in the dashboard.
 
+<div class="text-center">
+
 ![Dashboard with API Key](waha-dashboard-key.png)
+
+</div>
 
 ## Event Monitor
 You can observe [**Events**]({{< relref "events" >}}) in real-time using **Event Monitor**:
 
 [http://localhost:3000/dashboard/event-monitor](http://localhost:3000/dashboard/event-monitor)
 
+<div class="text-center">
+
 ![Event Monitor](waha-dashboard-event-monitor.png)
+
+</div>
 
 ## Chat UI
 We've built a simple **Chat UI** in Dashboard, so you can see what is possible to implement using WAHA!
@@ -86,4 +94,3 @@ you can run a dedicated WAHA just to have a single place where from you can mana
 After that you can connect all server to the single dashboard:
 
 {{< imgo src="/images/waha/dashboard/waha-single-dashboard-multiple-servers.png" >}}
-

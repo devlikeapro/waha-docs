@@ -205,7 +205,11 @@ This makes your instance accessible at `http://<your-external-ip>:3000`.
 - **Swagger**: `WHATSAPP_SWAGGER_USERNAME / WHATSAPP_SWAGGER_PASSWORD`
 - **Api Key**: `WAHA_API_KEY`
 
+<div class="text-center">
+
 ![Dashboard Api Key](waha-dashboard-key.png)
+
+</div>
 
 ### Nginx
 

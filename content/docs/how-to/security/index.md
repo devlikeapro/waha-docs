@@ -87,12 +87,20 @@ curl -H 'X-Api-Key: 00000000000000000000000000000000' http://localhost:3000/api/
 
 ### Use Api-Key in Dashboard
 
+<div class="text-center">
+
 ![Dashboard with API Key](waha-dashboard-key.png)
+
+</div>
 
 ### Use Api-Key in Swagger
 
 After you set Api Key - to authorize on swagger, use the **Authorize** button at the top:
+<div class="text-center">
+
 ![alt](swagger-auth.png)
+
+</div>
 
 ### Use X-Api-Key in HTTP request
 
@@ -122,7 +130,11 @@ docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin123 -e WHATSAPP_SWAGGER_PASSWOR
 
 Open http://localhost:3000/ and enter `admin123 / admin123` in the inputs:
 
+<div class="text-center">
+
 ![alt](swagger-basic-auth.png)
+
+</div>
 
 {{< callout context="note" icon="outline/info-circle" >}}
 Protecting Swagger under the password does not protect your API from other request! Use both techniques to protect your API and Swagger!

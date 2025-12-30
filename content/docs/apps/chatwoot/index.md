@@ -19,7 +19,11 @@ toc: true
 **WAHA** includes a built-in **WhatsApp** integration for
 [**Chatwoot**](https://www.chatwoot.com/). 
 
+<div class="text-center">
+
 ![Chatwoot Overview](screenshots/overview.png)
+
+</div>
 <br/><br/>
 
 {{< include file="content/docs/apps/chatwoot/-disclaimer.md" >}}
@@ -92,13 +96,21 @@ conversation (and **reopen** it if it’s closed).
 Set in **Chatwoot**:
 - **Inbox** - **Lock to single conversation** - **Enabled**
 
+<div class="text-center">
+
 ![](screenshots/single-chatwoot.png)
+
+</div>
 
 Set in **WAHA**:
 - **Select conversation behavior** - **Created: Newest**
 - **Use Conversation with Status** - **Use Any Status**
 
+<div class="text-center">
+
 ![](screenshots/single-waha.png)
+
+</div>
 
 ### Multiple Conversations
 **Multiple conversations** per WhatsApp chat (Chatwoot’s **philosophy**).
@@ -109,7 +121,11 @@ a new incoming **message creates a new conversation**.
 Set in **Chatwoot**:
 - **Inbox** - **Lock to single conversation** - **Disabled**
 
+<div class="text-center">
+
 ![](screenshots/multiple-chatwoot.png)
+
+</div>
 
 Set in **WAHA**:
 - **Select conversation behavior** - **Activity: Newest**
@@ -119,7 +135,11 @@ Set in **WAHA**:
 If you set **Select conversation behavior** to **Activity: Newest**, **Chatwoot** treats conversation **status changes** as **activity**.
 {{< /callout >}}
 
+<div class="text-center">
+
 ![](screenshots/multiple-waha.png)
+
+</div>
 
 ## Language
 You can adjust **messages, templates, and branding** in the content WAHA sends to Chatwoot and WhatsApp
@@ -134,7 +154,11 @@ You can find all languages and keys in the source code
 The easiest way to test or apply a few template overrides is to use the
 [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}}), then set **Language Overrides**:
 
+<div class="text-center">
+
 ![](screenshots/config-language-overrides.png)
+
+</div>
 
 1. Copy a template from [**Language Templates**](#language-templates), or create your own template.
 2. Save the app.
@@ -425,8 +449,16 @@ whatsapp.group.message: |-
 ### Error Handling
 In case of any errors, WAHA retries a few times and then gives detailed information about the error:
 
+<div class="text-center">
+
 ![Error Reports and Retries](screenshots/error-reports-and-retries.png)
+
+</div>
 
 You can use the **WAHA Jobs Dashboard** at [http://localhost:3000/jobs](http://localhost:3000/jobs) for monitoring:
 
+<div class="text-center">
+
 ![WAHA Jobs Dashboard](screenshots/waha-jobs-dashboard.png)
+
+</div>
