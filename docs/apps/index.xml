@@ -4,6 +4,7 @@
 &lt;/p>
 &lt;p>&lt;strong>WAHA&lt;/strong> includes a built-in &lt;strong>WhatsApp&lt;/strong> integration for
 &lt;a href="https://www.chatwoot.com/">&lt;strong>Chatwoot&lt;/strong>&lt;/a>.&lt;/p>
+&lt;div class="text-center">
 &lt;p>
 
 &lt;img
@@ -14,8 +15,9 @@
  fetchpriority="auto"
  loading="lazy"
  alt="Chatwoot Overview"id="h-rh-i-0"
-/>
-&lt;br/>&lt;br/>&lt;/p>
+/>&lt;/p>
+&lt;/div>
+&lt;br/>&lt;br/>
 
 
 
