@@ -16,14 +16,22 @@ slug: waha-2025-12
 ## 🏷️ Custom Device Name
 You can now label a session so it shows up with a friendly name under **WhatsApp → Linked Devices**. Configure the `deviceName` once and keep your fleet easy to identify.
 
+<div class="text-center">
+
 ![](device-name.png)
+
+</div>
 
 See the full setup flow in [**🖥️ Sessions – Device name**]({{< relref "/docs/how-to/sessions#device-name" >}}). Custom names apply to the QR flow, so keep pairing codes reserved for default names.
 
 ## 📞 Calls App – Auto Reject + Auto Reply
 Enable the built-in [**📞 Calls App**]({{< relref "/docs/apps/calls" >}}) to automatically reject incoming calls and reply with a clear message that guides users to text or voice.
 
+<div class="text-center">
+
 ![](calls.png)
+
+</div>
 
 ## 🧪 Calls API – Reject Programmatically
 If you want full control, the Calls API lets you reject calls on demand. Use the `call.received` event to grab the IDs, then respond with:
