@@ -140,6 +140,27 @@ Rarely used:
 - `WAHA_ZIPPER=ZIPUNZIP` - use `zip` and `unzip` system binaries to pack **WEBJS** authentication data. Disabled by default.
   - It's relevant if you're using **WEBJS + MongoDB**. Install `zip` and `unzip` if you don't use our official docker image and set the variable
 
+### Sessions - Device Name
+
+You can customize how sessions show up under **WhatsApp → Linked Devices** by setting the device and browser names.
+
+- `WAHA_CLIENT_DEVICE_NAME=TEST` - custom device name.
+- `WAHA_CLIENT_BROWSER_NAME=Chrome` - browser name shown in the Linked Devices list.
+
+```ini { title=".env" }
+WAHA_CLIENT_DEVICE_NAME=TEST
+WAHA_CLIENT_BROWSER_NAME=Chrome
+```
+<div style="width: 600px; max-width: 100%; margin: 0 auto;">
+{{< imgo src="/docs/how-to/sessions/whatsapp-linked-devices-devicename-test.png" alt="WhatsApp linked device name set to TEST" >}}
+</div>
+
+{{< include file="content/docs/how-to/sessions/-device-name-pairing-code.md" >}}
+
+{{< include file="content/docs/how-to/sessions/-use-real-browser-name.md" >}}
+
+
+
 ### Sessions - Local
 - `WAHA_LOCAL_STORE_BASE_DIR=/app/.sessions` - Override the base directory for local storage of session data
 - `WAHA_SQLITE_ENGINE=sqlite3` - Pick which SQLite driver [Knex](https://github.com/knex/knex) loads for local data. Supported values:

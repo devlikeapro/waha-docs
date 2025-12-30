@@ -127,6 +127,11 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
     "webjs": {
       "tagsEventsOn": false
     },
+    // Device name in WhatsApp -> Linked Devices
+    "client": {
+      "deviceName": "TEST",
+      "browserName": "Chrome"
+    },
     // Use "metadata" to save additional information.
     "metadata": {
       "user.id": "123",
@@ -173,9 +178,42 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
 }
 ```
 
+### Device name
+
+You can customize how the session shows up under **WhatsApp → Linked Devices**.
+
+```json
+{
+  "name": "default",
+  "config": {
+    "client": {
+      "deviceName": "TEST",
+      "browserName": "Chrome"
+    }
+  }
+}
+```
+
+<div style="width: 600px; max-width: 100%; margin: 0 auto;">
+{{< imgo src="whatsapp-linked-devices-devicename-test.png" alt="WhatsApp linked device name set to TEST" >}}
+</div>
+
+{{< callout context="caution" title="GOWS" icon="outline/alert-triangle" >}}
+GOWS supports custom device names **only via environment variables** for now. See [**⚙️ Configuration → Sessions - Device Name**]({{< relref "/docs/how-to/config#sessions---device-name" >}}).
+{{< /callout >}}
+
+{{< include file="content/docs/how-to/sessions/-device-name-pairing-code.md" >}}
+
+{{< include file="content/docs/how-to/sessions/-use-real-browser-name.md" >}}
+
+
 
 ### Metadata
+<div class="text-center">
+
 ![Dashboard - Metadata](session-config-metadata.png)
+
+</div>
 
 `metadata` is an attribute on Session objects that lets you store more information,
 structured as key-value pairs,
@@ -208,7 +246,11 @@ use, so you don't have to look into two systems.
 WAHA does not use metadata for any internal purposes, it's up to you how to use it.
 
 ### Webhooks
+<div class="text-center">
+
 ![Dashboard - Webhooks](session-config-webhooks.png)
+
+</div>
 
 Read more about
 [**🔄 Events - Webhooks**]({{< relref "/docs/how-to/events#webhooks" >}}).
@@ -271,7 +313,11 @@ You can configure webhooks for a session:
 
 
 ### Ignore
+<div class="text-center">
+
 ![Dashboard - Ignore Chats](session-config-ignore.png)
+
+</div>
 
 You can ignore events from certain chat types for a session by adding `config.ignore`.
 This helps save resources and avoids unnecessary HTTP requests over
@@ -312,7 +358,11 @@ If you don't provide `config.ignore` - it'll use configuration from environment 
 
 ### Proxy
 
+<div class="text-center">
+
 ![Dashboard - Proxy](session-config-proxy.png)
+
+</div>
 
 You can configure proxy for a session by setting `config.proxy` fields when you create or update a session.
 
@@ -438,12 +488,20 @@ app_2e1005a40ef74edda01ffb1ade877fd3
 
 ### WEBJS
 
+<div class="text-center">
+
 ![Dashboard - WEBJS](session-config-webjs.png)
+
+</div>
 
 {{< include file="content/docs/engines/webjs/-session-config.md" >}}
 
 ### NOWEB
+<div class="text-center">
+
 ![Dashboard - NOWEB](session-config-noweb.png)
+
+</div>
 
 [**NOWEB Engine**]({{< relref "/docs/how-to/engines" >}}) 
 has a specific store that allows you to save session data.
