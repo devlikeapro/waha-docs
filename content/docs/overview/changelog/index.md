@@ -75,7 +75,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2025.12.1` - `config.conversations.markAsRead` - fix #1650
 
 🛠️ **Fixes**
-- `2025.12.3` - **GOWS, NOWEB** - motion_video (WhatsApp Live Photo / Motion Photo) messages are not supported - fix #175
+- `2025.12.3` - **GOWS, NOWEB** - motion_video (WhatsApp Live Photo / Motion Photo) messages are not supported - fix #1754
 - `2025.12.3` - **WEBJS** - fix empty `/me` when `WORKING` session - fix #1735
 - `2025.12.2` - **GOWS** - gRPC client per session and pool for clients - fix #1715
 - `2025.12.2` - **NOWEB** - MongoDB - use separate keys for each key - fix #1713
