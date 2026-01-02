@@ -37,7 +37,8 @@ Select **Releases**, click **Apply**:
 You will get notifications about new releases in associated email!
 
 {{< /details >}}
-## Releases
+
+## Versions
 Latest Version:
 <a href="https://github.com/devlikeapro/waha/releases" target="_blank">
 <img alt="GitHub Release" src="https://img.shields.io/github/v/release/devlikeapro/waha">
@@ -46,6 +47,16 @@ Latest Version:
 {{< callout context="note" icon="outline/info-circle" >}}
 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 {{< /callout >}}
+
+### 2026.1
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🛠️ **Fixes**
+- `2026.1.1` - **WEBJS** - fix can not read properties of null - client - fix #1763 closes #1764
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
 
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
