@@ -53,7 +53,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🛠️ **Fixes**
-- `2026.1.1` - **GOWS** - make session `/stop` a bit more stable - fix #1763
+- `2026.1.1` - **GOWS** - make session `/stop` a bit more stable - fix #1749
 - `2026.1.1` - **WEBJS** - fix can not read properties of null - client - fix #1763 closes #1764
 
 {{< /autolink-prs >}}
