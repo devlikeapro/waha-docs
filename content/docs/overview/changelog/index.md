@@ -52,7 +52,22 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
 
+🆕 **New**
+- `2026.1.2` - **GOWS** - receive and send video notes - fix #1798
+- `2026.1.2` - **NOWEB** - receive video note media
+
+**🧩 ChatWoot**
+- `2026.1.2` - support `@lid` mention directly - fix #1767
+- `2026.1.2` - support `@mention` and `@all` in group messages - fix #1767
+- `2026.1.2` - handle not found app - fix #1290 fix #1790
+
 🛠️ **Fixes**
+- `2026.1.2` - **WEBJS** - fix send media to channels - fix #1775
+- `2026.1.2` - **API** - allow `@all` with other mentions for groups (participants resolved anyway)
+- `2026.1.2` - **GOWS** - start sessions in the background
+- `2026.1.2` - **GOWS** - stop sessions before gRPC shutdown - fix #1784
+- `2026.1.2` - **Core** - avoid double `session.status` events - fix #1784
+- `2026.1.2` - add `associatedChildMessage` to edited messages - fix #1773
 - `2026.1.1` - **GOWS** - make session `/stop` a bit more stable - fix #1749
 - `2026.1.1` - **WEBJS** - fix can not read properties of null - client - fix #1763 closes #1764
 
