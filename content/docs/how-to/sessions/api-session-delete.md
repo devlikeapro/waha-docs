@@ -7,7 +7,7 @@
 curl -X 'DELETE' \
   'http://localhost:3000/api/sessions/default' \
   -H 'X-Api-Key: yoursecretkey'
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
 ```
 {{< /tab >}}
 
@@ -18,7 +18,7 @@ import requests
 url = "http://localhost:3000/api/sessions/default"
 headers = {
     "X-Api-Key": "yoursecretkey",
-    "accept": "application/json",
+    "Accept": "application/json",
 }
 
 response = requests.delete(url, headers=headers)
@@ -33,7 +33,7 @@ const axios = require('axios');
 const url = "http://localhost:3000/api/sessions/default";
 const headers = {
     'X-Api-Key': 'yoursecretkey',
-    'accept': 'application/json',
+    'Accept': 'application/json',
 };
 
 axios.delete(url, { headers })
@@ -52,7 +52,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'X-Api-Key: yoursecretkey',
-    'accept: application/json',
+    'Accept: application/json',
 ]);
 $response = curl_exec($ch);
 curl_close($ch);

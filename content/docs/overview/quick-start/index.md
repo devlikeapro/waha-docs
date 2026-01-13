@@ -183,7 +183,7 @@ The examples below use a placeholder `00000000000000000000000000000000` - swap i
 ```sh
 curl -X 'POST' \
   'http://localhost:3000/api/sendText' \
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
   -H 'Content-Type: application/json' \
   -H "X-Api-Key: 00000000000000000000000000000000" \
   -d '{

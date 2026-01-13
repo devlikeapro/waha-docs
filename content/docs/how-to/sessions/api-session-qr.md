@@ -8,20 +8,20 @@
 curl -X 'GET' \
   'http://localhost:3000/api/default/auth/qr' \
   -H 'X-Api-Key: yoursecretkey' \
-  -H 'accept: image/png' \
+  -H 'Accept: image/png' \
   --output qr-code.png
 
 # Get base64 image
 curl -X 'GET' \
   'http://localhost:3000/api/default/auth/qr' \
   -H 'X-Api-Key: yoursecretkey'
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
 
 # Get raw QR code value
 curl -X 'GET' \
   'http://localhost:3000/api/default/auth/qr?format=raw' \
   -H 'X-Api-Key: yoursecretkey'
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
 ```
 {{< /tab >}}
 
@@ -33,7 +33,7 @@ import requests
 url = "http://localhost:3000/api/default/auth/qr"
 headers = {
     "X-Api-Key": "yoursecretkey",
-    "accept": "image/png",
+    "Accept": "image/png",
 }
 
 response = requests.get(url, headers=headers)
@@ -44,7 +44,7 @@ with open("qr-code.png", "wb") as f:
 url = "http://localhost:3000/api/default/auth/qr"
 headers = {
     "X-Api-Key": "yoursecretkey",
-    "accept": "application/json",
+    "Accept": "application/json",
 }
 
 response = requests.get(url, headers=headers)
@@ -54,7 +54,7 @@ print(response.json())
 url = "http://localhost:3000/api/default/auth/qr?format=raw"
 headers = {
     "X-Api-Key": "yoursecretkey",
-    "accept": "application/json",
+    "Accept": "application/json",
 }
 
 response = requests.get(url, headers=headers)
@@ -72,7 +72,7 @@ const getBinaryImage = async () => {
     const url = "http://localhost:3000/api/default/auth/qr";
     const headers = {
         'X-Api-Key': 'yoursecretkey',
-        'accept': 'image/png',
+        'Accept': 'image/png',
     };
     
     const response = await axios.get(url, { 
@@ -88,7 +88,7 @@ const getBase64Image = async () => {
     const url = "http://localhost:3000/api/default/auth/qr";
     const headers = {
         'X-Api-Key': 'yoursecretkey',
-        'accept': 'application/json',
+        'Accept': 'application/json',
     };
     
     const response = await axios.get(url, { headers });
@@ -100,7 +100,7 @@ const getRawQRCode = async () => {
     const url = "http://localhost:3000/api/default/auth/qr?format=raw";
     const headers = {
         'X-Api-Key': 'yoursecretkey',
-        'accept': 'application/json',
+        'Accept': 'application/json',
     };
     
     const response = await axios.get(url, { headers });
@@ -124,7 +124,7 @@ $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'X-Api-Key: yoursecretkey',
-    'accept: image/png',
+    'Accept: image/png',
 ]);
 $response = curl_exec($ch);
 curl_close($ch);
@@ -138,7 +138,7 @@ $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'X-Api-Key: yoursecretkey',
-    'accept: application/json',
+    'Accept: application/json',
 ]);
 $response = curl_exec($ch);
 curl_close($ch);
@@ -152,7 +152,7 @@ $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'X-Api-Key: yoursecretkey',
-    'accept: application/json',
+    'Accept: application/json',
 ]);
 $response = curl_exec($ch);
 curl_close($ch);

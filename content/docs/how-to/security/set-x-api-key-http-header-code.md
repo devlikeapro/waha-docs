@@ -7,7 +7,7 @@
 curl -X 'GET' \
   'http://localhost:3000/api/sessions' \
   -H 'X-Api-Key: yoursecretkey'
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
 ```
 {{< /tab >}}
 

@@ -316,7 +316,7 @@ Accept the same parameters as
 ```bash
 curl -X 'GET' \
   'http://localhost:3000/api/messages?chatId=11111111111%40c.us&limit=1000&session=default' \
-  -H 'accept: application/json'
+  -H 'Accept: application/json'
 ```
 
 ### Get message by id

@@ -7,7 +7,7 @@
 curl -X 'PUT' \
   'http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA' \
   -H 'X-Api-Key: yoursecretkey' \
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
   "text": "Hello, world! (edited)",

@@ -7,7 +7,7 @@
 curl -X 'POST' \
   'http://localhost:3000/api/sendImage' \
   -H 'X-Api-Key: yoursecretkey' \
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
   "session": "default",

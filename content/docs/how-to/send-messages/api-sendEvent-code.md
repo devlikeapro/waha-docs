@@ -7,7 +7,7 @@
 curl -X 'POST' \
   'http://localhost:3000/api/default/events' \
   -H 'X-Api-Key: yoursecretkey' \
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
   "chatId": "12132132130@c.us",

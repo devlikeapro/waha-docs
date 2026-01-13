@@ -111,7 +111,7 @@ You can just execute the following curl command:
 ```bash
 curl -X 'GET' \
   'http://localhost:3000/api/default/channels?role=OWNER' \
-  -H 'accept: application/json'
+  -H 'Accept: application/json'
 ```
 
 In the response you'll see all channels, choose one and copy `id`:
@@ -147,7 +147,7 @@ Replace `123123@newsletter` with **your newsletter id**, like `29847512@newslett
 ```bash
 curl -X 'POST' \
   'http://localhost:3000/api/sendText' \
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
   "chatId": "123123123123@newsletter",

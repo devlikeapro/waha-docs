@@ -8,13 +8,13 @@
 curl -X 'GET' \
   'http://localhost:3000/api/sessions' \
   -H 'X-Api-Key: yoursecretkey'
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
 
 # List all sessions (including stopped)
 curl -X 'GET' \
   'http://localhost:3000/api/sessions?all=true' \
   -H 'X-Api-Key: yoursecretkey'
-  -H 'accept: application/json' \
+  -H 'Accept: application/json' \
 ```
 {{< /tab >}}
 
@@ -26,7 +26,7 @@ import requests
 url = "http://localhost:3000/api/sessions"
 headers = {
     "X-Api-Key": "yoursecretkey",
-    "accept": "application/json",
+    "Accept": "application/json",
 }
 
 response = requests.get(url, headers=headers)
@@ -36,7 +36,7 @@ print(response.json())
 url = "http://localhost:3000/api/sessions?all=true"
 headers = {
     "X-Api-Key": "yoursecretkey",
-    "accept": "application/json",
+    "Accept": "application/json",
 }
 
 response = requests.get(url, headers=headers)
@@ -53,7 +53,7 @@ const getActiveSessions = async () => {
     const url = "http://localhost:3000/api/sessions";
     const headers = {
         'X-Api-Key': 'yoursecretkey',
-        'accept': 'application/json',
+        'Accept': 'application/json',
     };
     
     const response = await axios.get(url, { headers });
@@ -65,7 +65,7 @@ const getAllSessions = async () => {
     const url = "http://localhost:3000/api/sessions?all=true";
     const headers = {
         'X-Api-Key': 'yoursecretkey',
-        'accept': 'application/json',
+        'Accept': 'application/json',
     };
     
     const response = await axios.get(url, { headers });
@@ -88,7 +88,7 @@ $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'X-Api-Key: yoursecretkey',
-    'accept: application/json',
+    'Accept: application/json',
 ]);
 $response = curl_exec($ch);
 curl_close($ch);
@@ -103,7 +103,7 @@ $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'X-Api-Key: yoursecretkey',
-    'accept: application/json',
+    'Accept: application/json',
 ]);
 $response = curl_exec($ch);
 curl_close($ch);
