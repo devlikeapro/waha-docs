@@ -446,6 +446,8 @@ Fields:
 
 It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't download media due to configuration.
 
+{{< link-card title="👉 Read more receiving Media Files" href="/docs/how-to/receive-messages/#media-files" >}}
+
 ### message.any
 
 Fired on all message creations, including your own. The payload is the same as for [message](#message) event.

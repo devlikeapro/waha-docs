@@ -109,6 +109,8 @@ Fields:
 
 It's possible to have `hasMedia: true`, but `media: null` - this means that WAHA didn't download media due to configuration.
 
+{{< link-card title="👉 Read more receiving Media Files" href="#media-files" >}}
+
 ### message.any
 
 Fired on all message creations, including your own. The payload is the same as for [message](#message) event.
@@ -224,7 +226,7 @@ Read more about
 
 ## Media Files
 
-When people send you media - images, voice messages, and documents - WAHA saves them in the file storage.
+When people send you media - images, voice messages, and documents - WAHA saves them in the [**🗄️ Media Storage**]({{< relref "/docs/how-to/storages" >}}).
 In your application, you must download these files and use them as needed. You can find the URL in the `media.url` field.
 
 For example, you can get the webhook like this with `media` value (we've skipped other fields):
@@ -255,7 +257,11 @@ Fields:
 
 Note: If you see `hasMedia: true` but no `media.url`, this indicates that WAHA detected media but didn't download it due to your configuration settings.
 
-Then you can use the link to download the file `http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg`.
+You can download the file using API - remember to provide API key in `X-Api-Key` header!
+
+{{< include file="content/docs/how-to/receive-messages/-api-download-media.md" >}}
+
+{{< include file="content/docs/how-to/security/-files-auth-off.md" >}}
 
 For documents (file attachments) there's also `filename` field with the original file name.
 ```jsonc { title="message" }

@@ -42,13 +42,17 @@ WHATSAPP_SWAGGER_USERNAME=admin
 WHATSAPP_SWAGGER_PASSWORD=yoursecretpassword
 ```
 
-Send `X-Api-Key: yoursecretkey` header in all API requests (including file downloads).
+Send `X-Api-Key: yoursecretkey` header in **all API requests**.
 
-```bash {title="cURL Example"}
-curl -H 'X-Api-Key: yoursecretkey' http://localhost:3000/api/sessions
+{{< include file="content/docs/how-to/security/set-x-api-key-http-header-code.md" >}}
 
-wget --header='X-Api-Key: yoursecretkey' http://localhost:3000/api/files/MESSAGEID.jpg
-```
+When you need to download media file - also provide the key.
+
+{{< include file="content/docs/how-to/receive-messages/-api-download-media.md" >}}
+
+{{< include file="content/docs/how-to/security/-files-auth-off.md" >}}
+
+{{< link-card title="👉 Read more receiving Media Files" href="/docs/how-to/receive-messages/#media-files" >}}
 
 ## API security
 
@@ -119,6 +123,8 @@ docker run -it \
  -e WAHA_API_KEY=yoursecretkey \
  devlikeapro/waha-plus
 ```
+
+{{< include file="content/docs/how-to/security/-files-auth-off.md" >}}
 
 ## Swagger Security
 If you want to hide the project Swagger panel under the password - run the following command to hide under `admin/admin`
