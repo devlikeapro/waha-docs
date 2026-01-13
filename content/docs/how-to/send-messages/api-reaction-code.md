@@ -6,9 +6,9 @@
 ```bash { title="Reaction" }
 curl -X 'PUT' \
   'http://localhost:3000/api/reaction' \
+  -H 'X-Api-Key: yoursecretkey' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
-  -H 'X-Api-Key: yoursecretkey' \
   -d '{
   "session": "default",
   "messageId": "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
@@ -23,8 +23,8 @@ import requests
 
 url = "http://localhost:3000/api/reaction"
 headers = {
+    "X-Api-Key": "yoursecretkey",
     "Content-Type": "application/json",
-    "X-Api-Key": "yoursecretkey"
 }
 data = {
     "session": "default",
@@ -48,8 +48,8 @@ const data = {
     reaction: "👍"
 };
 const headers = {
+    'X-Api-Key': 'yoursecretkey',
     'Content-Type': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
 };
 
 axios.put(url, data, { headers })
@@ -73,8 +73,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'X-Api-Key: yoursecretkey',
     'Content-Type: application/json',
-    'X-Api-Key: yoursecretkey'
 ]);
 $response = curl_exec($ch);
 curl_close($ch);

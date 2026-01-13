@@ -6,9 +6,9 @@
 ```bash { title="Session Restart" }
 curl -X 'POST' \
   'http://localhost:3000/api/sessions/default/restart' \
+  -H 'X-Api-Key: yoursecretkey'
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
-  -H 'X-Api-Key: yoursecretkey'
 ```
 {{< /tab >}}
 
@@ -18,8 +18,8 @@ import requests
 
 url = "http://localhost:3000/api/sessions/default/restart"
 headers = {
+    "X-Api-Key": "yoursecretkey",
     "Content-Type": "application/json",
-    "X-Api-Key": "yoursecretkey"
 }
 
 response = requests.post(url, headers=headers)
@@ -33,8 +33,8 @@ const axios = require('axios');
 
 const url = "http://localhost:3000/api/sessions/default/restart";
 const headers = {
+    'X-Api-Key': 'yoursecretkey',
     'Content-Type': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
 };
 
 axios.post(url, {}, { headers })
@@ -52,8 +52,8 @@ $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'X-Api-Key: yoursecretkey',
     'Content-Type: application/json',
-    'X-Api-Key: yoursecretkey'
 ]);
 $response = curl_exec($ch);
 curl_close($ch);

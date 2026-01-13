@@ -6,8 +6,8 @@
 ```bash { title="Set X Api Key Http Header" }
 curl -X 'GET' \
   'http://localhost:3000/api/sessions' \
-  -H 'accept: application/json' \
   -H 'X-Api-Key: yoursecretkey'
+  -H 'accept: application/json' \
 ```
 {{< /tab >}}
 
@@ -16,8 +16,8 @@ curl -X 'GET' \
 import requests
 
 headers = {
-  'Content-type': 'application/json',
   'X-Api-Key': 'yoursecretkey',
+  'Content-type': 'application/json',
 }
 response = requests.get("http://localhost:3000/api/sessions", headers=headers)
 print(response.json())
@@ -30,8 +30,8 @@ const axios = require('axios');
 
 const url = "http://localhost:3000/api/sessions";
 const headers = {
+    'X-Api-Key': 'yoursecretkey',
     'Content-Type': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
 };
 
 axios.get(url, { headers })
@@ -48,8 +48,8 @@ $url = "http://localhost:3000/api/sessions";
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'X-Api-Key: yoursecretkey',
     'Content-Type: application/json',
-    'X-Api-Key: yoursecretkey'
 ]);
 $response = curl_exec($ch);
 curl_close($ch);

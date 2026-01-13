@@ -6,9 +6,9 @@
 ```bash { title="Send Seen" }
 curl -X 'POST' \
   'http://localhost:3000/api/sendSeen' \
+  -H 'X-Api-Key: yoursecretkey' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
-  -H 'X-Api-Key: yoursecretkey' \
   -d '{
   "session": "default",
   "chatId": "12132132130@c.us"
@@ -22,8 +22,8 @@ import requests
 
 url = "http://localhost:3000/api/sendSeen"
 headers = {
+    "X-Api-Key": "yoursecretkey",
     "Content-Type": "application/json",
-    "X-Api-Key": "yoursecretkey"
 }
 data = {
     "session": "default",
@@ -45,8 +45,8 @@ const data = {
     chatId: "12132132130@c.us"
 };
 const headers = {
+    'X-Api-Key': 'yoursecretkey',
     'Content-Type': 'application/json',
-    'X-Api-Key': 'yoursecretkey'
 };
 
 axios.post(url, data, { headers })
@@ -69,8 +69,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'X-Api-Key: yoursecretkey',
     'Content-Type: application/json',
-    'X-Api-Key: yoursecretkey'
 ]);
 $response = curl_exec($ch);
 curl_close($ch);

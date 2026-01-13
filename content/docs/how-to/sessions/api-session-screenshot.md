@@ -7,15 +7,15 @@
 # Get binary image
 curl -X 'GET' \
   'http://localhost:3000/api/screenshot?session=default' \
-  -H 'accept: image/png' \
   -H 'X-Api-Key: yoursecretkey' \
+  -H 'accept: image/png' \
   --output screenshot.png
 
 # Get base64 image
 curl -X 'GET' \
   'http://localhost:3000/api/screenshot?session=default' \
-  -H 'accept: application/json' \
   -H 'X-Api-Key: yoursecretkey'
+  -H 'accept: application/json' \
 ```
 {{< /tab >}}
 
@@ -26,8 +26,8 @@ import requests
 # Get binary image
 url = "http://localhost:3000/api/screenshot?session=default"
 headers = {
+    "X-Api-Key": "yoursecretkey",
     "accept": "image/png",
-    "X-Api-Key": "yoursecretkey"
 }
 
 response = requests.get(url, headers=headers)
@@ -37,8 +37,8 @@ with open("screenshot.png", "wb") as f:
 # Get base64 image
 url = "http://localhost:3000/api/screenshot?session=default"
 headers = {
+    "X-Api-Key": "yoursecretkey",
     "accept": "application/json",
-    "X-Api-Key": "yoursecretkey"
 }
 
 response = requests.get(url, headers=headers)
@@ -55,8 +55,8 @@ const fs = require('fs');
 const getBinaryImage = async () => {
     const url = "http://localhost:3000/api/screenshot?session=default";
     const headers = {
+        'X-Api-Key': 'yoursecretkey',
         'accept': 'image/png',
-        'X-Api-Key': 'yoursecretkey'
     };
     
     const response = await axios.get(url, { 
@@ -71,8 +71,8 @@ const getBinaryImage = async () => {
 const getBase64Image = async () => {
     const url = "http://localhost:3000/api/screenshot?session=default";
     const headers = {
+        'X-Api-Key': 'yoursecretkey',
         'accept': 'application/json',
-        'X-Api-Key': 'yoursecretkey'
     };
     
     const response = await axios.get(url, { headers });
@@ -94,8 +94,8 @@ $url = "http://localhost:3000/api/screenshot?session=default";
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'X-Api-Key: yoursecretkey',
     'accept: image/png',
-    'X-Api-Key: yoursecretkey'
 ]);
 $response = curl_exec($ch);
 curl_close($ch);
@@ -108,8 +108,8 @@ $url = "http://localhost:3000/api/screenshot?session=default";
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'X-Api-Key: yoursecretkey',
     'accept: application/json',
-    'X-Api-Key: yoursecretkey'
 ]);
 $response = curl_exec($ch);
 curl_close($ch);
