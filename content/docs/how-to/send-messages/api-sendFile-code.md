@@ -3,7 +3,7 @@
 {{< tabs "send-file-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Send File" }
 curl -X 'POST' \
   'http://localhost:3000/api/sendFile' \
   -H 'accept: application/json' \
@@ -23,7 +23,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="send-file.py" }
 import requests
 
 url = "http://localhost:3000/api/sendFile"
@@ -48,7 +48,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="send-file.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sendFile";
@@ -74,7 +74,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="send-file.php" }
 <?php
 $url = "http://localhost:3000/api/sendFile";
 $data = [

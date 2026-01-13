@@ -3,7 +3,7 @@
 {{< tabs "delete-message-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Delete Message" }
 curl -X 'DELETE' \
   'http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA' \
   -H 'accept: application/json' \
@@ -12,7 +12,7 @@ curl -X 'DELETE' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="delete-message.py" }
 import requests
 
 url = "http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA"
@@ -26,7 +26,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="delete-message.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA";
@@ -41,7 +41,7 @@ axios.delete(url, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="delete-message.php" }
 <?php
 $url = "http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA";
 

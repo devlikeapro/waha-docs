@@ -3,7 +3,7 @@
 {{< tabs "send-buttons-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Send Buttons" }
 curl -X 'POST' \
   'http://localhost:3000/api/sendButtons' \
   -H 'accept: application/json' \
@@ -46,7 +46,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="send-buttons.py" }
 import requests
 
 url = "http://localhost:3000/api/sendButtons"
@@ -94,7 +94,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="send-buttons.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sendButtons";
@@ -143,7 +143,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="send-buttons.php" }
 <?php
 $url = "http://localhost:3000/api/sendButtons";
 $data = [

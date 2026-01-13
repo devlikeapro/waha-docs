@@ -3,7 +3,7 @@
 {{< tabs "set-x-api-key-http-header" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Set X Api Key Http Header" }
 curl -X 'GET' \
   'http://localhost:3000/api/sessions' \
   -H 'accept: application/json' \
@@ -12,7 +12,7 @@ curl -X 'GET' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="set-x-api-key-http-header.py" }
 import requests
 
 headers = {
@@ -25,7 +25,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="set-x-api-key-http-header.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sessions";
@@ -41,7 +41,7 @@ axios.get(url, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="set-x-api-key-http-header.php" }
 <?php
 $url = "http://localhost:3000/api/sessions";
 

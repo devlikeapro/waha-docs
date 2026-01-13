@@ -3,7 +3,7 @@
 {{< tabs "update-session-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session Update" }
 curl -X 'PUT' \
   'http://localhost:3000/api/sessions/default' \
   -H 'accept: application/json' \
@@ -26,7 +26,7 @@ curl -X 'PUT' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-update.py" }
 import requests
 
 url = "http://localhost:3000/api/sessions/default"
@@ -54,7 +54,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-update.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sessions/default";
@@ -83,7 +83,7 @@ axios.put(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-update.php" }
 <?php
 $url = "http://localhost:3000/api/sessions/default";
 $data = [

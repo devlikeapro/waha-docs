@@ -3,7 +3,7 @@
 {{< tabs "star-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Star" }
 curl -X 'PUT' \
   'http://localhost:3000/api/star' \
   -H 'accept: application/json' \
@@ -19,7 +19,7 @@ curl -X 'PUT' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="star.py" }
 import requests
 
 url = "http://localhost:3000/api/star"
@@ -40,7 +40,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="star.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/star";
@@ -62,7 +62,7 @@ axios.put(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="star.php" }
 <?php
 $url = "http://localhost:3000/api/star";
 $data = [

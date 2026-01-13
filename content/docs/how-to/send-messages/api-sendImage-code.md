@@ -3,7 +3,7 @@
 {{< tabs "send-image-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Send Image" }
 curl -X 'POST' \
   'http://localhost:3000/api/sendImage' \
   -H 'accept: application/json' \
@@ -23,7 +23,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="send-image.py" }
 import requests
 
 url = "http://localhost:3000/api/sendImage"
@@ -48,7 +48,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="send-image.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sendImage";
@@ -74,7 +74,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="send-image.php" }
 <?php
 $url = "http://localhost:3000/api/sendImage";
 $data = [

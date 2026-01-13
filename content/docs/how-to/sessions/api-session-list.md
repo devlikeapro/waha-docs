@@ -3,7 +3,7 @@
 {{< tabs "list-sessions-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session List" }
 # List active sessions
 curl -X 'GET' \
   'http://localhost:3000/api/sessions' \
@@ -19,7 +19,7 @@ curl -X 'GET' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-list.py" }
 import requests
 
 # List active sessions
@@ -45,7 +45,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-list.js" }
 const axios = require('axios');
 
 // List active sessions
@@ -79,7 +79,7 @@ getAllSessions().catch(console.error);
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-list.php" }
 <?php
 // List active sessions
 $url = "http://localhost:3000/api/sessions";

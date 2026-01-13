@@ -3,7 +3,7 @@
 {{< tabs "create-session-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session Create" }
 curl -X 'POST' \
   'http://localhost:3000/api/sessions' \
   -H 'accept: application/json' \
@@ -26,7 +26,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-create.py" }
 import requests
 
 url = "http://localhost:3000/api/sessions"
@@ -54,7 +54,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-create.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sessions";
@@ -83,7 +83,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-create.php" }
 <?php
 $url = "http://localhost:3000/api/sessions";
 $data = [

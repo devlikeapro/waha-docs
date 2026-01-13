@@ -3,7 +3,7 @@
 {{< tabs "send-text-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Send Text" }
 curl -X 'POST' \
   'http://localhost:3000/api/sendText' \
   -H 'accept: application/json' \
@@ -18,7 +18,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="send-text.py" }
 import requests
 
 url = "http://localhost:3000/api/sendText"
@@ -38,7 +38,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="send-text.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sendText";
@@ -59,7 +59,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="send-text.php" }
 <?php
 $url = "http://localhost:3000/api/sendText";
 $data = [

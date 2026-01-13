@@ -3,7 +3,7 @@
 {{< tabs "reaction-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Reaction" }
 curl -X 'PUT' \
   'http://localhost:3000/api/reaction' \
   -H 'accept: application/json' \
@@ -18,7 +18,7 @@ curl -X 'PUT' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="reaction.py" }
 import requests
 
 url = "http://localhost:3000/api/reaction"
@@ -38,7 +38,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="reaction.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/reaction";
@@ -59,7 +59,7 @@ axios.put(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="reaction.php" }
 <?php
 $url = "http://localhost:3000/api/reaction";
 $data = [

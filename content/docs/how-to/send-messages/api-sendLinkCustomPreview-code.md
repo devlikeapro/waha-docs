@@ -3,7 +3,7 @@
 {{< tabs "send-link-custom-preview-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Send Link Custom Preview" }
 curl -X 'POST' \
   'http://localhost:3000/api/send/link-custom-preview' \
   -H 'accept: application/json' \
@@ -27,7 +27,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="send-link-custom-preview.py" }
 import requests
 
 url = "http://localhost:3000/api/send/link-custom-preview"
@@ -56,7 +56,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="send-link-custom-preview.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/send/link-custom-preview";
@@ -86,7 +86,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="send-link-custom-preview.php" }
 <?php
 $url = "http://localhost:3000/api/send/link-custom-preview";
 $data = [

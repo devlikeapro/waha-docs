@@ -3,7 +3,7 @@
 {{< tabs "forward-message-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Forward Message" }
 curl -X 'POST' \
   'http://localhost:3000/api/forwardMessage' \
   -H 'accept: application/json' \
@@ -18,7 +18,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="forward-message.py" }
 import requests
 
 url = "http://localhost:3000/api/forwardMessage"
@@ -38,7 +38,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="forward-message.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/forwardMessage";
@@ -59,7 +59,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="forward-message.php" }
 <?php
 $url = "http://localhost:3000/api/forwardMessage";
 $data = [

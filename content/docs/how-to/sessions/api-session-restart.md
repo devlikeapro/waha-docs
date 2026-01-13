@@ -3,7 +3,7 @@
 {{< tabs "restart-session-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session Restart" }
 curl -X 'POST' \
   'http://localhost:3000/api/sessions/default/restart' \
   -H 'accept: application/json' \
@@ -13,7 +13,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-restart.py" }
 import requests
 
 url = "http://localhost:3000/api/sessions/default/restart"
@@ -28,7 +28,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-restart.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sessions/default/restart";
@@ -44,7 +44,7 @@ axios.post(url, {}, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-restart.php" }
 <?php
 $url = "http://localhost:3000/api/sessions/default/restart";
 

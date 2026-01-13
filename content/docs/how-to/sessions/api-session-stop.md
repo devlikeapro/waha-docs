@@ -3,7 +3,7 @@
 {{< tabs "stop-session-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session Stop" }
 curl -X 'POST' \
   'http://localhost:3000/api/sessions/default/stop' \
   -H 'accept: application/json' \
@@ -13,7 +13,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-stop.py" }
 import requests
 
 url = "http://localhost:3000/api/sessions/default/stop"
@@ -28,7 +28,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-stop.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sessions/default/stop";
@@ -44,7 +44,7 @@ axios.post(url, {}, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-stop.php" }
 <?php
 $url = "http://localhost:3000/api/sessions/default/stop";
 

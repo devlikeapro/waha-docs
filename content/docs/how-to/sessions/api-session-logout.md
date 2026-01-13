@@ -3,7 +3,7 @@
 {{< tabs "logout-session-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session Logout" }
 curl -X 'POST' \
   'http://localhost:3000/api/sessions/default/logout' \
   -H 'accept: application/json' \
@@ -13,7 +13,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-logout.py" }
 import requests
 
 url = "http://localhost:3000/api/sessions/default/logout"
@@ -28,7 +28,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-logout.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sessions/default/logout";
@@ -44,7 +44,7 @@ axios.post(url, {}, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-logout.php" }
 <?php
 $url = "http://localhost:3000/api/sessions/default/logout";
 

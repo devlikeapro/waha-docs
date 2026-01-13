@@ -3,7 +3,7 @@
 {{< tabs "qr-code-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session Qr" }
 # Get binary image
 curl -X 'GET' \
   'http://localhost:3000/api/default/auth/qr' \
@@ -26,7 +26,7 @@ curl -X 'GET' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-qr.py" }
 import requests
 
 # Get binary image
@@ -63,7 +63,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-qr.js" }
 const axios = require('axios');
 const fs = require('fs');
 
@@ -115,7 +115,7 @@ getRawQRCode().catch(console.error);
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-qr.php" }
 <?php
 // Get binary image
 $url = "http://localhost:3000/api/default/auth/qr";

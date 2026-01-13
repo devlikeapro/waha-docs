@@ -3,7 +3,7 @@
 {{< tabs "pairing-code-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session Pairing" }
 curl -X 'POST' \
   'http://localhost:3000/api/default/auth/request-code' \
   -H 'accept: application/json' \
@@ -16,7 +16,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-pairing.py" }
 import requests
 
 url = "http://localhost:3000/api/default/auth/request-code"
@@ -34,7 +34,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-pairing.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/default/auth/request-code";
@@ -53,7 +53,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-pairing.php" }
 <?php
 $url = "http://localhost:3000/api/default/auth/request-code";
 $data = [

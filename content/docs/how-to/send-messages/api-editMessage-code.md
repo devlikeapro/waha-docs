@@ -3,7 +3,7 @@
 {{< tabs "edit-message-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Edit Message" }
 curl -X 'PUT' \
   'http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA' \
   -H 'accept: application/json' \
@@ -17,7 +17,7 @@ curl -X 'PUT' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="edit-message.py" }
 import requests
 
 url = "http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA"
@@ -36,7 +36,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="edit-message.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA";
@@ -56,7 +56,7 @@ axios.put(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="edit-message.php" }
 <?php
 $url = "http://localhost:3000/api/default/chats/12132132130%40c.us/messages/true_12132132130%40c.us_AAAAAAAAAAAAAAAAAAAA";
 $data = [

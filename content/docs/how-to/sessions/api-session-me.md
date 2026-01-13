@@ -3,7 +3,7 @@
 {{< tabs "get-session-me-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session Me" }
 curl -X 'GET' \
   'http://localhost:3000/api/sessions/default/me' \
   -H 'accept: application/json' \
@@ -12,7 +12,7 @@ curl -X 'GET' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-me.py" }
 import requests
 
 url = "http://localhost:3000/api/sessions/default/me"
@@ -27,7 +27,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-me.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sessions/default/me";
@@ -43,7 +43,7 @@ axios.get(url, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-me.php" }
 <?php
 $url = "http://localhost:3000/api/sessions/default/me";
 

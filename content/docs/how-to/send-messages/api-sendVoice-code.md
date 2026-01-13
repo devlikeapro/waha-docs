@@ -3,7 +3,7 @@
 {{< tabs "send-voice-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Send Voice" }
 curl -X 'POST' \
   'http://localhost:3000/api/sendVoice' \
   -H 'accept: application/json' \
@@ -22,7 +22,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="send-voice.py" }
 import requests
 
 url = "http://localhost:3000/api/sendVoice"
@@ -46,7 +46,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="send-voice.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sendVoice";
@@ -71,7 +71,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="send-voice.php" }
 <?php
 $url = "http://localhost:3000/api/sendVoice";
 $data = [

@@ -3,7 +3,7 @@
 {{< tabs "screenshot-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session Screenshot" }
 # Get binary image
 curl -X 'GET' \
   'http://localhost:3000/api/screenshot?session=default' \
@@ -20,7 +20,7 @@ curl -X 'GET' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-screenshot.py" }
 import requests
 
 # Get binary image
@@ -47,7 +47,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-screenshot.js" }
 const axios = require('axios');
 const fs = require('fs');
 
@@ -86,7 +86,7 @@ getBase64Image().catch(console.error);
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-screenshot.php" }
 <?php
 // Get binary image
 $url = "http://localhost:3000/api/screenshot?session=default";

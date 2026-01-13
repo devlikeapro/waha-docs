@@ -3,7 +3,7 @@
 {{< tabs "start-session-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Session Start" }
 curl -X 'POST' \
   'http://localhost:3000/api/sessions/default/start' \
   -H 'accept: application/json' \
@@ -13,7 +13,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="session-start.py" }
 import requests
 
 url = "http://localhost:3000/api/sessions/default/start"
@@ -28,7 +28,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="session-start.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sessions/default/start";
@@ -44,7 +44,7 @@ axios.post(url, {}, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="session-start.php" }
 <?php
 $url = "http://localhost:3000/api/sessions/default/start";
 

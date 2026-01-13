@@ -3,7 +3,7 @@
 {{< tabs "send-video-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Send Video" }
 curl -X 'POST' \
   'http://localhost:3000/api/sendVideo' \
   -H 'accept: application/json' \
@@ -25,7 +25,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="send-video.py" }
 import requests
 
 url = "http://localhost:3000/api/sendVideo"
@@ -52,7 +52,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="send-video.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sendVideo";
@@ -80,7 +80,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="send-video.php" }
 <?php
 $url = "http://localhost:3000/api/sendVideo";
 $data = [

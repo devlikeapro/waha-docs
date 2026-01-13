@@ -3,7 +3,7 @@
 {{< tabs "send-event-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Send Event" }
 curl -X 'POST' \
   'http://localhost:3000/api/default/events' \
   -H 'accept: application/json' \
@@ -23,7 +23,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="send-event.py" }
 import requests
 
 url = "http://localhost:3000/api/default/events"
@@ -48,7 +48,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="send-event.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/default/events";
@@ -74,7 +74,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="send-event.php" }
 <?php
 $url = "http://localhost:3000/api/default/events";
 $data = [

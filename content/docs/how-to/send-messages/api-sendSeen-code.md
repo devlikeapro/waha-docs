@@ -3,7 +3,7 @@
 {{< tabs "send-seen-api" "language" >}}
 
 {{< tab "cURL" >}}
-```sh
+```bash { title="Send Seen" }
 curl -X 'POST' \
   'http://localhost:3000/api/sendSeen' \
   -H 'accept: application/json' \
@@ -17,7 +17,7 @@ curl -X 'POST' \
 {{< /tab >}}
 
 {{< tab "Python" >}}
-```python
+```python { title="send-seen.py" }
 import requests
 
 url = "http://localhost:3000/api/sendSeen"
@@ -36,7 +36,7 @@ print(response.json())
 {{< /tab >}}
 
 {{< tab "JavaScript" >}}
-```javascript
+```javascript { title="send-seen.js" }
 const axios = require('axios');
 
 const url = "http://localhost:3000/api/sendSeen";
@@ -56,7 +56,7 @@ axios.post(url, data, { headers })
 {{< /tab >}}
 
 {{< tab "PHP" >}}
-```php
+```php { title="send-seen.php" }
 <?php
 $url = "http://localhost:3000/api/sendSeen";
 $data = [
