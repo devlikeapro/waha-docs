@@ -795,6 +795,8 @@ null
 
 The simplest way to authenticate a new session - get QR code and scan it on your device.
 
+{{< include file="content/docs/how-to/sessions/-qr-code.md" >}}
+
 ```http request
 GET /api/{session}/auth/qr
 ```
@@ -889,7 +891,7 @@ You'll get code in the need to enter in **WhatsApp app** to authenticate the ses
 }
 ```
 
-👉 **Always** add to [**QR code auth flow**](#get-qr) in your application as a fallback, 
+👉 **Always** add [**QR code auth flow**](#get-qr) in your application as a fallback, 
 because the pairing code is not always available and works as expected.
 
 Here's how you can call it from various languages:
