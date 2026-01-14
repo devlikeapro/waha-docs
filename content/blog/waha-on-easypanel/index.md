@@ -5,7 +5,7 @@ excerpt: "Quick setup guide to install WAHA on EasyPanel."
 date: 2026-01-13T01:01:01+00:00
 draft: false
 images: ["cover.png"]
-categories: ["Tips"]
+categories: ["Install"]
 tags: []
 contributors: ["devlikeapro"]
 pinned: false
