@@ -66,11 +66,6 @@ If you want to use
 [**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}),
 please follow the specific installation and configuration guides provided for each app:
 
-- **Management**: ChatWoot-managed app configuration
-- **Best for**: teams already running ChatWoot who want WAHA as part of their support stack
-- **Complexity**: Medium
-- **Maintenance**: Follow the app guide for updates and configuration changes
-
 {{< link-card title="👉 WhatsApp + ChatWoot - Installation Guide" href="/blog/apps-chatwoot-1-install/" >}}
 
 ## What's next?
