@@ -31,13 +31,16 @@ You support the project and get WAHA Plus by donating to the project on one of t
 
 
 ## Patron Portal
+
 <p align="center">
   <img src="patron-portal.png" alt="Patron Portal" />
   <br/>
   <br/>
 </p>
 
-After subscribing on Patreon or Boosty, you will get access to the [WAHA Patron Portal ->](https://portal.devlike.pro/)
+[https://portal.devlike.pro/](https://portal.devlike.pro/)
+
+After subscribing on **Patreon** or **Boosty**, you will get access to the **Patron Portal**
 where you will get the password to download the Plus image and manage your perks!
 
 Read more about Patron Portal in
