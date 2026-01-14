@@ -35,11 +35,20 @@ Self-hosting WAHA gives you complete control over your privacy:
 
 ## Deployment Options
 
-WAHA supports multiple deployment methods to fit different infrastructure needs.
+WAHA supports 
+[**multiple deployment methods**]({{< relref "/categories/install" >}})
+to fit different infrastructure needs.
 
 All options are containerized - choose based on **how you want to manage it**.
 
+<hr>
+
 ### Docker
+
+<div class="text-center" style="margin-bottom: 16px;">
+  <img src="/logos/docker.svg" alt="Docker logo" style="width:128px;height:128px;">
+</div>
+
 Use **Docker** and **Docker Compose** for consistent, portable deployments.
 
 - **Management**: CLI and Compose files 🟠
@@ -50,10 +59,15 @@ Use **Docker** and **Docker Compose** for consistent, portable deployments.
 
 {{< link-card title="👉 Deploy WAHA on Docker" href="/blog/waha-on-docker/" >}}
 
+<hr>
 
 ### EasyPanel
 
-Use an intuitive **EasyPanel** interface to deploy, manage, and provision SSL certificates.
+<div class="text-center" style="margin-bottom: 16px;">
+  <img src="/logos/easypanel-logomark.svg" alt="EasyPanel logo" style="width:128px;height:128px;">
+</div>
+
+Use an intuitive [**EasyPanel**](https://easypanel.io/) interface to deploy, manage, and provision SSL certificates.
 
 - **Management**: UI (point-and-click) 🟢
 - **Complexity**: Low 🟢
@@ -63,6 +77,26 @@ Use an intuitive **EasyPanel** interface to deploy, manage, and provision SSL ce
 
 {{< link-card title="👉 Deploy WAHA on EasyPanel" href="/blog/waha-on-easypanel/" >}}
 
+<hr>
+
+### Coolify
+
+<div class="text-center" style="margin-bottom: 16px;">
+  <img src="/logos/coolify-logo-transparent.png" alt="Coolify logo" style="width:128px;height:128px;">
+</div>
+
+[**Coolify**](https://coolify.io/) is an open-source & self-hostable alternative to Vercel and co for easily deploying services to your own server.
+
+- **Management**: UI (self-hosted) 🟢
+- **Complexity**: Low 🟢
+- **Maintenance**: Panel-driven updates and monitoring 🟢
+- **Flexibility**: Less control over low-level settings 🟠
+- **Cons**: More developer-focused panel 🔴
+
+{{< link-card title="👉 Deploy WAHA on Coolify" href="/blog/waha-on-coolify/" >}}
+
+<hr>
+
 ### ChatWoot
 
 If you want to use
@@ -71,6 +105,8 @@ If you want to use
 please follow the specific installation and configuration guides provided for each app:
 
 {{< link-card title="👉 WhatsApp + ChatWoot - Installation Guide" href="/blog/apps-chatwoot-1-install/" >}}
+
+<hr>
 
 ## What's next?
 

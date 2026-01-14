@@ -17,7 +17,7 @@ toc: true
 
 ![EasyPanel overview](00-easypanel-overview.png)
 
-With WAHA on EasyPanel, you get:
+With WAHA on [EasyPanel](https://easypanel.io/), you get:
 - A public DNS name like `https://myproject-waha.<ID>.easypanel.host/`
 - Automatic HTTPS handling
 - Easy UI for deployments, env vars, and storage
