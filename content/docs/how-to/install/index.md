@@ -24,13 +24,9 @@ docker run ... devlikeapro/waha
 
 To make it **production-ready**, you need to configure a few more parameters to make it secure, reliable, and easy to manage.
 
+{{< include file="content/docs/how-to/install/-server-panels.md" >}}
 
-{{< callout context="note" icon="outline/info-circle" >}}
-If you wish to follow a **Step-By-Step guide** which shows you **how to send your first message** via HTTP API,
-please go to [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}}).
-{{< /callout >}}
-
-{{< callout context="tip" icon="outline/info-circle" title="WAHA Apps">}}
+{{< callout context="note" icon="outline/info-circle" title="WAHA Apps">}}
 
 If you want to use
 [**🧩 Apps**]({{< relref "/docs/apps/about" >}}), such as

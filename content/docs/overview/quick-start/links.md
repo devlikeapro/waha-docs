@@ -2,6 +2,7 @@
 {{< card-grid >}}
 {{< card title="Learn WAHA" icon="outline/book" color="yellow" >}}
 
+- [**⚡ Quick Start**]({{< relref "/docs/overview/quick-start" >}})
 - [📤 Send messages]({{<relref "/docs/how-to/send-messages" >}})
 - [📥 Receive messages]({{<relref "/docs/how-to/receive-messages" >}})
 - [📊 Dashboard]({{< relref "/docs/how-to/dashboard" >}})
