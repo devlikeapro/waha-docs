@@ -14,8 +14,23 @@ slug: waha-on-docker
 toc: true
 ---
 
-## Requirements
-### System Requirements
+## Overview
+In this guide we'll show you how to deploy **WAHA** using **Docker** and **Docker Compose**.
+
+{{< details "Why Docker?" >}}
+**Docker** makes it easy to ship **all-in-one solution** with the runtime and dependencies.
+You don't have to worry about language-specific libraries or chrome installation.
+
+Also, Docker makes installation and update processes so simple, just one command!
+{{< /details >}}
+
+{{< details "Why Docker Compose?" >}}
+**Docker Compose** is a tool for defining and running Docker applications.
+With Compose, you use a YAML file to configure your application's services.
+Then, with a single command, you create and start all the services from your configuration.
+{{< /details >}}
+
+
 
 {{< callout context="note" title="Requirements" icon="outline/server" >}}
 - Clean **Ubuntu** or any **Linux-based** OS
@@ -65,20 +80,6 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 apt install docker-compose-plugin
 ```
-
-{{< details "Why Docker?" >}}
-**Docker** makes it easy to ship **all-in-one solution** with the runtime and dependencies.
-You don't have to worry about language-specific libraries or chrome installation.
-
-Also, Docker makes installation and update processes so simple, just one command!
-{{< /details >}}
-
-{{< details "Why Docker Compose?" >}}
-**Docker Compose** is a tool for defining and running Docker applications.
-With Compose, you use a YAML file to configure your application's services.
-Then, with a single command, you create and start all the services from your configuration.
-{{< /details >}}
-
 
 ### Pull Image
 
