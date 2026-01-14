@@ -67,6 +67,12 @@ url = "/docs/integrations"
 parent = "docs"
 
 [[main]]
+name = "➕ WAHA Plus"
+weight = 20
+url = "/docs/how-to/waha-plus"
+parent = "docs"
+
+[[main]]
 name = "Dashboard ->"
 weight = 97
 url = "/dashboard"
@@ -91,39 +97,6 @@ weight = 99
 url = "https://waha.devlike.pro/swagger/openapi.json"
 parent = "docs"
 
-[[main]]
-name = "➕ WAHA Plus"
-weight = 20
-identifier = "waha-plus"
-
-[[main]]
-name = "WAHA Plus"
-weight = 10
-url = "/docs/how-to/waha-plus"
-parent = "waha-plus"
-
-[[main]]
-name = "Patron Portal ->"
-weight = 20
-url = "https://portal.devlike.pro/"
-parent = "waha-plus"
-
-[[main]]
-name = "Get on Patreon ->"
-weight = 60
-url = "https://patreon.com/wa_http_api"
-parent = "waha-plus"
-
-[[main]]
-name = "Get on Boosty ->"
-weight = 50
-url = "https://boosty.to/wa-http-api"
-parent = "waha-plus"
-[[main]]
-name = "Get with Crypto ->"
-weight = 70
-url = "/support-us/#how-to-donate"
-parent = "waha-plus"
 
 [[main]]
 name = "📝 Blog"
