@@ -42,10 +42,11 @@ All options are containerized - choose based on **how you want to manage it**.
 ### Docker
 Use **Docker** and **Docker Compose** for consistent, portable deployments.
 
-- **Management**: CLI and Compose files
-- **Complexity**: Medium
-- **Maintenance**: Easy updates with image pulls and restarts
-- **Cons**: You own uptime, backups, and monitoring; updates are manual
+- **Management**: CLI and Compose files 🟠
+- **Complexity**: Medium 🟠
+- **Maintenance**: Command line to pull image and restart  🟠
+- **Flexibility**: Full control over configuration and scaling 🟢
+- **Cons**: You own uptime, backups, and monitoring; updates are manual 🔴
 
 {{< link-card title="👉 Deploy WAHA on Docker" href="/blog/waha-on-docker/" >}}
 
@@ -54,22 +55,13 @@ Use **Docker** and **Docker Compose** for consistent, portable deployments.
 
 Use an intuitive **EasyPanel** interface to deploy, manage, and provision SSL certificates.
 
-- **Management**: UI (point-and-click)
-- **Complexity**: Low
-- **Maintenance**: One-click updates, SSL, and monitoring from the panel
-- **Cons**: Not open source; paid for more than 3 projects; less flexible than raw Compose
+- **Management**: UI (point-and-click) 🟢
+- **Complexity**: Low 🟢
+- **Maintenance**: One-click updates, SSL, and monitoring from the panel 🟢
+- **Flexibility**: Less control over low-level settings 🟠
+- **Cons**: Not open source, paid for more than 3 projects 🔴
 
 {{< link-card title="👉 Deploy WAHA on EasyPanel" href="/blog/waha-on-easypanel/" >}}
-
-### Coolify
-
-Use **Coolify** (open source) to deploy and manage containers via a UI.
-
-- **Management**: UI (Git-based deploys and container management)
-- **Complexity**: Low to Medium
-- **Maintenance**: Updates from the dashboard, auto-deploys optional
-
-Docs coming soon.
 
 ### ChatWoot
 
