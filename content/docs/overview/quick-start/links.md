@@ -11,7 +11,7 @@
 {{< /card >}}
 {{< card title="Get Ready for Production" icon="outline/server" color="purple" >}}
 
-- [🔧 Installation Guide]({{< relref "/docs/how-to/install" >}})
+- [🔧 Install & Update]({{< relref "/docs/how-to/install" >}})
 - [🔒 Security]({{< relref "/docs/how-to/security" >}})
 - [🗄️ Storages]({{< relref "/docs/how-to/sessions" >}})
 - [➕ WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}})
