@@ -27,12 +27,11 @@ To make it **production-ready**, you need to configure a few more parameters to 
 
 ## Why Self-Host WAHA?
 
-Self-hosting WAHA gives you complete control over your privace:
+Self-hosting WAHA gives you complete control over your privacy:
 
--   **Data Privacy**: Keep all data on your own servers
--   **Customization**: Modify the platform to fit your specific needs
--   **Cost Control**: No per-agent pricing - scale as much as you need
--   **Integration**: Deep integration with your existing infrastructure
+- **Data Privacy**: Keep all data on your own servers
+- **Cost Control**: No per-session/per-message pricing - scale as much as you need
+- **Integration**: Deep integration with your existing infrastructure
 
 ## Deployment Options
 
