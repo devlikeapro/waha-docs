@@ -2,7 +2,7 @@
 title: "Deploy WAHA on Docker"
 description: "Run WAHA with Docker and Docker Compose."
 excerpt: "Run WAHA with Docker and Docker Compose."
-date: 2026-01-13T01:01:01+00:00
+date: 2026-01-10T01:01:01+00:00
 draft: false
 images: ["cover.png"]
 categories: ["Install"]
