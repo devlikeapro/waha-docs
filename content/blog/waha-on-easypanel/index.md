@@ -30,7 +30,8 @@ With WAHA on EasyPanel, you get:
 - **No DNS required up front** because EasyPanel provides built-in DNS.
 {{< /callout >}}
 
-## Step 1: Install EasyPanel
+## Install
+### Install EasyPanel
 
 Install [EasyPanel](https://easypanel.io/) on a fresh Linux server:
 
@@ -40,7 +41,7 @@ curl -sSL https://get.easypanel.io | sh
 
 Finish the web setup in your browser.
 
-## Step 2: Create Project
+### Create Project
 Now, we need to **create a project** :
 
 ![Create project](01-create-project.png)
@@ -49,7 +50,7 @@ Name it `myproject`:
 
 ![Project name](02-create-project-myproject.png)
 
-## Step 3: Create and Configure an App
+### Create an App
 Open `myproject`, add a new **Service**, and choose **App**:
 
 ![Create service](10-project-create-service-app.png)
@@ -58,7 +59,7 @@ Name it `waha`:
 
 ![Service name](11-project-create-service-app-name-waha.png)
 
-### Docker Image
+### App - Docker Image
 Open the **waha** service and click **Docker Image**:
 
 ![Docker image](12-service-waha-docker-image.png)
@@ -91,7 +92,7 @@ For
 to generate the command with the right version.
 
 
-### Environment Variables
+### App - Environment Variables
 Go to **Environment** and paste the environment variables below.
 
 ![Environment variables](13-service-waha-environment.png)
@@ -154,7 +155,7 @@ WHATSAPP_FILES_LIFETIME=0
 WHATSAPP_FILES_FOLDER=/app/.media
 ```
 
-### Storage
+### App - Storage
 
 Go to the **Storage** tab and add a **Volume Mount**:
 
@@ -184,14 +185,14 @@ On the server, you can find the files later in these folders:
 The pattern is `/etc/easypanel/projects/[project]/[service]/volumes/[volume]`
 {{< /callout >}}
 
-### Advanced
+### App - Advanced
 
 Go to the **Advanced** tab and **disable** **Zero Downtime** deployment.
 
 ![Advanced settings](17-service-waha-advanced-zero-downtime-off.png)
 
 
-### Deploy
+### App - Deploy
 Go to the **Deployments** tab and click **Deploy**.
 
 ![Deploy](19-service-waha-deployments-deploy.png)
@@ -200,7 +201,7 @@ When it finishes, click the **Open** icon to open WAHA.
 
 ![Open WAHA](20-service-waha-deployments-open-waha.png)
 
-## Step 4: Check WAHA
+### Check WAHA
 
 Use `admin` as **Username** and your generated `WAHA_DASHBOARD_PASSWORD` to log in:
 
@@ -227,7 +228,7 @@ Now you can **Create & Start** a new session:
 ![Scan QR](33-waha-dashboard-session-start-qr.png)
 
 
-## Update WAHA using EasyPanel
+## Update
 
 When you want to update the image, trigger a **Force Build** on the **Deployments** tab:
 
