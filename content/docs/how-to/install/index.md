@@ -35,10 +35,16 @@ Self-hosting WAHA gives you complete control over your privacy:
 
 ## Deployment Options
 
-WAHA supports multiple deployment methods to fit different infrastructure needs:
+WAHA supports multiple deployment methods to fit different infrastructure needs.
+All options are containerized - choose based on **how you want to manage it**.
 
 ### Docker
 Use **Docker** and **Docker Compose** for consistent, portable deployments.
+
+- **Management**: CLI and Compose files
+- **Best for**: teams with their own infrastructure and workflows, or a person that want full control
+- **Complexity**: Medium
+- **Maintenance**: Easy updates with image pulls and restarts
 
 [**👉 Deploy WAHA on Docker**]({{< relref "/blog/waha-on-docker" >}})
 
@@ -46,6 +52,11 @@ Use **Docker** and **Docker Compose** for consistent, portable deployments.
 ### EasyPanel
 
 Use an intuitive **EasyPanel** interface to deploy, manage, and provision SSL certificates.
+
+- **Management**: UI (point-and-click)
+- **Best for**: Anyone
+- **Complexity**: Low
+- **Maintenance**: One-click updates, SSL, and monitoring from the panel
 
 [**👉 Deploy WAHA on EasyPanel**]({{< relref "/blog/waha-on-easypanel" >}})
 
@@ -55,6 +66,11 @@ If you want to use
 [**🧩 Apps**]({{< relref "/docs/apps/about" >}}), such as
 [**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}),
 please follow the specific installation and configuration guides provided for each app:
+
+- **Management**: ChatWoot-managed app configuration
+- **Best for**: teams already running ChatWoot who want WAHA as part of their support stack
+- **Complexity**: Medium
+- **Maintenance**: Follow the app guide for updates and configuration changes
 
 [**👉 WhatsApp + ChatWoot - Installation Guide**]({{< relref "/blog/apps-chatwoot-1-install" >}})
 
