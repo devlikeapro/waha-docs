@@ -57,11 +57,16 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2026.1.2` - **NOWEB** - receive video note media
 
 **🧩 ChatWoot**
+- `2026.1.3` - **WEBJS** - fix delete message - fix #1769
+- `2026.1.3` - fix sending attachments with no caption in a group chat - fix #1808
+- `2026.1.3` - remove `@lid` when mention it - fix #1803
 - `2026.1.2` - support `@lid` mention directly - fix #1767
 - `2026.1.2` - support `@mention` and `@all` in group messages - fix #1767
 - `2026.1.2` - handle not found app - fix #1290 fix #1790
 
 🛠️ **Fixes**
+- `2026.1.3` - **WEBJS** - fix `api/sendText` - fix #1810
+- `2026.1.3` - **WEBJS** - get chats use `AUTHENTICATED` - fix #1782
 - `2026.1.2` - **WEBJS** - fix send media to channels - fix #1775
 - `2026.1.2` - **API** - allow `@all` with other mentions for groups (participants resolved anyway)
 - `2026.1.2` - **GOWS** - start sessions in the background
@@ -70,6 +75,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2026.1.2` - add `associatedChildMessage` to edited messages - fix #1773
 - `2026.1.1` - **GOWS** - make session `/stop` a bit more stable - fix #1749
 - `2026.1.1` - **WEBJS** - fix can not read properties of null - client - fix #1763 closes #1764
+
+⚙️ **Updates**
+- `2026.1.3` - **GOWS** - up engine `1.0.30`
+- `2026.1.3` - **NOWEB** - up proto `1031716404`
 
 {{< /autolink-prs >}}
 {{< /autolink-issues >}}
