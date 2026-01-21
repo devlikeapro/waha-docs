@@ -83,8 +83,10 @@ You can implement **Live Chat**, **Multiple Agents**, and more features using
 
 
 
-## Notes
-### Single Dashboard - Multiple Servers
+## FAQ
+
+### Connect Single Dashboard to Multiple Servers
+
 If you're running multiple servers 
 (like [**using sharding to handle 50+ sessions ->**]({{< relref "/blog/waha-scaling" >}}))
 you can run a dedicated WAHA just to have a single place where from you can manage all servers:
