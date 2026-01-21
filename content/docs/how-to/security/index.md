@@ -191,6 +191,12 @@ You can set up the following environment variables to enable HTTPS:
 
 {{< /details >}}
 
+## Api Keys API
+
+You can use `WAHA_API_KEY` as an api key, or you can create a new **admin** or *session** API Key using API detailed 
+below or using
+[**📊 Dashboard**]({{< relref "/docs/how-to/dashboard#api-keys" >}}).
+
 
 ## FAQ
 ### How To Disable Security?
