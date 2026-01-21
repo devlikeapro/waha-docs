@@ -18,6 +18,12 @@ POST /api/...
 }
 ```
 
+## Changelog Style Guide
+- Add entries under the correct version and section header (e.g. **🧩 ChatWoot**, **🧩 Apps**, **🛠️ Fixes**).
+- Use the format: `- `YYYY.M.N` - Area - change summary - fix #1234` (or `closes #1234` when applicable).
+- Keep the area short and consistent with the section; ChatWoot entries should not add extra tags like `[core]`, but with **PLUS** if mentioned
+- Link to docs only when it adds value, and keep the text concise.
+
 ## 🧩 Image Tools
 
 Agents can use local CLI tools for image manipulation:
