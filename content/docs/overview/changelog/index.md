@@ -60,6 +60,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2026.1.2` - **NOWEB** - receive video note media
 
 **🧩 ChatWoot**
+- `2026.1.4` - ChatWoot - add delay config - fix #1828
 - `2026.1.3` - **WEBJS** - fix delete message - fix #1769
 - `2026.1.3` - fix sending attachments with no caption in a group chat - fix #1808
 - `2026.1.3` - remove `@lid` when mention it - fix #1803

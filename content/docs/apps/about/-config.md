@@ -34,6 +34,10 @@ To use
 You can configure a background worker [http://localhost:3000/jobs](http://localhost:3000/jobs)
 
 - `WAHA_APPS_JOBS_CONCURRENCY=50` - Maximum number of jobs processed concurrently
+- `WAHA_APPS_JOBS_ATTEMPTS=3` - Number of retry attempts for failed jobs
+- `WAHA_APPS_JOBS_DELAY=0` - Delay before the job starts (in milliseconds)
+- `WAHA_APPS_JOBS_BACKOFF_TYPE=exponential` - Backoff strategy for retries
+- `WAHA_APPS_JOBS_BACKOFF_DELAY=1000` - Base backoff delay between retries (in milliseconds)
 - `WAHA_APPS_JOBS_REMOVE_ON_COMPLETE_AGE=259200` - Remove completed jobs after 3 days (in seconds)
 - `WAHA_APPS_JOBS_REMOVE_ON_COMPLETE_COUNT=1000` - Maximum number of completed jobs to keep
 - `WAHA_APPS_JOBS_REMOVE_ON_FAIL_AGE=2678400` - Remove failed jobs after 31 days (in seconds)
