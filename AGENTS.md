@@ -19,7 +19,13 @@ POST /api/...
 ```
 
 ## Changelog Style Guide
-- Add entries under the correct version and section header (e.g. **🧩 ChatWoot**, **🧩 Apps**, **🛠️ Fixes**).
+- Add entries under the correct version and section header. Available sections:
+  - **🆕 New** - new features, new APIs, and new events.
+  - **🧩 Apps** - new built-in apps, app APIs, and app config changes that are not ChatWoot-specific.
+  - **🧩 ChatWoot** - ChatWoot app features, behavior changes, and ChatWoot-specific config updates.
+  - **🛠️ Fixes** - bug fixes and behavior corrections across core, engines, apps, and integrations.
+  - **📊 Dashboard** - UI changes, translations, and dashboard-only features.
+  - **⚙️ Updates** - version bumps, engine upgrades, and dependency updates.
 - Use the format: `- `YYYY.M.N` - Area - change summary - fix #1234` (or `closes #1234` when applicable).
 - Keep the area short and consistent with the section; ChatWoot entries should not add extra tags like `[core]`, but with **PLUS** if mentioned
 - Link to docs only when it adds value, and keep the text concise.
