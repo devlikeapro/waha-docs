@@ -59,9 +59,6 @@ Follow this checklist whenever you need to create a square PNG cover that featur
    rm -f /tmp/twemoji.svg /tmp/emoji.png /tmp/bg.png
    ```
 
-7. **Validate locally**
-   - Run `hugo serve` and confirm the listing card shows the expected emoji cover without clipping or halos.
-
 > Tip: Keep the output filename lowercase (`cover.png`) so section listings can use a simple `{{ index .Params.images 0 }}` lookup.
 
 
