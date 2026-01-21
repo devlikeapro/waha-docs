@@ -152,3 +152,76 @@
     background-color: #162417;
   }
 }
+
+// How-to-use image strip
+.how-to-use-images {
+  overflow: hidden;
+}
+
+.how-to-use-images-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0;
+  padding: 0 0.5rem;
+  max-width: 100%;
+}
+
+.how-to-use-image {
+  height: clamp(260px, 30vw, 420px);
+  width: auto;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.how-to-use-image--dashboard {
+  z-index: 2;
+  transform: translateY(10%);
+}
+
+.how-to-use-image--qr {
+  z-index: 3;
+  margin: 0 -4vw;
+}
+
+.how-to-use-image--swagger {
+  z-index: 1;
+  transform: translateY(10%);
+}
+
+@media (max-width: 992px) {
+  .how-to-use-image {
+    height: clamp(220px, 40vw, 360px);
+  }
+
+  .how-to-use-image--qr {
+    margin: 0 -3vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .how-to-use-images {
+    display: none;
+  }
+
+  .how-to-use-images-row {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .how-to-use-image {
+    height: clamp(220px, 84vw, 400px);
+  }
+
+  .how-to-use-image--qr {
+    margin: 0;
+  }
+
+  .how-to-use-image--dashboard,
+  .how-to-use-image--swagger {
+    transform: none;
+  }
+}
