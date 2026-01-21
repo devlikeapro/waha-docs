@@ -3,6 +3,7 @@
 
 We **recommend** handling HTTPS termination with **a reverse proxy** like Nginx.
 
-Follow
-[**🔧 Install & Update - Nginx**]({{< relref "/docs/how-to/install#nginx" >}}) to set up **Nginx with Let's Encrypt**.
+Follow one of available
+[**multiple deployment methods**]({{< relref "/docs/how-to/install" >}})
+to set up **WAHA HTTPS**.
 {{< /callout >}}

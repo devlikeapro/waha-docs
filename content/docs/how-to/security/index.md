@@ -179,6 +179,7 @@ After you set up the security options - you should set up HTTPS to protect the d
 That's fine to run it on the **local network** without HTTPS, but for **the production** environment, HTTPS is a must-have.
 
 {{< include file="content/docs/how-to/security/use-nginx-for-https.md" >}}
+{{< details "DEPRECATED - built-in HTTPS" >}}
 
 WAHA supports HTTPS out of the box if you don't want to use a reverse proxy like Nginx (**using Nginx is recommended**)
 
@@ -187,6 +188,9 @@ You can set up the following environment variables to enable HTTPS:
 - `WAHA_HTTPS_PATH_KEY=/path/to/key.pem`: The path to the key file for HTTPS. By default `./.secrets/privkey.pem`
 - `WAHA_HTTPS_PATH_CERT=/path/to/cert.pem`: The path to the certificate file for HTTPS. By default `./.secrets/cert.pem`
 - `WAHA_HTTPS_PATH_CA=/path/to/ca.pem`: The path to the CA file for HTTPS. By default `./.secrets/chain.pem`
+
+{{< /details >}}
+
 
 ## FAQ
 ### How To Disable Security?

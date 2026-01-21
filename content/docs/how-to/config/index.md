@@ -264,12 +264,16 @@ Read more about [**🔒 Security**]({{< relref "/docs/how-to/security" >}})
 
 {{< include file="content/docs/how-to/security/use-nginx-for-https.md" >}}
 
+{{< details "DEPRECATED - built-in HTTPS" >}}
+
 Enable HTTPS directly in WAHA by setting the following environment variables:
 
 - `WAHA_HTTPS_ENABLED=true`: Set this variable to `true` to enable HTTPS. By default, it's `false`.
 - `WAHA_HTTPS_PATH_KEY=/path/to/key.pem`: The path to the key file for HTTPS. By default `./.secrets/privkey.pem`
 - `WAHA_HTTPS_PATH_CERT=/path/to/cert.pem`: The path to the certificate file for HTTPS. By default `./.secrets/cert.pem`
 - `WAHA_HTTPS_PATH_CA=/path/to/ca.pem`: The path to the CA file for HTTPS. By default `./.secrets/chain.pem`
+
+{{< /details >}}
 
 
 ## Security
