@@ -220,6 +220,48 @@ url = "/whatsapp-plus-csharp/"
 weight = 99
 
 [[main]]
+name = "🇬🇧 English (English)"
+parent="language"
+url="https://waha.devlike.pro/"
+weight = -70
+
+[[main]]
+name = "🇧🇷🇵🇹 Português (Portuguese)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=pt&hl=pt&u=https://waha.devlike.pro/&client=webapp"
+weight = -60
+
+[[main]]
+name = "🇪🇸 Español (Spanish)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=es&hl=es&u=https://waha.devlike.pro/&client=webapp"
+weight = -50
+
+[[main]]
+name = "🇮🇩 Bahasa Indonesia (Indonesian)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=id&hl=id&u=https://waha.devlike.pro/&client=webapp"
+weight = -40
+
+[[main]]
+name = "🇫🇷 Français (French)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=fr&hl=fr&u=https://waha.devlike.pro/&client=webapp"
+weight = -30
+
+[[main]]
+name = "🇩🇪 Deutsch (German)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=de&hl=de&u=https://waha.devlike.pro/&client=webapp"
+weight = -20
+
+[[main]]
+name = "🇨🇳 简体中文 (Chinese)"
+parent="language"
+url="https://translate.google.com/translate?sl=en&tl=zh-CN&hl=zh-CN&u=https://waha.devlike.pro/&client=webapp"
+weight = -10
+
+[[main]]
 name = "🇦🇪 العربية (Arabic)"
 parent="language"
 url="https://translate.google.com/translate?sl=en&tl=ar&hl=ar&u=https://waha.devlike.pro/&client=webapp"
@@ -230,24 +272,9 @@ parent="language"
 url="https://translate.google.com/translate?sl=en&tl=bn&hl=bn&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-name = "🇩🇪 Deutsch (German)"
+name = "🇮🇱 עברית (Hebrew)"
 parent="language"
-url="https://translate.google.com/translate?sl=en&tl=de&hl=de&u=https://waha.devlike.pro/&client=webapp"
-
-[[main]]
-name = "🇬🇧 English (English)"
-parent="language"
-url="https://waha.devlike.pro/"
-
-[[main]]
-name = "🇨🇳 简体中文 (Chinese)"
-parent="language"
-url="https://translate.google.com/translate?sl=en&tl=zh-CN&hl=zh-CN&u=https://waha.devlike.pro/&client=webapp"
-
-[[main]]
-name = "🇮🇷 فارسی (Persian)"
-parent="language"
-url="https://translate.google.com/translate?sl=en&tl=fa&hl=fa&u=https://waha.devlike.pro/&client=webapp"
+url="https://translate.google.com/translate?sl=en&tl=he&hl=he&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
 name = "🇮🇳 हिंदी (Hindi)"
@@ -255,24 +282,19 @@ parent="language"
 url="https://translate.google.com/translate?sl=en&tl=hi&hl=hi&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-name = "🇮🇩 Bahasa Indonesia (Indonesian)"
+name = "🇮🇷 فارسی (Persian)"
 parent="language"
-url="https://translate.google.com/translate?sl=en&tl=id&hl=id&u=https://waha.devlike.pro/&client=webapp"
+url="https://translate.google.com/translate?sl=en&tl=fa&hl=fa&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
-name = "🇧🇷🇵🇹 Português (Portuguese)"
+name = "🇵🇰 ਪੰਜਾਬੀ (Punjabi)"
 parent="language"
-url="https://translate.google.com/translate?sl=en&tl=pt&hl=pt&u=https://waha.devlike.pro/&client=webapp"
+url="https://translate.google.com/translate?sl=en&tl=pa&hl=pa&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
 name = "🇷🇺 Русский (Russian)"
 parent="language"
 url="https://translate.google.com/translate?sl=en&tl=ru&hl=ru&u=https://waha.devlike.pro/&client=webapp"
-
-[[main]]
-name = "🇪🇸 Español (Spanish)"
-parent="language"
-url="https://translate.google.com/translate?sl=en&tl=es&hl=es&u=https://waha.devlike.pro/&client=webapp"
 
 [[main]]
 name = "🇹🇷 Türkçe (Turkish)"
@@ -288,21 +310,6 @@ url="https://translate.google.com/translate?sl=en&tl=uk&hl=uk&u=https://waha.dev
 name = "🇵🇰 اردو (Urdu)"
 parent="language"
 url="https://translate.google.com/translate?sl=en&tl=ur&hl=ur&u=https://waha.devlike.pro/&client=webapp"
-
-[[main]]
-name = "🇵🇰 ਪੰਜਾਬੀ (Punjabi)"
-parent="language"
-url="https://translate.google.com/translate?sl=en&tl=pa&hl=pa&u=https://waha.devlike.pro/&client=webapp"
-
-[[main]]
-name = "🇫🇷 Français (French)"
-parent="language"
-url="https://translate.google.com/translate?sl=en&tl=fr&hl=fr&u=https://waha.devlike.pro/&client=webapp"
-
-[[main]]
-name = "🇮🇱 עברית (Hebrew)"
-parent="language"
-url="https://translate.google.com/translate?sl=en&tl=he&hl=he&u=https://waha.devlike.pro/&client=webapp"
 
 [[social]]
 name = "GitHub"
