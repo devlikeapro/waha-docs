@@ -55,7 +55,7 @@
           }
         },
         "tags": [
-          "🔑 Auth"
+          "📱 Pairing"
         ],
         "security": [
           {
@@ -95,7 +95,145 @@
           }
         },
         "tags": [
-          "🔑 Auth"
+          "📱 Pairing"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/keys": {
+      "post": {
+        "operationId": "ApiKeysController_create",
+        "summary": "Create a new API key",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiKeyRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiKeyDTO"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🔑 Api Keys"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "get": {
+        "operationId": "ApiKeysController_list",
+        "summary": "Get all API keys",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ApiKeyDTO"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🔑 Api Keys"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/keys/{id}": {
+      "put": {
+        "operationId": "ApiKeysController_update",
+        "summary": "Update an API key",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiKeyRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiKeyDTO"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🔑 Api Keys"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "ApiKeysController_delete",
+        "summary": "Delete an API key",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🔑 Api Keys"
         ],
         "security": [
           {
@@ -156,6 +294,11 @@
         "security": [
           {
             "api_key": []
+          },
+          {
+            "oauth2": [
+              "read:items"
+            ]
           }
         ]
       },
@@ -6147,6 +6290,7 @@
     "/api/screenshot": {
       "get": {
         "operationId": "ScreenshotController_screenshot",
+        "summary": "Get a screenshot of the current WhatsApp session (**WEBJS** only)",
         "parameters": [
           {
             "name": "session",
@@ -6181,7 +6325,7 @@
           }
         },
         "tags": [
-          "🖼️ Screenshot"
+          "📱 Pairing"
         ],
         "security": [
           {
@@ -7017,7 +7161,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2025.12.1",
+    "version": "2026.1.4",
     "contact": {}
   },
   "tags": [
@@ -7026,28 +7170,20 @@
       "description": "Control WhatsApp sessions (accounts)"
     },
     {
-      "name": "🧩 Apps",
-      "description": "Applications (built-in integrations)"
-    },
-    {
-      "name": "🔑 Auth",
-      "description": "Authentication"
+      "name": "📱 Pairing",
+      "description": "Pair a session with WhatsApp on your phone."
     },
     {
       "name": "🆔 Profile",
       "description": "Your profile information"
     },
     {
-      "name": "🖼️ Screenshot",
-      "description": "Get screenshot of WhatsApp and show QR code"
-    },
-    {
       "name": "📤 Chatting",
       "description": "Chatting methods"
     },
     {
-      "name": "📞 Calls",
-      "description": "Call handling methods"
+      "name": "✅ Presence",
+      "description": "Presence information"
     },
     {
       "name": "📢 Channels",
@@ -7062,6 +7198,10 @@
       "description": "Chats methods"
     },
     {
+      "name": "🔑 Api Keys",
+      "description": "API Keys management"
+    },
+    {
       "name": "👤 Contacts",
       "description": "Contacts methods.<br>\n                Use phone number (without +) or phone number and `@c.us` at the end as `contactId`.<br>\n                'E.g: `12312312310` OR `12312312310@c.us`<br>"
     },
@@ -7070,8 +7210,8 @@
       "description": "Groups methods.<br>"
     },
     {
-      "name": "✅ Presence",
-      "description": "Presence information"
+      "name": "📞 Calls",
+      "description": "Call handling methods"
     },
     {
       "name": "📅 Events",
@@ -7084,6 +7224,10 @@
     {
       "name": "🖼️ Media",
       "description": "Media methods"
+    },
+    {
+      "name": "🧩 Apps",
+      "description": "Applications (built-in integrations)"
     },
     {
       "name": "🔍 Observability",
@@ -7174,6 +7318,64 @@
         },
         "required": [
           "phoneNumber"
+        ]
+      },
+      "ApiKeyRequest": {
+        "type": "object",
+        "properties": {
+          "isAdmin": {
+            "type": "boolean",
+            "default": false,
+            "example": false
+          },
+          "session": {
+            "type": "string",
+            "nullable": true,
+            "default": null,
+            "example": "default"
+          },
+          "isActive": {
+            "type": "boolean",
+            "default": true,
+            "example": true
+          }
+        },
+        "required": [
+          "isAdmin",
+          "session",
+          "isActive"
+        ]
+      },
+      "ApiKeyDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "key_id_00000000000000000000000000"
+          },
+          "key": {
+            "type": "string",
+            "example": "key_11111111111AAAAAAAAAAAAAAAAAAAAA"
+          },
+          "isActive": {
+            "type": "boolean",
+            "example": true
+          },
+          "isAdmin": {
+            "type": "boolean",
+            "example": false
+          },
+          "session": {
+            "type": "string",
+            "nullable": true,
+            "example": "default"
+          }
+        },
+        "required": [
+          "id",
+          "key",
+          "isActive",
+          "isAdmin"
         ]
       },
       "ChatWootCommandsConfig": {
@@ -7424,6 +7626,17 @@
           }
         }
       },
+      "ClientSessionConfig": {
+        "type": "object",
+        "properties": {
+          "deviceName": {
+            "type": "string"
+          },
+          "browserName": {
+            "type": "string"
+          }
+        }
+      },
       "NowebStoreConfig": {
         "type": "object",
         "properties": {
@@ -7601,6 +7814,18 @@
               }
             ]
           },
+          "client": {
+            "description": "How connected session renders in device - in format 'Browser (Device)' - Firefox (MacOS)",
+            "example": {
+              "browserName": "Firefox",
+              "deviceName": "MacOS"
+            },
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ClientSessionConfig"
+              }
+            ]
+          },
           "noweb": {
             "example": {
               "store": {
@@ -7691,8 +7916,6 @@
         "properties": {
           "name": {
             "type": "string",
-            "maxLength": 54,
-            "pattern": "/^[a-zA-Z0-9_-]*$/",
             "example": "default",
             "description": "Session name (id)"
           },
@@ -10359,13 +10582,18 @@
           "browser": {
             "type": "string",
             "example": "/usr/path/to/bin/google-chrome"
+          },
+          "platform": {
+            "type": "string",
+            "example": "linux/x86"
           }
         },
         "required": [
           "version",
           "engine",
           "tier",
-          "browser"
+          "browser",
+          "platform"
         ]
       },
       "WorkerInfo": {
@@ -10552,6 +10780,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -10642,6 +10871,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -10810,6 +11040,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -10900,6 +11131,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -11041,6 +11273,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -11068,7 +11301,98 @@
             ],
             "type": "object",
             "default": "message.ack",
-            "description": "Receive events when server or recipient gets the message, read or played it."
+            "description": "Receive events when server or recipient gets the message, read or played it (contacts only)."
+          },
+          "payload": {
+            "$ref": "#/components/schemas/WAMessageAckBody"
+          },
+          "me": {
+            "$ref": "#/components/schemas/MeInfo"
+          },
+          "environment": {
+            "$ref": "#/components/schemas/WAHAEnvironment"
+          }
+        },
+        "required": [
+          "id",
+          "timestamp",
+          "session",
+          "engine",
+          "event",
+          "payload",
+          "environment"
+        ]
+      },
+      "WAHAWebhookMessageAckGroup": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "evt_01aaaaaaaaaaaaaaaaaaaaaaaa",
+            "description": "Unique identifier for the event - lower case ULID format. https://github.com/ulid/spec"
+          },
+          "timestamp": {
+            "type": "number",
+            "example": 1634567890123,
+            "description": "Unix timestamp (ms) for when the event was created."
+          },
+          "session": {
+            "type": "string",
+            "example": "default"
+          },
+          "metadata": {
+            "type": "object",
+            "example": {
+              "user.id": "123",
+              "user.email": "email@example.com"
+            },
+            "description": "Metadata for the session."
+          },
+          "engine": {
+            "enum": [
+              "WEBJS",
+              "NOWEB",
+              "GOWS"
+            ],
+            "type": "string",
+            "example": "WEBJS"
+          },
+          "event": {
+            "enum": [
+              "session.status",
+              "message",
+              "message.reaction",
+              "message.any",
+              "message.ack",
+              "message.ack.group",
+              "message.waiting",
+              "message.revoked",
+              "message.edited",
+              "state.change",
+              "group.join",
+              "group.leave",
+              "group.v2.join",
+              "group.v2.leave",
+              "group.v2.update",
+              "group.v2.participants",
+              "presence.update",
+              "poll.vote",
+              "poll.vote.failed",
+              "chat.archive",
+              "call.received",
+              "call.accepted",
+              "call.rejected",
+              "label.upsert",
+              "label.deleted",
+              "label.chat.added",
+              "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
+              "engine.event"
+            ],
+            "type": "object",
+            "default": "message.ack.group",
+            "description": "Receive events when participants in a group read or play messages."
           },
           "payload": {
             "$ref": "#/components/schemas/WAMessageAckBody"
@@ -11150,6 +11474,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -11365,6 +11690,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -11525,6 +11851,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -11648,6 +11975,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -11759,6 +12087,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -11888,6 +12217,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -11978,6 +12308,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -12159,6 +12490,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -12249,6 +12581,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -12359,6 +12692,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -12482,6 +12816,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -12572,6 +12907,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -12662,6 +12998,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -12752,6 +13089,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -12842,6 +13180,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -12960,6 +13299,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -13050,6 +13390,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -13227,6 +13568,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -13317,6 +13659,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -13422,6 +13765,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -13512,6 +13856,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -13603,6 +13948,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -13694,6 +14040,7 @@
               "message.reaction",
               "message.any",
               "message.ack",
+              "message.ack.group",
               "message.waiting",
               "message.revoked",
               "message.edited",
@@ -13833,13 +14180,33 @@
     },
     "message.ack": {
       "post": {
-        "summary": "Receive events when server or recipient gets the message, read or played it.",
+        "summary": "Receive events when server or recipient gets the message, read or played it (contacts only).",
         "deprecated": false,
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/WAHAWebhookMessageAck"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Return a 200 status to indicate that the data was received successfully"
+          }
+        }
+      }
+    },
+    "message.ack.group": {
+      "post": {
+        "summary": "Receive events when participants in a group read or play messages.",
+        "deprecated": false,
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WAHAWebhookMessageAckGroup"
               }
             }
           }
