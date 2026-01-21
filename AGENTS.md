@@ -1,5 +1,23 @@
 # Agent Playbook
 
+## Related Source Code
+You can check the listed folders to get more context if you need
+- WAHA - `../whatsapp-http-api`
+
+## API Documentation
+- Before creating API documentation - check the current style for some API.
+- Document body and response with title and `jsonc`
+- Use `http request` for API methods
+
+```http request
+POST /api/...
+```
+
+```jsonc { title="Body" }
+{
+}
+```
+
 ## 🧩 Image Tools
 
 Agents can use local CLI tools for image manipulation:

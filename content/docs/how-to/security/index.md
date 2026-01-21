@@ -191,11 +191,96 @@ You can set up the following environment variables to enable HTTPS:
 
 {{< /details >}}
 
-## Api Keys API
+## Keys API
 
-You can use `WAHA_API_KEY` as an api key, or you can create a new **admin** or *session** API Key using API detailed 
-below or using
-[**📊 Dashboard**]({{< relref "/docs/how-to/dashboard#api-keys" >}}).
+You can use `WAHA_API_KEY` as an API key, or you can create a new **admin** or **session** API Key using 
+the 
+[**🔒 Keys API**]({{< relref "/docs/how-to/security#keys-api" >}})
+or the [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard#api-keys" >}}).
+
+Admin keys can access all sessions. Session keys are scoped to a single session via the `session` field.
+
+### List API keys
+
+```http request
+GET /api/keys
+```
+
+```jsonc { title="Response" }
+[
+  {
+    "id": "key_id_00000000000000000000000000",
+    "key": "key_11111111111AAAAAAAAAAAAAAAAAAAAA",
+    "isActive": true,
+    "isAdmin": false,
+    "session": "default"
+  }
+]
+```
+
+### Create API key
+
+```http request
+POST /api/keys
+```
+
+Admin key:
+```jsonc { title="Body" }
+{
+  "isAdmin": true,
+  "session": null,
+  "isActive": true
+}
+```
+
+Session key:
+```jsonc { title="Body" }
+{
+  "isAdmin": false,
+  "session": "default",
+  "isActive": true
+}
+```
+
+```jsonc { title="Response" }
+{
+  "id": "key_id_00000000000000000000000000",
+  "key": "key_11111111111AAAAAAAAAAAAAAAAAAAAA",
+  "isActive": true,
+  "isAdmin": false,
+  "session": "default"
+}
+```
+
+### Update API key
+
+```http request
+PUT /api/keys/{id}
+```
+
+```jsonc { title="Body" }
+{
+  "isAdmin": false,
+  "session": "default",
+  "isActive": false
+}
+```
+
+```jsonc { title="Response" }
+{
+  "id": "key_id_00000000000000000000000000",
+  "key": "key_11111111111AAAAAAAAAAAAAAAAAAAAA",
+  "isActive": false,
+  "isAdmin": false,
+  "session": "default"
+}
+```
+
+### Delete API key
+
+```http request
+DELETE /api/keys/{id}
+```
 
 
 ## FAQ

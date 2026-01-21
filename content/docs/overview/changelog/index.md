@@ -53,6 +53,9 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2026.1.4` - **API** - per-session API Keys - fix #387, fix #937, fix #1642, fix #1772
+  - [**📊 Dashboard - API Keys**]({{< relref "/docs/how-to/dashboard#api-keys" >}})
+  - [**🔒 Security - Keys API**]({{< relref "/docs/how-to/security#keys-api" >}})
 - `2026.1.2` - **GOWS** - receive and send video notes - fix #1798
 - `2026.1.2` - **NOWEB** - receive video note media
 
