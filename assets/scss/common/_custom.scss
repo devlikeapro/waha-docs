@@ -183,6 +183,46 @@
   }
 }
 
+@media (max-width: 900px) {
+  .how-to-use-section {
+    .how-to-use-cards {
+      flex-wrap: wrap;
+    }
+
+    .how-to-use-card {
+      flex: 1 1 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .how-to-use-card .d-flex {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .how-to-use-card .text-start {
+      text-align: center;
+    }
+
+    .how-to-use-card .d-flex > div {
+      width: 100%;
+    }
+
+    .how-to-use-card .d-flex > div:first-child {
+      display: flex;
+      justify-content: center;
+    }
+
+    .how-to-use-card .d-flex > div:last-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
 .home-hero-box {
   position: relative;
   border-radius: 1.25rem;
