@@ -158,6 +158,16 @@
   overflow: hidden;
 }
 
+.how-to-use-images-home {
+  .how-to-use-images {
+    overflow: visible;
+  }
+
+  .how-to-use-images .container {
+    max-width: 100%;
+  }
+}
+
 .how-to-use-images-row {
   display: flex;
   align-items: flex-end;
