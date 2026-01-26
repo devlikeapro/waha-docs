@@ -158,6 +158,31 @@
   overflow: hidden;
 }
 
+.how-to-use-section {
+  .container {
+    max-width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .how-to-use-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .how-to-use-card {
+    flex: 0 1 25rem;
+    //max-width: 20rem;
+    min-width: 0;
+    margin: 0;
+  }
+}
+
 .how-to-use-images-home {
   .how-to-use-images {
     overflow: visible;
