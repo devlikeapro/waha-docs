@@ -8,28 +8,28 @@
 
 <section class='section container-fluid mt-n3 pb-3'>
     <div class='row justify-content-center'>
-        <div class='col-lg-12 text-center' data-aos="fade-up">
-            <h1 class='mt-0'>WAHA</h1>
-        </div>
-        <div class='col-lg-9 col-xl-9 text-center' data-aos="fade-up">
-            <div class='mb-4'>
-                <img src='/images/logo.svg' title='WhatsApp API' alt='logo' style='border-radius: 50%; width: 10rem'/>
-            </div>
-            <p class='lead'>{{ .Params.lead | safeHTML }}</p>
+        <div class='col-12 text-center' data-aos="fade-up">
+            <div class='home-hero-box'>
+                <h1 class='mt-0'>WAHA</h1>
+                <div class='mb-4'>
+                    <img src='/images/logo.svg' title='WhatsApp API' alt='logo' style='border-radius: 50%; width: 10rem'/>
+                </div>
+                <p class='lead'>{{ .Params.lead | safeHTML }}</p>
 
-            <a class='btn btn-primary btn-lg px-4 mb-2'
-               href='/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}overview/introduction/'
-               role='button'>Get Started</a>
-            <p class='meta'>
-                <a href='https://github.com/devlikeapro/waha'>Source code in GitHub.</a>
-                <br/>
-                <a href='https://hub.docker.com/r/devlikeapro/waha'>
-                    <img alt='Docker Pulls' src='https://img.shields.io/docker/pulls/devlikeapro/waha'>
-                </a>
-                <a href='{{ relref . "/docs/overview/changelog" }}'>
-                    <img alt='GitHub Release' src='https://img.shields.io/github/v/release/devlikeapro/waha'>
-                </a>
-            </p>
+                <a class='btn btn-primary btn-lg px-4 mb-2'
+                   href='/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}overview/introduction/'
+                   role='button'>Get Started</a>
+                <p class='meta'>
+                    <a href='https://github.com/devlikeapro/waha'>Source code in GitHub.</a>
+                    <br/>
+                    <a href='https://hub.docker.com/r/devlikeapro/waha'>
+                        <img alt='Docker Pulls' src='https://img.shields.io/docker/pulls/devlikeapro/waha'>
+                    </a>
+                    <a href='{{ relref . "/docs/overview/changelog" }}'>
+                        <img alt='GitHub Release' src='https://img.shields.io/github/v/release/devlikeapro/waha'>
+                    </a>
+                </p>
+            </div>
         </div>
     </div>
 </section>

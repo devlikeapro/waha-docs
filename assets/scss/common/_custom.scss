@@ -183,6 +183,37 @@
   }
 }
 
+.home-hero-box {
+  position: relative;
+  border-radius: 1.25rem;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.home-hero-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #4aae20;
+  border-radius: inherit;
+  background: #f4fbf1;
+  box-shadow: 0 0 1.5rem rgba(74, 174, 32, 0.12);
+  z-index: 1;
+}
+
+.home-hero-box > * {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 576px) {
+  .home-hero-box {
+    padding: 1.5rem;
+  }
+}
+
 .how-to-use-images-home {
   .how-to-use-images {
     overflow: visible;
