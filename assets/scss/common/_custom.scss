@@ -163,7 +163,7 @@
   align-items: flex-end;
   justify-content: center;
   gap: 0;
-  padding: 0 0.5rem;
+  padding: 0 0.5rem clamp(2rem, 8vw, 6rem);
   max-width: 100%;
 }
 
@@ -178,17 +178,16 @@
 
 .how-to-use-image--dashboard {
   z-index: 2;
-  transform: translateY(10%);
 }
 
 .how-to-use-image--qr {
   z-index: 3;
   margin: 0 -4vw;
+  transform: translateY(20%);
 }
 
 .how-to-use-image--swagger {
   z-index: 1;
-  transform: translateY(10%);
 }
 
 @media (max-width: 992px) {
