@@ -53,6 +53,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2026.1.4` - **Webhook** - add `worker.id` to payload - fix #1840
 - `2026.1.4` - **API** - per-session API Keys - fix #387, fix #937, fix #1642, fix #1772
   - [**📊 Dashboard - API Keys**]({{< relref "/docs/how-to/dashboard#api-keys" >}})
   - [**🔒 Security - Keys API**]({{< relref "/docs/how-to/security#keys-api" >}})
@@ -60,6 +61,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2026.1.2` - **NOWEB** - receive video note media
 
 **🧩 ChatWoot**
+- `2026.1.4` - ChatWoot - use chat id from incoming message to support `@lid` and `@c.us`
 - `2026.1.4` - ChatWoot - add delay config - fix #1828
 - `2026.1.3` - **WEBJS** - fix delete message - fix #1769
 - `2026.1.3` - fix sending attachments with no caption in a group chat - fix #1808
@@ -69,6 +71,10 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2026.1.2` - handle not found app - fix #1290 fix #1790
 
 🛠️ **Fixes**
+- `2026.1.4` - **WEBJS** - fix 500 error on `getChats` - fix #1834
+- `2026.1.4` - **GOWS** - send data to subscribers in `setImmediate`
+- `2026.1.4` - **GOWS** - increase events to 1000 in buffer - fix #1837
+- `2026.1.4` - **API** - optimize session list API
 - `2026.1.3` - **WEBJS** - fix `api/sendText` - fix #1810
 - `2026.1.3` - **WEBJS** - get chats use `AUTHENTICATED` - fix #1782
 - `2026.1.2` - **WEBJS** - fix send media to channels - fix #1775
@@ -81,6 +87,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2026.1.1` - **WEBJS** - fix can not read properties of null - client - fix #1763 closes #1764
 
 ⚙️ **Updates**
+- `2026.1.4` - **NOWEB** - up engine
+- `2026.1.4` - **GOWS** - up engine
 - `2026.1.3` - **GOWS** - up engine `1.0.30`
 - `2026.1.3` - **NOWEB** - up proto `1031716404`
 
