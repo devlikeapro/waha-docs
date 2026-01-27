@@ -307,13 +307,7 @@
 }
 
 @media (max-width: 576px) {
-  .how-to-use-images {
-    display: none;
-  }
-
   .how-to-use-images-row {
-    flex-direction: column;
-    align-items: center;
     padding: 0;
   }
 
@@ -322,11 +316,6 @@
   }
 
   .how-to-use-image--qr {
-    margin: 0;
-  }
-
-  .how-to-use-image--dashboard,
-  .how-to-use-image--swagger {
-    transform: none;
+    margin: 0 -75px;
   }
 }
