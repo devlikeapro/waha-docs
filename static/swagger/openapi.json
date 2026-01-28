@@ -7673,6 +7673,43 @@
           "markOnline"
         ]
       },
+      "GowsStorageConfig": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "boolean",
+            "nullable": true,
+            "description": "Store messages locally. Set to false to disable; omit or null to keep enabled.",
+            "example": true
+          },
+          "groups": {
+            "type": "boolean",
+            "nullable": true,
+            "description": "Store groups locally. Set to false to disable; omit or null to keep enabled.",
+            "example": true
+          },
+          "chats": {
+            "type": "boolean",
+            "nullable": true,
+            "description": "Store chats locally. Set to false to disable; omit or null to keep enabled.",
+            "example": true
+          },
+          "labels": {
+            "type": "boolean",
+            "nullable": true,
+            "description": "Store labels locally. Set to false to disable; omit or null to keep enabled.",
+            "example": true
+          }
+        }
+      },
+      "GowsConfig": {
+        "type": "object",
+        "properties": {
+          "storage": {
+            "$ref": "#/components/schemas/GowsStorageConfig"
+          }
+        }
+      },
       "WebjsConfig": {
         "type": "object",
         "properties": {
@@ -7836,6 +7873,21 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/NowebConfig"
+              }
+            ]
+          },
+          "gows": {
+            "example": {
+              "storage": {
+                "messages": true,
+                "groups": true,
+                "chats": true,
+                "labels": true
+              }
+            },
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GowsConfig"
               }
             ]
           },
@@ -10586,6 +10638,16 @@
           "platform": {
             "type": "string",
             "example": "linux/x86"
+          },
+          "worker": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "required": true,
+                "type": "string",
+                "nullable": true
+              }
+            }
           }
         },
         "required": [
@@ -10593,7 +10655,8 @@
           "engine",
           "tier",
           "browser",
-          "platform"
+          "platform",
+          "worker"
         ]
       },
       "WorkerInfo": {
