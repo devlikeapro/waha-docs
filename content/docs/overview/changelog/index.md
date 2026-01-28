@@ -53,6 +53,7 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2026.1.5` - **GOWS** - disable storage - fix #823
 - `2026.1.4` - **Webhook** - add `worker.id` to payload - fix #1840
 - `2026.1.4` - **API** - per-session API Keys - fix #387, fix #937, fix #1642, fix #1772
   - [**📊 Dashboard - API Keys**]({{< relref "/docs/how-to/dashboard#api-keys" >}})
@@ -71,6 +72,8 @@ Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) pag
 - `2026.1.2` - handle not found app - fix #1290 fix #1790
 
 🛠️ **Fixes**
+- `2026.1.5` - **WEBJS** - no incoming messages - fix #1855 
+- `2026.1.5` - **WEBJS** - error in `/chats` - fix #1856
 - `2026.1.4` - **WEBJS** - fix 500 error on `getChats` - fix #1834
 - `2026.1.4` - **GOWS** - send data to subscribers in `setImmediate`
 - `2026.1.4` - **GOWS** - increase events to 1000 in buffer - fix #1837
