@@ -24,6 +24,9 @@ docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=GOWS" d
 docker run -it -e "WHATSAPP_DEFAULT_ENGINE=GOWS" devlikeapro/waha
 ```
 
+## Session Config
+{{< include file="content/docs/engines/webjs/-env-config.md" >}}
+
 ## Configuration
 {{< include file="content/docs/engines/webjs/-env-config.md" >}}
 

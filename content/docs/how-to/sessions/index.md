@@ -496,6 +496,16 @@ app_2e1005a40ef74edda01ffb1ade877fd3
 
 {{< include file="content/docs/engines/webjs/-session-config.md" >}}
 
+### GOWS
+
+<div class="text-center">
+
+![Dashboard - GOWS](session-config-gows.png)
+
+</div>
+
+{{< include file="content/docs/engines/gows/-session-config.md" >}}
+
 ### NOWEB
 <div class="text-center">
 
