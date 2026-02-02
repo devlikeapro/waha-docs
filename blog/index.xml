@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 13 Jan 2026 01:01:01 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploy WAHA on Coolify</title><link>/blog/waha-on-coolify/</link><pubDate>Tue, 13 Jan 2026 01:01:01 +0000</pubDate><guid>/blog/waha-on-coolify/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 31 Jan 2026 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2026.1 - Per-Session API Keys, GOWS Storage Toggle</title><link>/blog/waha-2026-1/</link><pubDate>Sat, 31 Jan 2026 08:48:45 +0000</pubDate><guid>/blog/waha-2026-1/</guid><description>&lt;h2 id="-per-session-api-keys">🔐 Per-Session API Keys&lt;/h2>
+&lt;p>You can now scope API keys to specific sessions instead of the whole server. This helps isolate tenants, rotate access, and keep automation scoped to the right WhatsApp session.&lt;/p></description></item><item><title>Deploy WAHA on Coolify</title><link>/blog/waha-on-coolify/</link><pubDate>Tue, 13 Jan 2026 01:01:01 +0000</pubDate><guid>/blog/waha-on-coolify/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>With WAHA on &lt;a href="https://coolify.io/">Coolify&lt;/a>, you get:&lt;/p>
 &lt;ul>
 &lt;li>Free Self-hosted Coolify&lt;/li>
@@ -109,5 +110,4 @@ You don&amp;rsquo;t have to worry about language-specific libraries or chrome in
 &lt;/svg>
  &lt;div class="callout-content">
  &lt;div class="callout-title">
- &lt;p>Disclaimer&lt;/p></description></item><item><title>WAHA 2025.9 - ChatWoot 1.1, NOWEB 7.0-rc, Sessions Filters</title><link>/blog/waha-2025-9/</link><pubDate>Tue, 30 Sep 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-9/</guid><description>&lt;h2 id="-chatwoot-11">🧩 ChatWoot 1.1&lt;/h2>
-&lt;p>ChatWoot integration graduates to &lt;strong>v1.1&lt;/strong>, adding conversation control, CSAT surveys, richer language templates, and safer contact handling.&lt;/p></description></item></channel></rss>
+ &lt;p>Disclaimer&lt;/p></description></item></channel></rss>
