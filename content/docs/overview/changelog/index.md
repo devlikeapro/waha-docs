@@ -57,6 +57,26 @@ Latest Version:
 
 👉🏻 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
+### 2026.2
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🛠️ **Fixes**
+- `2026.2.1` - **WEBJS** - fix GET groups internal error - fix #1860
+- `2026.2.1` - **WEBJS** - fix send message to channel - fix #1863
+- `2026.2.1` - **WEBJS** - fix contact update - fix #1839
+- `2026.2.1` - **WEBJS** - fix get groups count - fix #1879
+- `2026.2.1` - **WEBJS** - fix get groups failed - fix #1873
+- `2026.2.1` - **API** - add `chatId` param to `POST /api/{session}/presence` - fix #1842
+- `2026.2.1` - **NOWEB** - fix send image using proxy - fix #1859
+- `2026.2.1` - **GOWS** - exclude `AppState` events
+
+⚙️ **Updates**
+- `2026.2.1` - **WEBJS** - up engine
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2026.1
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
