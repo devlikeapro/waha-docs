@@ -1,5 +1,8 @@
 # Agent Playbook
 
+## General Rules
+- When you mention an engine - use bold link - **GOWS** or **NOWEB**
+
 ## Related Source Code
 You can check the listed folders to get more context if you need
 - WAHA - `../whatsapp-http-api`
