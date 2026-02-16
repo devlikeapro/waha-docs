@@ -35,7 +35,7 @@ POST /api/...
 
 ## 🧩 Image Tools
 
-Agents can use local CLI tools for image manipulation:
+Agents can use local CLI tools for image manipulation:d
 
 - **ImageMagick** (`magick`, `convert`, `mogrify`, `composite`, `montage`)
 - **GraphicsMagick** (`gm`)

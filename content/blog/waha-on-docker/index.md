@@ -96,7 +96,54 @@ wget -O docker-compose.yaml https://raw.githubusercontent.com/devlikeapro/waha/r
 touch .env
 ```
 
-3. Generate a `.env` file that we'll use in the next step for credentials:
+3. Pick the image in `docker-compose.yaml` before running `init-waha`:
+
+{{< tabs "docker-compose-image-core-plus" >}}
+{{< tab "WAHA Core" >}}
+If you don't have [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}), make sure you have this image in `docker-compose.yaml`:
+
+```yaml {title="docker-compose.yaml" hl_lines=4}
+services:
+  waha:
+    restart: always
+    image: devlikeapro/waha
+```
+{{< /tab >}}
+
+{{< tab "➕ WAHA Plus" >}}
+If you have [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}), make sure you have this image in `docker-compose.yaml`:
+
+```yaml {title="docker-compose.yaml" hl_lines=4}
+services:
+  waha:
+    restart: always
+    image: devlikeapro/waha-plus
+```
+{{< /tab >}}
+
+{{< tab "WAHA (ARM)" >}}
+If you're using ARM (Apple Silicon, Raspberry Pi, etc.), make sure you have this image in `docker-compose.yaml`:
+
+```yaml {title="docker-compose.yaml" hl_lines=4}
+services:
+  waha:
+    restart: always
+    image: devlikeapro/waha:arm
+```
+
+If you have [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) on ARM, use:
+```yaml {title="docker-compose.yaml" hl_lines=4}
+services:
+  waha:
+    restart: always
+    image: devlikeapro/waha-plus:arm
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+<hr>
+
+4. Generate a `.env` file that we'll use in the next step for credentials:
 
 ```bash {title="Init WAHA"}
 docker compose run --no-deps -v "$(pwd)":/app/env waha init-waha /app/env
@@ -110,7 +157,7 @@ Remember these values (you can always check the `.env` file if you forget them):
 
 👉 You can change variables to any values, but use **long random strings** (like **UUIDv4**)
 
-4. Tweak the `.env` and `docker-compose.yaml` according to your preferences. 
+5. Tweak the `.env` and `docker-compose.yaml` according to your preferences. 
 Refer to the available environment variables in [**⚙️ Configuration**]({{< relref "/docs/how-to/config" >}}).
 
 ```bash
@@ -137,12 +184,12 @@ uuidgen | tr -d '-'
 {{< /callout >}}
 
 
-4. Get the service up and running.
+6. Get the service up and running.
 ```bash
 docker compose up -d
 ```
 
-5. Your WAHA installation is complete. 
+7. Your WAHA installation is complete. 
 Please note that the **containers are not exposed to the internet**, and they only bind to the **localhost**. 
 Set up something like Nginx or any other proxy server to proxy the requests to the container.
 
