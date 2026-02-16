@@ -217,8 +217,8 @@ GET /api/{session}/chats/{chatId}/messages?limit=10
 
 Available parameters:
 - `downloadMedia=true` - download media files (images, files) or not
-- `chatId=123@c.us` - chatId, phone number 
-  - `chatId=all` - get messages from all chats (works on [**NOWEB**]({{< relref "/docs/how-to/engines#noweb" >}}) engine only)
+- `chatId=123@c.us` - chatId, phone number or `all`
+  - `chatId=all` works for getting messages from **all chats** on [**GOWS**]({{< relref "/docs/engines/gows" >}}) and [**NOWEB**]({{< relref "/docs/engines/noweb" >}}).
 - `limit=100` - limit the number of chats to return
 - `offset=0` - skip the number of chats from the start
 - `filter.timestamp.lte=1727745026` - filter messages by timestamp less than or equal to `1727745026`
@@ -294,8 +294,20 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 ```
 
 - `chatId` - in format `123123123@c.us`
-- `messageId` - must be in format `{true|false}_213213@c.us_AAAAAAA`)
+  - `chatId=all` works for getting messages from **all chats** on [**GOWS**]({{< relref "/docs/engines/gows" >}}) and [**NOWEB**]({{< relref "/docs/engines/noweb" >}}).
+- `messageId` - supports both formats:
+  - full format: `{true|false}_213213@c.us_AAAAAAA` (any engine)
+  - plain message id: `3EB0965B123D06E0B70741` (**GOWS** and **NOWEB**)
 - `downloadMedia` - download media files (images, files) or not
+
+{{< callout context="note" icon="outline/hand-finger-right" >}}
+Combine `all` and **raw message id** in **GOWS** and **NOWEB** engine to fetch message by id:
+
+```bash {title="Get message by id in all chats (GOWS and NOWEB)"}
+GET /api/{session}/chats/all/messages/3EB0965B123D06E0B70741
+```
+
+{{< /callout >}}
 
 ### Pin message
 
