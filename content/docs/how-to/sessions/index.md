@@ -48,9 +48,9 @@ Here's the list of possible `session.status` values:
       you need to [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}}), because it's changed.
 - `WORKING` - session is working and ready to use
 - `FAILED` - session is failed due to some error. It's likely either authorization is required again or device has been
-  disconnected from that account.
-  Try to [**Restart**](#restart-session) the session and if it doesn't help - [**Logout**](#logout-session) and 
-[**Start **](#start-session) the session again.
+  disconnected from that account. 
+
+In `FAILED` status try to [**Restart**](#restart-session) the session and if it doesn't help - [**Logout**](#logout-session) and [**Start**](#start-session) the session again.
 
 
 ## Create Session
