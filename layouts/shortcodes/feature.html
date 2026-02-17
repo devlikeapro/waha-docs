@@ -1,0 +1,29 @@
+<div style="padding-bottom: 1rem">
+
+    {{/* PLUS */}}
+    {{ if in .Params "plus" }}
+    <img alt="WAHA Plus" src="https://img.shields.io/badge/WAHA-Plus-a0e6ba">
+    {{ end }}
+
+    {{/* WEBJS */}}
+    {{ if in .Params "webjs" }}
+    <img alt="WEBJS" src="https://img.shields.io/badge/WEBJS-4285F4?logo=googlechrome&logoColor=white">
+    {{ else }}
+    <img alt="WEBJS disabled" src="https://img.shields.io/badge/WEBJS-9CA3AF?logo=googlechrome&logoColor=C0C0C0">
+    {{ end }}
+
+    {{/* GOWS */}}
+    {{ if in .Params "gows" }}
+    <img alt="GOWS" src="https://img.shields.io/badge/GOWS-00CFFF?logo=go&logoColor=white">
+    {{ else }}
+    <img alt="GOWS disabled" src="https://img.shields.io/badge/GOWS-9CA3AF?logo=go&logoColor=C0C0C0">
+    {{ end }}
+
+    {{/* NOWEB */}}
+    {{ if in .Params "noweb" }}
+    <img alt="NOWEB" src="https://img.shields.io/badge/NOWEB-339933?logo=node.js&logoColor=white">
+    {{ else }}
+    <img alt="NOWEB disabled" src="https://img.shields.io/badge/NOWEB-9CA3AF?logo=node.js&logoColor=C0C0C0">
+    {{ end }}
+
+</div>
