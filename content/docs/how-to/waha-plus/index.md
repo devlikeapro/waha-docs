@@ -16,8 +16,8 @@ aliases:
 
 **WAHA** is distributed in two versions:
 
-1. Core  the basic version that meet almost 80% people’s needs. 100% free and open source.
-2. Plus  the version with advanced messages, security, and reliability features.
+1. **WAHA Core** - the basic version that meet almost 80% people’s needs. 100% free and open source.
+2. **WAHA Plus** - the version with advanced messages, security, and reliability features.
 
 👉👉 Compare versions on 
 [**🎁 Support Us**](/support-us)
