@@ -182,7 +182,12 @@ It'll create a session in `STOPPED` status, and you can start it later by callin
 
 You can customize how the session shows up under **WhatsApp → Linked Devices**.
 
-```json
+<div style="width: 600px; max-width: 100%; margin: 0 auto;">
+{{< imgo src="whatsapp-linked-devices-devicename-test.png" alt="WhatsApp linked device name set to TEST" >}}
+</div>
+
+
+```json {title="Body"}
 {
   "name": "default",
   "config": {
@@ -194,12 +199,15 @@ You can customize how the session shows up under **WhatsApp → Linked Devices**
 }
 ```
 
-<div style="width: 600px; max-width: 100%; margin: 0 auto;">
-{{< imgo src="whatsapp-linked-devices-devicename-test.png" alt="WhatsApp linked device name set to TEST" >}}
-</div>
+or you can set it via [**⚙️ Configuration → Sessions - Device Name**]({{< relref "/docs/how-to/config#sessions---device-name" >}}).
+
+```ini { title=".env" }
+WAHA_CLIENT_DEVICE_NAME=TEST
+WAHA_CLIENT_BROWSER_NAME=Chrome
+```
 
 {{< callout context="caution" title="GOWS" icon="outline/alert-triangle" >}}
-GOWS supports custom device names **only via environment variables** for now. See [**⚙️ Configuration → Sessions - Device Name**]({{< relref "/docs/how-to/config#sessions---device-name" >}}).
+**GOWS** supports custom device names **only via environment variables** for now - see [**⚙️ Configuration → Sessions - Device Name**]({{< relref "/docs/how-to/config#sessions---device-name" >}}).
 {{< /callout >}}
 
 {{< include file="content/docs/how-to/sessions/-device-name-pairing-code.md" >}}
