@@ -248,6 +248,14 @@
   z-index: 3;
 }
 
+@include color-mode(dark) {
+  .home-hero-box::before {
+    background: transparent;
+    border-color: rgba(233, 236, 239, 0.35);
+    box-shadow: none;
+  }
+}
+
 @media (max-width: 576px) {
   .home-hero-box {
     padding: 1.5rem;
