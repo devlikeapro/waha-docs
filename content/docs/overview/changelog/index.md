@@ -61,7 +61,20 @@ Latest Version:
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
 
+**🧩 ChatWoot**
+- `2026.2.2` - ChatWoot - strip escaped newlines from v4.10.1+ webhooks so WhatsApp messages render without backslashes - fix #1833
+
 🛠️ **Fixes**
+- `2026.2.2` - **NOWEB** - edit text in Channels (image/video doesn't work yet) - fix #1352
+- `2026.2.2` - **NOWEB** - edit media message captions - fix #1374
+- `2026.2.2` - **NOWEB** - fix WhatsApp template with an image - fix #1886
+- `2026.2.2` - **NOWEB** - fix send message to group community - fix #1901
+- `2026.2.2` - **NOWEB** - add seconds to video messages - fix #1893
+- `2026.2.2` - **GOWS** - add seconds to video messages - fix #1893
+- `2026.2.2` - **GOWS** - edit media message - fix #1852
+- `2026.2.2` - **WEBJS** - " Lid is missing in chat table" - fix #1824
+- `2026.2.2` - **WEBJS** - "No LID for user" - fix #1881
+- `2026.2.2` - **API** - harden auth middleware, WebSocket guard, and policies guard - fix #1899
 - `2026.2.1` - **WEBJS** - fix GET groups internal error - fix #1860
 - `2026.2.1` - **WEBJS** - fix send message to channel - fix #1863
 - `2026.2.1` - **WEBJS** - fix contact update - fix #1839
@@ -71,7 +84,12 @@ Latest Version:
 - `2026.2.1` - **NOWEB** - fix send image using proxy - fix #1859
 - `2026.2.1` - **GOWS** - exclude `AppState` events
 
+**📊 Dashboard**
+- `2026.2.2` - Dashboard - fix creating apps - `crypto.randomUUID is undefined`
+
 ⚙️ **Updates**
+- `2026.2.2` - **NOWEB** - up engine
+- `2026.2.2` - **GOWS** - up engine
 - `2026.2.1` - **WEBJS** - up engine
 
 {{< /autolink-prs >}}
