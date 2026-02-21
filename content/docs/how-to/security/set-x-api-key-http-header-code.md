@@ -6,8 +6,8 @@
 ```bash { title="Set X Api Key Http Header" }
 curl -X 'GET' \
   'http://localhost:3000/api/sessions' \
-  -H 'X-Api-Key: yoursecretkey'
-  -H 'Accept: application/json' \
+  -H 'X-Api-Key: yoursecretkey' \
+  -H 'Accept: application/json'
 ```
 {{< /tab >}}
 
