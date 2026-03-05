@@ -1,11 +1,11 @@
-| Storage                           | WEBJS | NOWEB | GOWS |
-|-----------------------------------|:-----:|:-----:|:----:|
-| **Local** - **🖥️ Session**       |  ✔️   |  ✔️   |  ✔️  |
-| **Local** - **🖼️ Media**         |  ✔️   |  ✔️   |  ✔️  |
-| **PostgresSQL** - **🖥️ Session** |   ➕   |   ➕   |  ➕   |
-| **PostgresSQL** - **🖼️ Media**   |   ➕   |   ➕   |  ➕   |
-| **S3** - **🖼️ Media**            |   ➕   |   ➕   |  ➕   |
-| ~~MongoDB - 🖥️ Session~~         |   ➕   |   ➕   |  ❌   |
+| Storage                           | WEBJS | WPP | NOWEB | GOWS |
+|-----------------------------------|:-----:|:---:|:-----:|:----:|
+| **Local** - **🖥️ Session**       |  ✔️   |     |  ✔️   |  ✔️  |
+| **Local** - **🖼️ Media**         |  ✔️   |     |  ✔️   |  ✔️  |
+| **PostgresSQL** - **🖥️ Session** |   ➕   |     |   ➕   |  ➕   |
+| **PostgresSQL** - **🖼️ Media**   |   ➕   |     |   ➕   |  ➕   |
+| **S3** - **🖼️ Media**            |   ➕   |     |   ➕   |  ➕   |
+| ~~MongoDB - 🖥️ Session~~         |   ➕   |     |   ➕   |  ❌   |
 
 - **PostgreSQL**, **S3** and **MongoDB** storages are available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 - **MongoDB is deprecated** and no new features will be added to it.

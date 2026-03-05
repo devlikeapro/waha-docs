@@ -1,9 +1,9 @@
 <div></div>
 {{< details "**📅 Event Message - Events**" >}}
 
-| **Events**              | WEBJS | NOWEB | GOWS |
-|-------------------------|:-----:|:-----:|:----:|
-| `event.response`        |       |       |  ✔️  |
-| `event.response.failed` |       |       |  ✔️  |
+| **Events**              | WEBJS | WPP | NOWEB | GOWS |
+|-------------------------|:-----:|:---:|:-----:|:----:|
+| `event.response`        |       |     |       |  ✔️  |
+| `event.response.failed` |       |     |       |  ✔️  |
 
 {{< /details >}}

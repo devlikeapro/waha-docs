@@ -1,9 +1,9 @@
 <div></div>
 {{< details "**✅ Presence - Events**" >}}
 
-| **Events**        | WEBJS | NOWEB | GOWS |
-|-------------------|:-----:|:-----:|:-----|
-| `presence.update` |  ✔️   |  ✔️   | ✔️   |
+| **Events**        | WEBJS | WPP | NOWEB | GOWS |
+|-------------------|:-----:|:---:|:-----:|:-----|
+| `presence.update` |  ✔️   | ✔️  |  ✔️   | ✔️   |
 
 
 {{< /details >}}

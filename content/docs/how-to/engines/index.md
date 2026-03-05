@@ -29,10 +29,10 @@ All engines are available in both
 Core  and
 [Plus  versions]({{< relref "/docs/how-to/waha-plus" >}}).
 
-|                                                                  | WEBJS | NOWEB | GOWS |
-|------------------------------------------------------------------|:-----:|:-----:|:-----|
-| Run a **browser** (chromium\chrome) to communicate with WhatsApp |  ✔️   |       |      |
-| Communicate with WhatsApp via **websocket (no browser)**         |       |  ✔️   | ✔️   |
+|                                                                  | WEBJS | WPP | GOWS | NOWEB |
+|------------------------------------------------------------------|:-----:|:---:|:----:|:-----:|
+| Run a **browser** (chromium\chrome) to communicate with WhatsApp |  ✔️   | ✔️  |      |       |
+| Communicate with WhatsApp via **websocket (no browser)**         |       |     |  ✔️  |  ✔️   |
 
 ### WEBJS
 
@@ -44,6 +44,17 @@ WHATSAPP_DEFAULT_ENGINE=WEBJS
 ```
 
 {{< link-card title="👉 Read more about WEBJS" href="/docs/engines/webjs/" >}}
+
+### WPP
+
+**WPP** engine to connect through the WhatsApp Web browser app.
+It uses Puppeteer to run a real instance of WhatsApp Web to avoid getting blocked.
+
+```bash
+WHATSAPP_DEFAULT_ENGINE=WPP
+```
+
+{{< link-card title="👉 Read more about WPP" href="/docs/engines/wpp/" >}}
 
 ### GOWS
 
