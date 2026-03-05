@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 31 Jan 2026 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2026.1 - Per-Session API Keys, GOWS Storage Toggle</title><link>/blog/waha-2026-1/</link><pubDate>Sat, 31 Jan 2026 08:48:45 +0000</pubDate><guid>/blog/waha-2026-1/</guid><description>&lt;h2 id="-per-session-api-keys">🔐 Per-Session API Keys&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 28 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2026.2 - Fixes Pack</title><link>/blog/waha-2026-2/</link><pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate><guid>/blog/waha-2026-2/</guid><description>&lt;h2 id="-channels-and-media-fixes-noweb--gows">🛠️ Channels and Media Fixes (&lt;strong>NOWEB&lt;/strong> + &lt;strong>GOWS&lt;/strong>)&lt;/h2>
+&lt;p>This release is mainly about getting existing flows more reliable, especially around Channels and media editing.&lt;/p></description></item><item><title>WAHA 2026.1 - Per-Session API Keys, GOWS Storage Toggle</title><link>/blog/waha-2026-1/</link><pubDate>Sat, 31 Jan 2026 08:48:45 +0000</pubDate><guid>/blog/waha-2026-1/</guid><description>&lt;h2 id="-per-session-api-keys">🔐 Per-Session API Keys&lt;/h2>
 &lt;p>You can now scope API keys to specific sessions instead of the whole server. This helps isolate tenants, rotate access, and keep automation scoped to the right WhatsApp session.&lt;/p></description></item><item><title>Deploy WAHA on Coolify</title><link>/blog/waha-on-coolify/</link><pubDate>Tue, 13 Jan 2026 01:01:01 +0000</pubDate><guid>/blog/waha-on-coolify/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>With WAHA on &lt;a href="https://coolify.io/">Coolify&lt;/a>, you get:&lt;/p>
 &lt;ul>
@@ -65,29 +66,6 @@ You don&amp;rsquo;t have to worry about language-specific libraries or chrome in
 &lt;p>Presence now sets you &lt;code>online&lt;/code> when you do anything via the API, then returns to &lt;code>offline&lt;/code> after a few seconds. Dashboards stay correct, and your phone still receives notifications.&lt;/p></description></item><item><title>Discord Community</title><link>/blog/discord-community/</link><pubDate>Sat, 08 Nov 2025 08:48:45 +0000</pubDate><guid>/blog/discord-community/</guid><description>&lt;p>For months the community has been asking for a single place to talk, debug, and share ideas between releases.&lt;/p>
 &lt;p>&lt;strong>WAHA Discord&lt;/strong> is finally open to the community (for &lt;a href="/support-us/">Plus and PRO supporters&lt;/a>) so you can keep the momentum going. 🎉&lt;/p></description></item><item><title>WAHA 2025.10 - ChatWoot Pull Commands, Secure Defaults</title><link>/blog/waha-2025-10/</link><pubDate>Fri, 31 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-10/</guid><description>&lt;h2 id="-chatwoot--messages-sync">💬 ChatWoot – Messages Sync&lt;/h2>
 &lt;p>Need old conversations inside ChatWoot? Run &lt;code>wa/messages pull&lt;/code> to replay WhatsApp chat history, pick the time range, fetch media, and even close conversations during the import. Every switch is explained in the &lt;a href="/blog/apps-chatwoot-messages/">&lt;strong>💬 ChatWoot – Messages Guide&lt;/strong>&lt;/a>.&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Messages</title><link>/blog/apps-chatwoot-messages/</link><pubDate>Thu, 30 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-messages/</guid><description>&lt;div>&lt;/div>
-&lt;div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
- &lt;svg
- xmlns="http://www.w3.org/2000/svg"
- width="24"
- height="24"
- viewBox="0 0 24 24"
- fill="none"
- stroke="currentColor"
- stroke-width="2"
- stroke-linecap="round"
- stroke-linejoin="round"
- 
- class="outline/gavel svg-inline callout-icon me-2 mb-3" id="svg-gavel" role="img">
- &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
- &lt;path d="M13 10l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385" />
- &lt;path d="M6 9l4 4" />
- &lt;path d="M13 10l-4 -4" />
- &lt;path d="M3 21h7" />
- &lt;path d="M6.793 15.793l-3.586 -3.586a1 1 0 0 1 0 -1.414l2.293 -2.293l.5 .5l3 -3l-.5 -.5l2.293 -2.293a1 1 0 0 1 1.414 0l3.586 3.586a1 1 0 0 1 0 1.414l-2.293 2.293l-.5 -.5l-3 3l.5 .5l-2.293 2.293a1 1 0 0 1 -1.414 0z" />
-&lt;/svg>
- &lt;div class="callout-content">
- &lt;div class="callout-title">
- &lt;p>Disclaimer&lt;/p></description></item><item><title>WhatsApp + ChatWoot - Contacts</title><link>/blog/apps-chatwoot-contacts/</link><pubDate>Wed, 29 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/apps-chatwoot-contacts/</guid><description>&lt;div>&lt;/div>
 &lt;div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
  &lt;svg
  xmlns="http://www.w3.org/2000/svg"
