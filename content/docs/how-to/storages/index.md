@@ -71,21 +71,7 @@ docker run -v /custom/path/to/sessions:/app/.sessions -p 3000:3000 devlikeapro/w
 - `WAHA_LOCAL_STORE_BASE_DIR=/app/.sessions` - Override the base directory for local storage
   - Useful for handling Azure "dot" restrictions {{< issue 597 >}}
   - Default: `/app/.sessions`
-
-#### Directory Structure
-The session data is organized in the following structure:
-```sh
-sessions/
-├── webjs/                    # Engine-specific directory
-│   ├── default/              # Session directory
-│   │   └── ...               # Session files
-│   └── another-session/      # Another session
-│       └── ...               # Session files
-│
-└── noweb/                    # Another engine
-    └── default/
-        └── ...
-```
+- `WAHA_NAMESPACE` and `WAHA_SESSION_NAMESPACE` - see [**Namespace**](#namespace) for details
 
 #### Health Check
 [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) provides [health check endpoints]({{< relref "/docs/how-to/observability" >}}).
@@ -141,7 +127,7 @@ postgres -c max_connections=3000
 {{< /details >}}
 
 {{< callout title="WAHA uses Multiple Databases schema" context="note" icon="outline/database" >}}
-👉 Read how WAHA uses databases in the [**Database Schema**](#database-schema) section.
+👉 Read how WAHA uses databases in the [**Namespace**](#namespace) section.
 {{< /callout >}}
 
 ### Sessions - MongoDB
@@ -159,7 +145,7 @@ If you want to use the MongoDB to store the session data, you need to:
 **We recommend using your own MongoDB server as close as possible to the WAHA server** for the best performance and security reasons.
 
 {{< callout title="WAHA uses Multiple Databases schema" context="note" icon="outline/database" >}}
-👉 Read how WAHA uses databases in the [**Database Schema**](#database-schema) section.
+👉 Read how WAHA uses databases in the [**Namespace**](#namespace) section.
 {{< /callout >}}
 
 First, you need to start MongoDB server:
@@ -226,7 +212,7 @@ You can store media files in PostgreSQL.
 It'll create additional `media` table in **each database for session**.
 
 {{< callout title="WAHA uses Multiple Databases schema" context="note" icon="outline/database" >}}
-👉 Read how WAHA uses databases in the [**Database Schema**](#database-schema) section.
+👉 Read how WAHA uses databases in the [**Namespace**](#namespace) section.
 {{< /callout >}}
 
 ```bash
@@ -318,23 +304,34 @@ volumes:
 - `X-Amz-Meta-Waha-Message-Id=true_111...` - message ID
 - `X-Amz-Meta-Waha-Media-File-Name=media.jpg` - media file name
 
-## FAQ
-### Database Schema
-{{< callout context="caution" icon="outline/database" >}}
-When using **PostgreSQL** or **MongoDB** storage, 
-WAHA creates **multiple databases** using the credentials provided in the connection URL:
+## Namespace
+{{< include file="content/docs/how-to/engines/-engine-namespace.md" >}}
 
-1. `waha_{engine}` - A **single database** with
-    - session configuration 
-    - common parameters that persist until you remove a session
-2. `waha_{engine}_{sessionname}` - A **separate database** for **each session** that contains:
-    - Credentials
-    - Messages
-    - Contacts
-    - Other session-specific data
-{{< /callout >}}
+### Local Storage
+Namespaces map to directory paths under the base dir (default `/app/.sessions`):
+- `/app/.sessions/{namespace}/waha.sqlite3` — main WAHA SQLite database
+- `/app/.sessions/{session_namespace}/{session}/` — session-specific data
 
-{{< callout context="note" title="Database Schemas" icon="outline/database" >}}
+```sh
+.sessions/
+├── all/                      # WAHA_NAMESPACE=all (main WAHA storage)
+│   └── waha.sqlite3
+│
+├── webjs/                    # WAHA_SESSION_NAMESPACE=webjs
+│   ├── default/
+│   └── another-session/
+│
+└── noweb/                    # WAHA_SESSION_NAMESPACE=noweb
+    └── default/
+```
+
+### PostgreSQL / MongoDB
+When using **PostgreSQL** or **MongoDB**, WAHA creates **multiple databases** using the credentials provided in the connection URL:
+
+1. `waha_{namespace}` — a **single database** with session configuration and common parameters
+2. `waha_{session_namespace}_{session}` — a **separate database per session** with credentials, messages, contacts, and other session-specific data
+
+{{< callout context="note" title="Namespaces" icon="outline/database" >}}
 <div class="text-center">
 
 ![PostgreSQL Databases](psql-databases.png) ![MongoDB Databases](mongodb-databases.png)
@@ -345,13 +342,13 @@ WAHA creates **multiple databases** using the credentials provided in the connec
 This approach provides **several benefits**:
 1. Easy monitoring of storage usage per session
 2. Better stability when running multiple sessions
-3. Isolation between sessions - if one session's database has issues, it won't affect other sessions
-4. Clear separation of concerns between session configuration and session data
+3. Isolation between sessions — if one session's database has issues, it won't affect others
 
 {{< callout context="danger" title="User Permissions" icon="outline/user" >}}
 Make sure that the user that connects to the database has **create/drop** permissions on the databases.
 {{< /callout >}}
 
+## FAQ
 ### Multiple Workers - Single Database Server
 {{< callout context="warning" icon="outline/alert-triangle" >}}
 When running **multiple WAHA workers** with **the same database**, you **MUST** set a unique `WAHA_WORKER_ID` for each worker to prevent conflicts and ensure proper operation.

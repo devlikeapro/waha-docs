@@ -161,6 +161,14 @@ WAHA_CLIENT_BROWSER_NAME=Chrome
 
 
 
+### Sessions - Namespace
+Read more about [**🗄️ Storages - Namespace**]({{< relref "/docs/how-to/storages#namespace" >}})
+
+- `WAHA_NAMESPACE` — controls the **main storage** namespace (apps, API keys, shared config). Defaults to the current engine name.
+  - Recommended for new setups: `WAHA_NAMESPACE=all`
+- `WAHA_SESSION_NAMESPACE` — controls **session-specific storage** namespace. Defaults to the current engine name.
+  - Advanced usage only; keep unset in most setups
+
 ### Sessions - Local
 - `WAHA_LOCAL_STORE_BASE_DIR=/app/.sessions` - Override the base directory for local storage of session data
 - `WAHA_SQLITE_ENGINE=sqlite3` - Pick which SQLite driver [Knex](https://github.com/knex/knex) loads for local data. Supported values:

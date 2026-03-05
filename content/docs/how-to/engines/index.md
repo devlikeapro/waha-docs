@@ -14,6 +14,8 @@ slug: engines
 
 {{< include file="content/docs/how-to/engines/-what-is-engine.md" >}}
 
+{{< include file="content/docs/how-to/engines/-engine-namespace.md" >}}
+
 |                                                                  | WEBJS | WPP | GOWS | NOWEB |
 |------------------------------------------------------------------|:-----:|:---:|:----:|:-----:|
 | Run a **browser** (chromium\chrome) to communicate with WhatsApp |  ✔️   | ✔️  |      |       |
