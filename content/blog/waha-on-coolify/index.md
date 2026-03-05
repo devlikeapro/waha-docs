@@ -149,6 +149,10 @@ WHATSAPP_SWAGGER_ENABLED=True
 # WhatsApp engine (WEBJS is default, GOWS or NOWEB for better performance)
 WHATSAPP_DEFAULT_ENGINE=WEBJS
 
+# Namespace for sessions storage - set to "all" so sessions are shared across
+# all engines, allowing you to switch engines without losing the session list
+WAHA_NAMESPACE=all
+
 # "Firefox (YourApp)" in Linked Devices
 # WAHA_CLIENT_DEVICE_NAME=YourApp
 
