@@ -12,27 +12,27 @@ slug: engines
 
 ## Engines
 
-Under the hood **WAHA** allows you to use different engines. You can control what you want to run by settings
-`WHATSAPP_DEFAULT_ENGINE` environment variables.
-
-```bash
-docker run -it -e "WHATSAPP_DEFAULT_ENGINE=WEBJS" devlikeapro/waha
-```
-
-If you have any problems with one engine - try another!
-
-{{< callout context="note" icon="outline/info-circle" >}}
-API responses and webhook payloads may differ significantly, test everything before changing the engine
-{{< /callout >}}
-
-All engines are available in both
-Core  and
-[Plus  versions]({{< relref "/docs/how-to/waha-plus" >}}).
+{{< include file="content/docs/how-to/engines/-what-is-engine.md" >}}
 
 |                                                                  | WEBJS | WPP | GOWS | NOWEB |
 |------------------------------------------------------------------|:-----:|:---:|:----:|:-----:|
 | Run a **browser** (chromium\chrome) to communicate with WhatsApp |  ✔️   | ✔️  |      |       |
 | Communicate with WhatsApp via **websocket (no browser)**         |       |     |  ✔️  |  ✔️   |
+
+## Run Engine
+
+Under the hood **WAHA** allows you to use different engines.
+
+You can control what you want to run by settings `WHATSAPP_DEFAULT_ENGINE` environment variables.
+
+```bash
+docker run -it -e "WHATSAPP_DEFAULT_ENGINE=WEBJS" devlikeapro/waha
+```
+
+All engines are available in both
+Core  and
+[Plus  versions]({{< relref "/docs/how-to/waha-plus" >}}).
+
 
 ### WEBJS
 

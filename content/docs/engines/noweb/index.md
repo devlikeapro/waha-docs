@@ -11,6 +11,8 @@ weight: 411
 
 ## Overview
 
+{{< include file="content/docs/how-to/engines/-what-is-engine.md" >}}
+
 **NOWEB** engine **does not require a browser** to work with WhatsApp Web, it does so directly using a WebSocket.
 Not running Chromium saves you CPU and Memory, so you can run more instances on a single server!
 

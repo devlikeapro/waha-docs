@@ -14,3 +14,5 @@ sidebar:
 Here you can find detailed information about engines.
 
 👉 Read overview on [**🏭 Engines page**]({{< relref "/docs/how-to/engines" >}}).
+
+{{< include file="content/docs/how-to/engines/-what-is-engine.md" >}}

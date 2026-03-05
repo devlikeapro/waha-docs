@@ -932,10 +932,12 @@
       "restart-stop-server",
       "retries",
       "revoke-invite-code",
+      "run-engine",
       "run-gows",
       "run-noweb",
       "run-venom",
       "run-webjs",
+      "run-wpp",
       "search-api",
       "search-channels-by-text",
       "search-channels-by-view",
@@ -1561,7 +1563,8 @@
       "why-waha",
       "worker",
       "workflow-examples",
-      "workflow-templates"
+      "workflow-templates",
+      "wpp"
     ]
   }
 }

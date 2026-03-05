@@ -11,6 +11,8 @@ weight: 410
 
 ## Overview
 
+{{< include file="content/docs/how-to/engines/-what-is-engine.md" >}}
+
 A WhatsApp API client that connects through the WhatsApp Web browser app.
 It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocked.
 

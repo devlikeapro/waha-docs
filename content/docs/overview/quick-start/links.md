@@ -12,8 +12,9 @@
 {{< card title="Get Ready for Production" icon="outline/server" color="purple" >}}
 
 - [🔧 Install & Update]({{< relref "/docs/how-to/install" >}})
-- [🔒 Security]({{< relref "/docs/how-to/security" >}})
+- [🏭 Engines]({{< relref "/docs/how-to/engines" >}})
 - [🗄️ Storages]({{< relref "/docs/how-to/sessions" >}})
+- [🔒 Security]({{< relref "/docs/how-to/security" >}})
 - [➕ WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}})
 
 
@@ -32,7 +33,6 @@
 - [🧩 Apps]({{< relref "/docs/apps/about" >}})
 - [🔌 Integrations]({{< relref "/docs/integrations" >}})
 - [📚 Swagger]({{< relref "/docs/how-to/swagger" >}})
-- [🏭 Engines]({{< relref "/docs/how-to/engines" >}})
 
 {{< /card >}}
 {{< /card-grid >}}
