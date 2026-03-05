@@ -80,6 +80,7 @@ Latest Version:
 - `2026.3.1` - ChatWoot - fix `ParseMS` typing
 
 🛠️ **Fixes**
+- `2026.3.2` - send media fix for "user_agents_1.default is not a constructor" - fix #1946
 - `2026.3.1` - **NOWEB** - merge `@lid` and `@c.us` messages in `/overview` and `/messages` 
   - fix #1444, fix #1419, fix #1683, fix #1432
 - `2026.3.1` - **GOWS** - merge `@lid` and `@c.us` in `/messages`, `/overview`, `/chats` 
