@@ -57,6 +57,55 @@ Latest Version:
 
 👉🏻 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
+### 2026.3
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+**🆕 New**
+- `2026.3.1` - **WPP** - Add [**WPP**]({{< relref "/docs/how-to/engines" >}}) engine - fix #101
+- `2026.3.1` - **NOWEB** - `merge` flag to disable merging `@lid` and `@c.us` messages and chats
+  - fix #1444, fix #1419, fix #1683, fix #1432
+- `2026.3.1` - **GOWS** - `merge` flag to disable merging `@lid` and `@c.us` messages and chats
+  - fix #1684, fix #1817, fix #1910
+- `2026.3.1` - **WPP** - `forwardMessages` support
+- `2026.3.1` - Storage - `WAHA_NAMESPACE` and `WAHA_SESSION_NAMESPACE` for storage namespace control - [**🗄️ Storages**]({{< relref "/docs/how-to/storages#namespace" >}})
+- `2026.3.1` - **API** - `GET /api/{session}/contacts/{id}` endpoint
+
+**🧩 Apps**
+- `2026.3.1` - Apps enabled by default, allow in-memory apps (no queue required)
+
+**🧩 ChatWoot**
+- `2026.3.1` - ChatWoot - sync only `@c.us` chat when both `@lid` and `@c.us` are present in messages sync
+- `2026.3.1` - ChatWoot - add group participant to message mapping
+- `2026.3.1` - ChatWoot - fix `ParseMS` typing
+
+🛠️ **Fixes**
+- `2026.3.1` - **NOWEB** - merge `@lid` and `@c.us` messages in `/overview` and `/messages` 
+  - fix #1444, fix #1419, fix #1683, fix #1432
+- `2026.3.1` - **GOWS** - merge `@lid` and `@c.us` in `/messages`, `/overview`, `/chats` 
+  - fix #1684, fix #1817, fix #1910
+- `2026.3.1` - **NOWEB** - fix out-of-order messages - fix #1912
+- `2026.3.1` - **NOWEB** - fix message ordering (timestamp first)
+- `2026.3.1` - **NOWEB** - populate `@lid`↔`@c.us` mapping correctly - fix #1712
+- `2026.3.1` - **NOWEB** - fix PostgreSQL request
+- `2026.3.1` - **WEBJS** - fix QR Code - fix #1923, fix #1918
+- `2026.3.1` - **WEBJS** - fix apps `GET`/`PUT`/`DELETE` 403 - fix #1926
+- `2026.3.1` - **WEBJS** - kill stale processes and remove Singleton
+- `2026.3.1` - Fix no auth case - fix #1939
+- `2026.3.1` - Channels - resolve channel code or use provided id
+- `2026.3.1` - Media - fix user-agent when fetching media
+
+**📊 Dashboard**
+- `2026.3.1` - Dashboard - Chat UI improvements
+
+⚙️ **Updates**
+- `2026.3.1` - **NOWEB** - up engine
+- `2026.3.1` - **NOWEB** - up Rust bridge - fix #1919
+- `2026.3.1` - **GOWS** - up engine - fix link preview 406 User-Agent - fix #1914
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2026.2
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
