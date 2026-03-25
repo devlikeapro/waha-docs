@@ -62,6 +62,11 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 **🆕 New**
+- `2026.3.3` - **GOWS** - Add image sizes in messages - fix #1402, fix #901
+- `2026.3.3` - **GOWS** - Add `WAHA_GOWS_DEVICE_*` env variables for historical message sync depth - fix #1963
+- `2026.3.3` - **GOWS** - Add `displayName` to `sendContactVcard` - fix #1978
+- `2026.3.3` - **NOWEB** -  Add view once messages in `message` event - fix #1972
+- `2026.3.3` - **NOWEB** - Add image size when sending to newsletter - fix #1980
 - `2026.3.1` - **WPP** - Add [**WPP**]({{< relref "/docs/how-to/engines" >}}) engine - fix #101
 - `2026.3.1` - **NOWEB** - `merge` flag to disable merging `@lid` and `@c.us` messages and chats
   - fix #1444, fix #1419, fix #1683, fix #1432
@@ -80,6 +85,13 @@ Latest Version:
 - `2026.3.1` - ChatWoot - fix `ParseMS` typing
 
 🛠️ **Fixes**
+- `2026.3.3` - Fix BR landline normalization for Brazilian landline numbers - fix #1974
+- `2026.3.3` - **GOWS** - Fix no device part - fix #1977
+- `2026.3.3` - **API** - Fix "Cannot read properties of undefined (reading 'isAdmin')" - fix #1969
+- `2026.3.3` - **WEBJS** - Fix profile picture and channels list - fix #1707, fix #1947, fix #1959
+- `2026.3.3` - **NOWEB** - Fix CPU spikes (lid/c.us merge optimization) - fix #1955
+- `2026.3.3` - **GOWS** - Fix CPU spikes in PostgreSQL - fix #1955
+- `2026.3.3` - yarn - support all CPU/OS architectures - fix #1952
 - `2026.3.2` - send media fix for "user_agents_1.default is not a constructor" - fix #1946
 - `2026.3.1` - **NOWEB** - merge `@lid` and `@c.us` messages in `/overview` and `/messages` 
   - fix #1444, fix #1419, fix #1683, fix #1432
@@ -100,6 +112,10 @@ Latest Version:
 - `2026.3.1` - Dashboard - Chat UI improvements
 
 ⚙️ **Updates**
+- `2026.3.3` - **NOWEB** - up engine
+- `2026.3.3` - **WPP** - up engine
+- `2026.3.3` - **WEBJS** - up engine
+- `2026.3.3` - **GOWS** - up engine
 - `2026.3.1` - **NOWEB** - up engine
 - `2026.3.1` - **NOWEB** - up Rust bridge - fix #1919
 - `2026.3.1` - **GOWS** - up engine - fix link preview 406 User-Agent - fix #1914
