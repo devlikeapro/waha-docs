@@ -85,6 +85,7 @@ Latest Version:
 - `2026.3.1` - ChatWoot - fix `ParseMS` typing
 
 🛠️ **Fixes**
+- `2026.3.4` - version fix - fix #1984
 - `2026.3.3` - Fix BR landline normalization for Brazilian landline numbers - fix #1974
 - `2026.3.3` - **GOWS** - Fix no device part - fix #1977
 - `2026.3.3` - **API** - Fix "Cannot read properties of undefined (reading 'isAdmin')" - fix #1969
