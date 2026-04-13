@@ -327,3 +327,19 @@
     margin: 0 -75px;
   }
 }
+
+// Fix docs layout centering: the sidebar (col-xl-4, overridden to flex: 0 1 320px)
+// and TOC (col-xl-3 = 18.75%) are asymmetric, making the content appear off-center.
+// Solution: force sidebar to match the TOC column width (col-xl-3 = 18.75%) and
+// center the row so free space (6.25%) splits equally on both sides.
+// Result: sidebar (18.75%) + content (56.25%) + TOC (18.75%) = 93.75%, centered.
+@include media-breakpoint-up(xl) {
+  .docs-sidebar {
+    flex: 0 0 auto !important;
+    width: 18.75% !important;
+  }
+
+  body.docs .content > .row {
+    justify-content: center;
+  }
+}
