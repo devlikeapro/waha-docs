@@ -45,5 +45,5 @@
 - `source`: Source of the message (usually "app")
 - `ack`: Acknowledgment status code
 - `ackName`: Human-readable acknowledgment status
-- `replyTo`: Reference to a message being replied to (null if not a reply)
+- `replyTo`: Object with info about the replied-to message (`null` if not a reply) — includes `id`, `participant`, `body`, `hasMedia`, `media`
 - `_data`: Raw data object containing additional information

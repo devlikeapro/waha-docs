@@ -52,7 +52,7 @@ You may notice various identifiers in the `from`, `to`, and `participant` fields
 {{< include file="content/docs/how-to/receive-messages/-chat-ids.md" >}}
 
 ### replyTo
-If you get a message as a reply to another message, you'll see `replyTo` field with the message ID that was replied to.
+If you get a message as a reply to another message, you'll see `replyTo` field with information about the original message.
 
 ```jsonc { title="message" }
 {
@@ -63,11 +63,33 @@ If you get a message as a reply to another message, you'll see `replyTo` field w
     "timestamp": 1667561485,
     "from": "11111111111@c.us",
     "body": "Yes!",
-    "replyTo": "false_22222222@c.us_AAAAAAAAAAAAAAAAAAA"
+    "replyTo": {
+      "id": "false_22222222@c.us_AAAAAAAAAAAAAAAAAAA", // may be absent depending on engine
+      "participant": "22222222222@c.us",               // may be absent depending on engine
+      "body": "Check this out!",
+      "hasMedia": true,
+      "media": {
+        "url": "http://localhost:3000/api/files/false_22222222@c.us_AAAAAAAAAAAAAAAAAAA.jpg",
+        "mimetype": "image/jpeg",
+        "filename": null,
+        "error": null
+      },
+      "_data": { }
+    }
   }
 }
-
 ```
+
+Fields:
+- `id` - message ID of the original message (**not always available** — depends on the engine)
+- `participant` - sender's WhatsApp ID (**not always available** — depends on the engine)
+- `body` - text content of the original message
+- `hasMedia: true | false` - indicates if the original message had media attached
+- `media` - media object if the original message had media **and** it was downloaded; `null` otherwise
+
+The same rules apply as for the top-level `media` field: if `hasMedia` is `true` but `media` is `null`, WAHA detected media in the replied-to message but did not download it (e.g. due to your media storage configuration).
+
+{{< link-card title="👉 Read more about Media Files" href="#media-files" >}}
 
 
 
