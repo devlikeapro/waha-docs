@@ -30,7 +30,7 @@ docker run -it -e "WHATSAPP_DEFAULT_ENGINE=GOWS" devlikeapro/waha
 {{< include file="content/docs/engines/webjs/-env-config.md" >}}
 
 ## Configuration
-{{< include file="content/docs/engines/webjs/-env-config.md" >}}
+{{< include file="content/docs/engines/gows/-env-config.md" >}}
 
 ## Links
 
