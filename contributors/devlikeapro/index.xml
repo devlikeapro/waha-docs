@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on WAHA</title><link>/contributors/devlikeapro/</link><description>Recent content in devlikeapro on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 31 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2026.3 - WPP Engine, LID Merge Control, GOWS &amp; NOWEB Upgrades</title><link>/blog/waha-2026-3/</link><pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate><guid>/blog/waha-2026-3/</guid><description>&lt;h2 id="-new-engine-wpp">⚡ New Engine: WPP&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devlikeapro on WAHA</title><link>/contributors/devlikeapro/</link><description>Recent content in devlikeapro on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 14 Apr 2026 01:01:01 +0000</lastBuildDate><atom:link href="/contributors/devlikeapro/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Update WAHA</title><link>/blog/waha-update/</link><pubDate>Tue, 14 Apr 2026 01:01:01 +0000</pubDate><guid>/blog/waha-update/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This guide covers how to update &lt;strong>WAHA&lt;/strong> to the latest version depending on how you deployed it:&lt;/p>
+&lt;div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+ &lt;svg
+ xmlns="http://www.w3.org/2000/svg"
+ width="24"
+ height="24"
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ stroke-width="2"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ 
+ class="outline/shield-check svg-inline callout-icon me-2 mb-3" id="svg-shield-check" role="img">
+ &lt;path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+ &lt;path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" />
+ &lt;path d="M15 19l2 2l4 -4" />
+&lt;/svg>
+ &lt;div class="callout-content">
+ &lt;div class="callout-title">
+ &lt;p>Sessions are safe&lt;/p></description></item><item><title>WAHA 2026.3 - WPP Engine, LID Merge Control, GOWS &amp; NOWEB Upgrades</title><link>/blog/waha-2026-3/</link><pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate><guid>/blog/waha-2026-3/</guid><description>&lt;h2 id="-new-engine-wpp">⚡ New Engine: WPP&lt;/h2>
 &lt;p>&lt;strong>WPP&lt;/strong> is a new browser-based engine powered by &lt;a href="https://github.com/wppconnect-team/wppconnect">wppconnect&lt;/a>. It runs WhatsApp Web in a Puppeteer browser — same approach as &lt;strong>WEBJS&lt;/strong>, different underlying library. &lt;code>forwardMessages&lt;/code> is supported from the start.&lt;/p></description></item><item><title>WAHA 2026.2 - Fixes Pack</title><link>/blog/waha-2026-2/</link><pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate><guid>/blog/waha-2026-2/</guid><description>&lt;h2 id="-channels-and-media-fixes-noweb--gows">🛠️ Channels and Media Fixes (&lt;strong>NOWEB&lt;/strong> + &lt;strong>GOWS&lt;/strong>)&lt;/h2>
 &lt;p>This release is mainly about getting existing flows more reliable, especially around Channels and media editing.&lt;/p></description></item><item><title>WAHA 2026.1 - Per-Session API Keys, GOWS Storage Toggle</title><link>/blog/waha-2026-1/</link><pubDate>Sat, 31 Jan 2026 08:48:45 +0000</pubDate><guid>/blog/waha-2026-1/</guid><description>&lt;h2 id="-per-session-api-keys">🔐 Per-Session API Keys&lt;/h2>
 &lt;p>You can now scope API keys to specific sessions instead of the whole server. This helps isolate tenants, rotate access, and keep automation scoped to the right WhatsApp session.&lt;/p></description></item><item><title>Deploy WAHA on Coolify</title><link>/blog/waha-on-coolify/</link><pubDate>Tue, 13 Jan 2026 01:01:01 +0000</pubDate><guid>/blog/waha-on-coolify/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
@@ -65,5 +86,4 @@
 You don&amp;rsquo;t have to worry about language-specific libraries or chrome installation.&lt;/p></description></item><item><title>WAHA 2025.12 - Custom Device Names, Calls Automation</title><link>/blog/waha-2025-12/</link><pubDate>Mon, 29 Dec 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-12/</guid><description>&lt;h2 id="-custom-device-name">🏷️ Custom Device Name&lt;/h2>
 &lt;p>You can now label a session so it shows up with a friendly name under &lt;strong>WhatsApp → Linked Devices&lt;/strong>. Configure the &lt;code>deviceName&lt;/code> once and keep your fleet easy to identify.&lt;/p></description></item><item><title>WAHA 2025.11 - Auto Presence, Leaner GOWS</title><link>/blog/waha-2025-11/</link><pubDate>Sun, 30 Nov 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-11/</guid><description>&lt;h2 id="-presence--auto-online">✅ Presence – Auto Online&lt;/h2>
 &lt;p>Presence now sets you &lt;code>online&lt;/code> when you do anything via the API, then returns to &lt;code>offline&lt;/code> after a few seconds. Dashboards stay correct, and your phone still receives notifications.&lt;/p></description></item><item><title>Discord Community</title><link>/blog/discord-community/</link><pubDate>Sat, 08 Nov 2025 08:48:45 +0000</pubDate><guid>/blog/discord-community/</guid><description>&lt;p>For months the community has been asking for a single place to talk, debug, and share ideas between releases.&lt;/p>
-&lt;p>&lt;strong>WAHA Discord&lt;/strong> is finally open to the community (for &lt;a href="/support-us/">Plus and PRO supporters&lt;/a>) so you can keep the momentum going. 🎉&lt;/p></description></item><item><title>WAHA 2025.10 - ChatWoot Pull Commands, Secure Defaults</title><link>/blog/waha-2025-10/</link><pubDate>Fri, 31 Oct 2025 08:48:45 +0000</pubDate><guid>/blog/waha-2025-10/</guid><description>&lt;h2 id="-chatwoot--messages-sync">💬 ChatWoot – Messages Sync&lt;/h2>
-&lt;p>Need old conversations inside ChatWoot? Run &lt;code>wa/messages pull&lt;/code> to replay WhatsApp chat history, pick the time range, fetch media, and even close conversations during the import. Every switch is explained in the &lt;a href="/blog/apps-chatwoot-messages/">&lt;strong>💬 ChatWoot – Messages Guide&lt;/strong>&lt;/a>.&lt;/p></description></item></channel></rss>
+&lt;p>&lt;strong>WAHA Discord&lt;/strong> is finally open to the community (for &lt;a href="/support-us/">Plus and PRO supporters&lt;/a>) so you can keep the momentum going. 🎉&lt;/p></description></item></channel></rss>
