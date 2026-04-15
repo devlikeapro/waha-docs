@@ -1,0 +1,1 @@
+import{useLayout as t}from"./E-kI_Wwh.js";import{c as e}from"./YawV4R7Y.js";const n={__name:"AppFooter",setup(r){const{layoutConfig:o}=t();return e(()=>`/dashboard/layout/images/${o.darkTheme.value?"logo-white":"logo-dark"}.svg`),(a,u)=>null}};export{n as default};
