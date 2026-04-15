@@ -80,6 +80,7 @@ Latest Version:
 - `2026.4.1` - **GOWS** - await group response when starting a new session - fix #2012
 - `2026.4.1` - **GOWS** - `GET /api/messages` — messages sent via `POST /api/sendFile` not returned - fix #1998
 - `2026.4.1` - **GOWS** - `/chats/overview` `"no such column: jid"` error - fix #2009
+- `2026.4.1` - **WEBJS** - fix "window is undefined" - fix #1990
 - `2026.4.1` - **WEBJS** - fix loading messages - fix #2005, fix #2013
 - `2026.4.1` - **WEBJS** - fix `call.received` event - fix #2014
 - `2026.4.1` - **WEBJS** - populate `replyTo` with more fields
