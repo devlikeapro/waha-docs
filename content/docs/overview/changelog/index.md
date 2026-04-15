@@ -57,6 +57,55 @@ Latest Version:
 
 👉🏻 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
+### 2026.4
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🆕 **New**
+- `2026.4.1` - **All engines** - Add `replyTo.media` to messages - populate quoted media when available
+
+**🧩 Apps**
+- `2026.4.1` - Calls App - add wait before decline and response
+- `2026.4.1` - Apps - allow disabling an app at runtime
+
+**🧩 ChatWoot**
+- `2026.4.1` - support WhatsApp status replies — append status context and attach quoted status media - fix #1995, fix #1991
+- `2026.4.1` - conditional agent name prefix — skip `**: ` when sender name is empty - fix #1983, fix #1737
+- `2026.4.1` - fix LID contact sending failure — strip device part from LID JID - fix #1985
+- `2026.4.1` - normalize LID device part on read to unblock existing contacts
+
+🛠️ **Fixes**
+- `2026.4.1` - **NOWEB** - MongoDB `GET /api/messages` timestamp range filter (`gte` + `lte` combined) not respected - fix #2011
+- `2026.4.1` - Fix `WHATSAPP_FILES_LIFETIME` 32-bit `setTimeout` overflow causing immediate file deletion - fix #2018, fix #2019
+- `2026.4.1` - **GOWS** - await group response when starting a new session - fix #2012
+- `2026.4.1` - **GOWS** - `GET /api/messages` — messages sent via `POST /api/sendFile` not returned - fix #1998
+- `2026.4.1` - **GOWS** - `/chats/overview` `"no such column: jid"` error - fix #2009
+- `2026.4.1` - **WEBJS** - fix loading messages - fix #2005, fix #2013
+- `2026.4.1` - **WEBJS** - fix `call.received` event - fix #2014
+- `2026.4.1` - **WEBJS** - populate `replyTo` with more fields
+- `2026.4.1` - **WEBJS** - ignore reactions older than 2 days - mention #494
+- `2026.4.1` - **WEBJS** - try both `fromMe: true/false` when fetching DM message by id
+- `2026.4.1` - **WEBJS** - treat status messages as `fromMe` when fetching by id
+- `2026.4.1` - **NOWEB** - fallback to message id lookup when JID+id not found
+- `2026.4.1` - **NOWEB** - use stream mode for media download to fix 0-byte audio/voice files - fix #1996
+- `2026.4.1` - Increase media resolve timeout to ~12 s total
+- `2026.4.1` - Exclude `/jobs` from global Swagger basic auth - fix #1679
+
+**📊 Dashboard**
+- `2026.4.1` - Dashboard - Chat UI: media preview, message history, show more chats in overview
+- `2026.4.1` - Dashboard - fix empty sender name for automated messages - fix #1983
+
+⚙️ **Updates**
+- `2026.4.1` - **NOWEB** - up proto to `2.3000.1035920091`
+- `2026.4.1` - **WEBJS** - up engine
+- `2026.4.1` - **WPP** - up engine
+- `2026.4.1` - **GOWS** - up engine
+- `2026.4.1` - ChatWoot - up to `4.12.1`
+- `2026.4.1` - autodetect OS and browser
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2026.3
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
