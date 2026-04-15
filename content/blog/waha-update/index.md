@@ -14,8 +14,6 @@ slug: waha-update
 toc: true
 ---
 
-## Overview
-
 This guide covers how to update **WAHA** to the latest version depending on how you deployed it:
 
 {{< callout context="tip" title="Sessions are safe" icon="outline/shield-check" >}}
