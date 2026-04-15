@@ -7226,7 +7226,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2026.3.1",
+    "version": "2026.4.1",
     "contact": {}
   },
   "tags": [
@@ -7556,6 +7556,16 @@
           "message": {
             "type": "string",
             "description": "Optional auto-reply message sent after the call is rejected. If empty, no message is sent."
+          },
+          "waitBeforeDecline": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Seconds to wait before declining the call. If not set or undefined, the call is declined immediately (0 seconds)."
+          },
+          "waitBeforeResponse": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Seconds to wait before sending the auto-reply message. If not set or undefined, the message is sent immediately (0 seconds)."
           }
         },
         "required": [
@@ -8406,13 +8416,26 @@
             "type": "string",
             "example": "Hello!"
           },
+          "hasMedia": {
+            "type": "boolean",
+            "description": "Indicates if the message has media available for download"
+          },
+          "media": {
+            "description": "Media object for the message if any and downloaded",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WAMedia"
+              }
+            ]
+          },
           "_data": {
             "type": "object",
             "description": "Raw data from reply's message"
           }
         },
         "required": [
-          "id"
+          "id",
+          "hasMedia"
         ]
       },
       "WAMessage": {
