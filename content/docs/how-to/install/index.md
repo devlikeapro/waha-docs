@@ -33,7 +33,7 @@ Self-hosting WAHA gives you complete control over your privacy:
 - **Cost Control**: No per-session/per-message pricing - scale as much as you need
 - **Integration**: Deep integration with your existing infrastructure
 
-## Deployment Options
+## Install
 
 WAHA supports 
 [**multiple deployment methods**]({{< relref "/categories/install" >}})
@@ -51,13 +51,25 @@ All options are containerized - choose based on **how you want to manage it**.
 
 Use **Docker** and **Docker Compose** for consistent, portable deployments.
 
+{{< link-card title="👉 Deploy WAHA on Docker" href="/blog/waha-on-docker/" >}}
+
+```yaml {title="docker-compose.yaml"}
+services:
+  waha:
+    image: devlikeapro/waha
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./.sessions:/app/.sessions
+    # ...
+```
+
 - **Management**: CLI and Compose files 🟠
 - **Complexity**: Medium 🟠
 - **Maintenance**: Command line to pull image and restart  🟠
 - **Flexibility**: Full control over configuration and scaling 🟢
 - **Cons**: You own uptime, backups, and monitoring; updates are manual 🔴
-
-{{< link-card title="👉 Deploy WAHA on Docker" href="/blog/waha-on-docker/" >}}
 
 <hr>
 
@@ -69,13 +81,15 @@ Use **Docker** and **Docker Compose** for consistent, portable deployments.
 
 Use an intuitive [**EasyPanel**](https://easypanel.io/) interface to deploy, manage, and provision SSL certificates.
 
+{{< link-card title="👉 Deploy WAHA on EasyPanel" href="/blog/waha-on-easypanel/" >}}
+
+![EasyPanel overview](easypanel-overview.png)
+
 - **Management**: UI (point-and-click) 🟢
 - **Complexity**: Low 🟢
 - **Maintenance**: One-click updates, SSL, and monitoring from the panel 🟢
 - **Flexibility**: Less control over low-level settings 🟠
 - **Cons**: Not open source, paid for more than 3 projects 🔴
-
-{{< link-card title="👉 Deploy WAHA on EasyPanel" href="/blog/waha-on-easypanel/" >}}
 
 <hr>
 
@@ -87,13 +101,15 @@ Use an intuitive [**EasyPanel**](https://easypanel.io/) interface to deploy, man
 
 [**Coolify**](https://coolify.io/) is an open-source & self-hostable alternative to Vercel and co for easily deploying services to your own server.
 
+{{< link-card title="👉 Deploy WAHA on Coolify" href="/blog/waha-on-coolify/" >}}
+
+![Coolify overview](coolify-overview.png)
+
 - **Management**: UI (self-hosted) 🟢
 - **Complexity**: Low 🟢
 - **Maintenance**: Panel-driven updates and monitoring 🟢
 - **Flexibility**: Less control over low-level settings 🟠
 - **Cons**: More developer-focused panel 🔴
-
-{{< link-card title="👉 Deploy WAHA on Coolify" href="/blog/waha-on-coolify/" >}}
 
 <hr>
 
@@ -107,6 +123,10 @@ please follow the specific installation and configuration guides provided for ea
 {{< link-card title="👉 WhatsApp + ChatWoot - Installation Guide" href="/blog/apps-chatwoot-1-install/" >}}
 
 <hr>
+
+## Update
+
+{{< link-card title="👉 How to Update WAHA" href="/blog/waha-update/" >}}
 
 ## What's next?
 
