@@ -133,3 +133,35 @@ wa/contacts pull
   --attempts 8
   --timeout 15m
 ```
+
+---
+
+```bash
+wa/contacts pull --help
+```
+
+👤 Run `contacts pull` to launch a sync or `contacts status` to inspect progress.
+
+Send a command to the conversation in the format:
+**contacts \[options\]**
+
+**Arguments:**
+
+-   **action** `start` to launch a contact pull or `status` to inspect the active job. (choices: “pull”, “status”, “help”)
+
+**Options:**
+
+-   `-a, --avatar <mode>` Choose how to pull avatars for contacts. (choices: “if-missing”, “update”)
+-   `-g, --groups` Include WhatsApp group contacts in the sync.
+-   `-l, --lids` Include WhatsApp LID contacts (anonymous contacts) in the sync.
+-   `--na, --no-attributes` Do not pull contact attributes if contact already exists (it speeds up the process).
+-   `-b, --batch <number>` Number of contacts to pull in each batch. (default: 100)
+-   `-p, --progress [number]` Report progress every N contacts. Set to 0 to disable progress reports. (default: 100)
+-   `--at, --attempts <number>` Number of times to retry the job before marking it as failed. (default: 6)
+-   `-t, --timeout <duration>` Maximum time the job is allowed to run before it is retried (supports values like `30s`, `5m`, `1h`). (default: 600000)
+-   `--dc, --delay-contact <duration>` Delay between syncing each contact to avoid rate limiting in pulling avatars. (default: 0.1s)
+-   `--db, --delay-batch <duration>` Delay between batches of contacts. (default: 1s)
+-   `-h, --help` display help for command
+
+
+---

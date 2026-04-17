@@ -247,10 +247,6 @@ wa/messages pull 1y --rc --pause
 
 Adjust the values to fit your environment and run `wa/messages help` to see current defaults from your build.
 
-```bash
-wa/messages help
-```
-
 ```bash {title="Full Options"}
 wa/messages pull
   --chat all
@@ -269,6 +265,44 @@ wa/messages pull
   --timeout 10m
   --timeout-media 30s
 ```
+
+```bash
+wa/messages help
+```
+
+---
+
+💬 Run `messages pull` to request message sync or `messages status` to review progress.
+
+Send a command to the conversation in the format:  
+**messages \[options\]**
+
+**Arguments:**
+
+-   **action** `pull` to start a message pull or `status` to inspect the active job. (choices: “pull”, “status”, “help”)
+-   **end** Set how far back the pull window ends, e.g., `2d` stops at two days ago. (default: 1d)
+-   **start** Set where the pull window starts, e.g., `1d` begins one day ago (defaults to `0d`, meaning now). (default: 0d)
+
+**Options:**
+
+-   `-c, --chat <chat>` Limit the pull to a specific WhatsApp Chat ID. (default: “all”)
+-   `-f, --force` Force the inbox to create messages even when the WhatsApp message already exists in the conversation mapping.
+-   `--nd, --no-dm` Skip direct messages while pulling history.
+-   `-g, --groups` Include WhatsApp group chats when pulling history.
+-   `--ch, --channels` Include WhatsApp Channels when pulling history.
+-   `-s, --status` Include WhatsApp status updates when pulling history.
+-   `--bc, --broadcast` Include broadcast lists when pulling history.
+-   `-m, --media` Fetch media attachments (images, videos, files) when pulling history.
+-   `--pause` Enqueue the messages pull job in a paused state, halting new WhatsApp message processing until the pull completes.
+-   `--rc, --resolve-conversations` Mark the conversations as resolved after all history messages are processed.
+-   `-b, --batch <number>` Number of messages to pull in each batch. (default: 100)
+-   `-p, --progress [number]` Report progress every N messages. Set to 0 to disable progress reports. (default: 1000)
+-   `--at, --attempts <number>` Number of times to retry the job before marking it as failed. (default: 6)
+-   `-t, --timeout <duration>` Maximum time the job is allowed to run before it is retried (supports values like `30s`, `5m`, `1h`). (default: 600000)
+-   `--tm, --timeout-media <duration>` Set how long to try downloading media for each message. (default: 30s)
+-   `-h, --help` display help for command
+
+---
 
 ## FAQ
 
