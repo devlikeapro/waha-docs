@@ -69,6 +69,8 @@ Latest Version:
 - `2026.4.1` - Apps - allow disabling an app at runtime
 
 **🧩 ChatWoot**
+- `2026.4.2` - Disable new version messages by sending "queue stop check.version" - fix #2025
+- `2026.4.2` - fix agent name even when disabled - fix #2030
 - `2026.4.1` - support WhatsApp status replies — append status context and attach quoted status media - fix #1995, fix #1991
 - `2026.4.1` - conditional agent name prefix — skip `**: ` when sender name is empty - fix #1983, fix #1737
 - `2026.4.1` - fix LID contact sending failure — strip device part from LID JID - fix #1985
