@@ -20,7 +20,7 @@ slug: "about"
 ## Available Apps
 Apps available to connect:
 - [**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}) - use your **WhatsApp** in **ChatWoot CRM**
-- [**Calls**]({{< relref "/docs/apps/calls" >}}) - automatically **reject calls** and **auto-reply with a message**
+- [**Reject Calls**]({{< relref "/docs/apps/calls" >}}) - automatically **reject calls** and **auto-reply with a message**
 
 ## Configuration
 

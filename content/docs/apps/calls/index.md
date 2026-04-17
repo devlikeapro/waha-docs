@@ -1,7 +1,7 @@
 ---
-title: "Calls"
-description: "Calls App"
-lead: "Calls App"
+title: "Reject Calls"
+description: "Reject Calls App"
+lead: "Reject Calls App"
 date: 2025-07-10T08:49:31+00:00
 lastmod: 2024-07-10T08:49:31+00:00
 draft: false
