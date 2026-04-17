@@ -44,7 +44,7 @@
 &lt;/svg>
  &lt;div class="callout-content">
  &lt;div class="callout-title">
- &lt;p>Disclaimer&lt;/p></description></item><item><title>Calls</title><link>/docs/apps/calls/</link><pubDate>Thu, 10 Jul 2025 08:49:31 +0000</pubDate><guid>/docs/apps/calls/</guid><description>&lt;p>You can &lt;strong>automatically reject calls&lt;/strong> and &lt;strong>auto-reply with a message&lt;/strong> using this app.&lt;/p>
+ &lt;p>Disclaimer&lt;/p></description></item><item><title>Reject Calls</title><link>/docs/apps/reject-calls/</link><pubDate>Thu, 10 Jul 2025 08:49:31 +0000</pubDate><guid>/docs/apps/reject-calls/</guid><description>&lt;p>You can &lt;strong>automatically reject calls&lt;/strong> and &lt;strong>auto-reply with a message&lt;/strong> using this app.&lt;/p>
 &lt;h2 id="installation">Installation&lt;/h2>
 &lt;ul>
 &lt;li>Configure env variables&lt;/li>
