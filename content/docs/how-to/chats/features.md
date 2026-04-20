@@ -15,8 +15,8 @@
 | **Get message by id** <br> `GET /api/{session}/chats/{chatId}/messages/{messageId}`    |  ✔️   | ✔️  |  ✔️  |  ✔️¹  |
 | **Pin message** <br> `POST /api/{session}/chats/{chatId}/messages/{messageId}/pin`     |  ✔️   |     |      |  ✔️   |
 | **Unpin message** <br> `POST /api/{session}/chats/{chatId}/messages/{messageId}/unpin` |  ✔️   |     |      |  ✔️   |
-| **Edit message** <br> `PUT /api/{session}/chats/{chatId}/messages/{messageId}`         |  ✔️   | ✔️  |      |  ✔️   |
-| **Delete message** <br> `DELETE /api/{session}/chats/{chatId}/messages/{messageId}`    |  ✔️   | ✔️  |      |  ✔️   |
+| **Edit message** <br> `PUT /api/{session}/chats/{chatId}/messages/{messageId}`         |  ✔️   | ✔️  |  ✔️  |  ✔️   |
+| **Delete message** <br> `DELETE /api/{session}/chats/{chatId}/messages/{messageId}`    |  ✔️   | ✔️  |  ✔️  |  ✔️   |
 | **Delete all messages** <br> `DELETE /api/{session}/chats/{chatId}/messages`           |  ✔️   |     |      |       |
 
 1. **NOWEB** - you need to [**Enable Store**]({{< relref "/docs/engines/noweb#store" >}}) to get **chats, contacts and messages**
