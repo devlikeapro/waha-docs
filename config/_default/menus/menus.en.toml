@@ -125,6 +125,12 @@ weight = 90
 
 
 [[main]]
+name = "WhatsApp Model Context Protocol (MCP)"
+parent = "more"
+url = "/whatsapp-mcp/"
+weight = 90.5
+
+[[main]]
 name = "WhatsApp Channels Automation"
 parent = "more"
 url = "/whatsapp-channels/"

@@ -1,0 +1,283 @@
+{{ define "main" }}
+<script>
+    AOS.init();
+</script>
+
+{{ $content := readFile "/layouts/include/bubbles.html" | safeHTML }}
+{{ $content }}
+
+<section class='section section-md pb-0'>
+    <div class='container'>
+        <div class='row text-center mb-4'>
+            <div class='col' data-aos="fade-up">
+                <h1 class='display-5 fw-normal mt-1'>{{ .Summary }}</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-lg-10 d-flex flex-column gap-2 mb-4' data-aos="fade-up">
+                <div>
+                    <p class="lead">
+                        <a href="/">WAHA</a> turns your <b>self-hosted</b> WhatsApp into an
+                        <a href="https://modelcontextprotocol.io">MCP server</a>
+                        so AI agents — Claude, Goose, OpenClaw, and others — can
+                        <b>read chats, send messages, manage contacts, and more</b>
+                        through your own infrastructure.
+                        <br>
+                        <br>
+                        Set <b>granular permission scopes</b> to control exactly what each agent is allowed to do.
+                    </p>
+                </div>
+                <div class='text-center flex-grow-1 d-flex flex-column justify-content-center'>
+                    <div class='mb-4'>
+                        <img src='/images/logo.svg' title='WhatsApp API' alt='WAHA logo'
+                             style='border-radius: 50%; width: 7rem'/>
+                    </div>
+                    <div>
+                        <a class='btn btn-primary btn-lg px-4 mb-2'
+                           href='#how-to-start'
+                           role='button'>Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-lg-6 order-first order-lg-last d-flex justify-content-center mb-4' data-aos="fade-up">
+                <img
+                    src='/docs/apps/mcp/mcp-logo.png'
+                    title='WhatsApp MCP — Model Context Protocol'
+                    alt='MCP logo'
+                    style='width: 22rem; object-fit: contain'
+                />
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+
+<section class='section section-sm'>
+    <div class='container'>
+        <div class='row justify-content-center text-center'>
+            <div class='col-12 mt-4' data-aos="fade-up">
+                <h2>What You Can Do with WhatsApp MCP</h2>
+            </div>
+        </div>
+
+        <style>
+            .mcp-demo {
+                --border: #e5e5e5;
+                --text: #0d0d0d;
+                --text-muted: #6b6b6b;
+                --accent: #10a37f;
+                max-width: 720px;
+                margin: 1.5rem auto;
+                padding: 20px 24px;
+                background: #ffffff;
+                border: 1px solid var(--border);
+                border-radius: 12px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+                color: var(--text);
+                font-size: 15px;
+                line-height: 1.55;
+            }
+            .mcp-demo .mcp-row { display: flex; gap: 14px; margin-bottom: 22px; }
+            .mcp-demo .mcp-row:last-child { margin-bottom: 0; }
+            .mcp-demo .mcp-av {
+                width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+                display: flex; align-items: center; justify-content: center;
+                font-size: 12px; font-weight: 600; color: #fff;
+            }
+            .mcp-demo .mcp-av.user { background: #6b4eb8; }
+            .mcp-demo .mcp-av.bot  { background: #1a1a1a; }
+            .mcp-demo .mcp-body { flex: 1; min-width: 0; padding-top: 3px; }
+            .mcp-demo .mcp-who { font-weight: 600; font-size: 13.5px; margin-bottom: 4px; }
+            .mcp-demo .mcp-body p { margin: 0 0 10px; }
+            .mcp-demo .mcp-body code {
+                background: #f0f0f0; padding: 2px 6px; border-radius: 4px;
+                font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13px;
+            }
+            .mcp-demo .mcp-body pre {
+                background: #f0f0f0; padding: 10px 12px; border-radius: 6px;
+                font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+                font-size: 12.5px; overflow-x: auto; margin: 0 0 10px;
+            }
+            .mcp-demo .mcp-tool {
+                background: #fafafa; border: 1px solid var(--border); border-radius: 8px;
+                padding: 8px 12px; margin: 6px 0 12px;
+                display: flex; align-items: center; gap: 10px; font-size: 13px;
+            }
+            .mcp-demo .mcp-tool-icon {
+                width: 20px; height: 20px; border-radius: 4px;
+                background: #25d366; color: #fff;
+                display: flex; align-items: center; justify-content: center;
+                font-size: 11px; font-weight: 700; flex-shrink: 0;
+            }
+            .mcp-demo .mcp-tool-name {
+                font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+                color: var(--accent); font-size: 12.5px;
+            }
+            .mcp-demo .mcp-tool-meta { margin-left: auto; color: var(--text-muted); font-size: 12px; }
+            .mcp-demo .mcp-body h4 { font-size: 14px; font-weight: 600; margin: 14px 0 6px; }
+            .mcp-demo .mcp-body ul { margin: 0 0 10px; padding-left: 20px; }
+            .mcp-demo .mcp-body ul li { margin-bottom: 4px; }
+            .mcp-demo .mcp-body strong { font-weight: 600; }
+        </style>
+
+        <!-- Demo 1: Summarize -->
+        <div class="mcp-demo" data-aos="fade-up">
+            <div class="mcp-row">
+                <div class="mcp-av user">U</div>
+                <div class="mcp-body">
+                    <div class="mcp-who">You</div>
+                    <p>Summarize customer messages for the last 7 days in chat <code>120363045@g.us</code></p>
+                </div>
+            </div>
+            <div class="mcp-row">
+                <div class="mcp-av bot">✦</div>
+                <div class="mcp-body">
+                    <div class="mcp-who">Agent</div>
+                    <div class="mcp-tool">
+                        <div class="mcp-tool-icon">W</div>
+                        <span>Used <span class="mcp-tool-name">chats-get-messages</span></span>
+                        <span class="mcp-tool-meta">via MCP · 247 messages</span>
+                    </div>
+                    <p>Here's a summary of customer activity over the last 7 days:</p>
+                    <h4>Top topics</h4>
+                    <ul>
+                        <li><strong>Shipping delays</strong> — 23 customers asking about late orders; most affected by carrier delays in the northeast.</li>
+                        <li><strong>Refund requests</strong> — 8 open cases, 3 of which are past the 5-day SLA.</li>
+                        <li><strong>Product questions</strong> — 41 inquiries about sizing and availability; top item: the navy jacket.</li>
+                    </ul>
+                    <h4>Action items</h4>
+                    <ul>
+                        <li>Follow up with 3 customers whose refunds are overdue</li>
+                        <li>Post a shipping delay notice to reduce repeat inquiries</li>
+                        <li>Restock the navy jacket — frequently asked about, currently out of stock</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Demo 2: Download files -->
+        <div class="mcp-demo" data-aos="fade-up">
+            <div class="mcp-row">
+                <div class="mcp-av user">U</div>
+                <div class="mcp-body">
+                    <div class="mcp-who">You</div>
+                    <p>Download files for the last 7 days in chat <code>120363045@g.us</code></p>
+                </div>
+            </div>
+            <div class="mcp-row">
+                <div class="mcp-av bot">✦</div>
+                <div class="mcp-body">
+                    <div class="mcp-who">Agent</div>
+                    <div class="mcp-tool">
+                        <div class="mcp-tool-icon">W</div>
+                        <span>Used <span class="mcp-tool-name">chats-get-messages</span></span>
+                        <span class="mcp-tool-meta">via MCP · downloadMedia=true · 28 files</span>
+                    </div>
+                    <div class="mcp-tool">
+                        <div class="mcp-tool-icon">W</div>
+                        <span>Used <span class="mcp-tool-name">curl</span></span>
+                        <span class="mcp-tool-meta">via MCP · ×28 downloads</span>
+                    </div>
+                    <p>Downloaded <strong>28 files</strong> from the last 7 days:</p>
+                    <ul>
+                        <li><strong>14 images</strong> — <code>.jpg</code>, <code>.png</code></li>
+                        <li><strong>9 documents</strong> — <code>.pdf</code>, <code>.docx</code></li>
+                        <li><strong>5 videos</strong> — <code>.mp4</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Demo 3: Delete spam -->
+        <div class="mcp-demo" data-aos="fade-up">
+            <div class="mcp-row">
+                <div class="mcp-av user">U</div>
+                <div class="mcp-body">
+                    <div class="mcp-who">You</div>
+                    <p>Delete spam messages for the last 7 days in chat <code>120363045@g.us</code></p>
+                </div>
+            </div>
+            <div class="mcp-row">
+                <div class="mcp-av bot">✦</div>
+                <div class="mcp-body">
+                    <div class="mcp-who">Agent</div>
+                    <div class="mcp-tool">
+                        <div class="mcp-tool-icon">W</div>
+                        <span>Used <span class="mcp-tool-name">chats-get-messages</span></span>
+                        <span class="mcp-tool-meta">via MCP · 187 messages scanned</span>
+                    </div>
+                    <div class="mcp-tool">
+                        <div class="mcp-tool-icon">W</div>
+                        <span>Used <span class="mcp-tool-name">chats-delete-message</span></span>
+                        <span class="mcp-tool-meta">via MCP · ×14 calls</span>
+                    </div>
+                    <p>Deleted <strong>14 spam messages</strong> matching these patterns:</p>
+                    <ul>
+                        <li>Repeated promotional links from unknown numbers</li>
+                        <li>"Forward this to 10 people" chain messages</li>
+                        <li>Identical messages sent more than 3 times in a row</li>
+                    </ul>
+                    <p>187 messages were scanned — the remaining 173 were left untouched.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class='section section-sm'>
+    <div class='container hr'>
+        <div class='row justify-content-center text-center'>
+            <div class='col-12 mt-4' data-aos="fade-up">
+                <h2>Control Your AI Agent</h2>
+            </div>
+            <div class='col-12 mt-2 mb-4' data-aos="fade-up">
+                Set <b>granular permission scopes</b> per API key — allow or restrict exactly what each agent can read, send, or delete.
+            </div>
+            <div class='col-12 col-lg-10' data-aos="fade-up" data-aos-delay="100">
+                <img
+                    style="max-width: 100%; border-radius: 8px; border: 1px solid #e5e5e5;"
+                    src="/docs/apps/mcp/waha-mcp-agent-permissions.png"
+                    alt="WAHA MCP agent permissions screenshot"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ $content := readFile "/layouts/whatsapp-mcp/how-to-use-section.html" | safeHTML }}
+{{ $content }}
+
+{{ $content := readFile "/layouts/include/how-to-use-images.html" | safeHTML }}
+{{ $content }}
+
+<section class='section section-md' id="how-to-start">
+    <div class='container hr'>
+        <div class='text-center mt-4' data-aos="zoom-out">
+            <h2 class='display-5 fw-normal mt-1'>How To Start?</h2>
+        </div>
+        <div class='row justify-content-center text-center' data-aos="zoom-out">
+            <div class='col-11 col-lg-9 fs-3' style='min-width: 25rem'>
+                <p>
+                    Follow
+                    <a href='/docs/overview/quick-start'>
+                        <b>⚡ Quick Start</b>
+                    </a>
+                    to run WAHA, then check out
+                    <br>
+                    <a href='/docs/apps/mcp/'>
+                        <b>🤖 MCP</b>
+                    </a>
+                    to connect your AI agent!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ $content := readFile "/layouts/include/why-waha-section.html" | safeHTML }}
+{{ $content }}
+
+{{ end }}
