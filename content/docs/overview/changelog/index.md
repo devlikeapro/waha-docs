@@ -83,6 +83,10 @@ Latest Version:
 - `2026.4.1` - normalize LID device part on read to unblock existing contacts
 
 🛠️ **Fixes**
+- `2026.4.3` - **GOWS** - Add tctoken lifecycle - fix #2050
+- `2026.4.3` - **NOWEB** - Fix missing Facebook and Instagram ADs messages - fix #1922
+- `2026.4.3` - **GOWS** - Fix "Sessions take a long time to start after server restart" - fix #2012
+- `2026.4.3` - **GOWS** - Fix 403 on some media download - use re-upload request from the phone for this - fix #2049
 - `2026.4.1` - **NOWEB** - MongoDB `GET /api/messages` timestamp range filter (`gte` + `lte` combined) not respected - fix #2011
 - `2026.4.1` - Fix `WHATSAPP_FILES_LIFETIME` 32-bit `setTimeout` overflow causing immediate file deletion - fix #2018, fix #2019
 - `2026.4.1` - **GOWS** - await group response when starting a new session - fix #2012
@@ -105,6 +109,8 @@ Latest Version:
 - `2026.4.1` - Dashboard - fix empty sender name for automated messages - fix #1983
 
 ⚙️ **Updates**
+- `2026.4.3` - **NOWEB** - up engine
+- `2026.4.3` - **GOWS** - up engine
 - `2026.4.1` - **NOWEB** - up proto to `2.3000.1035920091`
 - `2026.4.1` - **WEBJS** - up engine
 - `2026.4.1` - **WPP** - up engine
