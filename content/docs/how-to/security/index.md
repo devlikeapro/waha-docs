@@ -200,6 +200,24 @@ or the [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard#api-keys" >}}).
 
 Admin keys can access all sessions. Session keys are scoped to a single session via the `session` field.
 
+### Session Key Scopes
+
+Session keys support an optional `actions` field that limits what the key can do within its session.
+When `actions` is `null` (not set), all default permissions apply.
+
+| Scope     | Default | Description                                                                             |
+|-----------|---------|-----------------------------------------------------------------------------------------|
+| `read`    | `true`  | Read session data: messages, contacts, chats, groups, etc.                              |
+| `send`    | `true`  | Send messages and manage session entities (groups, labels, channels, contacts, profile) |
+| `control` | `true`  | Session lifecycle: start, stop, restart, logout, authenticate                           |
+| `setting` | `true`  | Update session settings                                                                 |
+| `app`     | `true`  | Manage apps                                                                             |
+| `delete`  | `false` | Delete the session                                                                      |
+
+{{< callout context="note" icon="outline/info-circle" >}}
+`actions` can only be set on **session-scoped** keys (where `isAdmin` is `false`). Admin keys always have full access.
+{{< /callout >}}
+
 ### List API keys
 
 ```http request
@@ -213,7 +231,8 @@ GET /api/keys
     "key": "key_11111111111AAAAAAAAAAAAAAAAAAAAA",
     "isActive": true,
     "isAdmin": false,
-    "session": "default"
+    "session": "default",
+    "actions": null
   }
 ]
 ```
@@ -233,12 +252,30 @@ Admin key:
 }
 ```
 
-Session key:
+Session key (all default permissions):
 ```jsonc { title="Body" }
 {
   "isAdmin": false,
   "session": "default",
-  "isActive": true
+  "isActive": true,
+  "actions": null
+}
+```
+
+Session key with limited scopes (read-only):
+```jsonc { title="Body" }
+{
+  "isAdmin": false,
+  "session": "default",
+  "isActive": true,
+  "actions": {
+    "read": true,
+    "send": false,
+    "control": false,
+    "setting": false,
+    "app": false,
+    "delete": false
+  }
 }
 ```
 
@@ -248,7 +285,15 @@ Session key:
   "key": "key_11111111111AAAAAAAAAAAAAAAAAAAAA",
   "isActive": true,
   "isAdmin": false,
-  "session": "default"
+  "session": "default",
+  "actions": {
+    "read": true,
+    "send": false,
+    "control": false,
+    "setting": false,
+    "app": false,
+    "delete": false
+  }
 }
 ```
 
@@ -262,7 +307,8 @@ PUT /api/keys/{id}
 {
   "isAdmin": false,
   "session": "default",
-  "isActive": false
+  "isActive": false,
+  "actions": null
 }
 ```
 
@@ -272,7 +318,8 @@ PUT /api/keys/{id}
   "key": "key_11111111111AAAAAAAAAAAAAAAAAAAAA",
   "isActive": false,
   "isAdmin": false,
-  "session": "default"
+  "session": "default",
+  "actions": null
 }
 ```
 

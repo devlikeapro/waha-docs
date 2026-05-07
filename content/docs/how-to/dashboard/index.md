@@ -53,14 +53,22 @@ If you're using [API Key]({{< relref "security" >}}), remember to set up the key
 
 ## API Keys
 
-![API Keys](waha-dashboard-api-keys.png)
-
-You can use `WAHA_API_KEY` as an API key, or you can create a new **admin** or **session** API Key using 
-the 
+You can use `WAHA_API_KEY` as an API key, or you can create a new **admin** or **session** API Key using
+the
 [**🔒 Keys API**]({{< relref "/docs/how-to/security#keys-api" >}})
 or the [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard#api-keys" >}}).
 
+![API Keys](waha-dashboard-api-keys.png)
+
 Admin keys can access all sessions. Session keys are scoped to a single session via the `session` field.
+
+Session keys also support **granular scopes** that restrict what actions the key can perform:
+
+<p align="center">
+  <img src="waha-dashboard-api-key-permissions.png" alt="API Keys Permissions">
+</p>
+
+Read more about available scopes in [**🔒 Session Key Scopes**]({{< relref "/docs/how-to/security#session-key-scopes" >}}).
 
 ## Event Monitor
 You can observe [**Events**]({{< relref "events" >}}) in real-time using **Event Monitor**:
