@@ -62,9 +62,15 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2026.4.3` - [**🧩 MCP**]({{< relref "/docs/apps/mcp" >}}) - fix #1925
+- `2026.4.3` - **API Key** - [**🔒 Session Key Scopes**]({{< relref "/docs/how-to/security#session-key-scopes" >}}) (read/send/etc) - fix #2035
+- `2026.4.3` - **API** - `GET /api/{session}/new-message-id` - generate message ID before sending
+- `2026.4.3` - **NOWEB**, **GOWS** - Provide message ID in send request - fix #2054
+- `2026.4.3` - **Auth** - [**🔒 Use `?x-api-key` query parameter**]({{< relref "/docs/how-to/security#use-x-api-key-query-parameter" >}}) for authentication
 - `2026.4.1` - **All engines** - Add `replyTo.media` to messages - populate quoted media when available
 
 **🧩 Apps**
+- `2026.4.3` - [**🧩 MCP**]({{< relref "/docs/apps/mcp" >}}) - fix #1925
 - `2026.4.1` - Calls App - add wait before decline and response
 - `2026.4.1` - Apps - allow disabling an app at runtime
 
