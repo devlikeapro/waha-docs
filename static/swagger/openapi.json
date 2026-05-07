@@ -496,7 +496,6 @@
       "put": {
         "operationId": "SessionsController_update",
         "summary": "Update a session",
-        "description": "",
         "parameters": [
           {
             "name": "session",
@@ -2140,6 +2139,43 @@
         "responses": {
           "201": {
             "description": ""
+          }
+        },
+        "tags": [
+          "📤 Chatting"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/new-message-id": {
+      "get": {
+        "operationId": "ChattingController_getNewMessageId",
+        "summary": "Generate a new message ID",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewMessageIDResponse"
+                }
+              }
+            }
           }
         },
         "tags": [
@@ -7221,12 +7257,26 @@
           }
         ]
       }
+    },
+    "/mcp": {
+      "post": {
+        "operationId": "McpController_post",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ]
+      }
     }
   },
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2026.4.1",
+    "version": "2026.4.3",
     "contact": {}
   },
   "tags": [
@@ -7385,6 +7435,35 @@
           "phoneNumber"
         ]
       },
+      "SessionActionsDTO": {
+        "type": "object",
+        "properties": {
+          "read": {
+            "type": "boolean",
+            "description": "Read session data (messages, contacts, chats, groups, etc.)"
+          },
+          "send": {
+            "type": "boolean",
+            "description": "Send messages and manage session entities (groups, labels, channels, contacts, profile)"
+          },
+          "control": {
+            "type": "boolean",
+            "description": "Session lifecycle: start, stop, restart, logout, authenticate"
+          },
+          "setting": {
+            "type": "boolean",
+            "description": "Session config: update session settings"
+          },
+          "app": {
+            "type": "boolean",
+            "description": "Manage apps"
+          },
+          "delete": {
+            "type": "boolean",
+            "description": "Delete the session"
+          }
+        }
+      },
       "ApiKeyRequest": {
         "type": "object",
         "properties": {
@@ -7403,6 +7482,15 @@
             "type": "boolean",
             "default": true,
             "example": true
+          },
+          "actions": {
+            "nullable": true,
+            "default": null,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SessionActionsDTO"
+              }
+            ]
           }
         },
         "required": [
@@ -7434,6 +7522,14 @@
             "type": "string",
             "nullable": true,
             "example": "default"
+          },
+          "actions": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SessionActionsDTO"
+              }
+            ]
           }
         },
         "required": [
@@ -7603,6 +7699,36 @@
           "group"
         ]
       },
+      "McpAppConfig": {
+        "type": "object",
+        "properties": {
+          "actions": {
+            "description": "Permission scopes for the generated API key.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SessionActionsDTO"
+              }
+            ]
+          },
+          "key_id": {
+            "type": "string",
+            "example": "key_id_00000000000000000000000000",
+            "nullable": true,
+            "readOnly": true,
+            "description": "ID of the API key created for this app. Read-only."
+          },
+          "key": {
+            "type": "string",
+            "example": "key_11111111111AAAAAAAAAAAAAAAAAAAAA",
+            "nullable": true,
+            "readOnly": true,
+            "description": "The API key value. Populated on read; not persisted in this record."
+          }
+        },
+        "required": [
+          "actions"
+        ]
+      },
       "App": {
         "type": "object",
         "properties": {
@@ -7620,7 +7746,8 @@
           "app": {
             "enum": [
               "chatwoot",
-              "calls"
+              "calls",
+              "mcp"
             ],
             "type": "string"
           },
@@ -8285,6 +8412,12 @@
           "chatId": {
             "type": "string",
             "example": "11111111111@c.us"
+          },
+          "id": {
+            "type": "string",
+            "description": "Pre-generated message id",
+            "example": "BBBBBBBBBBBBBBBBB",
+            "default": null
           },
           "reply_to": {
             "type": "string",
@@ -9174,6 +9307,12 @@
             "type": "string",
             "example": "11111111111@c.us"
           },
+          "id": {
+            "type": "string",
+            "description": "Pre-generated message id",
+            "example": "BBBBBBBBBBBBBBBBB",
+            "default": null
+          },
           "messageId": {
             "type": "string",
             "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
@@ -9328,6 +9467,12 @@
             "type": "string",
             "example": "11111111111@c.us"
           },
+          "id": {
+            "type": "string",
+            "description": "Pre-generated message id",
+            "example": "BBBBBBBBBBBBBBBBB",
+            "default": null
+          },
           "reply_to": {
             "type": "string",
             "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
@@ -9394,6 +9539,12 @@
           "chatId": {
             "type": "string",
             "example": "11111111111@c.us"
+          },
+          "id": {
+            "type": "string",
+            "description": "Pre-generated message id",
+            "example": "BBBBBBBBBBBBBBBBB",
+            "default": null
           },
           "latitude": {
             "type": "number",
@@ -9479,6 +9630,12 @@
             "type": "string",
             "example": "11111111111@c.us"
           },
+          "id": {
+            "type": "string",
+            "description": "Pre-generated message id",
+            "example": "BBBBBBBBBBBBBBBBB",
+            "default": null
+          },
           "contacts": {
             "type": "array",
             "items": {
@@ -9560,6 +9717,12 @@
             "type": "string",
             "example": "11111111111@c.us"
           },
+          "id": {
+            "type": "string",
+            "description": "Pre-generated message id",
+            "example": "BBBBBBBBBBBBBBBBB",
+            "default": null
+          },
           "reply_to": {
             "type": "string",
             "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
@@ -9595,22 +9758,41 @@
             "type": "string",
             "example": "11111111111@c.us"
           },
-          "session": {
+          "id": {
             "type": "string",
-            "default": "default"
+            "description": "Pre-generated message id",
+            "example": "BBBBBBBBBBBBBBBBB",
+            "default": null
           },
           "url": {
             "type": "string"
           },
           "title": {
             "type": "string"
+          },
+          "session": {
+            "type": "string",
+            "default": "default"
           }
         },
         "required": [
           "chatId",
-          "session",
           "url",
-          "title"
+          "title",
+          "session"
+        ]
+      },
+      "NewMessageIDResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Pre-generated message id",
+            "example": "BBBBBBBBBBBBBBBBB"
+          }
+        },
+        "required": [
+          "id"
         ]
       },
       "ChatSummary": {
@@ -10257,19 +10439,6 @@
             }
           }
         }
-      },
-      "NewMessageIDResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "Pre-generated message id",
-            "example": "BBBBBBBBBBBBBBBBB"
-          }
-        },
-        "required": [
-          "id"
-        ]
       },
       "Label": {
         "type": "object",
