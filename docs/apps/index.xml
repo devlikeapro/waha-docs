@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🧩 Apps on WAHA</title><link>/docs/apps/</link><description>Recent content in 🧩 Apps on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 13 Jul 2024 12:00:00 +0000</lastBuildDate><atom:link href="/docs/apps/index.xml" rel="self" type="application/rss+xml"/><item><title>Apps</title><link>/docs/apps/about/</link><pubDate>Sat, 13 Jul 2024 12:00:00 +0000</pubDate><guid>/docs/apps/about/</guid><description>&lt;p>&lt;strong>🧩 Apps&lt;/strong> are &lt;strong>built-in connections&lt;/strong> that integrate &lt;strong>WAHA&lt;/strong> with &lt;strong>other services&lt;/strong> in a few steps.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🧩 Apps on WAHA</title><link>/docs/apps/</link><description>Recent content in 🧩 Apps on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 10 Jul 2025 08:49:31 +0000</lastBuildDate><atom:link href="/docs/apps/index.xml" rel="self" type="application/rss+xml"/><item><title>Apps</title><link>/docs/apps/about/</link><pubDate>Sat, 13 Jul 2024 12:00:00 +0000</pubDate><guid>/docs/apps/about/</guid><description>&lt;p>&lt;strong>🧩 Apps&lt;/strong> are &lt;strong>built-in connections&lt;/strong> that integrate &lt;strong>WAHA&lt;/strong> with &lt;strong>other services&lt;/strong> in a few steps.&lt;/p>
 &lt;p>&lt;strong>WAHA Team&lt;/strong> fully supports &lt;strong>🧩 Apps&lt;/strong>.&lt;/p></description></item><item><title>Chatwoot</title><link>/docs/apps/chatwoot/</link><pubDate>Thu, 10 Jul 2025 08:49:31 +0000</pubDate><guid>/docs/apps/chatwoot/</guid><description>&lt;p align="center">
  &lt;img src="/images/chatwoot/waha-chatwoot.png" style="width: 150px">
 &lt;/p>
@@ -80,4 +80,96 @@
 &lt;li>Create an app using &lt;a href="/docs/how-to/dashboard/">&lt;strong>📊 Dashboard&lt;/strong>&lt;/a> or API below&lt;/li>
 &lt;/ul>
 &lt;h2 id="api">API&lt;/h2>
-&lt;p>You can use &lt;a href="/docs/apps/about/#api">&lt;strong>🧩 Apps API&lt;/strong>&lt;/a> or &lt;a href="/docs/how-to/sessions/#apps">&lt;strong>🖥️ Sessions&lt;/strong>&lt;/a> API endpoints.&lt;/p></description></item></channel></rss>
+&lt;p>You can use &lt;a href="/docs/apps/about/#api">&lt;strong>🧩 Apps API&lt;/strong>&lt;/a> or &lt;a href="/docs/how-to/sessions/#apps">&lt;strong>🖥️ Sessions&lt;/strong>&lt;/a> API endpoints.&lt;/p></description></item><item><title>MCP</title><link>/docs/apps/mcp/</link><pubDate>Thu, 10 Jul 2025 08:49:31 +0000</pubDate><guid>/docs/apps/mcp/</guid><description>&lt;p align="center">
+ &lt;img src="mcp-logo.png" alt="MCP Logo" style="width: 400px">
+&lt;/p>
+&lt;p>&lt;strong>WAHA MCP&lt;/strong> turns your &lt;strong>self-hosted&lt;/strong> WAHA instance into a
+&lt;a href="https://modelcontextprotocol.io/">Model Context Protocol&lt;/a> server.&lt;/p>
+
+
+
+&lt;div>&lt;/div>
+&lt;style>
+ .mcp-demo {
+ --border: #e5e5e5;
+ --text: #0d0d0d;
+ --text-muted: #6b6b6b;
+ --accent: #10a37f;
+
+ max-width: 720px;
+ margin: 1.5rem auto;
+ padding: 20px 24px;
+ background: #ffffff;
+ border: 1px solid var(--border);
+ border-radius: 12px;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+ color: var(--text);
+ font-size: 15px;
+ line-height: 1.55;
+ }
+ .mcp-demo .mcp-row {
+ display: flex;
+ gap: 14px;
+ margin-bottom: 22px;
+ }
+ .mcp-demo .mcp-row:last-child { margin-bottom: 0; }
+ .mcp-demo .mcp-av {
+ width: 28px; height: 28px;
+ border-radius: 50%;
+ flex-shrink: 0;
+ display: flex; align-items: center; justify-content: center;
+ font-size: 12px; font-weight: 600; color: #fff;
+ }
+ .mcp-demo .mcp-av.user { background: #6b4eb8; }
+ .mcp-demo .mcp-av.bot { background: #1a1a1a; }
+ .mcp-demo .mcp-body { flex: 1; min-width: 0; padding-top: 3px; }
+ .mcp-demo .mcp-who {
+ font-weight: 600; font-size: 13.5px; margin-bottom: 4px;
+ }
+ .mcp-demo .mcp-body p { margin: 0 0 10px; }
+ .mcp-demo .mcp-body code {
+ background: #f0f0f0; padding: 2px 6px; border-radius: 4px;
+ font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+ font-size: 13px;
+ }
+ .mcp-demo .mcp-body pre {
+ background: #f0f0f0; padding: 10px 12px; border-radius: 6px;
+ font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+ font-size: 12.5px; overflow-x: auto; margin: 0 0 10px;
+ }
+ .mcp-demo .mcp-tool {
+ background: #fafafa;
+ border: 1px solid var(--border);
+ border-radius: 8px;
+ padding: 8px 12px;
+ margin: 6px 0 12px;
+ display: flex; align-items: center; gap: 10px;
+ font-size: 13px;
+ }
+ .mcp-demo .mcp-tool-icon {
+ width: 20px; height: 20px; border-radius: 4px;
+ background: #25d366; color: #fff;
+ display: flex; align-items: center; justify-content: center;
+ font-size: 11px; font-weight: 700; flex-shrink: 0;
+ }
+ .mcp-demo .mcp-tool-name {
+ font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+ color: var(--accent); font-size: 12.5px;
+ }
+ .mcp-demo .mcp-tool-meta {
+ margin-left: auto; color: var(--text-muted); font-size: 12px;
+ }
+ .mcp-demo .mcp-body h4 {
+ font-size: 14px; font-weight: 600; margin: 14px 0 6px;
+ }
+ .mcp-demo .mcp-body ul { margin: 0 0 10px; padding-left: 20px; }
+ .mcp-demo .mcp-body ul li { margin-bottom: 4px; }
+ .mcp-demo .mcp-body strong { font-weight: 600; }
+&lt;/style>
+
+&lt;div class="mcp-demo">
+ &lt;div class="mcp-row">
+ &lt;div class="mcp-av user">U&lt;/div>
+ &lt;div class="mcp-body">
+ &lt;div class="mcp-who">You&lt;/div>
+ &lt;p>Summarize customer messages for the last 7 days in chat &lt;code>120363045@g.us&lt;/code>&lt;/p></description></item></channel></rss>
