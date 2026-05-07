@@ -106,12 +106,14 @@ After you set Api Key - to authorize on swagger, use the **Authorize** button at
 
 </div>
 
-### Use X-Api-Key in HTTP request
+### Use X-Api-Key in HTTP headers
 
 To authorize requests - set `X-Api-Key` header to `yoursecretkey` for all requests that go to WAHA.
 
 {{< include file="content/docs/how-to/security/set-x-api-key-http-header-code.md" >}}
 
+### Use x-api-key query parameter
+{{< include file="content/docs/how-to/security/-query-api-key.md" >}}
 
 ### Exclude endpoints
 If you need to exclude some endpoints (like `GET /health` or `GET /ping`) from the API Key requirement - you can

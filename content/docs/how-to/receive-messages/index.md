@@ -283,6 +283,12 @@ You can download the file using API - remember to provide API key in `X-Api-Key`
 
 {{< include file="content/docs/how-to/receive-messages/-api-download-media.md" >}}
 
+{{< details "❔️ **Use x-api-key=key query parameter**" >}}
+
+{{< include file="content/docs/how-to/security/-query-api-key.md" >}}
+
+{{< /details >}}
+
 {{< include file="content/docs/how-to/security/-files-auth-off.md" >}}
 
 For documents (file attachments) there's also `filename` field with the original file name.
