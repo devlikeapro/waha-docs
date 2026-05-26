@@ -64,6 +64,17 @@ WAHA_GOWS_DEVICE_HISTORY_SYNC_FULL_SYNC_SIZE_MB_LIMIT=512
 WAHA_GOWS_DEVICE_HISTORY_SYNC_STORAGE_QUOTA_MB=1024
 ```
 
+## Status Broadcast
+
+Controls batching behaviour when sending a WhatsApp status/story to `status@broadcast`.
+
+```bash
+# How many contacts are included per batch when sending a status to status@broadcast.
+# Lower this value if you experience gRPC timeout errors on large contact lists.
+# Default: 500
+WAHA_GOWS_STATUS_PARTICIPANTS_BATCH_SIZE=500
+```
+
 ### History Sync — All variables
 
 ```bash

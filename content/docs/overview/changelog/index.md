@@ -57,6 +57,39 @@ Latest Version:
 
 👉🏻 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
+### 2026.5
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🆕 **New**
+- `2026.5.1` - **GOWS** - Convert Lottie stickers (application/was) to animated WebP - fix #2039
+- `2026.5.1` - **GOWS** - Add `WAHA_GOWS_STATUS_PARTICIPANTS_BATCH_SIZE` env variable for status@broadcast batch size control - fix #2080
+
+🛠️ **Fixes**
+- `2026.5.1` - **WEBJS** - Session stuck in `starting`/`stopped` state due to Node.js Buffer limit with large RemoteAuth entries (PostgreSQL) - fix #2090
+- `2026.5.1` - **WEBJS** - Ignore symlinks for remote storages — **PLUS**
+- `2026.5.1` - **GOWS** - All outbound messages fail with error 400 until session restart - fix #2084
+- `2026.5.1` - **GOWS** - MediaRetry triggers on ciphertext hash mismatch (not only 403) - fix #2085
+- `2026.5.1` - **GOWS** - Fix status@broadcast batch timeouts, default batch size reduced to 500 - fix #2080
+- `2026.5.1` - **GOWS**, **NOWEB** - Send video: fix gif to mp4 format conversion - fix #2077
+- `2026.5.1` - **NOWEB** - message.edit event fix - fix #2072
+- `2026.5.1` - **GOWS** - Sticker download: drop placeholder a.whatsapp.net URL
+- `2026.5.1` - **GOWS** - Handle encrypted message edits - fix #2062
+- `2026.5.1` - **WEBJS** - e2e session and disappearing setting messages - fix #2046
+- `2026.5.1` - **API** - `POST /api/{session}/chats/overview` — require pagination - fix #2070
+
+**📊 Dashboard**
+- `2026.5.1` - Dashboard - WEBJS e2e session and disappearing messages settings support - fix #2046
+
+⚙️ **Updates**
+- `2026.5.1` - **GOWS** - up engine
+- `2026.5.1` - **NOWEB** - up engine
+- `2026.5.1` - **WPP** - up engine
+- `2026.5.1` - Dashboard - up
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2026.4
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}

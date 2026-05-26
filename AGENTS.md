@@ -39,6 +39,7 @@ POST /api/...
 - Use the format: `- `YYYY.M.N` - Area - change summary - fix #1234` (or `closes #1234` when applicable).
 - Keep the area short and consistent with the section; ChatWoot entries should not add extra tags like `[core]`, but with **PLUS** if mentioned
 - Link to docs only when it adds value, and keep the text concise.
+- **Multi-fix commits:** when a single commit message lists several `Fix #NNNN` lines (e.g. a `[core] Up GOWS` bump that embeds multiple fixes), **split each fix into its own separate changelog entry** — do not collapse them into one line.
 
 ## 🧩 Image Tools
 
