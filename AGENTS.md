@@ -23,6 +23,7 @@ POST /api/...
 
 ## Release Post
 
+
 - Check existing posts under `content/blog/waha-*/` before writing a new one — match their structure and tone.
 - Never use backtick `code` syntax inside markdown headers (`##`, `###`) — write identifiers and API paths as plain text in headings.
 - For every change that has a GitHub issue in the changelog, append the issue link(s) at the end of the line in the post: `— [#1234](https://github.com/devlikeapro/waha/issues/1234)`. Multiple issues comma-separated.
