@@ -12,8 +12,8 @@
 | `DELETE /api/{session}/groups/{id}`                                    |  ✔️   | ✔️  |       |      |
 | `POST /api/{session}/groups/{id}/leave`                                |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/picture`                               |  ✔️   | ✔️  |  ✔️   |  ✔️  |
-| `PUT /api/{session}/groups/{id}/picture`                               |   ➕   | ✔️  |   ➕   |  ➕   |
-| `DELETE /api/{session}/groups/{id}/picture`                            |   ➕   | ✔️  |   ➕   |  ➕   |
+| `PUT /api/{session}/groups/{id}/picture`                               |   ✔️   | ✔️  |   ✔️   |  ✔️   |
+| `DELETE /api/{session}/groups/{id}/picture`                            |   ✔️   | ✔️  |   ✔️   |  ✔️   |
 | `PUT /api/{session}/groups/{id}/description`                           |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `PUT /api/{session}/groups/{id}/subject`                               |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/invite-code`                           |  ✔️   | ✔️  |  ✔️   |  ✔️  |
@@ -28,6 +28,6 @@
 | `POST /api/{session}/groups/{id}/admin/promote`                        |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `POST /api/{session}/groups/{id}/admin/demote`                         |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 
-- ➕ - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
+- ✔️ - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 
 {{< /details >}}

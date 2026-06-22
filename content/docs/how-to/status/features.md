@@ -4,9 +4,9 @@
 | **API**                                                                        | WEBJS | WPP | NOWEB | GOWS  |
 |--------------------------------------------------------------------------------|:-----:|:---:|:-----:|:-----:|
 | **Send Text Status** </br> `POST /api/{session}/status/text`                   |  ✔️   | ✔️  |  ✔️   |  ✔️   |
-| **Send Image Status** </br> `POST /api/{session}/status/image`                 |  ✔️   | ➕  |  ✔️   |  ✔️   |
-| **Send Voice Status** </br> `POST /api/{session}/status/voice`                 |  ✔️   | ➕  |  ✔️   |  ✔️   |
-| **Send Video Status** </br> `POST /api/{session}/status/video`                 |  ✔️   | ➕  |  ✔️   |  ✔️   |
+| **Send Image Status** </br> `POST /api/{session}/status/image`                 |  ✔️   | ✔️  |  ✔️   |  ✔️   |
+| **Send Voice Status** </br> `POST /api/{session}/status/voice`                 |  ✔️   | ✔️  |  ✔️   |  ✔️   |
+| **Send Video Status** </br> `POST /api/{session}/status/video`                 |  ✔️   | ✔️  |  ✔️   |  ✔️   |
 | **Delete Status** </br> `POST /api/{session}/status/delete`                    |       |     |  ✔️   |  ✔️   |
 | **Get New Status Message ID** </br> `GET /api/{session}/status/new-message-id` |       |     |  ✔️   |  ✔️   |
 
