@@ -74,15 +74,17 @@ docker run ... devlikeapro/waha
 
 We dropped the **Core** / **Plus** / **PRO** tiers in Patreon and Boosty - you **don't need to subscribe** anymore to get WAHA Plus features (now it's all in WAHA Core)!
 
-We can not offer something extra in return - everything is FREE and available for everyone.
+👉🏻 There's a new **Community** tier - a symbolic **$5/mo**, just enough to keep the lights on. 👈🏻
+
+We can not offer something extra in return - everything is FREE starting [**2026.6.1**]({{< relref "/docs/overview/changelog" >}}) and available for everyone.
 This tier offers no perks, just a way to support the work.
 
 It's the **COMMUNITY** that made this project possible in the first place, and your contribution is what keeps it alive and growing 🌱 🫶🏻
 
 If WAHA helps you, consider donating in to keep it growing: [**🎁 Support Us**]({{< relref "/support-us" >}})
 
-{{< callout context="note" title="Why we go this way" icon="outline/info-circle" >}}
+{{< callout context="tip" title="Why we go this way" icon="outline/info-circle" >}}
 The project grew because the **COMMUNITY** supported it - and since we haven't shipped anything significant in the last few months, we decided to share the work the community already paid for with everyone.
 
-We'll keep supporting, upgrading and developing new features - the project lives if you go to **Patreon** / **Boosty** and back it with the new **Community** tier. It's a symbolic **$5/mo**, just enough to keep the lights on.
+We'll keep supporting, upgrading and developing new features - the project lives if you go to **Patreon** / **Boosty**  / **Crypto** and support it with the new **Community** tier. It's a symbolic **$5/mo**, just enough to keep the lights on.
 {{< /callout >}}
