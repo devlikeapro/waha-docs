@@ -86,5 +86,7 @@ If WAHA helps you, consider donating in to keep it growing: [**🎁 Support Us**
 {{< callout context="tip" title="Why we go this way" icon="outline/info-circle" >}}
 The project grew because the **COMMUNITY** supported it - and since we haven't shipped anything significant in the last few months, we decided to share the work the community already paid for with everyone.
 
-We'll keep supporting, upgrading and developing new features - the project lives if you go to **Patreon** / **Boosty**  / **Crypto** and support it with the new **Community** tier. It's a symbolic **$5/mo**, just enough to keep the lights on.
+We'll keep supporting, upgrading and developing new features - the project lives if you go to **Patreon** / **Boosty**  / **Crypto** and support it with the new **Community** tier. 
+
+It's a symbolic **$5/mo**, just enough to keep the lights on.
 {{< /callout >}}
