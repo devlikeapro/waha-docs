@@ -52,7 +52,7 @@ Those two things we'll need later soon, so kindly copy or remember it.
 
 ## Option 1 - Buy Crypto using CryptoCloud
 You can buy crypto using. **No wallet required**, it'll be sent directly to payment link above!
-<a href="https://buy.cryptocloud.plus/?lang=en"><b>CryptoCloud -></b></a>. 
+<a href="https://buy.trybit.com/?lang=en"><b>CryptoCloud -></b></a>. 
 
 Go to the page and enter:
 - **You receive** section - select **USDT TRC-20** currency
