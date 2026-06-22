@@ -15,7 +15,7 @@ aliases:
 {{< callout context="tip" icon="outline/info-circle" >}}
 **WAHA Plus is now part of WAHA Core.**
 
-Starting from version **2026.5.2**, all features that used to be in **WAHA Plus**
+Starting from version **2026.6.1**, all features that used to be in **WAHA Plus**
 (unlimited sessions, multimedia messages, all storages, built-in security, and more)
 are available in **WAHA Core** - 100% free and open source, for everyone.
 
@@ -37,7 +37,7 @@ contribution is what keeps it alive and growing 🌱 🫶🏻
 
 ## History
 
-{{< details "**WAHA Core vs WAHA Plus (before 2026.5.2)**" >}}
+{{< details "**WAHA Core vs WAHA Plus (before 2026.6.1)**" >}}
 
 Previously **WAHA** was distributed in two versions:
 
@@ -45,7 +45,7 @@ Previously **WAHA** was distributed in two versions:
 2. **WAHA Plus** - the version with advanced messages, security, and reliability features,
    available through donations.
 
-Since version **2026.5.2** this split is gone - everything is part of **WAHA Core**.
+Since version **2026.6.1** this split is gone - everything is part of **WAHA Core**.
 
 Patrons used to download the Plus image from the **Patron Portal**:
 

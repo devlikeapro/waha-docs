@@ -46,7 +46,7 @@ Read about [**WAHA Scaling - how to handle 50+ sessions ->**]({{< relref "/blog/
 
 ## Is WAHA free?
 
-**Yes!** Starting from version **2026.5.2**, **WAHA** is 100% free and open source -
+**Yes!** Starting from version **2026.6.1**, **WAHA** is 100% free and open source -
 all features are available for everyone, with no paid tiers and no separate "Plus" image.
 
 **WAHA** includes:
@@ -58,7 +58,7 @@ all features are available for everyone, with no paid tiers and no separate "Plu
 
 {{< callout context="note" icon="outline/info-circle" >}}
 Previously **WAHA** was distributed in two versions - **WAHA Core** and **WAHA Plus** (advanced features available through donations).
-Since **2026.5.2** everything is part of **WAHA Core**. See the [**WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) page for the history.
+Since **2026.6.1** everything is part of **WAHA Core**. See the [**WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) page for the history.
 {{< /callout >}}
 
 ### How can I support the project?
