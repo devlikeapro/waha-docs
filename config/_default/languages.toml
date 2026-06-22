@@ -6,5 +6,5 @@
     languageISO = "EN"
     languageTag = "en-US"
     footer = ''
-    alertText = '<a target="_blank" class="alert-link stretched-link fw-normal" href="https://github.com/devlikeapro/waha/issues/1076">💵 $2,000 Bug Bounty – Help Secure WAHA!</a>'
+    alertText = 'We <a class="alert-link fw-normal" target="_blank" href="/blog/waha-community"><b>made WAHA Plus free</b></a>! 🎉 To keep it going, please <a class="alert-link fw-normal" target="_blank" href="/support-us"><b>🎁 Support Us</b></a> using the new <b>Community</b> tier on <a class="alert-link fw-normal" target="_blank" href="https://www.patreon.com/wa_http_api"><b>Patreon</b></a> and <a class="alert-link fw-normal" target="_blank" href="https://boosty.to/wa-http-api"><b>Boosty</b></a> 🙏'
 

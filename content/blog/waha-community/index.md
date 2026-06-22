@@ -15,7 +15,7 @@ slug: waha-community
 
 ---
 
-TL;DR: **WAHA Plus** features are now part of **WAHA Core**.
+TL;DR: **WAHA Plus** features are now part of **WAHA Core**. 🎉
 
 ---
 
