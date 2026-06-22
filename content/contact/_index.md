@@ -7,6 +7,6 @@ draft: false
 
 ---
 
-Get In Touch With The Team!
+Get In Touch With The Team and Community!
 
 
