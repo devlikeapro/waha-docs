@@ -32,7 +32,7 @@ If **WAHA** helps you, please consider supporting it on the
 
 There's a single **Community** tier - nothing extra in return, everything is **FREE**
 and available for everyone. This tier offers no perks, just a way to support the work.
-It's the **community** that made this project possible in the first place, and your
+It's the **COMMUNITY** that made this project possible in the first place, and your
 contribution is what keeps it alive and growing 🌱 🫶🏻
 
 ## History
