@@ -57,6 +57,19 @@ Latest Version:
 
 👉🏻 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
+### 2026.6
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🆕 **New**
+- `2026.6.1` - **WAHA Plus** features are now part of the **WAHA Core** image - [**WAHA Community**]({{< relref "/blog/waha-community" >}})
+
+⚙️ **Updates**
+- `2026.6.1` - **GOWS** - up engine
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2026.5
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}

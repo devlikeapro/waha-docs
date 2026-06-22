@@ -13,7 +13,11 @@ homepage: false
 slug: waha-community
 ---
 
+---
+
 TL;DR: **WAHA Plus** features are now part of **WAHA Core**.
+
+---
 
 ## WAHA is free!
 
