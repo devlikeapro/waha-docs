@@ -22,12 +22,7 @@ Not running Chromium saves you CPU and Memory, so you can run more instances on 
 ## Run NOWEB
 
 ```bash
-# Plus
-docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=NOWEB" devlikeapro/waha-plus
-
-# Core
-docker run -it -e "WHATSAPP_DEFAULT_ENGINE=NOWEB" devlikeapro/waha
-
+docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=NOWEB" devlikeapro/waha
 ```
 
 ## Configuration

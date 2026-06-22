@@ -22,7 +22,7 @@ ffmpeg -i input_video.mp4 -c:v libx264 -map 0 -movflags +faststart output_video.
 {{< /callout >}}
 
 {{< callout context="tip" title="WEBJS - use :chrome image" icon="outline/browser" >}}
-If you're using **WEBJS** (default engine) - make sure to use `devlikeapro/waha-plus:chrome` docker image.
+If you're using **WEBJS** (default engine) - make sure to use `devlikeapro/waha:chrome` docker image.
 
 Read more about [**Docker images and engines →**]({{< relref "/docs/how-to/engines" >}}).
 {{< /callout >}}

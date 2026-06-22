@@ -330,7 +330,7 @@ In [**Webhooks**](#webhooks) or [**Websockets**](#websockets) you'll receive the
     ... // event specific data
   },
   "environment": {
-    "tier": "PLUS",
+    "tier": "CORE",
     "version": "2023.10.12"
   },
   "engine": "WEBJS"
@@ -404,7 +404,7 @@ The `session.status` event is triggered when the session status changes.
     "environment": {
         "version": "2023.10.12",
         "engine": "WEBJS",
-        "tier": "PLUS"
+        "tier": "CORE"
     }
 }
 ```
@@ -494,7 +494,7 @@ Receive events when a message is reacted to by a user (or **yourself** reacting 
     "environment": {
         "version": "2024.3.3",
         "engine": "WEBJS",
-        "tier": "PLUS",
+        "tier": "CORE",
         "browser": "/usr/bin/google-chrome-stable"
     }
 }

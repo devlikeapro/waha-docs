@@ -174,7 +174,7 @@ This event is triggered when a message is reacted to by a user (or when **you** 
     "environment": {
         "version": "2024.3.3",
         "engine": "WEBJS",
-        "tier": "PLUS",
+        "tier": "CORE",
         "browser": "/usr/bin/google-chrome-stable"
     }
 }

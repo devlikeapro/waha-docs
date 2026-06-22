@@ -953,7 +953,7 @@ The `session.status` event is triggered when the session status changes.
   "environment": {
     "version": "2023.10.12",
     "engine": "WEBJS",
-    "tier": "PLUS"
+    "tier": "CORE"
   }
 }
 ```
@@ -986,7 +986,7 @@ Internal event that is triggered when the engine emits an event.
 
 ## Advanced sessions 
 
-With [WAHA Plus version]({{< relref "waha-plus" >}}) you can save session state to avoid scanning QR code everytime,
+With **WAHA** you can save session state to avoid scanning QR code everytime,
 configure autostart options so when the docker container restarts - it restores all previously run sessions!
 
 ### Session persistent
@@ -1003,7 +1003,7 @@ environment variable.
 ### Multiple sessions
 
 If you want to save server's CPU and Memory - run multiple sessions inside one docker container!
-[Plus version]({{< relref "waha-plus" >}}) supports multiple sessions in one container.
+**WAHA** supports multiple sessions in one container.
 
 ## DEPRECATED
 

@@ -28,6 +28,4 @@
 | `POST /api/{session}/groups/{id}/admin/promote`                        |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `POST /api/{session}/groups/{id}/admin/demote`                         |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 
-- ✔️ - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
-
 {{< /details >}}

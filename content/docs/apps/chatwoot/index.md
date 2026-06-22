@@ -198,7 +198,7 @@ vim en-US.yaml
 services:
   waha:
     restart: always
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     volumes:
       - './sessions:/app/.sessions'
       - './media:/app/.media'

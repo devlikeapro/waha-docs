@@ -66,7 +66,7 @@ GET /api/server/version
 {
   "version": "2024.2.3",
   "engine": "NOWEB",
-  "tier": "PLUS",
+  "tier": "CORE",
   "browser": "/usr/bin/google-chrome-stable"
 }
 ```
@@ -143,9 +143,6 @@ Docker will **automatically restart** the server, so you can use this endpoint t
 
 
 ## Health Check
-
-<b>Health check is available in [WAHA Plus ]({{< relref "/docs/how-to/waha-plus" >}})
-only.</b>
 
 The health check endpoint is used to determine the health of the service.
 
@@ -423,7 +420,7 @@ Works only with **GOWS** engine
 ```yaml {title="docker-compose.yaml"}
 services:
   waha:
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     ports:
       - "127.0.0.1:6060:6060"
 ```

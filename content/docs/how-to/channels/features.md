@@ -31,6 +31,5 @@
 | **Admins - Demote Admin**                                                                                                       |                                                        |    |                                                                |      |
 
 _If you see the feature is not available in the above list, please [create a feature request](https://github.com/devlikeapro/waha/issues/new/choose) or **leave "+1" comment** on the existing one._
-- ✔️ - Available in [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 
 {{< /details >}}

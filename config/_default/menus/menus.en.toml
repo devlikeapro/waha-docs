@@ -67,12 +67,6 @@ url = "/docs/integrations"
 parent = "docs"
 
 [[main]]
-name = "➕ WAHA Plus"
-weight = 20
-url = "/docs/how-to/waha-plus"
-parent = "docs"
-
-[[main]]
 name = "Dashboard ->"
 weight = 97
 url = "/dashboard"

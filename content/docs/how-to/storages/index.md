@@ -48,14 +48,14 @@ To use local storage with session persistence, you need to mount a volume to the
 
 1. **Using Docker Run** (recommended for development):
 ```bash
-docker run -v `pwd`/.sessions:/app/.sessions -p 3000:3000 devlikeapro/waha-plus
+docker run -v `pwd`/.sessions:/app/.sessions -p 3000:3000 devlikeapro/waha
 ```
 
 2. **Using Docker Compose** (recommended for production):
 ```yaml
 services:
   waha:
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     volumes:
       - ./.sessions:/app/.sessions
     ports:
@@ -64,7 +64,7 @@ services:
 
 3. **Using Custom Directory** (if you need a specific location):
 ```bash
-docker run -v /custom/path/to/sessions:/app/.sessions -p 3000:3000 devlikeapro/waha-plus
+docker run -v /custom/path/to/sessions:/app/.sessions -p 3000:3000 devlikeapro/waha
 ```
 
 #### Configuration Options
@@ -74,7 +74,7 @@ docker run -v /custom/path/to/sessions:/app/.sessions -p 3000:3000 devlikeapro/w
 - `WAHA_NAMESPACE` and `WAHA_SESSION_NAMESPACE` - see [**Namespace**](#namespace) for details
 
 #### Health Check
-[**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) provides [health check endpoints]({{< relref "/docs/how-to/observability" >}}).
+**WAHA** provides [health check endpoints]({{< relref "/docs/how-to/observability" >}}).
 
 ### Sessions - PostgreSQL
 If you want to use the PostgreSQL to store the session data, you need to set `WHATSAPP_SESSIONS_POSTGRESQL_URL` environment variable
@@ -84,14 +84,14 @@ If you want to use the PostgreSQL to store the session data, you need to set `WH
 docker run \
     -e WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable \
     -p 3000:3000 \
-    devlikeapro/waha-plus
+    devlikeapro/waha
 ```
 
 **Using Docker Compose**
 ```yaml { title="docker-compose.yaml" }
 services:
   waha:
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     ports:
       - "127.0.0.1:3000:3000"
     environment:
@@ -155,7 +155,7 @@ docker run -d -p 27017:27017 --name mongodb -v mongo-data:/data/db mongo
 
 Then, you need to run the WAHA with the `WHATSAPP_SESSIONS_MONGO_URL` environment variable (please note using `--network host` option as well)
 ```bash
-docker run -e WHATSAPP_SESSIONS_MONGO_URL=mongodb://localhost:27017/ --network host devlikeapro/waha-plus
+docker run -e WHATSAPP_SESSIONS_MONGO_URL=mongodb://localhost:27017/ --network host devlikeapro/waha
 ```
 
 That's all you need to do to use MongoDB storage.
@@ -170,7 +170,7 @@ For managing and troubleshooting MongoDB, we recommend using [MongoDB Compass](h
 </div>
 
 #### Health Check
-[**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) provides [health check endpoints]({{< relref "/docs/how-to/observability" >}}).
+**WAHA** provides [health check endpoints]({{< relref "/docs/how-to/observability" >}}).
 
 ## Media Storage
 When your WhatsApp instance receives **media files**, it stores them in the **🖼️ Media Storage**.
@@ -190,13 +190,13 @@ docker run -v /path/to/on/host/.media:/app/.media \
   -e WHATSAPP_FILES_FOLDER=/app/.media \
   -e WHATSAPP_FILES_LIFETIME=0 \
   -p 3000:3000 \
-  devlikeapro/waha-plus
+  devlikeapro/waha
 ```
 
 ```yaml
 services:
   waha:
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     volumes:
       - ./.media:/app/.media
     environment:
@@ -220,13 +220,13 @@ docker run \
   -e WAHA_MEDIA_STORAGE=POSTGRESQL \
   -e WAHA_MEDIA_POSTGRESQL_URL=postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable \
   -p 3000:3000 \
-  devlikeapro/waha-plus
+  devlikeapro/waha
 ```
 
 ```yaml
 services:
   waha:
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     environment:
       - WAHA_MEDIA_STORAGE=POSTGRESQL
       - WAHA_MEDIA_POSTGRESQL_URL=postgres://postgres:postgres@postgres:5432/postgres?sslmode=disable
@@ -262,13 +262,13 @@ docker run \
   -e WAHA_S3_FORCE_PATH_STYLE=True \
   -e WAHA_S3_PROXY_FILES=False \
   -p 3000:3000 \
-  devlikeapro/waha-plus
+  devlikeapro/waha
 ```
 
 ```yaml
 services:
   waha:
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     environment:
       - WAHA_MEDIA_STORAGE=S3
       - WAHA_S3_REGION=eu-west-1
@@ -359,7 +359,7 @@ Example configuration for multiple workers:
 ```yaml
 services:
   waha-worker-1:
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     environment:
       - WAHA_WORKER_ID=worker-1
       - WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@postgres:5432/postgres?sslmode=disable
@@ -369,7 +369,7 @@ services:
       - postgres
 
   waha-worker-2:
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     environment:
       - WAHA_WORKER_ID=worker-2
       - WHATSAPP_SESSIONS_POSTGRESQL_URL=postgres://postgres:postgres@postgres:5432/postgres?sslmode=disable

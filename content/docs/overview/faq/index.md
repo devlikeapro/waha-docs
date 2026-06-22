@@ -44,55 +44,32 @@ and distribute the load between them.
 Read about [**WAHA Scaling - how to handle 50+ sessions ->**]({{< relref "/blog/waha-scaling" >}})
 {{< /callout >}}
 
-## WAHA Plus
-### What is the difference between WAHA Core and WAHA Plus?
+## Is WAHA free?
 
-These are two versions of the product we build:
+**Yes!** Starting from version **2026.5.2**, **WAHA** is 100% free and open source -
+all features are available for everyone, with no paid tiers and no separate "Plus" image.
 
-**WAHA Core** 
-- The free and open source project available for everyone. 
-- Supports automating a single **WhatsApp Account** (aka [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}}))
-- Sends and receives **unlimited text messages**.
-- Doesn't have any built-in [🔒 Security]({{< relref "/docs/how-to/security" >}}) features, 
-which means you need to make sure your infrastructure is secure.
+**WAHA** includes:
+- Unlimited [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}}) - automate as many **WhatsApp Accounts** as you need
+- Unlimited **text** and **multimedia messages** (images, videos, files, etc.)
+- All [**🗄️ Storages**]({{< relref "/docs/how-to/storages" >}}) - PostgreSQL, S3 and MongoDB
+- Built-in [**🔒 Security**]({{< relref "/docs/how-to/security" >}}) features
+- And everything else that used to be in **WAHA Plus**
 
-**WAHA Plus**
-- The full version available through donations
-- Supports **unlimited** [**🖥️ Sessions**]({{< relref "/docs/how-to/sessions" >}})
-- Sends and receives **multimedia messages** (images, videos)
-- Has built-in [🔒 Security]({{< relref "/docs/how-to/security" >}}) features
-
-{{< callout >}}
-You can find the full comparison table on [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page.
+{{< callout context="note" icon="outline/info-circle" >}}
+Previously **WAHA** was distributed in two versions - **WAHA Core** and **WAHA Plus** (advanced features available through donations).
+Since **2026.5.2** everything is part of **WAHA Core**. See the [**WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) page for the history.
 {{< /callout >}}
 
-### What is the difference between Core, Plus and PRO Tiers?
+### How can I support the project?
 
-- **Core Tier** - it's free tier (aka community edition) that you're already in, and you can use **WAHA Core** for free!
-- **Plus Tier** - allows you to have access to **WAHA Plus** docker image and enjoy all features available in the product!
-- **PRO Tier** - also gives you access to **WAHA Plus** image AND **WAHA Plus Source Code** on [GitHub](https://github.com/devlikeapro/waha-plus). Also our team will pay additional attentions to your requests 🫶
-  - [waha-plus](https://github.com/devlikeapro/waha-plus)
-  - [gow-plus](https://github.com/devlikeapro/gows-plus)
-  - [dashboard](https://github.com/devlikeapro/waha-hub)
+**WAHA** is free, but building and maintaining it takes a lot of time and effort.
+If **WAHA** helps you, please consider supporting it on the [**🎁 Support Us**]({{< relref "/support-us" >}}) page.
 
-{{< callout >}}
-You can find the full tier comparison table on [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page.
-{{< /callout >}}
-
-
-### Is it a one-time donation?
-
-**No**. WAHA Plus is **not** a one-time purchase - but the version you install **keeps running after your subscription ends**, until WhatsApp makes backward incompatible change, or you need to install or update WAHA.
-
-**An active subscription is needed to:**
-
-* Pull any update (compatibility fixes, new features, security patches)
-* Reinstall or move WAHA Plus to another server
-
-ℹ️ WhatsApp typically makes changes every 3–6 months (timing can vary by region). So it's more like "every 3-6 month donation"
+There's a single **Community** tier - nothing extra in return, everything is **FREE** and available for everyone.
+This tier offers no perks, just a way to support the work. It's the **community** that made this project
+possible in the first place, and your contribution is what keeps it alive and growing 🌱 🫶🏻
 
 {{< callout icon="filled/heart" title="Keep WAHA Alive" >}}
-Please consider **staying subscribed** so we can continue developing and maintaining WAHA - both **Core** and **Plus** versions 🫶  
-
-See the full comparison on the [**🎁 Support Us**]({{< relref "/support-us#donations" >}}) page.
+Please consider **supporting the project** so we can continue developing and maintaining **WAHA** for everyone 🫶
 {{< /callout >}}

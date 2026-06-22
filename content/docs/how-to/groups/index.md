@@ -186,7 +186,6 @@ GET /api/{SESSION}/groups/{ID}/picture?refresh=false
 - `url` can be `null` if there's no picture for the group
 
 #### Set Group Picture
-👉 Available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 
 ```http request
 PUT /api/{SESSION}/groups/{ID}/picture
@@ -225,7 +224,6 @@ PUT /api/{SESSION}/groups/{ID}/picture
 ```
 
 #### Delete Group Picture
-👉 Available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
 
 ```http request
 DELETE /api/{SESSION}/groups/{ID}/picture

@@ -15,7 +15,6 @@
 - [🏭 Engines]({{< relref "/docs/how-to/engines" >}})
 - [🗄️ Storages]({{< relref "/docs/how-to/sessions" >}})
 - [🔒 Security]({{< relref "/docs/how-to/security" >}})
-- [➕ WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}})
 
 
 {{< /card >}}

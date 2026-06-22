@@ -28,11 +28,7 @@ It uses Puppeteer to run a real instance of Whatsapp Web to avoid getting blocke
 ## Run VENOM
 
 ```bash
-# Core
-docker run -it -e "WHATSAPP_DEFAULT_ENGINE=VENOM" devlikeapro/waha
-
-# Plus
-docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=VENOM" devlikeapro/waha-plus
+docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=VENOM" devlikeapro/waha
 ```
 
 ## Links

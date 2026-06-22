@@ -40,8 +40,7 @@ There are common fields that you can find in almost all requests:
 
 `session` - a session name from which account you're sending the message. We use `default` in the examples.
 
-- Core  version supports only `default` session.
-- Plus  allows you to run multiple sessions inside one container to save your memory and
+- **WAHA** lets you run multiple sessions inside one container to save your memory and
   CPU resources!
 
 Read more about [multiple sessions →]({{< relref "/docs/how-to/sessions" >}})
@@ -588,9 +587,6 @@ Here's how you can call it from various languages:
 
 
 ## Send Link Custom Preview
-{{< callout context="tip" icon="outline/hand-finger-right" >}}
-Available in [**➕ WAHA Plus**]({{< relref "waha-plus#plus" >}}) version.
-{{< /callout >}}
 
 Using [/api/sendText](#send-text) 
 you can send **auto-generated link previews**.
@@ -993,9 +989,6 @@ POST /api/sendButtons
   "session": "default"
 }
 ```
-
-👉 `headerImage` is available only in
-[**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}})
 
 Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendButtons-code.md" >}}

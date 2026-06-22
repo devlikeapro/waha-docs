@@ -121,16 +121,13 @@ back to you!
 The WhatsApp Download Image Bot downloads all files people send to your WhatsApp
 and log the path for the file.
 
-**The bot works only with WAHA Plus version** available with donations. Visit
-[read more about difference between Core and Plus versions](https://waha.devlike.pro/docs/how-to/waha-plus/).
-
-Download **WAHA Plus** version:
+Download **WAHA**:
 
 ```bash
 # Download the image
-docker pull devlikeapro/waha-plus
+docker pull devlikeapro/waha
 # Run the docker container
-docker run -it --rm --network=host -e WHATSAPP_HOOK_URL=http://localhost:5000/bot -e "WHATSAPP_HOOK_EVENTS=*" --name waha devlikeapro/waha-plus
+docker run -it --rm --network=host -e WHATSAPP_HOOK_URL=http://localhost:5000/bot -e "WHATSAPP_HOOK_EVENTS=*" --name waha devlikeapro/waha
 ```
 
 Run the WhatsApp Download Files bot:

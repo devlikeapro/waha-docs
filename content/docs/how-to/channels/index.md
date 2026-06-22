@@ -489,7 +489,7 @@ For all incoming messages in your own and subscribed channels you'll receive
   "environment": {
     "version": "2024.7.4",
     "engine": "NOWEB",
-    "tier": "PLUS",
+    "tier": "CORE",
     "browser": "/usr/bin/google-chrome-stable"
   }
 }

@@ -33,9 +33,9 @@ You can find Swagger documentation on the following url after you
 ## Configuration
 - `WHATSAPP_SWAGGER_CONFIG_ADVANCED=true` - enables advanced configuration options for Swagger documentation - you can customize host, port and base URL for the requests.
   Disabled by default.
-- `WHATSAPP_SWAGGER_ENABLED=false` - disables Swagger documentation. Enabled by default. Available in **WAHA Plus** only.
+- `WHATSAPP_SWAGGER_ENABLED=false` - disables Swagger documentation. Enabled by default.
 - `WHATSAPP_SWAGGER_USERNAME=admin` and `WHATSAPP_SWAGGER_PASSWORD=admin` - these variables can be used to protect the Swagger panel
-  with `admin / admin` credentials. This does not affect API access. Available in **WAHA Plus** only.
+  with `admin / admin` credentials. This does not affect API access.
 
 Read more about security settings for Swagger and API on [**Security page** ->]({{< relref "/docs/how-to/security" >}}).
 
@@ -45,8 +45,6 @@ You can show your own brand in the Swagger documentation.
 <img src="swagger-white-label.png" onclick="window.open(this.src)" style="cursor: pointer;">
 <br/>
 <br/>
-
-👉 Swagger White Label is available in [**WAHA Plus**]({{< relref "waha-plus#plus" >}})  version only.
 
 Use the following environment variables to customize the Swagger documentation:
 - `WHATSAPP_SWAGGER_TITLE` - the title of the Swagger documentation and some other places.
@@ -58,7 +56,7 @@ Use the following environment variables to customize the Swagger documentation:
 
 **Example** (consider using [docker-compose](https://github.com/devlikeapro/waha/blob/core/docker-compose.yaml#L15-L38) or other methods to store these settings):
 ```bash
-docker run -it -p 3000:3000 -e WHATSAPP_SWAGGER_TITLE="AwesomeCRM" -e 'WHATSAPP_SWAGGER_DESCRIPTION=<p>FantasticFindz - Discover unique treasures from around the world at unbelievable prices!<br/> <a href='https://google.com'>Read more about us!</a></p>' -e "WHATSAPP_SWAGGER_EXTERNAL_DOC_URL=https://google.com" devlikeapro/waha-plus
+docker run -it -p 3000:3000 -e WHATSAPP_SWAGGER_TITLE="AwesomeCRM" -e 'WHATSAPP_SWAGGER_DESCRIPTION=<p>FantasticFindz - Discover unique treasures from around the world at unbelievable prices!<br/> <a href='https://google.com'>Read more about us!</a></p>' -e "WHATSAPP_SWAGGER_EXTERNAL_DOC_URL=https://google.com" devlikeapro/waha
 ```
 
 

@@ -71,7 +71,7 @@ Set
 `WAHA_API_KEY=sha512:{SHA512_HEX_HASH}` in docker (or in `docker-compose.yaml` or `.env`):
 
 ```bash
-docker run -it -e WAHA_API_KEY=sha512:98b6d128682e280b74b324ca82a6bae6e8a3f7174e0605bfd52eb9948fad8984854ec08f7652f32055c4a9f12b69add4850481d9503a7f2225501671d6124648 devlikeapro/waha-plus
+docker run -it -e WAHA_API_KEY=sha512:98b6d128682e280b74b324ca82a6bae6e8a3f7174e0605bfd52eb9948fad8984854ec08f7652f32055c4a9f12b69add4850481d9503a7f2225501671d6124648 devlikeapro/waha
 ```
 
 Test API works as expected
@@ -123,7 +123,7 @@ set `WAHA_API_KEY_EXCLUDE_PATH` environment variable with a comma-separated list
 docker run -it \
  -e WAHA_API_KEY_EXCLUDE_PATH="health,ping" \
  -e WAHA_API_KEY=yoursecretkey \
- devlikeapro/waha-plus
+ devlikeapro/waha
 ```
 
 {{< include file="content/docs/how-to/security/-files-auth-off.md" >}}
@@ -133,7 +133,7 @@ If you want to hide the project Swagger panel under the password - run the follo
 login and password.
 
 ```bash
-docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin123 -e WHATSAPP_SWAGGER_PASSWORD=admin123 devlikeapro/waha-plus
+docker run -it -e WHATSAPP_SWAGGER_USERNAME=admin123 -e WHATSAPP_SWAGGER_PASSWORD=admin123 devlikeapro/waha
 ```
 
 Open http://localhost:3000/ and enter `admin123 / admin123` in the inputs:

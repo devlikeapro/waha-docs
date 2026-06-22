@@ -19,11 +19,7 @@ It uses Puppeteer to run a real instance of WhatsApp Web to avoid getting blocke
 ## Run WPP
 
 ```bash
-# Plus
-docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=WPP" devlikeapro/waha-plus
-
-# Core
-docker run -it -e "WHATSAPP_DEFAULT_ENGINE=WPP" devlikeapro/waha
+docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=WPP" devlikeapro/waha
 ```
 
 ## Links

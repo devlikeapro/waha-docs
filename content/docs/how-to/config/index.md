@@ -19,7 +19,7 @@ You can add environment variables by adding `-e WHATSAPP_VARNAME=value` at the
 beginning of the command line or by using [other options](https://docs.docker.com/engine/reference/commandline/run/)
 
 ```bash
-docker run -it -e "WAHA_WORKER_ID=waha" -e WAHA_PRINT_QR=False devlikeapro/waha-plus
+docker run -it -e "WAHA_WORKER_ID=waha" -e WAHA_PRINT_QR=False devlikeapro/waha
 ```
 {{< /tab >}}
 
@@ -33,7 +33,7 @@ version: '3'
 
 services:
   waha:
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     container_name: waha
     restart: unless-stopped
     ports:
@@ -63,7 +63,7 @@ version: '3'
 
 services:
   waha:
-    image: devlikeapro/waha-plus
+    image: devlikeapro/waha
     container_name: waha
     restart: unless-stopped
     ports:
@@ -236,9 +236,9 @@ Read more about [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}})
 
 - `WHATSAPP_SWAGGER_CONFIG_ADVANCED=true` - enables advanced configuration options for Swagger documentation - you can customize host, port and base URL for the requests.
   Disabled by default.
-- `WHATSAPP_SWAGGER_ENABLED=false` - disables Swagger documentation. Enabled by default. Available in **WAHA Plus** only.
+- `WHATSAPP_SWAGGER_ENABLED=false` - disables Swagger documentation. Enabled by default.
 - `WHATSAPP_SWAGGER_USERNAME=admin` and `WHATSAPP_SWAGGER_PASSWORD=admin` - these variables can be used to protect the Swagger panel
-  with `admin / admin` credentials. This does not affect API access. Available in **WAHA Plus** only.
+  with `admin / admin` credentials. This does not affect API access.
 - `WHATSAPP_SWAGGER_TITLE` - the title of the Swagger documentation and some other places.
 - `WHATSAPP_SWAGGER_DESCRIPTION` - Markdown formatted description of your API.
 - `WHATSAPP_SWAGGER_EXTERNAL_DOC_URL` - URL to the external documentation.
@@ -367,8 +367,6 @@ you'll still receive a webhook event with `hasMedia: True` field, but without a 
 ## Health Check
 
 Read more about [**🔍 Observability**]({{< relref "/docs/how-to/observability" >}})
-
-<b>Health check is available in [WAHA Plus ]({{< relref "/docs/how-to/waha-plus" >}}) only.</b>
 
 The following environment variables can be used to configure the Health Check:
 - `WHATSAPP_HEALTH_MEDIA_FILES_THRESHOLD_MB` - the threshold in MB for the media files storage. The default value is `100`.

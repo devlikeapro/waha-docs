@@ -31,9 +31,7 @@ You can control what you want to run by settings `WHATSAPP_DEFAULT_ENGINE` envir
 docker run -it -e "WHATSAPP_DEFAULT_ENGINE=WEBJS" devlikeapro/waha
 ```
 
-All engines are available in both
-Core  and
-[Plus  versions]({{< relref "/docs/how-to/waha-plus" >}}).
+All engines are available in **WAHA**.
 
 
 ### WEBJS
@@ -89,23 +87,15 @@ WAHA provides few docker images with different setup.
 [**Docker Image Configurator**](https://portal.devlike.pro/docker-image)
 to generate the command with the latest version and your key.
 
-| Image                                                    | CPU | Browser                 |
-|----------------------------------------------------------|-----|-------------------------|
-| [**WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) |     |                         |
-| `devlikeapro/waha-plus:latest`                           | x86 | Chromium                |
-| `devlikeapro/waha-plus:chrome`                           | x86 | Chrome (supports video) |
-| `devlikeapro/waha-plus:noweb`                            | x86 | None                    |
-| `devlikeapro/waha-plus:gows`                             | x86 | None                    |
-| `devlikeapro/waha-plus:arm`                              | ARM | Chromium                |
-| `-`                                                      | ARM | Chrome                  |
-| `devlikeapro/waha-plus:noweb-arm`                        | ARM | None                    |
-| **WAHA Core**                                            |     |                         |
-| `devlikeapro/waha:latest`                                | x86 | Chromium                |
-| `devlikeapro/waha:chrome`                                | x86 | Chrome                  |
-| `devlikeapro/waha:noweb`                                 | x86 | None                    |
-| `-`                                                      | ARM | Chrome                  |
-| `devlikeapro/waha:arm`                                   | ARM | Chromium                |
-| `devlikeapro/waha:noweb-arm`                             | ARM | None                    |
+| Image                         | CPU | Browser                 |
+|-------------------------------|-----|-------------------------|
+| `devlikeapro/waha:latest`     | x86 | Chromium                |
+| `devlikeapro/waha:chrome`     | x86 | Chrome (supports video) |
+| `devlikeapro/waha:noweb`      | x86 | None                    |
+| `devlikeapro/waha:gows`       | x86 | None                    |
+| `devlikeapro/waha:arm`        | ARM | Chromium                |
+| `-`                           | ARM | Chrome                  |
+| `devlikeapro/waha:noweb-arm`  | ARM | None                    |
 
 
 ```bash
@@ -113,12 +103,11 @@ devlikeapro/{image}:{browser}[-cpu][-version]
 ```
 
 `{image}`:
-- `waha-plus` - [**➕ WAHA Plus**]({{< relref "/docs/how-to/waha-plus" >}}) image
-- `waha` - **WAHA Core** image
+- `waha` - the **WAHA** image
 
 `{browser}`:
 - **Chromium** (`latest`) - is the default browser for **WAHA**. It's a good choice for most cases.
-- **Chrome** (`chrome`) - is a good choice if you need to receive videos in Plus version.
+- **Chrome** (`chrome`) - is a good choice if you need to receive videos.
 - **None** (`noweb`) - is a good choice if you want to use **NOWEB** engine.
 
 `{cpu}`:
@@ -138,7 +127,6 @@ Here, you will find a list of supported endpoints and webhooks per engine.
 |:--------------------------------------------------:|-----------------------------------------------------------------------------------|
 |                         ✔️                         | The engines supports the feature.                                                 |
 | [#123](https://github.com/devlikeapro/waha/issues) | Feature request or bug for the endpoint                                           |
-|                      | The feature available in [WAHA Plus]({{< relref "/docs/how-to/waha-plus" >}}). |
 
 If you don't specify `WHATSAPP_DEFAULT_ENGINE` environment variable - look at **WEBJS** engine,
 it's the engine WAHA runs by default.

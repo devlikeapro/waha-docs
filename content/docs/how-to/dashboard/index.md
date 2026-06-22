@@ -26,7 +26,7 @@ You can access **Dashboard** by running the project and opening
 ℹ️ **Default username and password**: `admin/admin` (or `waha/waha`)
 
 ```bash
-docker run -it -p 3000:3000 devlikeapro/waha-plus
+docker run -it -p 3000:3000 devlikeapro/waha
 ```
 
 ## Configuration
@@ -39,7 +39,7 @@ When running WAHA you can set the following environment variables to configure t
 - `WAHA_DASHBOARD_PASSWORD=waha` - password used to log in, generated random.
 
 ```bash
-docker run -it -p 3000:3000 -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PASSWORD=waha devlikeapro/waha-plus
+docker run -it -p 3000:3000 -e WAHA_DASHBOARD_USERNAME=waha -e WAHA_DASHBOARD_PASSWORD=waha devlikeapro/waha
 ```
 
 ## API Key
@@ -98,7 +98,7 @@ You can implement **Live Chat**, **Multiple Agents**, and more features using
   to get real-time messages on the client side.
 
 👉 [**Source Code on Github**](https://github.com/devlikeapro/waha-hub/tree/main/ui/components/chat) 
-(Vue3 + PrimeVue) available for [WAHA PRO](https://waha.devlike.pro/support-us/#tier-pro) supporters!
+(Vue3 + PrimeVue).
 
 
 
