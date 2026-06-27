@@ -64,6 +64,9 @@ Latest Version:
 🆕 **New**
 - `2026.6.1` - **WAHA Plus** features are now part of the **WAHA Core** image - [**WAHA Community**]({{< relref "/blog/waha-community" >}})
 
+🛠️ **Fixes**
+- `2026.6.2` - **GOWS** - fix document media — 403 on live media + media-retry never completes/refreshes directPath - fix #2131
+
 ⚙️ **Updates**
 - `2026.6.2` - **WEBJS** - up engine
 - `2026.6.2` - **GOWS** - up engine
