@@ -92,5 +92,5 @@ It's a symbolic **$5/mo**, just enough to keep the lights on.
 {{< /callout >}}
 
 {{< callout context="note" title="Support WAHA" icon="outline/heart" >}}
-To keep WAHA going, please [**🎁 Support Us**]({{< relref "/support-us" >}}) using the new **Community** tier (**$5/mo**) on [**Patreon**](https://www.patreon.com/wa_http_api/membership), [**Boosty**](https://boosty.to/wa-http-api) or [**Crypto**](https://pay.trybit.com/pos/AIIdaNeQ07jpufDG) 🙏
+To keep WAHA going, please [**🎁 Support Us**]({{< relref "/support-us" >}}) using the new **Community** tier (**$5/mo**) on [**Patreon**](https://www.patreon.com/wa_http_api/membership), [**Boosty**](https://boosty.to/wa-http-api) or [**Crypto**](https://portal.devlike.pro/support-us) 🙏
 {{< /callout >}}
