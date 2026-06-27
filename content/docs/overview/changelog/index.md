@@ -65,6 +65,10 @@ Latest Version:
 - `2026.6.1` - **WAHA Plus** features are now part of the **WAHA Core** image - [**WAHA Community**]({{< relref "/blog/waha-community" >}})
 
 ⚙️ **Updates**
+- `2026.6.2` - **WEBJS** - up engine
+- `2026.6.2` - **GOWS** - up engine
+- `2026.6.2` - **NOWEB** - up engine
+- `2026.6.2` - **WPP** - up engine
 - `2026.6.1` - **GOWS** - up engine
 
 {{< /autolink-prs >}}
