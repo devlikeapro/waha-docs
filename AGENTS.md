@@ -2,6 +2,8 @@
 
 ## General Rules
 - When you mention an engine - use bold link - **GOWS** or **NOWEB**
+- When you link to another docs page - use the page's own title, emoji included, and make it bold:
+  `[**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}})`
 
 ## Related Source Code
 You can check the listed folders to get more context if you need
