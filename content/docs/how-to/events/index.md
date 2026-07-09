@@ -371,6 +371,9 @@ The `session.status` event is triggered when the session status changes.
 - `SCAN_QR_CODE` - session is required to scan QR code or login via phone number
     - When you receive the `session.status` event with `SCAN_QR_CODE` status, you can [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}})
     - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
+- `PASSKEY_REQUIRED` - WhatsApp asks for a passkey (WebAuthn) to finish pairing, `data` holds the challenge to sign
+- `PASSKEY_CONFIRMATION_REQUIRED` - the user must check a code before pairing completes, `data` holds the `code`
+    - Both are steps of the same flow, see [**🔑 Passkey ->**]({{< relref "/docs/how-to/sessions#passkey" >}})
 - `WORKING` - session is working and ready to use
 - `FAILED` - session is failed due to some error. It's likely that authorization is required again or device has been disconnected from that account.
   Try to restart the session and if it doesn't help - logout and start the session again.
@@ -399,6 +402,7 @@ The `session.status` event is triggered when the session status changes.
                 "timestamp": 1700000003000,
             },
         ],
+        "data": null,
     },
     "engine": "WEBJS",
     "environment": {
@@ -410,6 +414,54 @@ The `session.status` event is triggered when the session status changes.
 ```
 - `status` - current session status
 - `statuses` - recent 3 statuses
+- `data` - extra info that belongs to the current status, `null` for most of them
+
+The `data` field is how a status carries whatever it needs, without adding a new event for every
+step WhatsApp introduces. Today only the passkey statuses use it -
+[**🔑 Passkey ->**]({{< relref "/docs/how-to/sessions#passkey" >}}):
+
+```jsonc { title="session.status - PASSKEY_REQUIRED" }
+{
+    "event": "session.status",
+    "session": "default",
+    "payload": {
+        "status": "PASSKEY_REQUIRED",
+        "statuses": [ /* ... */ ],
+        // WebAuthn request options - pass it to
+        // navigator.credentials.get({ publicKey: data })
+        "data": {
+            "challenge": "9WVUYm9AsQ...",
+            "timeout": 60000,
+            "rpId": "web.whatsapp.com",
+            "allowCredentials": [
+                {
+                    "id": "AX8bTgH2...",
+                    "type": "public-key",
+                    "transports": ["internal", "hybrid"]
+                }
+            ],
+            "userVerification": "required"
+        },
+    },
+    "engine": "GOWS",
+}
+```
+
+```jsonc { title="session.status - PASSKEY_CONFIRMATION_REQUIRED" }
+{
+    "event": "session.status",
+    "session": "default",
+    "payload": {
+        "status": "PASSKEY_CONFIRMATION_REQUIRED",
+        "statuses": [ /* ... */ ],
+        // The code the user must check against the one shown on their phone
+        "data": {
+            "code": "1234"
+        },
+    },
+    "engine": "GOWS",
+}
+```
 
 ### message
 

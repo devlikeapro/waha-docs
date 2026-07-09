@@ -46,6 +46,13 @@ Here's the list of possible `session.status` values:
     - The `SCAN_QR_CODE` is issued every time when QR updated (WhatsApp requirements)
     - Every time you receive the `session.status` event with `SCAN_QR_CODE` status,
       you need to [**fetch updated QR ->**]({{< relref "/docs/how-to/sessions#get-qr" >}}), because it's changed.
+- `PASSKEY_REQUIRED` - WhatsApp asks for a passkey (WebAuthn) to finish pairing.
+    - The event payload's `data` field contains the challenge to sign,
+      see [**🔑 Passkey ->**](#passkey).
+- `PASSKEY_CONFIRMATION_REQUIRED` - the user must check a code before the pairing completes.
+    - The event payload's `data` field contains the `code`,
+      see [**🔑 Passkey ->**](#passkey).
+    - Most pairings never reach this status - WhatsApp confirms them on its own.
 - `WORKING` - session is working and ready to use
 - `FAILED` - session is failed due to some error. It's likely either authorization is required again or device has been
   disconnected from that account. 
@@ -882,6 +889,129 @@ GET /api/{session}/auth/qr?format=raw
   "value": "value-that-you-need-to-use-to-generate-qr-code"
 }
 ```
+
+## Passkey
+
+Sometimes WhatsApp asks for a **passkey** ([WebAuthn](https://webauthn.guide/)) to finish pairing a
+session, on top of the QR code or the pairing code. Right now only the **GOWS** engine supports it.
+
+You can't complete this step from your backend alone - the assertion must be signed by an
+authenticator (Touch ID, Windows Hello, a security key, your phone) **on the `https://web.whatsapp.com`
+origin**. The browser refuses to sign it anywhere else. The [**📊 Dashboard**]({{< relref "/docs/how-to/dashboard" >}})
+does this for you with a browser extension, and falls back to a script you paste into the DevTools
+console on `web.whatsapp.com`.
+
+The whole flow is driven by the [`session.status`](#sessionstatus) event - there are no dedicated
+passkey events. Each status carries what you need in the event payload's `data` field, and the same
+value is readable from the API for as long as that status lasts.
+
+### PASSKEY_REQUIRED
+
+WhatsApp wants a signed challenge. The `data` field **is** the WebAuthn request options:
+
+```jsonc { title="session.status" }
+{
+  "event": "session.status",
+  "session": "default",
+  "payload": {
+    "name": "default",
+    "status": "PASSKEY_REQUIRED",
+    "data": {
+      "challenge": "9WVUYm9AsQ...",
+      "timeout": 60000,
+      "rpId": "web.whatsapp.com",
+      "allowCredentials": [
+        {
+          "id": "AX8bTgH2...",
+          "type": "public-key",
+          "transports": ["internal", "hybrid"]
+        }
+      ],
+      "userVerification": "required"
+    }
+  }
+}
+```
+
+You can also pull it while the session sits in that status:
+
+```http request
+GET /api/{session}/auth/passkey/challenge
+```
+
+The response is the same object. It returns `422 Unprocessable Entity` when no challenge is pending.
+
+Pass it straight to the browser on the `web.whatsapp.com` origin:
+
+```javascript
+const publicKey = PublicKeyCredential.parseRequestOptionsFromJSON(challenge);
+const credential = await navigator.credentials.get({ publicKey: publicKey });
+const assertion = credential.toJSON();
+```
+
+Then send the assertion back:
+
+```http request
+POST /api/{session}/auth/passkey
+```
+
+```jsonc { title="Body" }
+{
+  "id": "AX8bTgH2...",
+  "rawId": "AX8bTgH2...",
+  "type": "public-key",
+  "response": {
+    "clientDataJSON": "eyJ0eXBl...",
+    "authenticatorData": "SZYN5YgO...",
+    "signature": "MEUCIQD...",
+    "userHandle": "MTIzNDU2"
+  }
+}
+```
+
+Most of the time the session goes straight to `WORKING` after this.
+
+### PASSKEY_CONFIRMATION_REQUIRED
+
+Occasionally WhatsApp shows a code on the phone and asks the user to confirm it matches. When that
+happens the session moves to this status and `data` carries the code:
+
+```jsonc { title="session.status" }
+{
+  "event": "session.status",
+  "session": "default",
+  "payload": {
+    "name": "default",
+    "status": "PASSKEY_CONFIRMATION_REQUIRED",
+    "data": {
+      "code": "1234"
+    }
+  }
+}
+```
+
+The code is also readable from the API (again `422` when nothing is pending):
+
+```http request
+GET /api/{session}/auth/passkey/confirmation
+```
+
+```jsonc { title="Response" }
+{
+  "code": "1234"
+}
+```
+
+Show it to the user, and once they confirm it matches the one on their phone:
+
+```http request
+POST /api/{session}/auth/passkey/confirm
+```
+
+The session then goes to `WORKING`.
+
+👉 Once the session is authorized (or stopped), the challenge and the code are dropped - both `GET`
+endpoints start returning `422` again.
 
 ## Get pairing code
 
