@@ -104,6 +104,152 @@
         ]
       }
     },
+    "/api/{session}/auth/passkey/challenge": {
+      "get": {
+        "operationId": "AuthController_getPasskeyChallenge",
+        "summary": "Get the pending passkey (WebAuthn) challenge.",
+        "description": "Available while the session is in PASSKEY_REQUIRED status. Pass the challenge to navigator.credentials.get({ publicKey: challenge }) on the https://web.whatsapp.com origin.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PasskeyChallenge"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "📱 Pairing"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/auth/passkey": {
+      "post": {
+        "operationId": "AuthController_submitPasskey",
+        "summary": "Submit a WebAuthn passkey assertion to finish pairing.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasskeyAssertionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "📱 Pairing"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/auth/passkey/confirmation": {
+      "get": {
+        "operationId": "AuthController_getPasskeyConfirmation",
+        "summary": "Get the pending passkey confirmation code.",
+        "description": "Available while the session is in PASSKEY_CONFIRMATION_REQUIRED status. Most pairings skip this step - WhatsApp confirms them right after the assertion.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PasskeyConfirmationResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "📱 Pairing"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/auth/passkey/confirm": {
+      "post": {
+        "operationId": "AuthController_confirmPasskey",
+        "summary": "Confirm passkey pairing (only needed for the manual code case).",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "📱 Pairing"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/keys": {
       "post": {
         "operationId": "ApiKeysController_create",
@@ -154,6 +300,80 @@
                   "items": {
                     "$ref": "#/components/schemas/ApiKeyDTO"
                   }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🔑 Api Keys"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/keys/media": {
+      "post": {
+        "operationId": "ApiKeysController_media",
+        "summary": "Create or get a media-download-only API key for a session",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScopedApiKeyRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiKeyDTO"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🔑 Api Keys"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/keys/control": {
+      "post": {
+        "operationId": "ApiKeysController_control",
+        "summary": "Create or get a control-only API key for a session",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScopedApiKeyRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiKeyDTO"
                 }
               }
             }
@@ -7276,7 +7496,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2026.5.1",
+    "version": "2026.7.1",
     "contact": {}
   },
   "tags": [
@@ -7435,6 +7655,141 @@
           "phoneNumber"
         ]
       },
+      "PasskeyAllowedCredential": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Base64url-encoded credential ID."
+          },
+          "type": {
+            "type": "string",
+            "description": "Always \"public-key\".",
+            "example": "public-key"
+          },
+          "transports": {
+            "description": "Authenticator transports the credential supports.",
+            "example": [
+              "internal",
+              "hybrid"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ]
+      },
+      "PasskeyChallenge": {
+        "type": "object",
+        "properties": {
+          "challenge": {
+            "type": "string",
+            "description": "Base64url-encoded challenge to sign."
+          },
+          "timeout": {
+            "type": "number",
+            "description": "How long the challenge is valid for, in milliseconds.",
+            "example": 60000
+          },
+          "rpId": {
+            "type": "string",
+            "description": "Relying party ID.",
+            "example": "web.whatsapp.com"
+          },
+          "allowCredentials": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PasskeyAllowedCredential"
+            }
+          },
+          "userVerification": {
+            "type": "string",
+            "example": "required"
+          },
+          "extensions": {
+            "type": "object",
+            "description": "WebAuthn extensions requested by WhatsApp."
+          }
+        },
+        "required": [
+          "challenge",
+          "timeout",
+          "rpId",
+          "allowCredentials",
+          "userVerification"
+        ]
+      },
+      "PasskeyAssertionResponseData": {
+        "type": "object",
+        "properties": {
+          "clientDataJSON": {
+            "type": "string",
+            "description": "Base64url-encoded clientDataJSON from the authenticator."
+          },
+          "authenticatorData": {
+            "type": "string",
+            "description": "Base64url-encoded authenticatorData from the authenticator."
+          },
+          "signature": {
+            "type": "string",
+            "description": "Base64url-encoded signature from the authenticator."
+          },
+          "userHandle": {
+            "type": "string",
+            "description": "Base64url-encoded user handle, if returned by the authenticator."
+          }
+        },
+        "required": [
+          "clientDataJSON",
+          "authenticatorData",
+          "signature"
+        ]
+      },
+      "PasskeyAssertionRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Credential ID, as returned by navigator.credentials.get().toJSON()."
+          },
+          "rawId": {
+            "type": "string",
+            "description": "Base64url-encoded raw credential ID."
+          },
+          "type": {
+            "type": "string",
+            "description": "Always \"public-key\".",
+            "example": "public-key"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PasskeyAssertionResponseData"
+          }
+        },
+        "required": [
+          "id",
+          "rawId",
+          "type",
+          "response"
+        ]
+      },
+      "PasskeyConfirmationResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "The code the user must verify against the one shown on their phone.",
+            "example": "1234"
+          }
+        },
+        "required": [
+          "code"
+        ]
+      },
       "SessionActionsDTO": {
         "type": "object",
         "properties": {
@@ -7537,6 +7892,18 @@
           "key",
           "isActive",
           "isAdmin"
+        ]
+      },
+      "ScopedApiKeyRequest": {
+        "type": "object",
+        "properties": {
+          "session": {
+            "type": "string",
+            "example": "default"
+          }
+        },
+        "required": [
+          "session"
         ]
       },
       "ChatWootCommandsConfig": {
@@ -8149,6 +8516,8 @@
               "STOPPED",
               "STARTING",
               "SCAN_QR_CODE",
+              "PASSKEY_REQUIRED",
+              "PASSKEY_CONFIRMATION_REQUIRED",
               "WORKING",
               "FAILED"
             ],
@@ -8205,6 +8574,8 @@
               "STOPPED",
               "STARTING",
               "SCAN_QR_CODE",
+              "PASSKEY_REQUIRED",
+              "PASSKEY_CONFIRMATION_REQUIRED",
               "WORKING",
               "FAILED"
             ],
@@ -11020,6 +11391,8 @@
               "STOPPED",
               "STARTING",
               "SCAN_QR_CODE",
+              "PASSKEY_REQUIRED",
+              "PASSKEY_CONFIRMATION_REQUIRED",
               "WORKING",
               "FAILED"
             ]
@@ -11040,12 +11413,20 @@
             "type": "string",
             "example": "default"
           },
+          "data": {
+            "type": "object",
+            "nullable": true,
+            "description": "Extra info that belongs to the current status, null for most of them.\nPASSKEY_REQUIRED - the WebAuthn challenge, pass it to navigator.credentials.get({ publicKey: data }).\nPASSKEY_CONFIRMATION_REQUIRED - { code } - the code to verify against the phone.",
+            "example": null
+          },
           "status": {
             "type": "string",
             "enum": [
               "STOPPED",
               "STARTING",
               "SCAN_QR_CODE",
+              "PASSKEY_REQUIRED",
+              "PASSKEY_CONFIRMATION_REQUIRED",
               "WORKING",
               "FAILED"
             ]
