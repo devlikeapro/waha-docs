@@ -62,9 +62,11 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2026.6.3` - **GOWS** - `WAHA_CLIENT_BROWSER_NAME=Desktop` shows `WAHA_CLIENT_DEVICE_NAME` as the only label in WhatsApp → Linked Devices, with no browser name in front of it - [**⚙️ Configuration**]({{< relref "/docs/how-to/config#sessions---device-name" >}}) - closes #2152
 - `2026.6.1` - **WAHA Plus** features are now part of the **WAHA Core** image - [**WAHA Community**]({{< relref "/blog/waha-community" >}})
 
 🛠️ **Fixes**
+- `2026.6.3` - **GOWS** - `WAHA_GOWS_DEVICE_*` variables were parsed but never applied to the device props
 - `2026.6.2` - **GOWS** - fix document media — 403 on live media + media-retry never completes/refreshes directPath - fix #2131
 
 ⚙️ **Updates**

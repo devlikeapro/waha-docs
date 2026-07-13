@@ -146,6 +146,7 @@ You can customize how sessions show up under **WhatsApp → Linked Devices** by 
 
 - `WAHA_CLIENT_DEVICE_NAME=TEST` - custom device name.
 - `WAHA_CLIENT_BROWSER_NAME=Chrome` - browser name shown in the Linked Devices list.
+  - **GOWS** - also accepts `Desktop`, which shows the device name **on its own**, without a browser name in front of it. Use it to show your own product name in the list.
 
 ```ini { title=".env" }
 WAHA_CLIENT_DEVICE_NAME=TEST
@@ -154,6 +155,16 @@ WAHA_CLIENT_BROWSER_NAME=Chrome
 <div style="width: 600px; max-width: 100%; margin: 0 auto;">
 {{< imgo src="/docs/how-to/sessions/whatsapp-linked-devices-devicename-test.png" alt="WhatsApp linked device name set to TEST" >}}
 </div>
+
+On **GOWS**, the two variables combine like this:
+
+| `WAHA_CLIENT_BROWSER_NAME` | `WAHA_CLIENT_DEVICE_NAME` | Linked Devices shows  |
+|----------------------------|---------------------------|-----------------------|
+| `Chrome`                   | `MyApp`                   | Google Chrome (MyApp) |
+| `Desktop`                  | `MyApp`                   | MyApp                 |
+| `NotABrowser`              | `MyApp`                   | Other device          |
+
+With an unrecognized value WhatsApp drops the device name entirely and shows a generic "Other device".
 
 {{< include file="content/docs/how-to/sessions/-device-name-pairing-code.md" >}}
 
