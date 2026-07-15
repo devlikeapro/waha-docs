@@ -62,7 +62,8 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
-- `2026.7.1` - **GOWS** - Passkey (WebAuthn) session pairing — pair sessions that ask for a passkey right from your own UI. It rides on `session.status` (`PASSKEY_REQUIRED`, `PASSKEY_CONFIRMATION_REQUIRED`, each carrying its `data` payload) with `GET/POST /api/{session}/auth/passkey` and `GET /api/{session}/auth/passkey/challenge` - [**How to Handle Passkey**]({{< relref "/blog/waha-passkey" >}})
+- `2026.7.1` - **API** - scoped session keys — narrow media / control keys so you never share the real API key - [**🔒 Keys API**]({{< relref "/docs/how-to/security#scoped-session-keys-media--control" >}}) - fix #2146
+- `2026.7.1` - **GOWS** - Passkey (WebAuthn) session pairing — pair sessions from your own UI - [**How to Handle Passkey**]({{< relref "/blog/waha-passkey" >}})
 - `2026.7.1` - **WEBJS** - expose the current account LID in session "me" info (`me.lid`)
 
 🛠️ **Fixes**

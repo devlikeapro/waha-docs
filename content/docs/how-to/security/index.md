@@ -299,6 +299,82 @@ Session key with limited scopes (read-only):
 }
 ```
 
+### Scoped session keys
+
+When you need to hand out a **narrow** key for a single session - instead of your real `WAHA_API_KEY` or a full session key - use the scoped endpoints below.
+They mint a key locked to one action for one session, so you can safely pass it to a browser (QR code / screenshot) or a media downloader without exposing full access.
+
+{{< callout context="note" icon="outline/info-circle" >}}
+Both endpoints are **idempotent** - repeated calls for the same session return the same key instead of minting a new one.
+The session must already exist, otherwise you get `422 Unprocessable Entity`.
+{{< /callout >}}
+
+WAHA uses these keys internally so the **MCP** server never echoes your real API key into an AI client transcript when it shares a media link, QR code, or screenshot URL - [#2146](https://github.com/devlikeapro/waha/issues/2146).
+
+#### Media key
+
+Creates (or returns) a **download-only** key for the session - all actions are disabled, it can only fetch the session's media files.
+
+```http request
+POST /api/keys/media
+```
+
+```jsonc { title="Body" }
+{
+  "session": "default"
+}
+```
+
+```jsonc { title="Response" }
+{
+  "id": "key_id_media_default",
+  "key": "key_11111111111AAAAAAAAAAAAAAAAAAAAA",
+  "isActive": true,
+  "isAdmin": false,
+  "session": "default",
+  "actions": {
+    "read": false,
+    "send": false,
+    "control": false,
+    "setting": false,
+    "app": false,
+    "delete": false
+  }
+}
+```
+
+#### Control key
+
+Creates (or returns) a **control-only** key for the session - used to open the QR code or screenshot in a browser.
+
+```http request
+POST /api/keys/control
+```
+
+```jsonc { title="Body" }
+{
+  "session": "default"
+}
+```
+
+```jsonc { title="Response" }
+{
+  "id": "key_id_control_default",
+  "key": "key_11111111111AAAAAAAAAAAAAAAAAAAAA",
+  "isActive": true,
+  "isAdmin": false,
+  "session": "default",
+  "actions": {
+    "read": false,
+    "send": false,
+    "control": true,
+    "setting": false,
+    "app": false,
+    "delete": false
+  }
+}
+```
+
 ### Update API key
 
 ```http request
