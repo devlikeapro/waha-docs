@@ -57,6 +57,36 @@ Latest Version:
 
 👉🏻 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
+### 2026.7
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🆕 **New**
+- `2026.7.1` - **GOWS** - Passkey (WebAuthn) session pairing — pair sessions that ask for a passkey right from your own UI. It rides on `session.status` (`PASSKEY_REQUIRED`, `PASSKEY_CONFIRMATION_REQUIRED`, each carrying its `data` payload) with `GET/POST /api/{session}/auth/passkey` and `GET /api/{session}/auth/passkey/challenge` - [**How to Handle Passkey**]({{< relref "/blog/waha-passkey" >}})
+
+🛠️ **Fixes**
+- `2026.7.1` - **WEBJS** - `waha is not receiving message events` after the `_serialized` id rename - fix #2157, #2162
+- `2026.7.1` - **WEBJS** - `Unhandled TypeError: Cannot read properties of undefined (reading 'includes')` - fix #2158
+- `2026.7.1` - **WEBJS** - `GET /api/{session}/groups` returns HTTP 500 - fix #2159
+- `2026.7.1` - **WEBJS** - `Cannot GET /api/{session}/chats` - fix #2160
+- `2026.7.1` - **WEBJS** - sending an image fails with `msg.avParams is not a function` - fix #2149
+- `2026.7.1` - **GOWS** - session silently stops sending webhook events after `<stream:error>` (media ack); status stayed `WORKING` until a manual restart - fix #2151
+- `2026.7.1` - **NOWEB** - timestamp bug that breaks message sorting when fetching chat history - fix #2139
+- `2026.7.1` - **MCP** - do not share the real API key in media and auth (QR / screenshot) tool output - fix #2146
+
+📊 **Dashboard**
+- `2026.7.1` - Passkey UI — extension-assisted pairing with a manual DevTools fallback, driven by `session.status`
+- `2026.7.1` - fix image emoji
+
+⚙️ **Updates**
+- `2026.7.1` - **WEBJS** - up engine
+- `2026.7.1` - **GOWS** - up engine
+- `2026.7.1` - **NOWEB** - up engine
+- `2026.7.1` - **WPP** - up engine
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2026.6
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
