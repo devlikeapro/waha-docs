@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 21 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA Community</title><link>/blog/waha-community/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>/blog/waha-community/</guid><description>&lt;hr>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Handle Passkey</title><link>/blog/waha-passkey/</link><pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate><guid>/blog/waha-passkey/</guid><description>&lt;h2 id="what-is-a-passkey">What is a passkey?&lt;/h2>
+&lt;p>A &lt;strong>passkey&lt;/strong> is a key pair stored by your device instead of a password. The private key never leaves the
+authenticator - Touch ID, Windows Hello, a security key, your phone - and logging in means signing a random
+challenge from the server with it.&lt;/p></description></item><item><title>WAHA Community</title><link>/blog/waha-community/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>/blog/waha-community/</guid><description>&lt;hr>
 &lt;p>TL;DR: &lt;strong>WAHA Plus&lt;/strong> features are now part of &lt;strong>WAHA Core&lt;/strong>. 🎉&lt;/p>
 &lt;hr>
 &lt;h2 id="waha-is-free">WAHA is free!&lt;/h2>
@@ -83,9 +86,4 @@ Any MCP-compatible AI agent — Claude, Goose, and others — can send messages,
 &lt;/svg>
  &lt;div class="callout-content">
  &lt;div class="callout-title">
- &lt;p>Requirements&lt;/p></description></item><item><title>Deploy WAHA on Docker</title><link>/blog/waha-on-docker/</link><pubDate>Sat, 10 Jan 2026 01:01:01 +0000</pubDate><guid>/blog/waha-on-docker/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>In this guide we&amp;rsquo;ll show you how to deploy &lt;strong>WAHA&lt;/strong> using &lt;strong>Docker&lt;/strong> and &lt;strong>Docker Compose&lt;/strong>.&lt;/p>
-&lt;details>
- &lt;summary>Why Docker?&lt;/summary>
- &lt;p>&lt;strong>Docker&lt;/strong> makes it easy to ship &lt;strong>all-in-one solution&lt;/strong> with the runtime and dependencies.
-You don&amp;rsquo;t have to worry about language-specific libraries or chrome installation.&lt;/p></description></item></channel></rss>
+ &lt;p>Requirements&lt;/p></description></item></channel></rss>
