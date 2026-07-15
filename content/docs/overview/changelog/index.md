@@ -63,6 +63,7 @@ Latest Version:
 
 🆕 **New**
 - `2026.7.1` - **GOWS** - Passkey (WebAuthn) session pairing — pair sessions that ask for a passkey right from your own UI. It rides on `session.status` (`PASSKEY_REQUIRED`, `PASSKEY_CONFIRMATION_REQUIRED`, each carrying its `data` payload) with `GET/POST /api/{session}/auth/passkey` and `GET /api/{session}/auth/passkey/challenge` - [**How to Handle Passkey**]({{< relref "/blog/waha-passkey" >}})
+- `2026.7.1` - **WEBJS** - expose the current account LID in session "me" info (`me.lid`)
 
 🛠️ **Fixes**
 - `2026.7.1` - **WEBJS** - `waha is not receiving message events` after the `_serialized` id rename - fix #2157, #2162
