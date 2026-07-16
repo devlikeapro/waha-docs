@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Handle Passkey</title><link>/blog/waha-passkey/</link><pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate><guid>/blog/waha-passkey/</guid><description>&lt;h2 id="what-is-a-passkey">What is a passkey?&lt;/h2>
 &lt;p>A &lt;strong>passkey&lt;/strong> is a key pair stored by your device instead of a password. The private key never leaves the
 authenticator - Touch ID, Windows Hello, a security key, your phone - and logging in means signing a random
-challenge from the server with it.&lt;/p></description></item><item><title>WAHA Community</title><link>/blog/waha-community/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>/blog/waha-community/</guid><description>&lt;hr>
+challenge from the server with it.&lt;/p></description></item><item><title>WAHA 2026.6 - WAHA Community</title><link>/blog/waha-2026-6/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>/blog/waha-2026-6/</guid><description>&lt;hr>
 &lt;p>TL;DR: &lt;strong>WAHA Plus&lt;/strong> features are now part of &lt;strong>WAHA Core&lt;/strong>. 🎉&lt;/p>
 &lt;hr>
 &lt;h2 id="waha-is-free">WAHA is free!&lt;/h2>
