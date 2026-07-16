@@ -1,5 +1,5 @@
 ---
-title: "WAHA Community"
+title: "WAHA 2026.6 - WAHA Community"
 description: "Starting from 2026.6.1, every WAHA Plus feature ships in the free WAHA Core image, and the Core/Plus/PRO tiers become a single optional Community tier."
 excerpt: "Every WAHA Plus feature is now in the free Core image starting 2026.6.1. The tiers collapse into a single optional Community subscription."
 date: 2026-06-21T00:00:00+00:00
@@ -10,7 +10,9 @@ tags: [ ]
 contributors: [ "devlikeapro" ]
 pinned: true
 homepage: false
-slug: waha-community
+slug: waha-2026-6
+aliases:
+  - /blog/waha-community
 ---
 
 ---
