@@ -62,11 +62,15 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2026.7.2` - **GOWS** - Add `WAHA_GOWS_LINK_PREVIEW_TIMEOUT` env variable (default `10s`) - how long to wait for page metadata and image when generating a link preview - [**GOWS**]({{< relref "/docs/engines/gows#link-preview" >}})
 - `2026.7.1` - **API** - scoped session keys — narrow media / control keys so you never share the real API key - [**🔒 Keys API**]({{< relref "/docs/how-to/security#scoped-session-keys-media--control" >}}) - fix #2146
 - `2026.7.1` - **GOWS** - Passkey (WebAuthn) session pairing — pair sessions from your own UI - [**How to Handle Passkey**]({{< relref "/blog/waha-passkey" >}})
 - `2026.7.1` - **WEBJS** - expose the current account LID in session "me" info (`me.lid`)
 
 🛠️ **Fixes**
+- `2026.7.2` - **WEBJS** - Link previews in Channels: blurred thumbnail on Android, white image on iPhone - fix #2163
+- `2026.7.2` - **NOWEB** - Link previews in Channels: thumbnail was uploaded encrypted; also raise the preview fetch timeout 3s → 10s so slow sites don't lose the preview - fix #2163
+- `2026.7.2` - **GOWS** - Link previews in Channels were not shown at all; also raise the preview fetch timeout 6s → 10s - fix #2163
 - `2026.7.1` - **WEBJS** - `waha is not receiving message events` after the `_serialized` id rename - fix #2157, #2162
 - `2026.7.1` - **WEBJS** - `Unhandled TypeError: Cannot read properties of undefined (reading 'includes')` - fix #2158
 - `2026.7.1` - **WEBJS** - `GET /api/{session}/groups` returns HTTP 500 - fix #2159

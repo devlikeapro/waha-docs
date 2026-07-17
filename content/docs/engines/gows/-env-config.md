@@ -75,6 +75,20 @@ Controls batching behaviour when sending a WhatsApp status/story to `status@broa
 WAHA_GOWS_STATUS_PARTICIPANTS_BATCH_SIZE=500
 ```
 
+## Link Preview
+
+How long **GOWS** waits to fetch the page metadata and the preview image
+when generating a link preview for an outgoing message (`linkPreview: true` in `POST /api/sendText`).
+
+If a website responds slower than the timeout, the message is sent without any link preview —
+increase the value if that happens for your links.
+
+```bash
+# Go duration format: 10s, 30s, 1m
+# Default: 10s
+WAHA_GOWS_LINK_PREVIEW_TIMEOUT=10s
+```
+
 ### History Sync — All variables
 
 ```bash
