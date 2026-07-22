@@ -61,6 +61,15 @@ Here's a recommended process to follow:
 By following these steps, you can ensure that your bot processes messages in a way that's compliant with WhatsApp's
 guidelines and reduces the risk of being blocked.
 
+## Reachout Timelock
+
+Before an outright ban, WhatsApp may **shadow-restrict** an account that messages too many **new contacts** -
+sending messages to new contacts fails with `server returned error 463`, while the session stays connected and `WORKING`.
+
+Do **NOT** restart, logout or re-pair the session - the restriction lifts automatically.
+Pause outreach to new contacts and read more in
+[**🖥️ Sessions → Reachout Timelock**]({{< relref "/docs/how-to/sessions#reachout-timelock" >}}).
+
 ## How to Avoid Getting Banned
 
 WhatsApp knows that it's uncommon for someone to send so many messages or bulk messages to people they've never talked to before, so it is considered spam/marketing junk pretty quickly. Here are some tips before sending a message to WhatsApp:

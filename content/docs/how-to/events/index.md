@@ -417,7 +417,7 @@ The `session.status` event is triggered when the session status changes.
 - `data` - extra info that belongs to the current status, `null` for most of them
 
 The `data` field is how a status carries whatever it needs, without adding a new event for every
-step WhatsApp introduces. Today only the passkey statuses use it -
+step WhatsApp introduces. Today the passkey statuses use it -
 [**🔑 Passkey ->**]({{< relref "/docs/how-to/sessions#passkey" >}}):
 
 ```jsonc { title="session.status - PASSKEY_REQUIRED" }
@@ -462,6 +462,37 @@ step WhatsApp introduces. Today only the passkey statuses use it -
     "engine": "GOWS",
 }
 ```
+
+The `WORKING` status also uses `data` when WhatsApp puts the account under a **Reachout Timelock**
+(shadow-restriction on messaging **new** contacts, the cause of `server returned error 463` on send).
+The session stays `WORKING` - do **NOT** restart or logout it, the restriction lifts automatically.
+Available in **GOWS**, **NOWEB** and **WEBJS** engines, see
+[**Reachout Timelock ->**]({{< relref "/docs/how-to/sessions#reachout-timelock" >}}):
+
+```jsonc { title="session.status - WORKING - Reachout Timelock" }
+{
+    "event": "session.status",
+    "session": "default",
+    "payload": {
+        "status": "WORKING",
+        "statuses": [ /* ... */ ],
+        // WhatsApp restricts messaging NEW contacts until "timeEnforcementEnds"
+        // WAHA re-issues WORKING with "isActive": false when the lock lifts
+        "data": {
+            "reachoutTimelock": {
+                "enforcementType": "RESTRICT_ALL_COMPANIONS",
+                "isActive": true,
+                "timeEnforcementEnds": 1784477333
+            }
+        },
+    },
+    "engine": "GOWS",
+}
+```
+
+{{< callout context="caution" title="Reachout Timelock" icon="outline/alert-triangle" >}}
+{{< include file="content/docs/how-to/sessions/reachout-timelock-callout.md" >}}
+{{< /callout >}}
 
 ### message
 

@@ -68,6 +68,7 @@ Latest Version:
 - `2026.7.1` - **WEBJS** - expose the current account LID in session "me" info (`me.lid`)
 
 🛠️ **Fixes**
+- `2026.7.2` - **GOWS**, **NOWEB**, **WEBJS** - handle WhatsApp **Reachout Timelock** - the cause of `server returned error 463` when messaging new contacts [**Reachout Timelock**]({{< relref "/docs/how-to/sessions#reachout-timelock" >}}) - fix #2166
 - `2026.7.2` - **WEBJS** - Link previews in Channels: blurred thumbnail on Android, white image on iPhone - fix #2163
 - `2026.7.2` - **NOWEB** - Link previews in Channels: thumbnail was uploaded encrypted; also raise the preview fetch timeout 3s → 10s so slow sites don't lose the preview - fix #2163
 - `2026.7.2` - **GOWS** - Link previews in Channels were not shown at all; also raise the preview fetch timeout 6s → 10s - fix #2163

@@ -54,10 +54,75 @@ Here's the list of possible `session.status` values:
       see [**🔑 Passkey ->**](#passkey).
     - Most pairings never reach this status - WhatsApp confirms them on its own.
 - `WORKING` - session is working and ready to use
+    - The `WORKING` status event may carry extra info in the `data` field,
+      see [**Reachout Timelock ->**](#reachout-timelock).
 - `FAILED` - session is failed due to some error. It's likely either authorization is required again or device has been
   disconnected from that account. 
 
 In `FAILED` status try to [**Restart**](#restart-session) the session and if it doesn't help - [**Logout**](#logout-session) and [**Start**](#start-session) the session again.
+
+### Reachout Timelock
+
+WhatsApp **shadow-restricts** accounts that message too many **new contacts** ("cold" contacts) -
+it's called **Reachout Timelock**.
+While the timelock is active, sending messages to new contacts fails with `server returned error 463`.
+
+The session stays **CONNECTED** and the status stays `WORKING` - no logout or disconnect happens,
+so do **NOT** restart or re-pair the session - the restriction lifts automatically at `timeEnforcementEnds`.
+
+👉 Supported engines: **GOWS**, **NOWEB**, **WEBJS**.
+
+When the timelock info arrives (or changes, or lifts), **WAHA** re-issues a `WORKING`
+[`session.status`](#sessionstatus) event with the info in the `data` field:
+
+```jsonc { title="session.status" }
+{
+  "event": "session.status",
+  "session": "default",
+  "payload": {
+    "name": "default",
+    "status": "WORKING",
+    "data": {
+      "reachoutTimelock": {
+        "enforcementType": "RESTRICT_ALL_COMPANIONS",
+        "isActive": true,
+        "timeEnforcementEnds": 1784477333
+      }
+    }
+  }
+}
+```
+
+- `isActive` - whether the restriction is enforced right now.
+  When the lock lifts (event or expiry), **WAHA** re-issues `WORKING` with `isActive: false`.
+- `timeEnforcementEnds` - unix timestamp (in **seconds**) when the restriction ends, may be `null`.
+- `enforcementType` - the raw WhatsApp value (`RESTRICT_ALL_COMPANIONS`, `BIZ_QUALITY`, `WEB_COMPANION_ONLY`, `DEFAULT`).
+  It does **not** change what is blocked - informational only.
+
+You can also read the current state at any time from [**Get me**](#get-me) - the `reachoutTimelock` field
+(the same `me` object is available in `GET /api/sessions` and `GET /api/sessions/{session}`).
+On session start **WAHA** fetches the current state from WhatsApp, so the field is populated even after restarts:
+
+```http request
+GET /api/sessions/{session}/me
+```
+
+```jsonc { title="Response" }
+{
+  "id": "11111111111@c.us",
+  "pushName": "string",
+  // "null" if no enforcement has been seen
+  "reachoutTimelock": {
+    "enforcementType": "RESTRICT_ALL_COMPANIONS",
+    "isActive": true,
+    "timeEnforcementEnds": 1784477333
+  }
+}
+```
+
+{{< callout context="caution" title="Reachout Timelock" icon="outline/alert-triangle" >}}
+{{< include file="content/docs/how-to/sessions/reachout-timelock-callout.md" >}}
+{{< /callout >}}
 
 
 ## Create Session
@@ -804,9 +869,15 @@ GET /api/sessions/{session}/me
 ```jsonc { title="Response" }
 {
   "id": "11111111111@c.us",
-  "pushName": "string"
+  "pushName": "string",
+  // "null" if no enforcement has been seen
+  // see "Reachout Timelock" section above
+  "reachoutTimelock": null
 }
 ```
+
+- `reachoutTimelock` - WhatsApp's restriction on messaging new contacts (**GOWS**, **NOWEB**, **WEBJS**),
+  see [**Reachout Timelock ->**](#reachout-timelock).
 
 **Stopped** or **not authenticated** session returns `null`:
 
