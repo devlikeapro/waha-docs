@@ -22,6 +22,8 @@
 | `PUT /api/{session}/groups/{id}/settings/security/info-admin-only`     |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/settings/security/messages-admin-only` |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `PUT /api/{session}/groups/{id}/settings/security/messages-admin-only` |  ✔️   | ✔️  |  ✔️   |  ✔️  |
+| `GET /api/{session}/groups/{id}/settings/security/member-add-mode`     |  ✔️   | ✔️  |  ✔️   |  ✔️  |
+| `PUT /api/{session}/groups/{id}/settings/security/member-add-mode`     |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/participants`                          |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `POST /api/{session}/groups/{id}/participants/add`                     |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `POST /api/{session}/groups/{id}/participants/remove`                  |  ✔️   | ✔️  |  ✔️   |  ✔️  |

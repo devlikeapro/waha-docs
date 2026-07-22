@@ -325,6 +325,33 @@ GET /api/{session}/groups/{groupId}/settings/security/messages-admin-only
 }
 ```
 
+### Security - who can add members
+Updates the group settings for who can add new members to the group - all members or admins only.
+
+```http request
+PUT /api/{session}/groups/{groupId}/settings/security/member-add-mode
+```
+
+```jsonc { title="Body" }
+{
+  // true - all members can add new members
+  // false - only admins can add new members
+  "membersCanAddNewMember": true
+}
+```
+
+Get the group settings for who can add new members to the group.
+
+```http request
+GET /api/{session}/groups/{groupId}/settings/security/member-add-mode
+```
+
+```jsonc { title="Response" }
+{
+  "membersCanAddNewMember": true
+}
+```
+
 ### Participants
 
 #### Get participants v2

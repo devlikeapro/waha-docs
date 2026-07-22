@@ -62,12 +62,14 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2026.7.2` - Group settings for who can add new members - `GET|PUT /api/{session}/groups/{id}/settings/security/member-add-mode` - [**👥 Groups**]({{< relref "/docs/how-to/groups#security---who-can-add-members" >}}) - fix #2165, closes #2172
 - `2026.7.2` - **GOWS** - Add `WAHA_GOWS_LINK_PREVIEW_TIMEOUT` env variable (default `10s`) - how long to wait for page metadata and image when generating a link preview - [**GOWS**]({{< relref "/docs/engines/gows#link-preview" >}})
 - `2026.7.1` - **API** - scoped session keys — narrow media / control keys so you never share the real API key - [**🔒 Keys API**]({{< relref "/docs/how-to/security#scoped-session-keys-media--control" >}}) - fix #2146
 - `2026.7.1` - **GOWS** - Passkey (WebAuthn) session pairing — pair sessions from your own UI - [**How to Handle Passkey**]({{< relref "/blog/waha-passkey" >}})
 - `2026.7.1` - **WEBJS** - expose the current account LID in session "me" info (`me.lid`)
 
 🛠️ **Fixes**
+- `2026.7.2` - **WEBJS**, **WPP** - `membersCanAddNewMember` in group info was read from the wrong group setting (`restrict` - who can edit group info)
 - `2026.7.2` - **GOWS**, **NOWEB**, **WEBJS** - handle WhatsApp **Reachout Timelock** - the cause of `server returned error 463` when messaging new contacts [**Reachout Timelock**]({{< relref "/docs/how-to/sessions#reachout-timelock" >}}) - fix #2166
 - `2026.7.2` - **WEBJS** - Link previews in Channels: blurred thumbnail on Android, white image on iPhone - fix #2163
 - `2026.7.2` - **NOWEB** - Link previews in Channels: thumbnail was uploaded encrypted; also raise the preview fetch timeout 3s → 10s so slow sites don't lose the preview - fix #2163
