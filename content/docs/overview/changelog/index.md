@@ -62,29 +62,30 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
-- `2026.7.2` - Group settings for who can add new members - `GET|PUT /api/{session}/groups/{id}/settings/security/member-add-mode` - [**👥 Groups**]({{< relref "/docs/how-to/groups#security---who-can-add-members" >}}) - fix #2165, closes #2172
-- `2026.7.2` - **GOWS** - Add `WAHA_GOWS_LINK_PREVIEW_TIMEOUT` env variable (default `10s`) - how long to wait for page metadata and image when generating a link preview - [**GOWS**]({{< relref "/docs/engines/gows#link-preview" >}})
+- `2026.7.2` - Groups - `settings/security/member-add-mode` API - who can add new members - [**👥 Groups**]({{< relref "/docs/how-to/groups#security---who-can-add-members" >}}) - fix #2165, closes #2172
+- `2026.7.2` - **GOWS** - `WAHA_GOWS_LINK_PREVIEW_TIMEOUT` env variable (default `10s`) for link preview generation - [**GOWS**]({{< relref "/docs/engines/gows#link-preview" >}})
 - `2026.7.1` - **API** - scoped session keys — narrow media / control keys so you never share the real API key - [**🔒 Keys API**]({{< relref "/docs/how-to/security#scoped-session-keys-media--control" >}}) - fix #2146
 - `2026.7.1` - **GOWS** - Passkey (WebAuthn) session pairing — pair sessions from your own UI - [**How to Handle Passkey**]({{< relref "/blog/waha-passkey" >}})
 - `2026.7.1` - **WEBJS** - expose the current account LID in session "me" info (`me.lid`)
+- `2026.7.1` - **GOWS** - Passkey (WebAuthn) session pairing via `session.status` and `/api/{session}/auth/passkey` API - [**How to Handle Passkey**]({{< relref "/blog/waha-passkey" >}})
 
 🛠️ **Fixes**
-- `2026.7.2` - **WEBJS**, **WPP** - `membersCanAddNewMember` in group info was read from the wrong group setting (`restrict` - who can edit group info)
-- `2026.7.2` - **GOWS**, **NOWEB**, **WEBJS** - handle WhatsApp **Reachout Timelock** - the cause of `server returned error 463` when messaging new contacts [**Reachout Timelock**]({{< relref "/docs/how-to/sessions#reachout-timelock" >}}) - fix #2166
+- `2026.7.2` - **WEBJS**, **WPP** - group info `membersCanAddNewMember` was read from the wrong setting
+- `2026.7.2` - **GOWS**, **NOWEB**, **WEBJS** - `server returned error 463` when messaging new contacts - [**Reachout Timelock**]({{< relref "/docs/how-to/sessions#reachout-timelock" >}}) - fix #2166
 - `2026.7.2` - **WEBJS** - Link previews in Channels: blurred thumbnail on Android, white image on iPhone - fix #2163
-- `2026.7.2` - **NOWEB** - Link previews in Channels: thumbnail was uploaded encrypted; also raise the preview fetch timeout 3s → 10s so slow sites don't lose the preview - fix #2163
-- `2026.7.2` - **GOWS** - Link previews in Channels were not shown at all; also raise the preview fetch timeout 6s → 10s - fix #2163
+- `2026.7.2` - **NOWEB** - Link previews in Channels: encrypted thumbnail; preview fetch timeout 3s → 10s - fix #2163
+- `2026.7.2` - **GOWS** - Link previews in Channels not shown; preview fetch timeout 6s → 10s - fix #2163
 - `2026.7.1` - **WEBJS** - `waha is not receiving message events` after the `_serialized` id rename - fix #2157, #2162
 - `2026.7.1` - **WEBJS** - `Unhandled TypeError: Cannot read properties of undefined (reading 'includes')` - fix #2158
 - `2026.7.1` - **WEBJS** - `GET /api/{session}/groups` returns HTTP 500 - fix #2159
 - `2026.7.1` - **WEBJS** - `Cannot GET /api/{session}/chats` - fix #2160
 - `2026.7.1` - **WEBJS** - sending an image fails with `msg.avParams is not a function` - fix #2149
-- `2026.7.1` - **GOWS** - session silently stops sending webhook events after `<stream:error>` (media ack); status stayed `WORKING` until a manual restart - fix #2151
+- `2026.7.1` - **GOWS** - no webhook events after `<stream:error>` while status stays `WORKING` - fix #2151
 - `2026.7.1` - **NOWEB** - timestamp bug that breaks message sorting when fetching chat history - fix #2139
-- `2026.7.1` - **MCP** - do not share the real API key in media and auth (QR / screenshot) tool output - fix #2146
+- `2026.7.1` - **MCP** - do not expose the real API key in media and auth tool output - fix #2146
 
 📊 **Dashboard**
-- `2026.7.1` - Passkey UI — extension-assisted pairing with a manual DevTools fallback, driven by `session.status`
+- `2026.7.1` - Passkey UI - extension-assisted pairing with manual DevTools fallback
 - `2026.7.1` - fix image emoji
 
 ⚙️ **Updates**

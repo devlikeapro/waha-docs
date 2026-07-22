@@ -44,6 +44,7 @@ POST /api/...
 - Keep the area short and consistent with the section; ChatWoot entries should not add extra tags like `[core]`, but with **PLUS** if mentioned
 - Link to docs only when it adds value, and keep the text concise.
 - **Line length:** keep each changelog entry short — aim for **120 characters max** (longer is fine when needed, but trim the summary first). The trailing `relref` doc link and `fix #NNNN` reference don't count against the target.
+- Keep entries short - about 120-140 characters of visible text max; one line per change, no explanations or side notes.
 - **Multi-fix commits:** when a single commit message lists several `Fix #NNNN` lines (e.g. a `[core] Up GOWS` bump that embeds multiple fixes), **split each fix into its own separate changelog entry** — do not collapse them into one line.
 
 ## 🧩 Image Tools
