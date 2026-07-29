@@ -342,6 +342,64 @@ Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/media-voice-convert.md" >}}
 
 
+## Send Sticker
+Use API to send a WhatsApp sticker (WebP) to the chat.
+
+```http request
+POST /api/sendSticker
+```
+
+**Engine support:** **GOWS** only for now. Other engines return the standard
+"not implemented by this engine" error.
+
+You can send stickers in two ways:
+
+1. Provide a **URL** for the WebP.
+2. Encode the WebP into **BASE64** and send it in the request body.
+
+{{< tabs "send-sticker-body" >}}
+{{< tab "URL" >}}
+```jsonc { title="Body" }
+{
+  "session": "default",
+  "chatId": "11111111111@c.us",
+  "file": {
+    "mimetype": "image/webp",
+    "url": "https://example.com/sticker.webp"
+  },
+  "reply_to": null
+}
+```
+{{< /tab >}}
+
+{{< tab "BASE64" >}}
+```jsonc { title="Body" }
+{
+  "session": "default",
+  "chatId": "11111111111@c.us",
+  "file": {
+    "mimetype": "image/webp",
+    "filename": "sticker.webp",
+    "data": "<base64-webp>"
+  },
+  "reply_to": null
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+**Fields**:
+- `file` - provide **one of** the fields:
+  - `url` - URL to the WebP
+  - `data` - Base 64 encoded WebP content
+- `reply_to` - optional message id to reply to
+
+{{< include file="content/docs/how-to/send-messages/media-sticker-format.md" >}}
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendSticker-code.md" >}}
+
+
 ## Send Video
 ```http request
 POST /api/sendVideo

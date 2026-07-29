@@ -10,6 +10,7 @@
 | `POST /api/sendImage`                                       |                              ✔️                               |  ✔️   | ✔️ ️  |   ✔️   |
 | `POST /api/sendFile`                                        |                              ✔️                               |  ✔️   | ✔️ ️  |   ✔️   |
 | `POST /api/sendVoice`                                       |                              ✔️                               |  ✔️   | ✔️ ️  |   ✔️   |
+| `POST /api/sendSticker`                                     |                                                              |       |  ✔️   |        |
 | `POST /api/sendVideo`                                       |                              ✔️                               |  ✔️   | ✔️ ️  |   ✔️   |
 | `POST /api/sendList`                                        |                                                              |       |  ✔️   |   ✔️   |
 | `POST /api/send/link-custom-preview`                        |                                                              |       | ✔️ ️  |   ✔️   |

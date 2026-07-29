@@ -62,6 +62,7 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2026.7.2` - **API / GOWS** - `POST /api/sendSticker` — send a pre-made WebP sticker (static or animated); no server-side conversion - #1287
 - `2026.7.1` - **API** - scoped session keys — narrow media / control keys so you never share the real API key - [**🔒 Keys API**]({{< relref "/docs/how-to/security#scoped-session-keys-media--control" >}}) - fix #2146
 - `2026.7.1` - **GOWS** - Passkey (WebAuthn) session pairing — pair sessions from your own UI - [**How to Handle Passkey**]({{< relref "/blog/waha-passkey" >}})
 - `2026.7.1` - **WEBJS** - expose the current account LID in session "me" info (`me.lid`)
