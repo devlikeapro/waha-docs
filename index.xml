@@ -8,7 +8,7 @@
 &lt;h2 id="step-by-step-guide">Step-by-Step guide&lt;/h2>
 &lt;p>On this page, you&amp;rsquo;re going to install and run WAHA,
 authenticate the client using a QR code,
-and send &lt;strong>your first message&lt;/strong> to WhatsApp using the API!&lt;/p></description></item><item><title>⚠️ How to Avoid Blocking</title><link>/docs/overview/%EF%B8%8F-how-to-avoid-blocking/</link><pubDate>Thu, 12 Nov 2020 13:26:54 +0100</pubDate><guid>/docs/overview/%EF%B8%8F-how-to-avoid-blocking/</guid><description>&lt;p>How to Avoid Blocking in WhatsApp when developing bots.&lt;/p>
+and send &lt;strong>your first message&lt;/strong> to WhatsApp using the API!&lt;/p></description></item><item><title>⚠️ How to Avoid Blocking</title><link>/docs/overview/how-to-avoid-blocking/</link><pubDate>Thu, 12 Nov 2020 13:26:54 +0100</pubDate><guid>/docs/overview/how-to-avoid-blocking/</guid><description>&lt;p>How to Avoid Blocking in WhatsApp when developing bots.&lt;/p>
 &lt;p>It&amp;rsquo;s important to keep in mind that WhatsApp has strict policies in place to prevent spamming and abuse of their
 platform.&lt;/p></description></item><item><title>❓ FAQ</title><link>/docs/overview/faq/</link><pubDate>Tue, 06 Oct 2020 08:49:31 +0000</pubDate><guid>/docs/overview/faq/</guid><description>&lt;h2 id="system-requirements">System Requirements&lt;/h2>
 &lt;h3 id="how-much-cpu-and-memory-does-waha-need">How much CPU and Memory does WAHA need?&lt;/h3>
