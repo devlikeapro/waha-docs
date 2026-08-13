@@ -1,11 +1,16 @@
 ---
 title: "SARA"
-description: "SARA WhatsApp AI Agent Integration"
-lead: "SARA WhatsApp AI Agent Integration"
+description: "Use SARA open-source AI agent with WAHA as WhatsApp transport layer"
+lead: "Use SARA open-source AI agent with WAHA as WhatsApp transport layer"
 date: 2026-08-13T00:00:00+00:00
+lastmod: 2026-08-13T00:00:00+00:00
 draft: false
+menu:
+  docs:
+    parent: "help"
 weight: 920
 toc: true
+images: []
 ---
 
 ## What is SARA?
