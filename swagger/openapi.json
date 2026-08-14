@@ -966,6 +966,44 @@
         ]
       }
     },
+    "/api/sessions/{session}/timelock": {
+      "get": {
+        "operationId": "SessionsController_fetchReachoutTimelock",
+        "summary": "Fetch the account reachout timelock state",
+        "description": "Fetch a fresh reachout timelock state from WhatsApp - the restriction behind \"server returned error 463\" when messaging new contacts. The same value is also available under me.reachoutTimelock in the session info, and changes are pushed through the session.status event.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReachoutTimelockData"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🖥️ Sessions"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/sessions/{session}/start": {
       "post": {
         "operationId": "SessionsController_start",
@@ -8526,6 +8564,18 @@
             "nullable": true,
             "description": "Store labels locally. Set to false to disable; omit or null to keep enabled.",
             "example": true
+          },
+          "contacts": {
+            "type": "boolean",
+            "nullable": true,
+            "description": "Store contacts locally. Set to false to disable; omit or null to keep enabled. When disabled: contacts API returns no data, no contact names in chats, no PushName/BusinessName events, and sending status to all contacts does not work.",
+            "example": true
+          },
+          "messageSecrets": {
+            "type": "boolean",
+            "nullable": true,
+            "description": "Store message secrets locally. Set to false to disable; omit or null to keep enabled. When disabled: incoming poll votes, event responses and bot messages can not be decrypted, and sending own poll votes does not work.",
+            "example": true
           }
         }
       },
@@ -8709,7 +8759,9 @@
                 "messages": true,
                 "groups": true,
                 "chats": true,
-                "labels": true
+                "labels": true,
+                "contacts": true,
+                "messageSecrets": true
               }
             },
             "allOf": [
@@ -10330,6 +10382,11 @@
           "chatId": {
             "type": "string",
             "example": "Chat id for the phone number. Undefined if the number does not exist"
+          },
+          "pn": {
+            "type": "string",
+            "description": "Phone number id (@c.us). Can be null when only a @lid chatId is known",
+            "example": "11111111111@c.us"
           },
           "numberExists": {
             "type": "boolean"
