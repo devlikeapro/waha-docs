@@ -928,6 +928,44 @@
         ]
       }
     },
+    "/api/sessions/{session}/capping": {
+      "get": {
+        "operationId": "SessionsController_fetchMessageCapping",
+        "summary": "Fetch the account new-chat message capping (per-cycle quota)",
+        "description": "Fetch a fresh new-chat message capping (quota) state from WhatsApp. The same value is also available under me.messageCapping in the session info, and changes are pushed through the session.status event.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageCappingData"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🖥️ Sessions"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/sessions/{session}/start": {
       "post": {
         "operationId": "SessionsController_start",
@@ -6090,6 +6128,103 @@
         ]
       }
     },
+    "/api/{session}/groups/{id}/settings/security/member-add-mode": {
+      "put": {
+        "operationId": "GroupsController_setMemberAddMode",
+        "summary": "Update settings - who can add new members",
+        "description": "Updates the group settings for who can add new members to the group - all members or admins only.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Group ID",
+            "schema": {
+              "example": "123123123@g.us",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SettingsMemberAddMode"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "👥 Groups"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "get": {
+        "operationId": "GroupsController_getMemberAddMode",
+        "summary": "Get settings - who can add new members",
+        "description": "The group settings for who can add new members to the group - all members or admins only.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Group ID",
+            "schema": {
+              "example": "123123123@g.us",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SettingsMemberAddMode"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👥 Groups"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/{session}/groups/{id}/invite-code": {
       "get": {
         "operationId": "GroupsController_getInviteCode",
@@ -7496,7 +7631,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2026.7.1",
+    "version": "2026.8.1",
     "contact": {}
   },
   "tags": [
@@ -8129,6 +8264,111 @@
           "config"
         ]
       },
+      "ReachoutTimelockData": {
+        "type": "object",
+        "properties": {
+          "enforcementType": {
+            "enum": [
+              "DEFAULT",
+              "BIZ_QUALITY",
+              "BIZ_COMMERCE_VIOLATION_ADULT",
+              "BIZ_COMMERCE_VIOLATION_ALCOHOL",
+              "BIZ_COMMERCE_VIOLATION_ANIMALS",
+              "BIZ_COMMERCE_VIOLATION_BODY_PARTS_FLUIDS",
+              "BIZ_COMMERCE_VIOLATION_DATING",
+              "BIZ_COMMERCE_VIOLATION_DIGITAL_SERVICES_PRODUCTS",
+              "BIZ_COMMERCE_VIOLATION_DRUGS",
+              "BIZ_COMMERCE_VIOLATION_DRUGS_ONLY_OTC",
+              "BIZ_COMMERCE_VIOLATION_GAMBLING",
+              "BIZ_COMMERCE_VIOLATION_HEALTHCARE",
+              "BIZ_COMMERCE_VIOLATION_REAL_FAKE_CURRENCY",
+              "BIZ_COMMERCE_VIOLATION_SUPPLEMENTS",
+              "BIZ_COMMERCE_VIOLATION_TOBACCO",
+              "BIZ_COMMERCE_VIOLATION_VIOLENT_CONTENT",
+              "BIZ_COMMERCE_VIOLATION_WEAPONS",
+              "WEB_COMPANION_ONLY",
+              "RESTRICT_ALL_COMPANIONS"
+            ],
+            "type": "string",
+            "example": "RESTRICT_ALL_COMPANIONS",
+            "description": "Raw WhatsApp enforcement type. Informational only - it does not change what is blocked. WhatsApp may introduce new values, so treat it as an open set."
+          },
+          "isActive": {
+            "type": "boolean",
+            "example": true
+          },
+          "timeEnforcementEnds": {
+            "type": "number",
+            "nullable": true,
+            "example": 1784477333,
+            "description": "Unix timestamp (seconds) when the enforcement ends."
+          }
+        },
+        "required": [
+          "enforcementType",
+          "isActive",
+          "timeEnforcementEnds"
+        ]
+      },
+      "MessageCappingData": {
+        "type": "object",
+        "properties": {
+          "cappingStatus": {
+            "enum": [
+              "NONE",
+              "FIRST_WARNING",
+              "SECOND_WARNING",
+              "CAPPED"
+            ],
+            "type": "string",
+            "example": "FIRST_WARNING",
+            "description": "How close the account is to its new-chat quota. CAPPED means new chats are blocked. WhatsApp may introduce new values, so treat it as an open set."
+          },
+          "totalQuota": {
+            "type": "number",
+            "example": 1000,
+            "description": "New-chat messages allowed in the current cycle. -1 when the account has no cap."
+          },
+          "usedQuota": {
+            "type": "number",
+            "example": 640,
+            "description": "New-chat messages already used in the current cycle."
+          },
+          "cycleStart": {
+            "type": "number",
+            "nullable": true,
+            "example": 1782874800,
+            "description": "Unix timestamp (seconds) when the current cycle started."
+          },
+          "cycleEnd": {
+            "type": "number",
+            "nullable": true,
+            "example": 1785553199,
+            "description": "Unix timestamp (seconds) when the current cycle ends."
+          },
+          "mvStatus": {
+            "type": "string",
+            "nullable": true,
+            "example": "NOT_ELIGIBLE",
+            "description": "Meta Verified status. Informational."
+          },
+          "oteStatus": {
+            "type": "string",
+            "nullable": true,
+            "example": "NOT_ELIGIBLE",
+            "description": "One-time engagement status. Informational."
+          }
+        },
+        "required": [
+          "cappingStatus",
+          "totalQuota",
+          "usedQuota",
+          "cycleStart",
+          "cycleEnd",
+          "mvStatus",
+          "oteStatus"
+        ]
+      },
       "MeInfo": {
         "type": "object",
         "properties": {
@@ -8144,6 +8384,24 @@
             "type": "string",
             "example": "123123:123@s.whatsapp.net",
             "description": "Your id with device number"
+          },
+          "reachoutTimelock": {
+            "nullable": true,
+            "description": "WhatsApp reachout timelock (account restriction) info. Null if no enforcement has been seen for the account.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ReachoutTimelockData"
+              }
+            ]
+          },
+          "messageCapping": {
+            "nullable": true,
+            "description": "WhatsApp new-chat message capping (per-cycle quota) info. Null until the capping state has been fetched for the account.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/MessageCappingData"
+              }
+            ]
           },
           "pushName": {
             "type": "string"
@@ -11046,6 +11304,18 @@
           "adminsOnly"
         ]
       },
+      "SettingsMemberAddMode": {
+        "type": "object",
+        "properties": {
+          "membersCanAddNewMember": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "required": [
+          "membersCanAddNewMember"
+        ]
+      },
       "GroupParticipant": {
         "type": "object",
         "properties": {
@@ -11416,7 +11686,7 @@
           "data": {
             "type": "object",
             "nullable": true,
-            "description": "Extra info that belongs to the current status, null for most of them.\nPASSKEY_REQUIRED - the WebAuthn challenge, pass it to navigator.credentials.get({ publicKey: data }).\nPASSKEY_CONFIRMATION_REQUIRED - { code } - the code to verify against the phone.",
+            "description": "Extra info that belongs to the current status, null for most of them.\nPASSKEY_REQUIRED - the WebAuthn challenge, pass it to navigator.credentials.get({ publicKey: data }).\nPASSKEY_CONFIRMATION_REQUIRED - { code } - the code to verify against the phone.\nWORKING - { reachoutTimelock } - present when WhatsApp restricts the account from messaging new contacts (the cause of 463 errors on send); the session stays connected and the restriction lifts automatically.",
             "example": null
           },
           "status": {
