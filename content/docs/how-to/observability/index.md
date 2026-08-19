@@ -24,7 +24,7 @@ Options you can use to control how WAHA outputs logs:
 - `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides
   the `WAHA_LOG_LEVEL` to `debug` if both defined.
 
-### Session logging
+### Session debug level
 
 You can enable debug mode for a session by setting the `config.debug` field to `true` when 
 [Starting a session]({{< relref "/docs/how-to/sessions#debug" >}})
