@@ -74,6 +74,7 @@ Latest Version:
 - `2026.8.1` - do not save full attachment content in the task result - fix #2201, closes #2202
 
 🛠️ **Fixes**
+- `2026.8.2` - honor `HTTP_PROXY`/`HTTPS_PROXY`/`NO_PROXY` env vars when downloading media - closes #2224
 - `2026.8.1` - **GOWS** - disabling all `gows.storage` flags was silently ignored and data was stored anyway - fix #2207
 - `2026.8.1` - **GOWS** - `check-exists` returns the phone number in the new `pn` field (`chatId` can be a `@lid`) - fix #2208
 - `2026.8.1` - **GOWS** - fill the phone number (`_data.Info.SenderAlt`) from the LID store in message payloads - fix #2208
