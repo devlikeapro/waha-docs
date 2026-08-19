@@ -24,6 +24,67 @@ Options you can use to control how WAHA outputs logs:
 - `DEBUG=1` - you can set this environment variable as a shortcut for `WAHA_LOG_LEVEL=debug`, `DEBUG=1` overrides
   the `WAHA_LOG_LEVEL` to `debug` if both defined.
 
+### Tracing
+
+WAHA uses [OpenTelemetry](https://opentelemetry.io) to correlate logs with HTTP requests:
+
+- Every log line written while handling a request has `trace_id` and `span_id` fields,
+  so you can find all the logs for a single API call.
+- Every HTTP response has a `traceparent` header
+  ([W3C Trace Context](https://www.w3.org/TR/trace-context/)) with the same trace id,
+  so the client can save it and look up the related logs later.
+- If the client sends a `traceparent` request header, WAHA continues that trace instead of starting a new one.
+
+{{< callout context="tip" icon="outline/alert-square-rounded" >}}
+👉 [**Traceparent: How OpenTelemetry Connects Your Microservices**](https://last9.io/blog/traceparent-explained/)
+is a good article explaining the `traceparent` header.
+{{< /callout >}}
+
+```json { title="Log entry" }
+{
+  "level": 30,
+  "trace_id": "b992d8568c2ea3d2d3b135cc0cd322a6",
+  "span_id": "4e4d4694dcbc1938",
+  "msg": "request completed"
+}
+```
+
+```text { title="Response header" }
+traceparent: 00-b992d8568c2ea3d2d3b135cc0cd322a6-4e4d4694dcbc1938-01
+```
+
+To pass your own trace id - send the `traceparent` header in the request:
+
+```bash { title="Pass your own traceparent" }
+curl -si \
+  -H 'traceparent: 00-b992d8568c2ea3d2d3b135cc0cd322a6-4e4d4694dcbc1938-01' \
+  -H 'X-Api-Key: yoursecretkey' \
+  http://localhost:3000/api/server/version
+```
+
+The header must follow the `00-{trace-id}-{parent-span-id}-{flags}` format:
+
+- `trace-id` - 32 hex characters, not all zeros
+- `parent-span-id` - 16 hex characters, not all zeros
+- `flags` - `01` (sampled)
+
+If the header doesn't follow the format, WAHA ignores it and starts a new trace.
+
+By default it's **log correlation only** - no telemetry leaves the server.
+WAHA sets these OpenTelemetry defaults (you can override any of them):
+
+```bash {title=".env"}
+OTEL_SERVICE_NAME=waha
+OTEL_TRACES_EXPORTER=none
+OTEL_METRICS_EXPORTER=none
+OTEL_LOGS_EXPORTER=none
+# service.browser and worker.id (from WAHA_WORKER_ID) are added when available; your own values are kept
+OTEL_RESOURCE_ATTRIBUTES=service.version=2026.8.2,service.engine=GOWS,service.platform=linux/x64
+```
+
+To actually export traces to your observability stack, set `OTEL_TRACES_EXPORTER=otlp`
+and the standard `OTEL_EXPORTER_OTLP_*` variables.
+
 ### Session debug level
 
 You can enable debug mode for a session by setting the `config.debug` field to `true` when 
