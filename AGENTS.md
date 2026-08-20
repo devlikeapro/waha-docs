@@ -23,6 +23,13 @@ POST /api/...
 }
 ```
 
+## How to Update Swagger (openapi.json)
+When the WAHA API changes, refresh `static/swagger/openapi.json` from a locally running WAHA:
+
+1. In the WAHA repo (`../whatsapp-http-api`) run `make for-swagger` - starts the API on `localhost:3000` with the full Swagger config.
+2. In this repo run `make update-swagger` - downloads the spec into `static/swagger/openapi.json` and stages it.
+3. Stop the WAHA server.
+
 ## Release Post
 
 

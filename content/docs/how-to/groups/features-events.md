@@ -6,6 +6,7 @@
 | `group.v2.join`         |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `group.v2.leave`        |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `group.v2.participants` |  ✔️   | ✔️  |  ✔️   |  ✔️  |
+| `group.v2.participants.join-request` |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `group.v2.update`       |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | ~~group.join~~          |  ✔️   |     |  ✔️   |      |
 | ~~group.leave~~         |  ✔️   |     |       |      |

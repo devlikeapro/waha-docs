@@ -352,6 +352,33 @@ GET /api/{session}/groups/{groupId}/settings/security/member-add-mode
 }
 ```
 
+### Security - approve new members
+Updates the group settings to require admin approval for users requesting to join the group.
+
+```http request
+PUT /api/{session}/groups/{groupId}/settings/security/membership-approval
+```
+
+```jsonc { title="Body" }
+{
+  // true - admins must approve requests to join the group
+  // false - anyone can join the group
+  "newMembersApprovalRequired": true
+}
+```
+
+Get the group settings for admin approval of new members.
+
+```http request
+GET /api/{session}/groups/{groupId}/settings/security/membership-approval
+```
+
+```jsonc { title="Response" }
+{
+  "newMembersApprovalRequired": true
+}
+```
+
 ### Participants
 
 #### Get participants v2
@@ -419,6 +446,81 @@ POST /api/{session}/groups/{groupId}/participants/remove
     }
   ]
 }
+```
+
+### Join requests
+When [approve new members](#security---approve-new-members) is enabled, users requesting to join the group
+wait for an admin to approve or reject the request.
+
+👉 You also get [group.v2.participants.join-request](#groupv2participantsjoin-request) event when a user requests to join the group.
+
+#### Get join requests
+
+```http request
+GET /api/{session}/groups/{groupId}/participants/join-requests
+```
+
+```jsonc { title="Response" }
+[
+  {
+    "requesterId": "123123123123@lid",
+    "requesterPn": "123123123123@c.us",
+    "addedById": null,
+    "parentGroupId": null,
+    "requestMethod": "invite_link",
+    "timestamp": 1666943582
+  }
+]
+```
+
+#### Approve join requests
+
+```http request
+POST /api/{session}/groups/{groupId}/participants/join-requests/approve
+```
+
+```jsonc { title="Body" }
+{
+  "participants": [
+    {
+      "id": "123123123123@c.us"
+    }
+  ]
+}
+```
+
+```jsonc { title="Response" }
+[
+  {
+    "requesterId": "123123123123@c.us",
+    "success": true
+  }
+]
+```
+
+#### Reject join requests
+
+```http request
+POST /api/{session}/groups/{groupId}/participants/join-requests/reject
+```
+
+```jsonc { title="Body" }
+{
+  "participants": [
+    {
+      "id": "123123123123@c.us"
+    }
+  ]
+}
+```
+
+```jsonc { title="Response" }
+[
+  {
+    "requesterId": "123123123123@c.us",
+    "success": true
+  }
+]
 ```
 
 ### Admin
@@ -491,6 +593,9 @@ Read more about
 
 ### group.v2.participants
 {{< include file="content/docs/how-to/groups/events-group.v2.participants.md" >}}
+
+### group.v2.participants.join-request
+{{< include file="content/docs/how-to/groups/events-group.v2.participants.join-request.md" >}}
 
 ### group.v2.update
 {{< include file="content/docs/how-to/groups/events-group.v2.update.md" >}}
