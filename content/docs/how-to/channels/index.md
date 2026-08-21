@@ -286,7 +286,9 @@ GET /api/{SESSION}/channels/{INVITE}/messages/preview?downloadMedia=false&limit=
 **Query parameters**:
 - `{SESSION}` - your session
 - `{INVITE}` - invite code (123123123) or channel id (123132123@newsletter). **Invite code is recommended**.
-- `downloadMedia` - whether to download media or not
+- `downloadMedia` - whether to download media or not (`false` by default)
+- `downloadMediaMimetypes=image/jpeg,image/png` - download only media with these mimetypes (prefix match, like `image`).
+  If not set - `WAHA_API_DOWNLOAD_MEDIA_MIMETYPES` environment variable is used
 - `limit` - limit of messages to return. **100 is recommended**.
 
 ```json

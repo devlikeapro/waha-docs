@@ -331,12 +331,6 @@ Read more about [**🖼️ Media Storage**]({{< relref "/docs/how-to/storages#me
 ### Files - Local
 The following environment variables can be used to configure the file storage options for the WAHA:
 
-- `WHATSAPP_FILES_MIMETYPES`: This variable can be used to download only specific mimetypes from messages.
-  By default, all files are downloaded. The mimetypes must be separated by a comma, without spaces.
-  For example: `audio,image/png,image/gif`. To choose a specific type, use a prefix (like `audio,image`). See usage below.
-- `WHATSAPP_DOWNLOAD_MEDIA=true` - this variable can be used to **completely** disable downloading media files. By default, all files are downloaded.
-  Set this variable to `WHATSAPP_DOWNLOAD_MEDIA=false` to disable downloading media files.
-  - Under the hood, it sets `WHATSAPP_FILES_MIMETYPES=mimetype/ignore-all-media` to ignore all media files.
 - `WHATSAPP_FILES_LIFETIME`: This variable can be used to set the time (in seconds) after which files will be removed to
   free up space. The default value is `180`.
   - Set this variable to `0` to disable the file lifetime.
@@ -344,8 +338,30 @@ The following environment variables can be used to configure the file storage op
   will be stored. The default value is `/tmp/whatsapp-files`.
   - The folder must be mounted to the host machine to keep the files between container restarts. [ Read more about how to persist files ->]({{< relref "/docs/how-to/storages#media" >}})
 
-💡 When media files are not processed due to `WHATSAPP_FILES_MIMETYPES` or `WHATSAPP_DOWNLOAD_MEDIA` settings,
-you'll still receive a webhook event with `hasMedia: True` field, but without a `media.url`.
+### Media Download
+You can control media downloading separately for [**🔄 Events**]({{< relref "/docs/how-to/events" >}}) (webhooks, websockets) and **API** calls:
+
+- `WAHA_EVENTS_DOWNLOAD_MEDIA=true` - download media for messages sent in events (webhooks, websockets).
+  The default value is `true`.
+- `WAHA_EVENTS_DOWNLOAD_MEDIA_MIMETYPES` - download only specific mimetypes for events.
+  By default, all files are downloaded. The mimetypes must be separated by a comma, without spaces.
+  For example: `audio,image/png,image/gif`. To choose a specific type, use a prefix (like `audio,image`). See usage below.
+- `WAHA_API_DOWNLOAD_MEDIA=true` - API default behavior - download media for messages returned by API endpoints
+  (like `GET /api/{session}/chats/{chatId}/messages`). The default value is `true`.
+  - You can override it per request with the `downloadMedia=true|false` query parameter -
+    it always wins over the environment variable.
+- `WAHA_API_DOWNLOAD_MEDIA_MIMETYPES` - download only specific mimetypes in API calls. Same format as above.
+  - You can override it per request with the `downloadMediaMimetypes=image/jpeg,image/png` query parameter.
+
+**DEPRECATED** variables - still work as a fallback when the granular variables above are not set:
+
+- `WHATSAPP_DOWNLOAD_MEDIA=true|false` - **DEPRECATED** - enable or disable downloading media files
+  (used for both Events and API). Use `WAHA_EVENTS_DOWNLOAD_MEDIA` and `WAHA_API_DOWNLOAD_MEDIA` instead.
+- `WHATSAPP_FILES_MIMETYPES` - **DEPRECATED** - download only specific mimetypes (used for both Events and API).
+  Use `WAHA_EVENTS_DOWNLOAD_MEDIA_MIMETYPES` and `WAHA_API_DOWNLOAD_MEDIA_MIMETYPES` instead.
+
+💡 When media files are not downloaded due to the settings above,
+you still get the message with `hasMedia: True` and `media` attributes (`mimetype`, `filename`), but `media.url` is `null`.
 ```jsonc { title="message" }
 {
   "event": "message",

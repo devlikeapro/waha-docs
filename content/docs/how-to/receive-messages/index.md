@@ -85,9 +85,10 @@ Fields:
 - `participant` - sender's WhatsApp ID (**not always available** — depends on the engine)
 - `body` - text content of the original message
 - `hasMedia: true | false` - indicates if the original message had media attached
-- `media` - media object if the original message had media **and** it was downloaded; `null` otherwise
+- `media` - media object if the original message had media (`null` otherwise)
 
-The same rules apply as for the top-level `media` field: if `hasMedia` is `true` but `media` is `null`, WAHA detected media in the replied-to message but did not download it (e.g. due to your media storage configuration).
+The same rules apply as for the top-level `media` field: if the media was not downloaded (e.g. due to your media download
+configuration), `media` still has `mimetype` and `filename` attributes, but `media.url` is `null`.
 
 {{< link-card title="👉 Read more about Media Files" href="#media-files" >}}
 
@@ -129,7 +130,8 @@ Fields:
 - `media.url: http://localhost:8000/...` - the URL to download the media
 - `_data` - internal **engine** data, can be different for each engine
 
-It's possible to have `hasMedia: true`, but `media: null` - this means that WAHA didn't download media due to configuration.
+It's possible to have `hasMedia: true`, but `media.url: null` - this means that WAHA didn't download media due to
+configuration (`media` still has `mimetype` and `filename` attributes).
 
 {{< link-card title="👉 Read more receiving Media Files" href="#media-files" >}}
 
@@ -277,7 +279,8 @@ Fields:
 - `hasMedia: true | false` - indicates if the message has media attached
 - `media.url: http://localhost:8000/...` - the URL to download the media
 
-Note: If you see `hasMedia: true` but no `media.url`, this indicates that WAHA detected media but didn't download it due to your configuration settings.
+Note: If you see `hasMedia: true` but `media.url: null`, this indicates that WAHA detected media (`media.mimetype` and
+`media.filename` are still available) but didn't download it due to your configuration settings.
 
 You can download the file using API - remember to provide API key in `X-Api-Key` header!
 
@@ -319,8 +322,10 @@ Or define
 - `WHATSAPP_API_PORT=3000`
 
 By default, WAHA download all files that the account receive.
+You can control media downloading for events with `WAHA_EVENTS_DOWNLOAD_MEDIA` and `WAHA_EVENTS_DOWNLOAD_MEDIA_MIMETYPES`
+environment variables (and `WAHA_API_DOWNLOAD_MEDIA`, `WAHA_API_DOWNLOAD_MEDIA_MIMETYPES` for API calls).
 If you want to limit files lifetime, specify file types for download or change directory for files -
-read more about [**⚙️ Configuration**]({{< relref "config" >}}).
+read more about [**⚙️ Configuration**]({{< relref "/docs/how-to/config#media-download" >}}).
 
 ## API
 See the list of engines [**that support the feature ->**]({{< relref "/docs/how-to/engines#features" >}}).

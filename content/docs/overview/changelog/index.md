@@ -62,6 +62,7 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2026.8.2` - Media - granular download control for events and API - [**⚙️ Configuration**]({{< relref "/docs/how-to/config#media-download" >}}) - closes #2211
 - `2026.8.2` - Groups - approve new members setting - `GET/PUT /api/{session}/groups/{id}/settings/security/membership-approval` - [**👥 Groups**]({{< relref "/docs/how-to/groups#security---approve-new-members" >}}) - closes #2200
 - `2026.8.2` - Groups - join requests API - `GET /api/{session}/groups/{id}/participants/join-requests` + `/approve` and `/reject` - [**👥 Groups**]({{< relref "/docs/how-to/groups#join-requests" >}})
 - `2026.8.2` - Groups - `group.v2.participants.join-request` event - a request to join a group is created, rejected or revoked - [**👥 Groups**]({{< relref "/docs/how-to/groups#groupv2participantsjoin-request" >}})
@@ -77,6 +78,8 @@ Latest Version:
 - `2026.8.1` - do not save full attachment content in the task result - fix #2201, closes #2202
 
 🛠️ **Fixes**
+- `2026.8.2` - Media - `downloadMedia=true` downloads media even when disabled by env vars - fix #2211
+- `2026.8.2` - Media - `media` attrs (`mimetype`, `filename`) always set; `url: null` when not downloaded
 - `2026.8.2` - honor `HTTP_PROXY`/`HTTPS_PROXY`/`NO_PROXY` env vars when downloading media - closes #2224
 - `2026.8.1` - **GOWS** - disabling all `gows.storage` flags was silently ignored and data was stored anyway - fix #2207
 - `2026.8.1` - **GOWS** - `check-exists` returns the phone number in the new `pn` field (`chatId` can be a `@lid`) - fix #2208

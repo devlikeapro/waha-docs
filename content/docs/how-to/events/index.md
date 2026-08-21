@@ -561,7 +561,8 @@ Fields:
 - `_data` - internal **engine** data, can be different for each engine 
 - `source: app|api` - can be `api` for [message.any](#messageany) event if you send a message via WAHA API. Otherwise, it's `app`.
 
-It's possible to have `hasMedia: true`, but `media: null` - it means WAHA didn't download media due to configuration.
+It's possible to have `hasMedia: true`, but `media.url: null` - it means WAHA didn't download media due to
+configuration (`media` still has `mimetype` and `filename` attributes).
 
 {{< link-card title="👉 Read more receiving Media Files" href="/docs/how-to/receive-messages/#media-files" >}}
 

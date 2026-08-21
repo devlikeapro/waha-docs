@@ -908,6 +908,7 @@
       "media---local",
       "media---postgresql",
       "media---s3",
+      "media-download",
       "media-files",
       "media-key",
       "media-s3-storage",

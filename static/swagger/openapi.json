@@ -2208,9 +2208,19 @@
             "in": "query",
             "description": "Download media for messages",
             "schema": {
-              "default": true,
-              "example": false,
               "type": "boolean"
+            }
+          },
+          {
+            "name": "downloadMediaMimetypes",
+            "required": false,
+            "in": "query",
+            "description": "Download only media with these mimetypes (prefix match)",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -2833,9 +2843,19 @@
             "in": "query",
             "description": "Download media for messages",
             "schema": {
-              "default": true,
-              "example": false,
               "type": "boolean"
+            }
+          },
+          {
+            "name": "downloadMediaMimetypes",
+            "required": false,
+            "in": "query",
+            "description": "Download only media with these mimetypes (prefix match)",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -3071,9 +3091,19 @@
             "in": "query",
             "description": "Download media for messages",
             "schema": {
-              "default": true,
-              "example": true,
               "type": "boolean"
+            }
+          },
+          {
+            "name": "downloadMediaMimetypes",
+            "required": false,
+            "in": "query",
+            "description": "Download only media with these mimetypes (prefix match)",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -3734,6 +3764,18 @@
             "description": "Channel id or invite code",
             "schema": {
               "default": "0029Va4K0PZ5a245NkngBA2M"
+            }
+          },
+          {
+            "name": "downloadMediaMimetypes",
+            "required": false,
+            "in": "query",
+            "description": "Download only media with these mimetypes (prefix match)",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {

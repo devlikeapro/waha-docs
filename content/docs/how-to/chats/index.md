@@ -216,7 +216,10 @@ GET /api/{session}/chats/{chatId}/messages?limit=10
 ```
 
 Available parameters:
-- `downloadMedia=true` - download media files (images, files) or not
+- `downloadMedia=true` - download media files (images, files) or not.
+  If not set - `WAHA_API_DOWNLOAD_MEDIA` environment variable is used (`true` by default)
+- `downloadMediaMimetypes=image/jpeg,image/png` - download only media with these mimetypes (prefix match, like `image`).
+  If not set - `WAHA_API_DOWNLOAD_MEDIA_MIMETYPES` environment variable is used
 - `chatId=123@c.us` - chatId, phone number or `all`
   - `chatId=all` works for getting messages from **all chats** on [**GOWS**]({{< relref "/docs/engines/gows" >}}) and [**NOWEB**]({{< relref "/docs/engines/noweb" >}}).
 - `limit=100` - limit the number of chats to return
@@ -298,7 +301,10 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 - `messageId` - supports both formats:
   - full format: `{true|false}_213213@c.us_AAAAAAA` (any engine)
   - plain message id: `3EB0965B123D06E0B70741` (**GOWS** and **NOWEB**)
-- `downloadMedia` - download media files (images, files) or not
+- `downloadMedia` - download media files (images, files) or not.
+  If not set - `WAHA_API_DOWNLOAD_MEDIA` environment variable is used (`true` by default)
+- `downloadMediaMimetypes=image/jpeg,image/png` - download only media with these mimetypes (prefix match, like `image`).
+  If not set - `WAHA_API_DOWNLOAD_MEDIA_MIMETYPES` environment variable is used
 
 {{< callout context="note" icon="outline/hand-finger-right" >}}
 Combine `all` and **raw message id** in **GOWS** and **NOWEB** engine to fetch message by id:
