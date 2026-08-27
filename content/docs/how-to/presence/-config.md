@@ -9,4 +9,5 @@ It doesn't send `typing` automatically, so remember to send it manually before `
 
 You can configure automatic presence behavior with the following environment variables:
 - `WAHA_PRESENCE_AUTO_ONLINE=False` - disable automatic setting session as `online`.
-- `WAHA_PRESENCE_AUTO_ONLINE_DURATION_SECONDS=25` - duration in seconds to keep session as `online` after sending any requests to WhatsApp servers.
+- `WAHA_PRESENCE_AUTO_ONLINE_DURATION_SECONDS=90` - duration in seconds to keep session as `online` after sending any requests to WhatsApp servers.
+  The default matches WhatsApp Web, which goes `offline` after ~90 seconds of no user activity.
