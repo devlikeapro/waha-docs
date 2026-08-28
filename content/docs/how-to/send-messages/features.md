@@ -11,6 +11,7 @@
 | `POST /api/sendFile`                                        |                              ✔️                               |  ✔️   | ✔️ ️  |   ✔️   |
 | `POST /api/sendVoice`                                       |                              ✔️                               |  ✔️   | ✔️ ️  |   ✔️   |
 | `POST /api/sendVideo`                                       |                              ✔️                               |  ✔️   | ✔️ ️  |   ✔️   |
+| `POST /api/sendSticker`                                     |                              ✔️                               |  ✔️   | ✔️ ️  |   ✔️   |
 | `POST /api/sendList`                                        |                                                              |       |  ✔️   |   ✔️   |
 | `POST /api/send/link-custom-preview`                        |                                                              |       | ✔️ ️  |   ✔️   |
 | `POST /api/forwardMessage`                                  | ✔️<br>[#588](https://github.com/devlikeapro/waha/issues/588) |  ✔️   |      |  ✔️   |

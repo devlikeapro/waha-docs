@@ -62,6 +62,7 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
+- `2026.8.2` - API - `POST /api/sendSticker` - send stickers (WebP) - [**📤 Send messages**]({{< relref "/docs/how-to/send-messages#send-sticker" >}}) - pr #2240
 - `2026.8.2` - Media - granular download control for events and API - [**⚙️ Configuration**]({{< relref "/docs/how-to/config#media-download" >}}) - closes #2211
 - `2026.8.2` - Groups - approve new members setting - `GET/PUT /api/{session}/groups/{id}/settings/security/membership-approval` - [**👥 Groups**]({{< relref "/docs/how-to/groups#security---approve-new-members" >}}) - closes #2200
 - `2026.8.2` - Groups - join requests API - `GET /api/{session}/groups/{id}/participants/join-requests` + `/approve` and `/reject` - [**👥 Groups**]({{< relref "/docs/how-to/groups#join-requests" >}})

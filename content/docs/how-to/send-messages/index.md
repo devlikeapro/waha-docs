@@ -456,6 +456,51 @@ You can send files in two ways:
 Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendFile-code.md" >}}
 
+## Send Sticker
+
+```http request
+POST /api/sendSticker
+```
+Use API to send a sticker to a chat.
+
+The image is not converted - it must already be in **WebP** format. PNG and JPEG are not supported.
+
+You can send stickers in two ways:
+
+1. Provide a **URL** for the file and the API will download and send it in the request body.
+2. Provide the file as a **BASE64** string in the request body.
+
+{{< tabs "send-sticker-body" >}}
+{{< tab "URL" >}}
+```jsonc { title="Body" }
+{
+  "session": "default",
+  "chatId": "11111111111@c.us",
+  "file": {
+    "mimetype": "image/webp",
+    "url": "https://www.gstatic.com/webp/gallery/1.webp"
+  }
+}
+```
+{{< /tab >}}
+
+{{< tab "BASE64" >}}
+```jsonc { title="Body" }
+{
+  "session": "default",
+  "chatId": "11111111111@c.us",
+  "file": {
+    "mimetype": "image/webp",
+    "data": "your-base64-data-of-webp"
+  }
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+Here's how you can call it from various languages:
+{{< include file="content/docs/how-to/send-messages/api-sendSticker-code.md" >}}
+
 ## Send Poll
 
 We have a dedicated page about [**📶 Polls**]({{< relref "/docs/how-to/polls" >}})!
