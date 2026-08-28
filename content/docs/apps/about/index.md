@@ -21,6 +21,7 @@ slug: "about"
 Apps available to connect:
 - [**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}) - use your **WhatsApp** in **ChatWoot CRM**
 - [**Reject Calls**]({{< relref "/docs/apps/calls" >}}) - automatically **reject calls** and **auto-reply with a message**
+- [**MCP**]({{< relref "/docs/apps/mcp" >}}) - connect **AI agents** to **WhatsApp** with **granular permission scopes**
 - [**Brazilian Phone Numbers**]({{< relref "/docs/apps/brazilian-phone-numbers" >}}) - resolve the **9th digit** in 🇧🇷 **Brazilian numbers** automatically
 
 ## Configuration
@@ -57,6 +58,7 @@ POST /api/apps
 - `config` - check the latest app config in [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}).
   - `ChatWootAppConfig` 
   - `CallsAppConfig`
+  - `McpAppConfig`
   - `BrazilianPhoneNumbersAppConfig`
 
 ### Update an app
