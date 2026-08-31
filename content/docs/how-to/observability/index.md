@@ -381,6 +381,78 @@ authentication:
 }
 ```
 
+## Prometheus Metrics
+
+WAHA can expose metrics in [Prometheus](https://prometheus.io) text format.
+
+The endpoint is **disabled by default** - enable it with the environment variable:
+
+```bash {title=".env"}
+WAHA_PROMETHEUS_ENABLED=True
+```
+
+```http request
+GET /metrics
+```
+
+```text {title="Response"}
+# HELP waha_up 1 if the WAHA process is serving Prometheus metrics
+# TYPE waha_up gauge
+waha_up 1
+# HELP waha_sessions WhatsApp sessions by status and engine
+# TYPE waha_sessions gauge
+waha_sessions{status="WORKING",engine="GOWS"} 1
+...
+```
+
+### Metrics
+
+- `waha_up` - always `1` when the endpoint is enabled and the process is running.
+- `waha_http_requests_total{method, status}` - HTTP requests handled by WAHA.
+- `waha_http_request_duration_seconds{method, status}` - HTTP request duration histogram (in seconds).
+- `waha_sessions{status, engine}` - number of sessions by status and engine (collected at scrape time).
+- `waha_messages_total{direction}` - WhatsApp messages observed by WAHA, direction is `sent` or `received`.
+- Default Node.js process metrics (CPU, memory, event loop, GC) with the same `waha_` prefix.
+
+### Configuration
+
+- `WAHA_PROMETHEUS_ENABLED` - enable the metrics endpoint. The default value is `False` -
+  when disabled, `GET /metrics` returns **404 Not Found**.
+- `WAHA_PROMETHEUS_PATH` - the endpoint path. The default value is `/metrics`.
+- `WAHA_PROMETHEUS_METRIC_PREFIX` - the prefix for all metric names. The default value is `waha_`.
+- `WAHA_PROMETHEUS_HTTP_DURATION_BUCKETS` - comma-separated histogram buckets in seconds for
+  `waha_http_request_duration_seconds`. The default value is `0.005,0.01,0.025,0.05,0.1,0.25,0.5,1,2.5,5,10,30`.
+- `WAHA_PROMETHEUS_USERNAME` and `WAHA_PROMETHEUS_PASSWORD` - optional basic auth for the endpoint, see below.
+
+### Authentication
+
+Like `/ping`, the metrics endpoint is **not** protected by the API key, so in-cluster scrapers can collect it
+without extra configuration.
+
+If the endpoint is exposed publicly, protect it with basic auth by setting **both** variables:
+
+```bash {title=".env"}
+WAHA_PROMETHEUS_USERNAME=admin
+WAHA_PROMETHEUS_PASSWORD=secret
+```
+
+```bash {title="Test it"}
+curl -u admin:secret http://localhost:3000/metrics
+```
+
+### Scrape Configuration
+
+```yaml {title="prometheus.yml"}
+scrape_configs:
+  - job_name: waha
+    static_configs:
+      - targets: ["localhost:3000"]
+    # Only if WAHA_PROMETHEUS_USERNAME and WAHA_PROMETHEUS_PASSWORD are set
+    basic_auth:
+      username: admin
+      password: secret
+```
+
 ## Troubleshooting
 There's few internal tools to help us (as developers) understand what it's going on under the hood.
 The below section you can use if you have any problem, and we asked to collect additional information.

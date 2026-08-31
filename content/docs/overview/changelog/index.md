@@ -68,6 +68,7 @@ Latest Version:
 - `2026.8.2` - Groups - join requests API - `GET /api/{session}/groups/{id}/participants/join-requests` + `/approve` and `/reject` - [**👥 Groups**]({{< relref "/docs/how-to/groups#join-requests" >}})
 - `2026.8.2` - Groups - `group.v2.participants.join-request` event - a request to join a group is created, rejected or revoked - [**👥 Groups**]({{< relref "/docs/how-to/groups#groupv2participantsjoin-request" >}})
 - `2026.8.2` - OpenTelemetry trace context - `trace_id`/`span_id` in logs, `traceparent` response header, no export by default - [**🔍 Observability**]({{< relref "/docs/how-to/observability#tracing" >}})
+- `2026.8.2` - Prometheus metrics - `GET /metrics` (optional) - [**🔍 Observability**]({{< relref "/docs/how-to/observability#prometheus-metrics" >}}) - pr #2245
 - `2026.8.1` - **GOWS** - `storage.contacts` and `storage.messageSecrets` session config flags to disable contact and message secret storage - [**GOWS**]({{< relref "/docs/how-to/sessions#gows" >}}) - closes #2207
 - `2026.8.1` - [**Message Capping**]({{< relref "/docs/how-to/sessions#message-capping" >}}) - `GET /api/sessions/{session}/capping`, `me.messageCapping` and `session.status` events - closes #2186
 - `2026.8.1` - [**Reachout Timelock**]({{< relref "/docs/how-to/sessions#reachout-timelock" >}}) - `GET /api/sessions/{session}/timelock` (**GOWS, NOWEB, WEBJS**) + **GOWS** refreshes `me.reachoutTimelock` on `463` send errors - fix #2219
