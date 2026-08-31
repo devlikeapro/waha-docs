@@ -90,6 +90,8 @@ Latest Version:
 - `2026.8.2` - **WEBJS** - first incoming message triggered events 2-3 times - fix #2235
 - `2026.8.2` - **GOWS** - `fromMe` messages mirrored to the wrong contact/conversation - fix #2241
 - `2026.8.2` - **GOWS** - unable to retrieve WhatsApp groups - fix #2234
+- `2026.8.2` - **GOWS** - group messages carrying a new sender key in `@lid` groups were silently lost - fix #2242
+- `2026.8.2` - **GOWS** - undecryptable messages are logged at `error` level instead of being silently dropped 
 - `2026.8.2` - Media - keep the original `.zip` for Lottie stickers when converting to an image fails - #2239
 - `2026.8.2` - Media - `downloadMedia=true` downloads media even when disabled by env vars - fix #2211
 - `2026.8.2` - Media - `media` attrs (`mimetype`, `filename`) always set; `url: null` when not downloaded
