@@ -399,20 +399,40 @@ GET /metrics
 # HELP waha_up 1 if the WAHA process is serving Prometheus metrics
 # TYPE waha_up gauge
 waha_up 1
+# HELP waha_info WAHA build information
+# TYPE waha_info gauge
+waha_info{version="2026.8.2",tier="CORE",engine="GOWS",platform="linux/x64"} 1
 # HELP waha_sessions WhatsApp sessions by status and engine
 # TYPE waha_sessions gauge
 waha_sessions{status="WORKING",engine="GOWS"} 1
+# HELP waha_session_status Current status per session (1 = session is in this status)
+# TYPE waha_session_status gauge
+waha_session_status{session="default",status="WORKING",engine="GOWS"} 1
 ...
 ```
 
 ### Metrics
 
 - `waha_up` - always `1` when the endpoint is enabled and the process is running.
-- `waha_http_requests_total{method, status}` - HTTP requests handled by WAHA.
-- `waha_http_request_duration_seconds{method, status}` - HTTP request duration histogram (in seconds).
+- `waha_info{version, tier, engine, platform}` - WAHA build information, always `1`.
+- `waha_http_requests_total{method, status}` - API HTTP requests handled by WAHA.
+- `waha_http_request_duration_seconds{method, status}` - API HTTP request duration histogram (in seconds).
+
+All API (`/api`) and MCP (`/mcp`) requests are tracked, including file serving routes
+(`/api/files/`, `/api/s3/`) - static routes (dashboard, jobs) are ignored.
+
 - `waha_sessions{status, engine}` - number of sessions by status and engine (collected at scrape time).
-- `waha_messages_total{direction}` - WhatsApp messages observed by WAHA, direction is `sent` or `received`.
-- Default Node.js process metrics (CPU, memory, event loop, GC) with the same `waha_` prefix.
+- `waha_session_status{session, status, engine}` - current status per session, always `1` -
+  the session's status is in the `status` label (**STOPPED** sessions included).
+- `waha_session_status_change_timestamp_seconds{session}` - unix timestamp of the last session status change.
+  How long the session is in the current status: `time() - waha_session_status_change_timestamp_seconds`.
+- `waha_session_activity_timestamp_seconds{session}` - unix timestamp of the last session activity.
+- `waha_events_total{session, event}` - WAHA events counted per session -
+  the tracked events are controlled by `WAHA_PROMETHEUS_TRACK_EVENTS`.
+- Default Node.js process metrics (CPU, memory, event loop, GC) with the same `waha_` prefix -
+  including `waha_process_start_time_seconds` (unix timestamp of the server start).
+
+All metrics get an additional `worker` label with the `WAHA_WORKER_ID` value (an empty string if it's not set).
 
 ### Configuration
 
@@ -422,6 +442,11 @@ waha_sessions{status="WORKING",engine="GOWS"} 1
 - `WAHA_PROMETHEUS_METRIC_PREFIX` - the prefix for all metric names. The default value is `waha_`.
 - `WAHA_PROMETHEUS_HTTP_DURATION_BUCKETS` - comma-separated histogram buckets in seconds for
   `waha_http_request_duration_seconds`. The default value is `0.005,0.01,0.025,0.05,0.1,0.25,0.5,1,2.5,5,10,30`.
+- `WAHA_PROMETHEUS_TRACK_EVENTS` - comma-separated list of [**🔄 Events**]({{< relref "/docs/how-to/events" >}})
+  to count in `waha_events_total`. The default value is `message.any`.
+  Use `*` to track all events, or prefix wildcards like `message.*` and `group.*`.
+  👉 The server actively subscribes to and processes the listed events (including media downloads
+  for message events) even if no webhook or websocket consumes them.
 - `WAHA_PROMETHEUS_USERNAME` and `WAHA_PROMETHEUS_PASSWORD` - optional basic auth for the endpoint, see below.
 
 ### Authentication
