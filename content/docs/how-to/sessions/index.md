@@ -814,6 +814,17 @@ Here's how you can call it from various languages:
 ℹ️ **Log out** removes **session information** (authentication info and data),
 but keeps the **session's configuration**, so you can start a new session with the same configuration.
 
+You can also purge the session [**🧩 Apps**]({{< relref "/docs/apps/about" >}}) storage (messages, caches)
+by sending an optional body:
+
+```jsonc {title="Body"}
+{
+  "apps": {
+    "purge": true
+  }
+}
+```
+
 ## Delete Session
 
 In order to delete a session - call 

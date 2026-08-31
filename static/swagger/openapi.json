@@ -1096,6 +1096,16 @@
             "description": "Session name"
           }
         ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionLogoutRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "201": {
             "description": "",
@@ -1687,6 +1697,62 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/MessageVideoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "📤 Chatting"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/sendSticker": {
+      "post": {
+        "operationId": "ChattingController_sendSticker",
+        "summary": "Send a sticker",
+        "description": "The image will not be converted. It must already be in WebP format. PNG and JPEG are not supported.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageStickerRequest"
+              },
+              "examples": {
+                "url": {
+                  "summary": "From URL",
+                  "value": {
+                    "session": "default",
+                    "chatId": "11111111111@c.us",
+                    "reply_to": null,
+                    "file": {
+                      "url": "https://www.gstatic.com/webp/gallery/1.webp"
+                    }
+                  }
+                },
+                "base64webp": {
+                  "summary": "From base64 WebP",
+                  "value": {
+                    "session": "default",
+                    "chatId": "11111111111@c.us",
+                    "reply_to": null,
+                    "file": {
+                      "mimetype": "image/webp",
+                      "data": "your-base64-data-of-webp"
+                    }
+                  }
+                }
               }
             }
           }
@@ -7967,6 +8033,270 @@
         ]
       }
     },
+    "/api/apps/{id}/purge": {
+      "post": {
+        "operationId": "AppsController_purge",
+        "summary": "Purge app storage by app ID",
+        "description": "Delete the app's stored data (database rows, caches) while keeping the app configured.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/{app}/{session}/purge": {
+      "post": {
+        "operationId": "AppsController_purgeUniqueApp",
+        "summary": "Purge app storage by app name and session",
+        "description": "Delete the unique app's stored data for the session. The app must be enabled.",
+        "parameters": [
+          {
+            "name": "app",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "enum": [
+                "chatwoot",
+                "calls",
+                "mcp",
+                "brazilian-phone-numbers"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/brazilian-phone-numbers/{session}/cache/memory": {
+      "get": {
+        "operationId": "BrazilianPhoneNumbersController_memory",
+        "summary": "List in-memory cache entries",
+        "description": "Entries from the in-memory cache tier of the running session, sorted by key. The session must be running.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "offset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BrazilianPhoneMemoryCacheEntry"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🧩 Apps: Brazilian Phone Numbers"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/brazilian-phone-numbers/{session}/cache/db": {
+      "get": {
+        "operationId": "BrazilianPhoneNumbersController_db",
+        "summary": "List persistent cache entries",
+        "description": "Entries from the persistent (database) cache tier, sorted by id. Works even when the session is stopped.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "offset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BrazilianPhoneDbCacheEntry"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🧩 Apps: Brazilian Phone Numbers"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/brazilian-phone-numbers/{session}/cache/stats": {
+      "get": {
+        "operationId": "BrazilianPhoneNumbersController_stats",
+        "summary": "Get cache stats",
+        "description": "Stats for both cache tiers. \"memory\" is null when the session is not running, \"db\" is null when the persistent cache is disabled.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BrazilianPhoneCacheStatsResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🧩 Apps: Brazilian Phone Numbers"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/brazilian-phone-numbers/{session}/cache/purge": {
+      "delete": {
+        "operationId": "BrazilianPhoneNumbersController_purge",
+        "summary": "Purge the resolved-numbers cache",
+        "description": "Removes ALL persistent cache entries and clears the in-memory tier (the in-memory tier only when the session is running).",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BrazilianPhoneCachePurgeResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🧩 Apps: Brazilian Phone Numbers"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/mcp": {
       "post": {
         "operationId": "McpController_post",
@@ -7977,7 +8307,7 @@
           }
         },
         "tags": [
-          "🧩 Apps"
+          "🧩 Apps: MCP"
         ]
       }
     }
@@ -8052,6 +8382,22 @@
     {
       "name": "🧩 Apps",
       "description": "Applications (built-in integrations)"
+    },
+    {
+      "name": "🧩 Apps: Brazilian Phone Numbers",
+      "description": "Resolve Brazilian phone numbers (with and without 9 digit)"
+    },
+    {
+      "name": "🧩 Apps: Calls",
+      "description": "Handle incoming calls - reject, message back"
+    },
+    {
+      "name": "🧩 Apps: Chatwoot",
+      "description": "DISABLED - Chatwoot integration"
+    },
+    {
+      "name": "🧩 Apps: MCP",
+      "description": "Model Context Protocol (MCP) server for AI clients"
     },
     {
       "name": "🔍 Observability",
@@ -8395,6 +8741,114 @@
           "session"
         ]
       },
+      "BrazilianPhoneNumbersCacheConfig": {
+        "type": "object",
+        "properties": {
+          "memoryTtl": {
+            "type": "string",
+            "default": "24h",
+            "description": "TTL for resolved numbers in the in-memory cache tier, as a duration string.",
+            "example": "24h"
+          },
+          "persistent": {
+            "type": "boolean",
+            "default": true,
+            "description": "Persist verified resolutions in the database so they survive session restarts. Unverified best-guesses and negatives are never persisted."
+          },
+          "persistentTtl": {
+            "type": "string",
+            "default": "31d",
+            "description": "TTL for resolved numbers in the database cache tier, as a duration string.",
+            "example": "31d"
+          }
+        }
+      },
+      "BrazilianPhoneNumbersAppConfig": {
+        "type": "object",
+        "properties": {
+          "strict": {
+            "type": "boolean",
+            "default": false,
+            "description": "When a Brazilian mobile number is confirmed NOT to exist on WhatsApp: false (default) - warn and send the best-guess anyway; true - reject the send with 422. Strict trades delivery for certainty and can block valid sends on lookup false-negatives (throttling)."
+          },
+          "lookup": {
+            "type": "boolean",
+            "default": true,
+            "description": "Allow the WhatsApp server lookup tier for numbers the cache and the local contact store cannot resolve. When false, unresolved numbers are sent as provided."
+          },
+          "cache": {
+            "default": {
+              "memoryTtl": "24h",
+              "persistent": true,
+              "persistentTtl": "31d"
+            },
+            "description": "Cache tuning for resolved numbers.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BrazilianPhoneNumbersCacheConfig"
+              }
+            ]
+          }
+        }
+      },
+      "CallsAppChannelConfig": {
+        "type": "object",
+        "properties": {
+          "reject": {
+            "type": "boolean",
+            "default": true,
+            "description": "Reject incoming calls for this chat type"
+          },
+          "message": {
+            "type": "string",
+            "description": "Optional auto-reply message sent after the call is rejected. If empty, no message is sent."
+          },
+          "waitBeforeDecline": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Seconds to wait before declining the call. If not set or undefined, the call is declined immediately (0 seconds)."
+          },
+          "waitBeforeResponse": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Seconds to wait before sending the auto-reply message. If not set or undefined, the message is sent immediately (0 seconds)."
+          }
+        },
+        "required": [
+          "reject"
+        ]
+      },
+      "CallsAppConfig": {
+        "type": "object",
+        "properties": {
+          "dm": {
+            "default": {
+              "reject": true
+            },
+            "description": "Rules applied to direct messages (non-group calls)",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallsAppChannelConfig"
+              }
+            ]
+          },
+          "group": {
+            "default": {
+              "reject": true
+            },
+            "description": "Rules applied to group calls",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallsAppChannelConfig"
+              }
+            ]
+          }
+        },
+        "required": [
+          "dm",
+          "group"
+        ]
+      },
       "ChatWootCommandsConfig": {
         "type": "object",
         "properties": {
@@ -8497,64 +8951,6 @@
           "locale"
         ]
       },
-      "CallsAppChannelConfig": {
-        "type": "object",
-        "properties": {
-          "reject": {
-            "type": "boolean",
-            "default": true,
-            "description": "Reject incoming calls for this chat type"
-          },
-          "message": {
-            "type": "string",
-            "description": "Optional auto-reply message sent after the call is rejected. If empty, no message is sent."
-          },
-          "waitBeforeDecline": {
-            "type": "number",
-            "minimum": 0,
-            "description": "Seconds to wait before declining the call. If not set or undefined, the call is declined immediately (0 seconds)."
-          },
-          "waitBeforeResponse": {
-            "type": "number",
-            "minimum": 0,
-            "description": "Seconds to wait before sending the auto-reply message. If not set or undefined, the message is sent immediately (0 seconds)."
-          }
-        },
-        "required": [
-          "reject"
-        ]
-      },
-      "CallsAppConfig": {
-        "type": "object",
-        "properties": {
-          "dm": {
-            "default": {
-              "reject": true
-            },
-            "description": "Rules applied to direct messages (non-group calls)",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CallsAppChannelConfig"
-              }
-            ]
-          },
-          "group": {
-            "default": {
-              "reject": true
-            },
-            "description": "Rules applied to group calls",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CallsAppChannelConfig"
-              }
-            ]
-          }
-        },
-        "required": [
-          "dm",
-          "group"
-        ]
-      },
       "McpAppConfig": {
         "type": "object",
         "properties": {
@@ -8603,7 +8999,8 @@
             "enum": [
               "chatwoot",
               "calls",
-              "mcp"
+              "mcp",
+              "brazilian-phone-numbers"
             ],
             "type": "string"
           },
@@ -9229,6 +9626,30 @@
           },
           "config": {
             "$ref": "#/components/schemas/SessionConfig"
+          }
+        }
+      },
+      "SessionLogoutAppsOptions": {
+        "type": "object",
+        "properties": {
+          "purge": {
+            "type": "boolean",
+            "description": "Purge the session apps' storage (messages, caches) as part of logout.",
+            "default": false,
+            "example": false
+          }
+        }
+      },
+      "SessionLogoutRequest": {
+        "type": "object",
+        "properties": {
+          "apps": {
+            "description": "Options for the session apps during logout.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SessionLogoutAppsOptions"
+              }
+            ]
           }
         }
       },
@@ -9936,6 +10357,39 @@
           "chatId",
           "file",
           "convert",
+          "session"
+        ]
+      },
+      "MessageStickerRequest": {
+        "type": "object",
+        "properties": {
+          "chatId": {
+            "type": "string",
+            "example": "11111111111@c.us"
+          },
+          "file": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RemoteFile"
+              },
+              {
+                "$ref": "#/components/schemas/BinaryFile"
+              }
+            ]
+          },
+          "reply_to": {
+            "type": "string",
+            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "example": null
+          },
+          "session": {
+            "type": "string",
+            "default": "default"
+          }
+        },
+        "required": [
+          "chatId",
+          "file",
           "session"
         ]
       },
@@ -12105,6 +12559,131 @@
             "example": null
           }
         }
+      },
+      "BrazilianPhoneMemoryCacheEntry": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Phone number digits the cache entry is keyed by"
+          },
+          "chatId": {
+            "type": "string",
+            "description": "Resolved chat id. An empty string is a confirmed-negative - the number is verified NOT to exist on WhatsApp."
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true,
+            "description": "When the entry expires; null when it has no TTL"
+          }
+        },
+        "required": [
+          "key",
+          "chatId",
+          "expiresAt"
+        ]
+      },
+      "BrazilianPhoneDbCacheEntry": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Record id"
+          },
+          "key": {
+            "type": "string",
+            "description": "Phone number digits the cache entry is keyed by"
+          },
+          "chatId": {
+            "type": "string",
+            "description": "Resolved chat id"
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "Whether the resolution was verified against WhatsApp"
+          },
+          "resolvedAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "When the number was resolved"
+          }
+        },
+        "required": [
+          "id",
+          "key",
+          "chatId",
+          "verified",
+          "resolvedAt"
+        ]
+      },
+      "BrazilianPhoneMemoryCacheStats": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "description": "Number of entries in the in-memory cache"
+          }
+        },
+        "required": [
+          "total"
+        ]
+      },
+      "BrazilianPhoneDbCacheStats": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "description": "Total number of entries in the persistent cache"
+          },
+          "verified": {
+            "type": "number",
+            "description": "Number of entries verified against WhatsApp"
+          }
+        },
+        "required": [
+          "total",
+          "verified"
+        ]
+      },
+      "BrazilianPhoneCacheStatsResponse": {
+        "type": "object",
+        "properties": {
+          "memory": {
+            "nullable": true,
+            "description": "In-memory cache stats; null when the session is not running",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BrazilianPhoneMemoryCacheStats"
+              }
+            ]
+          },
+          "db": {
+            "nullable": true,
+            "description": "Persistent cache stats; null when the persistent cache is disabled",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BrazilianPhoneDbCacheStats"
+              }
+            ]
+          }
+        },
+        "required": [
+          "memory",
+          "db"
+        ]
+      },
+      "BrazilianPhoneCachePurgeResponse": {
+        "type": "object",
+        "properties": {
+          "deleted": {
+            "type": "number",
+            "description": "Number of entries removed from the persistent cache"
+          }
+        },
+        "required": [
+          "deleted"
+        ]
       },
       "SessionStatusPoint": {
         "type": "object",

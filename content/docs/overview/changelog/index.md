@@ -62,7 +62,7 @@ Latest Version:
 {{< autolink-prs repo=devlikeapro/waha >}}
 
 🆕 **New**
-- `2026.8.2` - API - `POST /api/sendSticker` - send stickers (WebP) - [**📤 Send messages**]({{< relref "/docs/how-to/send-messages#send-sticker" >}}) - pr #2240
+- `2026.8.2` - API - `POST /api/sendSticker` - send stickers (WebP) - [**📤 Send messages**]({{< relref "/docs/how-to/send-messages#send-sticker" >}}) - fix #1287, pr #2240
 - `2026.8.2` - Media - granular download control for events and API - [**⚙️ Configuration**]({{< relref "/docs/how-to/config#media-download" >}}) - closes #2211
 - `2026.8.2` - Groups - approve new members setting - `GET/PUT /api/{session}/groups/{id}/settings/security/membership-approval` - [**👥 Groups**]({{< relref "/docs/how-to/groups#security---approve-new-members" >}}) - closes #2200
 - `2026.8.2` - Groups - join requests API - `GET /api/{session}/groups/{id}/participants/join-requests` + `/approve` and `/reject` - [**👥 Groups**]({{< relref "/docs/how-to/groups#join-requests" >}})
@@ -76,12 +76,21 @@ Latest Version:
 
 🧩 **Apps**
 - `2026.8.2` - [**Brazilian Phone Numbers**]({{< relref "/docs/apps/brazilian-phone-numbers" >}}) - resolves the 9th digit for Brazilian numbers -  pr #2180
+- `2026.8.2` - Purge API - `POST /api/apps/{id}/purge` - delete the app's stored data, keep the app configured - [**🧩 Apps**]({{< relref "/docs/apps/about#purge-app-storage" >}})
+- `2026.8.2` - Logout purge - `POST /api/sessions/{session}/logout` accepts `{"apps": {"purge": true}}` to purge apps' storage on logout
+- `2026.8.2` - Unique apps - one instance per session for **ChatWoot**, **Reject Calls** and **Brazilian Phone Numbers**
 
 🧩 **ChatWoot**
 - `2026.8.1` - populate the WhatsApp JID attribute for `@lid` contacts from the message payload - fix #2208
 - `2026.8.1` - do not save full attachment content in the task result - fix #2201, closes #2202
 
 🛠️ **Fixes**
+- `2026.8.2` - **WEBJS**, **NOWEB** - Channels - `reply_to` was silently ignored when sending messages to channels - fix #2233
+- `2026.8.2` - **WEBJS** - Channels - deleting a message in a channel failed - fix #2236
+- `2026.8.2` - **WEBJS** - first incoming message triggered events 2-3 times - fix #2235
+- `2026.8.2` - **GOWS** - `fromMe` messages mirrored to the wrong contact/conversation - fix #2241
+- `2026.8.2` - **GOWS** - unable to retrieve WhatsApp groups - fix #2234
+- `2026.8.2` - Media - keep the original `.zip` for Lottie stickers when converting to an image fails - #2239
 - `2026.8.2` - Media - `downloadMedia=true` downloads media even when disabled by env vars - fix #2211
 - `2026.8.2` - Media - `media` attrs (`mimetype`, `filename`) always set; `url: null` when not downloaded
 - `2026.8.2` - honor `HTTP_PROXY`/`HTTPS_PROXY`/`NO_PROXY` env vars when downloading media - closes #2224
@@ -103,9 +112,12 @@ Latest Version:
 - `2026.8.1` - reliable session stop and process shutdown (**WEBJS** kills Chrome, **NOWEB** stops cleanly, **GOWS** gets SIGKILL if hanged)
 
 📊 **Dashboard**
+- `2026.8.2` - up dashboard
 - `2026.8.1` - up dashboard
 
 ⚙️ **Updates**
+- `2026.8.2` - **WPP** - up engine
+- `2026.8.2` - up `axios` to `1.19.0`
 - `2026.8.1` - **WEBJS** - up Chrome to `142.0.7444.134-1`
 - `2026.8.1` - **WPP** - up engine
 

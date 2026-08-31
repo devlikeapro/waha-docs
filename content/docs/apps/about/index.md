@@ -71,6 +71,34 @@ PUT /api/apps/{appId}
 DELETE /api/apps/{appId}
 ```
 
+### Purge app storage
+Delete the app's stored data (database rows, caches) while keeping the app configured.
+
+```http request
+POST /api/apps/{appId}/purge
+```
+
+For **unique** apps (one instance per session - like **ChatWoot**) you can purge by app name and session
+(the app must be **enabled**):
+
+```http request
+POST /api/apps/{app}/{session}/purge
+```
+
+You can also purge apps' storage when [**logging out a session**]({{< relref "/docs/how-to/sessions#logout-session" >}}):
+
+```http request
+POST /api/sessions/{session}/logout
+```
+
+```jsonc {title="Body"}
+{
+  "apps": {
+    "purge": true
+  }
+}
+```
+
 ## How it works
 
 {{< include file="content/docs/apps/about/-how-it-works.md" >}}
