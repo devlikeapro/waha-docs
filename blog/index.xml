@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 29 Jul 2026 08:48:45 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2026.7 - Passkey Pairing, Scoped Keys, Reachout Timelock</title><link>/blog/waha-2026-7/</link><pubDate>Wed, 29 Jul 2026 08:48:45 +0000</pubDate><guid>/blog/waha-2026-7/</guid><description>&lt;h2 id="-passkey-pairing-gows">🔑 Passkey Pairing (GOWS)&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on WAHA</title><link>/blog/</link><description>Recent content in Blog on WAHA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WAHA 2026.8 - Extend WAHA, Group Join Requests, Stickers</title><link>/blog/waha-2026-8/</link><pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate><guid>/blog/waha-2026-8/</guid><description>&lt;h2 id="-extend-waha---apps-modules-plugins">🛠️ Extend WAHA - Apps, Modules, Plugins&lt;/h2>
+&lt;p>Want to add your own functionality to &lt;strong>WAHA&lt;/strong> - an integration with an external product,
+a region-specific behavior, a metric, a low-level tweak in the message flow?&lt;/p></description></item><item><title>WAHA 2026.7 - Passkey Pairing, Scoped Keys, Reachout Timelock</title><link>/blog/waha-2026-7/</link><pubDate>Wed, 29 Jul 2026 08:48:45 +0000</pubDate><guid>/blog/waha-2026-7/</guid><description>&lt;h2 id="-passkey-pairing-gows">🔑 Passkey Pairing (GOWS)&lt;/h2>
 &lt;p>WhatsApp started asking for a &lt;strong>passkey&lt;/strong> on some accounts when you link a device -
 the session stops at &lt;code>PASSKEY_REQUIRED&lt;/code> and waits instead of going to &lt;code>WORKING&lt;/code>.&lt;/p></description></item><item><title>How to Handle Passkey</title><link>/blog/waha-passkey/</link><pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate><guid>/blog/waha-passkey/</guid><description>&lt;h2 id="what-is-a-passkey">What is a passkey?&lt;/h2>
 &lt;p>A &lt;strong>passkey&lt;/strong> is a key pair stored by your device instead of a password. The private key never leaves the
@@ -32,21 +34,4 @@ Any MCP-compatible AI agent — Claude, Goose, and others — can send messages,
  &lt;p>Sessions are safe&lt;/p></description></item><item><title>WAHA 2026.3 - WPP Engine, LID Merge Control, GOWS &amp; NOWEB Upgrades</title><link>/blog/waha-2026-3/</link><pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate><guid>/blog/waha-2026-3/</guid><description>&lt;h2 id="-new-engine-wpp">⚡ New Engine: WPP&lt;/h2>
 &lt;p>&lt;strong>WPP&lt;/strong> is a new browser-based engine powered by &lt;a href="https://github.com/wppconnect-team/wppconnect">wppconnect&lt;/a>. It runs WhatsApp Web in a Puppeteer browser — same approach as &lt;strong>WEBJS&lt;/strong>, different underlying library. &lt;code>forwardMessages&lt;/code> is supported from the start.&lt;/p></description></item><item><title>WAHA 2026.2 - Fixes Pack</title><link>/blog/waha-2026-2/</link><pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate><guid>/blog/waha-2026-2/</guid><description>&lt;h2 id="-channels-and-media-fixes-noweb--gows">🛠️ Channels and Media Fixes (&lt;strong>NOWEB&lt;/strong> + &lt;strong>GOWS&lt;/strong>)&lt;/h2>
 &lt;p>This release is mainly about getting existing flows more reliable, especially around Channels and media editing.&lt;/p></description></item><item><title>WAHA 2026.1 - Per-Session API Keys, GOWS Storage Toggle</title><link>/blog/waha-2026-1/</link><pubDate>Sat, 31 Jan 2026 08:48:45 +0000</pubDate><guid>/blog/waha-2026-1/</guid><description>&lt;h2 id="-per-session-api-keys">🔐 Per-Session API Keys&lt;/h2>
-&lt;p>You can now scope API keys to specific sessions instead of the whole server. This helps isolate tenants, rotate access, and keep automation scoped to the right WhatsApp session.&lt;/p></description></item><item><title>Deploy WAHA on Coolify</title><link>/blog/waha-on-coolify/</link><pubDate>Tue, 13 Jan 2026 01:01:01 +0000</pubDate><guid>/blog/waha-on-coolify/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>With WAHA on &lt;a href="https://coolify.io/">Coolify&lt;/a>, you get:&lt;/p>
-&lt;ul>
-&lt;li>Free Self-hosted Coolify&lt;/li>
-&lt;li>UI for deployments, env vars, and storage&lt;/li>
-&lt;li>Automatic HTTPS with a built-in proxy&lt;/li>
-&lt;/ul>
-&lt;p>
-
-&lt;img
- src="/blog/waha-on-coolify/0000-coolify-overview_hu_25e8b1485b14b589.webp"
- width="1424"
- height="887"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="Coolify overview"id="h-rh-i-0"
-/>&lt;/p></description></item></channel></rss>
+&lt;p>You can now scope API keys to specific sessions instead of the whole server. This helps isolate tenants, rotate access, and keep automation scoped to the right WhatsApp session.&lt;/p></description></item></channel></rss>
