@@ -1096,6 +1096,16 @@
             "description": "Session name"
           }
         ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionLogoutRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "201": {
             "description": "",
@@ -1706,6 +1716,62 @@
         ]
       }
     },
+    "/api/sendSticker": {
+      "post": {
+        "operationId": "ChattingController_sendSticker",
+        "summary": "Send a sticker",
+        "description": "The image will not be converted. It must already be in WebP format. PNG and JPEG are not supported.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageStickerRequest"
+              },
+              "examples": {
+                "url": {
+                  "summary": "From URL",
+                  "value": {
+                    "session": "default",
+                    "chatId": "11111111111@c.us",
+                    "reply_to": null,
+                    "file": {
+                      "url": "https://www.gstatic.com/webp/gallery/1.webp"
+                    }
+                  }
+                },
+                "base64webp": {
+                  "summary": "From base64 WebP",
+                  "value": {
+                    "session": "default",
+                    "chatId": "11111111111@c.us",
+                    "reply_to": null,
+                    "file": {
+                      "mimetype": "image/webp",
+                      "data": "your-base64-data-of-webp"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "📤 Chatting"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/send/link-custom-preview": {
       "post": {
         "operationId": "ChattingController_sendLinkCustomPreview",
@@ -2208,9 +2274,19 @@
             "in": "query",
             "description": "Download media for messages",
             "schema": {
-              "default": true,
-              "example": false,
               "type": "boolean"
+            }
+          },
+          {
+            "name": "downloadMediaMimetypes",
+            "required": false,
+            "in": "query",
+            "description": "Download only media with these mimetypes (prefix match)",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -2833,9 +2909,19 @@
             "in": "query",
             "description": "Download media for messages",
             "schema": {
-              "default": true,
-              "example": false,
               "type": "boolean"
+            }
+          },
+          {
+            "name": "downloadMediaMimetypes",
+            "required": false,
+            "in": "query",
+            "description": "Download only media with these mimetypes (prefix match)",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -3071,9 +3157,19 @@
             "in": "query",
             "description": "Download media for messages",
             "schema": {
-              "default": true,
-              "example": true,
               "type": "boolean"
+            }
+          },
+          {
+            "name": "downloadMediaMimetypes",
+            "required": false,
+            "in": "query",
+            "description": "Download only media with these mimetypes (prefix match)",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -3734,6 +3830,18 @@
             "description": "Channel id or invite code",
             "schema": {
               "default": "0029Va4K0PZ5a245NkngBA2M"
+            }
+          },
+          {
+            "name": "downloadMediaMimetypes",
+            "required": false,
+            "in": "query",
+            "description": "Download only media with these mimetypes (prefix match)",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -6263,6 +6371,280 @@
         ]
       }
     },
+    "/api/{session}/groups/{id}/settings/security/membership-approval": {
+      "put": {
+        "operationId": "GroupsController_setMembershipApprovalMode",
+        "summary": "Update settings - approve new members",
+        "description": "Enables or disables admin approval for users requesting to join the group.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Group ID",
+            "schema": {
+              "example": "123123123@g.us",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SettingsMembershipApproval"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👥 Groups"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "get": {
+        "operationId": "GroupsController_getMembershipApprovalMode",
+        "summary": "Get settings - approve new members",
+        "description": "Returns whether admin approval is required for users requesting to join the group.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Group ID",
+            "schema": {
+              "example": "123123123@g.us",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SettingsMembershipApproval"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👥 Groups"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/groups/{id}/participants/join-requests": {
+      "get": {
+        "operationId": "GroupsController_getGroupJoinRequests",
+        "summary": "Get pending requests to join the group",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Group ID",
+            "schema": {
+              "example": "123123123@g.us",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GroupJoinRequest"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👥 Groups"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/groups/{id}/participants/join-requests/approve": {
+      "post": {
+        "operationId": "GroupsController_approveGroupJoinRequests",
+        "summary": "Approve pending requests to join the group",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Group ID",
+            "schema": {
+              "example": "123123123@g.us",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParticipantsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GroupJoinRequestResult"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👥 Groups"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/{session}/groups/{id}/participants/join-requests/reject": {
+      "post": {
+        "operationId": "GroupsController_rejectGroupJoinRequests",
+        "summary": "Reject pending requests to join the group",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Group ID",
+            "schema": {
+              "example": "123123123@g.us",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParticipantsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GroupJoinRequestResult"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "👥 Groups"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/{session}/groups/{id}/invite-code": {
       "get": {
         "operationId": "GroupsController_getInviteCode",
@@ -7651,6 +8033,270 @@
         ]
       }
     },
+    "/api/apps/{id}/purge": {
+      "post": {
+        "operationId": "AppsController_purge",
+        "summary": "Purge app storage by app ID",
+        "description": "Delete the app's stored data (database rows, caches) while keeping the app configured.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/{app}/{session}/purge": {
+      "post": {
+        "operationId": "AppsController_purgeUniqueApp",
+        "summary": "Purge app storage by app name and session",
+        "description": "Delete the unique app's stored data for the session. The app must be enabled.",
+        "parameters": [
+          {
+            "name": "app",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "enum": [
+                "chatwoot",
+                "calls",
+                "mcp",
+                "brazilian-phone-numbers"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "🧩 Apps"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/brazilian-phone-numbers/{session}/cache/memory": {
+      "get": {
+        "operationId": "BrazilianPhoneNumbersController_memory",
+        "summary": "List in-memory cache entries",
+        "description": "Entries from the in-memory cache tier of the running session, sorted by key. The session must be running.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "offset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BrazilianPhoneMemoryCacheEntry"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🧩 Apps: Brazilian Phone Numbers"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/brazilian-phone-numbers/{session}/cache/db": {
+      "get": {
+        "operationId": "BrazilianPhoneNumbersController_db",
+        "summary": "List persistent cache entries",
+        "description": "Entries from the persistent (database) cache tier, sorted by id. Works even when the session is stopped.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "offset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BrazilianPhoneDbCacheEntry"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🧩 Apps: Brazilian Phone Numbers"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/brazilian-phone-numbers/{session}/cache/stats": {
+      "get": {
+        "operationId": "BrazilianPhoneNumbersController_stats",
+        "summary": "Get cache stats",
+        "description": "Stats for both cache tiers. \"memory\" is null when the session is not running, \"db\" is null when the persistent cache is disabled.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BrazilianPhoneCacheStatsResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🧩 Apps: Brazilian Phone Numbers"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/apps/brazilian-phone-numbers/{session}/cache/purge": {
+      "delete": {
+        "operationId": "BrazilianPhoneNumbersController_purge",
+        "summary": "Purge the resolved-numbers cache",
+        "description": "Removes ALL persistent cache entries and clears the in-memory tier (the in-memory tier only when the session is running).",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BrazilianPhoneCachePurgeResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🧩 Apps: Brazilian Phone Numbers"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/mcp": {
       "post": {
         "operationId": "McpController_post",
@@ -7661,7 +8307,7 @@
           }
         },
         "tags": [
-          "🧩 Apps"
+          "🧩 Apps: MCP"
         ]
       }
     }
@@ -7669,7 +8315,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2026.8.1",
+    "version": "2026.8.2",
     "contact": {}
   },
   "tags": [
@@ -7736,6 +8382,22 @@
     {
       "name": "🧩 Apps",
       "description": "Applications (built-in integrations)"
+    },
+    {
+      "name": "🧩 Apps: Brazilian Phone Numbers",
+      "description": "Resolve Brazilian phone numbers (with and without 9 digit)"
+    },
+    {
+      "name": "🧩 Apps: Calls",
+      "description": "Handle incoming calls - reject, message back"
+    },
+    {
+      "name": "🧩 Apps: Chatwoot",
+      "description": "DISABLED - Chatwoot integration"
+    },
+    {
+      "name": "🧩 Apps: MCP",
+      "description": "Model Context Protocol (MCP) server for AI clients"
     },
     {
       "name": "🔍 Observability",
@@ -8079,6 +8741,114 @@
           "session"
         ]
       },
+      "BrazilianPhoneNumbersCacheConfig": {
+        "type": "object",
+        "properties": {
+          "memoryTtl": {
+            "type": "string",
+            "default": "24h",
+            "description": "TTL for resolved numbers in the in-memory cache tier, as a duration string.",
+            "example": "24h"
+          },
+          "persistent": {
+            "type": "boolean",
+            "default": true,
+            "description": "Persist verified resolutions in the database so they survive session restarts. Unverified best-guesses and negatives are never persisted."
+          },
+          "persistentTtl": {
+            "type": "string",
+            "default": "31d",
+            "description": "TTL for resolved numbers in the database cache tier, as a duration string.",
+            "example": "31d"
+          }
+        }
+      },
+      "BrazilianPhoneNumbersAppConfig": {
+        "type": "object",
+        "properties": {
+          "strict": {
+            "type": "boolean",
+            "default": false,
+            "description": "When a Brazilian mobile number is confirmed NOT to exist on WhatsApp: false (default) - warn and send the best-guess anyway; true - reject the send with 422. Strict trades delivery for certainty and can block valid sends on lookup false-negatives (throttling)."
+          },
+          "lookup": {
+            "type": "boolean",
+            "default": true,
+            "description": "Allow the WhatsApp server lookup tier for numbers the cache and the local contact store cannot resolve. When false, unresolved numbers are sent as provided."
+          },
+          "cache": {
+            "default": {
+              "memoryTtl": "24h",
+              "persistent": true,
+              "persistentTtl": "31d"
+            },
+            "description": "Cache tuning for resolved numbers.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BrazilianPhoneNumbersCacheConfig"
+              }
+            ]
+          }
+        }
+      },
+      "CallsAppChannelConfig": {
+        "type": "object",
+        "properties": {
+          "reject": {
+            "type": "boolean",
+            "default": true,
+            "description": "Reject incoming calls for this chat type"
+          },
+          "message": {
+            "type": "string",
+            "description": "Optional auto-reply message sent after the call is rejected. If empty, no message is sent."
+          },
+          "waitBeforeDecline": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Seconds to wait before declining the call. If not set or undefined, the call is declined immediately (0 seconds)."
+          },
+          "waitBeforeResponse": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Seconds to wait before sending the auto-reply message. If not set or undefined, the message is sent immediately (0 seconds)."
+          }
+        },
+        "required": [
+          "reject"
+        ]
+      },
+      "CallsAppConfig": {
+        "type": "object",
+        "properties": {
+          "dm": {
+            "default": {
+              "reject": true
+            },
+            "description": "Rules applied to direct messages (non-group calls)",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallsAppChannelConfig"
+              }
+            ]
+          },
+          "group": {
+            "default": {
+              "reject": true
+            },
+            "description": "Rules applied to group calls",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallsAppChannelConfig"
+              }
+            ]
+          }
+        },
+        "required": [
+          "dm",
+          "group"
+        ]
+      },
       "ChatWootCommandsConfig": {
         "type": "object",
         "properties": {
@@ -8181,64 +8951,6 @@
           "locale"
         ]
       },
-      "CallsAppChannelConfig": {
-        "type": "object",
-        "properties": {
-          "reject": {
-            "type": "boolean",
-            "default": true,
-            "description": "Reject incoming calls for this chat type"
-          },
-          "message": {
-            "type": "string",
-            "description": "Optional auto-reply message sent after the call is rejected. If empty, no message is sent."
-          },
-          "waitBeforeDecline": {
-            "type": "number",
-            "minimum": 0,
-            "description": "Seconds to wait before declining the call. If not set or undefined, the call is declined immediately (0 seconds)."
-          },
-          "waitBeforeResponse": {
-            "type": "number",
-            "minimum": 0,
-            "description": "Seconds to wait before sending the auto-reply message. If not set or undefined, the message is sent immediately (0 seconds)."
-          }
-        },
-        "required": [
-          "reject"
-        ]
-      },
-      "CallsAppConfig": {
-        "type": "object",
-        "properties": {
-          "dm": {
-            "default": {
-              "reject": true
-            },
-            "description": "Rules applied to direct messages (non-group calls)",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CallsAppChannelConfig"
-              }
-            ]
-          },
-          "group": {
-            "default": {
-              "reject": true
-            },
-            "description": "Rules applied to group calls",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CallsAppChannelConfig"
-              }
-            ]
-          }
-        },
-        "required": [
-          "dm",
-          "group"
-        ]
-      },
       "McpAppConfig": {
         "type": "object",
         "properties": {
@@ -8287,7 +8999,8 @@
             "enum": [
               "chatwoot",
               "calls",
-              "mcp"
+              "mcp",
+              "brazilian-phone-numbers"
             ],
             "type": "string"
           },
@@ -8913,6 +9626,30 @@
           },
           "config": {
             "$ref": "#/components/schemas/SessionConfig"
+          }
+        }
+      },
+      "SessionLogoutAppsOptions": {
+        "type": "object",
+        "properties": {
+          "purge": {
+            "type": "boolean",
+            "description": "Purge the session apps' storage (messages, caches) as part of logout.",
+            "default": false,
+            "example": false
+          }
+        }
+      },
+      "SessionLogoutRequest": {
+        "type": "object",
+        "properties": {
+          "apps": {
+            "description": "Options for the session apps during logout.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SessionLogoutAppsOptions"
+              }
+            ]
           }
         }
       },
@@ -9620,6 +10357,39 @@
           "chatId",
           "file",
           "convert",
+          "session"
+        ]
+      },
+      "MessageStickerRequest": {
+        "type": "object",
+        "properties": {
+          "chatId": {
+            "type": "string",
+            "example": "11111111111@c.us"
+          },
+          "file": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RemoteFile"
+              },
+              {
+                "$ref": "#/components/schemas/BinaryFile"
+              }
+            ]
+          },
+          "reply_to": {
+            "type": "string",
+            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "example": null
+          },
+          "session": {
+            "type": "string",
+            "default": "default"
+          }
+        },
+        "required": [
+          "chatId",
+          "file",
           "session"
         ]
       },
@@ -11373,6 +12143,101 @@
           "membersCanAddNewMember"
         ]
       },
+      "SettingsMembershipApproval": {
+        "type": "object",
+        "properties": {
+          "newMembersApprovalRequired": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "newMembersApprovalRequired"
+        ]
+      },
+      "GroupJoinRequest": {
+        "type": "object",
+        "properties": {
+          "requesterId": {
+            "type": "string",
+            "description": "ID of the user requesting to join the group",
+            "example": "123456789@c.us"
+          },
+          "requesterPn": {
+            "type": "string",
+            "nullable": true,
+            "description": "Phone number ID of the requester, if known",
+            "example": "123456789@c.us"
+          },
+          "addedById": {
+            "type": "string",
+            "nullable": true,
+            "description": "ID of the user who created the request",
+            "example": "123456789@c.us"
+          },
+          "parentGroupId": {
+            "type": "string",
+            "nullable": true,
+            "description": "ID of the parent community group, if present",
+            "example": "123456789@g.us"
+          },
+          "requestMethod": {
+            "type": "string",
+            "nullable": true,
+            "description": "How the request was created, for example non_admin_add, invite_link, or linked_group_join",
+            "example": "invite_link"
+          },
+          "timestamp": {
+            "type": "number",
+            "description": "Unix timestamp when the request was created",
+            "example": 1666943582
+          }
+        },
+        "required": [
+          "requesterId",
+          "addedById",
+          "parentGroupId",
+          "requestMethod",
+          "timestamp"
+        ]
+      },
+      "ParticipantsRequest": {
+        "type": "object",
+        "properties": {
+          "participants": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Participant"
+            }
+          }
+        },
+        "required": [
+          "participants"
+        ]
+      },
+      "GroupJoinRequestResult": {
+        "type": "object",
+        "properties": {
+          "requesterId": {
+            "type": "string",
+            "nullable": true,
+            "description": "ID of the participant the action was applied to",
+            "example": "123456789@c.us"
+          },
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "error": {
+            "type": "number",
+            "example": 404
+          }
+        },
+        "required": [
+          "requesterId",
+          "success"
+        ]
+      },
       "GroupParticipant": {
         "type": "object",
         "properties": {
@@ -11400,20 +12265,6 @@
         "required": [
           "id",
           "role"
-        ]
-      },
-      "ParticipantsRequest": {
-        "type": "object",
-        "properties": {
-          "participants": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Participant"
-            }
-          }
-        },
-        "required": [
-          "participants"
         ]
       },
       "WAHASessionPresence": {
@@ -11709,6 +12560,131 @@
           }
         }
       },
+      "BrazilianPhoneMemoryCacheEntry": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Phone number digits the cache entry is keyed by"
+          },
+          "chatId": {
+            "type": "string",
+            "description": "Resolved chat id. An empty string is a confirmed-negative - the number is verified NOT to exist on WhatsApp."
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true,
+            "description": "When the entry expires; null when it has no TTL"
+          }
+        },
+        "required": [
+          "key",
+          "chatId",
+          "expiresAt"
+        ]
+      },
+      "BrazilianPhoneDbCacheEntry": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Record id"
+          },
+          "key": {
+            "type": "string",
+            "description": "Phone number digits the cache entry is keyed by"
+          },
+          "chatId": {
+            "type": "string",
+            "description": "Resolved chat id"
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "Whether the resolution was verified against WhatsApp"
+          },
+          "resolvedAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "When the number was resolved"
+          }
+        },
+        "required": [
+          "id",
+          "key",
+          "chatId",
+          "verified",
+          "resolvedAt"
+        ]
+      },
+      "BrazilianPhoneMemoryCacheStats": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "description": "Number of entries in the in-memory cache"
+          }
+        },
+        "required": [
+          "total"
+        ]
+      },
+      "BrazilianPhoneDbCacheStats": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "description": "Total number of entries in the persistent cache"
+          },
+          "verified": {
+            "type": "number",
+            "description": "Number of entries verified against WhatsApp"
+          }
+        },
+        "required": [
+          "total",
+          "verified"
+        ]
+      },
+      "BrazilianPhoneCacheStatsResponse": {
+        "type": "object",
+        "properties": {
+          "memory": {
+            "nullable": true,
+            "description": "In-memory cache stats; null when the session is not running",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BrazilianPhoneMemoryCacheStats"
+              }
+            ]
+          },
+          "db": {
+            "nullable": true,
+            "description": "Persistent cache stats; null when the persistent cache is disabled",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BrazilianPhoneDbCacheStats"
+              }
+            ]
+          }
+        },
+        "required": [
+          "memory",
+          "db"
+        ]
+      },
+      "BrazilianPhoneCachePurgeResponse": {
+        "type": "object",
+        "properties": {
+          "deleted": {
+            "type": "number",
+            "description": "Number of entries removed from the persistent cache"
+          }
+        },
+        "required": [
+          "deleted"
+        ]
+      },
       "SessionStatusPoint": {
         "type": "object",
         "properties": {
@@ -11824,6 +12800,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -11916,6 +12893,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -12086,6 +13064,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -12178,6 +13157,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -12321,6 +13301,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -12413,6 +13394,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -12524,6 +13506,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -12741,6 +13724,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -12903,6 +13887,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -13028,6 +14013,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -13141,6 +14127,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -13272,6 +14259,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -13293,6 +14281,149 @@
           },
           "payload": {
             "$ref": "#/components/schemas/GroupV2ParticipantsEvent"
+          },
+          "me": {
+            "$ref": "#/components/schemas/MeInfo"
+          },
+          "environment": {
+            "$ref": "#/components/schemas/WAHAEnvironment"
+          }
+        },
+        "required": [
+          "id",
+          "timestamp",
+          "session",
+          "engine",
+          "event",
+          "payload",
+          "environment"
+        ]
+      },
+      "GroupV2ParticipantsJoinRequestEvent": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "enum": [
+              "created",
+              "rejected",
+              "revoked"
+            ],
+            "type": "string",
+            "description": "What happened to the request to join the group",
+            "example": "created"
+          },
+          "requesterId": {
+            "type": "string",
+            "description": "ID of the user requesting to join the group",
+            "example": "123456789@lid"
+          },
+          "requesterPn": {
+            "type": "string",
+            "nullable": true,
+            "description": "Phone number ID of the requester, if known",
+            "example": "123456789@c.us"
+          },
+          "requestMethod": {
+            "type": "string",
+            "nullable": true,
+            "description": "How the request was created, for example non_admin_add, invite_link, or linked_group_join",
+            "example": "invite_link"
+          },
+          "timestamp": {
+            "type": "number",
+            "description": "Unix timestamp",
+            "example": 1666943582
+          },
+          "group": {
+            "$ref": "#/components/schemas/GroupId"
+          },
+          "_data": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "action",
+          "requesterId",
+          "timestamp",
+          "group",
+          "_data"
+        ]
+      },
+      "WebhookGroupV2ParticipantsJoinRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "evt_01aaaaaaaaaaaaaaaaaaaaaaaa",
+            "description": "Unique identifier for the event - lower case ULID format. https://github.com/ulid/spec"
+          },
+          "timestamp": {
+            "type": "number",
+            "example": 1634567890123,
+            "description": "Unix timestamp (ms) for when the event was created."
+          },
+          "session": {
+            "type": "string",
+            "example": "default"
+          },
+          "metadata": {
+            "type": "object",
+            "example": {
+              "user.id": "123",
+              "user.email": "email@example.com"
+            },
+            "description": "Metadata for the session."
+          },
+          "engine": {
+            "enum": [
+              "WEBJS",
+              "WPP",
+              "NOWEB",
+              "GOWS"
+            ],
+            "type": "string",
+            "example": "WEBJS"
+          },
+          "event": {
+            "enum": [
+              "session.status",
+              "message",
+              "message.reaction",
+              "message.any",
+              "message.ack",
+              "message.ack.group",
+              "message.waiting",
+              "message.revoked",
+              "message.edited",
+              "state.change",
+              "group.join",
+              "group.leave",
+              "group.v2.join",
+              "group.v2.leave",
+              "group.v2.update",
+              "group.v2.participants",
+              "group.v2.participants.join-request",
+              "presence.update",
+              "poll.vote",
+              "poll.vote.failed",
+              "chat.archive",
+              "call.received",
+              "call.accepted",
+              "call.rejected",
+              "label.upsert",
+              "label.deleted",
+              "label.chat.added",
+              "label.chat.deleted",
+              "event.response",
+              "event.response.failed",
+              "engine.event"
+            ],
+            "type": "object",
+            "default": "group.v2.participants.join-request",
+            "description": "When a user requests to join a group"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/GroupV2ParticipantsJoinRequestEvent"
           },
           "me": {
             "$ref": "#/components/schemas/MeInfo"
@@ -13364,6 +14495,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -13547,6 +14679,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -13639,6 +14772,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -13751,6 +14885,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -13876,6 +15011,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -13968,6 +15104,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -14060,6 +15197,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -14152,6 +15290,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -14244,6 +15383,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -14364,6 +15504,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -14456,6 +15597,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -14635,6 +15777,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -14727,6 +15870,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -14834,6 +15978,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -14926,6 +16071,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -15019,6 +16165,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -15112,6 +16259,7 @@
               "group.v2.leave",
               "group.v2.update",
               "group.v2.participants",
+              "group.v2.participants.join-request",
               "presence.update",
               "poll.vote",
               "poll.vote.failed",
@@ -15388,6 +16536,26 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/WebhookGroupV2Participants"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Return a 200 status to indicate that the data was received successfully"
+          }
+        }
+      }
+    },
+    "group.v2.participants.join-request": {
+      "post": {
+        "summary": "When a user requests to join a group",
+        "deprecated": false,
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WebhookGroupV2ParticipantsJoinRequest"
               }
             }
           }
