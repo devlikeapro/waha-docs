@@ -164,10 +164,10 @@ easy to review and safe from breaking unrelated functionality.
 
 | You're building | Use | Examples |
 |---|---|---|
-| New functionality **on top of** WAHA - an integration, a region-specific behavior, a per-session feature | [🧩 App](#-apps) | [**Chatwoot**]({{< relref "/docs/apps/chatwoot" >}}), [**Brazilian Phone Numbers**]({{< relref "/docs/apps/brazilian-phone-numbers" >}}) |
-| A **product-wide** capability, enabled and configured globally via environment variables | [📦 Module](#-modules) | Prometheus metrics, Webhooks |
-| A **low-level tweak** of how requests and events flow through a session | [🔌 Session Plugin](#-session-plugins) | wid normalization, auto-online presence |
-| A new **core WhatsApp feature** or an engine bug fix | [🏭 Engines & Core](#-engines-and-core) | new API endpoint, engine behavior fix |
+| New functionality **on top of** WAHA - an integration, a region-specific behavior, a per-session feature | [**🧩 Apps**](#-apps) | [Chatwoot]({{< relref "/docs/apps/chatwoot" >}}), [Brazilian Phone Numbers]({{< relref "/docs/apps/brazilian-phone-numbers" >}}) |
+| A **product-wide** capability, enabled and configured globally via environment variables | [**📦 Modules**](#-modules) | Prometheus metrics, Webhooks |
+| A **low-level tweak** of how requests and events flow through a session | [**🔌 Plugins**](#-plugins) | wid normalization, auto-online presence |
+| A new **core WhatsApp feature** or an engine bug fix | [**🏭 Engines**](#-engines) | new API endpoint, engine behavior fix |
 
 {{< callout context="caution" title="Internal contracts" icon="outline/alert-triangle" >}}
 Everything below describes **internal** interfaces - they may change between releases without notice.
@@ -430,7 +430,7 @@ Existing modules to learn from:
 - [waha-webhook](https://github.com/devlikeapro/waha/tree/core/src/modules/waha-webhook) - global env config
   merged with per-session config inside the plugin.
 
-### 🔌 Session Plugins
+### 🔌 Plugins
 
 A **session plugin** is the lowest-level extension point - a class attached to a session that taps into
 its lifecycle hooks and event streams. Use it for cross-cutting tweaks of how requests and events flow
@@ -489,7 +489,7 @@ How it all comes together on session start
 module plugins are added first, then app plugins, then all of them are attached in one pass,
 and only then the session starts.
 
-### 🏭 Engines and Core
+### 🏭 Engines
 
 The last resort - for changes to the **main WhatsApp functionality itself**: a new built-in feature
 every engine should support, or a bug in how an engine behaves. If your change can live in an app,
