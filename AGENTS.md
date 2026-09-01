@@ -2,6 +2,7 @@
 
 ## General Rules
 - When you mention an engine - use bold link - **GOWS** or **NOWEB**
+- Any `@`-prefixed identifier (`@lid`, `@c.us`, `@g.us`, `@s.whatsapp.net`, `@newsletter`, etc.) must be wrapped in backtick code syntax - `@lid`, never bare @lid - in both changelog entries and docs. Applies to new content only; do not rewrite existing text.
 - When you link to another docs page - use the page's own title, emoji included, and make it bold:
   `[**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}})`
 
