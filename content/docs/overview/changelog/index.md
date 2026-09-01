@@ -83,6 +83,8 @@ Latest Version:
 - `2026.8.2` - Unique apps - one instance per session for **ChatWoot**, **Reject Calls** and **Brazilian Phone Numbers**
 
 🧩 **ChatWoot**
+- `2026.8.2` - match existing contacts by resolved phone number for `@lid` chats and backfill missing `phone_number` - fix #2208
+- `2026.8.2` - name LID contacts by push name instead of raw @lid id - closes #1493
 - `2026.8.1` - populate the WhatsApp JID attribute for `@lid` contacts from the message payload - fix #2208
 - `2026.8.1` - do not save full attachment content in the task result - fix #2201, closes #2202
 
