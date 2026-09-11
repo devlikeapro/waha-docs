@@ -57,6 +57,18 @@ Latest Version:
 
 👉🏻 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
+### 2026.9
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🛠️ **Fixes**
+- `2026.9.1` - **GOWS** - Groups - `PUT /api/{session}/groups/{id}/description` with an empty string hung instead of clearing the description - fix #2257
+- `2026.9.1` - Groups - `PUT /api/{session}/groups/{id}/subject` returns `400` on an empty subject instead of hanging - fix #2257
+- `2026.9.1` - `POST /api/sendPoll` returns `400` on invalid poll payload (empty or duplicate options)
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2026.8
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
