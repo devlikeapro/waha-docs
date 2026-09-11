@@ -57,6 +57,38 @@ Latest Version:
 
 👉🏻 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
+### 2026.9
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🧩 **Apps**
+- `2026.9.1` - [**Phone Numbers**]({{< relref "/docs/apps/phone-numbers" >}}) - resolve numbers to the WhatsApp chatId before sending, with *optional regexp rules* (`^52(\d{10})$` => `521$1`)
+- `2026.9.1` - [**Phone Numbers: Argentina**]({{< relref "/docs/apps/argentine-phone-numbers" >}}) - resolve numbers with or without the mobile `9` (`54...` / `549...`) - pr #2260
+- `2026.9.1` - [**Phone Numbers: Mexico**]({{< relref "/docs/apps/mexican-phone-numbers" >}}) - resolve numbers with or without the old `1` after the country code (`52...` / `521...`)
+
+🧩 **ChatWoot**
+- `2026.9.1` - Show **delivered** and **read** ticks in Chatwoot on messages agents send from Chatwoot (`conversations.syncMessageStatus`) - [**🧩 ChatWoot**]({{< relref "/docs/apps/chatwoot#message-status" >}}) - closes #2264
+- `2026.9.1` - Show messages you send from the WhatsApp app or API as regular outgoing messages (`conversations.outgoing: private-note | message`) - fix #2249
+- `2026.9.1` - Update names of existing Chatwoot contacts from your phone book (`wa/contacts pull --update-names no|if-raw|always`) - fix #1245
+- `2026.9.1` - Deleting a message with attachments in Chatwoot deletes every part in WhatsApp, not only the last one
+
+🛠️ **Fixes**
+- `2026.9.1` - **WEBJS** - Fix sending media - `Data passed to getter must include an id property` - fix #2271, #2273
+- `2026.9.1` - **WEBJS** - Joining a group via invite link failed with `500` on current WhatsApp Web
+- `2026.9.1` - **WEBJS** - Getting and subscribing to presence failed with `500` on current WhatsApp Web - pr #2262
+- `2026.9.1` - **WEBJS** - `presence.update` events were missing on current WhatsApp Web
+- `2026.9.1` - **GOWS** - Clearing a group description with an empty string hung - fix #2257
+- `2026.9.1` - Setting an empty group subject returns `400` instead of hanging - fix #2257
+- `2026.9.1` - Sending a poll with empty or duplicate options returns `400`
+- `2026.9.1` - **NOWEB** - Fix downloading `interactiveMessageTemplate` with `"templateMessage" message is not a media message` - fix #2275
+- `2026.9.1` - **NOWEB** - Downloading media expired on WhatsApp servers asks the phone to re-upload it instead of failing
+- `2026.9.1` - **GOWS** - Downloading media expired on WhatsApp servers asks the phone to re-upload it in more cases (`404`/`410`)
+- `2026.9.1` - **NOWEB** - Messages from history sync now have image thumbnails (`jpegThumbnail`) for newly linked sessions
+- `2026.9.1` - Dashboard - Chat media thumbnails didn't show for **NOWEB** sessions
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2026.8
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
