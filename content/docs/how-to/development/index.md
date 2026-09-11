@@ -338,8 +338,10 @@ The generic `/api/apps` client already handles any app, so it's UI work only:
 Existing apps, from simplest to richest - use them as templates:
 
 - [calls](https://github.com/devlikeapro/waha/tree/core/src/apps/calls) - one plugin, no API, no database.
+- [phone-numbers](https://github.com/devlikeapro/waha/tree/core/src/apps/phone-numbers) -
+  the shared engine (plugin, storage, cache API) the country apps reuse with their own rules.
 - [brazilian-phone-numbers](https://github.com/devlikeapro/waha/tree/core/src/apps/brazilian-phone-numbers) -
-  engine-specific plugins, own API, own table + migration.
+  country rules on top of phone-numbers, own API, own table + migration.
 - [mcp](https://github.com/devlikeapro/waha/tree/core/src/apps/mcp) - own HTTP surface outside `/api`.
 - [chatwoot](https://github.com/devlikeapro/waha/tree/core/src/apps/chatwoot) - queues, consumers, webhook
   controller, several tables.

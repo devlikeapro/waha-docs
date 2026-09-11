@@ -73,7 +73,9 @@ You can find latest `ChatWootAppConfig` in [**📚 Swagger**]({{< relref "/docs/
                 "open",
                 "pending",
                 "snoozed"
-            ]
+            ],
+            "markAsRead": true,
+            "syncMessageStatus": false
         }
     },
     "enabled": true
@@ -140,6 +142,14 @@ If you set **Select conversation behavior** to **Activity: Newest**, **Chatwoot*
 ![](screenshots/multiple-waha.png)
 
 </div>
+
+### Message Status
+Show WhatsApp **delivered** and **read** ticks on messages agents send from **Chatwoot**. Disabled by default.
+
+Set in **WAHA**:
+- **Sync message status on WhatsApp ack** - **Sync status** (`conversations.syncMessageStatus: true`)
+
+Direct chats only, a message with attachments is updated once every part is delivered or read.
 
 ## Language
 You can adjust **messages, templates, and branding** in the content WAHA sends to Chatwoot and WhatsApp
