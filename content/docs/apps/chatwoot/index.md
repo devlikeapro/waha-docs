@@ -144,7 +144,8 @@ If you set **Select conversation behavior** to **Activity: Newest**, **Chatwoot*
 </div>
 
 ### Message Status
-Show WhatsApp **delivered** and **read** ticks on messages agents send from **Chatwoot**. Disabled by default.
+Show WhatsApp **delivered** and **read** ticks on messages agents send from **Chatwoot**.
+Enabled by default for apps created from the **Dashboard**, disabled by default when you create the app via **API**.
 
 Set in **WAHA**:
 - **Sync message status on WhatsApp ack** - **Sync status** (`conversations.syncMessageStatus: true`)
