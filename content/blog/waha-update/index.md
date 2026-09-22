@@ -69,6 +69,16 @@ docker compose ps
 docker compose logs --since 1h
 ```
 
+## EasyPanel
+
+👉 Installed using [Deploy WAHA on EasyPanel]({{< relref "/blog/waha-on-easypanel" >}}) guide? Here's how to update.
+
+When you want to update the image on EasyPanel, go to the **Deployments** tab of your `waha` service and click **Force Build**:
+
+![Force Build on EasyPanel](easypanel-force-rebuild.png)
+
+EasyPanel will pull the latest image and redeploy the service.
+
 ## Coolify
 
 👉 Installed using [Deploy WAHA on Coolify]({{< relref "/blog/waha-on-coolify" >}}) guide? Here's how to update.
@@ -79,12 +89,3 @@ When there's a new version, open your WAHA app in Coolify and click **Redeploy**
 
 Coolify will pull the latest image and restart the container automatically.
 
-## EasyPanel
-
-👉 Installed using [Deploy WAHA on EasyPanel]({{< relref "/blog/waha-on-easypanel" >}}) guide? Here's how to update.
-
-When you want to update the image on EasyPanel, go to the **Deployments** tab of your `waha` service and click **Force Build**:
-
-![Force Build on EasyPanel](easypanel-force-rebuild.png)
-
-EasyPanel will pull the latest image and redeploy the service.
