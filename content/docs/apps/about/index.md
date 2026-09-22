@@ -22,7 +22,10 @@ Apps available to connect:
 - [**ChatWoot**]({{< relref "/docs/apps/chatwoot" >}}) - use your **WhatsApp** in **ChatWoot CRM**
 - [**Reject Calls**]({{< relref "/docs/apps/calls" >}}) - automatically **reject calls** and **auto-reply with a message**
 - [**MCP**]({{< relref "/docs/apps/mcp" >}}) - connect **AI agents** to **WhatsApp** with **granular permission scopes**
-- [**Brazilian Phone Numbers**]({{< relref "/docs/apps/brazilian-phone-numbers" >}}) - resolve the **9th digit** in 🇧🇷 **Brazilian numbers** automatically
+- [**Phone Numbers**]({{< relref "/docs/apps/phone-numbers" >}}) - resolve numbers of **any country** to the chat id WhatsApp knows before sending, with **regexp rules**
+- [**Phone Numbers: Brazil**]({{< relref "/docs/apps/brazilian-phone-numbers" >}}) - resolve the **9th digit** in 🇧🇷 **Brazilian numbers** automatically
+- [**Phone Numbers: Argentina**]({{< relref "/docs/apps/argentine-phone-numbers" >}}) - resolve the mobile **9** in 🇦🇷 **Argentine numbers** automatically
+- [**Phone Numbers: Mexico**]({{< relref "/docs/apps/mexican-phone-numbers" >}}) - resolve the old **1** after the country code in 🇲🇽 **Mexican numbers** automatically
 
 ## Configuration
 
@@ -59,7 +62,10 @@ POST /api/apps
   - `ChatWootAppConfig` 
   - `CallsAppConfig`
   - `McpAppConfig`
+  - `PhoneNumbersAppConfig`
   - `BrazilianPhoneNumbersAppConfig`
+  - `ArgentinePhoneNumbersAppConfig`
+  - `MexicanPhoneNumbersAppConfig`
 
 ### Update an app
 ```http request

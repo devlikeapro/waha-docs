@@ -19,7 +19,7 @@ You can **automatically reject calls** and **auto-reply with a message** using t
 ```bash {title=".env"}
 WAHA_APPS_ENABLED=True
 # If you don't need "chatwoot" app - explicity specify apps to enable
-WAHA_APPS_ON=calls
+#WAHA_APPS_ON=calls
 ```
 - Restart WAHA server
 ```bash 

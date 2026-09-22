@@ -1,41 +1,38 @@
 ---
-title: "Phone Numbers: Brazil"
-description: "Phone Numbers: Brazil App"
-lead: "Phone Numbers: Brazil App"
-date: 2026-08-26T00:00:00+00:00
-lastmod: 2026-08-26T00:00:00+00:00
+title: "Phone Numbers: Mexico"
+description: "Phone Numbers: Mexico App"
+lead: "Phone Numbers: Mexico App"
+date: 2026-09-17T00:00:00+00:00
+lastmod: 2026-09-17T00:00:00+00:00
 draft: false
-weight: 306
+weight: 308
 images: []
 toc: true
 ---
 
-🇧🇷 **Brazilian phone numbers** (country code **55**) have a tricky **9th digit**:
-mobile numbers were migrated from 8 to 9 local digits (adding a leading `9` after the area code, DDD),
-but on **WhatsApp** an account can still be registered with **either** form.
+🇲🇽 **Mexican phone numbers** (country code **52**) changed their dialing rules in **2019**: the `01`, `044`, `045` prefixes
+and the `1` after `+52` for mobiles were dropped, every number is now `52` + 10 digits.
+**WhatsApp** still keeps accounts registered before that under the old form - with the `1` after the country code:
+`5215512345678`, while integrations have them as `525512345678`.
 
-If you send a message to `5531988887777` while the account is registered as `553188887777` (or vice versa) -
-the message goes to the wrong chat or nowhere at all.
+If you send a message to the wrong form - the request fails or the message goes nowhere.
 
 The app **automatically resolves the right number** before sending, so you can send messages
-to Brazilian numbers **with or without the 9th digit** - no changes on your side.
+to Mexican numbers **with or without the 1** - no changes on your side.
 
 {{< callout context="tip" title="Built on Phone Numbers" icon="outline/article" >}}
-The app is the [**📱 Phone Numbers**]({{< relref "/docs/apps/phone-numbers" >}}) app with the Brazilian rules included -
+The app is the [**📱 Phone Numbers**]({{< relref "/docs/apps/phone-numbers" >}}) app with the Mexican rules included -
 same config and cache API. Use that one for other countries or custom rules.
 {{< /callout >}}
 
 ## How it works
-When you call **send message** APIs with a Brazilian number in `chatId`, the app resolves the registered form
-going through the tiers below - cheapest first:
+When you call **send message** APIs with a Mexican number in `chatId` (`52` + 10 digits, with or without the `1`),
+the app checks the **supplied form first** and then the other one, going through the tiers below - cheapest first:
 
 1. **In-memory cache** - previously resolved numbers.
-2. **Static rules** - deterministic cases that need no lookup:
-  - **DDD < 31** (São Paulo and nearby regions) - mobile numbers always use the 9-digit form, the `9` is added automatically.
-  - **0800 toll-free numbers** - `08000464636` is stored as `558000464636` on WhatsApp, rewritten automatically.
-3. **Persistent cache** - verified resolutions saved in the database.
-4. **Local contacts** - the number is matched against the session's contact and LID store.
-5. **WhatsApp lookup** - asks WhatsApp servers which form exists (can be turned off with `lookup: false`).
+2. **Persistent cache** - verified resolutions saved in the database.
+3. **Local contacts** - the number is matched against the session's contact and LID store.
+4. **WhatsApp lookup** - asks WhatsApp servers which form exists (can be turned off with `lookup: false`).
 
 Other APIs (typing, mark as read, group operations, etc.) resolve using local tiers only - they never call WhatsApp lookup and never fail.
 
@@ -44,7 +41,7 @@ Other APIs (typing, mark as read, group operations, etc.) resolve using local ti
 ```bash {title=".env"}
 WAHA_APPS_ENABLED=True
 # If you don't need other apps - explicitly specify apps to enable
-#WAHA_APPS_ON=brazilian-phone-numbers
+#WAHA_APPS_ON=mexican-phone-numbers
 ```
 - Restart WAHA server
 ```bash 
@@ -61,12 +58,12 @@ POST /api/apps
 ```
 
 {{< callout context="tip" title="Latest Config in Swagger" icon="outline/article" >}}
-You can find latest `BrazilianPhoneNumbersAppConfig` in [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}).
+You can find latest `MexicanPhoneNumbersAppConfig` in [**📚 Swagger**]({{< relref "/docs/how-to/swagger" >}}).
 {{< /callout >}}
 
 ```json
 {
-  "app": "brazilian-phone-numbers",
+  "app": "mexican-phone-numbers",
   "session": "{session}",
   "id": "app_{session}",
   "config": {
@@ -99,7 +96,7 @@ All endpoints require the app to be **enabled** for the session.
 Stats for both cache tiers:
 
 ```http request
-GET /api/apps/brazilian-phone-numbers/{session}/cache/stats
+GET /api/apps/mexican-phone-numbers/{session}/cache/stats
 ```
 
 ```jsonc { title="Response" }
@@ -121,15 +118,15 @@ Entries from the in-memory cache tier of the **running** session, sorted by key
 (`422` if the session is not running):
 
 ```http request
-GET /api/apps/brazilian-phone-numbers/{session}/cache/memory?limit=100&offset=0
+GET /api/apps/mexican-phone-numbers/{session}/cache/memory?limit=100&offset=0
 ```
 
 ```jsonc { title="Response" }
 [
   {
-    "key": "553188887777",
+    "key": "525512345678",
     // Empty string is a confirmed-negative - the number is verified NOT to exist on WhatsApp
-    "chatId": "5531988887777@c.us",
+    "chatId": "5215512345678@c.us",
     // null when the entry has no TTL
     "expiresAt": "2026-08-28T00:00:00.000Z"
   }
@@ -141,15 +138,15 @@ Entries from the persistent (database) cache tier, sorted by id -
 works even when the session is **stopped** (`422` if `cache.persistent` is disabled):
 
 ```http request
-GET /api/apps/brazilian-phone-numbers/{session}/cache/db?limit=100&offset=0
+GET /api/apps/mexican-phone-numbers/{session}/cache/db?limit=100&offset=0
 ```
 
 ```jsonc { title="Response" }
 [
   {
     "id": 1,
-    "key": "553188887777",
-    "chatId": "5531988887777@c.us",
+    "key": "525512345678",
+    "chatId": "5215512345678@c.us",
     "verified": true,
     "resolvedAt": "2026-08-27T00:00:00.000Z"
   }
@@ -161,7 +158,7 @@ Removes **ALL** persistent cache entries and clears the in-memory tier
 (the in-memory tier only when the session is running):
 
 ```http request
-DELETE /api/apps/brazilian-phone-numbers/{session}/cache/purge
+DELETE /api/apps/mexican-phone-numbers/{session}/cache/purge
 ```
 
 ```jsonc { title="Response" }

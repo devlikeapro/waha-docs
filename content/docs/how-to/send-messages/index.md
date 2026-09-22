@@ -53,7 +53,7 @@ Read more about [multiple sessions →]({{< relref "/docs/how-to/sessions" >}})
 
 👉 To get the actual `chatId` for 🇧🇷 **Brazilian phone number** - use `chatId` field from
 [Check phone number exists]({{< relref "/docs/how-to/contacts#check-phone-number-exists" >}})
-response.
+response, or install the [**📱 Phone Numbers**]({{< relref "/docs/apps/phone-numbers" >}}) app to resolve numbers automatically.
 
 Read more
 about [error sending text to half of Brazilian numbers (every number registered before 2012) ->](https://github.com/devlikeapro/waha/issues/238)

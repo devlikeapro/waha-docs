@@ -150,7 +150,8 @@ It returns `numberExists` field with `true` or `false` value and `chatId` field 
 **Note for 🇧🇷 Brazilian Phone Numbers**
 
 You should use the `GET /api/contacts/check-exists` endpoint **before sending a message to a new phone number**
-to get the correct chatId because of the additional 9-digit number added after 2012.
+to get the correct chatId because of the additional 9-digit number added after 2012,
+or enable the [**📱 Phone Numbers**]({{< relref "/docs/apps/phone-numbers" >}}) app to resolve numbers automatically.
 
 Read more about
 [error sending text to half of Brazilian numbers (every number registered before 2012) ->](https://github.com/devlikeapro/waha/issues/238)
