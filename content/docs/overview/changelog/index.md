@@ -61,9 +61,12 @@ Latest Version:
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}
 
+🆕 **New**
+- `2026.9.2` - [**👥 Groups**]({{< relref "/docs/how-to/groups#security---share-message-history-with-new-members" >}}) - `GET/PUT /.../member-share-history-mode` - fix #2282 closes #2283
+
 🧩 **Apps**
 - `2026.9.1` - [**Phone Numbers**]({{< relref "/docs/apps/phone-numbers" >}}) - resolve numbers to the WhatsApp chatId before sending, with *optional regexp rules* (`^52(\d{10})$` => `521$1`)
-- `2026.9.1` - [**Phone Numbers: Argentina**]({{< relref "/docs/apps/argentine-phone-numbers" >}}) - resolve numbers with or without the mobile `9` (`54...` / `549...`) - pr #2260
+- `2026.9.1` - [**Phone Numbers: Argentina**]({{< relref "/docs/apps/argentine-phone-numbers" >}}) - resolve numbers with or without the mobile `9` (`54...` / `549...`) - closes #2260
 - `2026.9.1` - [**Phone Numbers: Mexico**]({{< relref "/docs/apps/mexican-phone-numbers" >}}) - resolve numbers with or without the old `1` after the country code (`52...` / `521...`)
 
 🧩 **ChatWoot**
@@ -73,6 +76,14 @@ Latest Version:
 - `2026.9.1` - Deleting a message with attachments in Chatwoot deletes every part in WhatsApp, not only the last one
 
 🛠️ **Fixes**
+- `2026.9.2` - **NOWEB** - fix delete channel message - fix #2038 - pr #2284
+- `2026.9.2` - **NOWEB** - fix edit media caption in channels
+- `2026.9.2` - **NOWEB** - fix update contact - mention #2285
+- `2026.9.2` - **GOWS** - fix update contact
+- `2026.9.2` - **WEBJS** - fix forward message - fix #2278
+- `2026.9.2` - **WEBJS** - fix get and revoke group invite code
+- `2026.9.2` - **WEBJS** - fix create group
+- `2026.9.2` - **WEBJS** - fix set profile name
 - `2026.9.1` - **WEBJS** - Fix sending media - `Data passed to getter must include an id property` - fix #2271, #2273
 - `2026.9.1` - **WEBJS** - Joining a group via invite link failed with `500` on current WhatsApp Web
 - `2026.9.1` - **WEBJS** - Getting and subscribing to presence failed with `500` on current WhatsApp Web - pr #2262

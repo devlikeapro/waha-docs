@@ -379,6 +379,35 @@ GET /api/{session}/groups/{groupId}/settings/security/membership-approval
 }
 ```
 
+### Security - share message history with new members
+Updates the group settings for who can share the group message history with new members - all members or admins only.
+
+```http request
+PUT /api/{session}/groups/{groupId}/settings/security/member-share-history-mode
+```
+
+```jsonc { title="Body" }
+{
+  // true - all members can share message history with new members
+  // false - only admins can share message history with new members
+  "membersCanShareHistory": true
+}
+```
+
+Returns `true` if the setting was properly updated. Not available on **WPP**.
+
+Get the group settings for who can share the group message history with new members.
+
+```http request
+GET /api/{session}/groups/{groupId}/settings/security/member-share-history-mode
+```
+
+```jsonc { title="Response" }
+{
+  "membersCanShareHistory": true
+}
+```
+
 ### Participants
 
 #### Get participants v2

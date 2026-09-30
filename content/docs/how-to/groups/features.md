@@ -26,6 +26,8 @@
 | `PUT /api/{session}/groups/{id}/settings/security/member-add-mode`     |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/settings/security/membership-approval` |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `PUT /api/{session}/groups/{id}/settings/security/membership-approval` |  ✔️   | ✔️  |  ✔️   |  ✔️  |
+| `GET /api/{session}/groups/{id}/settings/security/member-share-history-mode` |  ✔️   | ✔️  |  ✔️   |  ✔️  |
+| `PUT /api/{session}/groups/{id}/settings/security/member-share-history-mode` |  ✔️   |     |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/participants`                          |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `POST /api/{session}/groups/{id}/participants/add`                     |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `POST /api/{session}/groups/{id}/participants/remove`                  |  ✔️   | ✔️  |  ✔️   |  ✔️  |
