@@ -84,6 +84,7 @@ Latest Version:
 - `2026.9.2` - **WEBJS** - fix get and revoke group invite code
 - `2026.9.2` - **WEBJS** - fix create group
 - `2026.9.2` - **WEBJS** - fix set profile name
+- `2026.9.2` - **WEBJS** - fix hiding "What's new" modal on start - use the app's cooldown days
 - `2026.9.1` - **WEBJS** - Fix sending media - `Data passed to getter must include an id property` - fix #2271, #2273
 - `2026.9.1` - **WEBJS** - Joining a group via invite link failed with `500` on current WhatsApp Web
 - `2026.9.1` - **WEBJS** - Getting and subscribing to presence failed with `500` on current WhatsApp Web - pr #2262
@@ -97,6 +98,13 @@ Latest Version:
 - `2026.9.1` - **GOWS** - Downloading media expired on WhatsApp servers asks the phone to re-upload it in more cases (`404`/`410`)
 - `2026.9.1` - **NOWEB** - Messages from history sync now have image thumbnails (`jpegThumbnail`) for newly linked sessions
 - `2026.9.1` - Dashboard - Chat media thumbnails didn't show for **NOWEB** sessions
+
+📊 **Dashboard**
+- `2026.9.2` - Dashboard - Chat didn't refresh on new messages when the open chat and the event used different ids (`@lid` vs `@c.us`)
+
+⚙️ **Updates**
+- `2026.9.2` - **WPP** - up engine
+- `2026.9.2` - **GOWS** - up engine
 
 {{< /autolink-prs >}}
 {{< /autolink-issues >}}
