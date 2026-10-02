@@ -88,6 +88,7 @@ Latest Version:
 - `2026.9.1` - **WEBJS** - Joining a group via invite link failed with `500` on current WhatsApp Web
 - `2026.9.1` - **WEBJS** - Getting and subscribing to presence failed with `500` on current WhatsApp Web - pr #2262
 - `2026.9.1` - **WEBJS** - `presence.update` events were missing on current WhatsApp Web
+- `2026.9.2` - **GOWS** - Some group messages were saved without content and missing from chat messages - fix #2289
 - `2026.9.1` - **GOWS** - Clearing a group description with an empty string hung - fix #2257
 - `2026.9.1` - Setting an empty group subject returns `400` instead of hanging - fix #2257
 - `2026.9.1` - Sending a poll with empty or duplicate options returns `400`
