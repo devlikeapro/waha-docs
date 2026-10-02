@@ -100,7 +100,7 @@ Latest Version:
 - `2026.9.1` - Dashboard - Chat media thumbnails didn't show for **NOWEB** sessions
 
 📊 **Dashboard**
-- `2026.9.2` - Dashboard - Chat didn't refresh on new messages when the open chat and the event used different ids (`@lid` vs `@c.us`)
+- `2026.9.2` - Dashboard - fix chat not refreshing on new messages (`@lid` vs `@c.us` chats)
 
 ⚙️ **Updates**
 - `2026.9.2` - **WPP** - up engine
