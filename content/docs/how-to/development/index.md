@@ -3,7 +3,7 @@ title: "🛠️ Development"
 description: "How to extend WAHA - apps, modules, session plugins - and how to clone, build and run it locally"
 lead: ""
 date: 2020-10-06T08:48:45+00:00
-lastmod: 2026-08-31T12:00:00+00:00
+lastmod: 2026-10-02T12:00:00+00:00
 draft: false
 weight: 800
 images: ["cover.png"]
@@ -219,6 +219,11 @@ An app instance is a row in the `apps` table with its own validated `config`, at
 Users manage apps via the [Apps API]({{< relref "/docs/apps/about#api" >}}) (`POST /api/apps`),
 via `apps[]` in the session create/update payload, or right in the Dashboard.
 
+All of that comes from the **Apps SDK** - the framework in
+[src/apps/app_sdk](https://github.com/devlikeapro/waha/tree/core/src/apps/app_sdk). Once an app is registered,
+the generic `/api/apps` CRUD, enable/disable, purge, `apps[]` in the session payload, the Swagger tag and the
+Dashboard listing all work for it without extra code.
+
 An app can have:
 
 - **Its own API** - NestJS controllers, tagged in Swagger automatically.
@@ -226,6 +231,8 @@ An app can have:
 - **Its own database schema** - tables and Knex migrations, run automatically.
 - **Session plugins** - hook into the session's events and request flow.
 - **Lifecycle hooks** - react to create/update/delete/purge and session start.
+- **Queues** - BullMQ workers on Redis, visible in the Jobs Dashboard.
+- **HTTP paths outside `/api`** - public webhooks (Chatwoot), the MCP endpoint.
 
 The code lives in [src/apps](https://github.com/devlikeapro/waha/tree/core/src/apps) - `app_sdk/` is the framework,
 each app is a folder next to it:
@@ -240,6 +247,20 @@ src/apps/message-logger/
 ├── storage/                             - optional: repositories over own tables
 └── migrations/                          - optional: Knex migrations
 ```
+
+What the SDK gives you, by file:
+
+| `app_sdk/` | Gives you |
+|---|---|
+| [apps/definition.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/apps/definition.ts), [apps/apps.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/apps/apps.ts), [apps/registry.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/apps/registry.ts) | the `AppModule` manifest contract, `AppName` + `AppConfigClasses`, the `APPS` registry (also tags your controllers in Swagger) |
+| [apps/AppRuntime.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/apps/AppRuntime.ts), [env.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/env.ts) | which apps are on, from the `WAHA_APPS_*` variables |
+| [services/IAppService.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/services/IAppService.ts) | the lifecycle hooks (table below) |
+| [services/UniqueAppResolver.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/services/UniqueAppResolver.ts) | the app row and its live plugin for `unique` apps, from your own controllers |
+| [api/apps.controller.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/api/apps.controller.ts), [dto/app.dto.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/dto/app.dto.ts), [storage/](https://github.com/devlikeapro/waha/tree/core/src/apps/app_sdk/storage) | the generic `/api/apps` API, the `App<T>` DTO, the `apps` table and `AppRepository` |
+| [migrations.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/migrations.ts) | runs `src/apps/<name>/migrations` and tracks them in `app_<name>_migrations` |
+| [waha/WAHASelf.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/waha/WAHASelf.ts) | an HTTP client back to WAHA's own API - send messages, chats, contacts, groups, sessions |
+| [BullUtils.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/BullUtils.ts), [AppConsumer.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/AppConsumer.ts), [constants.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/constants.ts), [JobUtils.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/JobUtils.ts) | queue helpers - register queues, a base worker, job option presets |
+| [JobLoggerWrapper.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/JobLoggerWrapper.ts), [AxiosLogging.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/AxiosLogging.ts), [jest/JestLogger.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/jest/JestLogger.ts) | logging helpers for jobs, HTTP calls and tests |
 
 Registering an app takes three touch points:
 
@@ -275,10 +296,29 @@ const MessageLoggerAppModule: AppModule = {
 export default MessageLoggerAppModule;
 ```
 
+The config DTO (`dto/config.dto.ts`) is a plain class with `class-validator` and `@ApiProperty` decorators -
+[calls/dto/config.dto.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/calls/dto/config.dto.ts) is the smallest real one.
+Listing it in `AppConfigClasses` is what makes it validated on every create and update and listed in Swagger.
+On update the `app` type and `session` can't change, and `unique: true` rejects a second instance for the same session.
+
 The app service implements `IAppService` from
 [app_sdk/services/IAppService.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/services/IAppService.ts) -
-validation, `beforeCreated`/`beforeUpdated`/`beforeDeleted`, `purge` (wipe the app's data),
-`beforeSessionStart`/`afterSessionStart`, and the key one - `plugins()`, which contributes session plugins:
+the lifecycle hooks:
+
+| Hook | When | Use it for |
+|---|---|---|
+| `validate` | before create and update | extra config checks beyond the DTO |
+| `beforeCreated`, `afterCreated` | around the insert into `apps` | side effects that need the saved row - MCP issues API keys in `afterCreated` |
+| `beforeEnabled`, `beforeDisabled` | only when the `enabled` flag flips | start or stop external resources |
+| `beforeUpdated`, `beforeDeleted` | before the row is saved or deleted | |
+| `purge` | `POST /api/apps/{id}/purge`, session logout with `apps.purge` | wipe the app's own tables and caches, keep the config |
+| `beforeSessionDeleted` | when the whole session is deleted | clean up external resources |
+| `enrich` | after reading the row from storage | fill transient fields (secrets) that aren't persisted |
+| `plugins` | on session start | **the key one** - contribute session plugins |
+| `beforeSessionStart`, `afterSessionStart` | around `session.start()` | subscribe to events directly, warm up caches |
+
+Most apps implement everything but `plugins()` as no-ops -
+[calls/services/CallsAppService.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/calls/services/CallsAppService.ts) is the template:
 
 ```typescript { title="src/apps/message-logger/services/MessageLoggerAppService.ts" }
 @Injectable()
@@ -290,6 +330,14 @@ export class MessageLoggerAppService implements IAppService {
   }
 }
 ```
+
+There are two ways for an app to receive session events:
+
+- **Session plugins** (preferred) - a `SessionPlugin` with `@PluginEvent` for events and `@PluginHook` for
+  request hooks, returned from `plugins()`. See [Plugins](#-plugins) for the contract and the hooks table.
+- **Direct subscription** - `session.getEventObservable(event)` in `beforeSessionStart`, when events must leave
+  the process: Chatwoot pushes every event to BullMQ queues this way
+  ([ChatWootWAHAQueueService.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/chatwoot/services/ChatWootWAHAQueueService.ts)).
 
 With that in place, the app works end to end:
 
@@ -317,11 +365,30 @@ A few more things an app can do:
   WAHA runs them automatically and tracks them in a per-app `app_<name>_migrations` table.
   Convention: name tables `app_<name>_...` with an `app_pk` foreign key to `apps.pk` (ON DELETE CASCADE) - see
   [the Brazilian Phone Numbers migration](https://github.com/devlikeapro/waha/blob/core/src/apps/brazilian-phone-numbers/migrations/001_init_brazilian_phone_numbers.ts).
-- **Queues** - set `definition.queue: true` to get BullMQ (requires Redis); extend `AppConsumer` for workers.
+- **Queues** - set `definition.queue: true` (requires Redis). Register queues with `RegisterAppQueue`
+  ([app_sdk/BullUtils.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/BullUtils.ts)) - it adds them to BullMQ and to the
+  Jobs Dashboard at `/jobs`. Extend `AppConsumer`
+  ([app_sdk/AppConsumer.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/AppConsumer.ts)) for workers - it gives you a child
+  logger, `withMutex()` to run one job per resource at a time and `signal()` for job timeouts. Retry and removal
+  presets live in [app_sdk/constants.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/constants.ts) and are tuned by the
+  `WAHA_APPS_JOBS_*` variables ([**🧩 Apps**]({{< relref "/docs/apps/about#configuration" >}})).
   Chatwoot is the reference here.
+- **Call WAHA's own API** - `WAHASelf` ([app_sdk/waha/WAHASelf.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/waha/WAHASelf.ts))
+  is an HTTP client to `http://localhost:$PORT` with the api key - send messages, read chats, contacts and groups,
+  manage sessions. Set `definition.plainkey: true` - the app then needs `WAHA_API_KEY_PLAIN` when `WAHA_API_KEY` is set.
+- **HTTP paths outside `/api`** - register them with `HttpPathsRegistration`
+  ([src/plugins/http.paths.module.ts](https://github.com/devlikeapro/waha/blob/core/src/plugins/http.paths.module.ts)) so basic auth, api key,
+  access log and metrics treat them correctly - Chatwoot's `/webhooks/`, MCP's `/mcp`.
+- **Access control** - `/api/apps` is already guarded per session. For your own routes follow the
+  `api/apps/<name>/:session/...` convention and guard them with `@CheckPolicies(CanSession(...))` -
+  see [PhoneNumbersCacheController.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/phone-numbers/api/PhoneNumbersCacheController.ts).
 
 Apps are controlled at runtime by `WAHA_APPS_ENABLED=true`, plus `WAHA_APPS_ON`/`WAHA_APPS_OFF`
-comma-lists to enable or disable specific apps.
+comma-lists to enable or disable specific apps ([**🧩 Apps**]({{< relref "/docs/apps/about#configuration" >}})).
+When neither `WAHA_APPS_ENABLED` nor `WAHA_APPS_ON` is set (and sessions aren't stored in MongoDB), apps are on
+with every `queue: false` app enabled - the "in-memory apps" in
+[app_sdk/env.ts](https://github.com/devlikeapro/waha/blob/core/src/apps/app_sdk/env.ts) - so a new app without a queue works out of the box.
+Apps with `queue: true` need Redis and have to be enabled explicitly.
 
 **Dashboard** - a new app should also get a config form in the Dashboard, which lives in
 [devlikeapro/waha-hub](https://github.com/devlikeapro/waha-hub) (`ui/`, Nuxt + PrimeVue).
@@ -334,6 +401,10 @@ The generic `/api/apps` client already handles any app, so it's UI work only:
 - `ui/components/common/MessageLoggerLabel.vue` - emoji + name label.
 - `ui/services/waha/dtos.ts` - the config interface.
 - `ui/i18n/locales/*.json` - translation keys (run `node scripts/check-i18n.js`).
+
+**Docs** - add a page under `content/docs/apps/<name>/` in
+[devlikeapro/waha-docs](https://github.com/devlikeapro/waha-docs) (follow the Reject Calls page:
+Installation, Configuration, API) and list it in [**🧩 Apps**]({{< relref "/docs/apps/about#available-apps" >}}).
 
 Existing apps, from simplest to richest - use them as templates:
 

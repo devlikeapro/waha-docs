@@ -119,4 +119,15 @@ You can use the **WAHA Jobs Dashboard** at [http://localhost:3000/jobs](http://l
 
 ## Apps SDK
 
-> This section is currently under development. Check back soon for detailed information about the integration architecture and workflow.
+Every built-in app is built with the **Apps SDK** - and the same framework is open for your own apps.
+An app can have:
+
+- **Its own API** - NestJS controllers, tagged in Swagger automatically.
+- **Per-session config** - validated and editable in the Dashboard.
+- **Its own database tables** - with migrations run automatically.
+- **Session plugins** - react to session events and hook into the request flow.
+- **Background queues** - BullMQ workers on Redis.
+- **Lifecycle hooks** - create, update, enable, disable, purge, session start.
+
+Read the step-by-step guide in [**🛠️ Development**]({{< relref "/docs/how-to/development#-apps" >}}) -
+and [pull requests](https://github.com/devlikeapro/waha/pulls) with new apps are welcome!
