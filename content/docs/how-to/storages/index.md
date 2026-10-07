@@ -300,9 +300,24 @@ volumes:
 ```
 
 **S3 metadata** for each file:
-- `X-Amz-Meta-Waha-Session=default` - session name
-- `X-Amz-Meta-Waha-Message-Id=true_111...` - message ID
-- `X-Amz-Meta-Waha-Media-File-Name=media.jpg` - media file name
+- `x-amz-meta-waha-session=default` - session name
+- `x-amz-meta-waha-chat-id=111@c.us` - chat ID
+- `x-amz-meta-waha-message-id=true_111...` - message ID
+- `x-amz-meta-waha-created-at=1700000000000` - upload time, unix epoch in milliseconds
+- `x-amz-meta-waha-media-filename=report%20%E5%8C%85.pdf` - media file name, **percent-encoded**
+
+The `x-amz-meta-waha-media-filename` value is **URL-encoded** (percent-encoded).
+
+Decode it to get the original name:
+
+```javascript
+decodeURIComponent('report%20%E5%8C%85.pdf'); // 'report 包.pdf'
+```
+
+```python
+from urllib.parse import unquote
+unquote('report%20%E5%8C%85.pdf')  # 'report 包.pdf'
+```
 
 ## Namespace
 {{< include file="content/docs/how-to/engines/-engine-namespace.md" >}}

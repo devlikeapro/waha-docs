@@ -57,6 +57,55 @@ Latest Version:
 
 👉🏻 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
+### 2026.10
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🆕 **New**
+- `2026.10.1` - [**🏷️ Labels**]({{< relref "/docs/how-to/labels#label-type-and-lists" >}}) - `type` and `isActive` fields.
+- `2026.10.1` - [**👥 Groups**]({{< relref "/docs/how-to/groups#member-tags" >}}) - member tags API, `group.v2.participants.tag` event - fix #2300
+
+🧩 **ChatWoot**
+- `2026.10.1` - Add [**member tag**]({{< relref "/docs/how-to/groups#member-tags" >}}) for group messages - mention #2300
+
+🛠️ **Fixes**
+- `2026.10.1` - **GOWS** - use `FAILED` on [connection failures]({{< relref "/docs/engines/gows#sessionstatus" >}}) (ban, client outdated, etc) - pr #2318
+- `2026.10.1` - **GOWS** - swap link preview headers - fix #2322
+- `2026.10.1` - **GOWS** - fix setting status (about) - fix #2326
+- `2026.10.1` - **GOWS** - fix missing video preview (ffmpeg `partial file`) - fix #1942
+- `2026.10.1` - **GOWS** - fix `GET /api/{session}/lids/{lid}` returning own phone number for `@lid` - mention #2241, #2299
+- `2026.10.1` - **GOWS** - reduce noisy logs for retry receipts - #1942
+- `2026.10.1` - **S3** - fix saving media with non-ASCII and double spaces in file name - [**URL-encoded filename**]({{< relref "/docs/how-to/storages#media---s3" >}}) - fix #2279 - pr #2308
+- `2026.10.1` - **GOWS** - fix sending non-disappearing messages to chats with disappearing messages enabled (`@lid` vs `@c.us` chats)
+- `2026.10.1` - **GOWS** - fix labels sync - fix #2290
+- `2026.10.1` - [**🏷️ Labels**]({{< relref "/docs/how-to/labels" >}}) - a bunch of small fixes
+- `2026.10.1` - **WEBJS** - fix updating and deleting [**🏷️ Labels**]({{< relref "/docs/how-to/labels" >}})
+- `2026.10.1` - [**🏷️ Labels**]({{< relref "/docs/how-to/labels" >}}) - sort labels by id
+- `2026.10.1` - [**🏷️ Labels**]({{< relref "/docs/how-to/labels" >}}) - label name - max 100 lenght
+- `2026.10.1` - **NOWEB** - fix sending non-disappearing messages to chats with disappearing messages enabled
+- `2026.10.1` - **NOWEB** - fix app state sync - fix #2298, #2297 - pr #2304
+- `2026.10.1` - **NOWEB** - fix `GET /api/{session}/lids/count` returning `500` on PostgreSQL - fix #2306 - pr #2307
+- `2026.10.1` - **NOWEB** - fix missing `@lid` to phone number pairs the engine already knows - fix #2305
+- `2026.10.1` - [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) - fix setting empty group subject - fix #2294
+- `2026.10.1` - Validate `event` field in `POST /api/{session}/events` - pr #2303
+- `2026.10.1` - Redact `x-api-key` from websocket connection logs - pr #2301
+- `2026.10.1` - Reject non-string `x-api-key` values (arrays, objects) in header and query
+
+📊 **Dashboard**
+- `2026.10.1` - manage [**🏷️ Labels**]({{< relref "/docs/how-to/labels" >}}) in [**Chat UI**]({{< relref "/docs/how-to/dashboard#chat-ui" >}})
+
+⚙️ **Updates**
+- `2026.10.1` - Node.js - fix CVE-2026-111497 (Brotli decoder RCE) - fix #2324
+- `2026.10.1` - `file-type` - fix CVE-2026-31808 (media parser infinite loop on malformed ASF header) - closes #2327
+- `2026.10.1` - `shell-quote` - fix CVE-2026-13311 (ChatWoot commands parsing) - closes #2328
+- `2026.10.1` - `sharp` - fix GHSA-wq5f-xc86-pv6w, GHSA-rgj7-g3m4-5g8c (image decoders) - closes #2330
+- `2026.10.1` - **GOWS** - up engine
+- `2026.10.1` - **NOWEB** - up proto
+- `2026.10.1` - **WPP** - up engine
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2026.9
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}

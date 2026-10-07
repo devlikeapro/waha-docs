@@ -528,6 +528,11 @@ See [**Message Capping ->**]({{< relref "/docs/how-to/sessions#message-capping" 
 {{< include file="content/docs/how-to/sessions/message-capping-callout.md" >}}
 {{< /callout >}}
 
+{{< callout context="caution" title="GOWS - session.status" icon="outline/alert-triangle" >}}
+Read more about `FAILED` status details like `data.reason` in the
+[**🏭 Engines - GOWS**]({{< relref "/docs/engines/gows#sessionstatus" >}}) docs.
+{{< /callout >}}
+
 ### message
 
 Incoming message (text/audio/files)
@@ -767,6 +772,9 @@ revokes a previously sent message.
 
 ### group.v2.participants.join-request
 {{< include file="content/docs/how-to/groups/events-group.v2.participants.join-request.md" >}}
+
+### group.v2.participants.tag
+{{< include file="content/docs/how-to/groups/events-group.v2.participants.tag.md" >}}
 
 ### group.v2.update
 {{< include file="content/docs/how-to/groups/events-group.v2.update.md" >}}

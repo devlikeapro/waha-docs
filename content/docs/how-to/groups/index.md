@@ -477,6 +477,69 @@ POST /api/{session}/groups/{groupId}/participants/remove
 }
 ```
 
+### Member Tags
+Members can set a short tag for themselves in a group - like `Manager` or `Support` - WhatsApp shows it under the
+member name.
+
+#### Get Member Tags
+Get the tags participants set for themselves in the group. Only members with a tag are listed.
+
+```http request
+GET /api/{session}/groups/{groupId}/participants/v2/tags
+```
+
+```jsonc { title="Response" }
+[
+  {
+    "id": "123456789@lid",
+    "tag": "Manager",
+    "timestamp": 1666943582
+  }
+]
+```
+
+#### Get Member Tag
+Get the tag of one participant - use the participant id as reported in messages and participants
+(`@lid` in most groups).
+
+```http request
+GET /api/{session}/groups/{groupId}/participants/v2/tags/{participantId}
+```
+
+```jsonc { title="Response" }
+{
+  "id": "123456789@lid",
+  // null when the participant has no tag
+  "tag": "Manager",
+  "timestamp": 1666943582
+}
+```
+
+#### Get Your Member Tag
+Get your own tag in the group, same response as above.
+
+```http request
+GET /api/{session}/groups/{groupId}/participants/v2/tags/my
+```
+
+#### Set Your Member Tag
+Set or remove your own tag in the group.
+
+```http request
+PUT /api/{session}/groups/{groupId}/participants/v2/tags/my
+```
+
+```jsonc { title="Body" }
+{
+  // 2-30 characters, no `@ # $ % / ~ \` characters
+  // empty or null removes the tag
+  "tag": "Manager"
+}
+```
+
+Returns `true` if the tag was updated. Other members get the
+[group.v2.participants.tag](#groupv2participantstag) event.
+
 ### Join requests
 When [approve new members](#security---approve-new-members) is enabled, users requesting to join the group
 wait for an admin to approve or reject the request.
@@ -625,6 +688,9 @@ Read more about
 
 ### group.v2.participants.join-request
 {{< include file="content/docs/how-to/groups/events-group.v2.participants.join-request.md" >}}
+
+### group.v2.participants.tag
+{{< include file="content/docs/how-to/groups/events-group.v2.participants.tag.md" >}}
 
 ### group.v2.update
 {{< include file="content/docs/how-to/groups/events-group.v2.update.md" >}}

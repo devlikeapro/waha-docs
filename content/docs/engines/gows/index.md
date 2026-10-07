@@ -28,6 +28,10 @@ docker run -v `pwd`/.sessions:/app/.sessions -e "WHATSAPP_DEFAULT_ENGINE=GOWS" d
 ## Configuration
 {{< include file="content/docs/engines/gows/-env-config.md" >}}
 
+## Events
+### session.status
+{{< include file="content/docs/engines/gows/-session-status.md" >}}
+
 ## Links
 
 - [https://github.com/devlikeapro/gows](https://github.com/devlikeapro/gows)
