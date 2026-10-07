@@ -56,6 +56,22 @@ Here's the **current** color map (`color` - `colorHex` - **preview**):
 - `18` - `#9ba6ff` - <span style="display:inline-block;width:15px;height:15px;background-color:#9ba6ff;"></span>
 - `19` - `#9368cf` - <span style="display:inline-block;width:15px;height:15px;background-color:#9368cf;"></span>
 
+## Label type and lists
+WhatsApp keeps its chat lists (**Unread**, **Favourites**, **Groups** and others) in the same place as labels,
+so the API returns them next to your labels. 
+
+Two fields tell them apart (`ListType` enum in [**the proto**](https://github.com/devlikeapro/whatsmeow/blob/main/proto/waSyncAction/WAWebProtobufSyncAction.proto)):
+- `type` - WhatsApp list type:
+  - `5` - **CUSTOM** - a label you created
+  - `4` - **PREDEFINED** - a label created from a WhatsApp template (New customer, New order, ...)
+  - `16` - **LEAD** - the leads list
+  - missing or `0` - **NONE** - a label created before WhatsApp added lists
+  - `1` - **UNREAD**, `2` - **GROUPS**, `3` - **FAVORITES** and others - built-in lists.
+- `isActive` - `false` for lists the user turned off
+
+👉 Built-in lists can be read and renamed, **but you can not add chats to them via API**.
+
+**WPP** doesn't return `type` and `isActive`.
 
 ## API
 
@@ -73,7 +89,9 @@ GET /api/{session}/labels
     "id": "1",
     "name": "New Client",
     "color": 1,
-    "colorHex": "#64c4ff"
+    "colorHex": "#64c4ff",
+    "type": 5,
+    "isActive": true
   },
   ...
 ]
@@ -155,7 +173,9 @@ GET /api/{session}/labels/chats/{chatId}/
     "id": "1",
     "name": "New Client",
     "color": 1,
-    "colorHex": "#64c4ff"
+    "colorHex": "#64c4ff",
+    "type": 5,
+    "isActive": true
   },
   ...
 ]
