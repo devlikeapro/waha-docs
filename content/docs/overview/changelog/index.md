@@ -78,6 +78,7 @@ Latest Version:
 - `2026.10.1` - **NOWEB** - fix sending non-disappearing messages to chats with disappearing messages enabled
 - `2026.10.1` - **NOWEB** - fix app state sync - fix #2298, #2297 - pr #2304
 - `2026.10.1` - **NOWEB** - fix `GET /api/{session}/lids/count` returning `500` on PostgreSQL - fix #2306 - pr #2307
+- `2026.10.1` - **NOWEB** - fix missing `@lid` to phone number pairs the engine already knows - fix #2305
 - `2026.10.1` - [**👥 Groups**]({{< relref "/docs/how-to/groups" >}}) - fix setting empty group subject - fix #2294
 - `2026.10.1` - Validate `event` field in `POST /api/{session}/events` - pr #2303
 - `2026.10.1` - Redact `x-api-key` from websocket connection logs - pr #2301
