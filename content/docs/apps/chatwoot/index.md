@@ -458,7 +458,19 @@ whatsapp.group.message: |-
 
 The `tag` variable holds the sender's
 [**👥 Groups - Member Tags**]({{< relref "/docs/how-to/groups#member-tags" >}}) - the `{{#tag}}` block renders only
-when the member has one.
+when the member has one. 
+
+For your own group messages the same `tag` variable is available in `message.from.whatsapp` and `message.from.api` (rendered under the "Sent from" line), and in `whatsapp.group.message.from.me` (history pull, no "Sent from" line):
+
+```yaml
+message.from.whatsapp: |-
+  *📱 Sent from WhatsApp*
+  {{#tag}}
+  `{{{tag}}}`
+  {{/tag}}
+
+  {{{text}}}
+```
 
 ## How it works
 
