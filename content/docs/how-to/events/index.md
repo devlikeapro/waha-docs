@@ -768,6 +768,9 @@ revokes a previously sent message.
 ### group.v2.participants.join-request
 {{< include file="content/docs/how-to/groups/events-group.v2.participants.join-request.md" >}}
 
+### group.v2.participants.tag
+{{< include file="content/docs/how-to/groups/events-group.v2.participants.tag.md" >}}
+
 ### group.v2.update
 {{< include file="content/docs/how-to/groups/events-group.v2.update.md" >}}
 

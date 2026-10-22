@@ -29,6 +29,10 @@
 | `GET /api/{session}/groups/{id}/settings/security/member-share-history-mode` |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `PUT /api/{session}/groups/{id}/settings/security/member-share-history-mode` |  ✔️   |     |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/participants`                          |  ✔️   | ✔️  |  ✔️   |  ✔️  |
+| `GET /api/{session}/groups/{id}/participants/v2/tags`                  |  ✔️   |     |  ✔️   |  ✔️  |
+| `GET /api/{session}/groups/{id}/participants/v2/tags/{participantId}`  |  ✔️   |     |  ✔️   |  ✔️  |
+| `GET /api/{session}/groups/{id}/participants/v2/tags/my`               |  ✔️   |     |  ✔️   |  ✔️  |
+| `PUT /api/{session}/groups/{id}/participants/v2/tags/my`               |  ✔️   |     |  ✔️   |  ✔️  |
 | `POST /api/{session}/groups/{id}/participants/add`                     |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `POST /api/{session}/groups/{id}/participants/remove`                  |  ✔️   | ✔️  |  ✔️   |  ✔️  |
 | `GET /api/{session}/groups/{id}/participants/join-requests`         |  ✔️   | ✔️  |  ✔️   |  ✔️  |

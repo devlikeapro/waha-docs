@@ -63,6 +63,10 @@ Latest Version:
 
 🆕 **New**
 - `2026.10.1` - [**🏷️ Labels**]({{< relref "/docs/how-to/labels#label-type-and-lists" >}}) - `type` and `isActive` fields.
+- `2026.10.1` - [**👥 Groups**]({{< relref "/docs/how-to/groups#member-tags" >}}) - member tags API, `group.v2.participants.tag` event - fix #2300
+
+🧩 **ChatWoot**
+- `2026.10.1` - Add [**member tag**]({{< relref "/docs/how-to/groups#member-tags" >}}) for group messages - mention #2300
 
 🛠️ **Fixes**
 - `2026.10.1` - **GOWS** - fix missing video preview (ffmpeg `partial file`) - fix #1942

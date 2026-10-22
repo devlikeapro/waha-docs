@@ -451,7 +451,14 @@ whatsapp.group.message: |-
   {{{text}}}
   
   👥 *{{{participant}}}*
+  {{#tag}}
+  `{{{tag}}}`
+  {{/tag}}
 ```
+
+The `tag` variable holds the sender's
+[**👥 Groups - Member Tags**]({{< relref "/docs/how-to/groups#member-tags" >}}) - the `{{#tag}}` block renders only
+when the member has one.
 
 ## How it works
 
