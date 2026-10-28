@@ -96,7 +96,18 @@
         background-color: #f0f0f0; /* optional background */
     }
 
+    /* picture has no size of its own - give it the full box so img max-height: 100% can resolve */
+    .waha-blog-preview picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
     .waha-blog-preview img {
+        width: auto;
+        height: auto;
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
