@@ -113,6 +113,15 @@
         object-fit: contain;
     }
 
+    /* Cap the grid width so 2 columns stay close to the covers' natural width (2:1 at 300px = 600px) */
+    @media (min-width: 1400px) {
+        .waha-blog-grid {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
     img {
         width: auto;
         height: auto;
