@@ -481,6 +481,8 @@ POST /api/{session}/groups/{groupId}/participants/remove
 Members can set a short tag for themselves in a group - like `Manager` or `Support` - WhatsApp shows it under the
 member name.
 
+{{< imgo src="whatsapp-group-member-tag.png" alt="Group Member Tags" full="false" >}}
+
 #### Get Member Tags
 Get the tags participants set for themselves in the group. Only members with a tag are listed.
 

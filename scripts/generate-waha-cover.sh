@@ -77,13 +77,20 @@ convert -size 600x1200 gradient:"$GRADIENT" -rotate 90 "$BG"
 convert "$BG" \
   -gravity center -font "$FONT" -pointsize 210 -fill white \
   -annotate +0-80 'WAHA' "$STAGE"
-convert -size 870x170 xc:none \
-  -draw "fill white roundrectangle 0,0 869,169 85,85" "$PILL"
+# Pill width adapts to the version label: left pad + text + gap + logo + right pad
+TEXT_WIDTH=$(convert -font "$FONT" -pointsize 105 label:"$VERSION" -format "%w" info:)
+PILL_PAD=150
+PILL_GAP=60
+LOGO_SIZE=140
+PILL_WIDTH=$((PILL_PAD + TEXT_WIDTH + PILL_GAP + LOGO_SIZE + PILL_PAD - 100))
+LOGO_OFFSET=$((PILL_PAD + TEXT_WIDTH + PILL_GAP))
+convert -size "${PILL_WIDTH}x170" xc:none \
+  -draw "fill white roundrectangle 0,0 $((PILL_WIDTH - 1)),169 85,85" "$PILL"
 convert "$PILL" \
   -gravity West -font "$FONT" -pointsize 105 -fill '#10991e' \
-  -annotate +150+0 "$VERSION" "$PILL_TXT"
-convert "$LOGO" -resize 140x140 "$LOGO_TMP"
-convert "$PILL_TXT" "$LOGO_TMP" -gravity West -geometry +680+0 -composite "$PILL_READY"
+  -annotate +${PILL_PAD}+0 "$VERSION" "$PILL_TXT"
+convert "$LOGO" -resize "${LOGO_SIZE}x${LOGO_SIZE}" "$LOGO_TMP"
+convert "$PILL_TXT" "$LOGO_TMP" -gravity West -geometry +${LOGO_OFFSET}+0 -composite "$PILL_READY"
 convert "$STAGE" "$PILL_READY" -gravity center -geometry +0+130 -composite "$OUTPUT"
 
 printf "Cover generated: %s\n" "$OUTPUT"
