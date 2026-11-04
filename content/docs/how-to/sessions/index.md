@@ -542,40 +542,15 @@ If you don't provide `config.ignore` - it'll use configuration from environment 
 
 You can configure proxy for a session by setting `config.proxy` fields when you create or update a session.
 
-- `server` - proxy server address, without `http://` or `https://` prefixes
-- `username` and `password` - set this if the proxy requires authentication
+{{< include file="content/docs/how-to/proxy/-proxy-examples.md" >}}
 
-**No authentication**
-
-```json
-{
-  "name": "default",
-  "config": {
-    "proxy": {
-      "server": "localhost:3128"
-    }
-  }
-}
-```
-
-**Proxy with authentication**
-
-```json
-{
-  "name": "default",
-  "config": {
-    "proxy": {
-      "server": "localhost:3128",
-      "username": "username",
-      "password": "P@ssw0rd"
-    }
-  }
-}
-```
+{{< callout context="tip" title="Proxy Checks API" icon="outline/article" >}}
+Check the proxy before saving it - [**🌐 Proxy - API**]({{< relref "/docs/how-to/proxy#api" >}}).
+{{< /callout >}}
 
 You can configure proxy when for all sessions by set up environment variables.
-Read more about it on [**Proxy page** ->]({{< relref "/docs/how-to/proxy" >}}) or [**Configuration page** ->]({{<
-relref "/docs/how-to/config#proxy" >}}).
+Read more about it on [**🌐 Proxy**]({{< relref "/docs/how-to/proxy" >}}) or
+[**⚙️ Configuration**]({{< relref "/docs/how-to/config#proxy" >}}).
 
 ### Apps
 You can fetch [**🧩 Apps**]({{< relref "/docs/apps/about" >}}) associated with a session using `expand=apps` query parameter.

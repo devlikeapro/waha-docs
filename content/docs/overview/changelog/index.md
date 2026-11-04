@@ -57,6 +57,25 @@ Latest Version:
 
 👉🏻 Check the [**🔧 Install & Update**]({{< relref "/docs/how-to/install" >}}) page to learn how to update WAHA.
 
+### 2026.11
+{{< autolink-issues repo=devlikeapro/waha >}}
+{{< autolink-prs repo=devlikeapro/waha >}}
+
+🆕 **New**
+- `2026.11.1` - [**🌐 Proxy**]({{< relref "/docs/how-to/proxy" >}}) - SOCKS5 support - closes #2334
+- `2026.11.1` - [**🌐 Proxy**]({{< relref "/docs/how-to/proxy" >}}) - `config.proxy.scheme` - closes #2334
+- `2026.11.1` - [**🌐 Proxy**]({{< relref "/docs/how-to/proxy#api" >}}) - proxy checks API: connect, website, exit IP, WebSocket hold - fix #751 closes #2335
+
+🛠️ **Fixes**
+- `2026.11.1` - [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) - `canBeReshared` field (default `true`) - contacts can reshare posted statuses - fix #2348
+- `2026.11.1` - **WEBJS** - fix sending and deleting [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) - fix #2063
+
+📊 **Dashboard**
+- `2026.11.1` - [**📊 Proxy Checks**]({{< relref "/docs/how-to/dashboard#proxy-checks" >}}) - test a proxy from the session config (**Test Proxy**) or the session and worker menus - closes #2335
+
+{{< /autolink-prs >}}
+{{< /autolink-issues >}}
+
 ### 2026.10
 {{< autolink-issues repo=devlikeapro/waha >}}
 {{< autolink-prs repo=devlikeapro/waha >}}

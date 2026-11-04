@@ -81,6 +81,20 @@ You can observe [**Events**]({{< relref "events" >}}) in real-time using **Event
 
 </div>
 
+## Proxy Checks
+Run [**🌐 Proxy**]({{< relref "/docs/how-to/proxy" >}}) probes right from your dashboard to see if the proxy is reachable and suitable!
+
+<div class="text-center">
+
+![Run Proxy Checks](waha-dashboard-proxy-checks.png)
+
+</div>
+
+Find it in:
+1. **Session Config** → **Proxy On** → **Test Proxy** - checks the proxy as typed in the form, before you save it.
+2. **Workers** → **More Actions** → **Run Proxy Checks** - checks any proxy you enter, no session needed.
+3. **Sessions** → **More Actions** → **Run Proxy Checks** - checks the proxy the session has.
+
 ## Chat UI
 We've built a simple **Chat UI** in Dashboard, so you can see what is possible to implement using WAHA!
 
