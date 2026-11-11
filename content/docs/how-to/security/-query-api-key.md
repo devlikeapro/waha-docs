@@ -7,13 +7,13 @@ In some situations you cannot set headers — for example, when you want the **b
 without any JavaScript, by putting the URL straight into an `<img>` tag:
 
 ```html
-<img src="http://localhost:3000/api/files/true_11111111111@c.us_AAA.jpg?x-api-key=your-key" />
+<img src="http://localhost:3000/api/files/true_111111111111111@lid_AAA.jpg?x-api-key=your-key" />
 ```
 
 For these cases WAHA accepts the key as a URL query parameter (note: the parameter name is **lowercase** `x-api-key`, not `X-Api-Key`):
 
 ```http request
-GET /api/files/true_11111111111@c.us_AAA.jpg?x-api-key=your-key
+GET /api/files/true_111111111111111@lid_AAA.jpg?x-api-key=your-key
 ```
 
 ⚠️ Never embed **your admin or full-session key in a URL** — URLs appear in browser history, server logs, and `Referer` headers.

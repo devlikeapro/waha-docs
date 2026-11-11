@@ -33,7 +33,7 @@ POST /api/{session}/calls/reject
 
 ```jsonc { title="Body" }
 {
-  "from": "22222222222@c.us",
+  "from": "222222222222222@lid",
   "id": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 }
 ```

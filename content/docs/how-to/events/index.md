@@ -543,12 +543,12 @@ Incoming message (text/audio/files)
   "session": "default",
   "engine": "WEBJS",
   "payload": {
-    "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "id": "true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "timestamp": 1667561485,
-    "from": "11111111111@c.us",
+    "from": "111111111111111@lid",
     "fromMe": true,
     "source": "app",
-    "to": "11111111111@c.us",
+    "to": "111111111111111@lid",
     "body": "Hi there!",
     "hasMedia": false,
     "ack": 1,
@@ -602,15 +602,15 @@ Receive events when a message is reacted to by a user (or **yourself** reacting 
         "pushName": "WAHA"
     },
     "payload": {
-        "id": "false_79111111@c.us_11111111111111111111111111111111",
-        "from": "79111111@c.us",
+        "id": "false_111111111111111@lid_11111111111111111111111111111111",
+        "from": "111111111111111@lid",
         "fromMe": false,
-        "participant": "79111111@c.us",
-        "to": "79111111@c.us",
+        "participant": "111111111111111@lid",
+        "to": "111111111111111@lid",
         "timestamp": 1710481111.853,
         "reaction": {
             "text": "🙏",
-            "messageId": "true_79111111@c.us_11111111111111111111111111111111"
+            "messageId": "true_111111111111111@lid_11111111111111111111111111111111"
         }
     },
     "engine": "WEBJS",
@@ -648,8 +648,8 @@ The payload may have more fields, it depends on the engine you use, but here's a
   "session": "default",
   "engine": "WEBJS",
   "payload": {
-    "id":"true_11111111111@c.us_4CC5EDD64BC22EBA6D639F2AF571346C",
-    "from":"11111111111@c.us",
+    "id":"true_111111111111111@lid_4CC5EDD64BC22EBA6D639F2AF571346C",
+    "from":"111111111111111@lid",
     "participant": null,
     "fromMe":true,
     "ack":3,
@@ -694,11 +694,11 @@ on your phone.
   "session": "default",
   "engine": "WEBJS",
   "payload": {
-    "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "id": "true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "timestamp": 1667561485,
-    "from": "11111111111@c.us",
+    "from": "111111111111111@lid",
     "fromMe": true,
-    "to": "11111111111@c.us",
+    "to": "111111111111111@lid",
     ...
     "_data": {
       ...
@@ -715,7 +715,7 @@ The `message.edited` event is message edited
   "event": "message.edited",
   "session": "default",
   "payload": {
-    "id": "false_1231243123@c.us_BBBBBBBBBBBBBBBBBBBBB[_participant]",
+    "id": "false_111111111111111@lid_BBBBBBBBBBBBBBBBBBBBB[_participant]",
     ...,
     "editedMessageId": "AAAAAAAAAAAAAAAA",
     "body": "New body",
@@ -741,7 +741,7 @@ revokes a previously sent message.
   "session": "default",
   "payload": {
     "after": {
-      "id": "false_1231243123@c.us_BBBBBBBBBBBBBBBBBBBBB[_participant]",
+      "id": "false_111111111111111@lid_BBBBBBBBBBBBBBBBBBBBB[_participant]",
       "_data": ...,
       ...,
     },
@@ -793,16 +793,16 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
   "session": "default",
   "payload": {
     "vote": {
-      "id": "false_1111111111@c.us_83ACBE602A05C79B234B54415E95EE8A",
+      "id": "false_111111111111111@lid_83ACBE602A05C79B234B54415E95EE8A",
       "to": "me",
-      "from": "1111111@c.us",
+      "from": "111111111111111@lid",
       "fromMe": false,
       "selectedOptions": ["Awesome!"],
       "timestamp": 1692861427
     },
     "poll": {
-      "id": "true_1111111111@c.us_BAE5F2EF5C69001E",
-      "to": "1111111111@c.us",
+      "id": "true_111111111111111@lid_BAE5F2EF5C69001E",
+      "to": "111111111111111@lid",
       "from": "me",
       "fromMe": true
     }
@@ -820,16 +820,16 @@ We have a dedicated page [how to send polls and receive votes]({{< relref "/docs
   "session": "default",
   "payload": {
     "vote": {
-      "id": "false_11111111111@c.us_2E8C4CDA89EDE3BC0BC7F605364B8451",
+      "id": "false_111111111111111@lid_2E8C4CDA89EDE3BC0BC7F605364B8451",
       "to": "me",
-      "from": "111111111@c.us",
+      "from": "111111111111111@lid",
       "fromMe": false,
       "selectedOptions": [],
       "timestamp": 1692956972
     },
     "poll": {
-      "id": "true_1111111111@c.us_BAE595F4E0A2042C",
-      "to": "111111111@c.us",
+      "id": "true_111111111111111@lid_BAE595F4E0A2042C",
+      "to": "111111111111111@lid",
       "from": "me",
       "fromMe": true
     }
@@ -895,7 +895,7 @@ Read more about
   "session": "default",
   "payload": {
     "labelId": "6",
-    "chatId": "11111111111@c.us",
+    "chatId": "111111111111111@lid",
     "label": null <=== right after scanning QR it can be null. 
   },
   "engine": "NOWEB",
@@ -911,7 +911,7 @@ Read more about
   "session": "default",
   "payload": {
     "labelId": "6",
-    "chatId": "11111111111@c.us",
+    "chatId": "111111111111111@lid",
     "label": null
   },
   "engine": "NOWEB",

@@ -11,8 +11,8 @@ curl -X 'PUT' \
   -H 'Content-Type: application/json' \
   -d '{
   "session": "default",
-  "messageId": "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
-  "chatId": "12132132130@c.us",
+  "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
+  "chatId": "111111111111111@lid",
   "star": true
 }'
 ```
@@ -29,8 +29,8 @@ headers = {
 }
 data = {
     "session": "default",
-    "messageId": "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
-    "chatId": "12132132130@c.us",
+    "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
+    "chatId": "111111111111111@lid",
     "star": True
 }
 
@@ -46,8 +46,8 @@ const axios = require('axios');
 const url = "http://localhost:3000/api/star";
 const data = {
     session: "default",
-    messageId: "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
-    chatId: "12132132130@c.us",
+    messageId: "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
+    chatId: "111111111111111@lid",
     star: true
 };
 const headers = {
@@ -67,8 +67,8 @@ axios.put(url, data, { headers })
 $url = "http://localhost:3000/api/star";
 $data = [
     "session" => "default",
-    "messageId" => "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
-    "chatId" => "12132132130@c.us",
+    "messageId" => "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
+    "chatId" => "111111111111111@lid",
     "star" => true
 ];
 

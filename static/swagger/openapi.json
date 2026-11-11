@@ -1269,6 +1269,526 @@
         ]
       }
     },
+    "/api/sessions/{session}/proxy/info": {
+      "post": {
+        "operationId": "SessionsProxyController_info",
+        "summary": "Get the session proxy",
+        "description": "Shows the proxy URL the session uses, without credentials.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyInfo"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyInfo"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🖥️ Sessions"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/sessions/{session}/proxy/probe/connect": {
+      "post": {
+        "operationId": "SessionsProxyController_connect",
+        "summary": "Check the proxy is reachable",
+        "description": "Connects to the proxy server to confirm it is reachable.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionProxyConnectRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyConnectResult"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyConnectResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🖥️ Sessions"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/sessions/{session}/proxy/probe/http": {
+      "post": {
+        "operationId": "SessionsProxyController_http",
+        "summary": "Check a website is reachable through the proxy",
+        "description": "Sends a request to a website through the proxy. Confirms the proxy accepts the credentials and reaches the internet.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionProxyHttpRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyHttpResult"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyHttpResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🖥️ Sessions"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/sessions/{session}/proxy/probe/exit-ip": {
+      "post": {
+        "operationId": "SessionsProxyController_exitIp",
+        "summary": "Check the exit IP of the proxy",
+        "description": "Reads the IP address the internet sees behind the proxy.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionProxyExitIpRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyExitIpResult"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyExitIpResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🖥️ Sessions"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/sessions/{session}/proxy/probe/websocket": {
+      "post": {
+        "operationId": "SessionsProxyController_websocket",
+        "summary": "Check the proxy keeps a WebSocket connection open",
+        "description": "Holds a WebSocket connection through the proxy for the duration, idle or with periodic messages. Catches proxies that drop long-lived connections.",
+        "parameters": [
+          {
+            "name": "session",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "default": "default"
+            },
+            "description": "Session name"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionProxyWebSocketRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyWebSocketResult"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyWebSocketResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🖥️ Sessions"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/proxy/info": {
+      "post": {
+        "operationId": "ProxyController_info",
+        "summary": "Get the proxy URL",
+        "description": "Shows the proxy URL, without credentials.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProxyRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyInfo"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyInfo"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🌐 Proxy"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/proxy/probe/connect": {
+      "post": {
+        "operationId": "ProxyController_connect",
+        "summary": "Check the proxy is reachable",
+        "description": "Connects to the proxy server to confirm it is reachable.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProxyConnectRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyConnectResult"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyConnectResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🌐 Proxy"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/proxy/probe/http": {
+      "post": {
+        "operationId": "ProxyController_http",
+        "summary": "Check a website is reachable through the proxy",
+        "description": "Sends a request to a website through the proxy. Confirms the proxy accepts the credentials and reaches the internet.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProxyHttpRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyHttpResult"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyHttpResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🌐 Proxy"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/proxy/probe/exit-ip": {
+      "post": {
+        "operationId": "ProxyController_exitIp",
+        "summary": "Check the exit IP of the proxy",
+        "description": "Reads the IP address the internet sees behind the proxy.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProxyExitIpRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyExitIpResult"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyExitIpResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🌐 Proxy"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/api/proxy/probe/websocket": {
+      "post": {
+        "operationId": "ProxyController_websocket",
+        "summary": "Check the proxy keeps a WebSocket connection open",
+        "description": "Holds a WebSocket connection through the proxy for the duration, idle or with periodic messages. Catches proxies that drop long-lived connections.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProxyWebSocketRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyWebSocketResult"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxyWebSocketResult"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "🌐 Proxy"
+        ],
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/api/{session}/profile": {
       "get": {
         "operationId": "ProfileController_getMyProfile",
@@ -1734,7 +2254,7 @@
                   "summary": "From URL",
                   "value": {
                     "session": "default",
-                    "chatId": "11111111111@c.us",
+                    "chatId": "111111111111111@lid",
                     "reply_to": null,
                     "file": {
                       "url": "https://www.gstatic.com/webp/gallery/1.webp"
@@ -1745,7 +2265,7 @@
                   "summary": "From base64 WebP",
                   "value": {
                     "session": "default",
-                    "chatId": "11111111111@c.us",
+                    "chatId": "111111111111111@lid",
                     "reply_to": null,
                     "file": {
                       "mimetype": "image/webp",
@@ -2305,7 +2825,7 @@
             "required": true,
             "in": "query",
             "schema": {
-              "example": "11111111111@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           },
@@ -2694,7 +3214,7 @@
             "description": "Filter by chat ids",
             "schema": {
               "example": [
-                "111111111@c.us"
+                "111111111111111@lid"
               ],
               "type": "array",
               "items": {
@@ -2796,7 +3316,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -3012,7 +3532,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -3060,7 +3580,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -3120,7 +3640,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -3199,7 +3719,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           },
@@ -3252,7 +3772,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           },
@@ -3262,7 +3782,7 @@
             "in": "path",
             "description": "Message ID in format <code>{fromMe}_{chat}_{message_id}[_{participant}]</code>",
             "schema": {
-              "example": "true_123456789@c.us_BAE6A33293978B16",
+              "example": "true_111111111111111@lid_BAE6A33293978B16",
               "type": "string"
             }
           }
@@ -3300,7 +3820,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           },
@@ -3310,7 +3830,7 @@
             "in": "path",
             "description": "Message ID in format <code>{fromMe}_{chat}_{message_id}[_{participant}]</code>",
             "schema": {
-              "example": "true_123456789@c.us_BAE6A33293978B16",
+              "example": "true_111111111111111@lid_BAE6A33293978B16",
               "type": "string"
             }
           }
@@ -3360,7 +3880,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           },
@@ -3418,7 +3938,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           },
@@ -3466,7 +3986,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -3513,7 +4033,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -3560,7 +4080,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -4699,7 +5219,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -4747,7 +5267,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -4898,7 +5418,7 @@
             "required": true,
             "in": "query",
             "schema": {
-              "example": "11111111111@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           },
@@ -4985,7 +5505,7 @@
             "required": true,
             "in": "query",
             "schema": {
-              "example": "11111111111@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           },
@@ -5025,7 +5545,7 @@
             "required": true,
             "in": "query",
             "schema": {
-              "example": "11111111111@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           },
@@ -5187,7 +5707,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -7444,7 +7964,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -7491,7 +8011,7 @@
             "in": "path",
             "description": "Chat ID",
             "schema": {
-              "example": "123456789@c.us",
+              "example": "111111111111111@lid",
               "type": "string"
             }
           }
@@ -9069,7 +9589,7 @@
   "info": {
     "title": "WAHA - WhatsApp HTTP API",
     "description": "<b>WhatsApp HTTP API</b> that you can run in a click!<br/><a href=\"/dashboard\"><b>📊 Dashboard</b></a><br/><br/>Learn more:<ul><li><a href=\"https://waha.devlike.pro/\" target=\"_blank\">Documentation</a></li><li><a href=\"https://waha.devlike.pro/docs/how-to/engines/#features\" target=\"_blank\">Supported features in engines</a></li><li><a href=\"https://github.com/devlikeapro/waha\" target=\"_blank\">GitHub - WAHA Core</a></li><li><a href=\"https://github.com/devlikeapro/waha-plus\" target=\"_blank\">GitHub - WAHA Plus</a></li></ul><p>Support the project and get WAHA Plus version!</p><ul><li><a href=\"https://waha.devlike.pro/docs/how-to/plus-version/\" target=\"_blank\">WAHA Plus</a></li><li><a href=\"https://patreon.com/wa_http_api/\" target=\"_blank\">Patreon</a></li><li><a href=\"https://boosty.to/wa-http-api/\" target=\"_blank\">Boosty</a></li><li><a href=\"https://portal.devlike.pro/\" target=\"_blank\">Patron Portal</a></li></ul>",
-    "version": "2026.10.1",
+    "version": "2026.11.1",
     "contact": {}
   },
   "tags": [
@@ -9136,6 +9656,10 @@
     {
       "name": "🧩 Apps",
       "description": "Applications (built-in integrations)"
+    },
+    {
+      "name": "🌐 Proxy",
+      "description": "Check a proxy configuration against what WhatsApp needs"
     },
     {
       "name": "🧩 Apps: Phone Numbers: Argentina",
@@ -10023,7 +10547,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "lid": {
             "type": "string",
@@ -10064,8 +10588,19 @@
       "ProxyConfig": {
         "type": "object",
         "properties": {
+          "scheme": {
+            "enum": [
+              "http",
+              "https",
+              "socks5"
+            ],
+            "type": "string",
+            "description": "Proxy scheme",
+            "example": "http"
+          },
           "server": {
             "type": "string",
+            "description": "Proxy server address in host:port format",
             "example": "localhost:3128"
           },
           "username": {
@@ -10599,12 +11134,463 @@
           "name"
         ]
       },
+      "ProxyInfo": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "enum": [
+              "session",
+              "environment",
+              "request"
+            ],
+            "type": "string",
+            "description": "Where the proxy comes from - the session config, the WHATSAPP_PROXY_SERVER environment or the request body.",
+            "example": "session"
+          },
+          "url": {
+            "type": "string",
+            "description": "The proxy URL, without credentials.",
+            "example": "http://proxy.example.com:3128"
+          },
+          "username": {
+            "type": "string",
+            "nullable": true,
+            "example": null
+          }
+        },
+        "required": [
+          "source",
+          "url",
+          "username"
+        ]
+      },
+      "SessionProxyConnectRequest": {
+        "type": "object",
+        "properties": {
+          "timeout": {
+            "type": "number",
+            "default": 10000,
+            "description": "How long to wait, in milliseconds."
+          }
+        }
+      },
+      "ProxyProbeError": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "enum": [
+              "PROXY_AUTH_FAILED",
+              "PROXY_CONNECTION_REFUSED",
+              "PROXY_HOST_NOT_FOUND",
+              "PROXY_TIMEOUT",
+              "PROXY_REJECTED",
+              "PROXY_DISCONNECTED",
+              "PROXY_INVALID",
+              "PROXY_FAILED"
+            ],
+            "type": "string",
+            "example": "PROXY_AUTH_FAILED"
+          },
+          "message": {
+            "type": "string",
+            "example": "The proxy refused the username or password (407)"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ]
+      },
+      "ProxyConnectResult": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "description": "The probe passed."
+          },
+          "error": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProxyProbeError"
+              }
+            ]
+          },
+          "latency": {
+            "type": "number",
+            "nullable": true,
+            "description": "Time to open the connection to the proxy, in milliseconds.",
+            "example": 45
+          },
+          "address": {
+            "type": "string",
+            "nullable": true,
+            "description": "The IP address the connection was opened to.",
+            "example": "203.0.113.5"
+          },
+          "port": {
+            "type": "number",
+            "nullable": true,
+            "description": "The port the connection was opened to.",
+            "example": 3128
+          }
+        },
+        "required": [
+          "ok",
+          "error",
+          "latency",
+          "address",
+          "port"
+        ]
+      },
+      "SessionProxyHttpRequest": {
+        "type": "object",
+        "properties": {
+          "timeout": {
+            "type": "number",
+            "default": 10000,
+            "description": "How long to wait, in milliseconds."
+          },
+          "url": {
+            "type": "string",
+            "default": "https://web.whatsapp.com/",
+            "description": "The server to reach through the proxy with one request. Any HTTP answer counts as reachable."
+          },
+          "method": {
+            "default": "HEAD",
+            "enum": [
+              "GET",
+              "HEAD"
+            ],
+            "type": "string",
+            "description": "The request method."
+          }
+        }
+      },
+      "ProxyHttpResult": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "description": "The probe passed."
+          },
+          "error": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProxyProbeError"
+              }
+            ]
+          },
+          "url": {
+            "type": "string",
+            "example": "https://web.whatsapp.com/"
+          },
+          "method": {
+            "enum": [
+              "GET",
+              "HEAD"
+            ],
+            "type": "string",
+            "example": "HEAD"
+          },
+          "status": {
+            "type": "number",
+            "nullable": true,
+            "description": "The HTTP status the server answered with.",
+            "example": 200
+          },
+          "latency": {
+            "type": "number",
+            "nullable": true,
+            "description": "Round trip to the server through the proxy, in milliseconds.",
+            "example": 230
+          },
+          "body": {
+            "type": "string",
+            "nullable": true,
+            "description": "What the server answered, up to 16 KB - to see a block page. Empty for HEAD.",
+            "example": ""
+          }
+        },
+        "required": [
+          "ok",
+          "error",
+          "url",
+          "method",
+          "status",
+          "latency",
+          "body"
+        ]
+      },
+      "SessionProxyExitIpRequest": {
+        "type": "object",
+        "properties": {
+          "timeout": {
+            "type": "number",
+            "default": 10000,
+            "description": "How long to wait, in milliseconds."
+          },
+          "url": {
+            "type": "string",
+            "default": "https://ifconfig.me/ip",
+            "description": "Where to read the exit IP from, through the proxy. The answer can be the plain IP, an \"ip={ip}\" line or JSON with \"ip\"."
+          }
+        }
+      },
+      "ProxyExitIpResult": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "description": "The probe passed."
+          },
+          "error": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProxyProbeError"
+              }
+            ]
+          },
+          "ip": {
+            "type": "string",
+            "nullable": true,
+            "description": "The address the internet sees behind the proxy.",
+            "example": "203.0.113.10"
+          },
+          "url": {
+            "type": "string",
+            "example": "https://ifconfig.me/ip"
+          }
+        },
+        "required": [
+          "ok",
+          "error",
+          "ip",
+          "url"
+        ]
+      },
+      "SessionProxyWebSocketRequest": {
+        "type": "object",
+        "properties": {
+          "timeout": {
+            "type": "number",
+            "default": 10000,
+            "description": "How long to wait, in milliseconds."
+          },
+          "url": {
+            "type": "string",
+            "default": "wss://echo.websocket.org",
+            "description": "The WebSocket server to hold a connection to, through the proxy."
+          },
+          "duration": {
+            "type": "number",
+            "default": 40000,
+            "minimum": 1000,
+            "maximum": 600000,
+            "description": "How long to keep the connection open, in milliseconds."
+          },
+          "pingInterval": {
+            "type": "number",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 600000,
+            "description": "Send a message every N milliseconds while connected, like the WhatsApp keepalive. 0 = keep it idle.",
+            "example": 30000
+          }
+        }
+      },
+      "ProxyWebSocketResult": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "description": "The probe passed."
+          },
+          "error": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProxyProbeError"
+              }
+            ]
+          },
+          "url": {
+            "type": "string",
+            "example": "wss://echo.websocket.org"
+          },
+          "duration": {
+            "type": "number",
+            "nullable": true,
+            "description": "How long the connection stayed open, in milliseconds. Equals the requested duration when ok, shorter when the proxy dropped it.",
+            "example": 40000
+          },
+          "sent": {
+            "type": "number",
+            "description": "Messages sent while connected.",
+            "example": 10
+          },
+          "received": {
+            "type": "number",
+            "description": "Messages echoed back.",
+            "example": 10
+          }
+        },
+        "required": [
+          "ok",
+          "error",
+          "url",
+          "duration",
+          "sent",
+          "received"
+        ]
+      },
+      "ProxyRequest": {
+        "type": "object",
+        "properties": {
+          "proxy": {
+            "description": "The proxy to check.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProxyConfig"
+              }
+            ]
+          }
+        },
+        "required": [
+          "proxy"
+        ]
+      },
+      "ProxyConnectRequest": {
+        "type": "object",
+        "properties": {
+          "proxy": {
+            "description": "The proxy to check.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProxyConfig"
+              }
+            ]
+          },
+          "timeout": {
+            "type": "number",
+            "default": 10000,
+            "description": "How long to wait, in milliseconds."
+          }
+        },
+        "required": [
+          "proxy"
+        ]
+      },
+      "ProxyHttpRequest": {
+        "type": "object",
+        "properties": {
+          "proxy": {
+            "description": "The proxy to check.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProxyConfig"
+              }
+            ]
+          },
+          "timeout": {
+            "type": "number",
+            "default": 10000,
+            "description": "How long to wait, in milliseconds."
+          },
+          "url": {
+            "type": "string",
+            "default": "https://web.whatsapp.com/",
+            "description": "The server to reach through the proxy with one request. Any HTTP answer counts as reachable."
+          },
+          "method": {
+            "default": "HEAD",
+            "enum": [
+              "GET",
+              "HEAD"
+            ],
+            "type": "string",
+            "description": "The request method."
+          }
+        },
+        "required": [
+          "proxy"
+        ]
+      },
+      "ProxyExitIpRequest": {
+        "type": "object",
+        "properties": {
+          "proxy": {
+            "description": "The proxy to check.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProxyConfig"
+              }
+            ]
+          },
+          "timeout": {
+            "type": "number",
+            "default": 10000,
+            "description": "How long to wait, in milliseconds."
+          },
+          "url": {
+            "type": "string",
+            "default": "https://ifconfig.me/ip",
+            "description": "Where to read the exit IP from, through the proxy. The answer can be the plain IP, an \"ip={ip}\" line or JSON with \"ip\"."
+          }
+        },
+        "required": [
+          "proxy"
+        ]
+      },
+      "ProxyWebSocketRequest": {
+        "type": "object",
+        "properties": {
+          "proxy": {
+            "description": "The proxy to check.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProxyConfig"
+              }
+            ]
+          },
+          "timeout": {
+            "type": "number",
+            "default": 10000,
+            "description": "How long to wait, in milliseconds."
+          },
+          "url": {
+            "type": "string",
+            "default": "wss://echo.websocket.org",
+            "description": "The WebSocket server to hold a connection to, through the proxy."
+          },
+          "duration": {
+            "type": "number",
+            "default": 40000,
+            "minimum": 1000,
+            "maximum": 600000,
+            "description": "How long to keep the connection open, in milliseconds."
+          },
+          "pingInterval": {
+            "type": "number",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 600000,
+            "description": "Send a message every N milliseconds while connected, like the WhatsApp keepalive. 0 = keep it idle.",
+            "example": 30000
+          }
+        },
+        "required": [
+          "proxy"
+        ]
+      },
       "MyProfile": {
         "type": "object",
         "properties": {
           "id": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "picture": {
             "type": "string",
@@ -10727,7 +11713,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "id": {
             "type": "string",
@@ -10745,7 +11731,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "text": {
@@ -10782,7 +11768,7 @@
           "Key": {
             "type": "string",
             "description": "The key of the object in the S3 bucket",
-            "example": "default/false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA.oga"
+            "example": "default/false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA.oga"
           }
         },
         "required": [
@@ -10796,7 +11782,7 @@
           "url": {
             "type": "string",
             "description": "The URL for the media in the message if any",
-            "example": "http://localhost:3000/api/files/false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA.oga"
+            "example": "http://localhost:3000/api/files/false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA.oga"
           },
           "mimetype": {
             "type": "string",
@@ -10867,7 +11853,7 @@
           },
           "participant": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "body": {
             "type": "string",
@@ -10901,7 +11887,7 @@
           "id": {
             "type": "string",
             "description": "Message ID",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "timestamp": {
             "type": "number",
@@ -10911,7 +11897,7 @@
           "from": {
             "type": "string",
             "description": "ID for the Chat that this message was sent to, except if the message was sent by the current user ",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "fromMe": {
             "type": "boolean",
@@ -10929,7 +11915,7 @@
           "to": {
             "type": "string",
             "description": "\n* ID for who this message is for.\n* If the message is sent by the current user, it will be the Chat to which the message is being sent.\n* If the message is sent by another user, it will be the ID for the current user.\n",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "participant": {
             "type": "string",
@@ -10955,7 +11941,7 @@
             "type": "string",
             "description": "Use `media.url` instead! The URL for the media in the message if any",
             "deprecated": true,
-            "example": "http://localhost:3000/api/files/false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA.oga"
+            "example": "http://localhost:3000/api/files/false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA.oga"
           },
           "ack": {
             "enum": [
@@ -11020,7 +12006,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "file": {
             "oneOf": [
@@ -11042,7 +12028,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "caption": {
@@ -11064,7 +12050,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "file": {
             "oneOf": [
@@ -11086,7 +12072,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "caption": {
@@ -11151,7 +12137,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "file": {
             "oneOf": [
@@ -11165,7 +12151,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "convert": {
@@ -11239,7 +12225,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "file": {
             "oneOf": [
@@ -11261,7 +12247,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "asNote": {
@@ -11295,7 +12281,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "file": {
             "oneOf": [
@@ -11309,7 +12295,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "session": {
@@ -11382,7 +12368,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "text": {
             "type": "string",
@@ -11391,7 +12377,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "linkPreviewHighQuality": {
@@ -11457,7 +12443,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "header": {
             "type": "string",
@@ -11628,7 +12614,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "message": {
             "example": {
@@ -11667,7 +12653,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "session": {
@@ -11686,7 +12672,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "id": {
             "type": "string",
@@ -11696,7 +12682,7 @@
           },
           "messageId": {
             "type": "string",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "session": {
             "type": "string",
@@ -11714,7 +12700,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "messageId": {
             "type": "string",
@@ -11723,7 +12709,7 @@
           },
           "messageIds": {
             "example": [
-              "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+              "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
             ],
             "type": "array",
             "items": {
@@ -11732,9 +12718,19 @@
           },
           "participant": {
             "type": "string",
-            "example": "11111111111@c.us",
+            "example": "111111111111111@lid",
             "default": null,
             "description": "NOWEB engine only - the ID of the user that sent the message (undefined for individual chats)"
+          },
+          "type": {
+            "enum": [
+              "read",
+              "played"
+            ],
+            "type": "string",
+            "example": "read",
+            "default": "read",
+            "description": "Receipt type. 'played' marks voice notes, video notes and view once media as played, requires messageIds"
           },
           "session": {
             "type": "string",
@@ -11751,7 +12747,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "session": {
             "type": "string",
@@ -11768,7 +12764,7 @@
         "properties": {
           "messageId": {
             "type": "string",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "reaction": {
             "type": "string",
@@ -11791,11 +12787,11 @@
         "properties": {
           "messageId": {
             "type": "string",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "star": {
             "type": "boolean"
@@ -11848,7 +12844,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "id": {
             "type": "string",
@@ -11858,7 +12854,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "poll": {
@@ -11880,12 +12876,12 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "pollMessageId": {
             "type": "string",
             "description": "The ID of the poll message. Format: {fromMe}_{chatID}_{messageId}[_{participant}] or just ID for GOWS",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "pollServerId": {
             "type": "number",
@@ -11921,7 +12917,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "id": {
             "type": "string",
@@ -11943,7 +12939,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "session": {
@@ -12011,7 +13007,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "id": {
             "type": "string",
@@ -12034,7 +13030,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "session": {
@@ -12053,11 +13049,11 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "replyTo": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "selectedDisplayText": {
@@ -12103,7 +13099,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "id": {
             "type": "string",
@@ -12121,7 +13117,7 @@
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "text": {
@@ -12152,7 +13148,7 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "id": {
             "type": "string",
@@ -12244,7 +13240,7 @@
           "ids": {
             "description": "Filter by chat ids",
             "example": [
-              "111111111@c.us"
+              "111111111111111@lid"
             ],
             "type": "array",
             "items": {
@@ -12336,7 +13332,7 @@
         "properties": {
           "from": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "id": {
             "type": "string",
@@ -12678,6 +13674,12 @@
               "type": "string"
             }
           },
+          "canBeReshared": {
+            "type": "boolean",
+            "default": true,
+            "description": "Allow contacts to reshare the status",
+            "example": true
+          },
           "text": {
             "type": "string",
             "default": "Have a look! https://github.com/"
@@ -12732,6 +13734,12 @@
               }
             ]
           },
+          "canBeReshared": {
+            "type": "boolean",
+            "default": true,
+            "description": "Allow contacts to reshare the status",
+            "example": true
+          },
           "caption": {
             "type": "string"
           }
@@ -12770,6 +13778,12 @@
           "convert": {
             "type": "boolean",
             "description": "Convert the input file to the required format using ffmpeg before sending",
+            "example": true
+          },
+          "canBeReshared": {
+            "type": "boolean",
+            "default": true,
+            "description": "Allow contacts to reshare the status",
             "example": true
           },
           "backgroundColor": {
@@ -12813,6 +13827,12 @@
           "convert": {
             "type": "boolean",
             "description": "Convert the input file to the required format using ffmpeg before sending",
+            "example": true
+          },
+          "canBeReshared": {
+            "type": "boolean",
+            "default": true,
+            "description": "Allow contacts to reshare the status",
             "example": true
           },
           "caption": {
@@ -12940,7 +13960,7 @@
         "properties": {
           "contactId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "session": {
             "type": "string",
@@ -13132,7 +14152,7 @@
           "requesterId": {
             "type": "string",
             "description": "ID of the user requesting to join the group",
-            "example": "123456789@c.us"
+            "example": "123456789@lid"
           },
           "requesterPn": {
             "type": "string",
@@ -13144,7 +14164,7 @@
             "type": "string",
             "nullable": true,
             "description": "ID of the user who created the request",
-            "example": "123456789@c.us"
+            "example": "123456789@lid"
           },
           "parentGroupId": {
             "type": "string",
@@ -13193,7 +14213,7 @@
             "type": "string",
             "nullable": true,
             "description": "ID of the participant the action was applied to",
-            "example": "123456789@c.us"
+            "example": "123456789@lid"
           },
           "success": {
             "type": "boolean",
@@ -13284,7 +14304,7 @@
           "chatId": {
             "type": "string",
             "description": "Chat ID - either group id or contact id. Required for chat-related presence statuses; omit for ONLINE/OFFLINE.",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "presence": {
             "type": "string",
@@ -13307,7 +14327,7 @@
           "participant": {
             "type": "string",
             "description": "Chat ID - participant or contact id",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "lastSeen": {
             "type": "number",
@@ -13335,7 +14355,7 @@
           "id": {
             "type": "string",
             "description": "Chat ID - either group id or contact id",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "presences": {
             "type": "array",
@@ -13409,11 +14429,11 @@
         "properties": {
           "chatId": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "reply_to": {
             "type": "string",
-            "description": "The ID of the message to reply to - false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+            "description": "The ID of the message to reply to - false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
             "example": null
           },
           "event": {
@@ -13831,7 +14851,7 @@
           "messageId": {
             "type": "string",
             "description": "Message ID for the message to react to",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           }
         },
         "required": [
@@ -13845,7 +14865,7 @@
           "id": {
             "type": "string",
             "description": "Message ID",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "timestamp": {
             "type": "number",
@@ -13855,7 +14875,7 @@
           "from": {
             "type": "string",
             "description": "ID for the Chat that this message was sent to, except if the message was sent by the current user ",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "fromMe": {
             "type": "boolean",
@@ -13873,7 +14893,7 @@
           "to": {
             "type": "string",
             "description": "\n* ID for who this message is for.\n* If the message is sent by the current user, it will be the Chat to which the message is being sent.\n* If the message is sent by another user, it will be the ID for the current user.\n",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "participant": {
             "type": "string",
@@ -14093,19 +15113,19 @@
           "id": {
             "type": "string",
             "description": "Message ID",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "from": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "to": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "participant": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "fromMe": {
             "type": "boolean"
@@ -14445,7 +15465,7 @@
           "id": {
             "type": "string",
             "description": "Message ID",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "timestamp": {
             "type": "number",
@@ -14455,7 +15475,7 @@
           "from": {
             "type": "string",
             "description": "ID for the Chat that this message was sent to, except if the message was sent by the current user ",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "fromMe": {
             "type": "boolean",
@@ -14473,7 +15493,7 @@
           "to": {
             "type": "string",
             "description": "\n* ID for who this message is for.\n* If the message is sent by the current user, it will be the Chat to which the message is being sent.\n* If the message is sent by another user, it will be the ID for the current user.\n",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "participant": {
             "type": "string",
@@ -14499,7 +15519,7 @@
             "type": "string",
             "description": "Use `media.url` instead! The URL for the media in the message if any",
             "deprecated": true,
-            "example": "http://localhost:3000/api/files/false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA.oga"
+            "example": "http://localhost:3000/api/files/false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA.oga"
           },
           "ack": {
             "enum": [
@@ -15586,7 +16606,7 @@
           "id": {
             "type": "string",
             "description": "Message ID",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "selectedOptions": {
             "description": "Option that user has selected",
@@ -15631,7 +16651,7 @@
           "id": {
             "type": "string",
             "description": "Message ID",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "to": {
             "type": "string"
@@ -15864,7 +16884,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "archived": {
             "type": "boolean"
@@ -15983,7 +17003,7 @@
           },
           "from": {
             "type": "string",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "timestamp": {
             "type": "number"
@@ -16487,7 +17507,7 @@
           "chatId": {
             "type": "string",
             "description": "Chat ID",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "label": {
             "nullable": true,
@@ -16723,7 +17743,7 @@
           "id": {
             "type": "string",
             "description": "Message ID",
-            "example": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+            "example": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
           },
           "timestamp": {
             "type": "number",
@@ -16733,7 +17753,7 @@
           "from": {
             "type": "string",
             "description": "ID for the Chat that this message was sent to, except if the message was sent by the current user ",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "fromMe": {
             "type": "boolean",
@@ -16751,7 +17771,7 @@
           "to": {
             "type": "string",
             "description": "\n* ID for who this message is for.\n* If the message is sent by the current user, it will be the Chat to which the message is being sent.\n* If the message is sent by another user, it will be the ID for the current user.\n",
-            "example": "11111111111@c.us"
+            "example": "111111111111111@lid"
           },
           "participant": {
             "type": "string",

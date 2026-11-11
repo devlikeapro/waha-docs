@@ -301,7 +301,7 @@ volumes:
 
 **S3 metadata** for each file:
 - `x-amz-meta-waha-session=default` - session name
-- `x-amz-meta-waha-chat-id=111@c.us` - chat ID
+- `x-amz-meta-waha-chat-id=111111111111111@lid` - chat ID
 - `x-amz-meta-waha-message-id=true_111...` - message ID
 - `x-amz-meta-waha-created-at=1700000000000` - upload time, unix epoch in milliseconds
 - `x-amz-meta-waha-media-filename=report%20%E5%8C%85.pdf` - media file name, **percent-encoded**

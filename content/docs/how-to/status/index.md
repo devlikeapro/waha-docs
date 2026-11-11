@@ -280,12 +280,12 @@ If you wish to receive status messages in real-time - you can subscribe to the f
   "event": "message",
   "session": "default",
   "payload": {
-    "id": "false_status@broadcast_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_123123@c.us",
+    "id": "false_status@broadcast_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_111111111111111@lid",
     "timestamp": 1667561485,
     "body": "Check this out!",
     "hasMedia": true,
     "media": {
-      "url": "http://localhost:3000/api/files/false_status@broadcast_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_123123@c.us.jpg",
+      "url": "http://localhost:3000/api/files/false_status@broadcast_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA_111111111111111@lid.jpg",
       "mimetype": "image/jpeg",
       "filename": null
     }

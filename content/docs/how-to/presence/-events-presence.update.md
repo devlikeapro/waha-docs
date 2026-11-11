@@ -10,7 +10,7 @@ You can subscribe to `presence.update` webhook event to get the most recent pres
         "id": "111111111111111111@g.us",
         "presences": [
             {
-                "participant": "11111111111@c.us",
+                "participant": "111111111111111@lid",
                 "lastKnownPresence": "typing",
                 "lastSeen": null
             }

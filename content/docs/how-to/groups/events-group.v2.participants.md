@@ -15,7 +15,7 @@
     },
     "participants": [
       {
-        "id": "123456789@c.us",
+        "id": "123456789@lid",
         "role": "participant"
       }
     ],

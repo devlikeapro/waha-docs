@@ -11,7 +11,7 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
   "session": "default",
-  "chatId": "12132132130@c.us",
+  "chatId": "111111111111111@lid",
   "latitude": 38.8937255,
   "longitude": -77.0969763,
   "title": "Our office"
@@ -30,7 +30,7 @@ headers = {
 }
 data = {
     "session": "default",
-    "chatId": "12132132130@c.us",
+    "chatId": "111111111111111@lid",
     "latitude": 38.8937255,
     "longitude": -77.0969763,
     "title": "Our office"
@@ -48,7 +48,7 @@ const axios = require('axios');
 const url = "http://localhost:3000/api/sendLocation";
 const data = {
     session: "default",
-    chatId: "12132132130@c.us",
+    chatId: "111111111111111@lid",
     latitude: 38.8937255,
     longitude: -77.0969763,
     title: "Our office"
@@ -70,7 +70,7 @@ axios.post(url, data, { headers })
 $url = "http://localhost:3000/api/sendLocation";
 $data = [
     "session" => "default",
-    "chatId" => "12132132130@c.us",
+    "chatId" => "111111111111111@lid",
     "latitude" => 38.8937255,
     "longitude" => -77.0969763,
     "title" => "Our office"

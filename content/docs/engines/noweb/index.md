@@ -104,7 +104,7 @@ When you enabled store - you can [**Get messages from chat**]({{< relref "/docs/
 ```json
 [
   {
-    "id": "true_111111@c.us_AAAAAAAAAAAAAA",
+    "id": "true_111111111111111@lid_AAAAAAAAAAAAAA",
     // Regular fields here,
     "_data": {
       "key": {
@@ -136,7 +136,7 @@ When you enabled store - you can [**Get messages from chat**]({{< relref "/docs/
 ```json
 [
   {
-    "id": "true_111111@c.us_AAAAAAAAAAAAAA",
+    "id": "true_111111111111111@lid_AAAAAAAAAAAAAA",
     // Regular fields here,
     "_data": {
       "key": {
@@ -169,7 +169,7 @@ When you enabled store - you can [**Get messages from chat**]({{< relref "/docs/
     "fromMe": true,
     "body": "Hdhf",
     "to": "111111111111111111111@g.us",
-    "participant": "33333@c.us",
+    "participant": "333333333333333@lid",
     "hasMedia": false,
     "ack": 1,
     "ackName": "SERVER",
@@ -211,7 +211,7 @@ Here's some ids you can meet there:
 - `123123123@s.whatsapp.net` can also appear in **internal data for NOWEB**, just convert it to `@c.us` to work
   with that properly. Kindly don't use it in `chatId` when sending messages
 - `12312312123133@g.us` - **Groups** uses random number with `@g.us` at the end.
-- `123123123@lid` - **is a hidden user ID**, each user has a regular ID along with a hidden one. WhatsApp added that type of ID along with communities functionality.
+- `111111111111111@lid` - **hidden user ID (LID)**, the main ID WhatsApp uses for direct chats now. Incoming direct messages usually come from `@lid` - reply to the same `from`.
 - `123123123@newsletter` - for [**📰 WhatsApp Channels**]({{< relref "/docs/how-to/channels" >}}).
 
 ### Store under the hood

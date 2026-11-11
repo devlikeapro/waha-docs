@@ -40,7 +40,7 @@ POST /api/sendPoll
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "123123123@c.us",
+  "chatId": "111111111111111@lid",
   "poll": {
     "name": "How are you?",
     "options": [
@@ -55,7 +55,7 @@ POST /api/sendPoll
 
 ```jsonc { title="Response" }
 {
-  "id": "true_321321321@c.us_83ACBAAAAAAAAAAAAAAAAAAAA",
+  "id": "true_333333333333333@lid_83ACBAAAAAAAAAAAAAAAAAAAA",
   "other-fields-here": "value"
 }
 ```
@@ -75,8 +75,8 @@ POST /api/sendPollVote
 
 ```jsonc { title="Body" }
 {
-  "chatId": "11111111111@c.us",
-  "pollMessageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA", 
+  "chatId": "111111111111111@lid",
+  "pollMessageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA", 
   "pollServerId": null,
   "votes": [
     "Awesome!"
@@ -86,9 +86,9 @@ POST /api/sendPollVote
 ```
 
 Fields:
-- `chatId` - The WhatsApp ID of the chat where the poll was sent (e.g., "11111111111@c.us").
+- `chatId` - The WhatsApp ID of the chat where the poll was sent (e.g., "111111111111111@lid").
 - `pollMessageId` - The ID of the poll message. Format: `{fromMe}_{chatID}_{messageId}[_{participant}]` or just `{ID}` (`AA...AA`) for **GOWS**. 
-    - Example: `false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA`.
+    - Example: `false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA`.
 - `pollServerId` - Only for Channels — server message id (number, if known). Optional; if omitted, the API may look it up in the storage.
 - `votes` - Poll options you are voting for. Array of strings, e.g., `["Awesome!"]`.
 - `session` - WAHA session name (e.g., `default`).
@@ -111,9 +111,9 @@ With this event, you receive new votes for the poll sent.
   "session": "default",
   "payload": {
     "vote": {
-      "id": "false_1111111111@c.us_83ACBE602A05C79B234B54415E95EE8A",
+      "id": "false_111111111111111@lid_83ACBE602A05C79B234B54415E95EE8A",
       "to": "me",
-      "from": "1111111@c.us",
+      "from": "111111111111111@lid",
       "fromMe": false,
       "selectedOptions": [
         "Awesome!"
@@ -121,8 +121,8 @@ With this event, you receive new votes for the poll sent.
       "timestamp": 1692861427
     },
     "poll": {
-      "id": "true_1111111111@c.us_BAE5F2EF5C69001E",
-      "to": "1111111111@c.us",
+      "id": "true_111111111111111@lid_BAE5F2EF5C69001E",
+      "to": "111111111111111@lid",
       "from": "me",
       "fromMe": true
     }
@@ -169,7 +169,7 @@ the future.
     "vote": {
       "id": "false_3333333333333@g.us_1C18A7EAADD2A8D0324755D241C4238A",
       "to": "3333333333333@g.us",
-      "from": "1111111111@c.us",
+      "from": "111111111111111@lid",
       "fromMe": false,
       "selectedOptions": [
         "Awesome!"
@@ -179,7 +179,7 @@ the future.
     "poll": {
       "id": "true_3333333333333@g.us_BAE5304BA1ECF704",
       "to": "33333333333333@g.us",
-      "from": "222222222@c.us",
+      "from": "222222222222222@lid",
       "fromMe": true
     }
   },
@@ -200,16 +200,16 @@ The payload for `poll.vote.failed` is the same as for `poll.vote`, but with an e
   "session": "default",
   "payload": {
     "vote": {
-      "id": "false_11111111111@c.us_2E8C4CDA89EDE3BC0BC7F605364B8451",
+      "id": "false_111111111111111@lid_2E8C4CDA89EDE3BC0BC7F605364B8451",
       "to": "me",
-      "from": "111111111@c.us",
+      "from": "111111111111111@lid",
       "fromMe": false,
       "selectedOptions": [],
       "timestamp": 1692956972
     },
     "poll": {
-      "id": "true_1111111111@c.us_BAE595F4E0A2042C",
-      "to": "111111111@c.us",
+      "id": "true_111111111111111@lid_BAE595F4E0A2042C",
+      "to": "111111111111111@lid",
       "from": "me",
       "fromMe": true
     }

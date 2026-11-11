@@ -34,6 +34,9 @@ This will prevent your bot from being flagged as spam by WhatsApp's users and al
 > You can use a short link http://wa.me/7911111111?text=Hi
 > so a user can click on it and start the dialog with the bot first
 
+Messages from users usually come with `@lid` in `from` (`111111111111111@lid`) - reply to the same `from`, no need to
+look up the phone number.
+
 ### 2. Avoid Spamming and Sending Unnecessary Content
 
 Sending too many messages or sending content that the user did not request can lead to your bot being blocked. Make

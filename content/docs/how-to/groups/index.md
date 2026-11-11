@@ -420,15 +420,15 @@ GET /api/{session}/groups/{groupId}/participants/v2
 ```json
 [
   {
-    "id": "111111111111@c.us",
+    "id": "111111111111111@lid",
     "role": "participant"
   },
   {
-    "id": "222222222222@c.us",
+    "id": "222222222222222@lid",
     "role": "superadmin"
   },
   {
-    "id": "33333333333@c.us",
+    "id": "333333333333333@lid",
     "role": "participant"
   }
 ]
@@ -471,7 +471,7 @@ POST /api/{session}/groups/{groupId}/participants/remove
 {
   "participants": [
     {
-      "id": "123123123123@c.us"
+      "id": "123123123123@lid"
     }
   ]
 }
@@ -577,7 +577,7 @@ POST /api/{session}/groups/{groupId}/participants/join-requests/approve
 {
   "participants": [
     {
-      "id": "123123123123@c.us"
+      "id": "123123123123@lid"
     }
   ]
 }
@@ -586,7 +586,7 @@ POST /api/{session}/groups/{groupId}/participants/join-requests/approve
 ```jsonc { title="Response" }
 [
   {
-    "requesterId": "123123123123@c.us",
+    "requesterId": "123123123123@lid",
     "success": true
   }
 ]
@@ -602,7 +602,7 @@ POST /api/{session}/groups/{groupId}/participants/join-requests/reject
 {
   "participants": [
     {
-      "id": "123123123123@c.us"
+      "id": "123123123123@lid"
     }
   ]
 }
@@ -611,7 +611,7 @@ POST /api/{session}/groups/{groupId}/participants/join-requests/reject
 ```jsonc { title="Response" }
 [
   {
-    "requesterId": "123123123123@c.us",
+    "requesterId": "123123123123@lid",
     "success": true
   }
 ]
@@ -631,7 +631,7 @@ POST /api/{session}/groups/{groupId}/admin/promote
 {
   "participants": [
     {
-      "id": "123123123123@c.us"
+      "id": "123123123123@lid"
     }
   ]
 }
@@ -649,7 +649,7 @@ POST /api/{session}/groups/{groupId}/admin/demote
 {
   "participants": [
     {
-      "id": "123123123123@c.us"
+      "id": "123123123123@lid"
     }
   ]
 }

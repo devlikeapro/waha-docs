@@ -29,7 +29,7 @@ You can list, approve and reject the requests with the
   - `created` - a user requested to join the group
   - `rejected` - an admin rejected the request
   - `revoked` - the requester cancelled their own request
-- `requesterId` - ID of the user requesting to join the group (`@c.us` or `@lid`)
+- `requesterId` - ID of the user requesting to join the group (`@lid`)
 - `requesterPn` - phone number ID of the requester, if known (can be `null`)
 - `requestMethod` - how the request was created (can be `null`). Possible values:
   - `invite_link` - the user requested to join via invite link

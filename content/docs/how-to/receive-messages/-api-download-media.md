@@ -4,7 +4,7 @@
 {{< tab "cURL" >}}
 ```bash { title="Download Media" }
 curl -H "X-Api-Key: yoursecretkey" \
-    -O http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg
+    -O http://localhost:3000/api/files/true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg
 ```
 {{< /tab >}}
 
@@ -12,7 +12,7 @@ curl -H "X-Api-Key: yoursecretkey" \
 ```python { title="download-media.py" }
 import requests
 
-url = "http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg"
+url = "http://localhost:3000/api/files/true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg"
 headers = {
   'X-Api-Key': 'yoursecretkey',
 }
@@ -28,7 +28,7 @@ with open("media.jpg", "wb") as file:
 {{< tab "JavaScript" >}}
 ```javascript { title="download-media.js" }
 const fs = require('fs');
-const url = "http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg";
+const url = "http://localhost:3000/api/files/true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg";
 
 const headers = {
   'X-Api-Key': 'yoursecretkey',
@@ -44,7 +44,7 @@ fetch(url, { headers })
 {{< tab "PHP" >}}
 ```php { title="download-media.php" }
 <?php
-$url = "http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg";
+$url = "http://localhost:3000/api/files/true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg";
 
 $context = stream_context_create([
   'http' => [

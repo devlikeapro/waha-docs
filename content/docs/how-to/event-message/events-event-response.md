@@ -4,15 +4,15 @@
   "session": "default",
   "event": "event.response",
   "payload": {
-    "id": "false_11111111111111111@c.us_58BBBBBBBBBBBBBBBBBBBBBBBB",
+    "id": "false_111111111111111@lid_58BBBBBBBBBBBBBBBBBBBBBBBB",
     "timestamp": 1747707858,
-    "from": "11111111111111111@c.us",
+    "from": "111111111111111@lid",
     "participant": null,
     "fromMe": false,
     "eventCreationKey": {
-      "id": "false_999999999999@c.us_3EBAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "id": "false_999999999999999@lid_3EBAAAAAAAAAAAAAAAAAAAAAAAAAA",
       "to": "me",
-      "from": "999999999999@c.us",
+      "from": "999999999999999@lid",
       "fromMe": false
     },
     "eventResponse": {

@@ -59,17 +59,17 @@ If you get a message as a reply to another message, you'll see `replyTo` field w
   "event": "message",
   "session": "default",
   "payload": {
-    "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "id": "true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "timestamp": 1667561485,
-    "from": "11111111111@c.us",
+    "from": "111111111111111@lid",
     "body": "Yes!",
     "replyTo": {
-      "id": "false_22222222@c.us_AAAAAAAAAAAAAAAAAAA", // may be absent depending on engine
-      "participant": "22222222222@c.us",               // may be absent depending on engine
+      "id": "false_222222222222222@lid_AAAAAAAAAAAAAAAAAAA", // may be absent depending on engine
+      "participant": "222222222222222@lid",               // may be absent depending on engine
       "body": "Check this out!",
       "hasMedia": true,
       "media": {
-        "url": "http://localhost:3000/api/files/false_22222222@c.us_AAAAAAAAAAAAAAAAAAA.jpg",
+        "url": "http://localhost:3000/api/files/false_222222222222222@lid_AAAAAAAAAAAAAAAAAAA.jpg",
         "mimetype": "image/jpeg",
         "filename": null,
         "error": null
@@ -109,11 +109,11 @@ Incoming message (text/audio/files)
   "event": "message",
   "session": "default",
   "payload": {
-    "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "id": "true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "timestamp": 1667561485,
-    "from": "11111111111@c.us",
+    "from": "111111111111111@lid",
     "fromMe": true,
-    "to": "11111111111@c.us",
+    "to": "111111111111111@lid",
     "body": "Hi there!",
     "hasMedia": false,
     "ack": 1,
@@ -161,15 +161,15 @@ This event is triggered when a message is reacted to by a user (or when **you** 
         "pushName": "WAHA"
     },
     "payload": {
-        "id": "false_79111111@c.us_11111111111111111111111111111111",
-        "from": "79111111@c.us",
+        "id": "false_111111111111111@lid_11111111111111111111111111111111",
+        "from": "111111111111111@lid",
         "fromMe": false,
-        "participant": "79111111@c.us",
-        "to": "79111111@c.us",
+        "participant": "111111111111111@lid",
+        "to": "111111111111111@lid",
         "timestamp": 1710481111.853,
         "reaction": {
             "text": "🙏",
-            "messageId": "true_79111111@c.us_11111111111111111111111111111111"
+            "messageId": "true_111111111111111@lid_11111111111111111111111111111111"
         }
     },
     "engine": "WEBJS",
@@ -210,11 +210,11 @@ on your phone.
   "session": "default",
   "engine": "WEBJS",
   "payload": {
-    "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "id": "true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "timestamp": 1667561485,
-    "from": "11111111111@c.us",
+    "from": "111111111111111@lid",
     "fromMe": true,
-    "to": "11111111111@c.us",
+    "to": "111111111111111@lid",
     ...
     "_data": {
       ...
@@ -260,13 +260,13 @@ For example, you can get the webhook like this with `media` value (we've skipped
   "event": "message",
   "session": "default",
   "payload": {
-    "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "id": "true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "timestamp": 1667561485,
     "body": "Check this out (caption for the media)!",
-    "from": "11111111111@c.us",
+    "from": "111111111111111@lid",
     "hasMedia": true,
     "media": {
-      "url": "http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg",
+      "url": "http://localhost:3000/api/files/true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.jpg",
       "mimetype": "image/jpeg",
       "filename": null,
       "error": null // if there was an error during file download
@@ -300,11 +300,11 @@ For documents (file attachments) there's also `filename` field with the original
   "event": "message",
   "session": "default",
   "payload": {
-    "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "id": "true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "timestamp": 1667561485,
-    "from": "11111111111@c.us",
+    "from": "111111111111111@lid",
     "media": {
-      "url": "http://localhost:3000/api/files/true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.pdf",
+      "url": "http://localhost:3000/api/files/true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.pdf",
       "filename": "some-file.pdf",
       "mimetype": "application/pdf",
       "error": null // if there was an error during file download

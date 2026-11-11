@@ -11,7 +11,7 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
   "session": "default",
-  "chatId": "12132132130@c.us",
+  "chatId": "111111111111111@lid",
   "caption": "Check this out!",
   "file": {
     "mimetype": "application/pdf",
@@ -33,7 +33,7 @@ headers = {
 }
 data = {
     "session": "default",
-    "chatId": "12132132130@c.us",
+    "chatId": "111111111111111@lid",
     "caption": "Check this out!",
     "file": {
         "mimetype": "application/pdf",
@@ -54,7 +54,7 @@ const axios = require('axios');
 const url = "http://localhost:3000/api/sendFile";
 const data = {
     session: "default",
-    chatId: "12132132130@c.us",
+    chatId: "111111111111111@lid",
     caption: "Check this out!",
     file: {
         mimetype: "application/pdf",
@@ -79,7 +79,7 @@ axios.post(url, data, { headers })
 $url = "http://localhost:3000/api/sendFile";
 $data = [
     "session" => "default",
-    "chatId" => "12132132130@c.us",
+    "chatId" => "111111111111111@lid",
     "caption" => "Check this out!",
     "file" => [
         "mimetype" => "application/pdf",

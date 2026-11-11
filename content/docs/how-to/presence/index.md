@@ -47,7 +47,7 @@ POST /api/{session}/presence
 
 ```jsonc { title="Body" }
 {
-  "chatId": "111111111@c.us",
+  "chatId": "111111111111111@lid",
   "presence": "typing"
 }
 ```
@@ -63,7 +63,7 @@ Possible presence statuses that you can set or get for chats:
 
 ```jsonc { title="Body" }
 {
-  "chatId": "111111111@c.us",
+  "chatId": "111111111111111@lid",
   "presence": "typing"
 }
 ```
@@ -72,7 +72,7 @@ Possible presence statuses that you can set or get for chats:
 
 ```jsonc { title="Body" }
 {
-  "chatId": "111111111@c.us",
+  "chatId": "111111111111111@lid",
   "presence": "paused"
 }
 ```
@@ -105,10 +105,10 @@ Get presence information for a single chat. For a group, you'll get participants
 
 ```jsonc {title="Response"}
 {
-  "id": "2132132130@c.us",
+  "id": "222222222222222@lid",
   "presences": [
     {
-      "participant": "2132132130@c.us",
+      "participant": "222222222222222@lid",
       "lastKnownPresence": "online",
       "lastSeen": null
     }
@@ -139,7 +139,7 @@ GET /api/{session}/presence
 It returns both groups' and personal chats' presence information.
 
 Here's few notes about fields:
-- `chatId` - either contact id (`213213213@c.us`) or group chat id (`1111111111111@g.us`).
+- `chatId` - either contact id (`111111111111111@lid`) or group chat id (`1111111111111@g.us`).
 - `lastSeen` - contains Unix timestamps indicating when a participant was last online
 - `lastKnownPresence` - contains the last known presence status, which can be
   `offline`, `online`, `typing`, `recording`, or `paused`
@@ -147,10 +147,10 @@ Here's few notes about fields:
 ```jsonc {title="Response"}
 [
   {
-    "id": "2132132130@c.us",
+    "id": "222222222222222@lid",
     "presences": [
       {
-        "participant": "2132132130@c.us",
+        "participant": "222222222222222@lid",
         "lastKnownPresence": "offline",
         "lastSeen": 1686719326
       }
@@ -165,7 +165,7 @@ Here's few notes about fields:
         "lastSeen": null
       },
       {
-        "participant": "2132132130@c.us",
+        "participant": "222222222222222@lid",
         "lastKnownPresence": "offline",
         "lastSeen": 1686719326
       }

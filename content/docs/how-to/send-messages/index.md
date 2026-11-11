@@ -31,7 +31,7 @@ There are common fields that you can find in almost all requests:
 ```json
 {
   "session": "default",
-  "chatId": "12132132130@c.us",
+  "chatId": "111111111111111@lid",
   "file": "..."
 }
 ```
@@ -47,7 +47,7 @@ Read more about [multiple sessions →]({{< relref "/docs/how-to/sessions" >}})
 
 ### chatId
 
-`chatId` - this is a phone number or Group identifier where you're sending the message.
+`chatId` - this is a user ID (`@lid`) or Group identifier where you're sending the message.
 
 {{< include file="content/docs/how-to/receive-messages/-chat-ids.md" >}}
 
@@ -73,9 +73,9 @@ You can add the `reply_to` field in order to reply to a specific message.
 
 ```json
 {
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   ...
-  "reply_to": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+  "reply_to": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
 }
 ```
 
@@ -105,7 +105,7 @@ Send seen (read a message) for **all unread** messages **older than 7 days** (30
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us"
+  "chatId": "111111111111111@lid"
 }
 ```
 
@@ -118,9 +118,9 @@ Send seen for **direct message**:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "messageIds": [
-    "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+    "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
   ]
 }
 ```
@@ -132,9 +132,9 @@ Send seen for **Group Message** you need to provide `participant` field:
   "session": "default",
   "chatId": "11111111111@g.us",
   "messageIds": [
-    "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA_33333333333@c.us"
+    "false_11111111111@g.us_AAAAAAAAAAAAAAAAAAAA_333333333333333@lid"
   ],
-  "participant": "33333333333@c.us"
+  "participant": "333333333333333@lid"
 }
 ```
 
@@ -144,9 +144,9 @@ Send `played` for **voice messages**, **video notes** and **view once** media (`
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "messageIds": [
-    "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+    "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
   ],
   "type": "played"
 }
@@ -169,7 +169,7 @@ POST /api/sendText
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "12132132130@c.us",
+  "chatId": "111111111111111@lid",
   "text": "Hi there!"
 }
 ```
@@ -178,7 +178,7 @@ Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendText-code.md" >}}
 
 Here's some additional options:
-- `reply_to: false_1111@c.us_AAA` - to reply on a message
+- `reply_to: false_111111111111111@lid_AAA` - to reply on a message
 - `mentions` - to mention a contact in a group
 - `linkPreview: false` - to disable preview generation for links in the message
 
@@ -191,7 +191,7 @@ POST /api/sendText
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "12132132130@c.us",
+  "chatId": "111111111111111@lid",
   "text": "Hi there!",
   "linkPreview": true,
   "linkPreviewHighQuality": true
@@ -219,8 +219,8 @@ To reply on a message - add `reply_to` field:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
-  "reply_to": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+  "chatId": "111111111111111@lid",
+  "reply_to": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
   "text": "Reply text"
 }
 ```
@@ -249,7 +249,7 @@ In **groups**, you can mention all participants at once by using the `"all"` key
 ```jsonc { title="Body (Mention All)" }
 {
   "session": "default",
-  "chatId": "12132132130@c.us",
+  "chatId": "111111111111111@lid",
   "text": "Hi there, check this out!",
   "mentions": [ "all" ]
 }
@@ -273,7 +273,7 @@ You can send images in two ways:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "file": {
     "mimetype": "image/jpeg",
     "url": "https://github.com/devlikeapro/waha/raw/core/examples/dev.likeapro.jpg",
@@ -288,7 +288,7 @@ You can send images in two ways:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "file": {
     "mimetype": "image/jpeg",
     "filename": "filename.jpeg",
@@ -322,7 +322,7 @@ You can send voice messages in two ways:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "file": {
     "mimetype": "audio/ogg; codecs=opus",
     "url": "https://github.com/devlikeapro/waha/raw/core/examples/dev.likeapro.opus"
@@ -335,7 +335,7 @@ You can send voice messages in two ways:
 {{< tab "BASE64" >}}
 ```jsonc { title="Body" }
 {
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "file": {
     "mimetype": "audio/ogg; codecs=opus",
     "filename": "voice-message.mp3",
@@ -380,7 +380,7 @@ You can send video messages in two ways:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "caption": "Watch this video!",
   "asNote": false,
   // aka video note, rounded video
@@ -397,7 +397,7 @@ You can send video messages in two ways:
 {{< tab "BASE64" >}}
 ```jsonc { title="Body" }
 {
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "caption": "Watch this video!",
   "asNote": false,
   // aka video note, rounded video
@@ -449,7 +449,7 @@ You can send files in two ways:
 {
   "session": "default",
   "caption": "Check this out!",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "file": {
     "mimetype": "image/jpeg",
     "filename": "filename.jpeg",
@@ -463,7 +463,7 @@ You can send files in two ways:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "file": {
     "mimetype": "image/jpeg",
     "filename": "filename.jpeg",
@@ -497,7 +497,7 @@ You can send stickers in two ways:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "file": {
     "mimetype": "image/webp",
     "url": "https://www.gstatic.com/webp/gallery/1.webp"
@@ -510,7 +510,7 @@ You can send stickers in two ways:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "file": {
     "mimetype": "image/webp",
     "data": "your-base64-data-of-webp"
@@ -542,7 +542,7 @@ The request body is pretty simple:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "123123123@c.us",
+  "chatId": "111111111111111@lid",
   "poll": {
     "name": "How are you?",
     "options": [
@@ -598,7 +598,7 @@ POST /api/sendList
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "reply_to": null,
   "message": {
     "title": "Simple Menu",
@@ -669,7 +669,7 @@ POST /api/send/link-custom-preview
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "text": "Check this out! https://github.com/",
   "linkPreviewHighQuality": true,
   "preview": {
@@ -688,7 +688,7 @@ POST /api/send/link-custom-preview
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "text": "Check this out! https://github.com/",
   "linkPreviewHighQuality": true,
   "preview": {
@@ -730,8 +730,8 @@ POST /api/forwardMessage
 
 ```jsonc { title="Body" }
 {
-  "chatId": "11111111111@c.us",
-  "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+  "chatId": "111111111111111@lid",
+  "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
   "session": "default"
 }
 ```
@@ -750,7 +750,7 @@ PUT /api/{session}/chats/{chatId}/messages/{messageId}
 
 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
 
-So if you want to edit `true_123@c.us_AAA` message in `123@c.us` chat you need to send request to:
+So if you want to edit `true_111111111111111@lid_AAA` message in `111111111111111@lid` chat you need to send request to:
 
 ```http request
 PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
@@ -778,7 +778,7 @@ DELETE /api/{session}/chats/{chatId}/messages/{messageId}
 
 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
 
-So if you want to delete `true_123@c.us_AAA` message in `123@c.us` chat you need to send request to:
+So if you want to delete `true_111111111111111@lid_AAA` message in `111111111111111@lid` chat you need to send request to:
 
 ```http request
 DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
@@ -802,7 +802,7 @@ Reaction API uses **PUT**, not **POST** request! Please make sure you send right
 
 ```jsonc { title="Body" }
 {
-  "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+  "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
   "reaction": "👍",
   "session": "default"
 }
@@ -812,7 +812,7 @@ To **remove reaction from a message** - send empty string in the reaction reques
 
 ```jsonc { title="Body" }
 {
-  "messageId": "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
+  "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
   "reaction": "",
   "session": "default"
 }
@@ -836,8 +836,8 @@ Star API uses **PUT**, not **POST** request! Please make sure you send right req
 
 ```jsonc { title="Body" }
 {
-  "messageId": "false_71111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-  "chatId": "71111111111@c.us",
+  "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "chatId": "111111111111111@lid",
   "star": true,
   "session": "default"
 }
@@ -847,8 +847,8 @@ Star API uses **PUT**, not **POST** request! Please make sure you send right req
 
 ```jsonc { title="Body" }
 {
-  "messageId": "false_71111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-  "chatId": "71111111111@c.us",
+  "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "chatId": "111111111111111@lid",
   "star": false,
   "session": "default"
 }
@@ -871,7 +871,7 @@ You can send contacts in multiple ways:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "79111111@c.us",
+  "chatId": "111111111111111@lid",
   "contacts": [
     {
       "fullName": "John Doe",
@@ -889,7 +889,7 @@ You can send contacts in multiple ways:
 ```jsonc { title="Body" }
 {
   "session": "default",
-  "chatId": "79111111@c.us",
+  "chatId": "111111111111111@lid",
   "contacts": [
     {
       "vcard": "BEGIN:VCARD\nVERSION:3.0\nFN:Jane Doe\nORG:Company Name;\nTEL;type=CELL;type=VOICE;waid=911111111111:+91 11111 11111\nEND:VCARD"
@@ -902,7 +902,7 @@ You can send contacts in multiple ways:
 {{< tab "Combined" >}}
 ```jsonc { title="Body" }
   {
-  "chatId": "79111111@c.us",
+  "chatId": "111111111111111@lid",
   "contacts": [
     {
       "vcard": "BEGIN:VCARD\nVERSION:3.0\nFN:Jane Doe\nORG:Company Name;\nTEL;type=CELL;type=VOICE;waid=911111111111:+91 11111 11111\nEND:VCARD"
@@ -932,7 +932,7 @@ POST /api/sendLocation
 
 ```json
 {
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "latitude": 38.8937255,
   "longitude": -77.0969763,
   "title": "Our office",
@@ -965,8 +965,8 @@ POST /api/send/buttons/reply
 
 ```jsonc { title="Body" }
 {
-  "chatId": "11111111111@c.us",
-  "replyTo": "false_11111111111@c.us_AAAAAAAAAAAAAAAAA",
+  "chatId": "111111111111111@lid",
+  "replyTo": "false_111111111111111@lid_AAAAAAAAAAAAAAAAA",
   "selectedDisplayText": "No",
   "selectedButtonID": "button:id",
   "session": "default"
@@ -983,7 +983,7 @@ For testing purpose you can use [**📊 Dashboard - Event Monitor**]({{< relref 
 
 {{< tabs "send-buttons-reply-message" >}}
 {{< tab "WEBJS" >}}
-- **Message ID** - `payload.id` in format `false_11111111111@c.us_AAAAAAAAAA666`
+- **Message ID** - `payload.id` in format `false_111111111111111@lid_AAAAAAAAAA666`
 - **Button ID** - `payload._data.dynamicReplyButtons.[1].buttonId` - like `button:id`
 - **Button Display Text** - `payload._data.dynamicReplyButtons.[1].buttonText.displayText` - like `No`
 {{< /tab >}}
@@ -1023,7 +1023,7 @@ POST /api/sendButtons
 
 ```json
 {
-  "chatId": "11111111111@c.us",
+  "chatId": "111111111111111@lid",
   "header": "How are you?",
   "headerImage": {
     "mimetype": "image/jpeg",

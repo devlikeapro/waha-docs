@@ -6,7 +6,7 @@ Happens when an incoming call is accepted (on another device) in WhatsApp (eithe
   "session": "default",
   "payload": {
     "id": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "from": "22222222222@c.us",
+    "from": "222222222222222@lid",
     "timestamp": 1721374000,
     "isVideo": false,
     "isGroup": false,

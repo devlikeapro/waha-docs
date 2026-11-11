@@ -11,7 +11,7 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
   "session": "default",
-  "chatId": "12132132130@c.us",
+  "chatId": "111111111111111@lid",
   "poll": {
     "name": "How are you?",
     "options": [
@@ -36,7 +36,7 @@ headers = {
 }
 data = {
     "session": "default",
-    "chatId": "12132132130@c.us",
+    "chatId": "111111111111111@lid",
     "poll": {
         "name": "How are you?",
         "options": [
@@ -60,7 +60,7 @@ const axios = require('axios');
 const url = "http://localhost:3000/api/sendPoll";
 const data = {
     session: "default",
-    chatId: "12132132130@c.us",
+    chatId: "111111111111111@lid",
     poll: {
         name: "How are you?",
         options: [
@@ -88,7 +88,7 @@ axios.post(url, data, { headers })
 $url = "http://localhost:3000/api/sendPoll";
 $data = [
     "session" => "default",
-    "chatId" => "12132132130@c.us",
+    "chatId" => "111111111111111@lid",
     "poll" => [
         "name" => "How are you?",
         "options" => [

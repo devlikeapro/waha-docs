@@ -258,7 +258,7 @@ Read more about
   "session": "default",
   "payload": {
     "labelId": "6",
-    "chatId": "11111111111@c.us",
+    "chatId": "111111111111111@lid",
     "label": null  // Note: This can be null right after scanning QR code
   },
   "engine": "NOWEB",
@@ -274,7 +274,7 @@ Read more about
   "session": "default",
   "payload": {
     "labelId": "6",
-    "chatId": "11111111111@c.us",
+    "chatId": "111111111111111@lid",
     "label": null
   },
   "engine": "NOWEB",

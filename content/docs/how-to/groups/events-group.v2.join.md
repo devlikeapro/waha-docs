@@ -15,7 +15,7 @@
       "newMembersApprovalRequired": true,
       "participants": [
         {
-          "id": "99999@c.us",
+          "id": "999999999999999@lid",
           "role": "participant"
         }
       ]

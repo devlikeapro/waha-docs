@@ -11,7 +11,7 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
   "session": "default",
-  "chatId": "12132132130@c.us",
+  "chatId": "111111111111111@lid",
   "caption": "Watch this video!",
   "asNote": false,
   "file": {
@@ -35,7 +35,7 @@ headers = {
 }
 data = {
     "session": "default",
-    "chatId": "12132132130@c.us",
+    "chatId": "111111111111111@lid",
     "caption": "Watch this video!",
     "asNote": False,
     "file": {
@@ -58,7 +58,7 @@ const axios = require('axios');
 const url = "http://localhost:3000/api/sendVideo";
 const data = {
     session: "default",
-    chatId: "12132132130@c.us",
+    chatId: "111111111111111@lid",
     caption: "Watch this video!",
     asNote: false,
     file: {
@@ -85,7 +85,7 @@ axios.post(url, data, { headers })
 $url = "http://localhost:3000/api/sendVideo";
 $data = [
     "session" => "default",
-    "chatId" => "12132132130@c.us",
+    "chatId" => "111111111111111@lid",
     "caption" => "Watch this video!",
     "asNote" => false,
     "file" => [

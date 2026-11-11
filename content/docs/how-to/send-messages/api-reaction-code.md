@@ -11,7 +11,7 @@ curl -X 'PUT' \
   -H 'Content-Type: application/json' \
   -d '{
   "session": "default",
-  "messageId": "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
+  "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
   "reaction": "👍"
 }'
 ```
@@ -28,7 +28,7 @@ headers = {
 }
 data = {
     "session": "default",
-    "messageId": "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
+    "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
     "reaction": "👍"
 }
 
@@ -44,7 +44,7 @@ const axios = require('axios');
 const url = "http://localhost:3000/api/reaction";
 const data = {
     session: "default",
-    messageId: "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
+    messageId: "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
     reaction: "👍"
 };
 const headers = {
@@ -64,7 +64,7 @@ axios.put(url, data, { headers })
 $url = "http://localhost:3000/api/reaction";
 $data = [
     "session" => "default",
-    "messageId" => "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA",
+    "messageId" => "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
     "reaction" => "👍"
 ];
 

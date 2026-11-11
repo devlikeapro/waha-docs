@@ -11,8 +11,8 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
   "session": "default",
-  "chatId": "12132132130@c.us",
-  "messageId": "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA"
+  "chatId": "111111111111111@lid",
+  "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
 }'
 ```
 {{< /tab >}}
@@ -28,8 +28,8 @@ headers = {
 }
 data = {
     "session": "default",
-    "chatId": "12132132130@c.us",
-    "messageId": "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA"
+    "chatId": "111111111111111@lid",
+    "messageId": "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
 }
 
 response = requests.post(url, json=data, headers=headers)
@@ -44,8 +44,8 @@ const axios = require('axios');
 const url = "http://localhost:3000/api/forwardMessage";
 const data = {
     session: "default",
-    chatId: "12132132130@c.us",
-    messageId: "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA"
+    chatId: "111111111111111@lid",
+    messageId: "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
 };
 const headers = {
     'X-Api-Key': 'yoursecretkey',
@@ -64,8 +64,8 @@ axios.post(url, data, { headers })
 $url = "http://localhost:3000/api/forwardMessage";
 $data = [
     "session" => "default",
-    "chatId" => "12132132130@c.us",
-    "messageId" => "false_12132132130@c.us_AAAAAAAAAAAAAAAAAAAA"
+    "chatId" => "111111111111111@lid",
+    "messageId" => "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA"
 ];
 
 $ch = curl_init($url);

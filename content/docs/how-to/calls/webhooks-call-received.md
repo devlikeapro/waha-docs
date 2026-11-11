@@ -6,7 +6,7 @@ You received an incoming call in WhatsApp (either 1-on-1 or group call).
   "session": "default",
   "payload": {
     "id": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "from": "22222222222@c.us",
+    "from": "222222222222222@lid",
     "timestamp": 1721374000,
     "isVideo": false,
     "isGroup": false,

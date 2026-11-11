@@ -10,7 +10,7 @@ curl -X 'POST' \
   -H 'Accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "chatId": "12132132130@c.us",
+  "chatId": "111111111111111@lid",
   "event": {
     "title": "Team Meeting",
     "description": "Monthly team sync-up",
@@ -32,7 +32,7 @@ headers = {
     "Content-Type": "application/json",
 }
 data = {
-    "chatId": "12132132130@c.us",
+    "chatId": "111111111111111@lid",
     "event": {
         "title": "Team Meeting",
         "description": "Monthly team sync-up",
@@ -53,7 +53,7 @@ const axios = require('axios');
 
 const url = "http://localhost:3000/api/default/events";
 const data = {
-    chatId: "12132132130@c.us",
+    chatId: "111111111111111@lid",
     event: {
         title: "Team Meeting",
         description: "Monthly team sync-up",
@@ -78,7 +78,7 @@ axios.post(url, data, { headers })
 <?php
 $url = "http://localhost:3000/api/default/events";
 $data = [
-    "chatId" => "12132132130@c.us",
+    "chatId" => "111111111111111@lid",
     "event" => [
         "title" => "Team Meeting",
         "description" => "Monthly team sync-up",

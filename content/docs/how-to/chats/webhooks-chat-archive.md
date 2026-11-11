@@ -5,7 +5,7 @@ The `chat.archive` event is triggered when a chat is archived or unarchived.
   "event": "chat.archive",
   "session": "default",
   "payload": {
-    "id": "123123123@c.us",
+    "id": "111111111111111@lid",
     "timestamp": 1667561485,
     "archived": true <== or false
   },

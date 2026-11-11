@@ -11,7 +11,7 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
   "session": "default",
-  "chatId": "12132132130@c.us",
+  "chatId": "111111111111111@lid",
   "file": {
     "mimetype": "image/webp",
     "url": "https://www.gstatic.com/webp/gallery/1.webp"
@@ -31,7 +31,7 @@ headers = {
 }
 data = {
     "session": "default",
-    "chatId": "12132132130@c.us",
+    "chatId": "111111111111111@lid",
     "file": {
         "mimetype": "image/webp",
         "url": "https://www.gstatic.com/webp/gallery/1.webp"
@@ -50,7 +50,7 @@ const axios = require('axios');
 const url = "http://localhost:3000/api/sendSticker";
 const data = {
     session: "default",
-    chatId: "12132132130@c.us",
+    chatId: "111111111111111@lid",
     file: {
         mimetype: "image/webp",
         url: "https://www.gstatic.com/webp/gallery/1.webp"
@@ -73,7 +73,7 @@ axios.post(url, data, { headers })
 $url = "http://localhost:3000/api/sendSticker";
 $data = [
     "session" => "default",
-    "chatId" => "12132132130@c.us",
+    "chatId" => "111111111111111@lid",
     "file" => [
         "mimetype" => "image/webp",
         "url" => "https://www.gstatic.com/webp/gallery/1.webp"

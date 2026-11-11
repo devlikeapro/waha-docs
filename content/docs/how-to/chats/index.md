@@ -63,7 +63,7 @@ GET /api/{session}/chats/overview?limit=20&offset=0
 **Query Parameters**:
 - `limit=100` - limit the number of chats to return
 - `offset=0` - skip the number of chats from the start
-- `ids=11111&ids=9999@c.us` - optional, filter result by chat id or phone number
+- `ids=11111&ids=999999999999999@lid` - optional, filter result by chat id or phone number
 
 
 {{< callout context="tip" icon="outline/hand-finger-right" >}}
@@ -81,7 +81,7 @@ POST /api/{session}/chats/overview
     "offset": 0
   },
   "filter": {
-    "ids": ["111111@c.us"]
+    "ids": ["111111111111111@lid"]
   }
 }
 ```
@@ -98,15 +98,15 @@ POST /api/{session}/chats/overview
 ```jsonc { title="Response" }
 [
   {
-    "id": "12312l123@c.us",
+    "id": "12312l111111111111111@lid",
     "name": "John Doe",
     "picture": "https://example.com/picture.jpg",
     "lastMessage": {
-      "id": "true_11111111111@c.us_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "id": "true_111111111111111@lid_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
       "timestamp": 1667561485,
-      "from": "11111111111@c.us",
+      "from": "111111111111111@lid",
       "fromMe": true,
-      "to": "11111111111@c.us",
+      "to": "111111111111111@lid",
       "body": "Hi there!",
       ...
     },
@@ -180,8 +180,8 @@ POST /api/{SESSION}/chats/{chatId}/messages/read
 ```jsonc { title="Response" }
 {
   "ids": [
-    "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA",
-    "true_99999999999@c.us_AAAAAAAAAAAAAAAAAAAA"
+    "false_111111111111111@lid_AAAAAAAAAAAAAAAAAAAA",
+    "true_999999999999999@lid_AAAAAAAAAAAAAAAAAAAA"
   ]
 }
 ```
@@ -220,7 +220,7 @@ Available parameters:
   If not set - `WAHA_API_DOWNLOAD_MEDIA` environment variable is used (`true` by default)
 - `downloadMediaMimetypes=image/jpeg,image/png` - download only media with these mimetypes (prefix match, like `image`).
   If not set - `WAHA_API_DOWNLOAD_MEDIA_MIMETYPES` environment variable is used
-- `chatId=123@c.us` - chatId, phone number or `all`
+- `chatId=111111111111111@lid` - chatId, phone number or `all`
   - `chatId=all` works for getting messages from **all chats** on [**GOWS**]({{< relref "/docs/engines/gows" >}}) and [**NOWEB**]({{< relref "/docs/engines/noweb" >}}).
 - `limit=100` - limit the number of chats to return
 - `offset=0` - skip the number of chats from the start
@@ -244,9 +244,9 @@ GET /api/{session}/chats/{chatId}/messages?limit=10&downloadMedia=false
 ```json
 [
   {
-    "id": "false_123123@c.us_AAAAAA",
+    "id": "false_111111111111111@lid_AAAAAA",
     "timestamp": 1727745026,
-    "from": "123123@c.us",
+    "from": "111111111111111@lid",
     "fromMe": false,
     "body": "I'm good!",
     "hasMedia": false,
@@ -281,9 +281,9 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 
 ```jsonc { title="Response" }
 {
-    "id": "false_123123@c.us_AAAAAA",
+    "id": "false_111111111111111@lid_AAAAAA",
     "timestamp": 1727745026,
-    "from": "123123@c.us",
+    "from": "111111111111111@lid",
     "fromMe": false,
     "body": "I'm good!",
     "hasMedia": false,
@@ -296,10 +296,10 @@ GET /api/{session}/chats/{chatId}/messages/{messageId}?downloadMedia=true
 }
 ```
 
-- `chatId` - in format `123123123@c.us`
+- `chatId` - in format `111111111111111@lid` or `123123@g.us`
   - `chatId=all` works for getting messages from **all chats** on [**GOWS**]({{< relref "/docs/engines/gows" >}}) and [**NOWEB**]({{< relref "/docs/engines/noweb" >}}).
 - `messageId` - supports both formats:
-  - full format: `{true|false}_213213@c.us_AAAAAAA` (any engine)
+  - full format: `{true|false}_222222222222222@lid_AAAAAAA` (any engine)
   - plain message id: `3EB0965B123D06E0B70741` (**GOWS** and **NOWEB**)
 - `downloadMedia` - download media files (images, files) or not.
   If not set - `WAHA_API_DOWNLOAD_MEDIA` environment variable is used (`true` by default)
@@ -357,7 +357,7 @@ PUT /api/{session}/chats/{chatId}/messages/{messageId}
 ```
 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
 
-So if you want to edit `true_123@c.us_AAA` message in `123@c.us` chat you need to send request to:
+So if you want to edit `true_111111111111111@lid_AAA` message in `111111111111111@lid` chat you need to send request to:
 ```http request
 PUT /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```
@@ -377,7 +377,7 @@ DELETE /api/{session}/chats/{chatId}/messages/{messageId}
 
 👉 Remember to escape `@` in `chatId` and `messageId` with `%40`.
 
-So if you want to delete `true_123@c.us_AAA` message in `123@c.us` chat you need to send request to:
+So if you want to delete `true_111111111111111@lid_AAA` message in `111111111111111@lid` chat you need to send request to:
 ```http request
 DELETE /api/{session}/chats/123%40c.us/messages/true_123%40c.us_AAA
 ```

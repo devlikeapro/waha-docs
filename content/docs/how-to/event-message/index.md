@@ -32,7 +32,7 @@ POST /api/{SESSION}/events
 
 ```jsonc { title="Body" }
 {
-  "chatId": "123123@c.us",
+  "chatId": "111111111111111@lid",
   "reply_to": null,
   "event": {
     "name": "John's Nail Appointment 💅",
@@ -48,7 +48,7 @@ POST /api/{SESSION}/events
 ```
 
 Fields:
-- `chatId` - The WhatsApp ID of the chat where you want to send the event message (e.g., "123123@c.us")
+- `chatId` - The WhatsApp ID of the chat where you want to send the event message (e.g., "111111111111111@lid")
 - `event` - Object containing event details:
   - `name` - The title of the event
   - `description` - Detailed description of the event (supports formatting with \n for newlines and * for bold text)
