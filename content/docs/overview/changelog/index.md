@@ -66,11 +66,12 @@ Latest Version:
 - `2026.11.1` - [**🌐 Proxy**]({{< relref "/docs/how-to/proxy" >}}) - `config.proxy.scheme` - closes #2334
 - `2026.11.1` - [**🌐 Proxy**]({{< relref "/docs/how-to/proxy#api" >}}) - proxy checks API: connect, website, exit IP, WebSocket hold - fix #751, closes #2335
 - `2026.11.1` - [**📤 Send messages**]({{< relref "/docs/how-to/send-messages#send-seen" >}}) - `POST /api/sendSeen` support `"type": "read|played"` - fix #729, pr #2347 
-- `2026.11.1` - Swagger and docs - `@lid` examples for direct chats (`111111111111111@lid`) - WhatsApp uses LID for 1:1 chats now
+- `2026.11.1` - [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) - receive **Group Status** as group `message` events, `isGroupStatus` field in messages - fix #2346, fix #2350
 
 🛠️ **Fixes**
 - `2026.11.1` - [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) - `canBeReshared` field (default `true`) - contacts can reshare posted statuses - fix #2348
 - `2026.11.1` - **WEBJS** - fix sending and deleting [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) - fix #2063
+- `2026.11.1` - **NOWEB** - fix session stuck without messages and `Stream Errored (ack)` reconnects on `<status>` stanzas - fix #2346
 
 📊 **Dashboard**
 - `2026.11.1` - [**📊 Proxy Checks**]({{< relref "/docs/how-to/dashboard#proxy-checks" >}}) - test a proxy from the session config (**Test Proxy**) or the session and worker menus - closes #2335
