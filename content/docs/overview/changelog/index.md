@@ -64,7 +64,8 @@ Latest Version:
 🆕 **New**
 - `2026.11.1` - [**🌐 Proxy**]({{< relref "/docs/how-to/proxy" >}}) - SOCKS5 support - closes #2334
 - `2026.11.1` - [**🌐 Proxy**]({{< relref "/docs/how-to/proxy" >}}) - `config.proxy.scheme` - closes #2334
-- `2026.11.1` - [**🌐 Proxy**]({{< relref "/docs/how-to/proxy#api" >}}) - proxy checks API: connect, website, exit IP, WebSocket hold - fix #751 closes #2335
+- `2026.11.1` - [**🌐 Proxy**]({{< relref "/docs/how-to/proxy#api" >}}) - proxy checks API: connect, website, exit IP, WebSocket hold - fix #751, closes #2335
+- `2026.11.1` - [**📤 Send messages**]({{< relref "/docs/how-to/send-messages#send-seen" >}}) - `POST /api/sendSeen` support `"type": "read|played"` - fix #729, pr #2347 
 
 🛠️ **Fixes**
 - `2026.11.1` - [**🟢 Status**]({{< relref "/docs/how-to/status" >}}) - `canBeReshared` field (default `true`) - contacts can reshare posted statuses - fix #2348

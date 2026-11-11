@@ -83,6 +83,10 @@ You can add the `reply_to` field in order to reply to a specific message.
 
 ## Send Seen
 
+<div style="width: 500px; max-width: 100%; margin: 0 auto;">
+{{< img lqip="21x webp q20" src="whatsapp-message-read-and-played-time.jpg" alt="WhatsApp Messages" >}}
+</div>
+
 If you get a new message via [**🔄 Events**]({{< relref "docs/how-to/events#message" >}})
 and want to reply to that message, you need to first send that you've seen the message
 (double green tick) - read [**⚠️ How to Avoid Blocking**]({{< relref "docs/overview/how-to-avoid-blocking" >}})
@@ -133,6 +137,24 @@ Send seen for **Group Message** you need to provide `participant` field:
   "participant": "33333333333@c.us"
 }
 ```
+
+Use `type` field to choose the receipt type - `read` (default) or `played`.
+Send `played` for **voice messages**, **video notes** and **view once** media (`messageIds` are required):
+
+```jsonc { title="Body" }
+{
+  "session": "default",
+  "chatId": "11111111111@c.us",
+  "messageIds": [
+    "false_11111111111@c.us_AAAAAAAAAAAAAAAAAAAA"
+  ],
+  "type": "played"
+}
+```
+
+{{< callout context="caution" title="Send 'read' first, then 'played'" icon="outline/alert-triangle" >}}
+Send **2 requests** for voice messages - first with `"type": "read"`, then with `"type": "played"`.
+{{< /callout >}}
 
 Here's how you can call it from various languages:
 {{< include file="content/docs/how-to/send-messages/api-sendSeen-code.md" >}}

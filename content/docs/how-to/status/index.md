@@ -62,6 +62,7 @@ POST /api/{session}/status/text
 - `font` - font type, experiment with values here to get different fonts.
 - `backgroundColor` - background color of the status.
 - `contacts` - array of contacts to send status to.
+- `canBeReshared` - allow contacts to reshare the status, `true` by default. Works for text, image, voice and video statuses.
 
 Send status to specific contacts:
 ```jsonc { title="Body" }
